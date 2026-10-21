@@ -86,11 +86,29 @@ const t=s=>s?new Date(s).toLocaleString("en-GB",{day:"2-digit",month:"short",hou
 const ts=ms=>ms?t(new Date(ms).toISOString()):"";
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const $=id=>document.getElementById(id);
+// Engine data: the `live` branch through GitHub's API (about a minute old), falling back to the copy
+// GitHub Pages serves (up to ~8 minutes old). The API allows 60 requests an hour per visitor, so the
+// summary is polled every 90 s and the equity history every 5 min.
+const API="https://api.github.com/repos/omikse/github-trader/contents/";
+let CSV="",CSV_AT=0,SRC="";
+async function apiFile(name){
+  const r=await fetch(API+name+"?ref=live&t="+Date.now(),{headers:{Accept:"application/vnd.github.raw"},cache:"no-store"});
+  if(!r.ok) throw new Error("api "+r.status);
+  return r.text();
+}
 async function load(){
+  let s=null;
   try{
-    const [s,csv]=await Promise.all([fetch("data/summary.json?"+Date.now()).then(r=>r.json()),fetch("data/equity.csv?"+Date.now()).then(r=>r.text())]);
-    render(s,csv);if(LIVE_AT)liveRender();
-  }catch(e){$("status").textContent="no data yet";$("status").className="pill ended"}
+    s=JSON.parse(await apiFile("summary.json"));SRC="live";
+    if(Date.now()-CSV_AT>300000){CSV=await apiFile("equity.csv");CSV_AT=Date.now()}
+  }catch(e){
+    try{
+      s=await fetch("data/summary.json?"+Date.now()).then(r=>r.json());SRC="pages";
+      CSV=await fetch("data/equity.csv?"+Date.now()).then(r=>r.text());CSV_AT=Date.now();
+    }catch(e2){$("status").textContent="no data yet";$("status").className="pill ended";return}
+  }
+  if(S&&S.updated>s.updated) return;  // never step back to an older copy
+  render(s,CSV);if(LIVE_AT)liveRender();
 }
 function retLine(v,start){return v==null?"":sg(v-start)+" PLN ("+(v>=start?"+":"−")+f(Math.abs((v/start-1)*100),1)+"%)"}
 let S=null,LIVE={},LIVE_AT=0,LIVE_SRC="";
@@ -138,7 +156,7 @@ function freshness(){
   if(!S) return;
   const sec=x=>Math.max(0,Math.round((Date.now()-x)/1000));
   const eng=sec(new Date(S.updated).getTime());
-  $("fresh").textContent=(LIVE_AT?`Live prices from ${LIVE_SRC}, ${sec(LIVE_AT)}s ago · `:"Live prices unavailable, showing the engine's last values · ")+`engine saved ${eng<120?eng+"s":Math.round(eng/60)+" min"} ago`;
+  $("fresh").textContent=(LIVE_AT?`Live prices from ${LIVE_SRC}, ${sec(LIVE_AT)}s ago · `:"Live prices unavailable, showing the engine's last values · ")+`engine saved ${eng<120?eng+"s":Math.round(eng/60)+" min"} ago`+(SRC=="pages"?" (GitHub API limit reached, using the slower copy)":"");
 }
 function render(s,csv){
   $("status").textContent=s.status+" · "+t(s.updated);$("status").className="pill "+s.status;
@@ -178,7 +196,7 @@ function render(s,csv){
     $("trades").innerHTML=`<table><thead><tr><th>Closed</th><th>Market</th><th>Side</th><th>Entry</th><th>Exit</th><th>Why</th><th>P/L zł</th></tr></thead><tbody>${s.closed_trades.map(x=>`<tr><td>${ts(x.time)}</td><td>${esc(x.symbol)}</td><td>${x.side}</td><td>${f(x.entry,2)}</td><td>${f(x.exit,2)}</td><td>${esc(x.why||"")}</td><td class="${x.pnl_pln>=0?"up":"down"}">${sg(x.pnl_pln)}</td></tr>`).join("")}</tbody></table>`;
   }
 }
-load().then(tick);setInterval(load,60000);setInterval(tick,10000);setInterval(freshness,1000);
+load().then(tick);setInterval(load,90000);setInterval(tick,10000);setInterval(freshness,1000);
 </script>
 </body>
 </html>

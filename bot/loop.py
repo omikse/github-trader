@@ -3,8 +3,11 @@
 Every minute:  pull new brain decisions, replay the last minute (stops, targets, orders, funding,
                liquidation), refresh the account and the dashboard data.
 Every 5 min:   full scan of all markets, benchmarks, equity history, brain input.
-Every 8 min:   commit and push the data so the dashboard sees it (GitHub Pages rebuilds ~10 times/hour max),
+Every 8 min:   commit and push the data to main (history, GitHub Pages rebuilds ~10 times/hour max),
                and right away after a decision was executed.
+Every minute:  also force-push the current summary and equity history as a single commit to the `live`
+               branch, which Pages does not serve; the dashboard reads it through GitHub's API, so the
+               page is about a minute behind instead of up to 8.
 """
 import os
 import subprocess
@@ -43,6 +46,23 @@ def push(msg):
     print("::warning::push failed three times; will retry next cycle", flush=True)
 
 
+def publish_live():
+    """Overwrite branch `live` with one commit holding summary.json and equity.csv (no history kept)."""
+    entries = []
+    for name in ("summary.json", "equity.csv"):
+        path = os.path.join(config.DATA_DIR, name)
+        if os.path.exists(path):
+            blob = git("hash-object", "-w", path).stdout.strip()
+            entries.append(f"100644 blob {blob}\t{name}")
+    if not entries:
+        return
+    tree = subprocess.run(["git", "mktree"], input="\n".join(entries) + "\n",
+                          capture_output=True, text=True).stdout.strip()
+    commit = git("commit-tree", tree, "-m", "live data").stdout.strip()
+    if git("push", "-q", "-f", "origin", f"{commit}:refs/heads/live").returncode:
+        print("::warning::could not update the live branch", flush=True)
+
+
 def main():
     git("config", "user.name", "trading-bot")
     git("config", "user.email", "trading-bot@users.noreply.github.com")
@@ -60,6 +80,7 @@ def main():
             entry = None
         if full:
             last_full = tick
+        publish_live()
         if entry or tick - last_push >= PUSH_EVERY:
             push("bot " + datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ"))
             last_push = tick
