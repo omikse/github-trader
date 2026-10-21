@@ -12,6 +12,9 @@ What is simulated, and how:
 - Funding: every 8 hours (00, 08, 16 UTC) longs pay and shorts receive FUNDING_RATE of position size.
 - Liquidation: cross margin. If equity at the worst price of a minute drops to the maintenance
   margin (MAINT_MARGIN of total position size), every position is closed at that price.
+- Resting entry orders: a buy/sell that triggers when the price reaches a level (above the price at
+  placement = stop-entry, below = limit). Checked every minute; filled at the level, or at the
+  candle open when the market gaps through it (worse for stop-entries, better for limits).
 """
 import json
 import math
@@ -91,6 +94,9 @@ class PaperExchange:
         if self.s is None and start_usd is not None:
             self.s = {"cash": start_usd, "positions": {}, "closed": [], "fills": [],
                       "last_ms": self.now_ms, "next_id": 1}
+        if self.s is not None:
+            self.s.setdefault("orders", [])
+            self.s.setdefault("order_events", [])
 
     @property
     def ready(self):
@@ -121,9 +127,10 @@ class PaperExchange:
     def advance(self):
         """Apply every 1-minute candle since the last run: stops, targets, funding, liquidation."""
         start = self.s["last_ms"]
-        if self.s["positions"]:
+        watch = set(self.s["positions"]) | {o["symbol"] for o in self.s["orders"]}
+        if watch:
             candles = {}
-            for sym in list(self.s["positions"]):
+            for sym in sorted(watch):
                 mins = 1 if self.now_ms - start < 11 * 3600_000 else 5  # Kraken keeps 720 candles
                 rows = self.market.ohlc(sym, mins, since_s=start / 1000 - 60)
                 # every candle that finished after the last run and before now, exactly once
@@ -137,6 +144,7 @@ class PaperExchange:
                     if bar and sym in self.s["positions"]:
                         self._check_exits(sym, bar)
                 self._check_liquidation(bars)
+                self._check_orders(bars, t)
             self._funding(start, self.now_ms)
         self.s["last_ms"] = self.now_ms
 
@@ -183,6 +191,54 @@ class PaperExchange:
             for sym in list(pos):
                 self._exit(sym, worst[sym], "liquidation", t, fee=True)
             self.s["cash"] = max(0.0, self.s["cash"])
+
+    def _order_event(self, o, status, t, detail=""):
+        self.s["order_events"].append({"id": o["id"], "symbol": o["symbol"], "side": o["side"], "status": status,
+                                       "trigger": o["trigger"], "time": int(t), "detail": detail})
+        self.s["order_events"] = self.s["order_events"][-200:]
+
+    def _check_orders(self, bars, t):
+        keep = []
+        for o in self.s["orders"]:
+            bar = bars.get(o["symbol"])
+            if t >= o["expires"]:
+                self._order_event(o, "expired", t)
+                continue
+            if not bar:
+                keep.append(o)
+                continue
+            lvl, above, long = o["trigger"], o["direction"] == "above", o["side"] == "long"
+            hit = bar["h"] >= lvl if above else bar["l"] <= lvl
+            if not hit:
+                keep.append(o)
+                continue
+            gapped = bar["o"] >= lvl if above else bar["o"] <= lvl
+            px = bar["o"] if gapped else lvl
+            px *= (1 + SLIPPAGE) if long else (1 - SLIPPAGE)
+            why = self._fill_blocker(o, bars)
+            if why:
+                self._order_event(o, "cancelled", t, why)
+                continue
+            fee = px * o["qty"] * config.TAKER_FEE
+            self.s["cash"] -= fee
+            self.s["positions"][o["symbol"]] = {"side": o["side"], "qty": o["qty"], "entry": px, "stop": o["stop"],
+                                                "tp": o.get("tp"), "opened": int(t), "entry_fee": fee, "mark": px}
+            self._order_event(o, "filled", t, f"filled at {px:.6g}")
+            # the stop can be hit inside the same minute that filled the entry
+            self._check_exits(o["symbol"], {**bar, "o": px})
+        self.s["orders"] = keep
+
+    def _fill_blocker(self, o, bars):
+        if o["symbol"] in self.s["positions"]:
+            return "already holding this coin"
+        if len(self.s["positions"]) >= config.MAX_OPEN_POSITIONS:
+            return "max open positions reached"
+        marks = {s: (bars[s]["c"] if bars.get(s) else p.get("mark", p["entry"])) for s, p in self.s["positions"].items()}
+        eq = self.s["cash"] + sum(self._upnl(p, marks[s]) for s, p in self.s["positions"].items())
+        used = sum(p["qty"] * marks[s] for s, p in self.s["positions"].items())
+        if eq <= 0 or used + o["qty"] * o["trigger"] > eq * config.MAX_LEVERAGE * 1.02:
+            return "leverage cap would be exceeded at fill"
+        return None
 
     @staticmethod
     def _upnl(p, px):
@@ -245,6 +301,30 @@ class PaperExchange:
         self.s["fills"].append({"time": self.now_ms, "symbol": symbol, "side": side, "qty": qty, "price": px, "fee": fee})
         self.s["fills"] = self.s["fills"][-200:]
         return {"price": px}
+
+    def place_order(self, symbol, side, qty, trigger, stop, tp, expires_ms, note=""):
+        if any(o["symbol"] == symbol for o in self.s["orders"]):
+            raise ExchangeError(f"there is already a resting order for {symbol}; cancel it first")
+        last = self._quote(symbol)["last"]
+        o = {"id": f"o{self.s['next_id']}", "symbol": symbol, "side": side, "qty": qty, "trigger": trigger,
+             "direction": "above" if trigger > last else "below", "stop": stop, "tp": tp,
+             "placed": self.now_ms, "expires": expires_ms, "note": note}
+        self.s["next_id"] += 1
+        self.s["orders"].append(o)
+        return o
+
+    def cancel_orders(self, symbol):
+        gone = [o for o in self.s["orders"] if o["symbol"] == symbol]
+        self.s["orders"] = [o for o in self.s["orders"] if o["symbol"] != symbol]
+        for o in gone:
+            self._order_event(o, "cancelled", self.now_ms, "cancelled by the brain")
+        return len(gone)
+
+    def open_orders(self):
+        return list(self.s["orders"])
+
+    def order_events(self, start_ms):
+        return [e for e in self.s["order_events"] if e["time"] >= start_ms]
 
     def set_stops(self, symbol, stop=None, tp=None):
         p = self.s["positions"].get(symbol)

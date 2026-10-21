@@ -7,7 +7,11 @@ the risk rules. It trades a **simulated futures account on live Kraken prices**,
 Next to Claude run two benchmarks with the same starting money: a simple EMA 20/50 rule bot and
 "just hold Bitcoin". If Claude can't beat a 20-line rule bot after costs, it isn't adding value.
 
-No exchange account is needed. Market data comes from Kraken's free public API; the only key is the Claude API key.
+No exchange account and no paid API are needed. Market data comes from Kraken's free public API, and the
+brain is a **Claude scheduled task running on a Claude subscription**: every 2 hours it reads
+`docs/data/brain_input.json`, decides, and pushes `docs/data/brain_decision.json`, following `BRAIN.md`.
+That push starts the engine, which executes the decision within a minute or two.
+(Set `BRAIN_MODE=api` and the secret `ANTHROPIC_API_KEY` to have the bot call the paid Claude API itself instead.)
 
 ## How it works
 
@@ -18,8 +22,9 @@ every 15 min (GitHub Actions)
   ├─ halts: -15% in a day → close all, pause until tomorrow
   │         -50% from peak → close all, stop for good
   ├─ market data for BTC, ETH, SOL, XRP, DOGE: 15m/1h/4h candles, EMAs, RSI, ATR
-  ├─ wake Claude if: an hour passed, a 15-min move ≥ 2.5%, or a position closed
-  │    └─ Claude answers in a fixed format: open / close / move stop, long or short, with reasons
+  ├─ write brain_input.json (account, positions, orders, events, markets, journal)
+  ├─ if Claude pushed a new brain_decision.json (≤ 45 min old): execute it
+  │    actions: open / close / move stop / resting entry order / cancel order, long or short
   ├─ risk guard checks every action (code, not AI):
   │    - every new position has a stop 0.3–12% away, or it is rejected
   │    - size comes from risk: max 5% of equity lost if the stop is hit (default 3%)
@@ -37,6 +42,9 @@ every 15 min (GitHub Actions)
   fired at 3:07 fires at 3:07. A candle that gaps past the stop fills at its open. If stop and target sit
   in the same minute, the stop is assumed to hit first.
 - **Funding:** 0.01% of position size every 8 hours; longs pay, shorts receive.
+- **Resting entry orders:** Claude can leave "buy if BTC breaks 86,500, stop 85,200" style orders.
+  They are checked every minute and filled at the trigger (or at the open if the market gaps through it),
+  so the bot catches moves between Claude's 2-hourly looks.
 - **Liquidation:** cross margin. If equity at the worst price of any minute falls to 0.5% of total
   position size, everything is closed at that price.
 - **Not simulated:** order-book depth (irrelevant at this size) and variable funding rates.
@@ -46,11 +54,9 @@ decisions and closed trades every time, so it can learn from what it did.
 
 ## Setup
 
-1. Add the repository secret `ANTHROPIC_API_KEY` (Settings → Secrets and variables → Actions).
-   API usage is billed separately from a Claude subscription; prepaid credit is the safest limit.
-   The bot also caps itself at 40 Claude calls per day (`MAX_CALLS_PER_DAY`).
-2. Settings → Pages: source "Deploy from a branch", branch `main`, folder `/docs`.
-3. Actions tab → **Trading bot** → Run workflow. After that it runs every 15 minutes by itself.
+1. Settings → Pages: source "Deploy from a branch", branch `main`, folder `/docs`.
+2. Actions tab → **Trading bot** → Run workflow. After that it runs every 15 minutes by itself.
+3. Create the Claude scheduled task (every 2 hours) that clones this repo and follows `BRAIN.md`.
 
 To stop: Actions → Trading bot → "…" → Disable workflow. On `END_AT` (21 Nov 2026, 21:00 UTC) the bot
 closes everything and stops trading. To restart from 1,000 PLN, delete `docs/data/state.json`,
@@ -75,7 +81,8 @@ Everything is in `bot/config.py` and can be overridden with environment variable
 ## Files
 
 - `bot/run.py` – one run of the bot
-- `bot/brain.py` – the Claude call and its instructions
+- `BRAIN.md` – what the scheduled Claude session does each time it wakes up
+- `bot/brain.py` – the trader instructions (and the paid-API call, for `BRAIN_MODE=api`)
 - `bot/guard.py` – risk rules
 - `bot/paper.py` – Kraken market data and the simulated futures exchange
 - `bot/market.py` – indicators and the market snapshot sent to Claude

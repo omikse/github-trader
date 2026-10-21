@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "*/15 * * * *"   # every 15 minutes; Claude is consulted hourly or on big moves
   workflow_dispatch: {}
+  push:
+    paths:
+      - docs/data/brain_decision.json   # a new decision from the Claude session runs immediately
 
 permissions:
   contents: write

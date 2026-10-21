@@ -73,6 +73,7 @@ th:first-child,td:first-child{text-align:left;padding-left:0} tr:last-child td{b
 
   <section class="card"><h2>Equity race (PLN)</h2><div id="chart"><p class="empty">The chart appears after a few runs.</p></div></section>
   <section class="card"><h2>Open positions</h2><div class="tw" id="pos"><p class="empty">No open positions.</p></div></section>
+  <section class="card"><h2>Resting orders</h2><div class="tw" id="orders"><p class="empty">No resting orders.</p></div></section>
   <section class="card"><h2>Latest decision</h2><div id="dec"><p class="empty">Claude has not decided anything yet.</p></div></section>
   <section class="card"><h2>Closed trades</h2><div class="tw" id="trades"><p class="empty">No closed trades yet.</p></div></section>
   <p class="muted">Simulated futures account on live Kraken prices, with fees, slippage, funding and liquidation. Stops and targets are checked against every 1-minute candle. Every decision is committed to git with a timestamp before its outcome is known. Not financial advice.</p>
@@ -97,7 +98,7 @@ function render(s,csv){
   $("ret").textContent=retLine(s.equity_pln,s.start_pln);$("ret").className="num "+(s.equity_pln>=s.start_pln?"up":"down");
   $("ctrl").textContent=f(s.control_pln)+" zł";$("ctrlRet").textContent=retLine(s.control_pln,s.start_pln);
   $("hodl").textContent=f(s.hodl_pln)+" zł";$("hodlRet").textContent=retLine(s.hodl_pln,s.start_pln);
-  $("stats").innerHTML=`<span>Max drawdown <b>${f(s.max_drawdown_pct,1)}%</b></span><span>Closed trades <b>${s.trade_count}</b></span><span>Win rate <b>${s.win_rate_pct==null?"—":f(s.win_rate_pct,0)+"%"}</b></span><span>Claude calls today <b>${s.brain_calls_today}</b></span><span>Ends <b>${t(s.end_at)}</b></span>`;
+  $("stats").innerHTML=`<span>Max drawdown <b>${f(s.max_drawdown_pct,1)}%</b></span><span>Closed trades <b>${s.trade_count}</b></span><span>Win rate <b>${s.win_rate_pct==null?"—":f(s.win_rate_pct,0)+"%"}</b></span><span>Claude decisions today <b>${s.brain_calls_today}</b></span><span>Ends <b>${t(s.end_at)}</b></span>`;
   // chart
   const rows=csv.trim().split("\n").slice(1).map(l=>l.split(",")).map(r=>({t:new Date(r[0]).getTime(),c:+r[1],k:r[2]?+r[2]:null,h:r[3]?+r[3]:null}));
   if(rows.length>1){
@@ -122,11 +123,14 @@ function render(s,csv){
   const d=s.last_decision;
   if(d){
     const acts=(d.actions||[]).map(a=>`<div class="act"><span class="tag ${esc(a.result)}">${esc(a.type)} ${esc(a.symbol)}${a.side?" "+esc(a.side):""}</span><div>${esc(a.reason)}${a.invalidation?`<div class="muted">Wrong if: ${esc(a.invalidation)}</div>`:""}<div class="muted">${esc(a.result)}: ${esc(a.detail)}</div></div></div>`).join("")||'<p class="muted">No trades this round.</p>';
-    $("dec").innerHTML=`<div class="muted">${t(d.time)} · trigger: ${esc(d.trigger)}</div><p class="view">${esc(d.market_view||d.error||"")}</p>${acts}${d.watch_next?`<p class="muted">Next: ${esc(d.watch_next)}</p>`:""}`;
+    $("dec").innerHTML=`<div class="muted">${t(d.time)} · trigger: ${esc(d.trigger)}</div><p class="view">${esc(d.market_view||"")}</p>${d.error?`<p class="muted">${esc(d.error)}</p>`:""}${d.news?`<p class="muted">News: ${esc(d.news)}</p>`:""}${acts}${d.watch_next?`<p class="muted">Next: ${esc(d.watch_next)}</p>`:""}`;
   }
+  // resting orders
+  const os_=s.orders||[];
+  $("orders").innerHTML=os_.length?`<table><thead><tr><th>Market</th><th>Side</th><th>Triggers when price goes</th><th>Stop</th><th>Target</th><th>Expires</th></tr></thead><tbody>${os_.map(o=>`<tr><td>${esc(o.symbol)}</td><td class="${o.side=="long"?"up":"down"}">${o.side}</td><td>${o.direction} ${f(o.trigger,2)}</td><td>${f(o.stop,2)}</td><td>${o.tp?f(o.tp,2):"—"}</td><td>${ts(o.expires)}</td></tr>`).join("")}</tbody></table>`:'<p class="empty">No resting orders.</p>';
   // trades
   if(s.closed_trades.length){
-    $("trades").innerHTML=`<table><thead><tr><th>Closed</th><th>Market</th><th>Side</th><th>Entry</th><th>Exit</th><th>P/L zł</th></tr></thead><tbody>${s.closed_trades.map(x=>`<tr><td>${ts(x.time)}</td><td>${esc(x.symbol)}</td><td>${x.side}</td><td>${f(x.entry,2)}</td><td>${f(x.exit,2)}</td><td class="${x.pnl_pln>=0?"up":"down"}">${sg(x.pnl_pln)}</td></tr>`).join("")}</tbody></table>`;
+    $("trades").innerHTML=`<table><thead><tr><th>Closed</th><th>Market</th><th>Side</th><th>Entry</th><th>Exit</th><th>Why</th><th>P/L zł</th></tr></thead><tbody>${s.closed_trades.map(x=>`<tr><td>${ts(x.time)}</td><td>${esc(x.symbol)}</td><td>${x.side}</td><td>${f(x.entry,2)}</td><td>${f(x.exit,2)}</td><td>${esc(x.why||"")}</td><td class="${x.pnl_pln>=0?"up":"down"}">${sg(x.pnl_pln)}</td></tr>`).join("")}</tbody></table>`;
   }
 }
 load();setInterval(load,300000);

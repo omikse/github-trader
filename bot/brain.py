@@ -12,6 +12,10 @@ Your style:
 - Concentrate on your best idea instead of spreading thin. Pyramid into winners by opening again after a close, not by averaging down.
 - Let winners run: trail stops behind structure instead of taking small profits early.
 - Cut losers fast. A trade whose reason is gone gets closed, even before its stop.
+- You only look at the market every hour or two. Between looks, RESTING ORDERS act for you: an entry_order
+  opens a position automatically when the price reaches its trigger (above the current price = breakout entry,
+  below = pullback/limit entry), with its stop and target attached. Use them to catch moves while you are away,
+  and cancel ones whose idea is gone. One resting order per coin; they expire after expires_hours (max {order_h:.0f}).
 - Standing aside is allowed when nothing is clean. Costs punish churn: taker fee 0.055% per side, slippage, and funding of 0.01% per 8h (longs pay, shorts receive).
 
 Hard rules enforced by code after you answer (orders that break them are rejected or resized, so plan within them):
@@ -37,12 +41,14 @@ DECISION_TOOL = {
                 "items": {
                     "type": "object",
                     "properties": {
-                        "type": {"type": "string", "enum": ["open", "close", "move_stop"]},
+                        "type": {"type": "string", "enum": ["open", "close", "move_stop", "entry_order", "cancel_order"]},
                         "symbol": {"type": "string"},
-                        "side": {"type": "string", "enum": ["long", "short"], "description": "open only"},
-                        "stop": {"type": "number", "description": "open: required stop-loss price. move_stop: new stop price."},
+                        "side": {"type": "string", "enum": ["long", "short"], "description": "open / entry_order"},
+                        "trigger": {"type": "number", "description": "entry_order only: price that triggers the entry"},
+                        "expires_hours": {"type": "number", "description": "entry_order only, default 24"},
+                        "stop": {"type": "number", "description": "open / entry_order: required stop-loss price. move_stop: new stop price."},
                         "take_profit": {"type": ["number", "null"], "description": "optional target price"},
-                        "risk_pct": {"type": "number", "description": "open only, fraction of equity, e.g. 0.03"},
+                        "risk_pct": {"type": "number", "description": "open / entry_order: fraction of equity, e.g. 0.03"},
                         "reason": {"type": "string"},
                         "invalidation": {"type": "string", "description": "open only: what would prove this trade wrong"},
                     },
@@ -60,7 +66,8 @@ def system_prompt():
     return SYSTEM_PROMPT.format(
         end_at=config.END_AT, min_stop=config.MIN_STOP_DIST, max_stop=config.MAX_STOP_DIST,
         max_risk=config.MAX_RISK_PER_TRADE, default_risk=config.DEFAULT_RISK, max_lev=config.MAX_LEVERAGE,
-        max_pos=config.MAX_OPEN_POSITIONS, daily=config.DAILY_LOSS_LIMIT, kill=config.KILL_DRAWDOWN)
+        max_pos=config.MAX_OPEN_POSITIONS, daily=config.DAILY_LOSS_LIMIT, kill=config.KILL_DRAWDOWN,
+        order_h=config.ORDER_MAX_HOURS)
 
 
 class ClaudeBrain:

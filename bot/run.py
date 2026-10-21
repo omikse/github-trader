@@ -119,6 +119,14 @@ def main(client=None, brain=None, now=None, fx=None, market=None):
             state["closed_trades"].append(t)
             events.append({"type": "position_closed", **t})
     state["last_closed_check_ms"] = now_ms
+    if hasattr(client, "order_events"):
+        seen = state.setdefault("seen_order_events", [])
+        for e in client.order_events(since - 120_000):
+            k = f"{e['id']}:{e['status']}"
+            if k not in seen:
+                seen.append(k)
+                events.append({"type": "order_" + e["status"], **e})
+        state["seen_order_events"] = seen[-300:]
 
     # ---- halts and the end of the experiment --------------------------------------
     ended = now >= parse_iso(config.END_AT)
@@ -126,11 +134,13 @@ def main(client=None, brain=None, now=None, fx=None, market=None):
     if ended:
         if not state.get("ended"):
             close_all(client, positions, "experiment ended", events)
+            cancel_all_orders(client)
             state["ended"] = iso(now)
     else:
         halt = guard.check_halts(state, equity, day)
-        if halt and positions:
+        if halt and (positions or open_orders(client)):
             close_all(client, positions, "kill switch: drawdown limit" if halt == "kill" else "daily loss limit", events)
+            cancel_all_orders(client)
             events.append({"type": "halt", "kind": halt})
 
     if events:
@@ -144,48 +154,24 @@ def main(client=None, brain=None, now=None, fx=None, market=None):
         except Exception as e:  # one bad symbol must not stop the run
             log(f"snapshot failed for {sym}: {e}")
 
-    # ---- decide whether to wake the brain ---------------------------------------------
-    last = state.get("last_brain")
-    mins = (now - parse_iso(last)).total_seconds() / 60 if last else 1e9
-    trigger = None
-    if mins >= config.BRAIN_EVERY_MIN - 3:
-        trigger = "scheduled"
-    elif any(abs(m.get("change_15m") or 0) >= config.EVENT_MOVE_PCT * 100 for m in markets.values()):
-        trigger = "big move"
-    elif any(e["type"] == "position_closed" for e in events):
-        trigger = "position closed"
-    calls_today = state["calls"].get(day, 0)
-    if ended or halt or not markets or calls_today >= config.MAX_CALLS_PER_DAY:
-        trigger = None
-
-    entry = None
-    if trigger:
+    entry, trigger = None, None
+    if config.BRAIN_MODE == "session":
         state.setdefault("pending_events", []).extend(events)
-        context = build_context(state, now, equity, rate, positions, markets, journal_path)
-        if brain is None:
-            from .brain import ClaudeBrain
-            brain = ClaudeBrain()
-        state["calls"][day] = calls_today + 1
-        state["last_brain"] = iso(now)
-        entry = {"time": iso(now), "trigger": trigger, "equity_usd": round(equity, 2),
-                 "equity_pln": round(equity * rate, 2), "events": state["pending_events"]}
-        try:
-            decision = brain.decide(context)
-        except Exception as e:
-            entry["error"] = f"brain failed: {e}"
-            print(f"::warning::Claude call failed: {e}", flush=True)
-            decision = None
-        if decision:
-            entry.update({"model": decision.get("_model"), "usage": decision.get("_usage"),
-                          "market_view": decision.get("market_view"), "watch_next": decision.get("watch_next")})
-            entry["actions"] = execute(client, decision.get("actions") or [], equity, positions, markets)
+        entry = take_session_decision(client, state, d, now, equity, rate, positions, markets, journal_path,
+                                      blocked="experiment ended" if ended else ("trading halted" if halt else None))
+        if entry:
+            trigger = "brain session"
             positions = client.positions()
             equity = state["start_usd"] + (client.wallet()["equity"] - state["exchange_equity_at_start"])
-        state["pending_events"] = []
-        with open(journal_path, "a") as f:
-            f.write(json.dumps(entry, default=str) + "\n")
-    elif events:
-        state.setdefault("pending_events", []).extend(events)
+        ctx = build_context(state, now, equity, rate, positions, markets, journal_path, open_orders(client))
+        ctx["rules"] = brain_rules()
+        save_json(d / "brain_input.json", ctx)
+    else:
+        entry, trigger = api_brain(client, brain, state, now, day, events, equity, rate, positions, markets,
+                                   journal_path, ended, halt)
+        if entry and entry.get("actions") is not None:
+            positions = client.positions()
+            equity = state["start_usd"] + (client.wallet()["equity"] - state["exchange_equity_at_start"])
 
     # ---- benchmarks, dashboard data, state ------------------------------------------------
     btc_raw = raw.get("BTCUSDT")
@@ -207,7 +193,8 @@ def main(client=None, brain=None, now=None, fx=None, market=None):
             w.writerow(["time", "claude_pln", "control_pln", "hodl_pln"])
         w.writerow(row)
 
-    write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd, hodl_usd, journal_path, halt)
+    write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd, hodl_usd, journal_path, halt,
+                  open_orders(client))
     if hasattr(client, "save"):
         client.save()
     save_json(state_path, state)
@@ -215,13 +202,101 @@ def main(client=None, brain=None, now=None, fx=None, market=None):
     return entry
 
 
-def build_context(state, now, equity, rate, positions, markets, journal_path):
+def open_orders(client):
+    return client.open_orders() if hasattr(client, "open_orders") else []
+
+
+def cancel_all_orders(client):
+    for o in open_orders(client):
+        client.cancel_orders(o["symbol"])
+
+
+def brain_rules():
+    return {
+        "symbols": config.SYMBOLS, "default_risk": config.DEFAULT_RISK, "max_risk_per_trade": config.MAX_RISK_PER_TRADE,
+        "max_leverage": config.MAX_LEVERAGE, "max_open_positions": config.MAX_OPEN_POSITIONS,
+        "stop_distance": [config.MIN_STOP_DIST, config.MAX_STOP_DIST], "daily_loss_limit": config.DAILY_LOSS_LIMIT,
+        "kill_drawdown": config.KILL_DRAWDOWN, "order_max_hours": config.ORDER_MAX_HOURS,
+        "order_max_distance": config.ORDER_MAX_DIST, "decision_max_age_min": config.DECISION_MAX_AGE_MIN,
+        "taker_fee": config.TAKER_FEE, "funding_per_8h": 0.0001,
+    }
+
+
+def take_session_decision(client, state, d, now, equity, rate, positions, markets, journal_path, blocked=None):
+    """Execute docs/data/brain_decision.json once, if it is new and fresh. Returns the journal entry or None."""
+    dec = load_json(d / "brain_decision.json", None)
+    if not dec or not dec.get("id") or dec["id"] == state.get("last_decision_id"):
+        return None
+    state["last_decision_id"] = dec["id"]
+    entry = {"time": iso(now), "trigger": "brain session", "decided_at": dec.get("decided_at"),
+             "model": dec.get("model"), "equity_usd": round(equity, 2), "equity_pln": round(equity * rate, 2),
+             "events": state.get("pending_events", []), "market_view": dec.get("market_view"),
+             "watch_next": dec.get("watch_next"), "news": dec.get("news")}
+    try:
+        age = (now - parse_iso(dec["decided_at"])).total_seconds() / 60
+    except (KeyError, ValueError):
+        age = 1e9
+    if blocked:
+        entry["error"] = f"not executed: {blocked}"
+    elif age > config.DECISION_MAX_AGE_MIN:
+        entry["error"] = f"not executed: decision is {age:.0f} min old (limit {config.DECISION_MAX_AGE_MIN:.0f})"
+    else:
+        entry["actions"] = execute(client, dec.get("actions") or [], equity, positions, markets, now)
+    state["pending_events"] = []
+    state["calls"][now.strftime("%Y-%m-%d")] = state["calls"].get(now.strftime("%Y-%m-%d"), 0) + 1
+    with open(journal_path, "a") as f:
+        f.write(json.dumps(entry, default=str) + "\n")
+    return entry
+
+
+def api_brain(client, brain, state, now, day, events, equity, rate, positions, markets, journal_path, ended, halt):
+    """Paid-API mode: the bot calls Claude itself, hourly or when something happens."""
+    last = state.get("last_brain")
+    mins = (now - parse_iso(last)).total_seconds() / 60 if last else 1e9
+    trigger = None
+    if mins >= config.BRAIN_EVERY_MIN - 3:
+        trigger = "scheduled"
+    elif any(abs(m.get("change_15m") or 0) >= config.EVENT_MOVE_PCT * 100 for m in markets.values()):
+        trigger = "big move"
+    elif any(e["type"] in ("position_closed", "order_filled") for e in events):
+        trigger = "position change"
+    calls_today = state["calls"].get(day, 0)
+    if ended or halt or not markets or calls_today >= config.MAX_CALLS_PER_DAY:
+        trigger = None
+    state.setdefault("pending_events", []).extend(events)
+    if not trigger:
+        return None, None
+    context = build_context(state, now, equity, rate, positions, markets, journal_path, open_orders(client))
+    if brain is None:
+        from .brain import ClaudeBrain
+        brain = ClaudeBrain()
+    state["calls"][day] = calls_today + 1
+    state["last_brain"] = iso(now)
+    entry = {"time": iso(now), "trigger": trigger, "equity_usd": round(equity, 2),
+             "equity_pln": round(equity * rate, 2), "events": state["pending_events"]}
+    try:
+        decision = brain.decide(context)
+    except Exception as e:
+        entry["error"] = f"brain failed: {e}"
+        print(f"::warning::Claude call failed: {e}", flush=True)
+        decision = None
+    if decision:
+        entry.update({"model": decision.get("_model"), "usage": decision.get("_usage"),
+                      "market_view": decision.get("market_view"), "watch_next": decision.get("watch_next")})
+        entry["actions"] = execute(client, decision.get("actions") or [], equity, positions, markets, now)
+    state["pending_events"] = []
+    with open(journal_path, "a") as f:
+        f.write(json.dumps(entry, default=str) + "\n")
+    return entry, trigger
+
+
+def build_context(state, now, equity, rate, positions, markets, journal_path, orders=()):
     start = state["start_usd"]
     used = sum(p["size"] * p["mark"] for p in positions)
     journal = []
     for j in read_journal(journal_path, 10):
         journal.append({"time": j.get("time"), "view": j.get("market_view"),
-                        "actions": [{k: a.get(k) for k in ("type", "symbol", "side", "stop", "reason", "result", "detail")}
+                        "actions": [{k: a.get(k) for k in ("type", "symbol", "side", "trigger", "stop", "reason", "result", "detail")}
                                     for a in j.get("actions", [])]})
     return {
         "time_utc": iso(now),
@@ -239,6 +314,9 @@ def build_context(state, now, equity, rate, positions, markets, journal_path):
             "stop": p["stop"], "take_profit": p["tp"],
             "opened_utc": iso(datetime.fromtimestamp(p["opened"] / 1000, timezone.utc)) if p["opened"] else None,
         } for p in positions],
+        "resting_orders": [{k: o.get(k) for k in ("symbol", "side", "trigger", "direction", "stop", "tp", "qty")}
+                           | {"expires_utc": iso(datetime.fromtimestamp(o["expires"] / 1000, timezone.utc))}
+                           for o in orders],
         "events_since_last_decision": state.get("pending_events", []),
         "recent_closed_trades": [{k: t[k] for k in ("symbol", "side", "entry", "exit", "pnl")}
                                  for t in state["closed_trades"][-10:]],
@@ -247,9 +325,11 @@ def build_context(state, now, equity, rate, positions, markets, journal_path):
     }
 
 
-def execute(client, actions, equity, positions, markets):
-    """Run actions through the guard and send what passes. Closes first, then stop moves, then opens."""
-    order = {"close": 0, "move_stop": 1, "open": 2}
+def execute(client, actions, equity, positions, markets, now=None):
+    """Run actions through the guard and send what passes.
+    Order: closes, order cancels, stop moves, market entries, resting entry orders."""
+    now = now or datetime.now(timezone.utc)
+    order = {"close": 0, "cancel_order": 1, "move_stop": 2, "open": 3, "entry_order": 4}
     results = []
     by_sym = {p["symbol"]: p for p in positions}
     for a in sorted(actions, key=lambda x: order.get(x.get("type"), 9)):
@@ -293,6 +373,32 @@ def execute(client, actions, equity, positions, markets):
                             f"stop {o['stop']}" + (f", target {o['tp']}" if o["tp"] else "") + f") {why}"))
                     else:
                         a.update(result="rejected", detail=why)
+            elif kind == "cancel_order":
+                n = client.cancel_orders(sym) if hasattr(client, "cancel_orders") else 0
+                a.update(result="done" if n else "rejected", detail=f"cancelled {n} order(s)" if n else "no resting order")
+            elif kind == "entry_order":
+                trig = a.get("trigger")
+                px = markets.get(sym, {}).get("price")
+                if not hasattr(client, "place_order"):
+                    a.update(result="rejected", detail="resting orders not supported here")
+                elif not px or not trig or trig <= 0:
+                    a.update(result="rejected", detail="needs a trigger price and fresh market data")
+                elif abs(trig / px - 1) > config.ORDER_MAX_DIST:
+                    a.update(result="rejected", detail=f"trigger more than {config.ORDER_MAX_DIST:.0%} from the price")
+                else:
+                    ok, why, o = guard.check_open(a, equity=equity, price=trig, inst=client.instrument(sym),
+                                                  positions=list(by_sym.values()))
+                    if ok:
+                        hours = min(float(a.get("expires_hours") or 24), config.ORDER_MAX_HOURS)
+                        exp = int(now.timestamp() * 1000 + hours * 3600_000)
+                        placed = client.place_order(sym, o["side"], o["qty"], trig, o["stop"], o["tp"], exp,
+                                                    a.get("reason", ""))
+                        a.update(result="done", detail=(
+                            f"{o['side']} {o['qty']} when price goes {placed['direction']} {trig} "
+                            f"(risk {o['risk_pct']:.1%}, stop {o['stop']}" + (f", target {o['tp']}" if o["tp"] else "")
+                            + f", expires in {hours:.0f}h) {why}"))
+                    else:
+                        a.update(result="rejected", detail=why)
             else:
                 a.update(result="rejected", detail=f"unknown action {kind}")
         except ExchangeError as e:
@@ -301,7 +407,8 @@ def execute(client, actions, equity, positions, markets):
     return results
 
 
-def write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd, hodl_usd, journal_path, halt):
+def write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd, hodl_usd, journal_path, halt,
+                  orders=()):
     vals = []
     try:
         with open(d / "equity.csv") as f:
@@ -330,6 +437,9 @@ def write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd,
         "trade_count": len(closed), "win_rate_pct": round(wins / len(closed) * 100, 1) if closed else None,
         "brain_calls_today": state["calls"].get(now.strftime("%Y-%m-%d"), 0),
         "last_decision": last[0] if last else None,
+        "brain_mode": config.BRAIN_MODE,
+        "orders": [{k: o.get(k) for k in ("symbol", "side", "trigger", "direction", "stop", "tp", "qty", "expires", "note")}
+                   for o in orders],
         "balance_warning": False,
     }
     save_json(d / "summary.json", summary)

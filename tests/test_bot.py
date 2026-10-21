@@ -69,7 +69,8 @@ def fresh_dir():
     return config.DATA_DIR
 
 
-def run_series(market, brain, n, step_min=15):
+def run_series(market, brain, n, step_min=15, mode="api"):
+    config.BRAIN_MODE = mode
     for i in range(n):
         now = T0 + timedelta(minutes=step_min * i)
         market.now_ms = int(now.timestamp() * 1000)
@@ -129,7 +130,7 @@ def test_stop_fires_between_runs_on_minute_candles():
     start_usd = 1000 / 3.88
     assert -start_usd * 0.04 < c["pnl"] < -start_usd * 0.02, c["pnl"]
     j = journal(d)
-    assert j[-1]["trigger"] == "position closed" and j[-1]["events"][0]["why"] == "stop"
+    assert j[-1]["trigger"] == "position change" and j[-1]["events"][0]["why"] == "stop"
 
 
 def test_liquidation_and_funding():
@@ -178,6 +179,64 @@ def test_full_session():
     assert s["trade_count"] == 1 and s["control_pln"] and s["hodl_pln"] and s["status"] == "live"
     print("summary:", {k: s[k] for k in ("equity_pln", "return_pct", "control_pln", "hodl_pln", "trade_count")})
     print("trade:", s["closed_trades"][0])
+
+
+def write_decision(d, dec_id, when, actions, view="test"):
+    with open(os.path.join(d, "brain_decision.json"), "w") as f:
+        json.dump({"id": dec_id, "decided_at": when.strftime("%Y-%m-%dT%H:%M:%SZ"), "model": "test",
+                   "market_view": view, "watch_next": "-", "actions": actions}, f)
+
+
+def test_session_brain_and_resting_orders():
+    """Session mode: decisions come from brain_decision.json; a breakout order fills on the minute it is crossed."""
+    d = fresh_dir()
+    config.BRAIN_MODE = "session"
+    m = FakeKraken()
+    m.now_ms = T0_MS
+    run.main(now=T0, fx=3.88, market=m)  # first run: writes brain_input.json, no decision yet
+    inp = json.load(open(os.path.join(d, "brain_input.json")))
+    assert inp["markets"]["ETHUSDT"]["price"] and inp["rules"]["max_leverage"] == config.MAX_LEVERAGE
+    t1 = T0 + timedelta(minutes=15)
+    t1_ms = int(t1.timestamp() * 1000)
+    eth, btc = m.p("ETHUSDT", t1_ms), m.p("BTCUSDT", t1_ms)
+    trig = round(eth * 1.004, 2)  # the wave pushes ETH through this within the next hour
+    write_decision(d, "dec-1", t1, [
+        {"type": "open", "symbol": "BTCUSDT", "side": "short", "stop": btc * 1.03, "reason": "fade"},
+        {"type": "entry_order", "symbol": "ETHUSDT", "side": "long", "trigger": trig, "stop": trig * 0.97,
+         "take_profit": trig * 1.1, "expires_hours": 12, "reason": "breakout"},
+        {"type": "entry_order", "symbol": "SOLUSDT", "side": "long", "trigger": 999, "stop": 900, "reason": "too far"}])
+    m.now_ms = int(t1.timestamp() * 1000)
+    run.main(now=t1, fx=3.88, market=m)
+    j = journal(d)
+    res = {a["symbol"]: a["result"] for a in j[-1]["actions"]}
+    assert res == {"BTCUSDT": "done", "ETHUSDT": "done", "SOLUSDT": "rejected"}, j[-1]["actions"]
+    ex = json.load(open(os.path.join(d, "exchange.json")))
+    assert ex["orders"][0]["direction"] == "above"
+    # later runs: the same decision is never executed twice, and the ETH order fills on its minute
+    for k in range(2, 8):
+        t = T0 + timedelta(minutes=15 * k)
+        m.now_ms = int(t.timestamp() * 1000)
+        run.main(now=t, fx=3.88, market=m)
+    assert len(journal(d)) == 1
+    ex = json.load(open(os.path.join(d, "exchange.json")))
+    assert "ETHUSDT" in ex["positions"] and not ex["orders"], ex["orders"]
+    fill = ex["positions"]["ETHUSDT"]["entry"]
+    assert abs(fill / trig - 1) < 0.002, (fill, trig)
+    st = json.load(open(os.path.join(d, "state.json")))
+    assert any(e["type"] == "order_filled" for e in st["pending_events"])
+    inp = json.load(open(os.path.join(d, "brain_input.json")))
+    assert any(e["type"] == "order_filled" for e in inp["events_since_last_decision"])
+    # a stale decision is journaled but not executed
+    t9 = T0 + timedelta(minutes=135)
+    write_decision(d, "dec-2", t9 - timedelta(minutes=90), [{"type": "close", "symbol": "ETHUSDT", "reason": "x"}])
+    m.now_ms = int(t9.timestamp() * 1000)
+    run.main(now=t9, fx=3.88, market=m)
+    last = journal(d)[-1]
+    assert "not executed" in last["error"] and "ETHUSDT" in json.load(open(os.path.join(d, "exchange.json")))["positions"]
+    s = json.load(open(os.path.join(d, "summary.json")))
+    assert s["brain_mode"] == "session" and any(p["symbol"] == "ETHUSDT" for p in s["positions"])
+    assert s["closed_trades"][0]["why"] == "stop"  # the BTC short was stopped out by the rally
+    print("session mode ok; ETH filled at", round(fill, 2), "trigger", trig)
 
 
 if __name__ == "__main__":
