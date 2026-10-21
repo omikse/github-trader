@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T22:49:51Z",
+ "updated": "2026-10-21T22:51:40Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,21 +10,78 @@
  "max_drawdown_pct": 0,
  "control_pln": 999.99,
  "control_trades": 0,
- "hodl_pln": 997.87,
+ "hodl_pln": 998.09,
  "positions": [],
  "closed_trades": [],
  "trade_count": 0,
  "win_rate_pct": null,
- "brain_calls_today": 1,
+ "brain_calls_today": 2,
  "last_decision": {
-  "time": "2026-10-21T22:31:35Z",
-  "trigger": "scheduled",
+  "time": "2026-10-21T22:51:40Z",
+  "trigger": "brain session",
+  "decided_at": "2026-10-21T22:51:25Z",
+  "model": "claude-opus-5-5",
   "equity_usd": 257.14,
   "equity_pln": 999.99,
   "events": [],
-  "error": "brain failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgGB93Wc2zMvH1qmJG2mM'}"
+  "market_view": "Broad bounce: BTC leads (+1.7% 24h, above all h1 EMAs, h4 reclaimed ema200 at 83.4k), now consolidating 84.1-84.8k just under the 24h high. Alts weaker (ETH/SOL/DOGE still below h4 ema200); XRP strongest alt but cooling. No clean market entry right now; set orders to catch either breakout or pullback.",
+  "watch_next": "Did BTC break 84.85k with momentum (order filled) or lose 84.0k (h1 ema20/structure) - if it loses 83.9k, cancel BTC breakout idea. Check XRP fill at 1.358 and whether h1 ema20 holds.",
+  "news": "",
+  "actions": [
+   {
+    "type": "entry_order",
+    "symbol": "BTCUSDT",
+    "side": "long",
+    "trigger": 84900,
+    "stop": 84050,
+    "take_profit": 87500,
+    "risk_pct": 0.03,
+    "expires_hours": 24,
+    "reason": "Breakout above 24h high 84,840 after h4 reclaim of ema200; momentum continuation toward 87.5k (~3R).",
+    "invalidation": "Breakout fails back below 84,050 / range low; or BTC loses 83.9k before triggering.",
+    "result": "done",
+    "detail": "long 0.0081771 when price goes above 84900 (risk 3.0%, stop 84050.0, target 87500.0, expires in 24h) ok"
+   },
+   {
+    "type": "entry_order",
+    "symbol": "XRPUSDT",
+    "side": "long",
+    "trigger": 1.358,
+    "stop": 1.338,
+    "take_profit": 1.43,
+    "risk_pct": 0.02,
+    "expires_hours": 18,
+    "reason": "Strongest alt (+2.6% 24h, h4 RSI 64); pullback to h1 ema20 / breakout level ~1.355 for trend continuation.",
+    "invalidation": "Close below 1.338 (back under breakout base and h4 ema20/50).",
+    "result": "done",
+    "detail": "long 239.268 when price goes below 1.358 (risk 2.0%, stop 1.338, target 1.43, expires in 18h) ok"
+   }
+  ]
  },
  "brain_mode": "session",
- "orders": [],
+ "orders": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "trigger": 84900,
+   "direction": "above",
+   "stop": 84050.0,
+   "tp": 87500.0,
+   "qty": 0.0081771,
+   "expires": 1792709500006,
+   "note": "Breakout above 24h high 84,840 after h4 reclaim of ema200; momentum continuation toward 87.5k (~3R)."
+  },
+  {
+   "symbol": "XRPUSDT",
+   "side": "long",
+   "trigger": 1.358,
+   "direction": "below",
+   "stop": 1.338,
+   "tp": 1.43,
+   "qty": 239.268,
+   "expires": 1792687900006,
+   "note": "Strongest alt (+2.6% 24h, h4 RSI 64); pullback to h1 ema20 / breakout level ~1.355 for trend continuation."
+  }
+ ],
  "balance_warning": false
 }

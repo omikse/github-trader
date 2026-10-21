@@ -1,5 +1,5 @@
 {
- "time_utc": "2026-10-21T22:49:51Z",
+ "time_utc": "2026-10-21T22:51:40Z",
  "experiment_ends_utc": "2026-11-21T21:00:00Z",
  "account": {
   "equity_usd": 257.14,
@@ -11,32 +11,53 @@
   "position_size_vs_equity": 0.0
  },
  "positions": [],
- "resting_orders": [],
+ "resting_orders": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "trigger": 84900,
+   "direction": "above",
+   "stop": 84050.0,
+   "tp": 87500.0,
+   "qty": 0.0081771,
+   "expires_utc": "2026-10-22T22:51:40Z"
+  },
+  {
+   "symbol": "XRPUSDT",
+   "side": "long",
+   "trigger": 1.358,
+   "direction": "below",
+   "stop": 1.338,
+   "tp": 1.43,
+   "qty": 239.268,
+   "expires_utc": "2026-10-22T16:51:40Z"
+  }
+ ],
  "events_since_last_decision": [],
  "recent_closed_trades": [],
  "markets": {
   "BTCUSDT": {
    "symbol": "BTCUSDT",
-   "price": 84410.3,
-   "change_15m": -0.07,
-   "change_1h": -0.44,
-   "change_4h": -0.04,
-   "change_24h": 1.68,
+   "price": 84429.1,
+   "change_15m": -0.05,
+   "change_1h": -0.42,
+   "change_4h": -0.02,
+   "change_24h": 1.7,
    "high_24h": 84840.0,
    "low_24h": 82542.9,
    "h1": {
-    "ema20": 83893.8168,
-    "ema50": 83133.2168,
-    "ema200": 82144.169,
-    "rsi14": 65.38,
+    "ema20": 83895.6073,
+    "ema50": 83133.954,
+    "ema200": 82144.263,
+    "rsi14": 65.84,
     "atr14": 405.5657,
     "atr_pct": 0.48
    },
    "h4": {
-    "ema20": 82844.4096,
-    "ema50": 82523.6392,
-    "ema200": 83432.9465,
-    "rsi14": 68.14
+    "ema20": 82846.2,
+    "ema50": 82524.3765,
+    "ema200": 83433.0405,
+    "rsi14": 68.39
    },
    "funding_rate_pct_per_8h": 0.01,
    "last_24_hourly_closes": [
@@ -63,7 +84,7 @@
     84447.7,
     84621.9,
     84784.1,
-    84410.3
+    84429.1
    ],
    "last_6_4h_candles": [
     {
@@ -100,32 +121,32 @@
      "o": 84447.8,
      "h": 84796.0,
      "l": 84388.6,
-     "c": 84410.3
+     "c": 84429.1
     }
    ]
   },
   "ETHUSDT": {
    "symbol": "ETHUSDT",
-   "price": 2483.87,
+   "price": 2483.76,
    "change_15m": -0.06,
-   "change_1h": -0.54,
+   "change_1h": -0.55,
    "change_4h": -0.38,
    "change_24h": 1.23,
    "high_24h": 2524.58,
    "low_24h": 2434.51,
    "h1": {
-    "ema20": 2477.1296,
-    "ema50": 2451.989,
-    "ema200": 2430.2709,
-    "rsi14": 56.95,
+    "ema20": 2477.1191,
+    "ema50": 2451.9847,
+    "ema200": 2430.2704,
+    "rsi14": 56.9,
     "atr14": 17.1853,
     "atr_pct": 0.69
    },
    "h4": {
-    "ema20": 2443.3611,
-    "ema50": 2447.9068,
-    "ema200": 2590.0203,
-    "rsi14": 59.23
+    "ema20": 2443.3506,
+    "ema50": 2447.9025,
+    "ema200": 2590.0197,
+    "rsi14": 59.2
    },
    "funding_rate_pct_per_8h": 0.01,
    "last_24_hourly_closes": [
@@ -152,7 +173,7 @@
     2493.29,
     2490.65,
     2497.48,
-    2483.87
+    2483.76
    ],
    "last_6_4h_candles": [
     {
@@ -189,7 +210,7 @@
      "o": 2493.12,
      "h": 2499.5,
      "l": 2482.74,
-     "c": 2483.87
+     "c": 2483.76
     }
    ]
   },
@@ -373,26 +394,26 @@
   },
   "DOGEUSDT": {
    "symbol": "DOGEUSDT",
-   "price": 0.0822104,
-   "change_15m": -0.05,
-   "change_1h": -0.67,
-   "change_4h": -0.8,
-   "change_24h": 0.26,
+   "price": 0.0821878,
+   "change_15m": -0.07,
+   "change_1h": -0.69,
+   "change_4h": -0.82,
+   "change_24h": 0.23,
    "high_24h": 0.083723,
    "low_24h": 0.0811913,
    "h1": {
     "ema20": 0.0823,
     "ema50": 0.0814,
     "ema200": 0.0808,
-    "rsi14": 51.81,
+    "rsi14": 51.49,
     "atr14": 0.0006,
-    "atr_pct": 0.7
+    "atr_pct": 0.71
    },
    "h4": {
     "ema20": 0.0811,
     "ema50": 0.0816,
     "ema200": 0.0893,
-    "rsi14": 57.41
+    "rsi14": 57.27
    },
    "funding_rate_pct_per_8h": 0.01,
    "last_24_hourly_closes": [
@@ -456,7 +477,7 @@
      "o": 0.082838,
      "h": 0.0831141,
      "l": 0.0821712,
-     "c": 0.0822104
+     "c": 0.0821878
     }
    ]
   }
@@ -466,6 +487,32 @@
    "time": "2026-10-21T22:31:35Z",
    "view": null,
    "actions": []
+  },
+  {
+   "time": "2026-10-21T22:51:40Z",
+   "view": "Broad bounce: BTC leads (+1.7% 24h, above all h1 EMAs, h4 reclaimed ema200 at 83.4k), now consolidating 84.1-84.8k just under the 24h high. Alts weaker (ETH/SOL/DOGE still below h4 ema200); XRP strongest alt but cooling. No clean market entry right now; set orders to catch either breakout or pullback.",
+   "actions": [
+    {
+     "type": "entry_order",
+     "symbol": "BTCUSDT",
+     "side": "long",
+     "trigger": 84900,
+     "stop": 84050,
+     "reason": "Breakout above 24h high 84,840 after h4 reclaim of ema200; momentum continuation toward 87.5k (~3R).",
+     "result": "done",
+     "detail": "long 0.0081771 when price goes above 84900 (risk 3.0%, stop 84050.0, target 87500.0, expires in 24h) ok"
+    },
+    {
+     "type": "entry_order",
+     "symbol": "XRPUSDT",
+     "side": "long",
+     "trigger": 1.358,
+     "stop": 1.338,
+     "reason": "Strongest alt (+2.6% 24h, h4 RSI 64); pullback to h1 ema20 / breakout level ~1.355 for trend continuation.",
+     "result": "done",
+     "detail": "long 239.268 when price goes below 1.358 (risk 2.0%, stop 1.338, target 1.43, expires in 18h) ok"
+    }
+   ]
   }
  ],
  "rules": {
