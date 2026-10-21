@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claude Trader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: one column read top-down: scoreboard vs benchmarks, equity race chart, positions, latest reasoning, trade log. */
+:root{
+  --bg:#F2F4F6; --surface:#FFFFFF; --line:#DDE2E8; --ink:#141C26; --muted:#5B6877;
+  --claude:#2C47D1; --control:#8A5A12; --hodl:#6B7785; --up:#17784A; --down:#BF3328; --track:#E6EAEF;
+  --display:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0E1319; --surface:#161D26; --line:#273241; --ink:#E5EAF0; --muted:#8C99A8;
+  --claude:#8297FF; --control:#E2A94B; --hodl:#97A3B1; --up:#4CC38A; --down:#F2766B; --track:#222C38; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 var(--display)}
+.wrap{max-width:920px;margin:0 auto;padding:28px 16px 64px;display:flex;flex-direction:column;gap:26px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.label{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:500}
+h1{font-size:15px;margin:0} h2{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px}
+.pill{font-size:12px;font-weight:600;padding:2px 10px;border-radius:999px;border:1px solid currentColor}
+.live{color:var(--up)} .paused,.halted{color:var(--down)} .ended{color:var(--muted)}
+.score{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.big{font-family:var(--mono);font-size:clamp(32px,7vw,48px);font-weight:500;letter-spacing:-.02em;line-height:1.05}
+.mid{font-family:var(--mono);font-size:24px;font-weight:500}
+.sw{display:inline-block;width:10px;height:3px;border-radius:2px;vertical-align:middle;margin-right:6px}
+.up{color:var(--up)} .down{color:var(--down)}
+.stats{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;color:var(--muted)}
+.stats b{font-family:var(--mono);color:var(--ink);font-weight:500}
+svg{display:block;width:100%;height:auto} svg text{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+.tw{overflow-x:auto} table{width:100%;border-collapse:collapse;min-width:600px}
+th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;text-align:right;padding:0 8px 8px;border-bottom:1px solid var(--line)}
+td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:right;font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums}
+th:first-child,td:first-child{text-align:left;padding-left:0} tr:last-child td{border-bottom:0}
+.empty{color:var(--muted);font-size:14px}
+.view{font-size:15.5px;max-width:68ch}
+.act{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;padding:10px 0;border-top:1px solid var(--line);font-size:14px}
+.tag{font-family:var(--mono);font-size:12px;font-weight:600;padding:1px 8px;border-radius:5px;background:var(--track);height:fit-content}
+.tag.done{color:var(--up)} .tag.rejected,.tag.failed{color:var(--down)}
+.muted{color:var(--muted);font-size:13px}
+.warn{border-color:var(--down);color:var(--down);font-size:14px}
+@media (max-width:640px){.score{grid-template-columns:1fr 1fr}.score .card:first-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><h1>Claude Trader · Bybit demo</h1><span class="pill" id="status">loading</span></header>
+  <div class="card warn" id="warn" hidden>The demo balance was not reduced to 1,000 PLN, so exchange liquidation prices are unrealistic. Run the "Setup demo account" workflow.</div>
+
+  <section class="score">
+    <div class="card">
+      <div class="label"><span class="sw" style="background:var(--claude)"></span>Claude</div>
+      <div class="big" id="eq">—</div>
+      <div class="num" id="ret">Waiting for the first run</div>
+    </div>
+    <div class="card">
+      <div class="label"><span class="sw" style="background:var(--control)"></span>Rule bot (EMA 20/50)</div>
+      <div class="mid" id="ctrl">—</div><div class="muted num" id="ctrlRet"></div>
+    </div>
+    <div class="card">
+      <div class="label"><span class="sw" style="background:var(--hodl)"></span>Hold Bitcoin</div>
+      <div class="mid" id="hodl">—</div><div class="muted num" id="hodlRet"></div>
+    </div>
+  </section>
+  <div class="stats" id="stats"></div>
+
+  <section class="card"><h2>Equity race (PLN)</h2><div id="chart"><p class="empty">The chart appears after a few runs.</p></div></section>
+  <section class="card"><h2>Open positions</h2><div class="tw" id="pos"><p class="empty">No open positions.</p></div></section>
+  <section class="card"><h2>Latest decision</h2><div id="dec"><p class="empty">Claude has not decided anything yet.</p></div></section>
+  <section class="card"><h2>Closed trades</h2><div class="tw" id="trades"><p class="empty">No closed trades yet.</p></div></section>
+  <p class="muted">Demo account on Bybit with real market prices. Stops and targets sit on the exchange. Every decision is committed to git with a timestamp before its outcome is known. Not financial advice.</p>
+</div>
+<script>
+const f=(n,d=2)=>n==null||isNaN(n)?"—":Number(n).toLocaleString("en-US",{minimumFractionDigits:d,maximumFractionDigits:d});
+const sg=n=>(n>=0?"+":"−")+f(Math.abs(n));
+const t=s=>s?new Date(s).toLocaleString("en-GB",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}):"";
+const ts=ms=>ms?t(new Date(ms).toISOString()):"";
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const $=id=>document.getElementById(id);
+async function load(){
+  try{
+    const [s,csv]=await Promise.all([fetch("data/summary.json?"+Date.now()).then(r=>r.json()),fetch("data/equity.csv?"+Date.now()).then(r=>r.text())]);
+    render(s,csv);
+  }catch(e){$("status").textContent="no data yet";$("status").className="pill ended"}
+}
+function retLine(v,start){return v==null?"":sg(v-start)+" PLN ("+(v>=start?"+":"−")+f(Math.abs((v/start-1)*100),1)+"%)"}
+function render(s,csv){
+  $("status").textContent=s.status+" · "+t(s.updated);$("status").className="pill "+s.status;
+  $("warn").hidden=!s.balance_warning;
+  $("eq").textContent=f(s.equity_pln)+" zł";
+  $("ret").textContent=retLine(s.equity_pln,s.start_pln);$("ret").className="num "+(s.equity_pln>=s.start_pln?"up":"down");
+  $("ctrl").textContent=f(s.control_pln)+" zł";$("ctrlRet").textContent=retLine(s.control_pln,s.start_pln);
+  $("hodl").textContent=f(s.hodl_pln)+" zł";$("hodlRet").textContent=retLine(s.hodl_pln,s.start_pln);
+  $("stats").innerHTML=`<span>Max drawdown <b>${f(s.max_drawdown_pct,1)}%</b></span><span>Closed trades <b>${s.trade_count}</b></span><span>Win rate <b>${s.win_rate_pct==null?"—":f(s.win_rate_pct,0)+"%"}</b></span><span>Claude calls today <b>${s.brain_calls_today}</b></span><span>Ends <b>${t(s.end_at)}</b></span>`;
+  // chart
+  const rows=csv.trim().split("\n").slice(1).map(l=>l.split(",")).map(r=>({t:new Date(r[0]).getTime(),c:+r[1],k:r[2]?+r[2]:null,h:r[3]?+r[3]:null}));
+  if(rows.length>1){
+    const W=860,H=260,L=56,R=12,T=12,B=26,all=rows.flatMap(r=>[r.c,r.k,r.h]).filter(v=>v!=null).concat([s.start_pln]);
+    let lo=Math.min(...all),hi=Math.max(...all);const pad=(hi-lo)*.08||20;lo-=pad;hi+=pad;
+    const t0=rows[0].t,t1=rows[rows.length-1].t,x=v=>L+(W-L-R)*(v-t0)/Math.max(1,t1-t0),y=v=>T+(H-T-B)*(1-(v-lo)/(hi-lo));
+    const step=[10,20,50,100,200,500].find(s=>(hi-lo)/s<=6)||1000;let g="";
+    for(let v=Math.ceil(lo/step)*step;v<=hi;v+=step)g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L-8}" y="${y(v)+4}" text-anchor="end">${f(v,0)}</text>`;
+    const line=(k,c,w)=>{const p=rows.filter(r=>r[k]!=null).map(r=>`${x(r.t).toFixed(1)},${y(r[k]).toFixed(1)}`).join(" ");return p?`<polyline points="${p}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linejoin="round"/>`:""};
+    const last=rows[rows.length-1];
+    $("chart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Equity of Claude, the rule bot and holding Bitcoin">${g}
+    <line x1="${L}" x2="${W-R}" y1="${y(s.start_pln)}" y2="${y(s.start_pln)}" stroke="var(--muted)" stroke-dasharray="4 4"/>
+    ${line("h","var(--hodl)",1.5)}${line("k","var(--control)",1.5)}${line("c","var(--claude)",2.4)}
+    <circle cx="${x(last.t)}" cy="${y(last.c)}" r="4.5" fill="var(--claude)"/>
+    <text x="${L}" y="${H-6}">${t(new Date(t0).toISOString())}</text><text x="${W-R}" y="${H-6}" text-anchor="end">${t(new Date(t1).toISOString())}</text></svg>`;
+  }
+  // positions
+  if(s.positions.length){
+    $("pos").innerHTML=`<table><thead><tr><th>Market</th><th>Side</th><th>Size</th><th>Entry</th><th>Mark</th><th>Stop</th><th>Target</th><th>P/L zł</th></tr></thead><tbody>${s.positions.map(p=>`<tr><td>${esc(p.symbol)}</td><td class="${p.side=="long"?"up":"down"}">${p.side}</td><td>${p.size}</td><td>${f(p.entry,2)}</td><td>${f(p.mark,2)}</td><td>${p.stop?f(p.stop,2):"—"}</td><td>${p.tp?f(p.tp,2):"—"}</td><td class="${p.upnl_pln>=0?"up":"down"}">${sg(p.upnl_pln)}</td></tr>`).join("")}</tbody></table>`;
+  } else $("pos").innerHTML='<p class="empty">No open positions.</p>';
+  // decision
+  const d=s.last_decision;
+  if(d){
+    const acts=(d.actions||[]).map(a=>`<div class="act"><span class="tag ${esc(a.result)}">${esc(a.type)} ${esc(a.symbol)}${a.side?" "+esc(a.side):""}</span><div>${esc(a.reason)}${a.invalidation?`<div class="muted">Wrong if: ${esc(a.invalidation)}</div>`:""}<div class="muted">${esc(a.result)}: ${esc(a.detail)}</div></div></div>`).join("")||'<p class="muted">No trades this round.</p>';
+    $("dec").innerHTML=`<div class="muted">${t(d.time)} · trigger: ${esc(d.trigger)}</div><p class="view">${esc(d.market_view||d.error||"")}</p>${acts}${d.watch_next?`<p class="muted">Next: ${esc(d.watch_next)}</p>`:""}`;
+  }
+  // trades
+  if(s.closed_trades.length){
+    $("trades").innerHTML=`<table><thead><tr><th>Closed</th><th>Market</th><th>Side</th><th>Entry</th><th>Exit</th><th>P/L zł</th></tr></thead><tbody>${s.closed_trades.map(x=>`<tr><td>${ts(x.time)}</td><td>${esc(x.symbol)}</td><td>${x.side}</td><td>${f(x.entry,2)}</td><td>${f(x.exit,2)}</td><td class="${x.pnl_pln>=0?"up":"down"}">${sg(x.pnl_pln)}</td></tr>`).join("")}</tbody></table>`;
+  }
+}
+load();setInterval(load,300000);
+</script>
+</body>
+</html>
