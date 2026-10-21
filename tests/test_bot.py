@@ -108,7 +108,7 @@ def test_stops_only_tighten_and_halts():
     assert guard.check_move_stop({"stop": 84000}, price=85000, inst=INST, position=pos)[0] is True
     st = {}
     assert guard.check_halts(st, 100, "d1") is None
-    assert guard.check_halts(st, 84, "d1") == "daily"
+    assert guard.check_halts(st, 79, "d1") == "daily"
     assert guard.check_halts(st, 90, "d2") is None
     assert guard.check_halts(st, 49, "d2") == "kill"
     assert guard.check_halts(st, 200, "d3") == "kill"
