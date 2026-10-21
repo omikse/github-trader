@@ -88,7 +88,8 @@ def main(client=None, brain=None, now=None, fx=None):
     if client is None:
         key, secret = os.getenv("BYBIT_API_KEY"), os.getenv("BYBIT_API_SECRET")
         if not key or not secret:
-            sys.exit("BYBIT_API_KEY / BYBIT_API_SECRET are not set")
+            log("BYBIT_API_KEY / BYBIT_API_SECRET are not set yet. Add them as repository secrets. Not starting.")
+            return None
         client = Bybit(key, secret, config.BYBIT_BASE)
     rate = fx or usd_pln(state)
 
