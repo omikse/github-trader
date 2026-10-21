@@ -241,6 +241,34 @@ def test_session_brain_and_resting_orders():
     print("session mode ok; ETH filled at", round(fill, 2), "trigger", trig)
 
 
+def test_minute_ticks():
+    """Light 1-minute ticks keep the account and summary current; history rows only on full runs."""
+    d = fresh_dir()
+    config.BRAIN_MODE = "session"
+    m = FakeKraken()
+    m.now_ms = T0_MS
+    run.main(now=T0, fx=3.88, market=m)
+    t1 = T0 + timedelta(minutes=1)
+    p = m.p("SOLUSDT", int(t1.timestamp() * 1000))
+    write_decision(d, "d1", t1, [{"type": "open", "symbol": "SOLUSDT", "side": "long", "stop": p * 0.95, "reason": "x"}])
+    values = []
+    for k in range(1, 12):
+        t = T0 + timedelta(minutes=k)
+        m.now_ms = int(t.timestamp() * 1000)
+        run.main(now=t, fx=3.88, market=m, light=True)  # the new decision forces one full run by itself
+        s = json.load(open(os.path.join(d, "summary.json")))
+        values.append(s["equity_pln"])
+        assert s["updated"] == t.strftime("%Y-%m-%dT%H:%M:%SZ")
+    assert len(set(values)) > 5, values          # equity moves every minute with the open position
+    rows = open(os.path.join(d, "equity.csv")).read().strip().splitlines()
+    assert len(rows) == 3, rows                  # header + first run + the forced full run
+    s = json.load(open(os.path.join(d, "summary.json")))
+    assert s["cash_usd"] is not None and s["pairs"]["BTCUSDT"] == "XBTUSD" and s["positions"][0]["symbol"] == "SOLUSDT"
+    # live recomputation in the browser: cash + open P/L must equal the reported equity
+    live = s["cash_usd"] + sum(p["upnl"] for p in s["positions"])
+    assert abs(live * s["fx_usd_pln"] - s["equity_pln"]) < 0.5, (live * s["fx_usd_pln"], s["equity_pln"])
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

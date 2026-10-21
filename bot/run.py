@@ -15,7 +15,7 @@ from pathlib import Path
 import requests
 
 from . import config, control, guard
-from .paper import ExchangeError, PaperExchange
+from .paper import PAIRS, ExchangeError, PaperExchange
 from .market import snapshot
 
 
@@ -76,7 +76,8 @@ def close_all(client, positions, why, events):
             events.append({"type": "close_failed", "symbol": p["symbol"], "error": str(e)})
 
 
-def main(client=None, brain=None, now=None, fx=None, market=None):
+def main(client=None, brain=None, now=None, fx=None, market=None, light=False):
+    """light=True: a quick 1-minute tick (exchange, stops, account, dashboard) without the full market scan."""
     now = now or datetime.now(timezone.utc)
     now_ms = int(now.timestamp() * 1000)
     day = now.strftime("%Y-%m-%d")
@@ -85,7 +86,11 @@ def main(client=None, brain=None, now=None, fx=None, market=None):
     state_path, journal_path = d / "state.json", d / "decisions.jsonl"
     state = load_json(state_path, {})
 
-    rate = fx or usd_pln(state)
+    if light and "start" in state:
+        dec = load_json(d / "brain_decision.json", None)
+        if dec and dec.get("id") and dec["id"] != state.get("last_decision_id"):
+            light = False  # a new decision needs fresh market data
+    rate = fx or (state.get("fx") if light and state.get("fx") else usd_pln(state))
     if client is None:
         start_usd = None if "start" in state else round(config.START_PLN / rate, 2)
         client = PaperExchange(d / "exchange.json", market=market, start_usd=start_usd, now_ms=now_ms)
@@ -148,7 +153,7 @@ def main(client=None, brain=None, now=None, fx=None, market=None):
 
     # ---- market data ------------------------------------------------------------
     markets, raw = {}, {}
-    for sym in config.SYMBOLS:
+    for sym in ([] if light else config.SYMBOLS):
         try:
             markets[sym], raw[sym] = snapshot(client, sym)
         except Exception as e:  # one bad symbol must not stop the run
@@ -156,7 +161,9 @@ def main(client=None, brain=None, now=None, fx=None, market=None):
             print(f"::warning::no market data for {sym}: {e}", flush=True)
 
     entry, trigger = None, None
-    if config.BRAIN_MODE == "session":
+    if light:
+        state.setdefault("pending_events", []).extend(events)
+    elif config.BRAIN_MODE == "session":
         state.setdefault("pending_events", []).extend(events)
         entry = take_session_decision(client, state, d, now, equity, rate, positions, markets, journal_path,
                                       blocked="experiment ended" if ended else ("trading halted" if halt else None))
@@ -176,9 +183,15 @@ def main(client=None, brain=None, now=None, fx=None, market=None):
 
     # ---- benchmarks, dashboard data, state ------------------------------------------------
     btc_raw = raw.get("BTCUSDT")
-    btc_price = markets.get("BTCUSDT", {}).get("price") or state.get("last_btc")
+    btc_price = markets.get("BTCUSDT", {}).get("price")
+    if not btc_price:
+        try:
+            btc_price = client.ticker("BTCUSDT")["last"]
+        except Exception:
+            btc_price = state.get("last_btc")
     if btc_raw:
         state["control"] = control.update(state.get("control"), btc_raw["h1"], state["start_usd"])
+    if btc_price:
         state["last_btc"] = btc_price
     ctrl_usd = control.value(state.get("control"), btc_price) if btc_price else None
     hodl_usd = state["start_usd"] * btc_price / state["start_btc"] if btc_price else None
@@ -187,19 +200,24 @@ def main(client=None, brain=None, now=None, fx=None, market=None):
            round(ctrl_usd * rate, 2) if ctrl_usd is not None else "",
            round(hodl_usd * rate, 2) if hodl_usd is not None else ""]
     eq_path = d / "equity.csv"
-    new_file = not eq_path.exists()
-    with open(eq_path, "a", newline="") as f:
-        w = csv.writer(f)
-        if new_file:
-            w.writerow(["time", "claude_pln", "control_pln", "hodl_pln"])
-        w.writerow(row)
+    if not light or not eq_path.exists():
+        new_file = not eq_path.exists()
+        with open(eq_path, "a", newline="") as f:
+            w = csv.writer(f)
+            if new_file:
+                w.writerow(["time", "claude_pln", "control_pln", "hodl_pln"])
+            w.writerow(row)
 
+    cash_usd = client.s["cash"] if hasattr(client, "s") else None
+    if cash_usd is not None:  # convert exchange cash into the bot's own equity frame
+        cash_usd += state["start_usd"] - state["exchange_equity_at_start"]
     write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd, hodl_usd, journal_path, halt,
-                  open_orders(client))
+                  open_orders(client), cash_usd)
     if hasattr(client, "save"):
         client.save()
     save_json(state_path, state)
-    log(f"equity {equity * rate:.2f} PLN | positions {len(positions)} | brain: {trigger or 'not called'}")
+    if not light:
+        log(f"equity {equity * rate:.2f} PLN | positions {len(positions)} | decision: {trigger or 'none'}")
     return entry
 
 
@@ -409,7 +427,7 @@ def execute(client, actions, equity, positions, markets, now=None):
 
 
 def write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd, hodl_usd, journal_path, halt,
-                  orders=()):
+                  orders=(), cash_usd=None):
     vals = []
     try:
         with open(d / "equity.csv") as f:
@@ -439,6 +457,10 @@ def write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd,
         "brain_calls_today": state["calls"].get(now.strftime("%Y-%m-%d"), 0),
         "last_decision": last[0] if last else None,
         "brain_mode": config.BRAIN_MODE,
+        "cash_usd": round(cash_usd, 6) if cash_usd is not None else None,
+        "start_usd": state["start_usd"], "start_btc": state["start_btc"],
+        "control_live": ({"equity": c.get("equity"), "pos": c.get("pos")} if c else None),
+        "pairs": PAIRS,
         "orders": [{k: o.get(k) for k in ("symbol", "side", "trigger", "direction", "stop", "tp", "qty", "expires", "note")}
                    for o in orders],
         "balance_warning": False,

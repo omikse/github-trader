@@ -17,7 +17,7 @@ every 15 minutes; you only decide.
 5. Write `docs/data/brain_decision.json` (shape below). `id` and `decided_at` are the current UTC time,
    format `YYYY-MM-DDTHH:MM:SSZ`. Write it even when you do nothing (empty `actions`), so the journal shows you looked.
 6. Commit only that file (author "Claude" <noreply@anthropic.com>, message `brain decision <decided_at>`),
-   `git pull --rebase`, `git push`. The push starts the engine, which executes your actions within a minute or two.
+   `git pull --rebase`, `git push`. The always-on engine pulls the repo every minute and executes your actions within a minute or two.
    If the push is rejected, pull --rebase and push again once.
 7. Finish with 2-3 lines: account value, what you did, and why.
 

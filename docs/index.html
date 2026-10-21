@@ -53,6 +53,7 @@ th:first-child,td:first-child{text-align:left;padding-left:0} tr:last-child td{b
 <body>
 <div class="wrap">
   <header><h1>Claude Trader · paper futures on Kraken prices</h1><span class="pill" id="status">loading</span></header>
+  <div class="muted num" id="fresh"></div>
 
   <section class="score">
     <div class="card">
@@ -88,10 +89,57 @@ const $=id=>document.getElementById(id);
 async function load(){
   try{
     const [s,csv]=await Promise.all([fetch("data/summary.json?"+Date.now()).then(r=>r.json()),fetch("data/equity.csv?"+Date.now()).then(r=>r.text())]);
-    render(s,csv);
+    render(s,csv);if(LIVE_AT)liveRender();
   }catch(e){$("status").textContent="no data yet";$("status").className="pill ended"}
 }
 function retLine(v,start){return v==null?"":sg(v-start)+" PLN ("+(v>=start?"+":"−")+f(Math.abs((v/start-1)*100),1)+"%)"}
+let S=null,LIVE={},LIVE_AT=0,LIVE_SRC="";
+const dp=v=>v==null?2:(Math.abs(v)<0.01?8:Math.abs(v)<1?5:2);
+const upnl=(side,entry,size,px)=>side=="long"?(px-entry)*size:(entry-px)*size;
+function posTable(px){
+  const s=S; if(!s) return;
+  if(!s.positions.length){$("pos").innerHTML='<p class="empty">No open positions.</p>';return}
+  $("pos").innerHTML=`<table><thead><tr><th>Market</th><th>Side</th><th>Size</th><th>Entry</th><th>Price now</th><th>Stop</th><th>Target</th><th>P/L zł</th></tr></thead><tbody>${s.positions.map(p=>{
+    const m=(px&&px[p.symbol])||p.mark, pl=upnl(p.side,p.entry,p.size,m)*s.fx_usd_pln;
+    return `<tr><td>${esc(p.symbol)}</td><td class="${p.side=="long"?"up":"down"}">${p.side}</td><td>${p.size}</td><td>${f(p.entry,dp(p.entry))}</td><td>${f(m,dp(m))}</td><td>${p.stop?f(p.stop,dp(p.stop)):"—"}</td><td>${p.tp?f(p.tp,dp(p.tp)):"—"}</td><td class="${pl>=0?"up":"down"}">${sg(pl)}</td></tr>`}).join("")}</tbody></table>`;
+}
+async function krakenPx(syms){
+  const out={};
+  await Promise.all(syms.map(async sym=>{
+    const r=await fetch("https://api.kraken.com/0/public/Ticker?pair="+S.pairs[sym]);const j=await r.json();
+    const v=Object.values(j.result||{})[0]; if(v) out[sym]=parseFloat(v.c[0]);
+  }));
+  if(Object.keys(out).length<syms.length) throw new Error("missing");
+  return out;
+}
+async function binancePx(syms){
+  const r=await fetch("https://api.binance.com/api/v3/ticker/price?symbols="+encodeURIComponent(JSON.stringify(syms)));
+  const j=await r.json(),out={};j.forEach(x=>out[x.symbol]=parseFloat(x.price));return out;
+}
+async function tick(){
+  if(!S||!S.pairs||S.cash_usd==null) return;
+  const syms=[...new Set(S.positions.map(p=>p.symbol).concat(["BTCUSDT"]))];
+  try{LIVE=await krakenPx(syms);LIVE_SRC="Kraken"}catch(e){
+    try{LIVE=await binancePx(syms);LIVE_SRC="Binance"}catch(e2){LIVE_SRC="";return}}
+  LIVE_AT=Date.now();liveRender();
+}
+function liveRender(){
+  const s=S,fx=s.fx_usd_pln,px=LIVE;
+  const eq=(s.cash_usd+s.positions.reduce((a,p)=>a+upnl(p.side,p.entry,p.size,px[p.symbol]||p.mark),0))*fx;
+  $("eq").textContent=f(eq)+" zł";$("ret").textContent=retLine(eq,s.start_pln);$("ret").className="num "+(eq>=s.start_pln?"up":"down");
+  if(px.BTCUSDT){
+    const h=s.start_usd*px.BTCUSDT/s.start_btc*fx;$("hodl").textContent=f(h)+" zł";$("hodlRet").textContent=retLine(h,s.start_pln);
+    const c=s.control_live;
+    if(c&&c.equity!=null){const ce=(c.equity+(c.pos?upnl(c.pos.side,c.pos.entry,c.pos.qty,px.BTCUSDT):0))*fx;$("ctrl").textContent=f(ce)+" zł";$("ctrlRet").textContent=retLine(ce,s.start_pln)}
+  }
+  posTable(px);
+}
+function freshness(){
+  if(!S) return;
+  const sec=x=>Math.max(0,Math.round((Date.now()-x)/1000));
+  const eng=sec(new Date(S.updated).getTime());
+  $("fresh").textContent=(LIVE_AT?`Live prices from ${LIVE_SRC}, ${sec(LIVE_AT)}s ago · `:"Live prices unavailable, showing the engine's last values · ")+`engine saved ${eng<120?eng+"s":Math.round(eng/60)+" min"} ago`;
+}
 function render(s,csv){
   $("status").textContent=s.status+" · "+t(s.updated);$("status").className="pill "+s.status;
   $("eq").textContent=f(s.equity_pln)+" zł";
@@ -115,10 +163,7 @@ function render(s,csv){
     <circle cx="${x(last.t)}" cy="${y(last.c)}" r="4.5" fill="var(--claude)"/>
     <text x="${L}" y="${H-6}">${t(new Date(t0).toISOString())}</text><text x="${W-R}" y="${H-6}" text-anchor="end">${t(new Date(t1).toISOString())}</text></svg>`;
   }
-  // positions
-  if(s.positions.length){
-    $("pos").innerHTML=`<table><thead><tr><th>Market</th><th>Side</th><th>Size</th><th>Entry</th><th>Mark</th><th>Stop</th><th>Target</th><th>P/L zł</th></tr></thead><tbody>${s.positions.map(p=>`<tr><td>${esc(p.symbol)}</td><td class="${p.side=="long"?"up":"down"}">${p.side}</td><td>${p.size}</td><td>${f(p.entry,2)}</td><td>${f(p.mark,2)}</td><td>${p.stop?f(p.stop,2):"—"}</td><td>${p.tp?f(p.tp,2):"—"}</td><td class="${p.upnl_pln>=0?"up":"down"}">${sg(p.upnl_pln)}</td></tr>`).join("")}</tbody></table>`;
-  } else $("pos").innerHTML='<p class="empty">No open positions.</p>';
+  S=s; posTable(null);
   // decision
   const d=s.last_decision;
   if(d){
@@ -133,7 +178,7 @@ function render(s,csv){
     $("trades").innerHTML=`<table><thead><tr><th>Closed</th><th>Market</th><th>Side</th><th>Entry</th><th>Exit</th><th>Why</th><th>P/L zł</th></tr></thead><tbody>${s.closed_trades.map(x=>`<tr><td>${ts(x.time)}</td><td>${esc(x.symbol)}</td><td>${x.side}</td><td>${f(x.entry,2)}</td><td>${f(x.exit,2)}</td><td>${esc(x.why||"")}</td><td class="${x.pnl_pln>=0?"up":"down"}">${sg(x.pnl_pln)}</td></tr>`).join("")}</tbody></table>`;
   }
 }
-load();setInterval(load,300000);
+load().then(tick);setInterval(load,60000);setInterval(tick,10000);setInterval(freshness,1000);
 </script>
 </body>
 </html>

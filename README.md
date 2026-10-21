@@ -2,7 +2,7 @@
 
 An aggressive crypto futures trading bot where Claude makes the decisions and plain code enforces
 the risk rules. It trades a **simulated futures account on live Kraken prices**, starting at
-**1,000 PLN**, runs on **GitHub Actions** every 15 minutes, and publishes a dashboard on **GitHub Pages**.
+**1,000 PLN**, runs on **GitHub Actions** continuously (one tick per minute), and publishes a live dashboard on **GitHub Pages**.
 
 Next to Claude run two benchmarks with the same starting money: a simple EMA 20/50 rule bot and
 "just hold Bitcoin". If Claude can't beat a 20-line rule bot after costs, it isn't adding value.
@@ -10,18 +10,18 @@ Next to Claude run two benchmarks with the same starting money: a simple EMA 20/
 No exchange account and no paid API are needed. Market data comes from Kraken's free public API, and the
 brain is a **Claude scheduled task running on a Claude subscription**: every 2 hours it reads
 `docs/data/brain_input.json`, decides, and pushes `docs/data/brain_decision.json`, following `BRAIN.md`.
-That push starts the engine, which executes the decision within a minute or two.
+The engine pulls the repo every minute and executes the decision within a minute or two.
 (Set `BRAIN_MODE=api` and the secret `ANTHROPIC_API_KEY` to have the bot call the paid Claude API itself instead.)
 
 ## How it works
 
 ```
-every 15 min (GitHub Actions)
+every minute (one GitHub Actions job runs ~5h40m, then the next takes over)
   ├─ paper exchange replays every 1-minute candle since the last run:
   │    stop-losses, take-profits, funding every 8h, liquidation
   ├─ halts: -15% in a day → close all, pause until tomorrow
   │         -50% from peak → close all, stop for good
-  ├─ market data for BTC, ETH, SOL, XRP, DOGE: 15m/1h/4h candles, EMAs, RSI, ATR
+  ├─ every 5 min: full scan of 17 markets (15m/1h/4h candles, EMAs, RSI, ATR)
   ├─ write brain_input.json (account, positions, orders, events, markets, journal)
   ├─ if Claude pushed a new brain_decision.json (≤ 45 min old): execute it
   │    actions: open / close / move stop / resting entry order / cancel order, long or short
@@ -55,12 +55,18 @@ decisions and closed trades every time, so it can learn from what it did.
 ## Setup
 
 1. Settings → Pages: source "Deploy from a branch", branch `main`, folder `/docs`.
-2. Actions tab → **Trading bot** → Run workflow. After that it runs every 15 minutes by itself.
+2. Actions tab → **Trading bot** → Run workflow. The 15-minute schedule keeps a next job queued, so the engine never stops.
 3. Create the Claude scheduled task (every 2 hours) that clones this repo and follows `BRAIN.md`.
 
 To stop: Actions → Trading bot → "…" → Disable workflow. On `END_AT` (21 Nov 2026, 21:00 UTC) the bot
 closes everything and stops trading. To restart from 1,000 PLN, delete `docs/data/state.json`,
 `docs/data/exchange.json`, `docs/data/equity.csv` and `docs/data/decisions.jsonl`.
+
+## The dashboard
+
+`docs/index.html` loads the engine's saved data every minute (the engine saves every 8 minutes) and, every
+10 seconds, fetches live prices straight from Kraken (Binance as a fallback) to recompute the account,
+open positions and benchmarks in the browser. The line under the title says how fresh both are.
 
 ## Settings
 
@@ -80,7 +86,8 @@ Everything is in `bot/config.py` and can be overridden with environment variable
 
 ## Files
 
-- `bot/run.py` – one run of the bot
+- `bot/loop.py` – the always-on loop (minute ticks, full scans, saving to the dashboard)
+- `bot/run.py` – one cycle of the bot
 - `BRAIN.md` – what the scheduled Claude session does each time it wakes up
 - `bot/brain.py` – the trader instructions (and the paid-API call, for `BRAIN_MODE=api`)
 - `bot/guard.py` – risk rules
