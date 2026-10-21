@@ -13,7 +13,9 @@ from bot import config, guard, run  # noqa: E402
 from bot.paper import MINUTE, PaperExchange  # noqa: E402
 
 INST = {"qty_step": 0.00001, "min_qty": 0.0, "min_notional": 5, "tick": 0.1}
-BASE = {"BTCUSDT": 85000.0, "ETHUSDT": 3000.0, "SOLUSDT": 108.0, "XRPUSDT": 2.4, "DOGEUSDT": 0.2}
+BASE = {"BTCUSDT": 85000.0, "ETHUSDT": 3000.0, "SOLUSDT": 108.0, "XRPUSDT": 2.4, "DOGEUSDT": 0.2,
+        "ADAUSDT": 0.6, "AVAXUSDT": 20.0, "LINKUSDT": 15.0, "SUIUSDT": 3.0, "PEPEUSDT": 0.00001, "WIFUSDT": 0.8,
+        "BONKUSDT": 0.00002, "LTCUSDT": 90.0, "DOTUSDT": 4.0, "NEARUSDT": 2.5, "PAXGUSDT": 4000.0, "EURUSDT": 1.16}
 T0 = datetime(2026, 10, 22, 8, 0, tzinfo=timezone.utc)
 T0_MS = int(T0.timestamp() * 1000)
 
@@ -95,7 +97,7 @@ def test_guard_sizes_from_risk_and_rejects_bad_orders():
     ok, _, o = guard.check_open({"symbol": "BTCUSDT", "side": "long", "stop": 80000, "risk_pct": 0.5},
                                 equity=258, price=85000, inst=INST, positions=[])
     assert ok and o["risk_pct"] <= config.MAX_RISK_PER_TRADE + 1e-9
-    ok, why, o = guard.check_open({"symbol": "BTCUSDT", "side": "long", "stop": 84700, "risk_pct": 0.05},
+    ok, why, o = guard.check_open({"symbol": "BTCUSDT", "side": "long", "stop": 84740, "risk_pct": 0.08},
                                   equity=258, price=85000, inst=INST, positions=[])
     assert ok and o["notional"] <= 258 * config.MAX_LEVERAGE + 1 and "cut" in why
 
@@ -174,7 +176,7 @@ def test_full_session():
     assert acts["PEPEUSDT"]["result"] == "rejected" and acts["ETHUSDT"]["result"] == "rejected"
     assert j[1]["actions"][0]["result"] == "done", j[1]["actions"]
     assert j[2]["actions"][0]["result"] == "done"
-    assert brain.contexts[1]["your_journal"] and len(brain.contexts[0]["markets"]) == 5
+    assert brain.contexts[1]["your_journal"] and len(brain.contexts[0]["markets"]) == len(config.SYMBOLS)
     s = json.load(open(os.path.join(d, "summary.json")))
     assert s["trade_count"] == 1 and s["control_pln"] and s["hodl_pln"] and s["status"] == "live"
     print("summary:", {k: s[k] for k in ("equity_pln", "return_pct", "control_pln", "hodl_pln", "trade_count")})

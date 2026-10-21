@@ -27,7 +27,11 @@ from . import config
 
 KRAKEN = "https://api.kraken.com/0/public"
 PAIRS = {"BTCUSDT": "XBTUSD", "ETHUSDT": "ETHUSD", "SOLUSDT": "SOLUSD", "XRPUSDT": "XRPUSD",
-         "DOGEUSDT": "XDGUSD", "ADAUSDT": "ADAUSD", "AVAXUSDT": "AVAXUSD", "LINKUSDT": "LINKUSD"}
+         "DOGEUSDT": "XDGUSD", "ADAUSDT": "ADAUSD", "AVAXUSDT": "AVAXUSD", "LINKUSDT": "LINKUSD",
+         "SUIUSDT": "SUIUSD", "PEPEUSDT": "PEPEUSD", "WIFUSDT": "WIFUSD", "BONKUSDT": "BONKUSD",
+         "LTCUSDT": "XLTCZUSD", "DOTUSDT": "DOTUSD", "NEARUSDT": "NEARUSD",
+         "PAXGUSDT": "PAXGUSD",  # tokenised gold: one token = one troy ounce
+         "EURUSDT": "EURUSD"}    # the euro against the dollar
 SLIPPAGE = 0.0003
 STOP_SLIPPAGE = 0.0005
 FUNDING_RATE = 0.0001

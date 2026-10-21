@@ -153,6 +153,7 @@ def main(client=None, brain=None, now=None, fx=None, market=None):
             markets[sym], raw[sym] = snapshot(client, sym)
         except Exception as e:  # one bad symbol must not stop the run
             log(f"snapshot failed for {sym}: {e}")
+            print(f"::warning::no market data for {sym}: {e}", flush=True)
 
     entry, trigger = None, None
     if config.BRAIN_MODE == "session":
