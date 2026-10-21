@@ -2,7 +2,7 @@
 
 Each run: read the account -> enforce halts -> (when due) ask Claude -> pass every action through
 the risk guard -> send orders -> update the control bot -> write the journal and dashboard data.
-Stops and take-profits live on the exchange, so they fire 24/7 between runs.
+Stops and take-profits are checked against every 1-minute candle between runs by the paper exchange.
 """
 import csv
 import json
@@ -15,7 +15,7 @@ from pathlib import Path
 import requests
 
 from . import config, control, guard
-from .bybit import Bybit, BybitError
+from .paper import ExchangeError, PaperExchange
 from .market import snapshot
 
 
@@ -72,11 +72,11 @@ def close_all(client, positions, why, events):
         try:
             client.close_position(p)
             events.append({"type": "forced_close", "symbol": p["symbol"], "why": why})
-        except BybitError as e:
+        except ExchangeError as e:
             events.append({"type": "close_failed", "symbol": p["symbol"], "error": str(e)})
 
 
-def main(client=None, brain=None, now=None, fx=None):
+def main(client=None, brain=None, now=None, fx=None, market=None):
     now = now or datetime.now(timezone.utc)
     now_ms = int(now.timestamp() * 1000)
     day = now.strftime("%Y-%m-%d")
@@ -85,22 +85,20 @@ def main(client=None, brain=None, now=None, fx=None):
     state_path, journal_path = d / "state.json", d / "decisions.jsonl"
     state = load_json(state_path, {})
 
-    if client is None:
-        key, secret = os.getenv("BYBIT_API_KEY"), os.getenv("BYBIT_API_SECRET")
-        if not key or not secret:
-            log("BYBIT_API_KEY / BYBIT_API_SECRET are not set yet. Add them as repository secrets. Not starting.")
-            return None
-        client = Bybit(key, secret, config.BYBIT_BASE)
     rate = fx or usd_pln(state)
+    if client is None:
+        start_usd = None if "start" in state else round(config.START_PLN / rate, 2)
+        client = PaperExchange(d / "exchange.json", market=market, start_usd=start_usd, now_ms=now_ms)
+        if not client.ready:
+            log("state.json exists but exchange.json is missing; delete docs/data/state.json to restart.")
+            return None
+    if hasattr(client, "advance"):
+        client.advance()  # replay the minutes since the last run: stops, targets, funding, liquidation
 
     # ---- account ---------------------------------------------------------------
     wallet = client.wallet()
     exch_equity = wallet["equity"]
     if "start" not in state:
-        if exch_equity > config.START_PLN / rate * 3 and os.getenv("ALLOW_BIG_BALANCE") != "1":
-            log(f"Demo balance is {exch_equity:.0f} USD. Run the 'Setup demo account' workflow first "
-                "so the account matches 1,000 PLN. Not starting yet.")
-            return None
         btc = client.ticker("BTCUSDT")["last"]
         state.update({
             "start": iso(now), "start_ms": now_ms, "start_fx": rate,
@@ -175,6 +173,7 @@ def main(client=None, brain=None, now=None, fx=None):
             decision = brain.decide(context)
         except Exception as e:
             entry["error"] = f"brain failed: {e}"
+            print(f"::warning::Claude call failed: {e}", flush=True)
             decision = None
         if decision:
             entry.update({"model": decision.get("_model"), "usage": decision.get("_usage"),
@@ -209,6 +208,8 @@ def main(client=None, brain=None, now=None, fx=None):
         w.writerow(row)
 
     write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd, hodl_usd, journal_path, halt)
+    if hasattr(client, "save"):
+        client.save()
     save_json(state_path, state)
     log(f"equity {equity * rate:.2f} PLN | positions {len(positions)} | brain: {trigger or 'not called'}")
     return entry
@@ -294,7 +295,7 @@ def execute(client, actions, equity, positions, markets):
                         a.update(result="rejected", detail=why)
             else:
                 a.update(result="rejected", detail=f"unknown action {kind}")
-        except BybitError as e:
+        except ExchangeError as e:
             a.update(result="failed", detail=str(e))
         results.append(a)
     return results
@@ -329,7 +330,7 @@ def write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd,
         "trade_count": len(closed), "win_rate_pct": round(wins / len(closed) * 100, 1) if closed else None,
         "brain_calls_today": state["calls"].get(now.strftime("%Y-%m-%d"), 0),
         "last_decision": last[0] if last else None,
-        "balance_warning": exch_equity > state["start_usd"] * 3,
+        "balance_warning": False,
     }
     save_json(d / "summary.json", summary)
 
@@ -337,6 +338,7 @@ def write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd,
 if __name__ == "__main__":
     try:
         main()
-    except Exception:
+    except Exception as e:
         traceback.print_exc()
+        print(f"::error::{e.__class__.__name__}: {e}", flush=True)  # shows on the run's summary page
         sys.exit(1)

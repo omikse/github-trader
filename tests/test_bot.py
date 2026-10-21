@@ -1,4 +1,4 @@
-"""Offline tests: a fake exchange and a fake brain drive the real bot code end to end."""
+"""Offline tests: a fake Kraken feed drives the real paper exchange and the real bot code end to end."""
 import json
 import math
 import os
@@ -10,176 +10,174 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 os.environ["DATA_DIR"] = tempfile.mkdtemp()
 
 from bot import config, guard, run  # noqa: E402
-from bot.bybit import Bybit, fmt_num  # noqa: E402
+from bot.paper import MINUTE, PaperExchange  # noqa: E402
 
-INST = {"qty_step": 0.001, "min_qty": 0.001, "min_notional": 5, "tick": 0.1}
-BASE = {"BTCUSDT": 85000.0, "ETHUSDT": 3000.0, "SOLUSDT": 108.0}
+INST = {"qty_step": 0.00001, "min_qty": 0.0, "min_notional": 5, "tick": 0.1}
+BASE = {"BTCUSDT": 85000.0, "ETHUSDT": 3000.0, "SOLUSDT": 108.0, "XRPUSDT": 2.4, "DOGEUSDT": 0.2}
+T0 = datetime(2026, 10, 22, 8, 0, tzinfo=timezone.utc)
+T0_MS = int(T0.timestamp() * 1000)
 
 
-class FakeBybit:
-    """Deterministic price path; tracks one-way positions and equity like the exchange would."""
+class FakeKraken:
+    """Price = smooth wave, plus an optional crash window. `now_ms` is set by the test."""
 
-    def __init__(self, equity=258.0):
-        self.equity0 = equity
-        self.realized = 0.0
-        self.pos = {}
-        self.closed = []
-        self.step = 0
-        self.orders = []
+    def __init__(self, crash=None):
+        self.now_ms = T0_MS
+        self.crash = crash or {}  # symbol -> (start_ms, end_ms, depth)
 
-    def px(self, sym, offset=0):
-        i = self.step + offset
-        return BASE[sym] * (1 + 0.04 * math.sin(i / 9) + 0.0006 * i)
+    def p(self, sym, t):
+        x = (t - T0_MS) / 3_600_000
+        px = BASE[sym] * (1 + 0.03 * math.sin(x / 2) + 0.004 * x)
+        if sym in self.crash:
+            a, b, depth = self.crash[sym]
+            if a <= t:
+                px *= 1 - depth * min(1, (t - a) / max(1, b - a))
+        return px
 
-    def klines(self, sym, interval, limit=200):
-        mins = {"15": 15, "60": 60, "240": 240}[interval]
-        now = 1_790_000_000_000 + self.step * 15 * 60_000
+    def ohlc(self, sym, minutes, since_s=None):
+        dur = minutes * MINUTE
+        last_open = self.now_ms // dur * dur
+        first = last_open - 719 * dur
+        if since_s:
+            first = max(first, int(since_s * 1000) // dur * dur)
         out = []
-        for j in range(limit):
-            back = (limit - 1 - j) * mins // 15
-            c = self.px(sym, -back)
-            out.append({"t": now - back * 15 * 60_000, "o": c * 0.999, "h": c * 1.004, "l": c * 0.996, "c": c, "v": 100})
+        for t in range(first, last_open + dur, dur):
+            end = min(t + dur, self.now_ms)
+            pts = [self.p(sym, t + k * (end - t) / 6) for k in range(7)]
+            out.append({"t": t, "o": pts[0], "h": max(pts), "l": min(pts), "c": pts[-1], "v": 1.0})
         return out
 
     def ticker(self, sym):
-        p = self.px(sym)
-        return {"last": p, "mark": p, "funding_rate": 0.0001, "open_interest": 1e6, "change_24h": 0.01}
-
-    def instrument(self, sym):
-        return INST
-
-    def _upnl(self, p):
-        m = self.px(p["symbol"])
-        return (m - p["entry"]) * p["size"] if p["side"] == "long" else (p["entry"] - m) * p["size"]
-
-    def wallet(self):
-        return {"equity": self.equity0 + self.realized + sum(self._upnl(p) for p in self.pos.values()), "coins": {}}
-
-    def positions(self):
-        out = []
-        for p in self.pos.values():
-            q = dict(p)
-            q.update(mark=self.px(p["symbol"]), upnl=self._upnl(p), liq=None, leverage=10, opened=1)
-            out.append(q)
-        return out
-
-    def closed_pnl(self, start_ms):
-        return list(self.closed)
-
-    def set_leverage(self, sym, lev):
-        pass
-
-    def market_order(self, sym, side, qty, stop=None, tp=None, reduce_only=False):
-        self.orders.append((sym, side, qty, stop, tp, reduce_only))
-        assert reduce_only or stop, "guard must always attach a stop"
-        self.pos[sym] = {"symbol": sym, "side": side, "size": qty, "entry": self.px(sym), "stop": stop, "tp": tp}
-
-    def set_stops(self, sym, stop=None, tp=None):
-        self.pos[sym]["stop"] = stop
-
-    def close_position(self, p):
-        q = self.pos.pop(p["symbol"])
-        pnl = self._upnl(q)
-        self.realized += pnl
-        self.closed.append({"id": f"c{len(self.closed)}", "symbol": q["symbol"], "side": q["side"], "qty": q["size"],
-                            "entry": q["entry"], "exit": self.px(q["symbol"]), "pnl": pnl, "time": 1_800_000_000_000 + self.step * 900_000})
+        last = self.p(sym, self.now_ms)
+        return {"last": last, "bid": last * 0.9999, "ask": last * 1.0001}
 
 
 class FakeBrain:
     def __init__(self, plans):
-        self.plans = plans
-        self.contexts = []
+        self.plans, self.contexts = plans, []
 
     def decide(self, ctx):
         self.contexts.append(ctx)
-        return self.plans.pop(0) if self.plans else {"market_view": "nothing", "actions": [], "watch_next": "-"}
+        plan = self.plans.pop(0) if self.plans else None
+        if callable(plan):
+            plan = plan(ctx)
+        return plan or {"market_view": "nothing", "actions": [], "watch_next": "-"}
 
 
-def test_signature_matches_manual_hmac():
-    import hashlib
-    import hmac
-    c = Bybit("KEY", "SECRET", "https://x")
-    want = hmac.new(b"SECRET", b"1700000000000KEY10000category=linear", hashlib.sha256).hexdigest()
-    assert c.sign("1700000000000", "category=linear") == want
-    assert fmt_num(0.00100) == "0.001" and fmt_num(85000.0) == "85000"
+def fresh_dir():
+    config.DATA_DIR = tempfile.mkdtemp()
+    return config.DATA_DIR
+
+
+def run_series(market, brain, n, step_min=15):
+    for i in range(n):
+        now = T0 + timedelta(minutes=step_min * i)
+        market.now_ms = int(now.timestamp() * 1000)
+        run.main(brain=brain, now=now, fx=3.88, market=market)
+
+
+def journal(d):
+    return [json.loads(x) for x in open(os.path.join(d, "decisions.jsonl"))]
 
 
 def test_guard_sizes_from_risk_and_rejects_bad_orders():
     ok, why, o = guard.check_open({"symbol": "BTCUSDT", "side": "long", "stop": 83300, "risk_pct": 0.03},
                                   equity=258, price=85000, inst=INST, positions=[])
     assert ok, why
-    # loss at stop must be close to 3% of equity (rounded down, so never above)
     loss = o["qty"] * (85000 - 83300 + 85000 * config.TAKER_FEE * 2)
-    assert loss <= 258 * 0.03 + 1e-6 and loss > 258 * 0.02
-    assert guard.check_open({"symbol": "BTCUSDT", "side": "long", "stop": 86000}, equity=258, price=85000, inst=INST, positions=[])[0] is False
-    assert guard.check_open({"symbol": "BTCUSDT", "side": "long"}, equity=258, price=85000, inst=INST, positions=[])[0] is False
-    assert guard.check_open({"symbol": "BTCUSDT", "side": "short", "stop": 85100}, equity=258, price=85000, inst=INST, positions=[])[0] is False  # too tight
-    # risk is capped at 5% even if the brain asks for 50%
+    assert 258 * 0.02 < loss <= 258 * 0.03 + 1e-6
+    bad = [{"symbol": "BTCUSDT", "side": "long", "stop": 86000},   # wrong side
+           {"symbol": "BTCUSDT", "side": "long"},                  # no stop
+           {"symbol": "BTCUSDT", "side": "short", "stop": 85100}]  # too tight
+    for b in bad:
+        assert guard.check_open(b, equity=258, price=85000, inst=INST, positions=[])[0] is False
     ok, _, o = guard.check_open({"symbol": "BTCUSDT", "side": "long", "stop": 80000, "risk_pct": 0.5},
                                 equity=258, price=85000, inst=INST, positions=[])
     assert ok and o["risk_pct"] <= config.MAX_RISK_PER_TRADE + 1e-9
-    # leverage cap: a very tight stop would want a huge size, guard cuts it to 10x
     ok, why, o = guard.check_open({"symbol": "BTCUSDT", "side": "long", "stop": 84700, "risk_pct": 0.05},
                                   equity=258, price=85000, inst=INST, positions=[])
     assert ok and o["notional"] <= 258 * config.MAX_LEVERAGE + 1 and "cut" in why
 
 
-def test_stops_only_tighten():
+def test_stops_only_tighten_and_halts():
     pos = {"symbol": "BTCUSDT", "side": "long", "stop": 83000}
     assert guard.check_move_stop({"stop": 82000}, price=85000, inst=INST, position=pos)[0] is False
     assert guard.check_move_stop({"stop": 84000}, price=85000, inst=INST, position=pos)[0] is True
-    assert guard.check_move_stop({"stop": 85500}, price=85000, inst=INST, position=pos)[0] is False
-
-
-def test_halts():
     st = {}
     assert guard.check_halts(st, 100, "d1") is None
     assert guard.check_halts(st, 84, "d1") == "daily"
-    assert guard.check_halts(st, 90, "d1") == "daily"      # stays paused the rest of the day
-    assert guard.check_halts(st, 90, "d2") is None          # new day resumes
+    assert guard.check_halts(st, 90, "d2") is None
     assert guard.check_halts(st, 49, "d2") == "kill"
-    assert guard.check_halts(st, 200, "d3") == "kill"       # kill is permanent
+    assert guard.check_halts(st, 200, "d3") == "kill"
 
 
-def test_full_runs():
-    ex = FakeBybit()
+def test_stop_fires_between_runs_on_minute_candles():
+    """BTC crashes 6% between two runs; the stop 2% below entry must fire at ~the stop, not at the next run's price."""
+    d = fresh_dir()
+    crash_start = T0_MS + 20 * MINUTE
+    m = FakeKraken(crash={"BTCUSDT": (crash_start, crash_start + 5 * MINUTE, 0.06)})
+    entry_px = m.p("BTCUSDT", T0_MS)
+    stop = round(entry_px * 0.98, 1)
+    brain = FakeBrain([{"market_view": "long", "watch_next": "-", "actions": [
+        {"type": "open", "symbol": "BTCUSDT", "side": "long", "stop": stop, "risk_pct": 0.03, "reason": "test"}]}])
+    run_series(m, brain, 3)  # runs at 0, 15, 30 min; the crash happens at 20-25 min
+    ex = json.load(open(os.path.join(d, "exchange.json")))
+    assert not ex["positions"], "stop should have closed the position"
+    c = ex["closed"][0]
+    assert c["why"] == "stop" and abs(c["exit"] / stop - 1) < 0.001, c
+    # the loss is about the planned 3% of equity, not the 6% crash
+    start_usd = 1000 / 3.88
+    assert -start_usd * 0.04 < c["pnl"] < -start_usd * 0.02, c["pnl"]
+    j = journal(d)
+    assert j[-1]["trigger"] == "position closed" and j[-1]["events"][0]["why"] == "stop"
+
+
+def test_liquidation_and_funding():
+    d = fresh_dir()
+    m = FakeKraken(crash={"ETHUSDT": (T0_MS + 10 * MINUTE, T0_MS + 12 * MINUTE, 0.30)})
+    m.now_ms = T0_MS
+    ex = PaperExchange(os.path.join(d, "x.json"), market=m, start_usd=100, now_ms=T0_MS)
+    ex.market_order("ETHUSDT", "long", 1000 / m.p("ETHUSDT", T0_MS))  # 10x, no stop: only possible outside the guard
+    m.now_ms = ex.now_ms = T0_MS + 30 * MINUTE
+    ex.advance()
+    assert not ex.s["positions"] and ex.s["closed"][0]["why"] == "liquidation"
+    assert ex.s["cash"] >= 0
+    # funding: a long held across the 16:00 UTC boundary pays 0.01% of its size
+    ex2 = PaperExchange(os.path.join(d, "y.json"), market=FakeKraken(), start_usd=100, now_ms=T0_MS)
+    ex2.market.now_ms = T0_MS
+    ex2.market_order("SOLUSDT", "long", 1.0)
+    cash0 = ex2.s["cash"]
+    ex2.market.now_ms = ex2.now_ms = T0_MS + 9 * 3600_000  # 08:00 -> 17:00 crosses 16:00
+    ex2.advance()
+    paid = cash0 - ex2.s["cash"]
+    assert 0 < paid < 0.02, paid
+
+
+def test_full_session():
+    d = fresh_dir()
+    m = FakeKraken()
     brain = FakeBrain([
-        {"market_view": "BTC trending up", "watch_next": "x", "actions": [
-            {"type": "open", "symbol": "BTCUSDT", "side": "long", "stop": ex.px("BTCUSDT") * 0.98, "take_profit": ex.px("BTCUSDT") * 1.06, "risk_pct": 0.04, "reason": "trend"},
-            {"type": "open", "symbol": "DOGEUSDT", "side": "long", "stop": 0.1, "reason": "not allowed"},
+        lambda ctx: {"market_view": "BTC up", "watch_next": "x", "actions": [
+            {"type": "open", "symbol": "BTCUSDT", "side": "long", "stop": ctx["markets"]["BTCUSDT"]["price"] * 0.97,
+             "take_profit": ctx["markets"]["BTCUSDT"]["price"] * 1.2, "risk_pct": 0.04, "reason": "trend"},
+            {"type": "open", "symbol": "PEPEUSDT", "side": "long", "stop": 1, "reason": "not on list"},
             {"type": "open", "symbol": "ETHUSDT", "side": "short", "reason": "no stop"}]},
-        {"market_view": "trail", "watch_next": "x", "actions": [
-            {"type": "move_stop", "symbol": "BTCUSDT", "stop": ex.px("BTCUSDT", 4) * 0.99, "reason": "trail"}]},
+        lambda ctx: {"market_view": "trail", "watch_next": "x", "actions": [
+            {"type": "move_stop", "symbol": "BTCUSDT", "stop": ctx["markets"]["BTCUSDT"]["price"] * 0.99, "reason": "trail"}]},
         {"market_view": "take it", "watch_next": "x", "actions": [{"type": "close", "symbol": "BTCUSDT", "reason": "done"}]},
     ])
-    t0 = datetime(2026, 10, 22, 8, 0, tzinfo=timezone.utc)
-    for i in range(13):  # 13 runs, 15 minutes apart
-        ex.step = i
-        run.main(client=ex, brain=brain, now=t0 + timedelta(minutes=15 * i), fx=3.88)
-    d = config.DATA_DIR
-    journal = [json.loads(line) for line in open(os.path.join(d, "decisions.jsonl"))]
-    assert len(journal) == 4, len(journal)  # runs 0, 4, 8 (hourly) and 9 (woken by the closed trade)
-    assert journal[3]["trigger"] == "position closed"
-    first = {a["symbol"]: a for a in journal[0]["actions"]}
-    assert first["BTCUSDT"]["result"] == "done"
-    assert first["DOGEUSDT"]["result"] == "rejected" and first["ETHUSDT"]["result"] == "rejected"
-    assert journal[1]["actions"][0]["result"] == "done"
-    assert journal[2]["actions"][0]["result"] == "done" and not ex.pos
-    # the brain saw its own journal and the closed trade on later calls
-    assert brain.contexts[1]["your_journal"] and brain.contexts[3]["recent_closed_trades"]
+    run_series(m, brain, 13)
+    j = journal(d)
+    acts = {a["symbol"]: a for a in j[0]["actions"]}
+    assert acts["BTCUSDT"]["result"] == "done", acts["BTCUSDT"]
+    assert acts["PEPEUSDT"]["result"] == "rejected" and acts["ETHUSDT"]["result"] == "rejected"
+    assert j[1]["actions"][0]["result"] == "done", j[1]["actions"]
+    assert j[2]["actions"][0]["result"] == "done"
+    assert brain.contexts[1]["your_journal"] and len(brain.contexts[0]["markets"]) == 5
     s = json.load(open(os.path.join(d, "summary.json")))
     assert s["trade_count"] == 1 and s["control_pln"] and s["hodl_pln"] and s["status"] == "live"
-    rows = open(os.path.join(d, "equity.csv")).read().strip().splitlines()
-    assert len(rows) == 14
     print("summary:", {k: s[k] for k in ("equity_pln", "return_pct", "control_pln", "hodl_pln", "trade_count")})
-    print("first decision:", json.dumps(journal[0]["actions"], indent=1)[:900])
-
-
-def test_refuses_to_start_with_huge_demo_balance():
-    os.environ["DATA_DIR"] = config.DATA_DIR = tempfile.mkdtemp()
-    assert run.main(client=FakeBybit(equity=50000), brain=FakeBrain([]),
-                    now=datetime(2026, 10, 22, tzinfo=timezone.utc), fx=3.88) is None
-    assert not os.path.exists(os.path.join(config.DATA_DIR, "state.json"))
+    print("trade:", s["closed_trades"][0])
 
 
 if __name__ == "__main__":

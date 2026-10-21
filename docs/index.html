@@ -52,8 +52,7 @@ th:first-child,td:first-child{text-align:left;padding-left:0} tr:last-child td{b
 </head>
 <body>
 <div class="wrap">
-  <header><h1>Claude Trader · Bybit demo</h1><span class="pill" id="status">loading</span></header>
-  <div class="card warn" id="warn" hidden>The demo balance was not reduced to 1,000 PLN, so exchange liquidation prices are unrealistic. Run the "Setup demo account" workflow.</div>
+  <header><h1>Claude Trader · paper futures on Kraken prices</h1><span class="pill" id="status">loading</span></header>
 
   <section class="score">
     <div class="card">
@@ -76,7 +75,7 @@ th:first-child,td:first-child{text-align:left;padding-left:0} tr:last-child td{b
   <section class="card"><h2>Open positions</h2><div class="tw" id="pos"><p class="empty">No open positions.</p></div></section>
   <section class="card"><h2>Latest decision</h2><div id="dec"><p class="empty">Claude has not decided anything yet.</p></div></section>
   <section class="card"><h2>Closed trades</h2><div class="tw" id="trades"><p class="empty">No closed trades yet.</p></div></section>
-  <p class="muted">Demo account on Bybit with real market prices. Stops and targets sit on the exchange. Every decision is committed to git with a timestamp before its outcome is known. Not financial advice.</p>
+  <p class="muted">Simulated futures account on live Kraken prices, with fees, slippage, funding and liquidation. Stops and targets are checked against every 1-minute candle. Every decision is committed to git with a timestamp before its outcome is known. Not financial advice.</p>
 </div>
 <script>
 const f=(n,d=2)=>n==null||isNaN(n)?"—":Number(n).toLocaleString("en-US",{minimumFractionDigits:d,maximumFractionDigits:d});
@@ -94,7 +93,6 @@ async function load(){
 function retLine(v,start){return v==null?"":sg(v-start)+" PLN ("+(v>=start?"+":"−")+f(Math.abs((v/start-1)*100),1)+"%)"}
 function render(s,csv){
   $("status").textContent=s.status+" · "+t(s.updated);$("status").className="pill "+s.status;
-  $("warn").hidden=!s.balance_warning;
   $("eq").textContent=f(s.equity_pln)+" zł";
   $("ret").textContent=retLine(s.equity_pln,s.start_pln);$("ret").className="num "+(s.equity_pln>=s.start_pln?"up":"down");
   $("ctrl").textContent=f(s.control_pln)+" zł";$("ctrlRet").textContent=retLine(s.control_pln,s.start_pln);

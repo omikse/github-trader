@@ -8,9 +8,8 @@ def _f(name, default):
 
 # --- Account -----------------------------------------------------------------
 START_PLN = _f("START_PLN", "1000")          # simulated starting capital
-SYMBOLS = [s.strip() for s in os.getenv("SYMBOLS", "BTCUSDT,ETHUSDT,SOLUSDT").split(",") if s.strip()]
+SYMBOLS = [s.strip() for s in os.getenv("SYMBOLS", "BTCUSDT,ETHUSDT,SOLUSDT,XRPUSDT,DOGEUSDT").split(",") if s.strip()]
 END_AT = os.getenv("END_AT", "2026-11-21T21:00:00Z")  # experiment ends, everything is closed
-BYBIT_BASE = os.getenv("BYBIT_BASE", "https://api-demo.bybit.com")  # demo trading domain
 
 # --- Brain -------------------------------------------------------------------
 CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "claude-opus-5-5")
@@ -28,7 +27,7 @@ MAX_STOP_DIST = _f("MAX_STOP_DIST", "0.12")       # and at most 12%
 DAILY_LOSS_LIMIT = _f("DAILY_LOSS_LIMIT", "0.15") # -15% in a UTC day: close all, pause until tomorrow
 KILL_DRAWDOWN = _f("KILL_DRAWDOWN", "0.50")       # -50% from peak: close all, stop for good
 
-# --- Costs used by the simulated control bot ------------------------------------
+# --- Costs (taker fee charged by the paper exchange and the control bot) ----------
 TAKER_FEE = _f("TAKER_FEE", "0.00055")
 
 DATA_DIR = os.getenv("DATA_DIR", "docs/data")
