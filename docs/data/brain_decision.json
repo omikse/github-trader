@@ -1,0 +1,18 @@
+{
+  "id": "2026-10-21T22:51:25Z",
+  "decided_at": "2026-10-21T22:51:25Z",
+  "model": "claude-opus-5-5",
+  "market_view": "Broad bounce: BTC leads (+1.7% 24h, above all h1 EMAs, h4 reclaimed ema200 at 83.4k), now consolidating 84.1-84.8k just under the 24h high. Alts weaker (ETH/SOL/DOGE still below h4 ema200); XRP strongest alt but cooling. No clean market entry right now; set orders to catch either breakout or pullback.",
+  "news": "",
+  "watch_next": "Did BTC break 84.85k with momentum (order filled) or lose 84.0k (h1 ema20/structure) - if it loses 83.9k, cancel BTC breakout idea. Check XRP fill at 1.358 and whether h1 ema20 holds.",
+  "actions": [
+    {"type": "entry_order", "symbol": "BTCUSDT", "side": "long", "trigger": 84900, "stop": 84050, "take_profit": 87500,
+      "risk_pct": 0.03, "expires_hours": 24,
+      "reason": "Breakout above 24h high 84,840 after h4 reclaim of ema200; momentum continuation toward 87.5k (~3R).",
+      "invalidation": "Breakout fails back below 84,050 / range low; or BTC loses 83.9k before triggering."},
+    {"type": "entry_order", "symbol": "XRPUSDT", "side": "long", "trigger": 1.358, "stop": 1.338, "take_profit": 1.43,
+      "risk_pct": 0.02, "expires_hours": 18,
+      "reason": "Strongest alt (+2.6% 24h, h4 RSI 64); pullback to h1 ema20 / breakout level ~1.355 for trend continuation.",
+      "invalidation": "Close below 1.338 (back under breakout base and h4 ema20/50)."}
+  ]
+}
