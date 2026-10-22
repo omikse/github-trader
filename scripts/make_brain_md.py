@@ -38,7 +38,8 @@ the journal are how you keep a plan going for days.
    format `YYYY-MM-DDTHH:MM:SSZ`. Write it even when you do nothing (empty `actions`), so the journal shows you looked.
 8. Commit only those two files (author "Claude" <noreply@anthropic.com>, message `brain decision <decided_at>`),
    `git pull --rebase`, `git push`. The engine pulls the repo every minute and executes your actions within a
-   minute or two. If the push is rejected, pull --rebase and push again once.
+   minute or two. If the push is rejected, pull --rebase and push again once. Push ONE decision per session:
+   the engine executes every new decision it sees, so a corrected second decision re-sends all its actions.
 9. Finish with 2-3 lines: account value, what you did, and why.
 
 Never edit any other file. Never touch engine code, state or history. You cannot change the rules; the engine
