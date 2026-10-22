@@ -1,13 +1,13 @@
 {
-  "id": "2026-10-22T16:51:48Z",
-  "decided_at": "2026-10-22T16:51:48Z",
+  "id": "2026-10-22T18:51:46Z",
+  "decided_at": "2026-10-22T18:51:46Z",
   "model": "claude-opus-5-5",
-  "market_view": "Risk-off bleed continues: BTC 81.37k near 24h low 81.25k, below h1/h4 EMAs; alts (AVAX, ADA, SUI, LTC, ETH) weaker. h1 RSI ~27 everywhere = stretched, so protect shorts rather than add.",
+  "market_view": "Risk-off bleed continues: BTC made a new low 80.81k (below 81.25k), alts at/near 30d lows, h1 RSI 23-28 everywhere (oversold, squeeze risk). Daily still inside 79.7k-87.3k range. All 3 shorts green; lock profits by trailing above the in-progress 4h highs.",
   "news": "",
-  "watch_next": "BTC 4h close below 81.25k (let shorts run, trail) vs reclaim of 82.3k (bleed over, shorts likely stopped, look for longs in PEPE/NEAR). ETH retest order at 2440 before 20:51Z expiry.",
+  "watch_next": "BTC test of 80.5k TP / 79.7k 30d low (flush+reclaim = long reversal) vs bounce back above 82.1k h1 ema20 (bleed over). ETH 2440 order expires 20:51Z.",
   "actions": [
-    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 82000, "take_profit": 80500, "reason": "Trail above last completed 4h high 81,986; locks profit on the short."},
-    {"type": "move_stop", "symbol": "AVAXUSDT", "stop": 9.26, "take_profit": 8.75, "reason": "Trail above completed 4h high 9.253; locks small profit."},
-    {"type": "move_stop", "symbol": "LTCUSDT", "stop": 59.55, "take_profit": 57.0, "reason": "Trail above completed 4h high 59.51; cuts risk to ~1.3% of equity."}
+    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 81800, "take_profit": 80500, "reason": "Trail above current 4h candle high 81,666 + ~0.3% buffer (1.5 h1 ATR); locks ~3.9 USD on the short while oversold."},
+    {"type": "move_stop", "symbol": "AVAXUSDT", "stop": 9.22, "take_profit": 8.75, "reason": "Trail above current 4h high 9.187; locks ~1.4 USD."},
+    {"type": "move_stop", "symbol": "LTCUSDT", "stop": 58.8, "take_profit": 57.0, "reason": "Price <58.3 so move to breakeven per plan; just above current 4h high 59.0 is too wide, 58.80 = entry, free trade."}
   ]
 }
