@@ -35,11 +35,22 @@
    "why": "stop"
   }
  ],
- "last_closed_check_ms": 1792702307895,
+ "last_closed_check_ms": 1792702787771,
  "day": "2026-10-22",
  "day_start_equity": 257.14,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_expired",
+   "id": "o9",
+   "symbol": "ETHUSDT",
+   "side": "short",
+   "status": "expired",
+   "trigger": 2440,
+   "time": 1792702320000,
+   "detail": ""
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 256.75460210303584,
@@ -53,7 +64,7 @@
   "trades": 0,
   "wins": 0
  },
- "last_btc": 81094.4,
+ "last_btc": 81181.7,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -62,7 +73,8 @@
   "o4:filled",
   "o7:filled",
   "o11:filled",
-  "o10:cancelled"
+  "o10:cancelled",
+  "o9:expired"
  ],
  "last_decision_id": "2026-10-22T20:51:22Z"
 }

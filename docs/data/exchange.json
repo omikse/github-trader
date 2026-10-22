@@ -9,7 +9,7 @@
    "tp": 80500.0,
    "opened": 1792651560000,
    "entry_fee": 0.30313201030684,
-   "mark": 81094.4
+   "mark": 81181.7
   },
   "AVAXUSDT": {
    "side": "short",
@@ -19,7 +19,7 @@
    "tp": 8.75,
    "opened": 1792654920000,
    "entry_fee": 0.09583145693550002,
-   "mark": 9.076
+   "mark": 9.09
   },
   "LTCUSDT": {
    "side": "short",
@@ -29,7 +29,7 @@
    "tp": 57.0,
    "opened": 1792674540000,
    "entry_fee": 0.15339954460151753,
-   "mark": 58.38
+   "mark": 58.45
   }
  },
  "closed": [
@@ -57,23 +57,9 @@
   }
  ],
  "fills": [],
- "last_ms": 1792702307895,
+ "last_ms": 1792702787771,
  "next_id": 12,
- "orders": [
-  {
-   "id": "o9",
-   "symbol": "ETHUSDT",
-   "side": "short",
-   "qty": 0.144918,
-   "trigger": 2440,
-   "direction": "above",
-   "stop": 2472.0,
-   "tp": 2350.0,
-   "placed": 1792659073761,
-   "expires": 1792702273761,
-   "note": "Sell the oversold bounce rather than chase: ETH lost its 24h low and the h1 ema200 (2427); a retest of 2440 (prior breakdown area, under h1 ema20 2452) is a lower-high short toward 2350 (~2.8R)."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -146,6 +132,15 @@
    "trigger": 0.2138,
    "time": 1792675470167,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o9",
+   "symbol": "ETHUSDT",
+   "side": "short",
+   "status": "expired",
+   "trigger": 2440,
+   "time": 1792702320000,
+   "detail": ""
   }
  ]
 }
