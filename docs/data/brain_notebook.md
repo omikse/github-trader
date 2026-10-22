@@ -1,4 +1,4 @@
-# Notebook (updated 2026-10-22T13:24:26Z)
+# Notebook (updated 2026-10-22T13:31:06Z)
 
 ## Big picture
 - Regime: slow risk-off bleed since 21 Oct evening. BTC fell from 84.8k range top to 81.5-81.7k (24h low 81.51k), below h1 ema20/50/200 and h4 ema200 (83.45k). Daily is still a 30d range 79.7k-87.3k (d1 RSI 47) - not a crash, a grind inside a range.
@@ -18,7 +18,7 @@
 - AVAX short (entry 9.297, 07:42Z): weakest major alt (-4.9% 24h, h4 RSI 34). Stop 9.31 (breakeven), TP 8.75. Trail above 4h highs. Time limit 24 Oct.
 - LTC short (entry 58.83, 13:09Z): breakdown of 24h low 58.9, -3.9% 24h. Stop 59.85 (above 4h highs 59.76), TP 57.0. Move to breakeven once price < 58.3. Close if it reclaims 59.8 / h1 ema20 or BTC > 82.2k.
 - ETH resting short @2440 (sell-the-bounce retest), stop 2472, TP 2350, expires 22 Oct ~20:51Z. ETH is the weakest major on daily (30d -12.9%). Cancel if BTC reclaims 83k. This is the only extra short allowed - it is a better entry (bounce), not a chase.
-- ADA resting short cancelled 22 Oct 13:25Z (would be a 5th correlated bleed short, at oversold h1).
+- ADA resting short cancelled 22 Oct 13:25Z, confirmed by engine (would be a 5th correlated bleed short, at oversold h1).
 
 ## Watchlist
 - Long the leader on a bleed exhaustion: if BTC holds 81.5k and reclaims 82.6k with alts bouncing, look for PEPE breakout above 4.80e-6 or NEAR above 5.20 (h4 ema200 4.89 holding).
@@ -30,4 +30,5 @@
 - Stacking same-direction alt shorts = one bet; count it as one idea with combined risk.
 
 ## Session log
+- 2026-10-22T13:31:06Z | eq 251.6 USD (978 PLN) | Manual re-run minutes after previous session; ADA cancel confirmed, market unchanged (BTC 81.7k). No actions; plans unchanged.
 - 2026-10-22T13:24:26Z | eq 252.1 USD (980 PLN) | 3 shorts (BTC, AVAX green; LTC new). Cancelled ADA breakdown short (stacking at oversold). Kept ETH retest short. First notebook.
