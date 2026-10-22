@@ -1,16 +1,11 @@
 {
-  "id": "2026-10-22T12:51:17Z",
-  "decided_at": "2026-10-22T12:51:17Z",
+  "id": "2026-10-22T13:24:26Z",
+  "decided_at": "2026-10-22T13:24:26Z",
   "model": "claude-opus-5-5",
-  "market_view": "Risk-off bleed has stalled into a tight range at the lows: BTC 81.65k just above its 24h low 81.54k, below h1 ema20/50 and h4 ema200 (83.45k), h1 RSI 28 oversold; alts likewise pinned near lows (AVAX -4.7%, SUI -4.9%, LTC -4.1% 24h). BTC and AVAX shorts green with breakeven stops. Data ~7 min old, engine fine.",
+  "market_view": "Risk-off bleed stalled at the lows: BTC 81.7k just above its 24h low 81.51k, below h1/h4 EMAs but inside the 30d 79.7-87.3k range; alts weaker, h1 RSI 25-30 almost everywhere (oversold). Book is already 3 correlated shorts (BTC, AVAX at breakeven-or-better stops; LTC new). Data ~1 min old, engine fine.",
   "news": "",
-  "watch_next": "Whether BTC breaks 81.5k (shorts run toward 80.5k / 8.75) or squeezes back above 82.2k (stop out at small profit). ETH 2440 retest short and ADA/LTC breakdown orders still resting.",
+  "watch_next": "BTC break of 81.5k (shorts run toward 80.5k/8.75/57) vs squeeze above 82.2k (BTC short stops at small profit). Move LTC stop to breakeven below 58.3. ETH 2440 retest short. If the bleed ends (BTC > 82.6k), look at longs in relative-strength coins (PEPE, NEAR).",
   "actions": [
-    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 82200, "take_profit": 80500,
-      "reason": "Trail above the last completed 4h candle high (82,174): locks ~+0.2% profit while staying ~1.4 h1 ATR away so the oversold chop doesn't shake the short out."},
-    {"type": "entry_order", "symbol": "LTCUSDT", "side": "short", "trigger": 58.85, "stop": 59.85, "take_profit": 57.0,
-      "risk_pct": 0.02, "expires_hours": 12,
-      "reason": "LTC is among the weakest (-4.1% 24h, below all h1/h4 EMAs, h4 RSI 42). A break of the 24h low 58.9 continues the alt bleed toward 57.0 (~1.85R); stop above the last two 4h highs (59.76).",
-      "invalidation": "LTC reclaims 59.8 / h1 ema20 or BTC squeezes above 82.2k."}
+    {"type": "cancel_order", "symbol": "ADAUSDT", "reason": "Would be a 5th short on the same alt-bleed bet, triggered by chasing a breakdown with h1 RSI ~30 (oversold). Concentrate risk in the existing shorts and the better-priced ETH bounce short instead."}
   ]
 }
