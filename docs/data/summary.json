@@ -1,61 +1,72 @@
 {
- "updated": "2026-10-22T02:43:59Z",
+ "updated": "2026-10-22T02:51:59Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.8889,
- "equity_pln": 986.25,
- "return_pct": -1.37,
- "max_drawdown_pct": 1.46,
+ "equity_pln": 985.03,
+ "return_pct": -1.5,
+ "max_drawdown_pct": 1.5,
  "control_pln": 999.99,
  "control_trades": 0,
- "hodl_pln": 979.49,
+ "hodl_pln": 979.21,
  "positions": [
   {
    "symbol": "XRPUSDT",
    "side": "long",
    "size": 239.268,
    "entry": 1.3584074000000002,
-   "mark": 1.34439,
-   "upnl": -3.353915263200043,
+   "mark": 1.34284,
+   "upnl": -3.7247806632000287,
    "stop": 1.338,
    "tp": 1.43,
    "liq": null,
    "leverage": null,
    "opened": 1792632960000,
-   "upnl_pln": -13.04
+   "upnl_pln": -14.49
   }
  ],
  "closed_trades": [],
  "trade_count": 0,
  "win_rate_pct": null,
- "brain_calls_today": 1,
+ "brain_calls_today": 2,
  "last_decision": {
-  "time": "2026-10-22T00:51:59Z",
+  "time": "2026-10-22T02:51:59Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-22T00:51:03Z",
+  "decided_at": "2026-10-22T02:50:58Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 257.14,
-  "equity_pln": 999.99,
-  "events": [],
-  "market_view": "Quiet Asia open: BTC 84.27k consolidating just under 24h high 84.84k, above h1 EMAs and the h4 ema200 (83.45k). Most alts still below h4 ema200; NEAR is the standout (+6.3% 24h, above h4 ema200, h1 trend up). Flat book, two resting orders (BTC breakout, XRP pullback) still valid.",
-  "watch_next": "Did BTC 84.9k breakout or XRP 1.358 pullback fill? If BTC loses 83.4k (h4 ema200), cancel BTC breakout. NEAR breakout above 5.45 and follow-through; trail stops to structure on any fill.",
+  "equity_usd": 253.22,
+  "equity_pln": 984.75,
+  "events": [
+   {
+    "type": "order_filled",
+    "id": "o2",
+    "symbol": "XRPUSDT",
+    "side": "long",
+    "status": "filled",
+    "trigger": 1.358,
+    "time": 1792632960000,
+    "detail": "filled at 1.35841"
+   }
+  ],
+  "market_view": "Broad risk-off drift over the last 4h: BTC rejected at 84.8k and slid to 82.86k (-1.4% 4h, h1 RSI 38, below h1 ema20/50, still above h1 ema200 82.15k and h4 ema20). Alts weaker; AVAX is the weakest (-3.6% 24h, below every EMA) and sitting on its 24h low. XRP long filled on the pullback but is now testing h1 ema50 with the stop 0.5% below.",
+  "watch_next": "Whether BTC holds h1 ema200 ~82.1k (if lost, consider shorts / close any longs); XRP stop at 1.338; AVAX breakdown order; cancel BTC breakout order if BTC loses 82k.",
   "news": "",
   "actions": [
    {
     "type": "entry_order",
-    "symbol": "NEARUSDT",
-    "side": "long",
-    "trigger": 5.46,
-    "stop": 5.27,
-    "take_profit": 6.0,
-    "risk_pct": 0.025,
-    "expires_hours": 24,
-    "reason": "Relative-strength leader (+6.3% 24h, only large alt above h4 ema200). Breakout over 24h high 5.45 targets ~2.8R continuation to 6.0.",
-    "invalidation": "Breakout fails back below 5.30 / h1 ema20, or BTC rolls over below 83.4k.",
+    "symbol": "AVAXUSDT",
+    "side": "short",
+    "trigger": 9.3,
+    "stop": 9.56,
+    "take_profit": 8.75,
+    "risk_pct": 0.02,
+    "expires_hours": 18,
+    "reason": "Weakest coin in the universe (-3.6% 24h, below h1/h4 ema20/50/200, h4 RSI 39). Breakdown below 24h low 9.339 should extend toward 8.75 (~2.1R).",
+    "invalidation": "Reclaim of 9.56 / h1 ema20 after triggering, or broad market reversal with BTC back above 83.8k.",
     "result": "done",
-    "detail": "long 32.7974 when price goes above 5.46 (risk 2.5%, stop 5.27, target 6.0, expires in 24h) ok"
+    "detail": "short 18.741 when price goes below 9.3 (risk 2.0%, stop 9.56, target 8.75, expires in 18h) ok"
    }
   ]
  },
@@ -108,6 +119,17 @@
    "qty": 32.7974,
    "expires": 1792716719525,
    "note": "Relative-strength leader (+6.3% 24h, only large alt above h4 ema200). Breakout over 24h high 5.45 targets ~2.8R continuation to 6.0."
+  },
+  {
+   "symbol": "AVAXUSDT",
+   "side": "short",
+   "trigger": 9.3,
+   "direction": "below",
+   "stop": 9.56,
+   "tp": 8.75,
+   "qty": 18.741,
+   "expires": 1792702319523,
+   "note": "Weakest coin in the universe (-3.6% 24h, below h1/h4 ema20/50/200, h4 RSI 39). Breakdown below 24h low 9.339 should extend toward 8.75 (~2.1R)."
   }
  ],
  "balance_warning": false
