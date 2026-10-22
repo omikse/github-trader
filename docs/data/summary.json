@@ -1,14 +1,14 @@
 {
- "updated": "2026-10-22T22:47:18Z",
+ "updated": "2026-10-22T22:52:19Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.8886,
- "equity_pln": 1000.47,
- "return_pct": 0.06,
+ "equity_pln": 1000.15,
+ "return_pct": 0.02,
  "max_drawdown_pct": 3.16,
- "control_pln": 1020.87,
+ "control_pln": 1020.85,
  "control_trades": 0,
  "hodl_pln": 960.21,
  "positions": [
@@ -17,30 +17,30 @@
    "side": "short",
    "size": 0.00669071,
    "entry": 82375.28,
-   "mark": 81233.2,
-   "upnl": 7.641326076800012,
+   "mark": 81231.6,
+   "upnl": 7.652031212799953,
    "stop": 81700.0,
    "tp": 80500.0,
    "liq": null,
    "leverage": null,
    "opened": 1792651560000,
    "reason": "",
-   "upnl_pln": 29.71
+   "upnl_pln": 29.76
   },
   {
    "symbol": "AVAXUSDT",
    "side": "short",
    "size": 18.741,
    "entry": 9.297210000000002,
-   "mark": 9.095,
-   "upnl": 3.7896176100000165,
+   "mark": 9.097,
+   "upnl": 3.752135610000037,
    "stop": 9.19,
    "tp": 8.75,
    "liq": null,
    "leverage": null,
    "opened": 1792654920000,
    "reason": "",
-   "upnl_pln": 14.74
+   "upnl_pln": 14.59
   }
  ],
  "closed_trades": [
@@ -85,47 +85,22 @@
  ],
  "trade_count": 3,
  "win_rate_pct": 0.0,
- "brain_calls_today": 15,
+ "brain_calls_today": 16,
  "last_decision": {
-  "time": "2026-10-22T21:35:18Z",
+  "time": "2026-10-22T22:52:19Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-22T21:34:06Z",
+  "decided_at": "2026-10-22T22:51:17Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 256.26,
-  "equity_pln": 996.48,
+  "equity_usd": 257.26,
+  "equity_pln": 1000.37,
   "events": [],
-  "market_view": "Unchanged from 21:33Z (engine snapshot same): slow crypto bleed, BTC 81.4k below h1/h4 emas, alts at 30d lows, gold at 30d low. Shorts held with profit-locked stops; PAXG bounce-short order already resting.",
-  "watch_next": "BTC 4h close <80.8k vs reclaim 82.0k; PAXG fill at 4070; Fed hold price drifting to 0.97+ (consider selling early only if edge gone).",
-  "news": "Fed 28 Oct: reports (Mitrade 22 Oct) say economists unanimously expect a hold now and a December hike; October hike odds fading. Hawkish Fed backdrop fits risk-off.",
-  "actions": [
-   {
-    "type": "entry_order",
-    "symbol": "PAXGUSDT",
-    "side": "short",
-    "trigger": 4070,
-    "stop": 4118,
-    "take_profit": 3985,
-    "risk_pct": 0.02,
-    "expires_hours": 24,
-    "reason": "Re-sent from 21:33Z decision in case the engine skipped it (ignore if already resting). Gold at new 30d low 4027, h4 RSI 23; short a relief bounce into h1 ema20 ~4068; shorts collect +21% APR funding. ~1.8R.",
-    "invalidation": "PAXG 4h close above 4118.",
-    "result": "failed",
-    "detail": "there is already a resting order for PAXGUSDT; cancel it first"
-   },
-   {
-    "type": "predict",
-    "market": "2589812",
-    "outcome": "Yes",
-    "stake_pct": 0.05,
-    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
-    "invalidation": "Hot data or Fed-speak before the blackout reviving October hike odds above ~15%.",
-    "result": "done",
-    "detail": "bought 13.6 Yes shares at 0.940 for 12.81 USD on 'Will there be no change in Fed interest rates after the October 2026 meeting?' ok"
-   }
-  ]
+  "market_view": "Slow risk-off bleed continues: BTC 81.2k under h1/h4 emas, AVAX 9.10 just above 30d low 9.046, gold at 30d low. h1 RSI ~30, no reclaim signal yet.",
+  "watch_next": "Trail BTC/AVAX stops above the 20:00-24:00 4h candle highs (BTC 81,465 / AVAX 9.159) once complete; AVAX break of 9.046; PAXG bounce to 4070 for the resting short; BTC reclaim of 82k = stop shorting.",
+  "news": "No fresh market-moving headline found; Fed 28 Oct still priced ~93% hold.",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 233.176437,
+ "cash_usd": 233.176505,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
