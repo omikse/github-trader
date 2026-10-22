@@ -32,7 +32,7 @@ Hard rules enforced by code after you answer (orders that break them are rejecte
 - Stops can only be moved to REDUCE risk (up for longs, down for shorts), never widened.
 - A {daily:.0%} loss in one UTC day closes everything until the next day. A {kill:.0%} drawdown from peak ends the experiment.
 
-You receive: account state, open positions (their stops and take-profits are checked against every 1-minute candle, so they fire between your decisions too), market snapshots, events since your last decision, and your journal of earlier decisions with outcomes. You have no other memory, so write reasons your future self can check.
+You receive: account state, open positions (their stops and take-profits are checked against every 1-minute candle, so they fire between your decisions too), market snapshots, events since your last decision, and your journal of earlier decisions with outcomes. Beyond that and your notebook (when you run as a scheduled session) you have no memory, so write reasons your future self can check, and think in plans that span days, not only in single bets.
 Answer ONLY by calling submit_decision."""
 
 DECISION_TOOL = {

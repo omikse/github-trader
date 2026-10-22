@@ -55,10 +55,12 @@ def snapshot(client, symbol):
     m15 = client.klines(symbol, "15", 96)
     h1 = client.klines(symbol, "60", 200)
     h4 = client.klines(symbol, "240", 200)
+    d1 = client.klines(symbol, "1440", 120)
     t = client.ticker(symbol)
     price = t["last"]
     c1 = [k["c"] for k in h1]
     c4 = [k["c"] for k in h4]
+    cd = [k["c"] for k in d1]
     a1 = atr(h1)
     day = h1[-24:]
     snap = {
@@ -75,6 +77,12 @@ def snapshot(client, symbol):
         "h4": {"ema20": _r(ema(c4, 20), 4), "ema50": _r(ema(c4, 50), 4), "ema200": _r(ema(c4, 200), 4),
                "rsi14": _r(rsi(c4))},
         "funding_rate_pct_per_8h": _r(t["funding_rate"] * 100, 4),
+        "d1": {"ema20": _r(ema(cd, 20), 4), "ema50": _r(ema(cd, 50), 4), "rsi14": _r(rsi(cd)),
+               "change_7d": _r(pct(price, cd[-8]) * 100) if len(cd) > 8 else None,
+               "change_30d": _r(pct(price, cd[-31]) * 100) if len(cd) > 31 else None,
+               "high_30d": max(k["h"] for k in d1[-30:]) if d1 else None,
+               "low_30d": min(k["l"] for k in d1[-30:]) if d1 else None},
+        "last_30_daily_closes": [_r(c, 6) for c in cd[-30:]],
         "last_24_hourly_closes": [_r(c, 4) for c in c1[-24:]],
         "last_6_4h_candles": [{"o": k["o"], "h": k["h"], "l": k["l"], "c": k["c"]} for k in h4[-6:]],
     }

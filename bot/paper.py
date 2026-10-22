@@ -226,7 +226,8 @@ class PaperExchange:
             fee = px * o["qty"] * config.TAKER_FEE
             self.s["cash"] -= fee
             self.s["positions"][o["symbol"]] = {"side": o["side"], "qty": o["qty"], "entry": px, "stop": o["stop"],
-                                                "tp": o.get("tp"), "opened": int(t), "entry_fee": fee, "mark": px}
+                                                "tp": o.get("tp"), "opened": int(t), "entry_fee": fee, "mark": px,
+                                                "note": o.get("note", "")}
             self._order_event(o, "filled", t, f"filled at {px:.6g}")
             # the stop can be hit inside the same minute that filled the entry
             self._check_exits(o["symbol"], {**bar, "o": px})
@@ -255,7 +256,7 @@ class PaperExchange:
         self.s["cash"] += pnl - fee_paid
         rec = {"id": f"t{self.s['next_id']}", "symbol": sym, "side": p["side"], "qty": p["qty"],
                "entry": p["entry"], "exit": round(px, 8), "pnl": round(pnl - fee_paid - p.get("entry_fee", 0), 4),
-               "time": int(t), "why": why}
+               "time": int(t), "why": why, "opened": p.get("opened"), "reason": p.get("note", "")}
         self.s["next_id"] += 1
         self.s["closed"].append(rec)
 
@@ -275,7 +276,7 @@ class PaperExchange:
             p["mark"] = mark
             out.append({"symbol": sym, "side": p["side"], "size": p["qty"], "entry": p["entry"], "mark": mark,
                         "upnl": self._upnl(p, mark), "stop": p.get("stop"), "tp": p.get("tp"), "liq": None,
-                        "leverage": None, "opened": p["opened"]})
+                        "leverage": None, "opened": p["opened"], "reason": p.get("note", "")})
         return out
 
     def closed_pnl(self, start_ms):
@@ -285,7 +286,7 @@ class PaperExchange:
     def set_leverage(self, symbol, lev):
         pass  # leverage is enforced by the risk guard; margin is cross
 
-    def market_order(self, symbol, side, qty, stop=None, tp=None, reduce_only=False):
+    def market_order(self, symbol, side, qty, stop=None, tp=None, reduce_only=False, note=""):
         q = self.market.ticker(symbol)  # fresh quote at the moment of the order
         self._tick_cache[symbol] = q
         if reduce_only:
@@ -301,7 +302,7 @@ class PaperExchange:
         fee = px * qty * config.TAKER_FEE
         self.s["cash"] -= fee
         self.s["positions"][symbol] = {"side": side, "qty": qty, "entry": px, "stop": stop, "tp": tp,
-                                       "opened": self.now_ms, "entry_fee": fee, "mark": px}
+                                       "opened": self.now_ms, "entry_fee": fee, "mark": px, "note": note}
         self.s["fills"].append({"time": self.now_ms, "symbol": symbol, "side": side, "qty": qty, "price": px, "fee": fee})
         self.s["fills"] = self.s["fills"][-200:]
         return {"price": px}

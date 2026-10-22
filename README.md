@@ -49,8 +49,10 @@ every minute (one GitHub Actions job runs ~5h40m, then the next takes over)
   position size, everything is closed at that price.
 - **Not simulated:** order-book depth (irrelevant at this size) and variable funding rates.
 
-Each Claude call is a fresh model with no memory. The bot sends it its own journal of earlier
-decisions and closed trades every time, so it can learn from what it did.
+Each Claude session starts with no memory. It keeps plans going for days through `docs/data/brain_notebook.md`,
+a notebook it reads first and rewrites every session (big picture, strategy, a plan for every position and order,
+watchlist, lessons, session log). It also gets its last 12 decisions, every closed trade with the reason it was
+opened and how it closed, and its track record. The notebook is shown on the dashboard.
 
 ## Setup
 

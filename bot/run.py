@@ -313,10 +313,14 @@ def build_context(state, now, equity, rate, positions, markets, journal_path, or
     start = state["start_usd"]
     used = sum(p["size"] * p["mark"] for p in positions)
     journal = []
-    for j in read_journal(journal_path, 10):
-        journal.append({"time": j.get("time"), "view": j.get("market_view"),
-                        "actions": [{k: a.get(k) for k in ("type", "symbol", "side", "trigger", "stop", "reason", "result", "detail")}
+    for j in read_journal(journal_path, 12):
+        journal.append({"time": j.get("time"), "view": j.get("market_view"), "watch_next": j.get("watch_next"),
+                        "actions": [{k: a.get(k) for k in ("type", "symbol", "side", "trigger", "stop", "reason",
+                                                           "invalidation", "result", "detail") if a.get(k) is not None}
                                     for a in j.get("actions", [])]})
+    closed = state["closed_trades"]
+    wins = [t["pnl"] for t in closed if t["pnl"] > 0]
+    losses = [t["pnl"] for t in closed if t["pnl"] <= 0]
     return {
         "time_utc": iso(now),
         "experiment_ends_utc": config.END_AT,
@@ -330,15 +334,22 @@ def build_context(state, now, equity, rate, positions, markets, journal_path, or
         "positions": [{
             "symbol": p["symbol"], "side": p["side"], "size": p["size"], "entry": p["entry"], "mark": p["mark"],
             "pnl_usd": round(p["upnl"], 2), "pnl_pct_of_equity": round(p["upnl"] / equity * 100, 2) if equity else None,
-            "stop": p["stop"], "take_profit": p["tp"],
+            "stop": p["stop"], "take_profit": p["tp"], "why_opened": p.get("reason"),
             "opened_utc": iso(datetime.fromtimestamp(p["opened"] / 1000, timezone.utc)) if p["opened"] else None,
         } for p in positions],
         "resting_orders": [{k: o.get(k) for k in ("symbol", "side", "trigger", "direction", "stop", "tp", "qty")}
                            | {"expires_utc": iso(datetime.fromtimestamp(o["expires"] / 1000, timezone.utc))}
                            for o in orders],
         "events_since_last_decision": state.get("pending_events", []),
-        "recent_closed_trades": [{k: t[k] for k in ("symbol", "side", "entry", "exit", "pnl")}
-                                 for t in state["closed_trades"][-10:]],
+        "recent_closed_trades": [{"symbol": t["symbol"], "side": t["side"], "entry": t["entry"], "exit": t["exit"],
+                                  "pnl_usd": round(t["pnl"], 2), "closed_by": t.get("why"), "why_opened": t.get("reason"),
+                                  "opened_utc": iso(datetime.fromtimestamp(t["opened"] / 1000, timezone.utc)) if t.get("opened") else None,
+                                  "closed_utc": iso(datetime.fromtimestamp(t["time"] / 1000, timezone.utc))}
+                                 for t in closed[-15:]],
+        "track_record": {"closed_trades": len(closed), "wins": len(wins), "losses": len(losses),
+                         "avg_win_usd": round(sum(wins) / len(wins), 2) if wins else None,
+                         "avg_loss_usd": round(sum(losses) / len(losses), 2) if losses else None,
+                         "net_usd": round(sum(t["pnl"] for t in closed), 2)},
         "markets": markets,
         "your_journal": journal,
     }
@@ -384,7 +395,8 @@ def execute(client, actions, equity, positions, markets, now=None):
                                                   inst=client.instrument(sym), positions=list(by_sym.values()))
                     if ok:
                         client.set_leverage(sym, config.MAX_LEVERAGE)
-                        client.market_order(sym, o["side"], o["qty"], stop=o["stop"], tp=o["tp"])
+                        client.market_order(sym, o["side"], o["qty"], stop=o["stop"], tp=o["tp"],
+                                            note=a.get("reason", ""))
                         by_sym[sym] = {"symbol": sym, "side": o["side"], "size": o["qty"],
                                        "mark": markets[sym]["price"], "stop": o["stop"]}
                         a.update(result="done", detail=(

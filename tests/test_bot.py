@@ -228,6 +228,10 @@ def test_session_brain_and_resting_orders():
     assert any(e["type"] == "order_filled" for e in st["pending_events"])
     inp = json.load(open(os.path.join(d, "brain_input.json")))
     assert any(e["type"] == "order_filled" for e in inp["events_since_last_decision"])
+    assert inp["markets"]["BTCUSDT"]["d1"]["ema20"] and len(inp["markets"]["BTCUSDT"]["last_30_daily_closes"]) == 30
+    eth = next(p for p in inp["positions"] if p["symbol"] == "ETHUSDT")
+    assert eth["why_opened"] == "breakout"                       # the reason travels with the position
+
     # a stale decision is journaled but not executed
     t9 = T0 + timedelta(minutes=135)
     write_decision(d, "dec-2", t9 - timedelta(minutes=90), [{"type": "close", "symbol": "ETHUSDT", "reason": "x"}])
@@ -238,6 +242,9 @@ def test_session_brain_and_resting_orders():
     s = json.load(open(os.path.join(d, "summary.json")))
     assert s["brain_mode"] == "session" and any(p["symbol"] == "ETHUSDT" for p in s["positions"])
     assert s["closed_trades"][0]["why"] == "stop"  # the BTC short was stopped out by the rally
+    inp = json.load(open(os.path.join(d, "brain_input.json")))
+    closed = inp["recent_closed_trades"][0]
+    assert closed["why_opened"] == "fade" and closed["closed_by"] == "stop" and inp["track_record"]["losses"] == 1
     print("session mode ok; ETH filled at", round(fill, 2), "trigger", trig)
 
 
