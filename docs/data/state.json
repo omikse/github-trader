@@ -35,11 +35,22 @@
    "why": "stop"
   }
  ],
- "last_closed_check_ms": 1792674460385,
+ "last_closed_check_ms": 1792674940455,
  "day": "2026-10-22",
  "day_start_equity": 257.14,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_filled",
+   "id": "o11",
+   "symbol": "LTCUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 58.85,
+   "time": 1792674540000,
+   "detail": "filled at 58.8323"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 256.75460210303584,
@@ -53,14 +64,15 @@
   "trades": 0,
   "wins": 0
  },
- "last_btc": 81623.7,
+ "last_btc": 81613.6,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
   "o3:cancelled",
   "o6:filled",
   "o4:filled",
-  "o7:filled"
+  "o7:filled",
+  "o11:filled"
  ],
  "last_decision_id": "2026-10-22T12:51:17Z"
 }
