@@ -1,44 +1,44 @@
 {
- "updated": "2026-10-22T08:45:13Z",
+ "updated": "2026-10-22T08:51:13Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.8889,
- "equity_pln": 978.26,
- "return_pct": -2.17,
+ "equity_pln": 977.57,
+ "return_pct": -2.24,
  "max_drawdown_pct": 2.62,
  "control_pln": 999.99,
  "control_trades": 0,
- "hodl_pln": 968.04,
+ "hodl_pln": 968.18,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00669071,
    "entry": 82375.28,
-   "mark": 81886.9,
-   "upnl": 3.267608949800031,
-   "stop": 83250.0,
+   "mark": 81899.4,
+   "upnl": 3.1839750748000313,
+   "stop": 82600.0,
    "tp": 80500.0,
    "liq": null,
    "leverage": null,
    "opened": 1792651560000,
-   "upnl_pln": 12.71
+   "upnl_pln": 12.38
   },
   {
    "symbol": "AVAXUSDT",
    "side": "short",
    "size": 18.741,
    "entry": 9.297210000000002,
-   "mark": 9.189,
-   "upnl": 2.0279636100000276,
-   "stop": 9.56,
+   "mark": 9.19,
+   "upnl": 2.009222610000038,
+   "stop": 9.36,
    "tp": 8.75,
    "liq": null,
    "leverage": null,
    "opened": 1792654920000,
-   "upnl_pln": 7.89
+   "upnl_pln": 7.81
   }
  ],
  "closed_trades": [
@@ -69,63 +69,83 @@
  ],
  "trade_count": 2,
  "win_rate_pct": 0.0,
- "brain_calls_today": 4,
+ "brain_calls_today": 5,
  "last_decision": {
-  "time": "2026-10-22T06:53:13Z",
+  "time": "2026-10-22T08:51:13Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-22T06:52:47Z",
+  "decided_at": "2026-10-22T08:51:05Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 250.84,
-  "equity_pln": 975.49,
+  "equity_usd": 251.32,
+  "equity_pln": 977.35,
   "events": [
    {
-    "type": "order_cancelled",
-    "id": "o1",
-    "symbol": "BTCUSDT",
-    "side": "long",
-    "status": "cancelled",
-    "trigger": 84900,
-    "time": 1792644719580,
-    "detail": "cancelled by the brain"
-   },
-   {
-    "type": "order_cancelled",
-    "id": "o3",
-    "symbol": "NEARUSDT",
-    "side": "long",
-    "status": "cancelled",
-    "trigger": 5.46,
-    "time": 1792644719580,
-    "detail": "cancelled by the brain"
+    "type": "order_filled",
+    "id": "o4",
+    "symbol": "AVAXUSDT",
+    "side": "short",
+    "status": "filled",
+    "trigger": 9.3,
+    "time": 1792654920000,
+    "detail": "filled at 9.29721"
    },
    {
     "type": "order_filled",
-    "id": "o6",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "status": "filled",
-    "trigger": 82400,
-    "time": 1792651560000,
-    "detail": "filled at 82375.3"
-   }
-  ],
-  "market_view": "Slow risk-off grind: BTC 82.45k sits on its 24h low (h1 RSI 34, below h1 ema20/50, h4 ema200 83.45k overhead), alts weaker and pinned to 24h lows (AVAX/DOT -3.2% 24h, DOGE h1 RSI 26). Flat book; BTC and AVAX breakdown shorts are 0.1-0.3% from triggering. Data ~8 min old, engine fine.",
-  "watch_next": "Did BTC lose 82.4k and the h1 ema200 (82.15k) with follow-through, or reclaim 83k (then cancel shorts)? Trail any filled short behind lower highs; watch DOT/AVAX breakdowns.",
-  "news": "No clear market-moving crypto/macro headline found in a quick search.",
-  "actions": [
-   {
-    "type": "entry_order",
+    "id": "o7",
     "symbol": "DOTUSDT",
     "side": "short",
+    "status": "filled",
     "trigger": 1.105,
-    "stop": 1.136,
-    "take_profit": 1.04,
-    "risk_pct": 0.02,
-    "expires_hours": 18,
-    "reason": "One of the two weakest coins (-3.2% 24h, below h4 ema200 1.174, h4 RSI 43). Break of 24h low 1.1134 continues the alt bleed toward 1.04 (~2.1R).",
-    "invalidation": "Reclaim of 1.136 / BTC back above 83k.",
+    "time": 1792656120000,
+    "detail": "filled at 1.10467"
+   },
+   {
+    "type": "position_closed",
+    "id": "t8",
+    "symbol": "DOTUSDT",
+    "side": "short",
+    "qty": 155.725,
+    "entry": 1.1046685,
+    "exit": 1.136568,
+    "pnl": -5.1595,
+    "time": 1792657080000,
+    "why": "stop"
+   }
+  ],
+  "market_view": "Risk-off bleed continues: BTC 81.9k at its 24h low, below h1 ema20/50/200 and h4 ema20/50; alts weaker (AVAX -5.1%, NEAR -5.3%, SUI -4.5% 24h) and all pinned to 24h lows with h1 RSI 22-29 (oversold, bounce risk). BTC and AVAX shorts are both green; DOT short stopped (-5.16). Data ~6 min old, engine fine.",
+  "watch_next": "Whether BTC holds below 82.4k (breakdown level) or snaps back above h1 ema200 82.1k into the shorts; ETH retest order at 2440; trail BTC toward 81.5-82k and AVAX toward 9.25 if the drop extends.",
+  "news": "No clear market-moving headline found; move looks like a technical grind lower.",
+  "actions": [
+   {
+    "type": "move_stop",
+    "symbol": "BTCUSDT",
+    "stop": 82600,
+    "take_profit": 80500,
+    "reason": "Lock near-breakeven: h1 is deeply oversold (RSI 28), so a squeeze back to the 82.4k breakdown level is likely; 82.6k sits above the last two hourly closes and the breakdown level, ~1.6 ATR away.",
     "result": "done",
-    "detail": "short 155.725 when price goes below 1.105 (risk 2.0%, stop 1.136, target 1.04, expires in 18h) ok"
+    "detail": "stop 82600.0, target 80500.0"
+   },
+   {
+    "type": "move_stop",
+    "symbol": "AVAXUSDT",
+    "stop": 9.36,
+    "take_profit": 8.75,
+    "reason": "Trail above the last 4h candle high (9.302) plus a buffer; cuts risk from ~2% to ~0.4% of equity while keeping the weakest-coin short on.",
+    "result": "done",
+    "detail": "stop 9.36, target 8.75"
+   },
+   {
+    "type": "entry_order",
+    "symbol": "ETHUSDT",
+    "side": "short",
+    "trigger": 2440,
+    "stop": 2472,
+    "take_profit": 2350,
+    "risk_pct": 0.02,
+    "expires_hours": 12,
+    "reason": "Sell the oversold bounce rather than chase: ETH lost its 24h low and the h1 ema200 (2427); a retest of 2440 (prior breakdown area, under h1 ema20 2452) is a lower-high short toward 2350 (~2.8R).",
+    "invalidation": "ETH reclaiming 2470 (back above h1 ema20/50) means the breakdown failed.",
+    "result": "done",
+    "detail": "short 0.144918 when price goes above 2440 (risk 2.0%, stop 2472.0, target 2350.0, expires in 12h) ok"
    }
   ]
  },
@@ -156,6 +176,18 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [],
+ "orders": [
+  {
+   "symbol": "ETHUSDT",
+   "side": "short",
+   "trigger": 2440,
+   "direction": "above",
+   "stop": 2472.0,
+   "tp": 2350.0,
+   "qty": 0.144918,
+   "expires": 1792702273761,
+   "note": "Sell the oversold bounce rather than chase: ETH lost its 24h low and the h1 ema200 (2427); a retest of 2440 (prior breakdown area, under h1 ema20 2452) is a lower-high short toward 2350 (~2.8R)."
+  }
+ ],
  "balance_warning": false
 }
