@@ -1,13 +1,18 @@
 {
-  "id": "2026-10-22T06:52:47Z",
-  "decided_at": "2026-10-22T06:52:47Z",
+  "id": "2026-10-22T08:51:05Z",
+  "decided_at": "2026-10-22T08:51:05Z",
   "model": "claude-opus-5-5",
-  "market_view": "Slow risk-off grind: BTC 82.45k sits on its 24h low (h1 RSI 34, below h1 ema20/50, h4 ema200 83.45k overhead), alts weaker and pinned to 24h lows (AVAX/DOT -3.2% 24h, DOGE h1 RSI 26). Flat book; BTC and AVAX breakdown shorts are 0.1-0.3% from triggering. Data ~8 min old, engine fine.",
-  "news": "No clear market-moving crypto/macro headline found in a quick search.",
-  "watch_next": "Did BTC lose 82.4k and the h1 ema200 (82.15k) with follow-through, or reclaim 83k (then cancel shorts)? Trail any filled short behind lower highs; watch DOT/AVAX breakdowns.",
+  "market_view": "Risk-off bleed continues: BTC 81.9k at its 24h low, below h1 ema20/50/200 and h4 ema20/50; alts weaker (AVAX -5.1%, NEAR -5.3%, SUI -4.5% 24h) and all pinned to 24h lows with h1 RSI 22-29 (oversold, bounce risk). BTC and AVAX shorts are both green; DOT short stopped (-5.16). Data ~6 min old, engine fine.",
+  "news": "No clear market-moving headline found; move looks like a technical grind lower.",
+  "watch_next": "Whether BTC holds below 82.4k (breakdown level) or snaps back above h1 ema200 82.1k into the shorts; ETH retest order at 2440; trail BTC toward 81.5-82k and AVAX toward 9.25 if the drop extends.",
   "actions": [
-    {"type": "entry_order", "symbol": "DOTUSDT", "side": "short", "trigger": 1.105, "stop": 1.136, "take_profit": 1.04, "risk_pct": 0.02, "expires_hours": 18,
-      "reason": "One of the two weakest coins (-3.2% 24h, below h4 ema200 1.174, h4 RSI 43). Break of 24h low 1.1134 continues the alt bleed toward 1.04 (~2.1R).",
-      "invalidation": "Reclaim of 1.136 / BTC back above 83k."}
+    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 82600, "take_profit": 80500,
+      "reason": "Lock near-breakeven: h1 is deeply oversold (RSI 28), so a squeeze back to the 82.4k breakdown level is likely; 82.6k sits above the last two hourly closes and the breakdown level, ~1.6 ATR away."},
+    {"type": "move_stop", "symbol": "AVAXUSDT", "stop": 9.36, "take_profit": 8.75,
+      "reason": "Trail above the last 4h candle high (9.302) plus a buffer; cuts risk from ~2% to ~0.4% of equity while keeping the weakest-coin short on."},
+    {"type": "entry_order", "symbol": "ETHUSDT", "side": "short", "trigger": 2440, "stop": 2472, "take_profit": 2350,
+      "risk_pct": 0.02, "expires_hours": 12,
+      "reason": "Sell the oversold bounce rather than chase: ETH lost its 24h low and the h1 ema200 (2427); a retest of 2440 (prior breakdown area, under h1 ema20 2452) is a lower-high short toward 2350 (~2.8R).",
+      "invalidation": "ETH reclaiming 2470 (back above h1 ema20/50) means the breakdown failed."}
   ]
 }
