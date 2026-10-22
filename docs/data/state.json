@@ -24,11 +24,22 @@
    "why": "stop"
   }
  ],
- "last_closed_check_ms": 1792654873667,
+ "last_closed_check_ms": 1792655353636,
  "day": "2026-10-22",
  "day_start_equity": 257.14,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_filled",
+   "id": "o4",
+   "symbol": "AVAXUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 9.3,
+   "time": 1792654920000,
+   "detail": "filled at 9.29721"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 257.14,
@@ -37,12 +48,13 @@
   "trades": 0,
   "wins": 0
  },
- "last_btc": 82218.1,
+ "last_btc": 82171.5,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
   "o3:cancelled",
-  "o6:filled"
+  "o6:filled",
+  "o4:filled"
  ],
  "last_decision_id": "2026-10-22T06:52:47Z"
 }

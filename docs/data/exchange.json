@@ -1,5 +1,5 @@
 {
- "cash": 251.43920774997292,
+ "cash": 251.3433762930374,
  "positions": {
   "BTCUSDT": {
    "side": "short",
@@ -9,7 +9,17 @@
    "tp": 80500.0,
    "opened": 1792651560000,
    "entry_fee": 0.30313201030684,
-   "mark": 82218.1
+   "mark": 82171.5
+  },
+  "AVAXUSDT": {
+   "side": "short",
+   "qty": 18.741,
+   "entry": 9.297210000000002,
+   "stop": 9.56,
+   "tp": 8.75,
+   "opened": 1792654920000,
+   "entry_fee": 0.09583145693550002,
+   "mark": 9.291
   }
  },
  "closed": [
@@ -26,22 +36,9 @@
   }
  ],
  "fills": [],
- "last_ms": 1792654873667,
+ "last_ms": 1792655353636,
  "next_id": 8,
  "orders": [
-  {
-   "id": "o4",
-   "symbol": "AVAXUSDT",
-   "side": "short",
-   "qty": 18.741,
-   "trigger": 9.3,
-   "direction": "below",
-   "stop": 9.56,
-   "tp": 8.75,
-   "placed": 1792637519523,
-   "expires": 1792702319523,
-   "note": "Weakest coin in the universe (-3.6% 24h, below h1/h4 ema20/50/200, h4 RSI 39). Breakdown below 24h low 9.339 should extend toward 8.75 (~2.1R)."
-  },
   {
    "id": "o7",
    "symbol": "DOTUSDT",
@@ -92,6 +89,15 @@
    "trigger": 82400,
    "time": 1792651560000,
    "detail": "filled at 82375.3"
+  },
+  {
+   "id": "o4",
+   "symbol": "AVAXUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 9.3,
+   "time": 1792654920000,
+   "detail": "filled at 9.29721"
   }
  ]
 }
