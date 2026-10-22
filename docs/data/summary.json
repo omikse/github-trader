@@ -1,17 +1,32 @@
 {
- "updated": "2026-10-22T01:31:59Z",
+ "updated": "2026-10-22T01:39:59Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.8889,
- "equity_pln": 999.99,
- "return_pct": 0.0,
- "max_drawdown_pct": 0,
+ "equity_pln": 996.08,
+ "return_pct": -0.39,
+ "max_drawdown_pct": 0.65,
  "control_pln": 999.99,
  "control_trades": 0,
- "hodl_pln": 995.19,
- "positions": [],
+ "hodl_pln": 990.39,
+ "positions": [
+  {
+   "symbol": "XRPUSDT",
+   "side": "long",
+   "size": 239.268,
+   "entry": 1.3584074000000002,
+   "mark": 1.35502,
+   "upnl": -0.8104964232000628,
+   "stop": 1.338,
+   "tp": 1.43,
+   "liq": null,
+   "leverage": null,
+   "opened": 1792632960000,
+   "upnl_pln": -3.15
+  }
+ ],
  "closed_trades": [],
  "trade_count": 0,
  "win_rate_pct": null,
@@ -45,7 +60,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 257.14,
+ "cash_usd": 256.961237,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -82,17 +97,6 @@
    "qty": 0.0081771,
    "expires": 1792709500006,
    "note": "Breakout above 24h high 84,840 after h4 reclaim of ema200; momentum continuation toward 87.5k (~3R)."
-  },
-  {
-   "symbol": "XRPUSDT",
-   "side": "long",
-   "trigger": 1.358,
-   "direction": "below",
-   "stop": 1.338,
-   "tp": 1.43,
-   "qty": 239.268,
-   "expires": 1792687900006,
-   "note": "Strongest alt (+2.6% 24h, h4 RSI 64); pullback to h1 ema20 / breakout level ~1.355 for trend continuation."
   },
   {
    "symbol": "NEARUSDT",

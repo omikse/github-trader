@@ -1,9 +1,20 @@
 {
- "cash": 257.14,
- "positions": {},
+ "cash": 256.9612371180192,
+ "positions": {
+  "XRPUSDT": {
+   "side": "long",
+   "qty": 239.268,
+   "entry": 1.3584074000000002,
+   "stop": 1.338,
+   "tp": 1.43,
+   "opened": 1792632960000,
+   "entry_fee": 0.17876288198076004,
+   "mark": 1.35502
+  }
+ },
  "closed": [],
  "fills": [],
- "last_ms": 1792632719403,
+ "last_ms": 1792633199413,
  "next_id": 4,
  "orders": [
   {
@@ -20,19 +31,6 @@
    "note": "Breakout above 24h high 84,840 after h4 reclaim of ema200; momentum continuation toward 87.5k (~3R)."
   },
   {
-   "id": "o2",
-   "symbol": "XRPUSDT",
-   "side": "long",
-   "qty": 239.268,
-   "trigger": 1.358,
-   "direction": "below",
-   "stop": 1.338,
-   "tp": 1.43,
-   "placed": 1792623100006,
-   "expires": 1792687900006,
-   "note": "Strongest alt (+2.6% 24h, h4 RSI 64); pullback to h1 ema20 / breakout level ~1.355 for trend continuation."
-  },
-  {
    "id": "o3",
    "symbol": "NEARUSDT",
    "side": "long",
@@ -46,5 +44,15 @@
    "note": "Relative-strength leader (+6.3% 24h, only large alt above h4 ema200). Breakout over 24h high 5.45 targets ~2.8R continuation to 6.0."
   }
  ],
- "order_events": []
+ "order_events": [
+  {
+   "id": "o2",
+   "symbol": "XRPUSDT",
+   "side": "long",
+   "status": "filled",
+   "trigger": 1.358,
+   "time": 1792632960000,
+   "detail": "filled at 1.35841"
+  }
+ ]
 }
