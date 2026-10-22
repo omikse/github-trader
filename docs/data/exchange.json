@@ -15,35 +15,9 @@
   }
  ],
  "fills": [],
- "last_ms": 1792644239442,
- "next_id": 6,
+ "last_ms": 1792644719580,
+ "next_id": 7,
  "orders": [
-  {
-   "id": "o1",
-   "symbol": "BTCUSDT",
-   "side": "long",
-   "qty": 0.0081771,
-   "trigger": 84900,
-   "direction": "above",
-   "stop": 84050.0,
-   "tp": 87500.0,
-   "placed": 1792623100006,
-   "expires": 1792709500006,
-   "note": "Breakout above 24h high 84,840 after h4 reclaim of ema200; momentum continuation toward 87.5k (~3R)."
-  },
-  {
-   "id": "o3",
-   "symbol": "NEARUSDT",
-   "side": "long",
-   "qty": 32.7974,
-   "trigger": 5.46,
-   "direction": "above",
-   "stop": 5.27,
-   "tp": 6.0,
-   "placed": 1792630319525,
-   "expires": 1792716719525,
-   "note": "Relative-strength leader (+6.3% 24h, only large alt above h4 ema200). Breakout over 24h high 5.45 targets ~2.8R continuation to 6.0."
-  },
   {
    "id": "o4",
    "symbol": "AVAXUSDT",
@@ -56,6 +30,19 @@
    "placed": 1792637519523,
    "expires": 1792702319523,
    "note": "Weakest coin in the universe (-3.6% 24h, below h1/h4 ema20/50/200, h4 RSI 39). Breakdown below 24h low 9.339 should extend toward 8.75 (~2.1R)."
+  },
+  {
+   "id": "o6",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00669071,
+   "trigger": 82400,
+   "direction": "below",
+   "stop": 83250.0,
+   "tp": 80500.0,
+   "placed": 1792644719580,
+   "expires": 1792709519580,
+   "note": "Lower high at 84.8k then breakdown: a move below the 24h low 82,543 also loses h1 ema200 (82.15k) and h4 ema20/50, opening room toward 80.5k (~2.2R)."
   }
  ],
  "order_events": [
@@ -67,6 +54,24 @@
    "trigger": 1.358,
    "time": 1792632960000,
    "detail": "filled at 1.35841"
+  },
+  {
+   "id": "o1",
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 84900,
+   "time": 1792644719580,
+   "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o3",
+   "symbol": "NEARUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 5.46,
+   "time": 1792644719580,
+   "detail": "cancelled by the brain"
   }
  ]
 }
