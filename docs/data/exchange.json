@@ -1,5 +1,5 @@
 {
- "cash": 246.06327272299188,
+ "cash": 233.1687034748868,
  "positions": {
   "BTCUSDT": {
    "side": "short",
@@ -9,7 +9,7 @@
    "tp": 80500.0,
    "opened": 1792651560000,
    "entry_fee": 0.30313201030684,
-   "mark": 81382.3
+   "mark": 81359.5
   },
   "AVAXUSDT": {
    "side": "short",
@@ -19,7 +19,7 @@
    "tp": 8.75,
    "opened": 1792654920000,
    "entry_fee": 0.09583145693550002,
-   "mark": 9.114
+   "mark": 9.112
   }
  },
  "closed": [
@@ -60,7 +60,7 @@
   }
  ],
  "fills": [],
- "last_ms": 1792704859103,
+ "last_ms": 1792704918998,
  "next_id": 14,
  "orders": [
   {
@@ -181,12 +181,26 @@
  },
  "carry": {},
  "carry_closed": [],
- "predictions": {},
+ "predictions": {
+  "2589812": {
+   "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+   "outcome": "Yes",
+   "shares": 13.630638297872341,
+   "entry": 0.94,
+   "cost": 12.894583829787233,
+   "mark": 0.93,
+   "end": "2026-10-29T03:59:00Z",
+   "opened": 1792704918998,
+   "note": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
+   "yes_bid": 0.93,
+   "yes_ask": 0.94
+  }
+ },
  "pred_closed": [],
  "cash_rate": 0.0387,
  "income": {
   "funding": 0.0,
   "carry": 0.0,
-  "interest": 0.00015366392817697748
+  "interest": 0.00016824561031300911
  }
 }
