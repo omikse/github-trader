@@ -24,11 +24,32 @@
    "why": "stop"
   }
  ],
- "last_closed_check_ms": 1792644719580,
+ "last_closed_check_ms": 1792644779423,
  "day": "2026-10-22",
  "day_start_equity": 257.14,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_cancelled",
+   "id": "o1",
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 84900,
+   "time": 1792644719580,
+   "detail": "cancelled by the brain"
+  },
+  {
+   "type": "order_cancelled",
+   "id": "o3",
+   "symbol": "NEARUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 5.46,
+   "time": 1792644719580,
+   "detail": "cancelled by the brain"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 257.14,
@@ -37,9 +58,11 @@
   "trades": 0,
   "wins": 0
  },
- "last_btc": 82773.2,
+ "last_btc": 82786.8,
  "seen_order_events": [
-  "o2:filled"
+  "o2:filled",
+  "o1:cancelled",
+  "o3:cancelled"
  ],
  "last_decision_id": "2026-10-22T04:51:21Z"
 }
