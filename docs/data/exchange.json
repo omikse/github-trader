@@ -1,5 +1,5 @@
 {
- "cash": 251.3433762930374,
+ "cash": 251.32115961357565,
  "positions": {
   "BTCUSDT": {
    "side": "short",
@@ -9,7 +9,7 @@
    "tp": 80500.0,
    "opened": 1792651560000,
    "entry_fee": 0.30313201030684,
-   "mark": 82083.4
+   "mark": 82136.9
   },
   "AVAXUSDT": {
    "side": "short",
@@ -19,7 +19,17 @@
    "tp": 8.75,
    "opened": 1792654920000,
    "entry_fee": 0.09583145693550002,
-   "mark": 9.313
+   "mark": 9.242
+  },
+  "DOTUSDT": {
+   "side": "short",
+   "qty": 155.725,
+   "entry": 1.1046685,
+   "stop": 1.136,
+   "tp": 1.04,
+   "opened": 1792656120000,
+   "entry_fee": 0.094613476189375,
+   "mark": 1.1075
   }
  },
  "closed": [
@@ -36,23 +46,9 @@
   }
  ],
  "fills": [],
- "last_ms": 1792655833632,
+ "last_ms": 1792656313691,
  "next_id": 8,
- "orders": [
-  {
-   "id": "o7",
-   "symbol": "DOTUSDT",
-   "side": "short",
-   "qty": 155.725,
-   "trigger": 1.105,
-   "direction": "below",
-   "stop": 1.136,
-   "tp": 1.04,
-   "placed": 1792651993756,
-   "expires": 1792716793756,
-   "note": "One of the two weakest coins (-3.2% 24h, below h4 ema200 1.174, h4 RSI 43). Break of 24h low 1.1134 continues the alt bleed toward 1.04 (~2.1R)."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -98,6 +94,15 @@
    "trigger": 9.3,
    "time": 1792654920000,
    "detail": "filled at 9.29721"
+  },
+  {
+   "id": "o7",
+   "symbol": "DOTUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 1.105,
+   "time": 1792656120000,
+   "detail": "filled at 1.10467"
   }
  ]
 }
