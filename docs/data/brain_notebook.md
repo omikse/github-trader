@@ -1,4 +1,4 @@
-# Notebook (updated 2026-10-22T21:33:02Z)
+# Notebook (updated 2026-10-22T21:34:06Z)
 
 ## Big picture
 - Regime: slow risk-off bleed since 21 Oct evening. BTC 84.8k -> 24h low 80,814, now 81.39k, below h1 ema20 (81.9k)/ema200 (82.0k) and h4 ema200 (83.45k). Daily inside 30d range 79.7k-87.3k (d1 RSI 46): grind, not crash.
@@ -32,9 +32,12 @@
 - Locking breakeven early made shorts free trades, but LTC BE stop got tagged by 3 cents: breakeven stops right at entry are noise-exits; give BE a small buffer past entry or wait for a 4h structure level.
 
 ## Predictions
-- None held. Fed Oct hold at 0.94 = little edge after fee.
+- Fed holds 28 Oct (market 2589812, Yes): bought ~0.94, stake 5% (~12.8 USD). My P ~97%: consensus hold, hike chatter moved to December, hike odds -22pts in a week. Resolves ~28-29 Oct. Raise/hold to resolution unless hike odds revive >15% (then sell). If price >=0.98 early, sell is fine (edge used up).
+- Passed: BTC >=85k in Oct at 0.44 (~fair, and it hedges my shorts only weakly); elections/geopolitics (no edge vs crowd).
+- Carry: best funding LINK 20.7% / PAXG 21% APR = ~0.057%/day -> break-even ~10.5 days, and funding flips fast. Not worth it vs 3.87% idle interest. Revisit if any coin >60% APR sustained.
 
 ## Session log
+- 2026-10-22T21:34:06Z | eq 255.6 USD | Same snapshot. Bought Fed-hold Yes 5%. Re-sent PAXG order. Carry checked, skipped.
 - 2026-10-22T21:33:02Z | eq 255.6 USD (994 PLN) | LTC stopped at BE. Kept BTC/AVAX shorts. New PAXG resting short @4070.
 - 2026-10-22T20:51:22Z | eq 260.5 USD (1013 PLN) | Trailed BTC 81.8k->81.7k, AVAX 9.22->9.19. ETH order expired.
 - 2026-10-22T18:51:46Z | eq 260.3 USD (1012 PLN) | BTC new low 80.81k; trailed BTC, AVAX, LTC (BE).

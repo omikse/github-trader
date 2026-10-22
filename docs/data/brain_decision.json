@@ -1,13 +1,30 @@
 {
-  "id": "2026-10-22T21:33:02Z",
-  "decided_at": "2026-10-22T21:33:02Z",
+  "id": "2026-10-22T21:34:06Z",
+  "decided_at": "2026-10-22T21:34:06Z",
   "model": "claude-opus-5-5",
-  "market_view": "Slow risk-off bleed continues: BTC 81.4k under h1/h4 emas, alts at 30d lows, small +0.5% hourly bounce as h1 RSI resets from ~20 to 32-40. Gold at a fresh 30d low with h4 RSI 23.",
-  "news": "No clear market-moving crypto news found; Polymarket prices a Fed hold on 28 Oct at ~93%.",
-  "watch_next": "BTC 4h close below 80.8k (shorts to TP) vs reclaim of 82.0k (cover, flip long). PAXG bounce into 4070 for the resting short.",
+  "market_view": "Unchanged from 21:33Z (engine snapshot same): slow crypto bleed, BTC 81.4k below h1/h4 emas, alts at 30d lows, gold at 30d low. Shorts held with profit-locked stops; PAXG bounce-short order already resting.",
+  "news": "Fed 28 Oct: reports (Mitrade 22 Oct) say economists unanimously expect a hold now and a December hike; October hike odds fading. Hawkish Fed backdrop fits risk-off.",
+  "watch_next": "BTC 4h close <80.8k vs reclaim 82.0k; PAXG fill at 4070; Fed hold price drifting to 0.97+ (consider selling early only if edge gone).",
   "actions": [
-    {"type": "entry_order", "symbol": "PAXGUSDT", "side": "short", "trigger": 4070, "stop": 4118, "take_profit": 3985, "risk_pct": 0.02, "expires_hours": 24,
-     "reason": "Gold at new 30d low (4027), d1 RSI 31, h4 RSI 23; short a relief bounce into h1 ema20 (~4068) rather than the low. Shorts collect +21% APR funding. ~1.8R.",
-     "invalidation": "PAXG 4h close above 4118 (back above prior 4h structure) = downtrend bounce is a reversal."}
+    {
+      "type": "predict",
+      "market": "2589812",
+      "outcome": "Yes",
+      "stake_pct": 0.05,
+      "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
+      "invalidation": "Hot data or Fed-speak before the blackout reviving October hike odds above ~15%."
+    },
+    {
+      "type": "entry_order",
+      "symbol": "PAXGUSDT",
+      "side": "short",
+      "trigger": 4070,
+      "stop": 4118,
+      "take_profit": 3985,
+      "risk_pct": 0.02,
+      "expires_hours": 24,
+      "reason": "Re-sent from 21:33Z decision in case the engine skipped it (ignore if already resting). Gold at new 30d low 4027, h4 RSI 23; short a relief bounce into h1 ema20 ~4068; shorts collect +21% APR funding. ~1.8R.",
+      "invalidation": "PAXG 4h close above 4118."
+    }
   ]
 }
