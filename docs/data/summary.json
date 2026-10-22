@@ -1,61 +1,59 @@
 {
- "updated": "2026-10-22T08:13:13Z",
+ "updated": "2026-10-22T08:21:13Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.8889,
- "equity_pln": 994.45,
- "return_pct": -0.55,
- "max_drawdown_pct": 2.45,
+ "equity_pln": 974.56,
+ "return_pct": -2.54,
+ "max_drawdown_pct": 2.62,
  "control_pln": 999.99,
  "control_trades": 0,
- "hodl_pln": 970.18,
+ "hodl_pln": 968.96,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00669071,
    "entry": 82375.28,
-   "mark": 82068.6,
-   "upnl": 2.0519069427999534,
+   "mark": 81965.5,
+   "upnl": 2.741719143799992,
    "stop": 83250.0,
    "tp": 80500.0,
    "liq": null,
    "leverage": null,
    "opened": 1792651560000,
-   "upnl_pln": 7.98
+   "upnl_pln": 10.66
   },
   {
    "symbol": "AVAXUSDT",
    "side": "short",
    "size": 18.741,
    "entry": 9.297210000000002,
-   "mark": 9.191,
-   "upnl": 1.9904816100000151,
+   "mark": 9.208,
+   "upnl": 1.671884610000025,
    "stop": 9.56,
    "tp": 8.75,
    "liq": null,
    "leverage": null,
    "opened": 1792654920000,
-   "upnl_pln": 7.74
-  },
-  {
-   "symbol": "DOTUSDT",
-   "side": "short",
-   "size": 155.725,
-   "entry": 1.1046685,
-   "mark": 1.103,
-   "upnl": 0.2598271625000113,
-   "stop": 1.136,
-   "tp": 1.04,
-   "liq": null,
-   "leverage": null,
-   "opened": 1792656120000,
-   "upnl_pln": 1.01
+   "upnl_pln": 6.5
   }
  ],
  "closed_trades": [
+  {
+   "id": "t8",
+   "symbol": "DOTUSDT",
+   "side": "short",
+   "qty": 155.725,
+   "entry": 1.1046685,
+   "exit": 1.136568,
+   "pnl": -5.1595,
+   "time": 1792657080000,
+   "why": "stop",
+   "pnl_pln": -20.06
+  },
   {
    "id": "t5",
    "symbol": "XRPUSDT",
@@ -69,7 +67,7 @@
    "pnl_pln": -20.99
   }
  ],
- "trade_count": 1,
+ "trade_count": 2,
  "win_rate_pct": 0.0,
  "brain_calls_today": 4,
  "last_decision": {
@@ -132,7 +130,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 251.32116,
+ "cash_usd": 246.256264,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
