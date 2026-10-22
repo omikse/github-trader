@@ -1,6 +1,17 @@
 {
- "cash": 251.74233976027978,
- "positions": {},
+ "cash": 251.43920774997292,
+ "positions": {
+  "BTCUSDT": {
+   "side": "short",
+   "qty": 0.00669071,
+   "entry": 82375.28,
+   "stop": 83250.0,
+   "tp": 80500.0,
+   "opened": 1792651560000,
+   "entry_fee": 0.30313201030684,
+   "mark": 82464.9
+  }
+ },
  "closed": [
   {
    "id": "t5",
@@ -15,8 +26,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1792651573646,
- "next_id": 7,
+ "last_ms": 1792651993756,
+ "next_id": 8,
  "orders": [
   {
    "id": "o4",
@@ -32,17 +43,17 @@
    "note": "Weakest coin in the universe (-3.6% 24h, below h1/h4 ema20/50/200, h4 RSI 39). Breakdown below 24h low 9.339 should extend toward 8.75 (~2.1R)."
   },
   {
-   "id": "o6",
-   "symbol": "BTCUSDT",
+   "id": "o7",
+   "symbol": "DOTUSDT",
    "side": "short",
-   "qty": 0.00669071,
-   "trigger": 82400,
+   "qty": 155.725,
+   "trigger": 1.105,
    "direction": "below",
-   "stop": 83250.0,
-   "tp": 80500.0,
-   "placed": 1792644719580,
-   "expires": 1792709519580,
-   "note": "Lower high at 84.8k then breakdown: a move below the 24h low 82,543 also loses h1 ema200 (82.15k) and h4 ema20/50, opening room toward 80.5k (~2.2R)."
+   "stop": 1.136,
+   "tp": 1.04,
+   "placed": 1792651993756,
+   "expires": 1792716793756,
+   "note": "One of the two weakest coins (-3.2% 24h, below h4 ema200 1.174, h4 RSI 43). Break of 24h low 1.1134 continues the alt bleed toward 1.04 (~2.1R)."
   }
  ],
  "order_events": [
@@ -72,6 +83,15 @@
    "trigger": 5.46,
    "time": 1792644719580,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o6",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 82400,
+   "time": 1792651560000,
+   "detail": "filled at 82375.3"
   }
  ]
 }

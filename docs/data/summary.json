@@ -1,17 +1,32 @@
 {
- "updated": "2026-10-22T06:46:13Z",
+ "updated": "2026-10-22T06:53:13Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.8889,
- "equity_pln": 979.0,
- "return_pct": -2.1,
- "max_drawdown_pct": 2.1,
+ "equity_pln": 975.49,
+ "return_pct": -2.45,
+ "max_drawdown_pct": 2.45,
  "control_pln": 999.99,
  "control_trades": 0,
- "hodl_pln": 974.27,
- "positions": [],
+ "hodl_pln": 974.87,
+ "positions": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "size": 0.00669071,
+   "entry": 82375.28,
+   "mark": 82464.9,
+   "upnl": -0.5996214301999688,
+   "stop": 83250.0,
+   "tp": 80500.0,
+   "liq": null,
+   "leverage": null,
+   "opened": 1792651560000,
+   "upnl_pln": -2.33
+  }
+ ],
  "closed_trades": [
   {
    "id": "t5",
@@ -28,64 +43,68 @@
  ],
  "trade_count": 1,
  "win_rate_pct": 0.0,
- "brain_calls_today": 3,
+ "brain_calls_today": 4,
  "last_decision": {
-  "time": "2026-10-22T04:51:59Z",
+  "time": "2026-10-22T06:53:13Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-22T04:51:21Z",
+  "decided_at": "2026-10-22T06:52:47Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 251.74,
-  "equity_pln": 979.0,
+  "equity_usd": 250.84,
+  "equity_pln": 975.49,
   "events": [
    {
-    "type": "position_closed",
-    "id": "t5",
-    "symbol": "XRPUSDT",
-    "side": "long",
-    "qty": 239.268,
-    "entry": 1.3584074000000002,
-    "exit": 1.337331,
-    "pnl": -5.3977,
-    "time": 1792639980000,
-    "why": "stop"
-   }
-  ],
-  "market_view": "Risk-off drift continues: BTC 82.7k (rejected at 84.8k, now below h1 ema20/50, h1 RSI 37) sitting just above the 24h low 82.54k and h1 ema200 82.15k. Alts weaker than BTC and pressing 24h lows (AVAX, DOT, ADA, DOGE h1 RSI 28-33). XRP long stopped out (-5.40 USD). Flat book; data ~7 min old, engine fine.",
-  "watch_next": "Did BTC lose 82.4k / h1 ema200 (short trigger) or bounce back above h1 ema20 ~83.6k (then cancel short idea)? AVAX breakdown below 9.3. If shorts fill, trail stops behind h1 lower highs.",
-  "news": "No clear market-moving crypto/macro headline found for the last 24h.",
-  "actions": [
-   {
-    "type": "cancel_order",
+    "type": "order_cancelled",
+    "id": "o1",
     "symbol": "BTCUSDT",
-    "reason": "Breakout idea at 84.9k is stale: BTC rejected there and slid 2.5%; replacing with a breakdown short.",
-    "result": "done",
-    "detail": "cancelled 1 order(s)"
+    "side": "long",
+    "status": "cancelled",
+    "trigger": 84900,
+    "time": 1792644719580,
+    "detail": "cancelled by the brain"
    },
    {
-    "type": "cancel_order",
+    "type": "order_cancelled",
+    "id": "o3",
     "symbol": "NEARUSDT",
-    "reason": "NEAR fell from 5.4 to 5.06 (-1.2% 1h); breakout at 5.46 is 8% away and the momentum thesis is gone.",
-    "result": "done",
-    "detail": "cancelled 1 order(s)"
+    "side": "long",
+    "status": "cancelled",
+    "trigger": 5.46,
+    "time": 1792644719580,
+    "detail": "cancelled by the brain"
    },
    {
-    "type": "entry_order",
+    "type": "order_filled",
+    "id": "o6",
     "symbol": "BTCUSDT",
     "side": "short",
+    "status": "filled",
     "trigger": 82400,
-    "stop": 83250,
-    "take_profit": 80500,
-    "risk_pct": 0.025,
+    "time": 1792651560000,
+    "detail": "filled at 82375.3"
+   }
+  ],
+  "market_view": "Slow risk-off grind: BTC 82.45k sits on its 24h low (h1 RSI 34, below h1 ema20/50, h4 ema200 83.45k overhead), alts weaker and pinned to 24h lows (AVAX/DOT -3.2% 24h, DOGE h1 RSI 26). Flat book; BTC and AVAX breakdown shorts are 0.1-0.3% from triggering. Data ~8 min old, engine fine.",
+  "watch_next": "Did BTC lose 82.4k and the h1 ema200 (82.15k) with follow-through, or reclaim 83k (then cancel shorts)? Trail any filled short behind lower highs; watch DOT/AVAX breakdowns.",
+  "news": "No clear market-moving crypto/macro headline found in a quick search.",
+  "actions": [
+   {
+    "type": "entry_order",
+    "symbol": "DOTUSDT",
+    "side": "short",
+    "trigger": 1.105,
+    "stop": 1.136,
+    "take_profit": 1.04,
+    "risk_pct": 0.02,
     "expires_hours": 18,
-    "reason": "Lower high at 84.8k then breakdown: a move below the 24h low 82,543 also loses h1 ema200 (82.15k) and h4 ema20/50, opening room toward 80.5k (~2.2R).",
-    "invalidation": "BTC reclaims 83.25k (back above h1 ema50) after triggering.",
+    "reason": "One of the two weakest coins (-3.2% 24h, below h4 ema200 1.174, h4 RSI 43). Break of 24h low 1.1134 continues the alt bleed toward 1.04 (~2.1R).",
+    "invalidation": "Reclaim of 1.136 / BTC back above 83k.",
     "result": "done",
-    "detail": "short 0.00669071 when price goes below 82400 (risk 2.5%, stop 83250.0, target 80500.0, expires in 18h) ok"
+    "detail": "short 155.725 when price goes below 1.105 (risk 2.0%, stop 1.136, target 1.04, expires in 18h) ok"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 251.74234,
+ "cash_usd": 251.439208,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -124,15 +143,15 @@
    "note": "Weakest coin in the universe (-3.6% 24h, below h1/h4 ema20/50/200, h4 RSI 39). Breakdown below 24h low 9.339 should extend toward 8.75 (~2.1R)."
   },
   {
-   "symbol": "BTCUSDT",
+   "symbol": "DOTUSDT",
    "side": "short",
-   "trigger": 82400,
+   "trigger": 1.105,
    "direction": "below",
-   "stop": 83250.0,
-   "tp": 80500.0,
-   "qty": 0.00669071,
-   "expires": 1792709519580,
-   "note": "Lower high at 84.8k then breakdown: a move below the 24h low 82,543 also loses h1 ema200 (82.15k) and h4 ema20/50, opening room toward 80.5k (~2.2R)."
+   "stop": 1.136,
+   "tp": 1.04,
+   "qty": 155.725,
+   "expires": 1792716793756,
+   "note": "One of the two weakest coins (-3.2% 24h, below h4 ema200 1.174, h4 RSI 43). Break of 24h low 1.1134 continues the alt bleed toward 1.04 (~2.1R)."
   }
  ],
  "balance_warning": false
