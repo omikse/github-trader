@@ -9,7 +9,7 @@
    "tp": 80500.0,
    "opened": 1792651560000,
    "entry_fee": 0.30313201030684,
-   "mark": 81676.6
+   "mark": 81731.0
   },
   "AVAXUSDT": {
    "side": "short",
@@ -19,7 +19,7 @@
    "tp": 8.75,
    "opened": 1792654920000,
    "entry_fee": 0.09583145693550002,
-   "mark": 9.18
+   "mark": 9.176
   },
   "LTCUSDT": {
    "side": "short",
@@ -29,7 +29,7 @@
    "tp": 57.0,
    "opened": 1792674540000,
    "entry_fee": 0.15339954460151753,
-   "mark": 59.01
+   "mark": 59.03
   }
  },
  "closed": [
@@ -57,7 +57,7 @@
   }
  ],
  "fills": [],
- "last_ms": 1792675350080,
+ "last_ms": 1792675470167,
  "next_id": 12,
  "orders": [
   {
@@ -72,19 +72,6 @@
    "placed": 1792659073761,
    "expires": 1792702273761,
    "note": "Sell the oversold bounce rather than chase: ETH lost its 24h low and the h1 ema200 (2427); a retest of 2440 (prior breakdown area, under h1 ema20 2452) is a lower-high short toward 2350 (~2.8R)."
-  },
-  {
-   "id": "o10",
-   "symbol": "ADAUSDT",
-   "side": "short",
-   "qty": 1013.94,
-   "trigger": 0.2138,
-   "direction": "below",
-   "stop": 0.2185,
-   "tp": 0.205,
-   "placed": 1792666360439,
-   "expires": 1792709560439,
-   "note": "ADA is among the weakest (-3.9% 24h, below all h1/h4 EMAs, h4 RSI 40). A break of the 24h low 0.2141 continues the alt bleed toward 0.205 (~1.9R); stop above h1 ema20 area."
   }
  ],
  "order_events": [
@@ -150,6 +137,15 @@
    "trigger": 58.85,
    "time": 1792674540000,
    "detail": "filled at 58.8323"
+  },
+  {
+   "id": "o10",
+   "symbol": "ADAUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 0.2138,
+   "time": 1792675470167,
+   "detail": "cancelled by the brain"
   }
  ]
 }
