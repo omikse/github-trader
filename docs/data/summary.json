@@ -1,46 +1,46 @@
 {
- "updated": "2026-10-22T21:29:18Z",
+ "updated": "2026-10-22T21:34:19Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.8886,
- "equity_pln": 993.93,
- "return_pct": -0.6,
+ "equity_pln": 996.03,
+ "return_pct": -0.39,
  "max_drawdown_pct": 3.16,
- "control_pln": 1015.48,
+ "control_pln": 1015.84,
  "control_trades": 0,
- "hodl_pln": 962.12,
+ "hodl_pln": 962.0,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00669071,
    "entry": 82375.28,
-   "mark": 81392.9,
-   "upnl": 6.572819689800031,
+   "mark": 81382.3,
+   "upnl": 6.643741215799973,
    "stop": 81700.0,
    "tp": 80500.0,
    "liq": null,
    "leverage": null,
    "opened": 1792651560000,
    "reason": "",
-   "upnl_pln": 25.56
+   "upnl_pln": 25.83
   },
   {
    "symbol": "AVAXUSDT",
    "side": "short",
    "size": 18.741,
    "entry": 9.297210000000002,
-   "mark": 9.135,
-   "upnl": 3.0399776100000326,
+   "mark": 9.114,
+   "upnl": 3.433538610000014,
    "stop": 9.19,
    "tp": 8.75,
    "liq": null,
    "leverage": null,
    "opened": 1792654920000,
    "reason": "",
-   "upnl_pln": 11.82
+   "upnl_pln": 13.35
   }
  ],
  "closed_trades": [
@@ -85,41 +85,62 @@
  ],
  "trade_count": 3,
  "win_rate_pct": 0.0,
- "brain_calls_today": 13,
+ "brain_calls_today": 14,
  "last_decision": {
-  "time": "2026-10-22T20:51:47Z",
+  "time": "2026-10-22T21:34:19Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-22T20:51:22Z",
+  "decided_at": "2026-10-22T21:33:02Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 261.22,
-  "equity_pln": 1015.8,
-  "events": [],
-  "market_view": "Risk-off grind continues: BTC 81.2k near 24h low 80.8k, alts and gold at/through 30d lows, but h1 RSI 20-30 everywhere for ~14h so a squeeze is the main risk. Holding three free-trade shorts and trailing stops behind completed 4h highs.",
-  "watch_next": "BTC 4h close below 80.8k (shorts run to TP) vs reclaim of 82.0k (cover, look for longs); AVAX break of 9.046 30d low; PAXG bounce into 4070-4100 for a short.",
-  "news": "",
-  "actions": [
+  "equity_usd": 256.14,
+  "equity_pln": 996.03,
+  "events": [
    {
-    "type": "move_stop",
-    "symbol": "BTCUSDT",
-    "stop": 81700,
-    "take_profit": 80500,
-    "reason": "Trail above last completed 4h high 81,666; locks more profit while leaving room for noise (h1 ATR ~408).",
-    "result": "done",
-    "detail": "stop 81700.0, target 80500.0"
+    "type": "order_expired",
+    "id": "o9",
+    "symbol": "ETHUSDT",
+    "side": "short",
+    "status": "expired",
+    "trigger": 2440,
+    "time": 1792702320000,
+    "detail": ""
    },
    {
-    "type": "move_stop",
-    "symbol": "AVAXUSDT",
-    "stop": 9.19,
-    "take_profit": 8.75,
-    "reason": "Trail just above last completed 4h high 9.187; price sitting on 30d low 9.046.",
+    "type": "position_closed",
+    "id": "t12",
+    "symbol": "LTCUSDT",
+    "side": "short",
+    "qty": 4.74073,
+    "entry": 58.832345000000004,
+    "exit": 58.8294,
+    "pnl": -0.2928,
+    "time": 1792703820000,
+    "why": "stop",
+    "opened": 1792674540000,
+    "reason": ""
+   }
+  ],
+  "market_view": "Slow risk-off bleed continues: BTC 81.4k under h1/h4 emas, alts at 30d lows, small +0.5% hourly bounce as h1 RSI resets from ~20 to 32-40. Gold at a fresh 30d low with h4 RSI 23.",
+  "watch_next": "BTC 4h close below 80.8k (shorts to TP) vs reclaim of 82.0k (cover, flip long). PAXG bounce into 4070 for the resting short.",
+  "news": "No clear market-moving crypto news found; Polymarket prices a Fed hold on 28 Oct at ~93%.",
+  "actions": [
+   {
+    "type": "entry_order",
+    "symbol": "PAXGUSDT",
+    "side": "short",
+    "trigger": 4070,
+    "stop": 4118,
+    "take_profit": 3985,
+    "risk_pct": 0.02,
+    "expires_hours": 24,
+    "reason": "Gold at new 30d low (4027), d1 RSI 31, h4 RSI 23; short a relief bounce into h1 ema20 (~4068) rather than the low. Shorts collect +21% APR funding. ~1.8R.",
+    "invalidation": "PAXG 4h close above 4118 (back above prior 4h structure) = downtrend bounce is a reversal.",
     "result": "done",
-    "detail": "stop 9.19, target 8.75"
+    "detail": "short 0.09762 when price goes above 4070 (risk 2.0%, stop 4118.0, target 3985.0, expires in 24h) ok"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 246.0632,
+ "cash_usd": 246.063273,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -150,7 +171,19 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [],
+ "orders": [
+  {
+   "symbol": "PAXGUSDT",
+   "side": "short",
+   "trigger": 4070,
+   "direction": "above",
+   "stop": 4118.0,
+   "tp": 3985.0,
+   "qty": 0.09762,
+   "expires": 1792791259103,
+   "note": "Gold at new 30d low (4027), d1 RSI 31, h4 RSI 23; short a relief bounce into h1 ema20 (~4068) rather than the low. Shorts collect +21% APR funding. ~1.8R."
+  }
+ ],
  "balance_warning": false,
  "other_value_usd": 0,
  "predictions": [],
