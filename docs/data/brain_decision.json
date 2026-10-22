@@ -1,11 +1,13 @@
 {
-  "id": "2026-10-22T14:51:50Z",
-  "decided_at": "2026-10-22T14:51:50Z",
+  "id": "2026-10-22T16:51:48Z",
+  "decided_at": "2026-10-22T16:51:48Z",
   "model": "claude-opus-5-5",
-  "market_view": "Slow risk-off grind continues: BTC printed a new 24h low 81,275 and sits 81.75k under h1 ema20/50 and h4 ema200; alts at/near lows, h1 RSI ~30 (oversold but no reversal structure). Shorts on BTC/AVAX in profit, LTC slightly red but below its stop structure.",
-  "news": "No clear market-moving headline found; drift looks flow-driven.",
-  "watch_next": "BTC 4h close below 81.27k (leg to 80.5k, trail stops) vs reclaim of 82.5k h1 ema20 (bleed over, tighten/close shorts). ETH retest short at 2440 fill. LTC: breakeven once <58.3, close if >59.8.",
+  "market_view": "Risk-off bleed continues: BTC 81.37k near 24h low 81.25k, below h1/h4 EMAs; alts (AVAX, ADA, SUI, LTC, ETH) weaker. h1 RSI ~27 everywhere = stretched, so protect shorts rather than add.",
+  "news": "",
+  "watch_next": "BTC 4h close below 81.25k (let shorts run, trail) vs reclaim of 82.3k (bleed over, shorts likely stopped, look for longs in PEPE/NEAR). ETH retest order at 2440 before 20:51Z expiry.",
   "actions": [
-    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 82100, "take_profit": 80500, "reason": "Trail above the latest completed 4h high 81,986 (+~0.3 ATR buffer); locks ~0.33% of entry while giving the grind room."}
+    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 82000, "take_profit": 80500, "reason": "Trail above last completed 4h high 81,986; locks profit on the short."},
+    {"type": "move_stop", "symbol": "AVAXUSDT", "stop": 9.26, "take_profit": 8.75, "reason": "Trail above completed 4h high 9.253; locks small profit."},
+    {"type": "move_stop", "symbol": "LTCUSDT", "stop": 59.55, "take_profit": 57.0, "reason": "Trail above completed 4h high 59.51; cuts risk to ~1.3% of equity."}
   ]
 }
