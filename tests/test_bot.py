@@ -12,6 +12,8 @@ os.environ["DATA_DIR"] = tempfile.mkdtemp()
 from bot import config, guard, run  # noqa: E402
 from bot.paper import MINUTE, PaperExchange  # noqa: E402
 
+run.pred.Polymarket = lambda: FakePM([])  # tests never touch the real Polymarket
+
 INST = {"qty_step": 0.00001, "min_qty": 0.0, "min_notional": 5, "tick": 0.1}
 BASE = {"BTCUSDT": 85000.0, "ETHUSDT": 3000.0, "SOLUSDT": 108.0, "XRPUSDT": 2.4, "DOGEUSDT": 0.2,
         "ADAUSDT": 0.6, "AVAXUSDT": 20.0, "LINKUSDT": 15.0, "SUIUSDT": 3.0, "PEPEUSDT": 0.00001, "WIFUSDT": 0.8,
@@ -52,6 +54,40 @@ class FakeKraken:
     def ticker(self, sym):
         last = self.p(sym, self.now_ms)
         return {"last": last, "bid": last * 0.9999, "ask": last * 1.0001}
+
+    def funding_rates(self):
+        return {s: 2e-5 for s in BASE}   # 0.002% per hour = 17.5% a year, longs pay shorts
+
+    def cash_rate(self):
+        return 0.04
+
+
+def gamma(mid, q, yes_bid, yes_ask, days, closed=False, final=None, liquidity=50_000):
+    """A raw Gamma API market, as the probe saw them."""
+    end = datetime.fromtimestamp((T0_MS + days * 86_400_000) / 1000, timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    prices = [final, 1 - final] if final is not None else [(yes_bid + yes_ask) / 2, 1 - (yes_bid + yes_ask) / 2]
+    return {"id": mid, "question": q, "slug": f"slug-{mid}", "endDate": end, "outcomes": '["Yes", "No"]',
+            "outcomePrices": json.dumps([str(x) for x in prices]), "bestBid": yes_bid, "bestAsk": yes_ask,
+            "closed": closed, "active": not closed, "acceptingOrders": not closed, "liquidityNum": liquidity,
+            "volume24hr": 100_000, "orderMinSize": 5, "feesEnabled": False, "takerBaseFee": 0,
+            "umaResolutionStatus": "resolved" if closed else None}
+
+
+class FakePM:
+    def __init__(self, raw):
+        self.raw = {m["id"]: m for m in raw}
+
+    def set(self, m):
+        self.raw[m["id"]] = m
+
+    def top(self):
+        from bot.predictions import normalize
+        return [x for x in (normalize(m) for m in self.raw.values() if not m["closed"]) if x]
+
+    def get(self, key):
+        from bot.predictions import normalize
+        m = self.raw.get(str(key)) or next((m for m in self.raw.values() if m["slug"] == key), None)
+        return normalize(m) if m else None
 
 
 class FakeBrain:
@@ -274,6 +310,109 @@ def test_minute_ticks():
     # live recomputation in the browser: cash + open P/L must equal the reported equity
     live = s["cash_usd"] + sum(p["upnl"] for p in s["positions"])
     assert abs(live * s["fx_usd_pln"] - s["equity_pln"]) < 0.5, (live * s["fx_usd_pln"], s["equity_pln"])
+
+
+def test_carry_funding_and_interest():
+    """Real hourly funding: a perp long pays it, a carry trade earns it; idle cash earns interest."""
+    d = fresh_dir()
+    m = FakeKraken()
+    ex = PaperExchange(os.path.join(d, "x.json"), market=m, start_usd=1000, now_ms=T0_MS)
+    ex.set_market_rates(m.funding_rates(), 0.04)
+    m.now_ms = T0_MS
+    ex.market_order("SOLUSDT", "long", 1000 / m.p("SOLUSDT", T0_MS))    # 1,000 USD long, 1x
+    ex.carry_open("BTCUSDT", 500)                                        # 500 USD carry
+    assert abs(ex.s["income"]["carry"] + 500 * 0.003) < 1e-9             # opening cost charged
+    m.now_ms = ex.now_ms = T0_MS + 10 * 3_600_000                        # 10 hourly fundings
+    ex.advance()
+    assert abs(ex.s["income"]["funding"] - (-1000 * 2e-5 * 10)) < 0.02   # long paid ~0.2 USD
+    assert abs(ex.s["carry"]["BTCUSDT"]["earned"] - 500 * 2e-5 * 10) < 1e-9
+    idle = 1000 - 1000 * config.TAKER_FEE - 1.5 - 1000 / config.MAX_LEVERAGE - 500
+    assert abs(ex.s["income"]["interest"] - idle * 0.04 * 10 / 8760) < 0.002
+    rec = ex.carry_close("BTCUSDT")
+    assert abs(rec["pnl"] - (0.1 - 3.0)) < 1e-6                          # 10 h of funding does not pay 0.6% fees
+    print("carry 10h net", rec["pnl"], "interest", round(ex.s["income"]["interest"], 4))
+
+
+def test_prediction_lifecycle():
+    d = fresh_dir()
+    pm = FakePM([gamma("1", "Will X happen?", 0.40, 0.42, 5), gamma("2", "Will Y happen?", 0.70, 0.72, 5)])
+    ex = PaperExchange(os.path.join(d, "x.json"), market=FakeKraken(), start_usd=200, now_ms=T0_MS)
+    m1, m2 = pm.get("1"), pm.get("2")
+    r = ex.predict_buy(m1, "Yes", 10)
+    assert abs(r["price"] - 0.42) < 1e-9 and abs(ex.s["cash"] - 190) < 1e-9
+    assert abs(ex.predictions_value() - 10 / 0.42 * 0.40) < 1e-9            # valued at the bid
+    ex.predict_buy(m2, "No", 10)                                            # No costs 1 - yes_bid = 0.30
+    assert abs(ex.s["predictions"]["2"]["entry"] - 0.30) < 1e-9
+    pm.set(gamma("1", "Will X happen?", 0, 0, 5, closed=True, final=1.0))  # X happened
+    pm.set(gamma("2", "Will Y happen?", 0, 0, 5, closed=True, final=1.0))  # Y happened, our No loses
+    settled = ex.update_predictions({"1": pm.get("1"), "2": pm.get("2")})
+    res = {x["market"]: x for x in settled}
+    assert abs(res["1"]["pnl"] - (10 / 0.42 - 10)) < 1e-3 and res["1"]["why"] == "resolved win"
+    assert abs(res["2"]["pnl"] + 10) < 1e-3 and res["2"]["why"] == "resolved loss"
+    assert not ex.s["predictions"] and abs(ex.s["cash"] - (180 + 10 / 0.42)) < 1e-6
+    # guard
+    big = guard.check_predict({"outcome": "yes", "stake_pct": 0.5}, equity=200, market=pm.get("1"), open_cost=0,
+                              free_cash=200)
+    assert big[0] is False  # market is closed now
+    pm.set(gamma("3", "Z?", 0.5, 0.52, 3))
+    ok, why, o = guard.check_predict({"outcome": "No", "stake_pct": 0.5}, equity=200, market=pm.get("3"), open_cost=0,
+                                     free_cash=200)
+    assert ok and abs(o["stake"] - 200 * config.PRED_MAX_STAKE) < 1e-9     # capped at 8%
+    ok, why, o = guard.check_predict({"outcome": "No", "stake_pct": 0.08}, equity=200, market=pm.get("3"), open_cost=75,
+                                     free_cash=200)
+    assert ok and abs(o["stake"] - 5) < 1e-9 and "total cap" in why       # 40% total cap leaves 5 USD
+    thin = FakePM([gamma("4", "thin?", 0.5, 0.52, 3, liquidity=500)]).get("4")
+    assert guard.check_predict({"outcome": "Yes"}, equity=200, market=thin, open_cost=0, free_cash=200)[0] is False
+
+
+def test_session_uses_everything():
+    """One account: a perp, a prediction and a carry trade from one decision; a resolution pays out; the
+    dashboard's live formula (cash + perp P/L + other_value) matches the reported equity."""
+    d = fresh_dir()
+    config.BRAIN_MODE = "session"
+    m = FakeKraken()
+    pm = FakePM([gamma("77", "Will the Fed hold rates?", 0.80, 0.82, 2), gamma("88", "Long shot?", 0.05, 0.06, 40)])
+    m.now_ms = T0_MS
+    run.main(now=T0, fx=3.88, market=m, pm=pm)
+    inp = json.load(open(os.path.join(d, "brain_input.json")))
+    qs = [x["market"] for x in inp["prediction_markets"]]
+    assert qs == ["77"], qs                                      # 88 ends after the experiment window
+    assert inp["markets"]["BTCUSDT"]["funding_apr_pct"] == 17.5 and inp["cash"]["interest_rate_pct"] == 4.0
+    t1 = T0 + timedelta(minutes=5)
+    btc = m.p("BTCUSDT", int(t1.timestamp() * 1000))
+    write_decision(d, "x1", t1, [
+        {"type": "predict", "market": "77", "outcome": "Yes", "stake_pct": 0.05, "reason": "Fed guidance"},
+        {"type": "predict", "market": "slug-88", "outcome": "No", "stake_pct": 0.05, "reason": "by slug"},
+        {"type": "carry_open", "symbol": "ETHUSDT", "size_pct": 0.3, "reason": "funding 17%/yr"},
+        {"type": "carry_open", "symbol": "PEPEUSDT", "size_pct": 0.5, "reason": "too big"},
+        {"type": "open", "symbol": "BTCUSDT", "side": "long", "stop": btc * 0.97, "reason": "trend"}])
+    m.now_ms = int(t1.timestamp() * 1000)
+    run.main(now=t1, fx=3.88, market=m, pm=pm)
+    acts = journal(d)[-1]["actions"]
+    res = [(x["type"], x.get("symbol") or x.get("market"), x["result"]) for x in acts]
+    assert ("predict", "77", "done") in res and ("predict", "88", "done") in res, res
+    assert ("carry_open", "ETHUSDT", "done") in res and ("open", "BTCUSDT", "done") in res, res
+    pepe = next(x for x in acts if x.get("symbol") == "PEPEUSDT")
+    assert pepe["result"] == "done" and "cut" in pepe["detail"], pepe     # cut to the 60% total cap
+    for k in range(2, 14):                                                   # an hour of minute ticks
+        t = T0 + timedelta(minutes=5 * k)
+        m.now_ms = int(t.timestamp() * 1000)
+        run.main(now=t, fx=3.88, market=m, pm=pm, light=(k % 3 != 0))
+    pm.set(gamma("77", "Will the Fed hold rates?", 0, 0, 2, closed=True, final=1.0))
+    t = T0 + timedelta(minutes=75)
+    m.now_ms = int(t.timestamp() * 1000)
+    run.main(now=t, fx=3.88, market=m, pm=pm)
+    st = json.load(open(os.path.join(d, "state.json")))
+    assert any(e["type"] == "prediction_settled" and e["why"] == "resolved win" for e in st["pending_events"])
+    s = json.load(open(os.path.join(d, "summary.json")))
+    assert s["pred_closed"][0]["market"] == "77" and s["pred_closed"][0]["pnl"] > 0
+    assert len(s["carry"]) == 2 and s["income_pln"]["carry"] < 0          # 1 h of funding < opening costs, honestly
+    assert json.load(open(os.path.join(d, "exchange.json")))["income"]["interest"] > 0   # tiny over 70 minutes
+    live = s["cash_usd"] + sum(p["upnl"] for p in s["positions"]) + s["other_value_usd"]
+    assert abs(live * s["fx_usd_pln"] - s["equity_pln"]) < 0.5, (live * s["fx_usd_pln"], s["equity_pln"])
+    inp = json.load(open(os.path.join(d, "brain_input.json")))
+    assert inp["predictions"][0]["market"] == "88" and inp["side_track_record"]["predictions"]["wins"] == 1
+    print("everything:", {k: s[k] for k in ("equity_pln", "income_pln")}, "pred pnl", s["pred_closed"][0]["pnl_pln"])
 
 
 if __name__ == "__main__":

@@ -33,6 +33,11 @@ MAX_STOP_DIST = _f("MAX_STOP_DIST", "0.12")       # and at most 12%
 DAILY_LOSS_LIMIT = _f("DAILY_LOSS_LIMIT", "0.20") # -20% in a UTC day: close all, pause until tomorrow
 KILL_DRAWDOWN = _f("KILL_DRAWDOWN", "0.50")       # -50% from peak: close all, stop for good
 
+# --- Predictions and carry (same account) ------------------------------------------
+PRED_MAX_STAKE = _f("PRED_MAX_STAKE", "0.08")    # one prediction stake <= 8% of equity (it is the max loss)
+PRED_MAX_TOTAL = _f("PRED_MAX_TOTAL", "0.40")    # all open predictions together <= 40% of equity
+CARRY_MAX_TOTAL = _f("CARRY_MAX_TOTAL", "0.60")  # all carry trades together <= 60% of equity
+
 # --- Costs (taker fee charged by the paper exchange and the control bot) ----------
 TAKER_FEE = _f("TAKER_FEE", "0.00055")
 

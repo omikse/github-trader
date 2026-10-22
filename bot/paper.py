@@ -9,7 +9,13 @@ What is simulated, and how:
   so a stop that would have fired between runs fires here too. A candle that opens beyond the
   stop (a gap) fills at the open, which is worse. If stop and target sit in the same candle,
   the stop is assumed to hit first (pessimistic).
-- Funding: every 8 hours (00, 08, 16 UTC) longs pay and shorts receive FUNDING_RATE of position size.
+- Funding: every hour, at Kraken Futures' REAL current rate for that coin (positive: longs pay shorts).
+- Carry trades: buy the coin and short the same amount of its perpetual future. Price moves cancel out;
+  the position earns (or pays) the hourly funding on its size. Costs CARRY_COST_PER_SIDE of the size to
+  open and again to close (spot maker fee + futures taker fee). The size is locked capital.
+- Prediction shares (Polymarket): bought at the live ask, valued at the live bid, sold at the bid,
+  or paid out at 1 or 0 when the market resolves. The stake is spent from cash.
+- Interest: cash that is not locked (not perp margin, not carry capital) earns the average US Treasury bill rate.
 - Liquidation: cross margin. If equity at the worst price of a minute drops to the maintenance
   margin (MAINT_MARGIN of total position size), every position is closed at that price.
 - Resting entry orders: a buy/sell that triggers when the price reaches a level (above the price at
@@ -34,7 +40,12 @@ PAIRS = {"BTCUSDT": "XBTUSD", "ETHUSDT": "ETHUSD", "SOLUSDT": "SOLUSD", "XRPUSDT
          "EURUSDT": "EURUSD"}    # the euro against the dollar
 SLIPPAGE = 0.0003
 STOP_SLIPPAGE = 0.0005
-FUNDING_RATE = 0.0001
+FUNDING_RATE = 0.0001 / 8      # per hour; only used when Kraken Futures has no rate for a coin
+CARRY_COST_PER_SIDE = 0.0025 + 0.0005  # Kraken spot maker 0.25% + futures taker 0.05%, each way
+HOUR = 3_600_000
+YEAR = 365 * 24 * HOUR
+FUTURES = "https://futures.kraken.com/derivatives/api/v3/tickers"
+TREASURY = "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/avg_interest_rates"
 MAINT_MARGIN = 0.005
 MINUTE = 60_000
 
@@ -84,6 +95,24 @@ class Kraken:
         t = self._first(self._get("Ticker", {"pair": PAIRS[symbol]}))
         return {"last": float(t["c"][0]), "ask": float(t["a"][0]), "bid": float(t["b"][0])}
 
+    def funding_rates(self):
+        """Current hourly funding rate (fraction of position size) per symbol, from Kraken Futures."""
+        r = self.http.get(FUTURES, timeout=15).json()
+        by_sym = {t["symbol"].upper(): t for t in r.get("tickers", []) if t.get("tag") == "perpetual"}
+        out = {}
+        for sym in PAIRS:
+            base = sym[:-4]
+            t = by_sym.get(f"PF_{'XBT' if base == 'BTC' else base}USD")
+            if t and t.get("relativeFundingRate") is not None:
+                out[sym] = float(t["relativeFundingRate"])
+        return out
+
+    def cash_rate(self):
+        """Average interest rate on US Treasury bills (latest month), as a fraction per year."""
+        r = self.http.get(TREASURY, params={"filter": "security_desc:eq:Treasury Bills", "sort": "-record_date",
+                                            "page[size]": 1}, timeout=15).json()
+        return float(r["data"][0]["avg_interest_rate_amt"]) / 100
+
 
 class PaperExchange:
     def __init__(self, state_path, market=None, start_usd=None, now_ms=None):
@@ -99,8 +128,10 @@ class PaperExchange:
             self.s = {"cash": start_usd, "positions": {}, "closed": [], "fills": [],
                       "last_ms": self.now_ms, "next_id": 1}
         if self.s is not None:
-            self.s.setdefault("orders", [])
-            self.s.setdefault("order_events", [])
+            for k, v in (("orders", []), ("order_events", []), ("funding_rates", {}), ("carry", {}),
+                         ("carry_closed", []), ("predictions", {}), ("pred_closed", []), ("cash_rate", 0.0387),
+                         ("income", {"funding": 0.0, "carry": 0.0, "interest": 0.0})):
+                self.s.setdefault(k, v)
 
     @property
     def ready(self):
@@ -116,8 +147,17 @@ class PaperExchange:
     def ticker(self, symbol):
         t = self.market.ticker(symbol)
         self._tick_cache[symbol] = t
-        return {"last": t["last"], "mark": t["last"], "funding_rate": FUNDING_RATE,
+        return {"last": t["last"], "mark": t["last"], "funding_rate": self.funding_rate(symbol),
                 "open_interest": None, "change_24h": None}
+
+    def funding_rate(self, symbol):
+        return self.s["funding_rates"].get(symbol, FUNDING_RATE) if self.s else FUNDING_RATE
+
+    def set_market_rates(self, funding=None, cash_rate=None):
+        if funding:
+            self.s["funding_rates"].update(funding)
+        if cash_rate is not None:
+            self.s["cash_rate"] = cash_rate
 
     def _quote(self, symbol):
         return self._tick_cache.get(symbol) or self.market.ticker(symbol)
@@ -130,7 +170,7 @@ class PaperExchange:
     # -- replay the minutes since the last run -------------------------------------------
     def advance(self):
         """Apply every 1-minute candle since the last run: stops, targets, funding, liquidation."""
-        start = self.s["last_ms"]
+        start = first = self.s["last_ms"]
         watch = set(self.s["positions"]) | {o["symbol"] for o in self.s["orders"]}
         if watch:
             candles = {}
@@ -150,15 +190,37 @@ class PaperExchange:
                 self._check_liquidation(bars)
                 self._check_orders(bars, t)
             self._funding(start, self.now_ms)
+        else:
+            self._funding(start, self.now_ms)
+        self._interest(first, self.now_ms)
         self.s["last_ms"] = self.now_ms
 
     def _funding(self, a, b):
-        period = 8 * 3600_000
-        for k in range(a // period + 1, b // period + 1):
-            for p in self.s["positions"].values():
-                px = p.get("mark", p["entry"])
-                cost = p["qty"] * px * FUNDING_RATE
-                self.s["cash"] += -cost if p["side"] == "long" else cost
+        """Hourly funding at each full hour in (a, b]: perps pay or receive, carry trades (short perp) receive."""
+        for _ in range(a // HOUR + 1, b // HOUR + 1):
+            for sym, p in self.s["positions"].items():
+                flow = p["qty"] * p.get("mark", p["entry"]) * self.funding_rate(sym)
+                flow = -flow if p["side"] == "long" else flow
+                self.s["cash"] += flow
+                self.s["income"]["funding"] += flow
+            for sym, c in self.s["carry"].items():
+                flow = c["notional"] * self.funding_rate(sym)
+                self.s["cash"] += flow
+                c["earned"] += flow
+                self.s["income"]["carry"] += flow
+
+    def locked(self):
+        """Capital that is not idle: perp margin at the leverage cap, plus carry capital."""
+        margin = sum(p["qty"] * p.get("mark", p["entry"]) for p in self.s["positions"].values()) / config.MAX_LEVERAGE
+        return margin + sum(c["notional"] for c in self.s["carry"].values())
+
+    def _interest(self, a, b):
+        if b <= a:
+            return
+        idle = max(0.0, self.s["cash"] - self.locked())
+        x = idle * self.s["cash_rate"] * (b - a) / YEAR
+        self.s["cash"] += x
+        self.s["income"]["interest"] += x
 
     def _check_exits(self, sym, bar):
         p = self.s["positions"][sym]
@@ -189,7 +251,8 @@ class PaperExchange:
             px = (bar["l"] if p["side"] == "long" else bar["h"]) if bar else p.get("mark", p["entry"])
             worst[sym] = px
             notional += p["qty"] * px
-        eq = self.s["cash"] + sum(self._upnl(p, worst[s]) for s, p in pos.items())
+        eq = self.s["cash"] - sum(c["notional"] for c in self.s["carry"].values()) \
+            + sum(self._upnl(p, worst[s]) for s, p in pos.items())
         if eq <= notional * MAINT_MARGIN:
             t = max((b["t"] for b in bars.values() if b), default=self.now_ms)
             for sym in list(pos):
@@ -266,7 +329,115 @@ class PaperExchange:
         for sym, p in self.s["positions"].items():
             q = self._quote(sym)
             eq += self._upnl(p, q["bid"] if p["side"] == "long" else q["ask"])
+        eq += self.predictions_value()
         return {"equity": eq, "coins": {"USD": self.s["cash"]}}
+
+    # -- carry trades -----------------------------------------------------------------------
+    def carry_open(self, symbol, notional, note=""):
+        if symbol in self.s["carry"]:
+            raise ExchangeError(f"already running a carry trade on {symbol}")
+        cost = notional * CARRY_COST_PER_SIDE
+        self.s["cash"] -= cost
+        self.s["income"]["carry"] -= cost
+        self.s["carry"][symbol] = {"notional": notional, "opened": self.now_ms, "earned": 0.0, "fees": cost,
+                                   "rate_at_open": self.funding_rate(symbol), "note": note}
+        return cost
+
+    def carry_close(self, symbol, why="manual close"):
+        c = self.s["carry"].pop(symbol, None)
+        if not c:
+            raise ExchangeError(f"no carry trade on {symbol}")
+        cost = c["notional"] * CARRY_COST_PER_SIDE
+        self.s["cash"] -= cost
+        self.s["income"]["carry"] -= cost
+        rec = {"id": f"c{self.s['next_id']}", "symbol": symbol, "notional": c["notional"], "opened": c["opened"],
+               "time": self.now_ms, "earned": round(c["earned"], 4), "fees": round(c["fees"] + cost, 4),
+               "pnl": round(c["earned"] - c["fees"] - cost, 4), "why": why, "reason": c.get("note", "")}
+        self.s["next_id"] += 1
+        self.s["carry_closed"].append(rec)
+        return rec
+
+    def carry_list(self):
+        out = []
+        for sym, c in self.s["carry"].items():
+            r = self.funding_rate(sym)
+            out.append({"symbol": sym, "notional": round(c["notional"], 2), "earned": round(c["earned"], 4),
+                        "fees": round(c["fees"], 4), "net_if_closed_now": round(c["earned"] - c["fees"] - c["notional"] * CARRY_COST_PER_SIDE, 4),
+                        "funding_pct_per_hour": round(r * 100, 5), "funding_apr_pct": round(r * 24 * 365 * 100, 1),
+                        "opened": c["opened"], "reason": c.get("note", "")})
+        return out
+
+    # -- prediction markets -------------------------------------------------------------------
+    def predictions_value(self):
+        return sum(p["shares"] * p["mark"] for p in self.s["predictions"].values())
+
+    def predict_buy(self, m, outcome, stake, note=""):
+        from .predictions import buy_price, fee
+        if m["id"] in self.s["predictions"]:
+            raise ExchangeError("already holding this market; sell it first")
+        px = buy_price(m, outcome)
+        if not px or not 0 < px < 1:
+            raise ExchangeError("no usable ask price")
+        shares = stake / px
+        f = fee(m, px, shares)
+        self.s["cash"] -= stake + f
+        self.s["predictions"][m["id"]] = {"question": m["question"], "outcome": outcome, "shares": shares,
+                                          "entry": px, "cost": stake + f, "mark": px, "end": m.get("end"),
+                                          "opened": self.now_ms, "note": note}
+        self._mark_prediction(m["id"], m)
+        return {"price": px, "shares": shares, "fee": f}
+
+    def predict_sell(self, market_id, m, why="sold"):
+        from .predictions import fee, sell_price
+        p = self.s["predictions"].get(market_id)
+        if not p:
+            raise ExchangeError("no position in this market")
+        px = sell_price(m, p["outcome"])
+        if px is None:
+            raise ExchangeError("no usable bid price")
+        f = fee(m, px, p["shares"])
+        return self._settle_prediction(market_id, px, why, f)
+
+    def _settle_prediction(self, market_id, px, why, f=0.0):
+        p = self.s["predictions"].pop(market_id)
+        proceeds = p["shares"] * px - f
+        self.s["cash"] += proceeds
+        rec = {"id": f"p{self.s['next_id']}", "market": market_id, "question": p["question"], "outcome": p["outcome"],
+               "shares": p["shares"], "entry": p["entry"], "exit": round(px, 4), "cost": round(p["cost"], 4),
+               "pnl": round(proceeds - p["cost"], 4), "time": self.now_ms, "opened": p["opened"], "why": why,
+               "reason": p.get("note", "")}
+        self.s["next_id"] += 1
+        self.s["pred_closed"].append(rec)
+        return rec
+
+    def _mark_prediction(self, market_id, m):
+        from .predictions import sell_price
+        p = self.s["predictions"][market_id]
+        px = sell_price(m, p["outcome"])
+        if px is not None:
+            p["mark"] = px
+        p["yes_bid"], p["yes_ask"] = m.get("yes_bid"), m.get("yes_ask")
+
+    def update_predictions(self, markets):
+        """markets: id -> normalized market. Marks open positions at the bid; pays out resolved markets."""
+        settled = []
+        for mid in list(self.s["predictions"]):
+            m = markets.get(mid)
+            if not m:
+                continue
+            p = self.s["predictions"][mid]
+            if m["resolved"] and m["final_yes"] is not None:
+                px = m["final_yes"] if p["outcome"] == "Yes" else 1 - m["final_yes"]
+                settled.append(self._settle_prediction(mid, px, "resolved " + ("win" if px > 0.5 else "loss")))
+            else:
+                self._mark_prediction(mid, m)
+        return settled
+
+    def prediction_list(self):
+        return [{"market": mid, **{k: p[k] for k in ("question", "outcome", "entry", "mark", "end", "opened")},
+                 "shares": round(p["shares"], 4), "cost": round(p["cost"], 4),
+                 "value": round(p["shares"] * p["mark"], 4), "pnl": round(p["shares"] * p["mark"] - p["cost"], 4),
+                 "reason": p.get("note", "")} for mid, p in self.s["predictions"].items()]
 
     def positions(self):
         out = []

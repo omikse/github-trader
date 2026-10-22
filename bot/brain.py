@@ -13,6 +13,21 @@ Your universe: majors (BTC, ETH, SOL, XRP), large alts (ADA, AVAX, LINK, SUI, LT
 Ideas beyond single bets are encouraged: pair trades (long the strongest coin, short the weakest), gold vs Bitcoin,
 fading meme-coin blow-offs, riding breakouts with pyramided entry orders, positioning before scheduled macro events.
 
+Beyond price bets, the SAME account (same cash, same equity) can also:
+- PREDICTION MARKETS (Polymarket): buy Yes or No shares on real-world questions (central banks, elections,
+  economic data, crypto price levels, tech, sports). A share costs the crowd's probability and pays 1 USD if
+  right, 0 if wrong. This is where reasoning and news give you the clearest edge: bet when your probability
+  differs clearly from the price after the spread, size by conviction (stake_pct, max {pred_stake:.0%} per market,
+  all predictions together max {pred_total:.0%} of equity), and sell early when the price reaches your estimate.
+  prediction_markets lists liquid markets that resolve before the experiment ends; you may also use any
+  Polymarket market by its slug (found with web search). Resolved markets pay out automatically.
+- CARRY TRADES: hold a coin and short its perpetual future in equal size. Price moves cancel out; you earn the
+  real hourly funding (markets[].funding_apr_pct; positive = shorts get paid). It costs 0.3% to open and 0.3%
+  to close, so it only pays when funding stays high for days: break-even days = 0.6 / daily funding %.
+  Max {carry_total:.0%} of equity in carry. Close it when funding turns negative or the capital has a better use.
+- Idle cash earns the US Treasury bill rate automatically (cash.interest_rate_pct). Perp margin and carry
+  capital do not earn it; money spent on prediction shares is out of cash until they are sold or resolve.
+
 Your style:
 - Hunt for asymmetric setups: trend continuations, breakouts with momentum, sharp reversals at extremes, funding-rate squeezes.
 - Shorting is as normal as going long.
@@ -48,7 +63,12 @@ DECISION_TOOL = {
                 "items": {
                     "type": "object",
                     "properties": {
-                        "type": {"type": "string", "enum": ["open", "close", "move_stop", "entry_order", "cancel_order"]},
+                        "type": {"type": "string", "enum": ["open", "close", "move_stop", "entry_order", "cancel_order",
+                                                            "predict", "predict_sell", "carry_open", "carry_close"]},
+                        "market": {"type": "string", "description": "predict / predict_sell: market id or Polymarket slug"},
+                        "outcome": {"type": "string", "enum": ["Yes", "No"], "description": "predict only"},
+                        "stake_pct": {"type": "number", "description": "predict only: fraction of equity to spend"},
+                        "size_pct": {"type": "number", "description": "carry_open only: fraction of equity"},
                         "symbol": {"type": "string"},
                         "side": {"type": "string", "enum": ["long", "short"], "description": "open / entry_order"},
                         "trigger": {"type": "number", "description": "entry_order only: price that triggers the entry"},
@@ -59,7 +79,7 @@ DECISION_TOOL = {
                         "reason": {"type": "string"},
                         "invalidation": {"type": "string", "description": "open only: what would prove this trade wrong"},
                     },
-                    "required": ["type", "symbol", "reason"],
+                    "required": ["type", "reason"],
                 },
             },
             "watch_next": {"type": "string", "description": "What you will look for at the next check."},
@@ -74,7 +94,8 @@ def system_prompt():
         end_at=config.END_AT, min_stop=config.MIN_STOP_DIST, max_stop=config.MAX_STOP_DIST,
         max_risk=config.MAX_RISK_PER_TRADE, default_risk=config.DEFAULT_RISK, max_lev=config.MAX_LEVERAGE,
         max_pos=config.MAX_OPEN_POSITIONS, daily=config.DAILY_LOSS_LIMIT, kill=config.KILL_DRAWDOWN,
-        order_h=config.ORDER_MAX_HOURS)
+        order_h=config.ORDER_MAX_HOURS, pred_stake=config.PRED_MAX_STAKE, pred_total=config.PRED_MAX_TOTAL,
+        carry_total=config.CARRY_MAX_TOTAL)
 
 
 class ClaudeBrain:

@@ -78,6 +78,8 @@ th:first-child,td:first-child{text-align:left;padding-left:0} tr:last-child td{b
 
   <section class="card"><h2>Equity race (PLN)</h2><div id="chart"><p class="empty">The chart appears after a few runs.</p></div></section>
   <section class="card"><h2>Open positions</h2><div class="tw" id="pos"><p class="empty">No open positions.</p></div></section>
+  <section class="card"><h2>Predictions</h2><div class="tw" id="preds"><p class="empty">No prediction bets.</p></div></section>
+  <section class="card"><h2>Carry trades</h2><div class="tw" id="carry"><p class="empty">No carry trades.</p></div></section>
   <section class="card"><h2>Resting orders</h2><div class="tw" id="orders"><p class="empty">No resting orders.</p></div></section>
   <section class="card"><h2>Latest decision</h2><div id="dec"><p class="empty">Claude has not decided anything yet.</p></div></section>
   <section class="card"><h2>Claude's notebook</h2><div class="nb" id="nb"><p class="empty">Claude writes its long-term plan here at its next session.</p></div></section>
@@ -148,7 +150,7 @@ async function tick(){
 }
 function liveRender(){
   const s=S,fx=s.fx_usd_pln,px=LIVE;
-  const eq=(s.cash_usd+s.positions.reduce((a,p)=>a+upnl(p.side,p.entry,p.size,px[p.symbol]||p.mark),0))*fx;
+  const eq=(s.cash_usd+(s.other_value_usd||0)+s.positions.reduce((a,p)=>a+upnl(p.side,p.entry,p.size,px[p.symbol]||p.mark),0))*fx;
   $("eq").textContent=f(eq)+" zł";$("ret").textContent=retLine(eq,s.start_pln);$("ret").className="num "+(eq>=s.start_pln?"up":"down");
   if(px.BTCUSDT){
     const h=s.start_usd*px.BTCUSDT/s.start_btc*fx;$("hodl").textContent=f(h)+" zł";$("hodlRet").textContent=retLine(h,s.start_pln);
@@ -169,7 +171,7 @@ function render(s,csv){
   $("ret").textContent=retLine(s.equity_pln,s.start_pln);$("ret").className="num "+(s.equity_pln>=s.start_pln?"up":"down");
   $("ctrl").textContent=f(s.control_pln)+" zł";$("ctrlRet").textContent=retLine(s.control_pln,s.start_pln);
   $("hodl").textContent=f(s.hodl_pln)+" zł";$("hodlRet").textContent=retLine(s.hodl_pln,s.start_pln);
-  $("stats").innerHTML=`<span>Max drawdown <b>${f(s.max_drawdown_pct,1)}%</b></span><span>Closed trades <b>${s.trade_count}</b></span><span>Win rate <b>${s.win_rate_pct==null?"—":f(s.win_rate_pct,0)+"%"}</b></span><span>Claude decisions today <b>${s.brain_calls_today}</b></span><span>Ends <b>${t(s.end_at)}</b></span>`;
+  $("stats").innerHTML=`<span>Max drawdown <b>${f(s.max_drawdown_pct,1)}%</b></span><span>Closed trades <b>${s.trade_count}</b></span><span>Win rate <b>${s.win_rate_pct==null?"—":f(s.win_rate_pct,0)+"%"}</b></span><span>Claude decisions today <b>${s.brain_calls_today}</b></span>${s.income_pln?`<span>Interest <b>${sg(s.income_pln.interest)} zł</b> at ${f(s.cash_rate_pct,2)}%</span><span>Funding <b>${sg(s.income_pln.funding)} zł</b></span><span>Carry <b>${sg(s.income_pln.carry)} zł</b></span>`:""}<span>Ends <b>${t(s.end_at)}</b></span>`;
   // chart
   const rows=csv.trim().split("\n").slice(1).map(l=>l.split(",")).map(r=>({t:new Date(r[0]).getTime(),c:+r[1],k:r[2]?+r[2]:null,h:r[3]?+r[3]:null}));
   if(rows.length>1){
@@ -190,9 +192,15 @@ function render(s,csv){
   // decision
   const d=s.last_decision;
   if(d){
-    const acts=(d.actions||[]).map(a=>`<div class="act"><span class="tag ${esc(a.result)}">${esc(a.type)} ${esc(a.symbol)}${a.side?" "+esc(a.side):""}</span><div>${esc(a.reason)}${a.invalidation?`<div class="muted">Wrong if: ${esc(a.invalidation)}</div>`:""}<div class="muted">${esc(a.result)}: ${esc(a.detail)}</div></div></div>`).join("")||'<p class="muted">No trades this round.</p>';
+    const acts=(d.actions||[]).map(a=>`<div class="act"><span class="tag ${esc(a.result)}">${esc(a.type)} ${esc(a.symbol||("#"+(a.market||"")))}${a.side?" "+esc(a.side):""}${a.outcome?" "+esc(a.outcome):""}</span><div>${esc(a.reason)}${a.invalidation?`<div class="muted">Wrong if: ${esc(a.invalidation)}</div>`:""}<div class="muted">${esc(a.result)}: ${esc(a.detail)}</div></div></div>`).join("")||'<p class="muted">No trades this round.</p>';
     $("dec").innerHTML=`<div class="muted">${t(d.time)} · trigger: ${esc(d.trigger)}</div><p class="view">${esc(d.market_view||"")}</p>${d.error?`<p class="muted">${esc(d.error)}</p>`:""}${d.news?`<p class="muted">News: ${esc(d.news)}</p>`:""}${acts}${d.watch_next?`<p class="muted">Next: ${esc(d.watch_next)}</p>`:""}`;
   }
+  // predictions: open bets, then the settled ones
+  const pr=s.predictions||[],pc=s.pred_closed||[],fx=s.fx_usd_pln;
+  $("preds").innerHTML=(pr.length||pc.length)?`<table><thead><tr><th>Question</th><th>Bet</th><th>Paid</th><th>Price now</th><th>Stake zł</th><th>P/L zł</th><th>Ends</th></tr></thead><tbody>${pr.map(p=>`<tr><td style="white-space:normal;min-width:220px">${esc(p.question)}</td><td>${esc(p.outcome)}</td><td>${f(p.entry,3)}</td><td>${f(p.mark,3)}</td><td>${f(p.cost*fx)}</td><td class="${p.pnl>=0?"up":"down"}">${sg(p.pnl*fx)}</td><td>${p.end?t(p.end):"—"}</td></tr>`).join("")}${pc.slice(0,10).map(r=>`<tr class="muted"><td style="white-space:normal;min-width:220px">${esc(r.question)}</td><td>${esc(r.outcome)}</td><td>${f(r.entry,3)}</td><td>${f(r.exit,3)}</td><td>${f(r.cost*fx)}</td><td class="${r.pnl>=0?"up":"down"}">${sg(r.pnl_pln)}</td><td>${esc(r.why)}</td></tr>`).join("")}</tbody></table>`:'<p class="empty">No prediction bets.</p>';
+  // carry trades
+  const cr=s.carry||[];
+  $("carry").innerHTML=cr.length?`<table><thead><tr><th>Coin</th><th>Size zł</th><th>Funding now</th><th>Earned zł</th><th>Fees zł</th><th>Net if closed now zł</th></tr></thead><tbody>${cr.map(c=>`<tr><td>${esc(c.symbol)}</td><td>${f(c.notional*fx)}</td><td class="${c.funding_apr_pct>=0?"up":"down"}">${f(c.funding_apr_pct,1)}%/yr</td><td>${f(c.earned*fx)}</td><td>${f(c.fees*fx)}</td><td class="${c.net_if_closed_now>=0?"up":"down"}">${sg(c.net_if_closed_now*fx)}</td></tr>`).join("")}</tbody></table>`:'<p class="empty">No carry trades.</p>';
   // resting orders
   const os_=s.orders||[];
   $("orders").innerHTML=os_.length?`<table><thead><tr><th>Market</th><th>Side</th><th>Triggers when price goes</th><th>Stop</th><th>Target</th><th>Expires</th></tr></thead><tbody>${os_.map(o=>`<tr><td>${esc(o.symbol)}</td><td class="${o.side=="long"?"up":"down"}">${o.side}</td><td>${o.direction} ${f(o.trigger,2)}</td><td>${f(o.stop,2)}</td><td>${o.tp?f(o.tp,2):"—"}</td><td>${ts(o.expires)}</td></tr>`).join("")}</tbody></table>`:'<p class="empty">No resting orders.</p>';

@@ -16,6 +16,7 @@ import requests
 
 from . import config, control, guard
 from .paper import PAIRS, ExchangeError, PaperExchange
+from . import predictions as pred
 from .market import snapshot
 
 
@@ -76,7 +77,7 @@ def close_all(client, positions, why, events):
             events.append({"type": "close_failed", "symbol": p["symbol"], "error": str(e)})
 
 
-def main(client=None, brain=None, now=None, fx=None, market=None, light=False):
+def main(client=None, brain=None, now=None, fx=None, market=None, light=False, pm=None):
     """light=True: a quick 1-minute tick (exchange, stops, account, dashboard) without the full market scan."""
     now = now or datetime.now(timezone.utc)
     now_ms = int(now.timestamp() * 1000)
@@ -97,8 +98,14 @@ def main(client=None, brain=None, now=None, fx=None, market=None, light=False):
         if not client.ready:
             log("state.json exists but exchange.json is missing; delete docs/data/state.json to restart.")
             return None
+    pms = PM(pm)
+    if not light and hasattr(client, "set_market_rates"):
+        refresh_rates(client, state, day)
     if hasattr(client, "advance"):
-        client.advance()  # replay the minutes since the last run: stops, targets, funding, liquidation
+        client.advance()  # replay the minutes since the last run: stops, targets, funding, interest, liquidation
+    pred_markets, pre_events = {}, []
+    if not light and hasattr(client, "update_predictions"):
+        pred_markets, pre_events = refresh_predictions(client, pms)
 
     # ---- account ---------------------------------------------------------------
     wallet = client.wallet()
@@ -116,7 +123,7 @@ def main(client=None, brain=None, now=None, fx=None, market=None, light=False):
     equity = state["start_usd"] + (exch_equity - state["exchange_equity_at_start"])
     positions = client.positions()
 
-    events = []
+    events = list(pre_events)
     since = state.get("last_closed_check_ms", state["start_ms"])
     known = {t["id"] for t in state["closed_trades"]}
     for t in client.closed_pnl(since - 120_000):
@@ -140,12 +147,16 @@ def main(client=None, brain=None, now=None, fx=None, market=None, light=False):
         if not state.get("ended"):
             close_all(client, positions, "experiment ended", events)
             cancel_all_orders(client)
+            close_side_books(client, pms, pred_markets, "experiment ended", events)
             state["ended"] = iso(now)
     else:
         halt = guard.check_halts(state, equity, day)
-        if halt and (positions or open_orders(client)):
-            close_all(client, positions, "kill switch: drawdown limit" if halt == "kill" else "daily loss limit", events)
+        side = hasattr(client, "s") and (client.s["carry"] or client.s["predictions"])
+        if halt and (positions or open_orders(client) or side):
+            why = "kill switch: drawdown limit" if halt == "kill" else "daily loss limit"
+            close_all(client, positions, why, events)
             cancel_all_orders(client)
+            close_side_books(client, pms, pred_markets, why, events)
             events.append({"type": "halt", "kind": halt})
 
     if events:
@@ -166,17 +177,19 @@ def main(client=None, brain=None, now=None, fx=None, market=None, light=False):
     elif config.BRAIN_MODE == "session":
         state.setdefault("pending_events", []).extend(events)
         entry = take_session_decision(client, state, d, now, equity, rate, positions, markets, journal_path,
-                                      blocked="experiment ended" if ended else ("trading halted" if halt else None))
+                                      blocked="experiment ended" if ended else ("trading halted" if halt else None),
+                                      pms=pms, pred_markets=pred_markets)
         if entry:
             trigger = "brain session"
             positions = client.positions()
             equity = state["start_usd"] + (client.wallet()["equity"] - state["exchange_equity_at_start"])
-        ctx = build_context(state, now, equity, rate, positions, markets, journal_path, open_orders(client))
+        ctx = build_context(state, now, equity, rate, positions, markets, journal_path, open_orders(client),
+                            client=client, pred_markets=pred_markets)
         ctx["rules"] = brain_rules()
         save_json(d / "brain_input.json", ctx)
     else:
         entry, trigger = api_brain(client, brain, state, now, day, events, equity, rate, positions, markets,
-                                   journal_path, ended, halt)
+                                   journal_path, ended, halt, pms=pms, pred_markets=pred_markets)
         if entry and entry.get("actions") is not None:
             positions = client.positions()
             equity = state["start_usd"] + (client.wallet()["equity"] - state["exchange_equity_at_start"])
@@ -212,13 +225,76 @@ def main(client=None, brain=None, now=None, fx=None, market=None, light=False):
     if cash_usd is not None:  # convert exchange cash into the bot's own equity frame
         cash_usd += state["start_usd"] - state["exchange_equity_at_start"]
     write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd, hodl_usd, journal_path, halt,
-                  open_orders(client), cash_usd)
+                  open_orders(client), cash_usd, client)
     if hasattr(client, "save"):
         client.save()
     save_json(state_path, state)
     if not light:
         log(f"equity {equity * rate:.2f} PLN | positions {len(positions)} | decision: {trigger or 'none'}")
     return entry
+
+
+class PM:
+    """Lazily created Polymarket client (tests pass a fake)."""
+
+    def __init__(self, pm=None):
+        self._pm = pm
+
+    def get(self):
+        if self._pm is None:
+            self._pm = pred.Polymarket()
+        return self._pm
+
+
+def refresh_rates(client, state, day):
+    try:
+        funding = client.market.funding_rates()
+    except Exception as e:
+        funding = None
+        print(f"::warning::funding rates unavailable: {e}", flush=True)
+    cash_rate = None
+    if state.get("cash_rate_day") != day:
+        try:
+            cash_rate = client.market.cash_rate()
+            state["cash_rate_day"] = day
+        except Exception as e:
+            print(f"::warning::Treasury rate unavailable: {e}", flush=True)
+    client.set_market_rates(funding, cash_rate)
+
+
+def refresh_predictions(client, pms):
+    """Fetch the prediction market list and every held market; mark positions and pay out resolved ones."""
+    markets, events = {}, []
+    try:
+        markets = {m["id"]: m for m in pms.get().top()}
+    except Exception as e:
+        print(f"::warning::Polymarket list unavailable: {e}", flush=True)
+    for mid in list(client.s["predictions"]):
+        if mid not in markets:
+            try:
+                m = pms.get().get(mid)
+                if m:
+                    markets[mid] = m
+            except Exception as e:
+                print(f"::warning::Polymarket market {mid} unavailable: {e}", flush=True)
+    for rec in client.update_predictions(markets):
+        events.append({"type": "prediction_settled", **rec})
+    return markets, events
+
+
+def close_side_books(client, pms, pred_markets, why, events):
+    if not hasattr(client, "s"):
+        return
+    for sym in list(client.s["carry"]):
+        rec = client.carry_close(sym, why)
+        events.append({"type": "carry_closed", **rec})
+    for mid in list(client.s["predictions"]):
+        try:
+            m = pred_markets.get(mid) or pms.get().get(mid)
+            rec = client.predict_sell(mid, m, why)
+            events.append({"type": "prediction_sold", **rec})
+        except Exception as e:
+            events.append({"type": "prediction_sell_failed", "market": mid, "error": str(e)})
 
 
 def open_orders(client):
@@ -237,11 +313,14 @@ def brain_rules():
         "stop_distance": [config.MIN_STOP_DIST, config.MAX_STOP_DIST], "daily_loss_limit": config.DAILY_LOSS_LIMIT,
         "kill_drawdown": config.KILL_DRAWDOWN, "order_max_hours": config.ORDER_MAX_HOURS,
         "order_max_distance": config.ORDER_MAX_DIST, "decision_max_age_min": config.DECISION_MAX_AGE_MIN,
-        "taker_fee": config.TAKER_FEE, "funding_per_8h": 0.0001,
+        "taker_fee": config.TAKER_FEE, "funding": "real hourly Kraken Futures rate per coin (markets[].funding_pct_per_hour)",
+        "prediction_max_stake": config.PRED_MAX_STAKE, "prediction_max_total": config.PRED_MAX_TOTAL,
+        "carry_max_total": config.CARRY_MAX_TOTAL, "carry_cost_per_side": 0.003,
     }
 
 
-def take_session_decision(client, state, d, now, equity, rate, positions, markets, journal_path, blocked=None):
+def take_session_decision(client, state, d, now, equity, rate, positions, markets, journal_path, blocked=None,
+                          pms=None, pred_markets=None):
     """Execute docs/data/brain_decision.json once, if it is new and fresh. Returns the journal entry or None."""
     dec = load_json(d / "brain_decision.json", None)
     if not dec or not dec.get("id") or dec["id"] == state.get("last_decision_id"):
@@ -260,7 +339,8 @@ def take_session_decision(client, state, d, now, equity, rate, positions, market
     elif age > config.DECISION_MAX_AGE_MIN:
         entry["error"] = f"not executed: decision is {age:.0f} min old (limit {config.DECISION_MAX_AGE_MIN:.0f})"
     else:
-        entry["actions"] = execute(client, dec.get("actions") or [], equity, positions, markets, now)
+        entry["actions"] = execute(client, dec.get("actions") or [], equity, positions, markets, now,
+                                   pms=pms, pred_markets=pred_markets)
     state["pending_events"] = []
     state["calls"][now.strftime("%Y-%m-%d")] = state["calls"].get(now.strftime("%Y-%m-%d"), 0) + 1
     with open(journal_path, "a") as f:
@@ -268,7 +348,8 @@ def take_session_decision(client, state, d, now, equity, rate, positions, market
     return entry
 
 
-def api_brain(client, brain, state, now, day, events, equity, rate, positions, markets, journal_path, ended, halt):
+def api_brain(client, brain, state, now, day, events, equity, rate, positions, markets, journal_path, ended, halt,
+              pms=None, pred_markets=None):
     """Paid-API mode: the bot calls Claude itself, hourly or when something happens."""
     last = state.get("last_brain")
     mins = (now - parse_iso(last)).total_seconds() / 60 if last else 1e9
@@ -285,7 +366,8 @@ def api_brain(client, brain, state, now, day, events, equity, rate, positions, m
     state.setdefault("pending_events", []).extend(events)
     if not trigger:
         return None, None
-    context = build_context(state, now, equity, rate, positions, markets, journal_path, open_orders(client))
+    context = build_context(state, now, equity, rate, positions, markets, journal_path, open_orders(client),
+                            client=client, pred_markets=pred_markets)
     if brain is None:
         from .brain import ClaudeBrain
         brain = ClaudeBrain()
@@ -302,14 +384,16 @@ def api_brain(client, brain, state, now, day, events, equity, rate, positions, m
     if decision:
         entry.update({"model": decision.get("_model"), "usage": decision.get("_usage"),
                       "market_view": decision.get("market_view"), "watch_next": decision.get("watch_next")})
-        entry["actions"] = execute(client, decision.get("actions") or [], equity, positions, markets, now)
+        entry["actions"] = execute(client, decision.get("actions") or [], equity, positions, markets, now,
+                                   pms=pms, pred_markets=pred_markets)
     state["pending_events"] = []
     with open(journal_path, "a") as f:
         f.write(json.dumps(entry, default=str) + "\n")
     return entry, trigger
 
 
-def build_context(state, now, equity, rate, positions, markets, journal_path, orders=()):
+def build_context(state, now, equity, rate, positions, markets, journal_path, orders=(), client=None,
+                  pred_markets=None):
     start = state["start_usd"]
     used = sum(p["size"] * p["mark"] for p in positions)
     journal = []
@@ -351,22 +435,60 @@ def build_context(state, now, equity, rate, positions, markets, journal_path, or
                          "avg_loss_usd": round(sum(losses) / len(losses), 2) if losses else None,
                          "net_usd": round(sum(t["pnl"] for t in closed), 2)},
         "markets": markets,
+        **side_books(client, now, equity, pred_markets),
         "your_journal": journal,
     }
 
 
-def execute(client, actions, equity, positions, markets, now=None):
+def side_books(client, now, equity, pred_markets):
+    """Predictions, carry trades, interest and the market list for the brain."""
+    if client is None or not hasattr(client, "s"):
+        return {}
+    now_ms = int(now.timestamp() * 1000)
+    s = client.s
+    pc, cc = s["pred_closed"], s["carry_closed"]
+    end_ms = int(parse_iso(config.END_AT).timestamp() * 1000)
+    shortlist = pred.shortlist(list((pred_markets or {}).values()), now_ms, end_ms)
+    held = {}
+    for p in client.prediction_list():
+        m = (pred_markets or {}).get(p["market"])
+        held[p["market"]] = {**p, "yes_bid": m and m["yes_bid"], "yes_ask": m and m["yes_ask"],
+                             "days_left": round((m["end_ms"] - now_ms) / 86_400_000, 1) if m and m.get("end_ms") else None}
+    return {
+        "cash": {"cash_usd": round(s["cash"], 2), "locked_usd": round(client.locked(), 2),
+                 "idle_usd": round(max(0.0, s["cash"] - client.locked()), 2),
+                 "interest_rate_pct": round(s["cash_rate"] * 100, 3),
+                 "income_so_far_usd": {k: round(v, 4) for k, v in s["income"].items()}},
+        "predictions": list(held.values()),
+        "recent_closed_predictions": [{k: r.get(k) for k in ("question", "outcome", "entry", "exit", "pnl", "why", "reason")}
+                                      for r in pc[-10:]],
+        "carry_trades": client.carry_list(),
+        "recent_closed_carry": [{k: r.get(k) for k in ("symbol", "notional", "earned", "fees", "pnl", "why")} for r in cc[-5:]],
+        "side_track_record": {
+            "predictions": {"closed": len(pc), "wins": sum(1 for r in pc if r["pnl"] > 0),
+                            "net_usd": round(sum(r["pnl"] for r in pc), 2)},
+            "carry": {"closed": len(cc), "net_usd": round(sum(r["pnl"] for r in cc), 2)}},
+        "prediction_markets": [pred.brief(m, now_ms) for m in shortlist],
+    }
+
+
+def execute(client, actions, equity, positions, markets, now=None, pms=None, pred_markets=None):
     """Run actions through the guard and send what passes.
-    Order: closes, order cancels, stop moves, market entries, resting entry orders."""
+    Order: exits first (closes, cancels, prediction sells, carry closes), then stop moves, then new risk."""
     now = now or datetime.now(timezone.utc)
-    order = {"close": 0, "cancel_order": 1, "move_stop": 2, "open": 3, "entry_order": 4}
+    order = {"close": 0, "cancel_order": 1, "predict_sell": 1, "carry_close": 1, "move_stop": 2, "open": 3,
+             "entry_order": 4, "predict": 5, "carry_open": 5}
+    pred_markets = pred_markets if pred_markets is not None else {}
+    pms = pms or PM()
     results = []
     by_sym = {p["symbol"]: p for p in positions}
     for a in sorted(actions, key=lambda x: order.get(x.get("type"), 9)):
         a = dict(a)
         sym, kind = a.get("symbol"), a.get("type")
         try:
-            if sym not in config.SYMBOLS:
+            if kind in ("predict", "predict_sell", "carry_open", "carry_close"):
+                side_action(client, a, equity, pms, pred_markets)
+            elif sym not in config.SYMBOLS:
                 a.update(result="rejected", detail=f"{sym} is not on the trading list")
             elif kind == "close":
                 p = by_sym.get(sym)
@@ -392,7 +514,8 @@ def execute(client, actions, equity, positions, markets, now=None):
                     a.update(result="rejected", detail="no fresh market data")
                 else:
                     ok, why, o = guard.check_open(a, equity=equity, price=markets[sym]["price"],
-                                                  inst=client.instrument(sym), positions=list(by_sym.values()))
+                                                  inst=client.instrument(sym), positions=list(by_sym.values()),
+                                                  locked=side_locked(client))
                     if ok:
                         client.set_leverage(sym, config.MAX_LEVERAGE)
                         client.market_order(sym, o["side"], o["qty"], stop=o["stop"], tp=o["tp"],
@@ -418,7 +541,7 @@ def execute(client, actions, equity, positions, markets, now=None):
                     a.update(result="rejected", detail=f"trigger more than {config.ORDER_MAX_DIST:.0%} from the price")
                 else:
                     ok, why, o = guard.check_open(a, equity=equity, price=trig, inst=client.instrument(sym),
-                                                  positions=list(by_sym.values()))
+                                                  positions=list(by_sym.values()), locked=side_locked(client))
                     if ok:
                         hours = min(float(a.get("expires_hours") or 24), config.ORDER_MAX_HOURS)
                         exp = int(now.timestamp() * 1000 + hours * 3600_000)
@@ -432,14 +555,72 @@ def execute(client, actions, equity, positions, markets, now=None):
                         a.update(result="rejected", detail=why)
             else:
                 a.update(result="rejected", detail=f"unknown action {kind}")
-        except ExchangeError as e:
+        except (ExchangeError, RuntimeError) as e:
             a.update(result="failed", detail=str(e))
         results.append(a)
     return results
 
 
+def side_locked(client):
+    """Capital in carry trades and predictions is not available as margin for perps."""
+    if not hasattr(client, "s"):
+        return 0.0
+    return sum(c["notional"] for c in client.s["carry"].values()) + client.predictions_value()
+
+
+def free_cash(client):
+    return max(0.0, client.s["cash"] - client.locked())
+
+
+def side_action(client, a, equity, pms, pred_markets):
+    kind = a["type"]
+    if not hasattr(client, "s"):
+        a.update(result="rejected", detail="not supported on this exchange")
+        return
+    if kind in ("predict", "predict_sell"):
+        key = str(a.get("market") or "").strip()
+        m = pred_markets.get(key)
+        if m is None and key:
+            m = pms.get().get(key)
+            if m:
+                pred_markets[m["id"]] = m
+        if kind == "predict":
+            open_cost = sum(p["cost"] for p in client.s["predictions"].values())
+            ok, why, o = guard.check_predict(a, equity=equity, market=m, open_cost=open_cost, free_cash=free_cash(client))
+            if not ok:
+                a.update(result="rejected", detail=why)
+                return
+            r = client.predict_buy(m, o["outcome"], o["stake"], note=a.get("reason", ""))
+            a.update(market=m["id"], result="done", detail=(
+                f"bought {r['shares']:.1f} {o['outcome']} shares at {r['price']:.3f} for {o['stake']:.2f} USD "
+                f"on '{m['question']}' {why}"))
+        else:
+            if not m or m["id"] not in client.s["predictions"]:
+                a.update(result="rejected", detail="no position in this market")
+                return
+            r = client.predict_sell(m["id"], m)
+            a.update(result="done", detail=f"sold at {r['exit']}, P/L {r['pnl']:+.2f} USD")
+        return
+    sym = a.get("symbol")
+    if sym not in config.SYMBOLS:
+        a.update(result="rejected", detail=f"{sym} is not on the trading list")
+    elif kind == "carry_open":
+        open_total = sum(c["notional"] for c in client.s["carry"].values())
+        ok, why, notional = guard.check_carry(a, equity=equity, symbol=sym, open_total=open_total,
+                                              free_cash=free_cash(client), rate=client.s["funding_rates"].get(sym))
+        if not ok:
+            a.update(result="rejected", detail=why)
+            return
+        cost = client.carry_open(sym, notional, note=a.get("reason", ""))
+        apr = client.funding_rate(sym) * 24 * 365 * 100
+        a.update(result="done", detail=f"carry on {sym}: {notional:.2f} USD, cost {cost:.2f} USD, funding now {apr:.1f}%/yr {why}")
+    else:
+        rec = client.carry_close(sym)
+        a.update(result="done", detail=f"closed carry: earned {rec['earned']:.2f}, fees {rec['fees']:.2f}, net {rec['pnl']:+.2f} USD")
+
+
 def write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd, hodl_usd, journal_path, halt,
-                  orders=(), cash_usd=None):
+                  orders=(), cash_usd=None, client=None):
     vals = []
     try:
         with open(d / "equity.csv") as f:
@@ -477,6 +658,17 @@ def write_summary(d, state, now, equity, rate, positions, exch_equity, ctrl_usd,
                    for o in orders],
         "balance_warning": False,
     }
+    if client is not None and hasattr(client, "s"):
+        s = client.s
+        summary.update({
+            "other_value_usd": round(client.predictions_value(), 6),
+            "predictions": client.prediction_list(),
+            "pred_closed": [{**r, "pnl_pln": round(r["pnl"] * rate, 2)} for r in s["pred_closed"][-30:]][::-1],
+            "carry": client.carry_list(),
+            "carry_closed": [{**r, "pnl_pln": round(r["pnl"] * rate, 2)} for r in s["carry_closed"][-20:]][::-1],
+            "income_pln": {k: round(v * rate, 2) for k, v in s["income"].items()},
+            "cash_rate_pct": round(s["cash_rate"] * 100, 3),
+        })
     save_json(d / "summary.json", summary)
 
 

@@ -22,10 +22,13 @@ the journal are how you keep a plan going for days.
 3. Read `docs/data/brain_input.json`. It is your whole view of the account: equity, open positions (with
    stops, targets and why you opened them), resting orders, events since your last decision (fills, stops hit,
    liquidations), market snapshots for every coin from 15-minute to daily, recent closed trades with why they
-   were opened and how they closed, your track record, your own journal, and the hard `rules`.
+   were opened and how they closed, your track record, your own journal, and the hard `rules`. Also:
+   `cash` (idle cash, interest rate, income so far), `predictions` you hold, `prediction_markets` you could bet
+   on, `carry_trades`, and recent closed predictions and carry trades.
    Check `time_utc`: if it is more than 40 minutes old, the engine may be stalled. Still decide, but say so.
-4. Optional: up to 3 web searches for market-moving crypto or macro news (ETF flows, Fed/CPI, hacks,
-   big liquidations, scheduled events this week). Use it as context, not as a reason to overtrade.
+4. Research: up to 6 web searches. Market-moving crypto or macro news (ETF flows, Fed/CPI, hacks, big
+   liquidations, scheduled events this week), and evidence on the prediction markets you are considering
+   or holding. Use it as context, not as a reason to overtrade.
 5. Decide, following the trader instructions below and your notebook's plan. Change the plan only for a
    reason you can state; a new session is not a reason. Every open position and resting order must belong
    to a written plan in the notebook. Ask yourself before adding a position: is this a new idea, or the same
@@ -71,6 +74,9 @@ Setups you are waiting for, with the exact condition that would trigger them.
 What your closed trades taught you (see recent_closed_trades and track_record). Keep the useful ones,
 drop stale ones, and check new decisions against them.
 
+## Predictions
+For each prediction held: your probability, the price you paid, what would change your estimate, and when it resolves.
+
 ## Session log
 One line per session, newest first, the last ~10 sessions: time, equity, what you did.
 ```
@@ -92,7 +98,12 @@ One line per session, newest first, the last ~10 sessions: time, equity, what yo
       "risk_pct": 0.03, "expires_hours": 24, "reason": "...", "invalidation": "..."}},
     {{"type": "move_stop", "symbol": "SOLUSDT", "stop": 0, "take_profit": 0, "reason": "..."}},
     {{"type": "close", "symbol": "XRPUSDT", "reason": "..."}},
-    {{"type": "cancel_order", "symbol": "DOGEUSDT", "reason": "..."}}
+    {{"type": "cancel_order", "symbol": "DOGEUSDT", "reason": "..."}},
+    {{"type": "predict", "market": "2589812", "outcome": "Yes|No", "stake_pct": 0.04,
+      "reason": "your probability vs the price, and the evidence", "invalidation": "..."}},
+    {{"type": "predict_sell", "market": "2589812", "reason": "..."}},
+    {{"type": "carry_open", "symbol": "BTCUSDT", "size_pct": 0.3, "reason": "funding level, break-even days"}},
+    {{"type": "carry_close", "symbol": "BTCUSDT", "reason": "..."}}
   ]
 }}
 ```
@@ -102,6 +113,9 @@ One line per session, newest first, the last ~10 sessions: time, equity, what yo
 - `take_profit` is optional everywhere. Prices are in USD. Symbols: {symbols}.
 - Position size is computed by the engine from `risk_pct` and the stop distance; you never give a quantity.
 - The `reason` you give is stored with the position and shown back to you when it closes, so make it specific.
+- `predict` takes a market id from `prediction_markets` or any Polymarket slug; `stake_pct` is the share of
+  equity spent (it is also the most you can lose). One position per market.
+- `carry_open` buys the coin and shorts its perpetual in equal size (`size_pct` of equity); `carry_close` unwinds both.
 """
 
 prompt = system_prompt().replace("Answer ONLY by calling submit_decision.", "").strip()

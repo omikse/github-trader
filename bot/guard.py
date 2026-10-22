@@ -19,7 +19,7 @@ def round_price(x, tick):
     return round(round(x / tick) * tick, 10)
 
 
-def check_open(action, *, equity, price, inst, positions):
+def check_open(action, *, equity, price, inst, positions, locked=0.0):
     """Validate and size a new position. Returns (ok, reason, order)."""
     sym, side = action.get("symbol"), action.get("side")
     stop = action.get("stop")
@@ -55,7 +55,7 @@ def check_open(action, *, equity, price, inst, positions):
     notes = []
 
     used = sum(p["size"] * p["mark"] for p in positions)
-    room = equity * config.MAX_LEVERAGE - used
+    room = max(0.0, equity - locked) * config.MAX_LEVERAGE - used
     if room <= 0:
         return False, "leverage cap reached", None
     if qty * price > room:
@@ -120,3 +120,54 @@ def check_halts(state, equity, day):
         state["paused_day"] = day
         return "daily"
     return None
+
+
+def check_predict(action, *, equity, market, open_cost, free_cash):
+    """Validate a prediction-market buy. Returns (ok, reason, order)."""
+    from .predictions import buy_price
+    outcome = str(action.get("outcome", "")).strip().capitalize()
+    if outcome not in ("Yes", "No"):
+        return False, "outcome must be Yes or No", None
+    if not market:
+        return False, "market not found (use the market id from prediction_markets, or a Polymarket slug)", None
+    if not market["accepting"]:
+        return False, "market is closed for trading", None
+    if market["liquidity"] < 2_000:
+        return False, "market too thin (liquidity under $2,000)", None
+    px = buy_price(market, outcome)
+    if px is None or not 0.01 <= px <= 0.99:
+        return False, f"price {px} is outside 0.01-0.99", None
+    pct = min(float(action.get("stake_pct") or 0.03), config.PRED_MAX_STAKE)
+    stake = equity * pct
+    notes = []
+    room = equity * config.PRED_MAX_TOTAL - open_cost
+    if stake > room:
+        stake = room
+        notes.append(f"stake cut to fit the {config.PRED_MAX_TOTAL:.0%} total cap")
+    if stake > free_cash:
+        stake = free_cash
+        notes.append("stake cut to the free cash")
+    if stake <= 0 or stake / px < market["min_shares"]:
+        return False, "stake too small for the market minimum", None
+    return True, "; ".join(notes) or "ok", {"market": market, "outcome": outcome, "stake": round(stake, 4), "price": px}
+
+
+def check_carry(action, *, equity, symbol, open_total, free_cash, rate):
+    """Validate a carry trade (long coin + short perp). Returns (ok, reason, notional)."""
+    if rate is None:
+        return False, "no funding rate for this coin", None
+    pct = float(action.get("size_pct") or 0.2)
+    notional = equity * pct
+    notes = []
+    room = equity * config.CARRY_MAX_TOTAL - open_total
+    if notional > room:
+        notional = room
+        notes.append(f"size cut to fit the {config.CARRY_MAX_TOTAL:.0%} total cap")
+    if notional > free_cash:
+        notional = free_cash
+        notes.append("size cut to the free cash")
+    if notional < 10:
+        return False, "not enough room or free cash for a carry trade", None
+    if rate <= 0:
+        notes.append("warning: funding is negative now, so this carry PAYS until it turns")
+    return True, "; ".join(notes) or "ok", round(notional, 2)
