@@ -1,35 +1,33 @@
 {
- "updated": "2026-10-22T03:31:59Z",
+ "updated": "2026-10-22T03:39:59Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.8889,
- "equity_pln": 982.59,
- "return_pct": -1.74,
- "max_drawdown_pct": 1.66,
+ "equity_pln": 979.0,
+ "return_pct": -2.1,
+ "max_drawdown_pct": 2.1,
  "control_pln": 999.99,
  "control_trades": 0,
- "hodl_pln": 977.53,
- "positions": [
+ "hodl_pln": 977.77,
+ "positions": [],
+ "closed_trades": [
   {
+   "id": "t5",
    "symbol": "XRPUSDT",
    "side": "long",
-   "size": 239.268,
+   "qty": 239.268,
    "entry": 1.3584074000000002,
-   "mark": 1.34058,
-   "upnl": -4.265526343200012,
-   "stop": 1.338,
-   "tp": 1.43,
-   "liq": null,
-   "leverage": null,
-   "opened": 1792632960000,
-   "upnl_pln": -16.59
+   "exit": 1.337331,
+   "pnl": -5.3977,
+   "time": 1792639980000,
+   "why": "stop",
+   "pnl_pln": -20.99
   }
  ],
- "closed_trades": [],
- "trade_count": 0,
- "win_rate_pct": null,
+ "trade_count": 1,
+ "win_rate_pct": 0.0,
  "brain_calls_today": 2,
  "last_decision": {
   "time": "2026-10-22T02:51:59Z",
@@ -71,7 +69,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 256.961237,
+ "cash_usd": 251.74234,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {

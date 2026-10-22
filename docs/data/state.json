@@ -11,12 +11,37 @@
   "2026-10-21": 2,
   "2026-10-22": 2
  },
- "closed_trades": [],
- "last_closed_check_ms": 1792639919427,
+ "closed_trades": [
+  {
+   "id": "t5",
+   "symbol": "XRPUSDT",
+   "side": "long",
+   "qty": 239.268,
+   "entry": 1.3584074000000002,
+   "exit": 1.337331,
+   "pnl": -5.3977,
+   "time": 1792639980000,
+   "why": "stop"
+  }
+ ],
+ "last_closed_check_ms": 1792640399425,
  "day": "2026-10-22",
  "day_start_equity": 257.14,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "position_closed",
+   "id": "t5",
+   "symbol": "XRPUSDT",
+   "side": "long",
+   "qty": 239.268,
+   "entry": 1.3584074000000002,
+   "exit": 1.337331,
+   "pnl": -5.3977,
+   "time": 1792639980000,
+   "why": "stop"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 257.14,
@@ -25,7 +50,7 @@
   "trades": 0,
   "wins": 0
  },
- "last_btc": 82690.3,
+ "last_btc": 82710.7,
  "seen_order_events": [
   "o2:filled"
  ],
