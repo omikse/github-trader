@@ -1,16 +1,16 @@
 {
- "updated": "2026-10-23T02:44:19Z",
+ "updated": "2026-10-23T02:52:19Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.8886,
- "equity_pln": 985.58,
- "return_pct": -1.43,
- "max_drawdown_pct": 3.74,
- "control_pln": 1004.05,
+ "equity_pln": 984.99,
+ "return_pct": -1.49,
+ "max_drawdown_pct": 3.8,
+ "control_pln": 1001.81,
  "control_trades": 0,
- "hodl_pln": 966.18,
+ "hodl_pln": 966.98,
  "positions": [],
  "closed_trades": [
   {
@@ -82,41 +82,88 @@
  ],
  "trade_count": 5,
  "win_rate_pct": 40.0,
- "brain_calls_today": 1,
+ "brain_calls_today": 2,
  "last_decision": {
-  "time": "2026-10-23T00:52:19Z",
+  "time": "2026-10-23T02:52:19Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-23T00:51:18Z",
+  "decided_at": "2026-10-23T02:51:20Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 255.68,
-  "equity_pln": 994.24,
-  "events": [],
-  "market_view": "Slow risk-off bleed intact but stalling: BTC 81.35k chopping 81.0-81.5k under h1 ema20 (81.75k) and h4 ema200 (83.45k); alts pinned near 30d lows (AVAX 9.11 vs 9.046, ADA 0.212 vs 0.209). Gold PAXG made a new 30d low 4024 (h4 RSI 20).",
-  "watch_next": "BTC 4h close <80.8k (to TP 80.5k) vs reclaim 82.0k (bleed over); AVAX break of 9.046; PAXG bounce to 4070 fill; BONK funding 108% APR - carry only if it persists next session.",
-  "news": "No fresh market-moving headlines found; Fed 28 Oct still priced ~93% hold.",
-  "actions": [
+  "equity_usd": 253.45,
+  "equity_pln": 985.58,
+  "events": [
    {
-    "type": "move_stop",
-    "symbol": "BTCUSDT",
-    "stop": 81500,
-    "take_profit": 80500,
-    "reason": "Planned trail: 20-24Z 4h candle completed with high 81,464.8; stop just above it locks ~5.8 USD while leaving room for chop.",
-    "result": "done",
-    "detail": "stop 81500.0, target 80500.0"
+    "type": "position_closed",
+    "id": "t14",
+    "symbol": "AVAXUSDT",
+    "side": "short",
+    "qty": 18.741,
+    "entry": 9.297210000000002,
+    "exit": 9.1695825,
+    "pnl": 2.2015,
+    "time": 1792719900000,
+    "why": "stop",
+    "opened": 1792654920000,
+    "reason": ""
    },
    {
-    "type": "move_stop",
-    "symbol": "AVAXUSDT",
-    "stop": 9.165,
-    "take_profit": 8.75,
-    "reason": "Planned trail: 20-24Z 4h candle completed with high 9.159; stop above it locks ~2.5 USD.",
+    "type": "position_closed",
+    "id": "t15",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "qty": 0.00669071,
+    "entry": 82375.28,
+    "exit": 81540.75,
+    "pnl": 4.9804,
+    "time": 1792719960000,
+    "why": "stop",
+    "opened": 1792651560000,
+    "reason": ""
+   }
+  ],
+  "market_view": "BTC/AVAX shorts trailed out in profit (+7.2 USD) on a +0.6% hourly bounce; BTC 81.74k back at h1 ema20 but still under h1 ema200 82.0k / h4 ema20 82.27k and h4 ema200 83.45k. Inside 79.7k-87.2k daily range: sell relief into resistance in weak ETH, buy only a real BTC breakout above the 24h high.",
+  "watch_next": "ETH retest of 2422-2437 (h4 ema20/50) rejecting; BTC 83k breakout; BONK funding staying >60% APR; PAXG bounce to 4070.",
+  "news": "No fresh market-moving crypto news found; Fed 28 Oct still priced ~93% hold.",
+  "actions": [
+   {
+    "type": "entry_order",
+    "symbol": "ETHUSDT",
+    "side": "short",
+    "trigger": 2435,
+    "stop": 2472,
+    "take_profit": 2360,
+    "risk_pct": 0.02,
+    "expires_hours": 24,
+    "reason": "Sell relief bounce in weakest major: ETH d1 RSI 41, 30d -10%, below h4 ema200 2582; trigger at h4 ema50 2437 retest, stop above 24h high 2446 + buffer, TP near 24h low 2357. ~2R.",
+    "invalidation": "ETH 4h close above 2472 / BTC reclaiming 83k = relief became reversal.",
     "result": "done",
-    "detail": "stop 9.165, target 8.75"
+    "detail": "short 0.127753 when price goes above 2435 (risk 2.0%, stop 2472.0, target 2360.0, expires in 24h) ok"
+   },
+   {
+    "type": "entry_order",
+    "symbol": "BTCUSDT",
+    "side": "long",
+    "trigger": 83050,
+    "stop": 82250,
+    "take_profit": 85000,
+    "risk_pct": 0.02,
+    "expires_hours": 24,
+    "reason": "Regime-change catch: break of 24h high 82,939 after the bleed exhausted (h1 RSI reset, shorts stopped) targets 85k, below h4 ema200 83.45k as first hurdle. ~2.4R.",
+    "invalidation": "BTC back below 82.25k (h1 ema50/h4 ema20) after triggering = failed breakout.",
+    "result": "done",
+    "detail": "long 0.00568691 when price goes above 83050 (risk 2.0%, stop 82250.0, target 85000.0, expires in 24h) ok"
+   },
+   {
+    "type": "carry_open",
+    "symbol": "BONKUSDT",
+    "size_pct": 0.2,
+    "reason": "BONK funding 265% APR (~0.73%/day) and was 108% APR 2h ago; break-even ~0.8 day on 0.6% round-trip. Price-neutral. Close when funding < 30% APR or negative.",
+    "result": "done",
+    "detail": "carry on BONKUSDT: 50.69 USD, cost 0.15 USD, funding now 265.3%/yr ok"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 240.776424,
+ "cash_usd": 240.624496,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -158,6 +205,28 @@
    "qty": 0.09762,
    "expires": 1792791259103,
    "note": "Gold at new 30d low (4027), d1 RSI 31, h4 RSI 23; short a relief bounce into h1 ema20 (~4068) rather than the low. Shorts collect +21% APR funding. ~1.8R."
+  },
+  {
+   "symbol": "ETHUSDT",
+   "side": "short",
+   "trigger": 2435,
+   "direction": "above",
+   "stop": 2472.0,
+   "tp": 2360.0,
+   "qty": 0.127753,
+   "expires": 1792810339128,
+   "note": "Sell relief bounce in weakest major: ETH d1 RSI 41, 30d -10%, below h4 ema200 2582; trigger at h4 ema50 2437 retest, stop above 24h high 2446 + buffer, TP near 24h low 2357. ~2R."
+  },
+  {
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "trigger": 83050,
+   "direction": "above",
+   "stop": 82250.0,
+   "tp": 85000.0,
+   "qty": 0.00568691,
+   "expires": 1792810339128,
+   "note": "Regime-change catch: break of 24h high 82,939 after the bleed exhausted (h1 RSI reset, shorts stopped) targets 85k, below h4 ema200 83.45k as first hurdle. ~2.4R."
   }
  ],
  "balance_warning": false,
@@ -179,11 +248,23 @@
   }
  ],
  "pred_closed": [],
- "carry": [],
+ "carry": [
+  {
+   "symbol": "BONKUSDT",
+   "notional": 50.69,
+   "earned": 0.0,
+   "fees": 0.1521,
+   "net_if_closed_now": -0.3041,
+   "funding_pct_per_hour": 0.03029,
+   "funding_apr_pct": 265.3,
+   "opened": 1792723939128,
+   "reason": "BONK funding 265% APR (~0.73%/day) and was 108% APR 2h ago; break-even ~0.8 day on 0.6% round-trip. Price-neutral. Close when funding < 30% APR or negative."
+  }
+ ],
  "carry_closed": [],
  "income_pln": {
   "funding": 0.09,
-  "carry": 0.0,
+  "carry": -0.59,
   "interest": 0.02
  },
  "cash_rate_pct": 3.87

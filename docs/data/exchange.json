@@ -1,5 +1,5 @@
 {
- "cash": 240.77642388395742,
+ "cash": 240.62449574813678,
  "positions": {},
  "closed": [
   {
@@ -65,8 +65,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1792723459003,
- "next_id": 16,
+ "last_ms": 1792723939128,
+ "next_id": 18,
  "orders": [
   {
    "id": "o13",
@@ -80,6 +80,32 @@
    "placed": 1792704859103,
    "expires": 1792791259103,
    "note": "Gold at new 30d low (4027), d1 RSI 31, h4 RSI 23; short a relief bounce into h1 ema20 (~4068) rather than the low. Shorts collect +21% APR funding. ~1.8R."
+  },
+  {
+   "id": "o16",
+   "symbol": "ETHUSDT",
+   "side": "short",
+   "qty": 0.127753,
+   "trigger": 2435,
+   "direction": "above",
+   "stop": 2472.0,
+   "tp": 2360.0,
+   "placed": 1792723939128,
+   "expires": 1792810339128,
+   "note": "Sell relief bounce in weakest major: ETH d1 RSI 41, 30d -10%, below h4 ema200 2582; trigger at h4 ema50 2437 retest, stop above 24h high 2446 + buffer, TP near 24h low 2357. ~2R."
+  },
+  {
+   "id": "o17",
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "qty": 0.00568691,
+   "trigger": 83050,
+   "direction": "above",
+   "stop": 82250.0,
+   "tp": 85000.0,
+   "placed": 1792723939128,
+   "expires": 1792810339128,
+   "note": "Regime-change catch: break of 24h high 82,939 after the bleed exhausted (h1 RSI reset, shorts stopped) targets 85k, below h4 ema200 83.45k as first hurdle. ~2.4R."
   }
  ],
  "order_events": [
@@ -184,7 +210,16 @@
   "PAXGUSDT": -9.22770833333e-07,
   "EURUSDT": 8.355970833333e-06
  },
- "carry": {},
+ "carry": {
+  "BONKUSDT": {
+   "notional": 50.69,
+   "opened": 1792723939128,
+   "earned": 0.0,
+   "fees": 0.15206999999999998,
+   "rate_at_open": 0.0003028710875,
+   "note": "BONK funding 265% APR (~0.73%/day) and was 108% APR 2h ago; break-even ~0.8 day on 0.6% round-trip. Price-neutral. Close when funding < 30% APR or negative."
+  }
+ },
  "carry_closed": [],
  "predictions": {
   "2589812": {
@@ -205,7 +240,7 @@
  "cash_rate": 0.0387,
  "income": {
   "funding": 0.022373826089039532,
-  "carry": 0.0,
-  "interest": 0.00462659617762974
+  "carry": -0.15206999999999998,
+  "interest": 0.004768460356956516
  }
 }
