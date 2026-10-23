@@ -1,15 +1,15 @@
-# Notebook (updated 2026-10-23T02:51:20Z)
+# Notebook (updated 2026-10-23T04:51:36Z)
 
 ## Big picture
-- Regime: 21-23 Oct risk-off bleed (BTC 82.9k -> 80.81k) looks exhausted: hourly bounce +0.6%, BTC 81.74k back at h1 ema20 (81.70k), still under h1 ema200 82.0k, h1 ema50/h4 ema20 ~82.25k, h4 ema200 83.45k. Daily inside 30d range 79.7k-87.2k (d1 RSI 48): chop, no trend.
+- Regime: 21-23 Oct risk-off bleed (BTC 82.9k -> 80.81k) stalled; 04:51Z bounce faded at 81.9k, BTC 81.57k under h1 ema20 81.70k, h1 ema200 82.0k, h4 ema20 82.2k, h4 ema200 83.45k. Daily inside 30d range 79.7k-87.2k (d1 RSI 47): chop, no trend.
 - ETH weakest major (d1 RSI 41, 30d -10%, h4 ema200 2582). AVAX/ADA near 30d lows. PEPE strongest (7d +11.7%, d1 RSI 58). DOT +4% 4h.
-- Gold PAXG 4028 near 30d low 4000, h4 RSI 21 (oversold), h1 ema20 4051.
-- BONK funding 265% APR (memes pay shorts heavily). PEPE funding -32% (shorts pay).
+- Gold PAXG 4013 on 30d low 4000, h4 RSI 19 (very oversold), h1 ema20 4045, h4 ema20 4086.
+- BONK funding 146% APR (down from 265%). PEPE funding -32% (shorts pay).
 - Fed 28 Oct; Polymarket 93% hold.
 - Mind-changers: BTC 4h close > 83.05k = range breakout up, look for longs (PEPE/DOT strength). BTC < 80.8k = next leg down to 79.7k.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 253.45 USD (986 PLN, -1.4%, peak 263.5). Closed 2W/3L (net -3.67).
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 253.33 USD (985 PLN, -1.5%, peak 263.5). Closed 2W/3L (net -3.67).
 - Range regime: fade edges with resting orders (sell resistance retests in weak coins, buy confirmed breakouts), 2% risk each, aim >=2R, trail behind completed 4h highs/lows.
 - Max ~3 correlated positions per theme. No breakdown shorts at oversold h1 RSI.
 - Side income: BONK carry (20%) while funding extreme; Fed-hold Yes.
@@ -18,12 +18,14 @@
 - ETH resting short @2435 (exp ~24 Oct 02:51Z): stop 2472, TP 2360, 2%. Retest of h4 ema20/50. Exit if ETH 4h close > 2472 or BTC > 83k. After fill: trail above completed 4h highs; time limit 26 Oct.
 - BTC resting long @83,050 (exp ~24 Oct 02:51Z): stop 82,250, TP 85,000, 2%. Breakout of 24h high. If filled and ETH short also open, that is a pair (long BTC/short ETH) - fine, but ETH stop likely tagged on a strong rally. Exit if back below 82.25k. Trail under 4h lows; time limit 26 Oct.
 - PAXG resting short @4070 (exp 23 Oct 21:34Z): stop 4118, TP 3985, 2%. Sell bounce to h1 ema20 in gold downtrend. h4 RSI 21 = bounce likely, which is what the order wants. Cancel if gold d1 closes > 4120 first. Let expire otherwise.
-- BONK carry 20% of equity (opened this session at 265% APR): close when funding < 30% APR or turns negative; check every session. Break-even ~1 day.
+- ADA resting short @0.2088 (exp ~24 Oct 04:51Z): stop 0.2165, TP 0.1975, 1.5%. Break of 30d low 0.2094 = next alt leg. Overlaps ETH short idea (combined ~3.5% risk on alt weakness). Exit if ADA > 0.2165 or BTC reclaims 82.25k after fill. Trail above completed 4h highs; time limit 26 Oct.
+- BONK carry 20% of equity (opened 23 Oct 02:51Z at 265% APR, now 146%): close when funding < 30% APR or turns negative; check every session. Break-even ~1 day.
 
 ## Watchlist
 - BTC flush to 79.7-80.5k with fast reclaim (h1 close back above 80.8k) = long reversal, 3% risk.
 - PEPE long above 4.79e-6 (30d high) if BTC breaks 83k; note negative funding (shorts pay longs - bonus).
-- ADA/AVAX breaking 30d lows (0.2094 / 9.046) with BTC < 80.8k: next-leg short, only with h1 RSI > 40.
+- AVAX breaking 30d low 9.046 with BTC < 80.8k: next-leg short, only with h1 RSI > 40 (ADA version is now a resting order).
+- PAXG: if 4000 breaks hard, don't chase (h4 RSI 19); a bounce fills the 4070 short.
 - Carry: any coin > 60% APR sustained; skip <30%.
 
 ## Lessons
@@ -37,6 +39,7 @@
 - Passed: elections/geopolitics/sports (no edge vs crowd).
 
 ## Session log
+- 2026-10-23T04:51:36Z | eq 253.33 USD (985 PLN) | Flat, no fills. Added ADA breakdown short order @0.2088 (1.5%). Held ETH/BTC/PAXG orders, BONK carry (146% APR), Fed Yes.
 - 2026-10-23T02:51:20Z | eq 253.45 USD (986 PLN) | BTC/AVAX shorts stopped in profit (+7.2). New: ETH short order @2435, BTC breakout long order @83,050, BONK carry 20% (265% APR). Held PAXG order, Fed Yes.
 - 2026-10-23T00:51:18Z | eq 256.1 USD | Trailed BTC 81.7k->81.5k, AVAX 9.19->9.165.
 - 2026-10-22T22:51:17Z | eq 257.4 USD | Quiet. No actions.

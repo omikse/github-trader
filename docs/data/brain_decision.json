@@ -1,18 +1,13 @@
 {
-  "id": "2026-10-23T02:51:20Z",
-  "decided_at": "2026-10-23T02:51:20Z",
+  "id": "2026-10-23T04:51:36Z",
+  "decided_at": "2026-10-23T04:51:36Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC/AVAX shorts trailed out in profit (+7.2 USD) on a +0.6% hourly bounce; BTC 81.74k back at h1 ema20 but still under h1 ema200 82.0k / h4 ema20 82.27k and h4 ema200 83.45k. Inside 79.7k-87.2k daily range: sell relief into resistance in weak ETH, buy only a real BTC breakout above the 24h high.",
-  "news": "No fresh market-moving crypto news found; Fed 28 Oct still priced ~93% hold.",
-  "watch_next": "ETH retest of 2422-2437 (h4 ema20/50) rejecting; BTC 83k breakout; BONK funding staying >60% APR; PAXG bounce to 4070.",
+  "market_view": "Quiet drift inside the range: BTC 81.57k, back under h1 ema20 (81.70k) after the overnight bounce faded at 81.9k; alts flat-to-weak, ETH 2396 under h4 ema20 2420. Gold PAXG 4013 sitting on 30d low 4000 with h4 RSI 19. No positions; three resting orders still match the plan. Data ~7 min old, engine fine.",
+  "news": "No fresh market-moving crypto headlines found; Fed 28 Oct hold still ~93% on Polymarket.",
+  "watch_next": "BTC break of 80.8k (ADA breakdown order may fill) vs reclaim of 82.25k toward the 83.05k breakout order; ETH bounce into 2435; BONK funding (146% APR, falling from 265%) - close carry if < 30%.",
   "actions": [
-    {"type": "entry_order", "symbol": "ETHUSDT", "side": "short", "trigger": 2435, "stop": 2472, "take_profit": 2360, "risk_pct": 0.02, "expires_hours": 24,
-      "reason": "Sell relief bounce in weakest major: ETH d1 RSI 41, 30d -10%, below h4 ema200 2582; trigger at h4 ema50 2437 retest, stop above 24h high 2446 + buffer, TP near 24h low 2357. ~2R.",
-      "invalidation": "ETH 4h close above 2472 / BTC reclaiming 83k = relief became reversal."},
-    {"type": "entry_order", "symbol": "BTCUSDT", "side": "long", "trigger": 83050, "stop": 82250, "take_profit": 85000, "risk_pct": 0.02, "expires_hours": 24,
-      "reason": "Regime-change catch: break of 24h high 82,939 after the bleed exhausted (h1 RSI reset, shorts stopped) targets 85k, below h4 ema200 83.45k as first hurdle. ~2.4R.",
-      "invalidation": "BTC back below 82.25k (h1 ema50/h4 ema20) after triggering = failed breakout."},
-    {"type": "carry_open", "symbol": "BONKUSDT", "size_pct": 0.2,
-      "reason": "BONK funding 265% APR (~0.73%/day) and was 108% APR 2h ago; break-even ~0.8 day on 0.6% round-trip. Price-neutral. Close when funding < 30% APR or negative."}
+    {"type": "entry_order", "symbol": "ADAUSDT", "side": "short", "trigger": 0.2088, "stop": 0.2165, "take_profit": 0.1975, "risk_pct": 0.015, "expires_hours": 24,
+      "reason": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea.",
+      "invalidation": "ADA reclaims 0.2165 / h4 ema20, or BTC reclaims 82.25k right after the break (failed breakdown)."}
   ]
 }
