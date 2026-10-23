@@ -88,11 +88,22 @@
    "reason": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R."
   }
  ],
- "last_closed_check_ms": 1792767192596,
+ "last_closed_check_ms": 1792767672508,
  "day": "2026-10-23",
  "day_start_equity": 256.8111239562878,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_cancelled",
+   "id": "o21",
+   "symbol": "DOTUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 1.2015,
+   "time": 1792767192596,
+   "detail": "cancelled by the brain"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 256.75460210303584,
@@ -102,11 +113,11 @@
    "qty": 0.008555222784739396,
    "stop": 81980.88692366854
   },
-  "last_t": 1792760400000,
+  "last_t": 1792764000000,
   "trades": 0,
   "wins": 0
  },
- "last_btc": 81730.8,
+ "last_btc": 81630.2,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -117,7 +128,8 @@
   "o11:filled",
   "o10:cancelled",
   "o9:expired",
-  "o19:filled"
+  "o19:filled",
+  "o21:cancelled"
  ],
  "last_decision_id": "2026-10-23T14:51:51Z",
  "cash_rate_day": "2026-10-23"
