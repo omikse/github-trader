@@ -1,16 +1,16 @@
 {
- "updated": "2026-10-23T08:49:53Z",
+ "updated": "2026-10-23T08:51:53Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.8886,
- "equity_pln": 996.18,
- "return_pct": -0.37,
+ "equity_pln": 996.58,
+ "return_pct": -0.33,
  "max_drawdown_pct": 3.8,
- "control_pln": 1004.46,
+ "control_pln": 1004.12,
  "control_trades": 0,
- "hodl_pln": 966.04,
+ "hodl_pln": 966.16,
  "positions": [
   {
    "symbol": "PEPEUSDT",
@@ -19,7 +19,7 @@
    "entry": 4.80144e-06,
    "mark": 4.94e-06,
    "upnl": 2.8622339200000084,
-   "stop": 4.56e-06,
+   "stop": 4.68e-06,
    "tp": 5.4e-06,
    "liq": null,
    "leverage": null,
@@ -98,37 +98,43 @@
  ],
  "trade_count": 5,
  "win_rate_pct": 40.0,
- "brain_calls_today": 4,
+ "brain_calls_today": 5,
  "last_decision": {
-  "time": "2026-10-23T06:53:36Z",
+  "time": "2026-10-23T08:51:53Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-23T06:52:21Z",
+  "decided_at": "2026-10-23T08:51:17Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 253.35,
-  "equity_pln": 985.17,
-  "events": [],
-  "market_view": "BTC 81.77k flat in the 80.8-82.4k box under h4 ema20 82.2k; no trend. PEPE is the clear leader (7d +14.6%, 4h +2.5%, 30d high 4.79e-6 close), ETH/ADA/AVAX weakest. Gold still pinned near 4000 support, h4 RSI 20.",
-  "watch_next": "Fills on ETH 2435 / BTC 83,050 / ADA 0.2088 / PAXG 4070 / PEPE 4.80e-6; BONK funding (close carry if < 30% APR); BTC break of 80.8k or 83.05k.",
-  "news": "No fresh market-moving crypto headlines found; Fed 28 Oct still priced ~93% hold.",
-  "actions": [
+  "equity_usd": 256.28,
+  "equity_pln": 996.58,
+  "events": [
    {
-    "type": "entry_order",
+    "type": "order_filled",
+    "id": "o19",
     "symbol": "PEPEUSDT",
     "side": "long",
+    "status": "filled",
     "trigger": 4.8e-06,
-    "stop": 4.56e-06,
+    "time": 1792744500000,
+    "detail": "filled at 4.80144e-06"
+   }
+  ],
+  "market_view": "Majors still chopping in their 24h boxes (BTC 80.8k-82.1k). PEPE broke its 30d high and ran +7% in the last hour to 4.95e-6 (h1 RSI 84), filling our breakout long; memes lead, ETH/ADA/AVAX lag.",
+  "watch_next": "PEPE holding above the 4.79e-6 breakout on 4h closes (trail under completed 4h lows, BE+buffer above 5.1e-6); BTC 83.05k breakout or 80.8k break; BONK funding level.",
+  "news": "No fresh market-moving headlines found; Fed 28 Oct still ~93% hold.",
+  "actions": [
+   {
+    "type": "move_stop",
+    "symbol": "PEPEUSDT",
+    "stop": 4.68e-06,
     "take_profit": 5.4e-06,
-    "risk_pct": 0.02,
-    "expires_hours": 48,
-    "reason": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R.",
-    "invalidation": "Breakout fails back below 4.6e-6, or BTC loses 80.8k after fill.",
+    "reason": "Breakout filled and ran to 4.95e-6; raise stop from 4.56 to 4.68e-6 (below the 4.79 breakout level and current 4h low 4.616 area, ~3 h1 ATR) to halve open risk while leaving room for a retest.",
     "result": "done",
-    "detail": "long 20657000 when price goes above 4.8e-06 (risk 2.0%, stop 4.56e-06, target 5.4e-06, expires in 48h) ok"
+    "detail": "stop 4.68e-06, target 5.4e-06"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 240.64058,
+ "cash_usd": 240.640607,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
