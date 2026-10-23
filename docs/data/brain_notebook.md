@@ -1,24 +1,24 @@
-# Notebook (updated 2026-10-22T22:51:17Z)
+# Notebook (updated 2026-10-23T00:51:18Z)
 
 ## Big picture
-- Regime: slow risk-off bleed since 21 Oct evening. BTC 84.8k -> 24h low 80,814, now 81.39k, below h1 ema20 (81.9k)/ema200 (82.0k) and h4 ema200 (83.45k). Daily inside 30d range 79.7k-87.3k (d1 RSI 46): grind, not crash.
+- Regime: slow risk-off bleed since 21 Oct evening, stalling into 81.0-81.5k chop overnight 23 Oct. BTC 24h low 80,814, now 81.35k, below h1 ema20 (81.75k)/ema200 (82.0k) and h4 ema200 (83.45k). Daily inside 30d range 79.7k-87.3k (d1 RSI 46): grind, not crash.
 - Alts weaker than BTC: AVAX 9.135 (30d low 9.046), ADA 0.212 (30d low 0.2094), ETH 2391 (d1 RSI 39). PEPE best 7d (+7.8%, d1 RSI 56) but -6% 24h.
 - h1 RSI reset from ~20 to 32-40 with a small +0.5% hourly bounce: squeeze risk lower, but bounce could extend to h1 ema20.
-- Gold PAXG 4035 at new 30d low (4027), h4 RSI 23. EUR flat 1.1215.
+- Gold PAXG 4025 at new 30d low (4024), h4 RSI 20, h1 ema20 4058. EUR flat 1.1215.
 - Fed meets 28 Oct; Polymarket ~93% hold, ~6% hike.
 - Mind-changers: BTC reclaiming 82.0k then 83.45k = bleed over, stop shorting. BTC 4h close below 80.8k = leg to 80.5k (TP) / 79.7k (30d low).
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 257.4 USD (1001 PLN, +0.1%, peak 263.5). Closed 0W/3L (-10.85), open shorts +11.5 USD unrealized, stops locked in profit.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 256.1 USD (996 PLN, -0.4%, peak 263.5). Closed 0W/3L (-10.85), open shorts +10.4 USD unrealized, stops lock ~8 USD.
 - Trade with the 4h/daily direction, enter on breakouts or retests, 2-3% risk per idea, aim >=2R, trail stops behind completed 4h highs.
 - Max ~3 correlated positions on one theme. No new breakdown shorts at oversold h1 RSI.
 - When the leg ends (flush+reclaim or BTC >82k), flip to longs in relative-strength coins instead of re-shorting.
 - Need a first real winner: let BTC/AVAX run to TP instead of tightening into noise.
 
 ## Active plans
-- BTC short (entry 82,375): stop 81,700 (above last completed 4h high 81,666, locks ~4.5 USD), TP 80,500. Next trail: when 20-24Z 4h candle completes (high so far 81,465), move stop to ~81,500. Exit if BTC 1h closes > 82.0k. Time limit 24 Oct.
-- AVAX short (entry 9.297): stop 9.19 (above 4h high 9.187), TP 8.75. Sitting on 30d low 9.046: break = next leg. Next trail: ~9.165 after 20-24Z 4h candle completes (high 9.159). Time limit 24 Oct.
-- PAXG resting short @4070 (new 21:33Z, exp 23 Oct 21:33Z): stop 4118, TP 3985, 2% risk. Thesis: sell relief bounce in gold downtrend at h1 ema20; funding pays shorts. Cancel only if gold d1 closes > 4120 before triggering (reversal, not bounce). After fill: trail above completed 4h highs.
+- BTC short (entry 82,375): stop 81,500 (above completed 20-24Z 4h high 81,465, locks ~5.8 USD), TP 80,500. Next trail: above 00-04Z 4h high once complete (so far 81,360) if <81,450. Exit if BTC 1h closes > 82.0k. Time limit 24 Oct.
+- AVAX short (entry 9.297): stop 9.165 (above 20-24Z 4h high 9.159, locks ~2.5 USD), TP 8.75. Sitting on 30d low 9.046: break = next leg. Next trail: above 00-04Z 4h high once complete (so far 9.131). Time limit 24 Oct.
+- PAXG resting short @4070 (placed 22 Oct 21:33Z, exp 23 Oct 21:34Z; h1 ema20 now 4058, so fill needs a real bounce - let it expire if not): stop 4118, TP 3985, 2% risk. Thesis: sell relief bounce in gold downtrend at h1 ema20; funding pays shorts. Cancel only if gold d1 closes > 4120 before triggering (reversal, not bounce). After fill: trail above completed 4h highs.
 - LTC short stopped at breakeven 21:17Z (-0.29). Not re-entered.
 
 ## Watchlist
@@ -34,9 +34,10 @@
 ## Predictions
 - Fed holds 28 Oct (market 2589812, Yes): bought ~0.94, stake 5% (~12.8 USD). My P ~97%: consensus hold, hike chatter moved to December, hike odds -22pts in a week. Resolves ~28-29 Oct. Raise/hold to resolution unless hike odds revive >15% (then sell). If price >=0.98 early, sell is fine (edge used up).
 - Passed: BTC >=85k in Oct at 0.44 (~fair, and it hedges my shorts only weakly); elections/geopolitics (no edge vs crowd).
-- Carry: best funding LINK 20.7% / PAXG 21% APR = ~0.057%/day -> break-even ~10.5 days, and funding flips fast. Not worth it vs 3.87% idle interest. Revisit if any coin >60% APR sustained.
+- Carry: BONK funding 108% APR at 00:44Z 23 Oct (~0.3%/day, break-even ~2 days) - meme funding flips fast; open ~20% carry only if still >60% next session. Older: LINK 20.7% / PAXG 21% APR = ~0.057%/day -> break-even ~10.5 days, and funding flips fast. Not worth it vs 3.87% idle interest. Revisit if any coin >60% APR sustained.
 
 ## Session log
+- 2026-10-23T00:51:18Z | eq 256.1 USD (996 PLN) | BTC chop 81.35k. Trailed BTC stop 81.7k->81.5k, AVAX 9.19->9.165 per plan. Held PAXG order, Fed Yes (0.93).
 - 2026-10-22T22:51:17Z | eq 257.4 USD (1001 PLN) | Quiet hour, BTC 81.2k. Held BTC/AVAX shorts, PAXG order, Fed Yes. No actions; trail after 4h close.
 - 2026-10-22T21:34:06Z | eq 255.6 USD | Same snapshot. Bought Fed-hold Yes 5%. Re-sent PAXG order. Carry checked, skipped.
 - 2026-10-22T21:33:02Z | eq 255.6 USD (994 PLN) | LTC stopped at BE. Kept BTC/AVAX shorts. New PAXG resting short @4070.
