@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-23T21:24:42Z",
+ "updated": "2026-10-23T21:32:42Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9247,
- "equity_pln": 1002.01,
- "return_pct": -0.71,
+ "equity_pln": 1003.95,
+ "return_pct": -0.52,
  "max_drawdown_pct": 3.8,
- "control_pln": 1026.25,
+ "control_pln": 1028.61,
  "control_trades": 0,
- "hodl_pln": 970.58,
+ "hodl_pln": 969.74,
  "positions": [
   {
    "symbol": "PEPEUSDT",
    "side": "short",
    "size": 14917000,
    "entry": 4.7485750000000005e-06,
-   "mark": 4.657e-06,
-   "upnl": 1.3660242750000133,
+   "mark": 4.634e-06,
+   "upnl": 1.7091152750000076,
    "stop": 4.88e-06,
    "tp": 4.4e-06,
    "liq": null,
    "leverage": null,
    "opened": 1792776600000,
    "reason": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding).",
-   "upnl_pln": 5.36
+   "upnl_pln": 6.71
   }
  ],
  "closed_trades": [
@@ -148,7 +148,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 241.387862,
+ "cash_usd": 241.388002,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -226,20 +226,20 @@
   }
  ],
  "balance_warning": false,
- "other_value_usd": 12.540187,
+ "other_value_usd": 12.676494,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.92,
+   "mark": 0.93,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 12.5402,
-   "pnl": -0.3544,
+   "value": 12.6765,
+   "pnl": -0.2181,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],
