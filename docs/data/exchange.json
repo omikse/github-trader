@@ -1,6 +1,18 @@
 {
- "cash": 241.41851975429617,
- "positions": {},
+ "cash": 241.3797022886275,
+ "positions": {
+  "PEPEUSDT": {
+   "side": "short",
+   "qty": 14917000,
+   "entry": 4.7485750000000005e-06,
+   "stop": 5e-06,
+   "tp": 4.4e-06,
+   "opened": 1792776600000,
+   "entry_fee": 0.03895897130125001,
+   "mark": 4.762e-06,
+   "note": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding)."
+  }
+ },
  "closed": [
   {
    "id": "t5",
@@ -78,7 +90,7 @@
   }
  ],
  "fills": [],
- "last_ms": 1792776265534,
+ "last_ms": 1792776745538,
  "next_id": 25,
  "orders": [
   {
@@ -132,19 +144,6 @@
    "placed": 1792731156442,
    "expires": 1792817556442,
    "note": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
-  },
-  {
-   "id": "o23",
-   "symbol": "PEPEUSDT",
-   "side": "short",
-   "qty": 14917000,
-   "trigger": 4.75e-06,
-   "direction": "below",
-   "stop": 5e-06,
-   "tp": 4.4e-06,
-   "placed": 1792767192596,
-   "expires": 1792853592596,
-   "note": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding)."
   },
   {
    "id": "o24",
@@ -259,6 +258,15 @@
    "trigger": 1.2015,
    "time": 1792767192596,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o23",
+   "symbol": "PEPEUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 4.75e-06,
+   "time": 1792776600000,
+   "detail": "filled at 4.74858e-06"
   }
  ],
  "funding_rates": {
@@ -315,6 +323,6 @@
  "income": {
   "funding": 0.021399868584075908,
   "carry": -0.21395110481479168,
-  "interest": 0.018262670406078447
+  "interest": 0.01840417603860271
  }
 }
