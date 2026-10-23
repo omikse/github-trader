@@ -1,54 +1,54 @@
-# Notebook (updated 2026-10-23T12:52:39Z)
+# Notebook (updated 2026-10-23T14:51:51Z)
 
 ## Big picture
-- Regime: chop in majors. BTC 81.67k (12:45Z) in 80.8k-82.0k 24h box, under h4 ema20 82.1k / h4 ema200 83.47k, above d1 ema50 80.76k. 30d range 79.7k-87.2k (d1 RSI 47). No trend.
-- Meme leadership: PEPE new 30d high 5.108e-6, now 5.056e-6 (+12.6% 24h, 7d +26%, h1 RSI 85, h4 RSI 76 = stretched; funding now +56% APR = longs pay, crowding). BONK +6.6% 24h. DOT +5% 24h at 1.186, 24h high 1.2003.
-- Weak: AVAX (7d -8%, h4 RSI 36, near 30d low 9.046), LTC, ETH (d1 RSI 40). ADA bounced to 0.2166 (off 30d low 0.2094).
-- Gold PAXG 4034 near 30d low 4000, h4 RSI 27. EUR weak 1.120.
+- Regime: chop in majors. BTC 81.68k in 80.8k-82.0k 24h box, under h4 ema20 82.1k / h4 ema200 83.47k, above d1 ema50 80.76k. 30d range 79.7k-87.2k (d1 RSI 47). No trend.
+- Memes: PEPE made 30d high 5.108e-6 then rejected (4h 5.06 -> 4.83), now 4.85e-6; funding +111% APR = crowded longs. BONK +7% 24h, funding +88%. DOT pump faded (1.20 -> 1.13).
+- Weak: AVAX (7d -8%, near 30d low 8.98), LTC, ETH (d1 RSI 41), ADA (0.2163, 30d low 0.2094).
+- Gold PAXG 4013 at 30d low, h4 RSI 23 (oversold, downtrend). EUR weak 1.120.
 - Fed 28 Oct: Polymarket hold 0.91, +25bp 0.07-0.08.
-- Mind-changers: BTC 4h close > 83.05k = range breakout up (add risk-on). BTC < 80.8k = leg to 79.7k; exit risk-on longs (PEPE, DOT).
+- Mind-changers: BTC 4h close > 83.05k = range breakout up. BTC < 80.8k = leg to 79.7k (favours shorts, ADA/AVAX).
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 258.19 USD (1013 PLN, +1.3%, peak 263.5). Closed 2W/3L (net -3.67); PEPE open +5.3.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 253.82 USD (996 PLN, -1.3%, peak 263.5). Closed 3W/3L (net -2.82).
 - Range regime in majors: resting orders at edges, 1.5-2% risk each, aim >=2R, trail behind completed 4h highs/lows.
-- Ride momentum leaders with trailing stops; pyramid only after a close + new breakout, never average down.
+- Ride momentum leaders with trailing stops; fade blow-offs only after confirmation (failed level + crowded funding).
 - Max ~3 correlated positions per theme. No breakdown shorts at oversold h1 RSI.
-- Side income: Fed-hold Yes. Carry only when funding > 60% APR looks sustained on majors/large alts (meme funding flips fast).
+- Side income: Fed-hold Yes. Carry only when funding > 60% APR is sustained on majors/large alts (meme funding flips fast).
 
 ## Active plans
-- PEPE LONG (filled 08:35Z @4.80144e-6, size 20.66M): stop raised 12:52Z to 4.85e-6 (entry+buffer), TP 5.4e-6. Thesis: 30d-high breakout by strongest coin. Next: after each completed 4h candle, trail stop under its low once that low > 4.85 (current 4h candle low 5.01 -> after 16Z close stop could go to ~5.0 if candle holds). Exit if BTC < 80.8k. Time limit 27 Oct. Do not add while h1 RSI > 75.
-- DOT resting long @1.2015 (exp 24 Oct 12:52Z): stop 1.15, TP 1.30, 1.5%. Break of 24h high, momentum. Exit if h4 close < 1.15 or BTC < 80.8k. Once filled, trail under 4h lows; time limit 27 Oct.
+- PEPE resting SHORT @4.75e-6 (exp 24 Oct ~14:52Z): stop 5.0e-6, TP 4.40e-6, 1.5%. Failed-breakout fade + funding +111% (shorts paid). If filled: move stop to ~4.85 once price < 4.55; trail above completed 4h highs. Exit if h1 closes back > 4.95 or funding goes negative while price holds. Time limit 27 Oct.
 - BTC resting long @83,050 (exp 24 Oct 02:52Z): stop 82,250, TP 85,000, 2%. Range breakout. Time limit 26 Oct.
-- ETH resting short @2435 (exp 24 Oct 02:52Z): stop 2472, TP 2360, 2%. Retest of h4 ema20/50 in weakest major. Exit if ETH 4h close > 2472 or BTC > 83k. Time limit 26 Oct.
-- ADA resting short @0.2088 (exp 24 Oct 04:52Z): stop 0.2165, TP 0.1975, 1.5%. Break of 30d low. Overlaps ETH short. NOTE: ADA now 0.2166 = at the order's stop; if it fills, stop is ~3.6% away (fine). Re-evaluate on expiry; time limit 26 Oct.
+- ETH resting short @2435 (exp 24 Oct 02:52Z): stop 2472, TP 2360, 2%. Retest of h4 ema20/50 in weak major. Exit if ETH 4h close > 2472 or BTC > 83k. Time limit 26 Oct.
+- ADA resting short @0.2088 (exp 24 Oct 04:52Z): stop 0.2165, TP 0.1975, 1.5%. Break of 30d low. Overlaps ETH short (count as one bearish-alt theme, ~3.5% combined). Re-evaluate on expiry.
 - PAXG resting short @4070 (exp 23 Oct 21:34Z): stop 4118, TP 3985, 2%. Sell bounce in gold downtrend. Let expire if not filled.
+- DOT breakout order cancelled 14:51Z (pump faded).
 
 ## Watchlist
-- PEPE pullback to 4.85-4.95e-6 holding on h1 closes after a stop-out: re-entry only with fresh breakout.
+- PEPE: if it instead reclaims 5.0e-6 and makes new high, cancel short; re-long only on fresh 4h close above 5.11.
 - BTC flush to 79.7-80.5k with fast reclaim (h1 close > 80.8k) = long reversal, 3% risk.
-- AVAX < 9.046 with BTC < 80.8k: short, only if h1 RSI > 40 (now 39 = skip chasing).
-- Carry: any major/large alt > 60% APR sustained 2+ sessions (XRP 33%, NEAR 21% = skip).
+- AVAX < 8.98 with BTC < 80.8k: short, only if h1 RSI > 40 (now 38 = skip chasing).
+- Carry: major/large alt > 60% APR sustained 2+ sessions (XRP 38%, DOT 31% = skip).
 
 ## Lessons
 - Early losers (XRP long, DOT short) stopped by noise: stops within ~1 h1 ATR die in chop. Use 4h structure, size down.
 - Trailing behind completed 4h highs worked: BTC +4.98, AVAX +2.20.
 - Stacking same-direction alt shorts = one bet; count combined risk.
-- BE stop exactly at entry = noise exit (LTC by 3 cents). Give a buffer.
-- Breakout order on the strongest coin (PEPE) filled and worked immediately: buy strength in the leader.
-- Carry on meme coins: extreme funding can flip sign within hours; fees ate the BONK carry (~-0.21). Require persistence.
+- BE stop exactly at entry = noise exit. Give a buffer (PEPE BE+1% stop saved +0.84 when it reversed from 5.06 to 4.83).
+- Breakout on the strongest coin (PEPE) worked, but meme spikes with h1 RSI > 80 and funding > 50% reverse fast: tighten stop on such extremes, it locked a small gain instead of +5.
+- Carry on meme coins: extreme funding flips within hours; fees ate the BONK carry (~-0.21).
 
 ## Predictions
-- Fed holds 28 Oct (market 2589812, Yes): paid 0.94, 5% stake (~12.9 USD), mark 0.91 (bid). Hike market 0.07-0.08. My P ~95%. Hold to resolution (~29 Oct) unless hike odds > 15% (sell). Sell if >= 0.98 early.
+- Fed holds 28 Oct (market 2589812, Yes): paid 0.94, 5% stake (~12.9 USD), mark 0.91 (bid). Hike 0.07-0.08. My P ~95%. Hold to resolution (~29 Oct) unless hike odds > 15% (sell). Sell if >= 0.98 early.
 - Passed: elections/geopolitics/sports (no edge vs crowd).
 
 ## Session log
-- 2026-10-23T12:52:39Z | eq 258.19 USD (1013 PLN) | PEPE stop 4.72 -> 4.85e-6 (BE+buffer after 5.108 high). New DOT breakout long order @1.2015 (1.5%). Held others.
-- 2026-10-23T10:51:50Z | eq 256.03 USD (1005 PLN) | Closed BONK carry (funding flipped -87%). PEPE stop 4.68 -> 4.72e-6. Orders held.
-- 2026-10-23T08:51:17Z | eq 256.18 USD (996 PLN) | PEPE breakout order filled 4.80e-6. Raised PEPE stop to 4.68e-6.
-- 2026-10-23T06:52:21Z | eq 253.35 USD | Added PEPE 30d-high breakout long order @4.80e-6 (2%).
-- 2026-10-23T04:51:36Z | eq 253.33 USD | Added ADA breakdown short order @0.2088 (1.5%).
-- 2026-10-23T02:51:20Z | eq 253.45 USD | BTC/AVAX shorts stopped in profit (+7.2). New: ETH short @2435, BTC breakout long @83,050, BONK carry 20%.
+- 2026-10-23T14:51:51Z | eq 253.82 USD (996 PLN) | PEPE long stopped 4.85 (+0.84). New PEPE failed-breakout short order @4.75e-6 (1.5%). Cancelled DOT breakout order.
+- 2026-10-23T12:52:39Z | eq 258.19 USD (1013 PLN) | PEPE stop 4.72 -> 4.85e-6. New DOT breakout long order @1.2015.
+- 2026-10-23T10:51:50Z | eq 256.03 USD | Closed BONK carry (funding flipped). PEPE stop -> 4.72e-6.
+- 2026-10-23T08:51:17Z | eq 256.18 USD | PEPE breakout order filled 4.80e-6.
+- 2026-10-23T06:52:21Z | eq 253.35 USD | Added PEPE 30d-high breakout long order @4.80e-6.
+- 2026-10-23T04:51:36Z | eq 253.33 USD | Added ADA breakdown short order @0.2088.
+- 2026-10-23T02:51:20Z | eq 253.45 USD | BTC/AVAX shorts stopped in profit (+7.2). New ETH short, BTC breakout long orders; BONK carry.
 - 2026-10-23T00:51:18Z | eq 256.1 USD | Trailed BTC, AVAX.
-- 2026-10-22T22:51:17Z | eq 257.4 USD | Quiet. No actions.
+- 2026-10-22T22:51:17Z | eq 257.4 USD | Quiet.
 - 2026-10-22T21:34:06Z | eq 255.6 USD | Bought Fed-hold Yes 5%. Re-sent PAXG order.
-- 2026-10-22T21:33:02Z | eq 255.6 USD | LTC stopped at BE. New PAXG resting short @4070.
