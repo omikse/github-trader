@@ -1,5 +1,5 @@
 {
- "cash": 240.65324103859587,
+ "cash": 240.65333896803492,
  "positions": {},
  "closed": [
   {
@@ -65,8 +65,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1792730736355,
- "next_id": 18,
+ "last_ms": 1792731156442,
+ "next_id": 19,
  "orders": [
   {
    "id": "o13",
@@ -106,6 +106,19 @@
    "placed": 1792723939128,
    "expires": 1792810339128,
    "note": "Regime-change catch: break of 24h high 82,939 after the bleed exhausted (h1 RSI reset, shorts stopped) targets 85k, below h4 ema200 83.45k as first hurdle. ~2.4R."
+  },
+  {
+   "id": "o18",
+   "symbol": "ADAUSDT",
+   "side": "short",
+   "qty": 479.2,
+   "trigger": 0.2088,
+   "direction": "below",
+   "stop": 0.2165,
+   "tp": 0.1975,
+   "placed": 1792731156442,
+   "expires": 1792817556442,
+   "note": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
   }
  ],
  "order_events": [
@@ -241,6 +254,6 @@
  "income": {
   "funding": 0.022373826089039532,
   "carry": -0.12490918556570832,
-  "interest": 0.006352936381624633
+  "interest": 0.0064508658206592386
  }
 }

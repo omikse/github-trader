@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T04:45:36Z",
+ "updated": "2026-10-23T04:52:36Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -8,9 +8,9 @@
  "equity_pln": 985.1,
  "return_pct": -1.48,
  "max_drawdown_pct": 3.8,
- "control_pln": 1009.8,
+ "control_pln": 1010.11,
  "control_trades": 0,
- "hodl_pln": 964.14,
+ "hodl_pln": 964.03,
  "positions": [],
  "closed_trades": [
   {
@@ -82,88 +82,37 @@
  ],
  "trade_count": 5,
  "win_rate_pct": 40.0,
- "brain_calls_today": 2,
+ "brain_calls_today": 3,
  "last_decision": {
-  "time": "2026-10-23T02:52:19Z",
+  "time": "2026-10-23T04:52:36Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-23T02:51:20Z",
+  "decided_at": "2026-10-23T04:51:36Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 253.45,
-  "equity_pln": 985.58,
-  "events": [
-   {
-    "type": "position_closed",
-    "id": "t14",
-    "symbol": "AVAXUSDT",
-    "side": "short",
-    "qty": 18.741,
-    "entry": 9.297210000000002,
-    "exit": 9.1695825,
-    "pnl": 2.2015,
-    "time": 1792719900000,
-    "why": "stop",
-    "opened": 1792654920000,
-    "reason": ""
-   },
-   {
-    "type": "position_closed",
-    "id": "t15",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "qty": 0.00669071,
-    "entry": 82375.28,
-    "exit": 81540.75,
-    "pnl": 4.9804,
-    "time": 1792719960000,
-    "why": "stop",
-    "opened": 1792651560000,
-    "reason": ""
-   }
-  ],
-  "market_view": "BTC/AVAX shorts trailed out in profit (+7.2 USD) on a +0.6% hourly bounce; BTC 81.74k back at h1 ema20 but still under h1 ema200 82.0k / h4 ema20 82.27k and h4 ema200 83.45k. Inside 79.7k-87.2k daily range: sell relief into resistance in weak ETH, buy only a real BTC breakout above the 24h high.",
-  "watch_next": "ETH retest of 2422-2437 (h4 ema20/50) rejecting; BTC 83k breakout; BONK funding staying >60% APR; PAXG bounce to 4070.",
-  "news": "No fresh market-moving crypto news found; Fed 28 Oct still priced ~93% hold.",
+  "equity_usd": 253.33,
+  "equity_pln": 985.1,
+  "events": [],
+  "market_view": "Quiet drift inside the range: BTC 81.57k, back under h1 ema20 (81.70k) after the overnight bounce faded at 81.9k; alts flat-to-weak, ETH 2396 under h4 ema20 2420. Gold PAXG 4013 sitting on 30d low 4000 with h4 RSI 19. No positions; three resting orders still match the plan. Data ~7 min old, engine fine.",
+  "watch_next": "BTC break of 80.8k (ADA breakdown order may fill) vs reclaim of 82.25k toward the 83.05k breakout order; ETH bounce into 2435; BONK funding (146% APR, falling from 265%) - close carry if < 30%.",
+  "news": "No fresh market-moving crypto headlines found; Fed 28 Oct hold still ~93% on Polymarket.",
   "actions": [
    {
     "type": "entry_order",
-    "symbol": "ETHUSDT",
+    "symbol": "ADAUSDT",
     "side": "short",
-    "trigger": 2435,
-    "stop": 2472,
-    "take_profit": 2360,
-    "risk_pct": 0.02,
+    "trigger": 0.2088,
+    "stop": 0.2165,
+    "take_profit": 0.1975,
+    "risk_pct": 0.015,
     "expires_hours": 24,
-    "reason": "Sell relief bounce in weakest major: ETH d1 RSI 41, 30d -10%, below h4 ema200 2582; trigger at h4 ema50 2437 retest, stop above 24h high 2446 + buffer, TP near 24h low 2357. ~2R.",
-    "invalidation": "ETH 4h close above 2472 / BTC reclaiming 83k = relief became reversal.",
+    "reason": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea.",
+    "invalidation": "ADA reclaims 0.2165 / h4 ema20, or BTC reclaims 82.25k right after the break (failed breakdown).",
     "result": "done",
-    "detail": "short 0.127753 when price goes above 2435 (risk 2.0%, stop 2472.0, target 2360.0, expires in 24h) ok"
-   },
-   {
-    "type": "entry_order",
-    "symbol": "BTCUSDT",
-    "side": "long",
-    "trigger": 83050,
-    "stop": 82250,
-    "take_profit": 85000,
-    "risk_pct": 0.02,
-    "expires_hours": 24,
-    "reason": "Regime-change catch: break of 24h high 82,939 after the bleed exhausted (h1 RSI reset, shorts stopped) targets 85k, below h4 ema200 83.45k as first hurdle. ~2.4R.",
-    "invalidation": "BTC back below 82.25k (h1 ema50/h4 ema20) after triggering = failed breakout.",
-    "result": "done",
-    "detail": "long 0.00568691 when price goes above 83050 (risk 2.0%, stop 82250.0, target 85000.0, expires in 24h) ok"
-   },
-   {
-    "type": "carry_open",
-    "symbol": "BONKUSDT",
-    "size_pct": 0.2,
-    "reason": "BONK funding 265% APR (~0.73%/day) and was 108% APR 2h ago; break-even ~0.8 day on 0.6% round-trip. Price-neutral. Close when funding < 30% APR or negative.",
-    "result": "done",
-    "detail": "carry on BONKUSDT: 50.69 USD, cost 0.15 USD, funding now 265.3%/yr ok"
+    "detail": "short 479.2 when price goes below 0.2088 (risk 1.5%, stop 0.2165, target 0.1975, expires in 24h) ok"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 240.653241,
+ "cash_usd": 240.653339,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -227,6 +176,17 @@
    "qty": 0.00568691,
    "expires": 1792810339128,
    "note": "Regime-change catch: break of 24h high 82,939 after the bleed exhausted (h1 RSI reset, shorts stopped) targets 85k, below h4 ema200 83.45k as first hurdle. ~2.4R."
+  },
+  {
+   "symbol": "ADAUSDT",
+   "side": "short",
+   "trigger": 0.2088,
+   "direction": "below",
+   "stop": 0.2165,
+   "tp": 0.1975,
+   "qty": 479.2,
+   "expires": 1792817556442,
+   "note": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
   }
  ],
  "balance_warning": false,
@@ -265,7 +225,7 @@
  "income_pln": {
   "funding": 0.09,
   "carry": -0.49,
-  "interest": 0.02
+  "interest": 0.03
  },
  "cash_rate_pct": 3.87
 }
