@@ -1,46 +1,46 @@
 {
- "updated": "2026-10-23T22:52:42Z",
+ "updated": "2026-10-23T23:00:42Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9247,
- "equity_pln": 1009.59,
- "return_pct": 0.04,
+ "equity_pln": 1008.13,
+ "return_pct": -0.11,
  "max_drawdown_pct": 3.8,
- "control_pln": 1047.46,
+ "control_pln": 1045.32,
  "control_trades": 0,
- "hodl_pln": 963.04,
+ "hodl_pln": 963.8,
  "positions": [
   {
    "symbol": "PEPEUSDT",
    "side": "short",
    "size": 14917000,
    "entry": 4.7485750000000005e-06,
-   "mark": 4.547e-06,
-   "upnl": 3.0068942750000103,
+   "mark": 4.546e-06,
+   "upnl": 3.021811275000005,
    "stop": 4.78e-06,
    "tp": 4.4e-06,
    "liq": null,
    "leverage": null,
    "opened": 1792776600000,
    "reason": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding).",
-   "upnl_pln": 11.8
+   "upnl_pln": 11.86
   },
   {
    "symbol": "ADAUSDT",
    "side": "short",
    "size": 479.2,
    "entry": 0.20873736,
-   "mark": 0.207908,
-   "upnl": 0.3974293120000006,
+   "mark": 0.208758,
+   "upnl": -0.009890687999994463,
    "stop": 0.2165,
    "tp": 0.1975,
    "liq": null,
    "leverage": null,
    "opened": 1792795800000,
    "reason": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea.",
-   "upnl_pln": 1.56
+   "upnl_pln": -0.04
   }
  ],
  "closed_trades": [
@@ -173,7 +173,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 241.333565,
+ "cash_usd": 241.331099,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -182,7 +182,7 @@
    "side": "short",
    "entry": 81905.92655,
    "qty": 0.008555222784739396,
-   "stop": 81910.17684570582
+   "stop": 81503.58069146986
   }
  },
  "pairs": {
@@ -264,7 +264,7 @@
   }
  ],
  "income_pln": {
-  "funding": 0.1,
+  "funding": 0.09,
   "carry": -0.84,
   "interest": 0.09
  },
