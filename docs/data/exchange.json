@@ -1,15 +1,15 @@
 {
- "cash": 241.37960736071736,
+ "cash": 241.37974680336737,
  "positions": {
   "PEPEUSDT": {
    "side": "short",
    "qty": 14917000,
    "entry": 4.7485750000000005e-06,
-   "stop": 5e-06,
+   "stop": 4.92e-06,
    "tp": 4.4e-06,
    "opened": 1792776600000,
    "entry_fee": 0.03895897130125001,
-   "mark": 4.746e-06,
+   "mark": 4.749e-06,
    "note": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding)."
   }
  },
@@ -90,7 +90,7 @@
   }
  ],
  "fills": [],
- "last_ms": 1792781065550,
+ "last_ms": 1792781545687,
  "next_id": 25,
  "orders": [
   {
@@ -144,19 +144,6 @@
    "placed": 1792731156442,
    "expires": 1792817556442,
    "note": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
-  },
-  {
-   "id": "o24",
-   "symbol": "BONKUSDT",
-   "side": "long",
-   "qty": 17016000,
-   "trigger": 3.4e-06,
-   "direction": "above",
-   "stop": 3.18e-06,
-   "tp": 3.8e-06,
-   "placed": 1792774345657,
-   "expires": 1792860745657,
-   "note": "Short-squeeze breakout: BONK +9.6% 24h, h1/h4 RSI ~70, funding -38% APR (shorts crowded and paying longs). Entry above 24h high 3.359e-6; stop below the 3.2e-6 consolidation; TP 3.80e-6 toward 30d high 4.10e-6."
   }
  ],
  "order_events": [
@@ -267,6 +254,15 @@
    "trigger": 4.75e-06,
    "time": 1792776600000,
    "detail": "filled at 4.74858e-06"
+  },
+  {
+   "id": "o24",
+   "symbol": "BONKUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 3.4e-06,
+   "time": 1792781545687,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -323,6 +319,6 @@
  "income": {
   "funding": 0.02005043228736227,
   "carry": -0.21395110481479168,
-  "interest": 0.01965868442530184
+  "interest": 0.019798127075304775
  }
 }
