@@ -1,15 +1,15 @@
 {
- "cash": 240.52775381558436,
+ "cash": 240.52777103659787,
  "positions": {
   "PEPEUSDT": {
    "side": "long",
    "qty": 20657000,
    "entry": 4.80144e-06,
-   "stop": 4.72e-06,
+   "stop": 4.85e-06,
    "tp": 5.4e-06,
    "opened": 1792744500000,
    "entry_fee": 0.054550840344,
-   "mark": 5.041e-06,
+   "mark": 5.048e-06,
    "note": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R."
   }
  },
@@ -77,8 +77,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1792759973879,
- "next_id": 21,
+ "last_ms": 1792760033956,
+ "next_id": 22,
  "orders": [
   {
    "id": "o13",
@@ -131,6 +131,19 @@
    "placed": 1792731156442,
    "expires": 1792817556442,
    "note": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
+  },
+  {
+   "id": "o21",
+   "symbol": "DOTUSDT",
+   "side": "long",
+   "qty": 73.311,
+   "trigger": 1.2015,
+   "direction": "above",
+   "stop": 1.15,
+   "tp": 1.3,
+   "placed": 1792760033956,
+   "expires": 1792846433956,
+   "note": "DOT momentum: +5% 24h, h4 RSI 59 above h4 ema20 1.15; break of 24h high 1.2003 targets the 30d high area 1.30 (~1.9R). Stop under h4 ema20/breakout base 1.15. Small size: risk-on theme with PEPE (PEPE now at BE stop)."
   }
  ],
  "order_events": [
@@ -266,12 +279,12 @@
    "shares": 13.630638297872341,
    "entry": 0.94,
    "cost": 12.894583829787233,
-   "mark": 0.91,
+   "mark": 0.92,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "note": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
-   "yes_bid": 0.91,
-   "yes_ask": 0.92
+   "yes_bid": 0.92,
+   "yes_ask": 0.93
   }
  },
  "pred_closed": [],
@@ -279,6 +292,6 @@
  "income": {
   "funding": 0.033346012475968724,
   "carry": -0.21395110481479168,
-  "interest": 0.013486286576164278
+  "interest": 0.013503507589682643
  }
 }

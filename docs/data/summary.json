@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-23T12:52:53Z",
+ "updated": "2026-10-23T12:53:53Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9247,
- "equity_pln": 1012.1,
- "return_pct": 0.29,
+ "equity_pln": 1013.21,
+ "return_pct": 0.4,
  "max_drawdown_pct": 3.8,
- "control_pln": 1017.66,
+ "control_pln": 1017.35,
  "control_trades": 0,
- "hodl_pln": 973.63,
+ "hodl_pln": 973.74,
  "positions": [
   {
    "symbol": "PEPEUSDT",
    "side": "long",
    "size": 20657000,
    "entry": 4.80144e-06,
-   "mark": 5.041e-06,
-   "upnl": 4.948590919999999,
-   "stop": 4.72e-06,
+   "mark": 5.048e-06,
+   "upnl": 5.093189920000001,
+   "stop": 4.85e-06,
    "tp": 5.4e-06,
    "liq": null,
    "leverage": null,
    "opened": 1792744500000,
    "reason": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R.",
-   "upnl_pln": 19.42
+   "upnl_pln": 19.99
   }
  ],
  "closed_trades": [
@@ -98,39 +98,46 @@
  ],
  "trade_count": 5,
  "win_rate_pct": 40.0,
- "brain_calls_today": 6,
+ "brain_calls_today": 7,
  "last_decision": {
-  "time": "2026-10-23T10:52:53Z",
+  "time": "2026-10-23T12:53:53Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-23T10:51:50Z",
+  "decided_at": "2026-10-23T12:52:39Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 256.25,
-  "equity_pln": 1005.72,
+  "equity_usd": 258.16,
+  "equity_pln": 1013.21,
   "events": [],
-  "market_view": "Majors still boxed (BTC 81.6k inside 80.8k-82k, h4 RSI 44). PEPE is the clear leader: new 30d high 5.03e-6, now 4.93e-6, h1 RSI 83, funding -32% APR (longs get paid). BONK funding flipped from +235% to -87.5% APR, so the carry reason is gone.",
-  "watch_next": "PEPE 4h close (12:00Z) holding > 4.8e-6; trail under completed 4h low once it exceeds 4.72. BTC 83.05k breakout / 80.8k breakdown. Carry candidates > 60% APR.",
-  "news": "No major crypto-specific catalyst found; Fed 28 Oct still priced as hold.",
+  "market_view": "Majors still boxed (BTC 81.7k inside 80.8k-82.0k, h4 RSI 45). PEPE is the leader: new 30d high 5.108e-6, holding 5.0+ but h1 RSI 85 = stretched. DOT pressing its 24h high 1.2003.",
+  "watch_next": "PEPE: trail under completed 4h lows after 16Z close; DOT breakout fill; BTC 83.05k / 80.8k edges; Fed hike odds.",
+  "news": "No fresh market-moving news found; Polymarket Fed Oct: hold 0.91, +25bp hike 0.07-0.08 (below my 15% sell trigger).",
   "actions": [
-   {
-    "type": "carry_close",
-    "symbol": "BONKUSDT",
-    "reason": "Funding flipped to -87.5% APR (shorts now pay); plan rule: close when < 30% APR or negative. Net ~-0.21, mostly fees.",
-    "result": "done",
-    "detail": "closed carry: earned 0.09, fees 0.30, net -0.21 USD"
-   },
    {
     "type": "move_stop",
     "symbol": "PEPEUSDT",
-    "stop": 4.72e-06,
+    "stop": 4.85e-06,
     "take_profit": 5.4e-06,
-    "reason": "Price ran to 5.03e-6 and holds 4.93e-6; raise stop 4.68 -> 4.72e-6, still below breakout level 4.79 and ~2.5 h1 ATR away, cutting open risk while giving room for the pullback.",
+    "reason": "Plan trigger hit (high 5.108e-6 > 5.1): stop to entry + buffer (4.85e-6, ~2 h1 ATR under price) so the breakout winner can no longer turn into a loss; TP 5.4e-6 kept.",
     "result": "done",
-    "detail": "stop 4.72e-06, target 5.4e-06"
+    "detail": "stop 4.85e-06, target 5.4e-06"
+   },
+   {
+    "type": "entry_order",
+    "symbol": "DOTUSDT",
+    "side": "long",
+    "trigger": 1.2015,
+    "stop": 1.15,
+    "take_profit": 1.3,
+    "risk_pct": 0.015,
+    "expires_hours": 24,
+    "reason": "DOT momentum: +5% 24h, h4 RSI 59 above h4 ema20 1.15; break of 24h high 1.2003 targets the 30d high area 1.30 (~1.9R). Stop under h4 ema20/breakout base 1.15. Small size: risk-on theme with PEPE (PEPE now at BE stop).",
+    "invalidation": "DOT h4 close back below 1.15 or BTC < 80.8k.",
+    "result": "done",
+    "detail": "long 73.311 when price goes above 1.2015 (risk 1.5%, stop 1.15, target 1.3, expires in 24h) ok"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 240.527754,
+ "cash_usd": 240.527771,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -205,23 +212,34 @@
    "qty": 479.2,
    "expires": 1792817556442,
    "note": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
+  },
+  {
+   "symbol": "DOTUSDT",
+   "side": "long",
+   "trigger": 1.2015,
+   "direction": "above",
+   "stop": 1.15,
+   "tp": 1.3,
+   "qty": 73.311,
+   "expires": 1792846433956,
+   "note": "DOT momentum: +5% 24h, h4 RSI 59 above h4 ema20 1.15; break of 24h high 1.2003 targets the 30d high area 1.30 (~1.9R). Stop under h4 ema20/breakout base 1.15. Small size: risk-on theme with PEPE (PEPE now at BE stop)."
   }
  ],
  "balance_warning": false,
- "other_value_usd": 12.403881,
+ "other_value_usd": 12.540187,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.91,
+   "mark": 0.92,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 12.4039,
-   "pnl": -0.4907,
+   "value": 12.5402,
+   "pnl": -0.3544,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],
