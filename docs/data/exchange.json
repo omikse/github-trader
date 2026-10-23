@@ -1,5 +1,5 @@
 {
- "cash": 241.41570735237627,
+ "cash": 241.4158318088495,
  "positions": {},
  "closed": [
   {
@@ -78,8 +78,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1792766772501,
- "next_id": 23,
+ "last_ms": 1792767192596,
+ "next_id": 24,
  "orders": [
   {
    "id": "o13",
@@ -134,17 +134,17 @@
    "note": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
   },
   {
-   "id": "o21",
-   "symbol": "DOTUSDT",
-   "side": "long",
-   "qty": 73.311,
-   "trigger": 1.2015,
-   "direction": "above",
-   "stop": 1.15,
-   "tp": 1.3,
-   "placed": 1792760033956,
-   "expires": 1792846433956,
-   "note": "DOT momentum: +5% 24h, h4 RSI 59 above h4 ema20 1.15; break of 24h high 1.2003 targets the 30d high area 1.30 (~1.9R). Stop under h4 ema20/breakout base 1.15. Small size: risk-on theme with PEPE (PEPE now at BE stop)."
+   "id": "o23",
+   "symbol": "PEPEUSDT",
+   "side": "short",
+   "qty": 14917000,
+   "trigger": 4.75e-06,
+   "direction": "below",
+   "stop": 5e-06,
+   "tp": 4.4e-06,
+   "placed": 1792767192596,
+   "expires": 1792853592596,
+   "note": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding)."
   }
  ],
  "order_events": [
@@ -237,6 +237,15 @@
    "trigger": 4.8e-06,
    "time": 1792744500000,
    "detail": "filled at 4.80144e-06"
+  },
+  {
+   "id": "o21",
+   "symbol": "DOTUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 1.2015,
+   "time": 1792767192596,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -293,6 +302,6 @@
  "income": {
   "funding": 0.021399868584075908,
   "carry": -0.21395110481479168,
-  "interest": 0.015450268486238086
+  "interest": 0.015574724959453227
  }
 }

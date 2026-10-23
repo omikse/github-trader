@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T14:46:12Z",
+ "updated": "2026-10-23T14:53:12Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -8,9 +8,9 @@
  "equity_pln": 996.17,
  "return_pct": -1.29,
  "max_drawdown_pct": 3.8,
- "control_pln": 1016.06,
+ "control_pln": 1013.56,
  "control_trades": 0,
- "hodl_pln": 974.2,
+ "hodl_pln": 975.08,
  "positions": [],
  "closed_trades": [
   {
@@ -96,46 +96,59 @@
  ],
  "trade_count": 6,
  "win_rate_pct": 50.0,
- "brain_calls_today": 7,
+ "brain_calls_today": 8,
  "last_decision": {
-  "time": "2026-10-23T12:53:53Z",
+  "time": "2026-10-23T14:53:12Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-23T12:52:39Z",
+  "decided_at": "2026-10-23T14:51:51Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 258.16,
-  "equity_pln": 1013.21,
-  "events": [],
-  "market_view": "Majors still boxed (BTC 81.7k inside 80.8k-82.0k, h4 RSI 45). PEPE is the leader: new 30d high 5.108e-6, holding 5.0+ but h1 RSI 85 = stretched. DOT pressing its 24h high 1.2003.",
-  "watch_next": "PEPE: trail under completed 4h lows after 16Z close; DOT breakout fill; BTC 83.05k / 80.8k edges; Fed hike odds.",
-  "news": "No fresh market-moving news found; Polymarket Fed Oct: hold 0.91, +25bp hike 0.07-0.08 (below my 15% sell trigger).",
+  "equity_usd": 253.82,
+  "equity_pln": 996.17,
+  "events": [
+   {
+    "type": "position_closed",
+    "id": "t22",
+    "symbol": "PEPEUSDT",
+    "side": "long",
+    "qty": 20657000,
+    "entry": 4.80144e-06,
+    "exit": 4.85e-06,
+    "pnl": 0.8434,
+    "time": 1792765140000,
+    "why": "stop",
+    "opened": 1792744500000,
+    "reason": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R."
+   }
+  ],
+  "market_view": "Majors still boxed (BTC 81.68k inside 80.8k-82.0k, h4 RSI 45, ETH/SOL flat). PEPE rejected hard from its 5.108e-6 30d high (4h candle 5.06 -> 4.83, my long stopped at 4.85 for +0.84) with funding +111% APR = crowded longs. DOT gave back its push (1.20 -> 1.13). Gold PAXG keeps sliding (4013, h4 RSI 23).",
+  "watch_next": "PEPE losing 4.79e-6 breakout level (short order 4.75e-6); BTC 83.05k / 80.8k edges; ADA 30d-low break; Fed hike odds.",
+  "news": "No clear market-moving crypto headline found; Fed 28 Oct still priced ~91% hold.",
   "actions": [
    {
-    "type": "move_stop",
-    "symbol": "PEPEUSDT",
-    "stop": 4.85e-06,
-    "take_profit": 5.4e-06,
-    "reason": "Plan trigger hit (high 5.108e-6 > 5.1): stop to entry + buffer (4.85e-6, ~2 h1 ATR under price) so the breakout winner can no longer turn into a loss; TP 5.4e-6 kept.",
+    "type": "cancel_order",
+    "symbol": "DOTUSDT",
+    "reason": "Breakout idea gone: DOT fell from 1.20 to 1.13 (-4% 4h), trigger 1.2015 now 6% away; momentum that justified it has faded.",
     "result": "done",
-    "detail": "stop 4.85e-06, target 5.4e-06"
+    "detail": "cancelled 1 order(s)"
    },
    {
     "type": "entry_order",
-    "symbol": "DOTUSDT",
-    "side": "long",
-    "trigger": 1.2015,
-    "stop": 1.15,
-    "take_profit": 1.3,
+    "symbol": "PEPEUSDT",
+    "side": "short",
+    "trigger": 4.75e-06,
+    "stop": 5e-06,
+    "take_profit": 4.4e-06,
     "risk_pct": 0.015,
     "expires_hours": 24,
-    "reason": "DOT momentum: +5% 24h, h4 RSI 59 above h4 ema20 1.15; break of 24h high 1.2003 targets the 30d high area 1.30 (~1.9R). Stop under h4 ema20/breakout base 1.15. Small size: risk-on theme with PEPE (PEPE now at BE stop).",
-    "invalidation": "DOT h4 close back below 1.15 or BTC < 80.8k.",
+    "reason": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding).",
+    "invalidation": "PEPE reclaims 5.0e-6 on h1 closes (breakout resumes) or funding flips negative while price holds 4.8.",
     "result": "done",
-    "detail": "long 73.311 when price goes above 1.2015 (risk 1.5%, stop 1.15, target 1.3, expires in 24h) ok"
+    "detail": "short 14917000 when price goes below 4.75e-06 (risk 1.5%, stop 5e-06, target 4.4e-06, expires in 24h) ok"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 241.415707,
+ "cash_usd": 241.415832,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -212,15 +225,15 @@
    "note": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
   },
   {
-   "symbol": "DOTUSDT",
-   "side": "long",
-   "trigger": 1.2015,
-   "direction": "above",
-   "stop": 1.15,
-   "tp": 1.3,
-   "qty": 73.311,
-   "expires": 1792846433956,
-   "note": "DOT momentum: +5% 24h, h4 RSI 59 above h4 ema20 1.15; break of 24h high 1.2003 targets the 30d high area 1.30 (~1.9R). Stop under h4 ema20/breakout base 1.15. Small size: risk-on theme with PEPE (PEPE now at BE stop)."
+   "symbol": "PEPEUSDT",
+   "side": "short",
+   "trigger": 4.75e-06,
+   "direction": "below",
+   "stop": 5e-06,
+   "tp": 4.4e-06,
+   "qty": 14917000,
+   "expires": 1792853592596,
+   "note": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding)."
   }
  ],
  "balance_warning": false,
