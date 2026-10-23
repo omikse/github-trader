@@ -1,18 +1,6 @@
 {
- "cash": 240.51720071396056,
- "positions": {
-  "PEPEUSDT": {
-   "side": "long",
-   "qty": 20657000,
-   "entry": 4.80144e-06,
-   "stop": 4.85e-06,
-   "tp": 5.4e-06,
-   "opened": 1792744500000,
-   "entry_fee": 0.054550840344,
-   "mark": 4.946e-06,
-   "note": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R."
-  }
- },
+ "cash": 241.41527522365797,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -74,11 +62,24 @@
    "why": "stop",
    "opened": 1792651560000,
    "reason": ""
+  },
+  {
+   "id": "t22",
+   "symbol": "PEPEUSDT",
+   "side": "long",
+   "qty": 20657000,
+   "entry": 4.80144e-06,
+   "exit": 4.85e-06,
+   "pnl": 0.8434,
+   "time": 1792765140000,
+   "why": "stop",
+   "opened": 1792744500000,
+   "reason": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R."
   }
  ],
  "fills": [],
- "last_ms": 1792764833894,
- "next_id": 22,
+ "last_ms": 1792765313876,
+ "next_id": 23,
  "orders": [
   {
    "id": "o13",
@@ -279,12 +280,12 @@
    "shares": 13.630638297872341,
    "entry": 0.94,
    "cost": 12.894583829787233,
-   "mark": 0.92,
+   "mark": 0.91,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "note": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
-   "yes_bid": 0.92,
-   "yes_ask": 0.93
+   "yes_bid": 0.91,
+   "yes_ask": 0.92
   }
  },
  "pred_closed": [],
@@ -292,6 +293,6 @@
  "income": {
   "funding": 0.021399868584075908,
   "carry": -0.21395110481479168,
-  "interest": 0.014879328844424116
+  "interest": 0.015018139768048534
  }
 }
