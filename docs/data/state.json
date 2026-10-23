@@ -75,11 +75,22 @@
    "reason": ""
   }
  ],
- "last_closed_check_ms": 1792744176409,
+ "last_closed_check_ms": 1792744656445,
  "day": "2026-10-23",
  "day_start_equity": 256.8111239562878,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_filled",
+   "id": "o19",
+   "symbol": "PEPEUSDT",
+   "side": "long",
+   "status": "filled",
+   "trigger": 4.8e-06,
+   "time": 1792744500000,
+   "detail": "filled at 4.80144e-06"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 256.75460210303584,
@@ -93,7 +104,7 @@
   "trades": 0,
   "wins": 0
  },
- "last_btc": 81705.7,
+ "last_btc": 81711.5,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -103,7 +114,8 @@
   "o7:filled",
   "o11:filled",
   "o10:cancelled",
-  "o9:expired"
+  "o9:expired",
+  "o19:filled"
  ],
  "last_decision_id": "2026-10-23T06:52:21Z",
  "cash_rate_day": "2026-10-23"

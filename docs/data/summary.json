@@ -1,17 +1,33 @@
 {
- "updated": "2026-10-23T08:29:36Z",
+ "updated": "2026-10-23T08:37:36Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.8886,
- "equity_pln": 985.26,
- "return_pct": -1.47,
+ "equity_pln": 985.66,
+ "return_pct": -1.43,
  "max_drawdown_pct": 3.8,
- "control_pln": 1005.08,
+ "control_pln": 1004.88,
  "control_trades": 0,
- "hodl_pln": 965.82,
- "positions": [],
+ "hodl_pln": 965.89,
+ "positions": [
+  {
+   "symbol": "PEPEUSDT",
+   "side": "long",
+   "size": 20657000,
+   "entry": 4.80144e-06,
+   "mark": 4.806e-06,
+   "upnl": 0.09419592000001058,
+   "stop": 4.56e-06,
+   "tp": 5.4e-06,
+   "liq": null,
+   "leverage": null,
+   "opened": 1792744500000,
+   "reason": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R.",
+   "upnl_pln": 0.37
+  }
+ ],
  "closed_trades": [
   {
    "id": "t15",
@@ -112,7 +128,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 240.694854,
+ "cash_usd": 240.640414,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -187,17 +203,6 @@
    "qty": 479.2,
    "expires": 1792817556442,
    "note": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
-  },
-  {
-   "symbol": "PEPEUSDT",
-   "side": "long",
-   "trigger": 4.8e-06,
-   "direction": "above",
-   "stop": 4.56e-06,
-   "tp": 5.4e-06,
-   "qty": 20657000,
-   "expires": 1792911216483,
-   "note": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R."
   }
  ],
  "balance_warning": false,
