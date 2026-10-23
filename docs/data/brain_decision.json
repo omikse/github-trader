@@ -1,11 +1,12 @@
 {
-  "id": "2026-10-23T08:51:17Z",
-  "decided_at": "2026-10-23T08:51:17Z",
+  "id": "2026-10-23T10:51:50Z",
+  "decided_at": "2026-10-23T10:51:50Z",
   "model": "claude-opus-5-5",
-  "market_view": "Majors still chopping in their 24h boxes (BTC 80.8k-82.1k). PEPE broke its 30d high and ran +7% in the last hour to 4.95e-6 (h1 RSI 84), filling our breakout long; memes lead, ETH/ADA/AVAX lag.",
-  "news": "No fresh market-moving headlines found; Fed 28 Oct still ~93% hold.",
-  "watch_next": "PEPE holding above the 4.79e-6 breakout on 4h closes (trail under completed 4h lows, BE+buffer above 5.1e-6); BTC 83.05k breakout or 80.8k break; BONK funding level.",
+  "market_view": "Majors still boxed (BTC 81.6k inside 80.8k-82k, h4 RSI 44). PEPE is the clear leader: new 30d high 5.03e-6, now 4.93e-6, h1 RSI 83, funding -32% APR (longs get paid). BONK funding flipped from +235% to -87.5% APR, so the carry reason is gone.",
+  "news": "No major crypto-specific catalyst found; Fed 28 Oct still priced as hold.",
+  "watch_next": "PEPE 4h close (12:00Z) holding > 4.8e-6; trail under completed 4h low once it exceeds 4.72. BTC 83.05k breakout / 80.8k breakdown. Carry candidates > 60% APR.",
   "actions": [
-    {"type": "move_stop", "symbol": "PEPEUSDT", "stop": 4.68e-06, "take_profit": 5.4e-06, "reason": "Breakout filled and ran to 4.95e-6; raise stop from 4.56 to 4.68e-6 (below the 4.79 breakout level and current 4h low 4.616 area, ~3 h1 ATR) to halve open risk while leaving room for a retest."}
+    {"type": "carry_close", "symbol": "BONKUSDT", "reason": "Funding flipped to -87.5% APR (shorts now pay); plan rule: close when < 30% APR or negative. Net ~-0.21, mostly fees."},
+    {"type": "move_stop", "symbol": "PEPEUSDT", "stop": 4.72e-06, "take_profit": 5.4e-06, "reason": "Price ran to 5.03e-6 and holds 4.93e-6; raise stop 4.68 -> 4.72e-6, still below breakout level 4.79 and ~2.5 h1 ATR away, cutting open risk while giving room for the pullback."}
   ]
 }
