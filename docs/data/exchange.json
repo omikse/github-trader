@@ -1,15 +1,15 @@
 {
- "cash": 240.67463620170037,
+ "cash": 240.5225797214578,
  "positions": {
   "PEPEUSDT": {
    "side": "long",
    "qty": 20657000,
    "entry": 4.80144e-06,
-   "stop": 4.68e-06,
+   "stop": 4.72e-06,
    "tp": 5.4e-06,
    "opened": 1792744500000,
    "entry_fee": 0.054550840344,
-   "mark": 4.959e-06,
+   "mark": 4.951e-06,
    "note": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R."
   }
  },
@@ -77,8 +77,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1792752713809,
- "next_id": 20,
+ "last_ms": 1792752773958,
+ "next_id": 21,
  "orders": [
   {
    "id": "o13",
@@ -244,17 +244,21 @@
   "PAXGUSDT": -3.76100125e-05,
   "EURUSDT": -1.81828375e-05
  },
- "carry": {
-  "BONKUSDT": {
+ "carry": {},
+ "carry_closed": [
+  {
+   "id": "c20",
+   "symbol": "BONKUSDT",
    "notional": 50.69,
    "opened": 1792723939128,
-   "earned": 0.0901888951852083,
-   "fees": 0.15206999999999998,
-   "rate_at_open": 0.0003028710875,
-   "note": "BONK funding 265% APR (~0.73%/day) and was 108% APR 2h ago; break-even ~0.8 day on 0.6% round-trip. Price-neutral. Close when funding < 30% APR or negative."
+   "time": 1792752773958,
+   "earned": 0.0902,
+   "fees": 0.3041,
+   "pnl": -0.214,
+   "why": "manual close",
+   "reason": "BONK funding 265% APR (~0.73%/day) and was 108% APR 2h ago; break-even ~0.8 day on 0.6% round-trip. Price-neutral. Close when funding < 30% APR or negative."
   }
- },
- "carry_closed": [],
+ ],
  "predictions": {
   "2589812": {
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
@@ -274,7 +278,7 @@
  "cash_rate": 0.0387,
  "income": {
   "funding": 0.030235986436411167,
-  "carry": -0.061881104814791685,
-  "interest": 0.011408698731661898
+  "carry": -0.21395110481479168,
+  "interest": 0.011422218489097791
  }
 }
