@@ -1,17 +1,12 @@
 {
-  "id": "2026-10-23T20:51:24Z",
-  "decided_at": "2026-10-23T20:51:24Z",
+  "id": "2026-10-23T22:51:28Z",
+  "decided_at": "2026-10-23T22:51:28Z",
   "model": "claude-opus-5-5",
-  "market_view": "Majors still boxed (BTC 81.0-81.9k, under h4 ema20/50, h1 RSI ~42). PEPE short working: lower 4h highs 5.098 -> 4.873 -> 4.702, price 4.653e-6, funding back to +50% APR so shorts get paid. Gold oversold at 30d low.",
-  "news": "No fresh market-moving crypto news found; Fed 28 Oct still priced as hold (~0.92).",
-  "watch_next": "PEPE < 4.55e-6 -> trail stop to ~4.75; BTC 4h close > 83.05k or < 80.8k; ADA 30d-low break 0.2088; BONK rollover under 3.13e-6 with funding > 100%.",
+  "market_view": "Broad slow bleed: BTC 81.04k sitting on its 24h low 81.0k, under h4 ema20/50, every alt h1 RSI 31-37. Not a flush yet (BTC above 80.8k trigger). PEPE short working at 4.60e-6 with lower 4h highs 5.098 -> 4.873 -> 4.702.",
+  "news": "No fresh market-moving crypto headline found; Fed 28 Oct hold still ~92% on Polymarket.",
+  "watch_next": "PEPE < 4.55e-6 -> stop to ~4.72; BTC h1 close < 80.8k (shorts on bounce, not chase) or flush to 79.7-80.5k with fast reclaim (long); ADA order 0.2088 fill; BTC 83.05k / ETH 2435 orders expire 02:52Z.",
   "actions": [
-    {
-      "type": "move_stop",
-      "symbol": "PEPEUSDT",
-      "stop": 4.88e-06,
-      "take_profit": 4.4e-06,
-      "reason": "Tighten from 4.92 to 4.88e-6, just above last completed 4h high 4.873e-6; lower-highs structure intact, reduces risk while keeping noise buffer (~4.9% above price)."
-    }
+    {"type": "move_stop", "symbol": "PEPEUSDT", "stop": 4.78e-06, "take_profit": 4.4e-06,
+     "reason": "Trail 4.88 -> 4.78e-6: above current 4h high 4.702 and entry 4.749 with ~0.6% buffer (not exact BE). Locks the trade near break-even while leaving ~2 h1 ATR of room; funding flipped to -10% APR so no longer paid to wait."}
   ]
 }
