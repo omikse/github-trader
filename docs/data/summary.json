@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-23T21:32:42Z",
+ "updated": "2026-10-23T21:40:42Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9247,
- "equity_pln": 1003.95,
- "return_pct": -0.52,
+ "equity_pln": 1003.36,
+ "return_pct": -0.58,
  "max_drawdown_pct": 3.8,
- "control_pln": 1028.61,
+ "control_pln": 1028.86,
  "control_trades": 0,
- "hodl_pln": 969.74,
+ "hodl_pln": 969.65,
  "positions": [
   {
    "symbol": "PEPEUSDT",
    "side": "short",
    "size": 14917000,
    "entry": 4.7485750000000005e-06,
-   "mark": 4.634e-06,
-   "upnl": 1.7091152750000076,
+   "mark": 4.632e-06,
+   "upnl": 1.7389492750000097,
    "stop": 4.88e-06,
    "tp": 4.4e-06,
    "liq": null,
    "leverage": null,
    "opened": 1792776600000,
    "reason": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding).",
-   "upnl_pln": 6.71
+   "upnl_pln": 6.82
   }
  ],
  "closed_trades": [
@@ -148,7 +148,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 241.388002,
+ "cash_usd": 241.388141,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -180,17 +180,6 @@
   "EURUSDT": "EURUSD"
  },
  "orders": [
-  {
-   "symbol": "PAXGUSDT",
-   "side": "short",
-   "trigger": 4070,
-   "direction": "above",
-   "stop": 4118.0,
-   "tp": 3985.0,
-   "qty": 0.09762,
-   "expires": 1792791259103,
-   "note": "Gold at new 30d low (4027), d1 RSI 31, h4 RSI 23; short a relief bounce into h1 ema20 (~4068) rather than the low. Shorts collect +21% APR funding. ~1.8R."
-  },
   {
    "symbol": "ETHUSDT",
    "side": "short",
@@ -226,20 +215,20 @@
   }
  ],
  "balance_warning": false,
- "other_value_usd": 12.676494,
+ "other_value_usd": 12.540187,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.93,
+   "mark": 0.92,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 12.6765,
-   "pnl": -0.2181,
+   "value": 12.5402,
+   "pnl": -0.3544,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],

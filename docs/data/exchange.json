@@ -1,5 +1,5 @@
 {
- "cash": 241.3880018651114,
+ "cash": 241.38814133563355,
  "positions": {
   "PEPEUSDT": {
    "side": "short",
@@ -9,7 +9,7 @@
    "tp": 4.4e-06,
    "opened": 1792776600000,
    "entry_fee": 0.03895897130125001,
-   "mark": 4.634e-06,
+   "mark": 4.632e-06,
    "note": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding)."
   }
  },
@@ -90,22 +90,9 @@
   }
  ],
  "fills": [],
- "last_ms": 1792791162461,
+ "last_ms": 1792791642446,
  "next_id": 25,
  "orders": [
-  {
-   "id": "o13",
-   "symbol": "PAXGUSDT",
-   "side": "short",
-   "qty": 0.09762,
-   "trigger": 4070,
-   "direction": "above",
-   "stop": 4118.0,
-   "tp": 3985.0,
-   "placed": 1792704859103,
-   "expires": 1792791259103,
-   "note": "Gold at new 30d low (4027), d1 RSI 31, h4 RSI 23; short a relief bounce into h1 ema20 (~4068) rather than the low. Shorts collect +21% APR funding. ~1.8R."
-  },
   {
    "id": "o16",
    "symbol": "ETHUSDT",
@@ -263,6 +250,15 @@
    "trigger": 3.4e-06,
    "time": 1792781545687,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o13",
+   "symbol": "PAXGUSDT",
+   "side": "short",
+   "status": "expired",
+   "trigger": 4070,
+   "time": 1792791300000,
+   "detail": ""
   }
  ],
  "funding_rates": {
@@ -306,12 +302,12 @@
    "shares": 13.630638297872341,
    "entry": 0.94,
    "cost": 12.894583829787233,
-   "mark": 0.93,
+   "mark": 0.92,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "note": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
-   "yes_bid": 0.93,
-   "yes_ask": 0.94
+   "yes_bid": 0.92,
+   "yes_ask": 0.93
   }
  },
  "pred_closed": [],
@@ -319,6 +315,6 @@
  "income": {
   "funding": 0.02551166625778801,
   "carry": -0.21395110481479168,
-  "interest": 0.022591954848893304
+  "interest": 0.022731425371065705
  }
 }
