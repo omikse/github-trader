@@ -1,46 +1,46 @@
 {
- "updated": "2026-10-23T00:44:19Z",
+ "updated": "2026-10-23T00:52:19Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.8886,
- "equity_pln": 995.66,
- "return_pct": -0.43,
+ "equity_pln": 994.64,
+ "return_pct": -0.53,
  "max_drawdown_pct": 3.16,
- "control_pln": 1017.02,
+ "control_pln": 1016.08,
  "control_trades": 0,
- "hodl_pln": 961.57,
+ "hodl_pln": 961.91,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00669071,
    "entry": 82375.28,
-   "mark": 81346.6,
-   "upnl": 6.882599562799953,
-   "stop": 81700.0,
+   "mark": 81375.1,
+   "upnl": 6.691914327799953,
+   "stop": 81500.0,
    "tp": 80500.0,
    "liq": null,
    "leverage": null,
    "opened": 1792651560000,
    "reason": "",
-   "upnl_pln": 26.76
+   "upnl_pln": 26.02
   },
   {
    "symbol": "AVAXUSDT",
    "side": "short",
    "size": 18.741,
    "entry": 9.297210000000002,
-   "mark": 9.108,
-   "upnl": 3.5459846100000183,
-   "stop": 9.19,
+   "mark": 9.127,
+   "upnl": 3.1899056100000163,
+   "stop": 9.165,
    "tp": 8.75,
    "liq": null,
    "leverage": null,
    "opened": 1792654920000,
    "reason": "",
-   "upnl_pln": 13.79
+   "upnl_pln": 12.4
   }
  ],
  "closed_trades": [
@@ -85,22 +85,41 @@
  ],
  "trade_count": 3,
  "win_rate_pct": 0.0,
- "brain_calls_today": 0,
+ "brain_calls_today": 1,
  "last_decision": {
-  "time": "2026-10-22T22:52:19Z",
+  "time": "2026-10-23T00:52:19Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-22T22:51:17Z",
+  "decided_at": "2026-10-23T00:51:18Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 257.26,
-  "equity_pln": 1000.37,
+  "equity_usd": 255.68,
+  "equity_pln": 994.24,
   "events": [],
-  "market_view": "Slow risk-off bleed continues: BTC 81.2k under h1/h4 emas, AVAX 9.10 just above 30d low 9.046, gold at 30d low. h1 RSI ~30, no reclaim signal yet.",
-  "watch_next": "Trail BTC/AVAX stops above the 20:00-24:00 4h candle highs (BTC 81,465 / AVAX 9.159) once complete; AVAX break of 9.046; PAXG bounce to 4070 for the resting short; BTC reclaim of 82k = stop shorting.",
-  "news": "No fresh market-moving headline found; Fed 28 Oct still priced ~93% hold.",
-  "actions": []
+  "market_view": "Slow risk-off bleed intact but stalling: BTC 81.35k chopping 81.0-81.5k under h1 ema20 (81.75k) and h4 ema200 (83.45k); alts pinned near 30d lows (AVAX 9.11 vs 9.046, ADA 0.212 vs 0.209). Gold PAXG made a new 30d low 4024 (h4 RSI 20).",
+  "watch_next": "BTC 4h close <80.8k (to TP 80.5k) vs reclaim 82.0k (bleed over); AVAX break of 9.046; PAXG bounce to 4070 fill; BONK funding 108% APR - carry only if it persists next session.",
+  "news": "No fresh market-moving headlines found; Fed 28 Oct still priced ~93% hold.",
+  "actions": [
+   {
+    "type": "move_stop",
+    "symbol": "BTCUSDT",
+    "stop": 81500,
+    "take_profit": 80500,
+    "reason": "Planned trail: 20-24Z 4h candle completed with high 81,464.8; stop just above it locks ~5.8 USD while leaving room for chop.",
+    "result": "done",
+    "detail": "stop 81500.0, target 80500.0"
+   },
+   {
+    "type": "move_stop",
+    "symbol": "AVAXUSDT",
+    "stop": 9.165,
+    "take_profit": 8.75,
+    "reason": "Planned trail: 20-24Z 4h candle completed with high 9.159; stop above it locks ~2.5 USD.",
+    "result": "done",
+    "detail": "stop 9.165, target 8.75"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 233.186807,
+ "cash_usd": 233.186917,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
