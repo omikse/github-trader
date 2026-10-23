@@ -1,27 +1,6 @@
 {
- "cash": 233.19442444601162,
- "positions": {
-  "BTCUSDT": {
-   "side": "short",
-   "qty": 0.00669071,
-   "entry": 82375.28,
-   "stop": 81500.0,
-   "tp": 80500.0,
-   "opened": 1792651560000,
-   "entry_fee": 0.30313201030684,
-   "mark": 81179.9
-  },
-  "AVAXUSDT": {
-   "side": "short",
-   "qty": 18.741,
-   "entry": 9.297210000000002,
-   "stop": 9.165,
-   "tp": 8.75,
-   "opened": 1792654920000,
-   "entry_fee": 0.09583145693550002,
-   "mark": 9.106
-  }
- },
+ "cash": 240.77543110267192,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -57,11 +36,37 @@
    "why": "stop",
    "opened": 1792674540000,
    "reason": ""
+  },
+  {
+   "id": "t14",
+   "symbol": "AVAXUSDT",
+   "side": "short",
+   "qty": 18.741,
+   "entry": 9.297210000000002,
+   "exit": 9.1695825,
+   "pnl": 2.2015,
+   "time": 1792719900000,
+   "why": "stop",
+   "opened": 1792654920000,
+   "reason": ""
+  },
+  {
+   "id": "t15",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00669071,
+   "entry": 82375.28,
+   "exit": 81540.75,
+   "pnl": 4.9804,
+   "time": 1792719960000,
+   "why": "stop",
+   "opened": 1792651560000,
+   "reason": ""
   }
  ],
  "fills": [],
- "last_ms": 1792719619013,
- "next_id": 14,
+ "last_ms": 1792720099027,
+ "next_id": 16,
  "orders": [
   {
    "id": "o13",
@@ -201,6 +206,6 @@
  "income": {
   "funding": 0.022373826089039532,
   "carry": 0.0,
-  "interest": 0.003515390646171549
+  "interest": 0.00363381489216316
  }
 }

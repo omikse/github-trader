@@ -47,13 +47,68 @@
    "why": "stop",
    "opened": 1792674540000,
    "reason": ""
+  },
+  {
+   "id": "t14",
+   "symbol": "AVAXUSDT",
+   "side": "short",
+   "qty": 18.741,
+   "entry": 9.297210000000002,
+   "exit": 9.1695825,
+   "pnl": 2.2015,
+   "time": 1792719900000,
+   "why": "stop",
+   "opened": 1792654920000,
+   "reason": ""
+  },
+  {
+   "id": "t15",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00669071,
+   "entry": 82375.28,
+   "exit": 81540.75,
+   "pnl": 4.9804,
+   "time": 1792719960000,
+   "why": "stop",
+   "opened": 1792651560000,
+   "reason": ""
   }
  ],
- "last_closed_check_ms": 1792719619013,
+ "last_closed_check_ms": 1792720099027,
  "day": "2026-10-23",
  "day_start_equity": 256.8111239562878,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "position_closed",
+   "id": "t14",
+   "symbol": "AVAXUSDT",
+   "side": "short",
+   "qty": 18.741,
+   "entry": 9.297210000000002,
+   "exit": 9.1695825,
+   "pnl": 2.2015,
+   "time": 1792719900000,
+   "why": "stop",
+   "opened": 1792654920000,
+   "reason": ""
+  },
+  {
+   "type": "position_closed",
+   "id": "t15",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00669071,
+   "entry": 82375.28,
+   "exit": 81540.75,
+   "pnl": 4.9804,
+   "time": 1792719960000,
+   "why": "stop",
+   "opened": 1792651560000,
+   "reason": ""
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 256.75460210303584,
@@ -67,7 +122,7 @@
   "trades": 0,
   "wins": 0
  },
- "last_btc": 81179.9,
+ "last_btc": 81551.3,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
