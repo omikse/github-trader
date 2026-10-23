@@ -1,5 +1,5 @@
 {
- "cash": 241.41782650829245,
+ "cash": 241.41795096970952,
  "positions": {},
  "closed": [
   {
@@ -78,8 +78,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1792773925549,
- "next_id": 24,
+ "last_ms": 1792774345657,
+ "next_id": 25,
  "orders": [
   {
    "id": "o13",
@@ -145,6 +145,19 @@
    "placed": 1792767192596,
    "expires": 1792853592596,
    "note": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding)."
+  },
+  {
+   "id": "o24",
+   "symbol": "BONKUSDT",
+   "side": "long",
+   "qty": 17016000,
+   "trigger": 3.4e-06,
+   "direction": "above",
+   "stop": 3.18e-06,
+   "tp": 3.8e-06,
+   "placed": 1792774345657,
+   "expires": 1792860745657,
+   "note": "Short-squeeze breakout: BONK +9.6% 24h, h1/h4 RSI ~70, funding -38% APR (shorts crowded and paying longs). Entry above 24h high 3.359e-6; stop below the 3.2e-6 consolidation; TP 3.80e-6 toward 30d high 4.10e-6."
   }
  ],
  "order_events": [
@@ -302,6 +315,6 @@
  "income": {
   "funding": 0.021399868584075908,
   "carry": -0.21395110481479168,
-  "interest": 0.017569424402327387
+  "interest": 0.01769388581941371
  }
 }
