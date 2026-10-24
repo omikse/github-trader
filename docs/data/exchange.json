@@ -1,15 +1,15 @@
 {
- "cash": 246.44866323147969,
+ "cash": 246.44875159539782,
  "positions": {
   "ADAUSDT": {
    "side": "short",
    "qty": 479.2,
    "entry": 0.20873736,
-   "stop": 0.2112,
+   "stop": 0.2095,
    "tp": 0.1975,
    "opened": 1792795800000,
    "entry_fee": 0.055014818601600006,
-   "mark": 0.204334,
+   "mark": 0.204865,
    "note": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
   }
  },
@@ -103,22 +103,9 @@
   }
  ],
  "fills": [],
- "last_ms": 1792853242417,
+ "last_ms": 1792853542551,
  "next_id": 30,
  "orders": [
-  {
-   "id": "o28",
-   "symbol": "PEPEUSDT",
-   "side": "short",
-   "qty": 17319000,
-   "trigger": 4.58e-06,
-   "direction": "above",
-   "stop": 4.8e-06,
-   "tp": 4.1e-06,
-   "placed": 1792831928845,
-   "expires": 1792939928845,
-   "note": "Re-short PEPE after TP hit at 4.40e-6: bounce back into the 4.59-4.61e-6 lower-high zone (prior 4h highs) is the place to sell again; funding turned +38.6% APR (longs pay). Stop above 4.80 (prior breakdown area), TP 4.10e-6 toward the next base (~2.2R). Small 1.5% risk since BTC/ADA already carry the bearish theme."
-  },
   {
    "id": "o29",
    "symbol": "BTCUSDT",
@@ -304,6 +291,15 @@
    "trigger": 81050,
    "time": 1792839128933,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o28",
+   "symbol": "PEPEUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 4.58e-06,
+   "time": 1792853542551,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -360,6 +356,6 @@
  "income": {
   "funding": -0.04026103223763763,
   "carry": -0.21395110481479168,
-  "interest": 0.040446703314392485
+  "interest": 0.040535067232543194
  }
 }
