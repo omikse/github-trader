@@ -1,46 +1,46 @@
 {
- "updated": "2026-10-24T04:43:54Z",
+ "updated": "2026-10-24T04:51:54Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9247,
- "equity_pln": 1002.55,
- "return_pct": -0.66,
+ "equity_pln": 1002.28,
+ "return_pct": -0.69,
  "max_drawdown_pct": 3.8,
- "control_pln": 1045.48,
+ "control_pln": 1044.94,
  "control_trades": 0,
- "hodl_pln": 963.75,
+ "hodl_pln": 963.94,
  "positions": [
   {
    "symbol": "PEPEUSDT",
    "side": "short",
    "size": 14917000,
    "entry": 4.7485750000000005e-06,
-   "mark": 4.558e-06,
-   "upnl": 2.842807275000004,
-   "stop": 4.71e-06,
+   "mark": 4.56e-06,
+   "upnl": 2.8129732750000023,
+   "stop": 4.62e-06,
    "tp": 4.4e-06,
    "liq": null,
    "leverage": null,
    "opened": 1792776600000,
    "reason": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding).",
-   "upnl_pln": 11.16
+   "upnl_pln": 11.04
   },
   {
    "symbol": "ADAUSDT",
    "side": "short",
    "size": 479.2,
    "entry": 0.20873736,
-   "mark": 0.211706,
-   "upnl": -1.4225722879999974,
-   "stop": 0.215,
+   "mark": 0.211749,
+   "upnl": -1.4431778879999915,
+   "stop": 0.2133,
    "tp": 0.1975,
    "liq": null,
    "leverage": null,
    "opened": 1792795800000,
    "reason": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea.",
-   "upnl_pln": -5.58
+   "upnl_pln": -5.66
   }
  ],
  "closed_trades": [
@@ -127,62 +127,41 @@
  ],
  "trade_count": 6,
  "win_rate_pct": 50.0,
- "brain_calls_today": 2,
+ "brain_calls_today": 3,
  "last_decision": {
-  "time": "2026-10-24T02:51:54Z",
+  "time": "2026-10-24T04:51:54Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-24T02:51:30Z",
+  "decided_at": "2026-10-24T04:51:27Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 255.98,
-  "equity_pln": 1004.63,
-  "events": [
-   {
-    "type": "order_cancelled",
-    "id": "o17",
-    "symbol": "BTCUSDT",
-    "side": "long",
-    "status": "cancelled",
-    "trigger": 83050,
-    "time": 1792803162551,
-    "detail": "cancelled by the brain"
-   },
-   {
-    "type": "order_cancelled",
-    "id": "o16",
-    "symbol": "ETHUSDT",
-    "side": "short",
-    "status": "cancelled",
-    "trigger": 2435,
-    "time": 1792803162551,
-    "detail": "cancelled by the brain"
-   }
-  ],
-  "market_view": "Quiet Saturday-morning chop after the 80.4k BTC low; BTC 80.83k holds under h1 ema20 81.24k and h4 ema20 81.81k, alts bouncing weakly off 30d lows with h1 RSI 36-44. Down-leg structure intact, no new edge.",
-  "watch_next": "PEPE/ADA 4h close at 04:00Z for next trail; BTC bounce into 81.25k (order) or flush to 79.7k (reversal long watch).",
-  "news": "No fresh market-moving news found; Fed 28 Oct hold still priced ~0.93 on Polymarket.",
+  "equity_usd": 255.38,
+  "equity_pln": 1002.29,
+  "events": [],
+  "market_view": "Quiet Saturday Asia session: BTC 80.78k drifting under h1/h4 ema20 after a 24h low of 80.42k, alts pinned near 30d lows, h1 RSI ~36-44 (oversold relieved, no bounce yet). Bearish chop; keep the existing short theme, trail stops behind the just-completed 00-04Z 4h candle.",
+  "watch_next": "BTC bounce into 81.25k (order) vs flush to 79.7k; PEPE < 4.45 to trail to 4.58; ADA 30d low 0.2060 break; Fed odds.",
+  "news": "No fresh market-moving news found; Fed 28 Oct hold still ~93% on Polymarket.",
   "actions": [
    {
     "type": "move_stop",
     "symbol": "PEPEUSDT",
-    "stop": 4.71e-06,
+    "stop": 4.62e-06,
     "take_profit": 4.4e-06,
-    "reason": "Trail to just above last completed 4h high 4.702e-6; locks ~+0.5 USD.",
+    "reason": "Trail behind completed 4h highs (00-04Z high 4.591, current 4.608) with buffer; locks ~+1.9 USD. Funding now -72% APR so shorts are crowded/paying - protect gains against a squeeze.",
     "result": "done",
-    "detail": "stop 4.71e-06, target 4.4e-06"
+    "detail": "stop 4.62e-06, target 4.4e-06"
    },
    {
     "type": "move_stop",
     "symbol": "ADAUSDT",
-    "stop": 0.215,
+    "stop": 0.2133,
     "take_profit": 0.1975,
-    "reason": "Trail to just above last completed 4h high 0.21449.",
+    "reason": "00-04Z 4h candle high 0.2122 < 0.2125 per plan; trail stop to just above it (0.2133) to cut risk from ~1.5% to ~0.4% while keeping the 30d-low break thesis.",
     "result": "done",
-    "detail": "stop 0.215, target 0.1975"
+    "detail": "stop 0.2133, target 0.1975"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 241.316695,
+ "cash_usd": 241.31683,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
