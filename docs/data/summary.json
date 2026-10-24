@@ -1,46 +1,46 @@
 {
- "updated": "2026-10-24T07:08:54Z",
+ "updated": "2026-10-24T07:16:54Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9247,
- "equity_pln": 1010.49,
- "return_pct": 0.13,
+ "equity_pln": 1011.17,
+ "return_pct": 0.2,
  "max_drawdown_pct": 3.8,
- "control_pln": 1047.01,
+ "control_pln": 1047.47,
  "control_trades": 0,
- "hodl_pln": 963.2,
+ "hodl_pln": 963.04,
  "positions": [
   {
    "symbol": "PEPEUSDT",
    "side": "short",
    "size": 14917000,
    "entry": 4.7485750000000005e-06,
-   "mark": 4.466e-06,
-   "upnl": 4.2151712750000065,
+   "mark": 4.463e-06,
+   "upnl": 4.259922275000004,
    "stop": 4.62e-06,
    "tp": 4.4e-06,
    "liq": null,
    "leverage": null,
    "opened": 1792776600000,
    "reason": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding).",
-   "upnl_pln": 16.54
+   "upnl_pln": 16.72
   },
   {
    "symbol": "ADAUSDT",
    "side": "short",
    "size": 479.2,
    "entry": 0.20873736,
-   "mark": 0.210299,
-   "upnl": -0.7483378880000014,
+   "mark": 0.210003,
+   "upnl": -0.6064946879999926,
    "stop": 0.2133,
    "tp": 0.1975,
    "liq": null,
    "leverage": null,
    "opened": 1792795800000,
    "reason": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea.",
-   "upnl_pln": -2.94
+   "upnl_pln": -2.38
   }
  ],
  "closed_trades": [
@@ -164,7 +164,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 241.294153,
+ "cash_usd": 241.294289,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
