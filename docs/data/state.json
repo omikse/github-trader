@@ -89,11 +89,32 @@
    "reason": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R."
   }
  ],
- "last_closed_check_ms": 1792803162551,
+ "last_closed_check_ms": 1792803642484,
  "day": "2026-10-24",
  "day_start_equity": 255.76515971172543,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_cancelled",
+   "id": "o17",
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 83050,
+   "time": 1792803162551,
+   "detail": "cancelled by the brain"
+  },
+  {
+   "type": "order_cancelled",
+   "id": "o16",
+   "symbol": "ETHUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 2435,
+   "time": 1792803162551,
+   "detail": "cancelled by the brain"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 256.75460210303584,
@@ -101,13 +122,13 @@
    "side": "short",
    "entry": 81905.92655,
    "qty": 0.008555222784739396,
-   "stop": 81503.58069146986
+   "stop": 81367.23110700314
   },
-  "last_t": 1792796400000,
+  "last_t": 1792800000000,
   "trades": 0,
   "wins": 0
  },
- "last_btc": 80635.4,
+ "last_btc": 80605.9,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -123,7 +144,9 @@
   "o23:filled",
   "o24:cancelled",
   "o13:expired",
-  "o18:filled"
+  "o18:filled",
+  "o17:cancelled",
+  "o16:cancelled"
  ],
  "last_decision_id": "2026-10-24T00:51:21Z",
  "cash_rate_day": "2026-10-24"
