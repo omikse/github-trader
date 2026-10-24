@@ -1,26 +1,26 @@
 {
- "cash": 241.32796769787302,
+ "cash": 241.3281032742421,
  "positions": {
   "PEPEUSDT": {
    "side": "short",
    "qty": 14917000,
    "entry": 4.7485750000000005e-06,
-   "stop": 4.78e-06,
+   "stop": 4.72e-06,
    "tp": 4.4e-06,
    "opened": 1792776600000,
    "entry_fee": 0.03895897130125001,
-   "mark": 4.543e-06,
+   "mark": 4.551e-06,
    "note": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding)."
   },
   "ADAUSDT": {
    "side": "short",
    "qty": 479.2,
    "entry": 0.20873736,
-   "stop": 0.2165,
+   "stop": 0.2152,
    "tp": 0.1975,
    "opened": 1792795800000,
    "entry_fee": 0.055014818601600006,
-   "mark": 0.209154,
+   "mark": 0.209844,
    "note": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
   }
  },
@@ -101,34 +101,21 @@
   }
  ],
  "fills": [],
- "last_ms": 1792802682464,
- "next_id": 25,
+ "last_ms": 1792803162551,
+ "next_id": 26,
  "orders": [
   {
-   "id": "o16",
-   "symbol": "ETHUSDT",
-   "side": "short",
-   "qty": 0.127753,
-   "trigger": 2435,
-   "direction": "above",
-   "stop": 2472.0,
-   "tp": 2360.0,
-   "placed": 1792723939128,
-   "expires": 1792810339128,
-   "note": "Sell relief bounce in weakest major: ETH d1 RSI 41, 30d -10%, below h4 ema200 2582; trigger at h4 ema50 2437 retest, stop above 24h high 2446 + buffer, TP near 24h low 2357. ~2R."
-  },
-  {
-   "id": "o17",
+   "id": "o25",
    "symbol": "BTCUSDT",
-   "side": "long",
-   "qty": 0.00568691,
-   "trigger": 83050,
+   "side": "short",
+   "qty": 0.00649362,
+   "trigger": 81250,
    "direction": "above",
-   "stop": 82250.0,
-   "tp": 85000.0,
-   "placed": 1792723939128,
-   "expires": 1792810339128,
-   "note": "Regime-change catch: break of 24h high 82,939 after the bleed exhausted (h1 RSI reset, shorts stopped) targets 85k, below h4 ema200 83.45k as first hurdle. ~2.4R."
+   "stop": 81950.0,
+   "tp": 79750.0,
+   "placed": 1792803162551,
+   "expires": 1792889562551,
+   "note": "BTC lost 80.8k on h1 close with lower 4h highs (81.75k, 81.41k, 81.10k). Short the bounce into broken level / h1 ema20 (~81.3k); stop above 4h ema20 81.8k area; TP 30d low 79.7k (~2.1R)."
   }
  ],
  "order_events": [
@@ -266,6 +253,24 @@
    "trigger": 0.2088,
    "time": 1792795800000,
    "detail": "filled at 0.208737"
+  },
+  {
+   "id": "o17",
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 83050,
+   "time": 1792803162551,
+   "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o16",
+   "symbol": "ETHUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 2435,
+   "time": 1792803162551,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -322,6 +327,6 @@
  "income": {
   "funding": 0.017200806347824452,
   "carry": -0.21395110481479168,
-  "interest": 0.025883466122250044
+  "interest": 0.026019042491344617
  }
 }
