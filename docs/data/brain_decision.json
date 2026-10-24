@@ -1,9 +1,12 @@
 {
-  "id": "2026-10-24T18:51:45Z",
-  "decided_at": "2026-10-24T18:51:45Z",
+  "id": "2026-10-24T20:52:00Z",
+  "decided_at": "2026-10-24T20:52:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC bounced from the 79.12k 30d-low flush to 80.23k (h1 RSI 26->40) but stays under a falling h1 ema20 80.53k and stepping-down 4h highs; alts bouncing off 30d lows, all under h1 ema20. Trend still down; the bounce is walking into my 80.45k short order.",
-  "news": "No fresh market-moving news found; Fed 28 Oct hold still ~94% on Polymarket.",
-  "watch_next": "Did the BTC 80.45k short fill and hold under 80.75k? Completed 16-20Z 4h high: if < 80.2k and unfilled, lower trigger to ~80.15k. ADA: trail stop once a completed 4h high prints < 0.2070. Cancel BTC short if h1 closes > 81.05k.",
-  "actions": []
+  "market_view": "BTC short filled at 80,426 on the relief bounce; bounce stalling at 80.4-80.5k under h1 ema20 80.53k with completed 4h high 80.57k (lower again). ADA bounce capped under 0.2069 4h high and h1 ema20 0.2078. Down-leg structure intact.",
+  "news": "No fresh market-moving news found on a quiet Saturday; Fed 28 Oct hold still ~94%.",
+  "watch_next": "BTC: next completed 4h high (00Z) - if < 80.5k trail stop to ~80,850; h1 close > 81.05k kills the short. ADA: trail behind next 4h high; TP 0.1975.",
+  "actions": [
+    {"type": "move_stop", "symbol": "ADAUSDT", "stop": 0.2080, "take_profit": 0.1975,
+      "reason": "Completed 16-20Z 4h high 0.2069 stepped lower; stop to 0.2080 (above that high + ~0.5 ATR and above h1 ema20 0.2078) locks a small profit vs entry 0.20874."}
+  ]
 }
