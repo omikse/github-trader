@@ -1,17 +1,6 @@
 {
- "cash": 241.2888744719299,
+ "cash": 246.45260776042835,
  "positions": {
-  "PEPEUSDT": {
-   "side": "short",
-   "qty": 14917000,
-   "entry": 4.7485750000000005e-06,
-   "stop": 4.62e-06,
-   "tp": 4.4e-06,
-   "opened": 1792776600000,
-   "entry_fee": 0.03895897130125001,
-   "mark": 4.425e-06,
-   "note": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding)."
-  },
   "ADAUSDT": {
    "side": "short",
    "qty": 479.2,
@@ -20,7 +9,7 @@
    "tp": 0.1975,
    "opened": 1792795800000,
    "entry_fee": 0.055014818601600006,
-   "mark": 0.208601,
+   "mark": 0.207909,
    "note": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
   }
  },
@@ -98,11 +87,24 @@
    "why": "stop",
    "opened": 1792744500000,
    "reason": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R."
+  },
+  {
+   "id": "t27",
+   "symbol": "PEPEUSDT",
+   "side": "short",
+   "qty": 14917000,
+   "entry": 4.7485750000000005e-06,
+   "exit": 4.4e-06,
+   "pnl": 5.1246,
+   "time": 1792829160000,
+   "why": "target",
+   "opened": 1792776600000,
+   "reason": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding)."
   }
  ],
  "fills": [],
- "last_ms": 1792828988843,
- "next_id": 27,
+ "last_ms": 1792829468867,
+ "next_id": 28,
  "orders": [
   {
    "id": "o26",
@@ -336,6 +338,6 @@
  "income": {
   "funding": -0.029319972093890596,
   "carry": -0.21395110481479168,
-  "interest": 0.03331101862082714
+  "interest": 0.03345017211926135
  }
 }
