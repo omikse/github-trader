@@ -1,46 +1,46 @@
 {
- "updated": "2026-10-24T02:38:54Z",
+ "updated": "2026-10-24T02:46:54Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9247,
- "equity_pln": 1003.99,
- "return_pct": -0.52,
+ "equity_pln": 1004.04,
+ "return_pct": -0.51,
  "max_drawdown_pct": 3.8,
- "control_pln": 1042.97,
+ "control_pln": 1042.71,
  "control_trades": 0,
- "hodl_pln": 964.63,
+ "hodl_pln": 964.73,
  "positions": [
   {
    "symbol": "PEPEUSDT",
    "side": "short",
    "size": 14917000,
    "entry": 4.7485750000000005e-06,
-   "mark": 4.53e-06,
-   "upnl": 3.2604832750000106,
+   "mark": 4.537e-06,
+   "upnl": 3.1560642750000087,
    "stop": 4.72e-06,
    "tp": 4.4e-06,
    "liq": null,
    "leverage": null,
    "opened": 1792776600000,
    "reason": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding).",
-   "upnl_pln": 12.8
+   "upnl_pln": 12.39
   },
   {
    "symbol": "ADAUSDT",
    "side": "short",
    "size": 479.2,
    "entry": 0.20873736,
-   "mark": 0.211404,
-   "upnl": -1.277853887999999,
+   "mark": 0.211153,
+   "upnl": -1.1575746879999984,
    "stop": 0.2152,
    "tp": 0.1975,
    "liq": null,
    "leverage": null,
    "opened": 1792795800000,
    "reason": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea.",
-   "upnl_pln": -5.02
+   "upnl_pln": -4.54
   }
  ],
  "closed_trades": [
@@ -189,7 +189,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 241.322684,
+ "cash_usd": 241.32282,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -234,20 +234,20 @@
   }
  ],
  "balance_warning": false,
- "other_value_usd": 12.540187,
+ "other_value_usd": 12.676494,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.92,
+   "mark": 0.93,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 12.5402,
-   "pnl": -0.3544,
+   "value": 12.6765,
+   "pnl": -0.2181,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],
