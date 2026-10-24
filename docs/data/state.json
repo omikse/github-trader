@@ -89,11 +89,22 @@
    "reason": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R."
   }
  ],
- "last_closed_check_ms": 1792824774617,
+ "last_closed_check_ms": 1792825254519,
  "day": "2026-10-24",
  "day_start_equity": 255.76515971172543,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_cancelled",
+   "id": "o25",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 81250,
+   "time": 1792824774617,
+   "detail": "cancelled by the brain"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 256.75460210303584,
@@ -101,13 +112,13 @@
    "side": "short",
    "entry": 81905.92655,
    "qty": 0.008555222784739396,
-   "stop": 81367.23110700314
+   "stop": 81366.728305203
   },
-  "last_t": 1792818000000,
+  "last_t": 1792821600000,
   "trades": 0,
   "wins": 0
  },
- "last_btc": 80665.5,
+ "last_btc": 80692.3,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -125,7 +136,8 @@
   "o13:expired",
   "o18:filled",
   "o17:cancelled",
-  "o16:cancelled"
+  "o16:cancelled",
+  "o25:cancelled"
  ],
  "last_decision_id": "2026-10-24T06:52:01Z",
  "cash_rate_day": "2026-10-24"
