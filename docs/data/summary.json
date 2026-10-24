@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-24T10:44:08Z",
+ "updated": "2026-10-24T10:52:08Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9247,
- "equity_pln": 1017.41,
- "return_pct": 0.81,
+ "equity_pln": 1018.1,
+ "return_pct": 0.88,
  "max_drawdown_pct": 3.8,
- "control_pln": 1052.83,
+ "control_pln": 1053.62,
  "control_trades": 0,
- "hodl_pln": 961.13,
+ "hodl_pln": 960.85,
  "positions": [
   {
    "symbol": "ADAUSDT",
    "side": "short",
    "size": 479.2,
    "entry": 0.20873736,
-   "mark": 0.20848,
-   "upnl": 0.12332691200000576,
+   "mark": 0.208133,
+   "upnl": 0.2896093119999991,
    "stop": 0.2123,
    "tp": 0.1975,
    "liq": null,
    "leverage": null,
    "opened": 1792795800000,
    "reason": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea.",
-   "upnl_pln": 0.48
+   "upnl_pln": 1.14
   }
  ],
  "closed_trades": [
@@ -126,71 +126,44 @@
  ],
  "trade_count": 7,
  "win_rate_pct": 57.1,
- "brain_calls_today": 5,
+ "brain_calls_today": 6,
  "last_decision": {
-  "time": "2026-10-24T08:52:08Z",
+  "time": "2026-10-24T10:52:08Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-24T08:51:10Z",
+  "decided_at": "2026-10-24T10:51:06Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 259.84,
-  "equity_pln": 1019.8,
-  "events": [
-   {
-    "type": "order_cancelled",
-    "id": "o25",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "status": "cancelled",
-    "trigger": 81250,
-    "time": 1792824774617,
-    "detail": "cancelled by the brain"
-   },
-   {
-    "type": "position_closed",
-    "id": "t27",
-    "symbol": "PEPEUSDT",
-    "side": "short",
-    "qty": 14917000,
-    "entry": 4.7485750000000005e-06,
-    "exit": 4.4e-06,
-    "pnl": 5.1246,
-    "time": 1792829160000,
-    "why": "target",
-    "opened": 1792776600000,
-    "reason": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding)."
-   }
-  ],
-  "market_view": "Weekend grind lower across the board: BTC 80.56k under h1/h4 ema20 with lower 4h highs, alts (ADA, AVAX, LTC, SUI, WIF) hugging 30d lows with h1 RSI ~30-33. Too oversold to chase; keep selling bounces into structure.",
-  "watch_next": "BTC bounce into 81.0k (short order) or flush to 79.7k with reclaim (reversal long); ADA break of 0.2060; PEPE bounce into 4.58e-6.",
-  "news": "No fresh market-moving headlines found; Fed 28 Oct hold still ~93% on Polymarket.",
+  "equity_usd": 259.42,
+  "equity_pln": 1018.15,
+  "events": [],
+  "market_view": "Slow weekend down-grind continues: BTC 80.56k, 4h highs stepping lower (81.10k/80.99k/80.72k), under h1 ema20 80.91k; alts and memes near 30d lows with h1 RSI ~28-37 (oversold, no chasing).",
+  "watch_next": "BTC bounce into 80.9k (short fill) or flush to 79.7k with reclaim (reversal long); ADA break of 0.2060; PEPE bounce to 4.58e-6.",
+  "news": "",
   "actions": [
    {
-    "type": "move_stop",
-    "symbol": "ADAUSDT",
-    "stop": 0.2123,
-    "take_profit": 0.1975,
-    "reason": "Trail to just above the last completed 4h highs 0.2122/0.2121 and h1 ema20 0.2117; caps loss near 0.7% of entry while trend keeps stepping down.",
+    "type": "cancel_order",
+    "symbol": "BTCUSDT",
+    "reason": "Replacing 81,050 trigger with lower one: 4h highs keep falling (latest 80.72k), per notebook plan lower to ~80,900.",
     "result": "done",
-    "detail": "stop 0.2123, target 0.1975"
+    "detail": "cancelled 1 order(s)"
    },
    {
     "type": "entry_order",
-    "symbol": "PEPEUSDT",
+    "symbol": "BTCUSDT",
     "side": "short",
-    "trigger": 4.58e-06,
-    "stop": 4.8e-06,
-    "take_profit": 4.1e-06,
-    "risk_pct": 0.015,
+    "trigger": 80900,
+    "stop": 81600,
+    "take_profit": 79700,
+    "risk_pct": 0.02,
     "expires_hours": 30,
-    "reason": "Re-short PEPE after TP hit at 4.40e-6: bounce back into the 4.59-4.61e-6 lower-high zone (prior 4h highs) is the place to sell again; funding turned +38.6% APR (longs pay). Stop above 4.80 (prior breakdown area), TP 4.10e-6 toward the next base (~2.2R). Small 1.5% risk since BTC/ADA already carry the bearish theme.",
-    "invalidation": "4h close above 4.75e-6 or BTC reclaiming 81.8k.",
+    "reason": "Bounce-short into h1 ema20 (~80.91k) inside a lower-high 4h sequence (81.10k/80.99k/80.72k), below h4 ema20 81.59k. Stop above completed 4h highs 81.10k + buffer; TP at 30d low zone 79.7k (~1.7R).",
+    "invalidation": "BTC 4h close > 81.6k or a flush to 79.7k with fast reclaim (cancel and flip long).",
     "result": "done",
-    "detail": "short 17319000 when price goes above 4.58e-06 (risk 1.5%, stop 4.8e-06, target 4.1e-06, expires in 30h) ok"
+    "detail": "short 0.006576 when price goes above 80900 (risk 2.0%, stop 81600.0, target 79700.0, expires in 30h) ok"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 246.453084,
+ "cash_usd": 246.453226,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -223,17 +196,6 @@
  },
  "orders": [
   {
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "trigger": 81050,
-   "direction": "above",
-   "stop": 81750.0,
-   "tp": 79750.0,
-   "qty": 0.00653347,
-   "expires": 1792932774617,
-   "note": "Bounce-short into falling h1 ema20 (~81.08k) and the last 4h highs 81.10k/80.99k in a lower-high sequence below h4 ema20 81.7k; stop above the 81.41k 4h high, TP 79.75k = 30d low area (~1.9R)."
-  },
-  {
    "symbol": "PEPEUSDT",
    "side": "short",
    "trigger": 4.58e-06,
@@ -243,6 +205,17 @@
    "qty": 17319000,
    "expires": 1792939928845,
    "note": "Re-short PEPE after TP hit at 4.40e-6: bounce back into the 4.59-4.61e-6 lower-high zone (prior 4h highs) is the place to sell again; funding turned +38.6% APR (longs pay). Stop above 4.80 (prior breakdown area), TP 4.10e-6 toward the next base (~2.2R). Small 1.5% risk since BTC/ADA already carry the bearish theme."
+  },
+  {
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "trigger": 80900,
+   "direction": "above",
+   "stop": 81600.0,
+   "tp": 79700.0,
+   "qty": 0.006576,
+   "expires": 1792947128933,
+   "note": "Bounce-short into h1 ema20 (~80.91k) inside a lower-high 4h sequence (81.10k/80.99k/80.72k), below h4 ema20 81.59k. Stop above completed 4h highs 81.10k + buffer; TP at 30d low zone 79.7k (~1.7R)."
   }
  ],
  "balance_warning": false,
