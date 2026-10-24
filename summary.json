@@ -1,0 +1,271 @@
+{
+ "updated": "2026-10-24T18:01:22Z",
+ "status": "live",
+ "start": "2026-10-21T22:31:35Z",
+ "end_at": "2026-11-21T21:00:00Z",
+ "start_pln": 1000.0,
+ "fx_usd_pln": 3.9247,
+ "equity_pln": 1025.79,
+ "return_pct": 1.64,
+ "max_drawdown_pct": 3.8,
+ "control_pln": 1065.49,
+ "control_trades": 0,
+ "hodl_pln": 956.63,
+ "positions": [
+  {
+   "symbol": "ADAUSDT",
+   "side": "short",
+   "size": 479.2,
+   "entry": 0.20873736,
+   "mark": 0.204471,
+   "upnl": 2.0444397119999986,
+   "stop": 0.2086,
+   "tp": 0.1975,
+   "liq": null,
+   "leverage": null,
+   "opened": 1792795800000,
+   "reason": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea.",
+   "upnl_pln": 8.02
+  }
+ ],
+ "closed_trades": [
+  {
+   "id": "t27",
+   "symbol": "PEPEUSDT",
+   "side": "short",
+   "qty": 14917000,
+   "entry": 4.7485750000000005e-06,
+   "exit": 4.4e-06,
+   "pnl": 5.1246,
+   "time": 1792829160000,
+   "why": "target",
+   "opened": 1792776600000,
+   "reason": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding).",
+   "pnl_pln": 20.11
+  },
+  {
+   "id": "t22",
+   "symbol": "PEPEUSDT",
+   "side": "long",
+   "qty": 20657000,
+   "entry": 4.80144e-06,
+   "exit": 4.85e-06,
+   "pnl": 0.8434,
+   "time": 1792765140000,
+   "why": "stop",
+   "opened": 1792744500000,
+   "reason": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R.",
+   "pnl_pln": 3.31
+  },
+  {
+   "id": "t15",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00669071,
+   "entry": 82375.28,
+   "exit": 81540.75,
+   "pnl": 4.9804,
+   "time": 1792719960000,
+   "why": "stop",
+   "opened": 1792651560000,
+   "reason": "",
+   "pnl_pln": 19.55
+  },
+  {
+   "id": "t14",
+   "symbol": "AVAXUSDT",
+   "side": "short",
+   "qty": 18.741,
+   "entry": 9.297210000000002,
+   "exit": 9.1695825,
+   "pnl": 2.2015,
+   "time": 1792719900000,
+   "why": "stop",
+   "opened": 1792654920000,
+   "reason": "",
+   "pnl_pln": 8.64
+  },
+  {
+   "id": "t12",
+   "symbol": "LTCUSDT",
+   "side": "short",
+   "qty": 4.74073,
+   "entry": 58.832345000000004,
+   "exit": 58.8294,
+   "pnl": -0.2928,
+   "time": 1792703820000,
+   "why": "stop",
+   "opened": 1792674540000,
+   "reason": "",
+   "pnl_pln": -1.15
+  },
+  {
+   "id": "t8",
+   "symbol": "DOTUSDT",
+   "side": "short",
+   "qty": 155.725,
+   "entry": 1.1046685,
+   "exit": 1.136568,
+   "pnl": -5.1595,
+   "time": 1792657080000,
+   "why": "stop",
+   "pnl_pln": -20.25
+  },
+  {
+   "id": "t5",
+   "symbol": "XRPUSDT",
+   "side": "long",
+   "qty": 239.268,
+   "entry": 1.3584074000000002,
+   "exit": 1.337331,
+   "pnl": -5.3977,
+   "time": 1792639980000,
+   "why": "stop",
+   "pnl_pln": -21.18
+  }
+ ],
+ "trade_count": 7,
+ "win_rate_pct": 57.1,
+ "brain_calls_today": 9,
+ "last_decision": {
+  "time": "2026-10-24T16:52:22Z",
+  "trigger": "brain session",
+  "decided_at": "2026-10-24T16:51:25Z",
+  "model": "claude-opus-5-5",
+  "equity_usd": 261.18,
+  "equity_pln": 1025.04,
+  "events": [
+   {
+    "type": "order_cancelled",
+    "id": "o28",
+    "symbol": "PEPEUSDT",
+    "side": "short",
+    "status": "cancelled",
+    "trigger": 4.58e-06,
+    "time": 1792853542551,
+    "detail": "cancelled by the brain"
+   }
+  ],
+  "market_view": "Down-leg extended: BTC broke the 79.75k 30d low, flushed to 79.12k and sits 79.71k (h1 RSI 26, h4 29), under a falling h1 ema20 80.57k. Alts at/through 30d lows with h1 RSI 19-33: trend down but stretched, so short only bounces.",
+  "watch_next": "BTC bounce into 80.45k (lowered short order) vs reclaim h1 close > 80.6k (cancel, think long). ADA toward 0.1975 TP; next completed 4h high < 0.2070 -> trail to ~0.2065.",
+  "news": "No specific catalyst found; weekend liquidity grind, Fed 28 Oct still priced as hold.",
+  "actions": [
+   {
+    "type": "cancel_order",
+    "symbol": "BTCUSDT",
+    "reason": "80.9k trigger stale after the leg down to 79.12k; replacing with a lower bounce-short trigger per plan.",
+    "result": "done",
+    "detail": "cancelled 1 order(s)"
+   },
+   {
+    "type": "move_stop",
+    "symbol": "ADAUSDT",
+    "stop": 0.2086,
+    "take_profit": 0.1975,
+    "reason": "Trail ADA short stop 0.2095 -> 0.2086: just under the last completed 4h high 0.2089, at h1 ema20 0.2085; entry 0.20874 so the trade can no longer lose. Price 0.2032, TP 0.1975 still in play.",
+    "result": "done",
+    "detail": "stop 0.2086, target 0.1975"
+   },
+   {
+    "type": "entry_order",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "trigger": 80450,
+    "stop": 81050,
+    "take_profit": 78500,
+    "risk_pct": 0.02,
+    "expires_hours": 30,
+    "reason": "Bounce-short: BTC broke the 30d low 79.75k (flush to 79.12k), lower 4h highs 81.10k/80.99k/80.72k/80.75k, below h1 ema20 80.57k and h4 ema20 81.25k. A relief bounce into 80.45k (old breakdown zone / h1 ema20) is the short; stop above the last 4h high 80.75k + buffer, TP 78.5k (~3.2R).",
+    "invalidation": "BTC h1 close > 81.05k = breakdown failed, sellers trapped.",
+    "result": "done",
+    "detail": "short 0.00758686 when price goes above 80450 (risk 2.0%, stop 81050.0, target 78500.0, expires in 30h) ok"
+   }
+  ]
+ },
+ "brain_mode": "session",
+ "cash_usd": 246.445498,
+ "start_usd": 257.14,
+ "start_btc": 84590.1,
+ "control_live": {
+  "equity": 256.75460210303584,
+  "pos": {
+   "side": "short",
+   "entry": 81905.92655,
+   "qty": 0.008555222784739396,
+   "stop": 80465.85100538238
+  }
+ },
+ "pairs": {
+  "BTCUSDT": "XBTUSD",
+  "ETHUSDT": "ETHUSD",
+  "SOLUSDT": "SOLUSD",
+  "XRPUSDT": "XRPUSD",
+  "DOGEUSDT": "XDGUSD",
+  "ADAUSDT": "ADAUSD",
+  "AVAXUSDT": "AVAXUSD",
+  "LINKUSDT": "LINKUSD",
+  "SUIUSDT": "SUIUSD",
+  "PEPEUSDT": "PEPEUSD",
+  "WIFUSDT": "WIFUSD",
+  "BONKUSDT": "BONKUSD",
+  "LTCUSDT": "XLTCZUSD",
+  "DOTUSDT": "DOTUSD",
+  "NEARUSDT": "NEARUSD",
+  "PAXGUSDT": "PAXGUSD",
+  "EURUSDT": "EURUSD"
+ },
+ "orders": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "trigger": 80450,
+   "direction": "above",
+   "stop": 81050.0,
+   "tp": 78500.0,
+   "qty": 0.00758686,
+   "expires": 1792968742592,
+   "note": "Bounce-short: BTC broke the 30d low 79.75k (flush to 79.12k), lower 4h highs 81.10k/80.99k/80.72k/80.75k, below h1 ema20 80.57k and h4 ema20 81.25k. A relief bounce into 80.45k (old breakdown zone / h1 ema20) is the short; stop above the last 4h high 80.75k + buffer, TP 78.5k (~3.2R)."
+  }
+ ],
+ "balance_warning": false,
+ "other_value_usd": 12.8128,
+ "predictions": [
+  {
+   "market": "2589812",
+   "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+   "outcome": "Yes",
+   "entry": 0.94,
+   "mark": 0.94,
+   "end": "2026-10-29T03:59:00Z",
+   "opened": 1792704918998,
+   "shares": 13.6306,
+   "cost": 12.8946,
+   "value": 12.8128,
+   "pnl": -0.0818,
+   "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
+  }
+ ],
+ "pred_closed": [],
+ "carry": [],
+ "carry_closed": [
+  {
+   "id": "c20",
+   "symbol": "BONKUSDT",
+   "notional": 50.69,
+   "opened": 1792723939128,
+   "time": 1792752773958,
+   "earned": 0.0902,
+   "fees": 0.3041,
+   "pnl": -0.214,
+   "why": "manual close",
+   "reason": "BONK funding 265% APR (~0.73%/day) and was 108% APR 2h ago; break-even ~0.8 day on 0.6% round-trip. Price-neutral. Close when funding < 30% APR or negative.",
+   "pnl_pln": -0.84
+  }
+ ],
+ "income_pln": {
+  "funding": -0.18,
+  "carry": -0.84,
+  "interest": 0.17
+ },
+ "cash_rate_pct": 3.87
+}
