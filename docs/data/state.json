@@ -100,13 +100,41 @@
    "why": "target",
    "opened": 1792776600000,
    "reason": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding)."
+  },
+  {
+   "id": "t31",
+   "symbol": "ADAUSDT",
+   "side": "short",
+   "qty": 479.2,
+   "entry": 0.20873736,
+   "exit": 0.208104,
+   "pnl": 0.1936,
+   "time": 1792884780000,
+   "why": "stop",
+   "opened": 1792795800000,
+   "reason": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
   }
  ],
- "last_closed_check_ms": 1792884700871,
+ "last_closed_check_ms": 1792885180868,
  "day": "2026-10-24",
  "day_start_equity": 255.76515971172543,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "position_closed",
+   "id": "t31",
+   "symbol": "ADAUSDT",
+   "side": "short",
+   "qty": 479.2,
+   "entry": 0.20873736,
+   "exit": 0.208104,
+   "pnl": 0.1936,
+   "time": 1792884780000,
+   "why": "stop",
+   "opened": 1792795800000,
+   "reason": "ADA is among the weakest coins (7d -4.7%, 30d -9.9%, below h4 ema20 0.2186 and h4 ema200 0.241). A break below the 30d low 0.2094 opens the next leg of the alt bleed toward ~0.1975 (~1.5R); stop above the last completed 4h high 0.2163. Small 1.5% risk because it overlaps the ETH short idea."
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 268.3517564571816,
@@ -115,7 +143,7 @@
   "trades": 1,
   "wins": 1
  },
- "last_btc": 80585.2,
+ "last_btc": 80769.9,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
