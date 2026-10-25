@@ -1,17 +1,14 @@
 {
-  "id": "2026-10-25T12:52:00Z",
-  "decided_at": "2026-10-25T12:52:00Z",
+  "id": "2026-10-25T14:51:08Z",
+  "decided_at": "2026-10-25T14:51:08Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC still capped below h1 ema20 (~80.48k) with lower 4h highs (80.92k, 80.85k, 80.59k, 80.48k); alts at/near 30d lows. Down-leg intact, weekend chop.",
-  "news": "No market-moving news found; Fed 28 Oct hold priced ~94-95%.",
-  "watch_next": "BTC 16Z 4h high < 80.5k -> trail stop to ~80,600; break of 80.0k/79.12k; SUI fill at 0.926.",
+  "market_view": "Sunday drift lower: BTC 80.33k under h1 ema20 80.45k, current 4h high 80.48k below completed 80.59k (lower highs intact). SUI keeps sliding (0.910, h4 RSI 28), its 4h bounces now cap at ~0.920; XRP/ADA flat-weak.",
+  "news": "No market-moving weekend news found; Fed 28 Oct hold still ~95%.",
+  "watch_next": "16Z: 12Z 4h completes; if its high < 80.5k trail BTC stop to ~80,600. Break of 80.0k/79.48k opens 79.1k/78.5k. SUI bounce-short fill at 0.922.",
   "actions": [
-    {
-      "type": "move_stop",
-      "symbol": "BTCUSDT",
-      "stop": 80700,
-      "take_profit": 78500,
-      "reason": "Planned trail: 08Z 4h candle completed with high 80,592 (< 80.6k); stop above it + buffer cuts risk while keeping the bounce-short thesis."
-    }
+    {"type": "cancel_order", "symbol": "SUIUSDT", "reason": "Replace with lower trigger: SUI fell to 0.910, h1 ema20 dropped to 0.923 and the last two 4h highs are 0.9199/0.920, so 0.926 likely never fills."},
+    {"type": "entry_order", "symbol": "SUIUSDT", "side": "short", "trigger": 0.922, "stop": 0.937, "take_profit": 0.885, "risk_pct": 0.015, "expires_hours": 24,
+      "reason": "Weakest-alt bounce-short re-placed lower: SUI 7d -8.6%, 30d -24%, h4 RSI 28, below h4 ema20 0.953. Short a bounce into h1 ema20 ~0.923 / 4h highs 0.920; stop above completed 04Z 4h high 0.936 + buffer, TP 0.885 (~2.5R).",
+      "invalidation": "SUI 4h close > 0.937 or BTC h1 close > 80.9k (BTC down-leg over)."}
   ]
 }
