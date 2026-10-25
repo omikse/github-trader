@@ -1,34 +1,22 @@
 {
-  "id": "2026-10-25T08:52:00Z",
-  "decided_at": "2026-10-25T08:52:00Z",
+  "id": "2026-10-25T10:51:48Z",
+  "decided_at": "2026-10-25T10:51:48Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC bounce failed under 80.92k; completed 4h highs stepping down (80.92k -> 80.85k), current 4h high only 80.59k, price 80.39k below h1 ema20 80.57k. Alts keep bleeding (SUI 0.914, h4 RSI 28). XRP holding 1.29-1.31 range.",
-  "news": "No fresh market-moving crypto news found; Fed 28 Oct still priced as hold.",
-  "watch_next": "BTC 12Z 4h close: if completed high < 80.6k trail stop to ~80,700; break of 80.24k/80.19k lows opens 79.1k/78.5k. SUI bounce-short fill near 0.926. XRP order: cancel on h1 close < 1.295 or BTC h1 close < 80.2k.",
+  "market_view": "BTC grinding lower under h1 ema20 (80.50k), current 4h high 80.59k below prior 80.85k; alts making new lows (SUI 0.903, WIF/DOT/LINK h1 RSI 23-33). XRP lost 1.295, breakout long idea gone.",
+  "news": "No notable market-moving news found for the weekend; Fed 28 Oct hold still ~95%.",
+  "watch_next": "BTC 08Z 4h candle close (12Z): if high stays < 80.6k, stop -> ~80,700. Below 79.8k trail further. SUI bounce-short order at 0.926.",
   "actions": [
     {
       "type": "move_stop",
       "symbol": "BTCUSDT",
-      "stop": 80900,
+      "stop": 80800,
       "take_profit": 78500,
-      "reason": "Trail stop from 80,960 to 80,900, just above the last completed 4h high 80,850 (+buffer); lower 4h highs keep the bear thesis intact, above it the bounce is resuming."
+      "reason": "Current 4h high 80,592 is a lower high under the completed 80,850; tighten stop 80,900 -> 80,800 (above 80.6k + buffer) to lock in reduced risk while keeping room."
     },
     {
       "type": "cancel_order",
-      "symbol": "SUIUSDT",
-      "reason": "Replace with a lower trigger: SUI kept falling (0.914), 4h highs stepped down to 0.936 completed / 0.920 current, h1 ema20 now 0.9315."
-    },
-    {
-      "type": "entry_order",
-      "symbol": "SUIUSDT",
-      "side": "short",
-      "trigger": 0.926,
-      "stop": 0.94,
-      "take_profit": 0.885,
-      "risk_pct": 0.015,
-      "expires_hours": 24,
-      "reason": "Weakest-alt bounce-short re-placed lower: SUI 7d -8.2%, h4 RSI 28, below h4 ema20 0.957; short a bounce toward h1 ema20 (~0.93) instead of chasing at h1 RSI 32. Stop above completed 4h high 0.936 + buffer, TP 0.885 (~2.9R).",
-      "invalidation": "4h close above 0.940 / BTC h1 close > 80.9k (BTC short stopped)."
+      "symbol": "XRPUSDT",
+      "reason": "Cancel condition met: XRP trading 1.290, below 1.295 and h1 ema20 1.2951; breakout above 1.3138 no longer near, idea gone."
     }
   ]
 }
