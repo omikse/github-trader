@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-25T04:51:55Z",
+ "updated": "2026-10-25T04:52:55Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9247,
- "equity_pln": 1005.8,
- "return_pct": -0.34,
+ "equity_pln": 1005.95,
+ "return_pct": -0.32,
  "max_drawdown_pct": 3.8,
  "control_pln": 1053.2,
  "control_trades": 1,
- "hodl_pln": 964.42,
+ "hodl_pln": 964.36,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00758686,
    "entry": 80425.865,
-   "mark": 80837.2,
-   "upnl": -3.120741058099938,
+   "mark": 80832.2,
+   "upnl": -3.082806758099938,
    "stop": 81050.0,
    "tp": 78500.0,
    "liq": null,
    "leverage": null,
    "opened": 1792868280000,
    "reason": "Bounce-short: BTC broke the 30d low 79.75k (flush to 79.12k), lower 4h highs 81.10k/80.99k/80.72k/80.75k, below h1 ema20 80.57k and h4 ema20 81.25k. A relief bounce into 80.45k (old breakdown zone / h1 ema20) is the short; stop above the last 4h high 80.75k + buffer, TP 78.5k (~3.2R).",
-   "upnl_pln": -12.25
+   "upnl_pln": -12.1
   }
  ],
  "closed_trades": [
@@ -140,22 +140,37 @@
  ],
  "trade_count": 8,
  "win_rate_pct": 62.5,
- "brain_calls_today": 2,
+ "brain_calls_today": 3,
  "last_decision": {
-  "time": "2026-10-25T02:51:55Z",
+  "time": "2026-10-25T04:52:55Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-25T02:53:00Z",
+  "decided_at": "2026-10-25T04:52:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 256.37,
-  "equity_pln": 1006.16,
+  "equity_usd": 256.31,
+  "equity_pln": 1005.95,
   "events": [],
-  "market_view": "Sunday relief bounce keeps grinding: BTC 80.89k printed a second higher 4h high and sits above h1 ema20, just under h1 ema50 80.96k and h4 ema20 81.22k. Down-leg weakening but not invalidated; alts follow, XRP leads, NEAR/DOT/SUI weakest.",
-  "watch_next": "BTC h1 close > 81.05k stops the short (thesis dead) -> consider reversal long / XRP long. If a completed 4h high < 80.6k prints, trail stop to ~80,900. Time limit: short not below 79.8k by 26 Oct 12Z -> close.",
-  "news": "No market-moving weekend news found; Fed 28 Oct hold still priced ~0.94.",
-  "actions": []
+  "market_view": "Dead-quiet Sunday: BTC 80.8k pinned between h1 ema20 80.63k and h1 ema50 80.94k, 4h ranges shrinking (80.71-80.83k last candle); down-leg not invalidated, short -2.95 with stop 81,050. XRP is the clear relative-strength leader (24h +1.5%, h1 RSI 66, above h4 ema20 1.305).",
+  "watch_next": "BTC h1 close > 81.05k kills the short. XRP breakout order 1.3175 fills only if bounce extends (hedge vs BTC short). Trail BTC stop to ~80,950 if a completed 4h high < 80.6k prints. Short time limit 26 Oct 12Z.",
+  "news": "No market-moving crypto/macro news found; Fed 28 Oct hold priced ~95%.",
+  "actions": [
+   {
+    "type": "entry_order",
+    "symbol": "XRPUSDT",
+    "side": "long",
+    "trigger": 1.3175,
+    "stop": 1.2965,
+    "take_profit": 1.36,
+    "risk_pct": 0.015,
+    "expires_hours": 24,
+    "reason": "XRP relative-strength leader: only major green on 7d (+0.3%), h1 RSI 66, reclaimed h4 ema20 1.305 while alts sit near 30d lows. Breakout above the 1.3116 4h high to 1.3175 = momentum continuation toward 1.36 (prior range). Stop under h4 ema20 and the 1.2968 4h low. Also hedges the BTC short if the weekend bounce extends.",
+    "invalidation": "Breakout fails back below 1.30 / h4 ema20, or BTC rolls over below 80.2k before fill (cancel).",
+    "result": "done",
+    "detail": "long 171.261 when price goes above 1.3175 (risk 1.5%, stop 1.2965, target 1.36, expires in 24h) ok"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 246.447016,
+ "cash_usd": 246.447031,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -181,7 +196,19 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [],
+ "orders": [
+  {
+   "symbol": "XRPUSDT",
+   "side": "long",
+   "trigger": 1.3175,
+   "direction": "above",
+   "stop": 1.2965,
+   "tp": 1.36,
+   "qty": 171.261,
+   "expires": 1792990375686,
+   "note": "XRP relative-strength leader: only major green on 7d (+0.3%), h1 RSI 66, reclaimed h4 ema20 1.305 while alts sit near 30d lows. Breakout above the 1.3116 4h high to 1.3175 = momentum continuation toward 1.36 (prior range). Stop under h4 ema20 and the 1.2968 4h low. Also hedges the BTC short if the weekend bounce extends."
+  }
+ ],
  "balance_warning": false,
  "other_value_usd": 12.949106,
  "predictions": [
