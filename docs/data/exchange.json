@@ -1,5 +1,5 @@
 {
- "cash": 246.48874171371844,
+ "cash": 246.48884784132156,
  "positions": {
   "BTCUSDT": {
    "side": "short",
@@ -9,7 +9,7 @@
    "tp": 78500.0,
    "opened": 1792868280000,
    "entry_fee": 0.33559887797364507,
-   "mark": 80318.9,
+   "mark": 80439.2,
    "note": "Bounce-short: BTC broke the 30d low 79.75k (flush to 79.12k), lower 4h highs 81.10k/80.99k/80.72k/80.75k, below h1 ema20 80.57k and h4 ema20 81.25k. A relief bounce into 80.45k (old breakdown zone / h1 ema20) is the short; stop above the last 4h high 80.75k + buffer, TP 78.5k (~3.2R)."
   }
  },
@@ -116,21 +116,21 @@
   }
  ],
  "fills": [],
- "last_ms": 1792939475380,
- "next_id": 35,
+ "last_ms": 1792939895479,
+ "next_id": 36,
  "orders": [
   {
-   "id": "o34",
+   "id": "o35",
    "symbol": "SUIUSDT",
    "side": "short",
-   "qty": 259.744,
-   "trigger": 0.926,
+   "qty": 242.817,
+   "trigger": 0.922,
    "direction": "above",
-   "stop": 0.94,
+   "stop": 0.937,
    "tp": 0.885,
-   "placed": 1792918333529,
-   "expires": 1793004733529,
-   "note": "Weakest-alt bounce-short re-placed lower: SUI 7d -8.2%, h4 RSI 28, below h4 ema20 0.957; short a bounce toward h1 ema20 (~0.93) instead of chasing at h1 RSI 32. Stop above completed 4h high 0.936 + buffer, TP 0.885 (~2.9R)."
+   "placed": 1792939895479,
+   "expires": 1793026295479,
+   "note": "Weakest-alt bounce-short re-placed lower: SUI 7d -8.6%, 30d -24%, h4 RSI 28, below h4 ema20 0.953. Short a bounce into h1 ema20 ~0.923 / 4h highs 0.920; stop above completed 04Z 4h high 0.936 + buffer, TP 0.885 (~2.5R)."
   }
  ],
  "order_events": [
@@ -349,6 +349,15 @@
    "trigger": 1.3175,
    "time": 1792925533538,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o34",
+   "symbol": "SUIUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 0.926,
+   "time": 1792939895479,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -405,6 +414,6 @@
  "income": {
   "funding": 0.06449290220566097,
   "carry": -0.21395110481479168,
-  "interest": 0.06271190732393739
+  "interest": 0.06281803492704827
  }
 }
