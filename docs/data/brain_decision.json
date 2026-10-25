@@ -1,12 +1,34 @@
 {
-  "id": "2026-10-25T06:51:46Z",
-  "decided_at": "2026-10-25T06:51:46Z",
+  "id": "2026-10-25T08:52:00Z",
+  "decided_at": "2026-10-25T08:52:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC rejected 80.92k (completed 4h high) and slid back to 80.45k, below h1 ema20 80.60k; h4 RSI 40, lower highs intact. Alts bleeding again (SUI/DOT/LINK/WIF h4 RSI ~30-33, 7d -5 to -12%). XRP still relatively strong but dipped to 1.298.",
-  "news": "No market-moving crypto news found for the weekend; Fed 28 Oct hold still priced ~94%.",
-  "watch_next": "BTC 08Z 4h close: high < 80.6k -> trail stop to ~80.9k; break of 80.19k 4h low -> continuation to 79.1k/78.5k. SUI bounce-short fill near 0.932. XRP order: cancel on h1 close < 1.295.",
+  "market_view": "BTC bounce failed under 80.92k; completed 4h highs stepping down (80.92k -> 80.85k), current 4h high only 80.59k, price 80.39k below h1 ema20 80.57k. Alts keep bleeding (SUI 0.914, h4 RSI 28). XRP holding 1.29-1.31 range.",
+  "news": "No fresh market-moving crypto news found; Fed 28 Oct still priced as hold.",
+  "watch_next": "BTC 12Z 4h close: if completed high < 80.6k trail stop to ~80,700; break of 80.24k/80.19k lows opens 79.1k/78.5k. SUI bounce-short fill near 0.926. XRP order: cancel on h1 close < 1.295 or BTC h1 close < 80.2k.",
   "actions": [
-    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 80960, "take_profit": 78500, "reason": "Tighten from 81,050 to just above the last completed 4h high 80,919 (+buffer); bounce rejected there, so above it the bear thesis is wrong. Reduces risk to ~1.5%."},
-    {"type": "entry_order", "symbol": "SUIUSDT", "side": "short", "trigger": 0.932, "stop": 0.947, "take_profit": 0.89, "risk_pct": 0.015, "expires_hours": 24, "reason": "Weakest-alt bounce-short: SUI 7d -7.8%, h4 RSI 29, below h4 ema20 0.962 and h1 ema20 0.935; short a bounce into h1 ema20 / last 4h high 0.936 rather than chase at oversold h1 RSI 33. Stop above 4h highs 0.941 + buffer, TP 0.89 (~2.8R).", "invalidation": "4h close above 0.947 / h4 ema20 reclaim, or BTC h1 close > 80.96k."}
+    {
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 80900,
+      "take_profit": 78500,
+      "reason": "Trail stop from 80,960 to 80,900, just above the last completed 4h high 80,850 (+buffer); lower 4h highs keep the bear thesis intact, above it the bounce is resuming."
+    },
+    {
+      "type": "cancel_order",
+      "symbol": "SUIUSDT",
+      "reason": "Replace with a lower trigger: SUI kept falling (0.914), 4h highs stepped down to 0.936 completed / 0.920 current, h1 ema20 now 0.9315."
+    },
+    {
+      "type": "entry_order",
+      "symbol": "SUIUSDT",
+      "side": "short",
+      "trigger": 0.926,
+      "stop": 0.94,
+      "take_profit": 0.885,
+      "risk_pct": 0.015,
+      "expires_hours": 24,
+      "reason": "Weakest-alt bounce-short re-placed lower: SUI 7d -8.2%, h4 RSI 28, below h4 ema20 0.957; short a bounce toward h1 ema20 (~0.93) instead of chasing at h1 RSI 32. Stop above completed 4h high 0.936 + buffer, TP 0.885 (~2.9R).",
+      "invalidation": "4h close above 0.940 / BTC h1 close > 80.9k (BTC short stopped)."
+    }
   ]
 }
