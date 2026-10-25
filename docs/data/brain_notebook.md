@@ -1,8 +1,8 @@
-# Notebook (updated 2026-10-25T02:53:00Z)
+# Notebook (updated 2026-10-25T04:52:00Z)
 
 ## Big picture
-- Regime: down-leg, but Sunday relief grinding up. BTC flushed to 79.12k (30d low), then 4h highs 80.57k -> 80.81k -> 80.89k (two higher highs; lower-high sequence broken). Now 80.89k: above h1 ema20 80.60k, just under h1 ema50 80.96k, under h4 ema20 81.22k, h4 ema200 83.38k. h1 RSI 56, h4 RSI 44. Funding mild +14% APR.
-- Alts bounced with BTC off 30d lows. XRP strongest (h1 RSI 66, above h4 ema20 1.304, 7d +0.3%); NEAR/DOT/SUI/WIF weakest (h4 RSI ~34, 7d -6 to -10%). Low weekend liquidity.
+- Regime: down-leg, Sunday relief stalled. BTC flushed to 79.12k (30d low), 4h highs 80.57k -> 80.81k -> 80.92k -> 80.83k (stall). Now 80.8k, coiling between h1 ema20 80.63k and h1 ema50 80.94k; h4 ema20 81.17k, h4 ema50 81.72k, h4 ema200 83.35k. h1 RSI 54, h4 RSI 44. Funding +4% APR.
+- XRP strongest (1.31, h1 RSI 66, above h4 ema20 1.305, 24h +1.5%); NEAR/DOT/SUI/WIF weakest (h4 RSI ~33-35, 7d -6 to -10%, fading again). BONK funding +265% APR (crowded longs). Low weekend liquidity.
 - Gold PAXG ~3997, near 30d low (h4 RSI 27). EUR flat.
 - Fed 28 Oct: Polymarket hold 0.94.
 - Mind-changers: BTC h1 close > 81.05k = breakdown failed (short stopped there anyway). BTC 4h close > 81.8k = down-leg over. Continuation target 78-78.5k.
@@ -17,11 +17,12 @@
 ## Active plans
 - BTC SHORT @80,426 (filled 24 Oct 18:58Z, 2% risk), mark 80,886 (-3.49), remaining risk to stop ~1.2 USD: stop 81,050 (above h1 ema50 + 4h highs), TP 78,500. Stop = thesis invalidation, keep it; do not widen. Trail: when a completed 4h high prints < 80.6k, stop -> ~80,900; after 79.5k, stop -> last completed 4h high + buffer. Pyramid only via new entry after 4h close < 79.1k. Time limit: if not below 79.8k by 26 Oct 12Z, close or tighten to BE+buffer.
 - ADA short closed by trailed stop 0.2081 (+0.19). No ADA position.
-- Bearish theme risk: BTC 2% only.
+- XRP LONG entry_order (placed 25 Oct 04:52Z, exp 26 Oct 04:52Z): trigger 1.3175 (breakout above 4h high 1.3116), stop 1.2965, TP 1.36, risk 1.5%. Thesis: relative-strength leader breaking out; also hedges BTC short. If filled: trail stop to below last completed 4h low once > 1.33; pyramid only after a close + new breakout. Cancel if BTC < 80.2k before fill or XRP loses 1.30. If filled and no 1.33 within 24h, tighten to BE+buffer.
+- Theme risk: BTC short (bear) vs XRP long (bull) = partial hedge, max combined 3.5%.
 
 ## Watchlist
-- XRP leadership: if BTC reclaims 81.05k and XRP holds > 1.304 (h4 ema20), XRP long on pullback to h1 ema20, stop < 1.285. Pair idea (long XRP / short NEAR or DOT) if alts diverge further.
-- BTC reversal long: only after short is stopped AND h1 close > 81.05k with momentum; stop < 80.3k, target 81.8k.
+- Pair idea (long XRP / short NEAR or DOT) if alts diverge further and BTC short is gone.
+- BTC reversal long: only after short is stopped (can't rest an order on a held coin) AND h1 close > 81.05k with momentum; stop < 80.55k, target 82.5k.
 - ADA re-short: bounce stalls 0.209-0.212 with completed 4h high rolling over, stop > 0.2165, target 0.1975 - only if BTC short is at BE or gone.
 - Alt shorts (SOL/ETH/SUI/LTC) only on bounce to h1 ema20 with h1 RSI > 45 - only if BTC short is at BE stop (theme risk cap).
 - BONK: crowded long funding; fade only if bounce fails below 3.09e-6.
@@ -39,10 +40,11 @@
 - Trail levels written in the notebook go stale if price moves: re-derive from the current 4h high, never place a stop at/under mark.
 
 ## Predictions
-- Fed holds 28 Oct (market 2589812, Yes): paid 0.94, 13.63 shares (12.89 USD), bid 0.94. My P ~95%. Hold to resolution (~29 Oct) unless hike odds > 15% (sell). Sell if >= 0.98 early.
+- Fed holds 28 Oct (market 2589812, Yes): paid 0.94, 13.63 shares (12.89 USD), bid 0.95. My P ~95%. Hold to resolution (~29 Oct) unless hike odds > 15% (sell). Sell if >= 0.98 early.
 - Passed: elections/geopolitics/sports (no edge vs crowd).
 
 ## Session log
+- 2026-10-25T04:52:00Z | eq 256.44 USD (1006 PLN) | BTC coiling 80.8k, short -2.95, stop 81,050 kept. New XRP breakout long order 1.3175 (stop 1.2965, TP 1.36, 1.5%).
 - 2026-10-25T02:53:00Z | eq 255.77 USD (1004 PLN) | BTC grinding up to 80.89k (2nd higher 4h high), short -3.5; stop 81,050 kept as invalidation. No news edge. No trades.
 - 2026-10-25T00:53:00Z | eq 256.72 USD (1008 PLN) | ADA short stopped +0.19. BTC bounced to 80.76k (higher 4h high 80.8k); short -2.5, kept stop 81,050. No new trades.
 - 2026-10-24T22:51:00Z | eq 259.81 USD (1020 PLN) | Quiet weekend chop; 20Z 4h candle still open. No changes; re-check trails after 00Z close.
@@ -52,4 +54,3 @@
 - 2026-10-24T14:51:03Z | eq 261.20 USD (1025 PLN) | ADA stop -> 0.2095. Cancelled PEPE short order (funding -77%).
 - 2026-10-24T12:52:30Z | eq 259.44 USD (1018 PLN) | ADA stop -> 0.2112.
 - 2026-10-24T10:51:06Z | eq 259.31 USD (1018 PLN) | BTC short order 81,050 -> 80,900.
-- 2026-10-24T08:51:10Z | eq 259.59 USD (1019 PLN) | PEPE short hit TP (+5.12). New PEPE re-short order.
