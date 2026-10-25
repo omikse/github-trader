@@ -1,9 +1,13 @@
 {
-  "id": "2026-10-25T16:51:00Z",
-  "decided_at": "2026-10-25T16:51:00Z",
+  "id": "2026-10-25T18:52:00Z",
+  "decided_at": "2026-10-25T18:52:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC chopping 80.0-80.9k on the weekend; 12Z 4h high 80,698 tested but didn't break the 80,700 short stop. Lower-high structure intact below h4 ema20 80.98k; alts still weak, SUI sitting right at the 0.922 bounce-short trigger.",
-  "news": "No market-moving crypto news found; Fed 28 Oct hold still ~94-95%.",
-  "watch_next": "Whether BTC holds below 80.7k and the 16Z 4h high; SUI order fill at 0.922; BTC break of 80.0k toward 79.5k/79.1k; Fed-hold price.",
-  "actions": []
+  "market_view": "BTC stuck in a 2-day 80.0-80.92k weekend range; my mid-range bounce short got wicked out at 80.74k. Alts mildly bouncing Sunday evening; SUI short filled at 0.9217 and sits near its 0.937 structure stop.",
+  "news": "No market-moving news found; Fed 28 Oct hold priced ~94%.",
+  "watch_next": "BTC break of 81.1k (long order) or 4h close < 80.0k (breakdown short on retest); SUI below 0.915 by 26 Oct 16Z or close.",
+  "actions": [
+    {"type": "entry_order", "symbol": "BTCUSDT", "side": "long", "trigger": 81100, "stop": 80550, "take_profit": 82400, "risk_pct": 0.012, "expires_hours": 24,
+      "reason": "Range-break long: BTC compressed 80.0-80.92k for 2 days with 4h highs capped ~80.85-80.92k; a push through 81.1k clears the range top and h4 ema20 80.99k and likely squeezes shorts toward h4 ema50 81.58k / h1 ema200 81.75k. Stop 80,550 back inside the range below h1 ema20, TP 82,400 (~2.4R).",
+      "invalidation": "Falls back below 80.55k after trigger, or BTC 4h close < 80.0k before fill (cancel)."}
+  ]
 }
