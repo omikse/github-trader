@@ -1,11 +1,11 @@
 {
- "time_utc": "2026-10-25T04:41:55Z",
+ "time_utc": "2026-10-25T04:51:55Z",
  "experiment_ends_utc": "2026-11-21T21:00:00Z",
  "account": {
-  "equity_usd": 256.44,
-  "equity_pln": 1006.46,
+  "equity_usd": 256.28,
+  "equity_pln": 1005.8,
   "start_pln": 1000.0,
-  "return_pct": -0.27,
+  "return_pct": -0.34,
   "peak_equity_usd": 263.53,
   "today_start_equity_usd": 256.83,
   "position_size_vs_equity": 2.39
@@ -16,9 +16,9 @@
    "side": "short",
    "size": 0.00758686,
    "entry": 80425.865,
-   "mark": 80815.3,
-   "pnl_usd": -2.95,
-   "pnl_pct_of_equity": -1.15,
+   "mark": 80837.2,
+   "pnl_usd": -3.12,
+   "pnl_pct_of_equity": -1.22,
    "stop": 81050.0,
    "take_profit": 78500.0,
    "why_opened": "Bounce-short: BTC broke the 30d low 79.75k (flush to 79.12k), lower 4h highs 81.10k/80.99k/80.72k/80.75k, below h1 ema20 80.57k and h4 ema20 81.25k. A relief bounce into 80.45k (old breakdown zone / h1 ema20) is the short; stop above the last 4h high 80.75k + buffer, TP 78.5k (~3.2R).",
@@ -128,35 +128,35 @@
  "markets": {
   "BTCUSDT": {
    "symbol": "BTCUSDT",
-   "price": 80815.3,
-   "change_15m": 0.06,
-   "change_1h": 0.08,
-   "change_4h": 0.08,
-   "change_24h": 0.03,
+   "price": 80837.2,
+   "change_15m": 0.02,
+   "change_1h": 0.11,
+   "change_4h": 0.11,
+   "change_24h": 0.06,
    "high_24h": 80919.2,
    "low_24h": 79120.8,
    "h1": {
-    "ema20": 80630.0417,
-    "ema50": 80940.4441,
-    "ema200": 81826.092,
-    "rsi14": 54.07,
-    "atr14": 285.7862,
+    "ema20": 80632.1274,
+    "ema50": 80941.303,
+    "ema200": 81826.2015,
+    "rsi14": 54.61,
+    "atr14": 286.6791,
     "atr_pct": 0.35
    },
    "h4": {
-    "ema20": 81171.9191,
-    "ema50": 81721.5863,
-    "ema200": 83345.702,
-    "rsi14": 43.67
+    "ema20": 81174.0048,
+    "ema50": 81722.4452,
+    "ema200": 83345.8115,
+    "rsi14": 43.93
    },
    "funding_pct_per_hour": 0.00046,
    "funding_apr_pct": 4.1,
    "d1": {
-    "ema20": 82115.9558,
-    "ema50": 80748.9242,
-    "rsi14": 44.37,
-    "change_7d": -1.45,
-    "change_30d": -3.89,
+    "ema20": 82118.0416,
+    "ema50": 80749.7831,
+    "rsi14": 44.47,
+    "change_7d": -1.42,
+    "change_30d": -3.87,
     "high_30d": 87229.0,
     "low_30d": 79120.8
    },
@@ -190,7 +190,7 @@
     81315.9,
     81086.2,
     80771.9,
-    80815.3
+    80837.2
    ],
    "last_24_hourly_closes": [
     80658.3,
@@ -216,7 +216,7 @@
     80793.0,
     80800.5,
     80749.1,
-    80815.3
+    80837.2
    ],
    "last_6_4h_candles": [
     {
@@ -251,42 +251,42 @@
     },
     {
      "o": 80749.1,
-     "h": 80833.4,
+     "h": 80845.9,
      "l": 80713.4,
-     "c": 80815.3
+     "c": 80837.2
     }
    ]
   },
   "ETHUSDT": {
    "symbol": "ETHUSDT",
-   "price": 2365.83,
-   "change_15m": 0.14,
-   "change_1h": 0.26,
-   "change_4h": 0.26,
-   "change_24h": -0.58,
+   "price": 2365.6,
+   "change_15m": -0.01,
+   "change_1h": 0.25,
+   "change_4h": 0.25,
+   "change_24h": -0.59,
    "high_24h": 2381.18,
    "low_24h": 2279.8,
    "h1": {
-    "ema20": 2355.1506,
-    "ema50": 2370.6335,
-    "ema200": 2408.2329,
-    "rsi14": 54.16,
-    "atr14": 13.4281,
+    "ema20": 2355.2068,
+    "ema50": 2370.6566,
+    "ema200": 2408.2359,
+    "rsi14": 54.44,
+    "atr14": 13.4317,
     "atr_pct": 0.57
    },
    "h4": {
-    "ema20": 2379.8713,
-    "ema50": 2408.8846,
-    "ema200": 2563.17,
-    "rsi14": 44.69
+    "ema20": 2379.8494,
+    "ema50": 2408.8756,
+    "ema200": 2563.1689,
+    "rsi14": 44.63
    },
    "funding_pct_per_hour": 0.00125,
    "funding_apr_pct": 10.9,
    "d1": {
-    "ema20": 2454.3778,
-    "ema50": 2462.4543,
-    "rsi14": 37.65,
-    "change_7d": -1.73,
+    "ema20": 2454.434,
+    "ema50": 2462.4775,
+    "rsi14": 37.73,
+    "change_7d": -1.74,
     "change_30d": -12.1,
     "high_30d": 2776.46,
     "low_30d": 2279.8
@@ -321,7 +321,7 @@
     2386.08,
     2384.52,
     2355.56,
-    2365.83
+    2366.42
    ],
    "last_24_hourly_closes": [
     2375.1,
@@ -347,7 +347,7 @@
     2361.68,
     2362.8,
     2359.61,
-    2365.83
+    2366.42
    ],
    "last_6_4h_candles": [
     {
@@ -382,43 +382,43 @@
     },
     {
      "o": 2359.63,
-     "h": 2366.37,
+     "h": 2366.42,
      "l": 2359.44,
-     "c": 2365.83
+     "c": 2365.6
     }
    ]
   },
   "SOLUSDT": {
    "symbol": "SOLUSDT",
-   "price": 102.51,
-   "change_15m": 0.1,
-   "change_1h": 0.2,
-   "change_4h": 0.2,
-   "change_24h": -0.07,
-   "high_24h": 102.6,
+   "price": 102.6,
+   "change_15m": 0.05,
+   "change_1h": 0.28,
+   "change_4h": 0.28,
+   "change_24h": 0.02,
+   "high_24h": 102.62,
    "low_24h": 98.51,
    "h1": {
-    "ema20": 101.8724,
-    "ema50": 102.517,
-    "ema200": 104.2322,
-    "rsi14": 57.18,
-    "atr14": 0.6158,
-    "atr_pct": 0.6
+    "ema20": 101.8809,
+    "ema50": 102.5206,
+    "ema200": 104.2326,
+    "rsi14": 58.12,
+    "atr14": 0.6216,
+    "atr_pct": 0.61
    },
    "h4": {
-    "ema20": 102.9939,
-    "ema50": 104.3435,
-    "ema200": 112.4253,
-    "rsi14": 45.31
+    "ema20": 103.0025,
+    "ema50": 104.347,
+    "ema200": 112.4258,
+    "rsi14": 45.81
    },
    "funding_pct_per_hour": -0.00012,
    "funding_apr_pct": -1.1,
    "d1": {
-    "ema20": 106.6193,
-    "ema50": 106.1875,
-    "rsi14": 38.3,
-    "change_7d": -1.45,
-    "change_30d": -16.07,
+    "ema20": 106.6278,
+    "ema50": 106.191,
+    "rsi14": 38.55,
+    "change_7d": -1.37,
+    "change_30d": -16.0,
     "high_30d": 124.91,
     "low_30d": 98.51
    },
@@ -452,7 +452,7 @@
     103.54,
     102.71,
     102.24,
-    102.51
+    102.6
    ],
    "last_24_hourly_closes": [
     102.23,
@@ -478,7 +478,7 @@
     102.35,
     102.31,
     102.31,
-    102.51
+    102.6
    ],
    "last_6_4h_candles": [
     {
@@ -513,43 +513,43 @@
     },
     {
      "o": 102.31,
-     "h": 102.54,
+     "h": 102.62,
      "l": 102.23,
-     "c": 102.51
+     "c": 102.6
     }
    ]
   },
   "XRPUSDT": {
    "symbol": "XRPUSDT",
-   "price": 1.30995,
-   "change_15m": 0.08,
-   "change_1h": 0.03,
-   "change_4h": 0.03,
-   "change_24h": 1.49,
-   "high_24h": 1.31158,
+   "price": 1.31316,
+   "change_15m": 0.19,
+   "change_1h": 0.27,
+   "change_4h": 0.27,
+   "change_24h": 1.74,
+   "high_24h": 1.31383,
    "low_24h": 1.2533,
    "h1": {
-    "ema20": 1.2955,
-    "ema50": 1.2992,
+    "ema20": 1.2958,
+    "ema50": 1.2993,
     "ema200": 1.3107,
-    "rsi14": 66.25,
-    "atr14": 0.008,
-    "atr_pct": 0.61
+    "rsi14": 68.31,
+    "atr14": 0.0083,
+    "atr_pct": 0.63
    },
    "h4": {
-    "ema20": 1.3048,
-    "ema50": 1.3178,
+    "ema20": 1.3051,
+    "ema50": 1.318,
     "ema200": 1.4226,
-    "rsi14": 50.83
+    "rsi14": 52.02
    },
    "funding_pct_per_hour": 0.00175,
    "funding_apr_pct": 15.3,
    "d1": {
-    "ema20": 1.3487,
-    "ema50": 1.3642,
-    "rsi14": 41.82,
-    "change_7d": 0.32,
-    "change_30d": -16.47,
+    "ema20": 1.349,
+    "ema50": 1.3643,
+    "rsi14": 42.37,
+    "change_7d": 0.57,
+    "change_30d": -16.26,
     "high_30d": 1.5806,
     "low_30d": 1.2533
    },
@@ -583,7 +583,7 @@
     1.30798,
     1.29326,
     1.29783,
-    1.30995
+    1.31316
    ],
    "last_24_hourly_closes": [
     1.2868,
@@ -609,7 +609,7 @@
     1.3057,
     1.31,
     1.3096,
-    1.3099
+    1.3132
    ],
    "last_6_4h_candles": [
     {
@@ -644,43 +644,43 @@
     },
     {
      "o": 1.30968,
-     "h": 1.31,
+     "h": 1.31383,
      "l": 1.30688,
-     "c": 1.30995
+     "c": 1.31316
     }
    ]
   },
   "DOGEUSDT": {
    "symbol": "DOGEUSDT",
-   "price": 0.0777987,
-   "change_15m": 0.07,
-   "change_1h": 0.04,
-   "change_4h": 0.04,
-   "change_24h": -1.16,
+   "price": 0.0779068,
+   "change_15m": 0.14,
+   "change_1h": 0.18,
+   "change_4h": 0.18,
+   "change_24h": -1.02,
    "high_24h": 0.0786894,
    "low_24h": 0.074668,
    "h1": {
-    "ema20": 0.0775,
+    "ema20": 0.0776,
     "ema50": 0.0782,
     "ema200": 0.0796,
-    "rsi14": 52.18,
+    "rsi14": 53.71,
     "atr14": 0.0005,
-    "atr_pct": 0.63
+    "atr_pct": 0.64
    },
    "h4": {
     "ema20": 0.0785,
     "ema50": 0.0798,
     "ema200": 0.0882,
-    "rsi14": 43.3
+    "rsi14": 44.01
    },
    "funding_pct_per_hour": -0.00075,
    "funding_apr_pct": -6.6,
    "d1": {
     "ema20": 0.0823,
     "ema50": 0.0845,
-    "rsi14": 35.46,
-    "change_7d": -1.98,
-    "change_30d": -21.4,
+    "rsi14": 35.79,
+    "change_7d": -1.84,
+    "change_30d": -21.29,
     "high_30d": 0.0996393,
     "low_30d": 0.074668
    },
@@ -714,7 +714,7 @@
     0.078724,
     0.078519,
     0.077579,
-    0.077799
+    0.077907
    ],
    "last_24_hourly_closes": [
     0.0783,
@@ -740,7 +740,7 @@
     0.0778,
     0.0777,
     0.0778,
-    0.0778
+    0.0779
    ],
    "last_6_4h_candles": [
     {
@@ -775,43 +775,43 @@
     },
     {
      "o": 0.0777803,
-     "h": 0.0778798,
+     "h": 0.077929,
      "l": 0.077736,
-     "c": 0.0777987
+     "c": 0.0779068
     }
    ]
   },
   "ADAUSDT": {
    "symbol": "ADAUSDT",
-   "price": 0.207882,
-   "change_15m": 0.03,
-   "change_1h": 0.14,
-   "change_4h": 0.14,
-   "change_24h": -1.8,
+   "price": 0.208007,
+   "change_15m": 0.05,
+   "change_1h": 0.2,
+   "change_4h": 0.2,
+   "change_24h": -1.74,
    "high_24h": 0.211692,
    "low_24h": 0.200301,
    "h1": {
     "ema20": 0.2077,
     "ema50": 0.2102,
     "ema200": 0.2177,
-    "rsi14": 48.39,
-    "atr14": 0.0016,
+    "rsi14": 48.94,
+    "atr14": 0.0017,
     "atr_pct": 0.79
    },
    "h4": {
     "ema20": 0.2118,
     "ema50": 0.2179,
     "ema200": 0.2397,
-    "rsi14": 38.27
+    "rsi14": 38.58
    },
    "funding_pct_per_hour": -0.0011,
    "funding_apr_pct": -9.7,
    "d1": {
     "ema20": 0.2249,
     "ema50": 0.2252,
-    "rsi14": 36.64,
-    "change_7d": -5.94,
-    "change_30d": -19.66,
+    "rsi14": 36.74,
+    "change_7d": -5.89,
+    "change_30d": -19.61,
     "high_30d": 0.282499,
     "low_30d": 0.200301
    },
@@ -845,7 +845,7 @@
     0.211955,
     0.210652,
     0.207852,
-    0.207882
+    0.208007
    ],
    "last_24_hourly_closes": [
     0.211,
@@ -871,7 +871,7 @@
     0.2087,
     0.2076,
     0.2076,
-    0.2079
+    0.208
    ],
    "last_6_4h_candles": [
     {
@@ -906,43 +906,43 @@
     },
     {
      "o": 0.207707,
-     "h": 0.207996,
+     "h": 0.208007,
      "l": 0.207641,
-     "c": 0.207882
+     "c": 0.208007
     }
    ]
   },
   "AVAXUSDT": {
    "symbol": "AVAXUSDT",
-   "price": 8.954,
-   "change_15m": 0.02,
-   "change_1h": -0.06,
-   "change_4h": -0.06,
-   "change_24h": -1.15,
+   "price": 8.959,
+   "change_15m": -0.02,
+   "change_1h": 0.0,
+   "change_4h": 0.0,
+   "change_24h": -1.09,
    "high_24h": 9.054,
    "low_24h": 8.666,
    "h1": {
-    "ema20": 8.947,
-    "ema50": 9.0314,
+    "ema20": 8.9475,
+    "ema50": 9.0316,
     "ema200": 9.4826,
-    "rsi14": 49.3,
+    "rsi14": 49.83,
     "atr14": 0.064,
-    "atr_pct": 0.72
+    "atr_pct": 0.71
    },
    "h4": {
-    "ema20": 9.1107,
-    "ema50": 9.4225,
+    "ema20": 9.1112,
+    "ema50": 9.4227,
     "ema200": 10.3848,
-    "rsi14": 37.46
+    "rsi14": 37.65
    },
    "funding_pct_per_hour": -0.00035,
    "funding_apr_pct": -3.1,
    "d1": {
-    "ema20": 9.7261,
-    "ema50": 9.4773,
-    "rsi14": 36.7,
-    "change_7d": -8.3,
-    "change_30d": -15.94,
+    "ema20": 9.7265,
+    "ema50": 9.4775,
+    "rsi14": 36.76,
+    "change_7d": -8.24,
+    "change_30d": -15.89,
     "high_30d": 12.006,
     "low_30d": 8.666
    },
@@ -976,7 +976,7 @@
     9.119,
     9.05,
     8.987,
-    8.954
+    8.959
    ],
    "last_24_hourly_closes": [
     9.002,
@@ -1002,7 +1002,7 @@
     8.999,
     8.97,
     8.959,
-    8.954
+    8.959
    ],
    "last_6_4h_candles": [
     {
@@ -1039,41 +1039,41 @@
      "o": 8.96,
      "h": 8.964,
      "l": 8.945,
-     "c": 8.954
+     "c": 8.959
     }
    ]
   },
   "LINKUSDT": {
    "symbol": "LINKUSDT",
-   "price": 11.57492,
-   "change_15m": 0.01,
-   "change_1h": 0.04,
-   "change_4h": 0.04,
-   "change_24h": -2.38,
+   "price": 11.57809,
+   "change_15m": 0.03,
+   "change_1h": 0.07,
+   "change_4h": 0.07,
+   "change_24h": -2.36,
    "high_24h": 11.85131,
    "low_24h": 11.22675,
    "h1": {
-    "ema20": 11.5947,
-    "ema50": 11.7405,
+    "ema20": 11.595,
+    "ema50": 11.7406,
     "ema200": 12.0381,
-    "rsi14": 45.15,
+    "rsi14": 45.44,
     "atr14": 0.0794,
     "atr_pct": 0.69
    },
    "h4": {
-    "ema20": 11.8168,
-    "ema50": 12.0643,
+    "ema20": 11.8171,
+    "ema50": 12.0644,
     "ema200": 13.1224,
-    "rsi14": 37.82
+    "rsi14": 37.96
    },
    "funding_pct_per_hour": 0.00094,
    "funding_apr_pct": 8.2,
    "d1": {
-    "ema20": 12.376,
-    "ema50": 12.3037,
-    "rsi14": 37.66,
-    "change_7d": -3.78,
-    "change_30d": -16.92,
+    "ema20": 12.3763,
+    "ema50": 12.3038,
+    "rsi14": 37.69,
+    "change_7d": -3.75,
+    "change_30d": -16.9,
     "high_30d": 15.7666,
     "low_30d": 11.22675
    },
@@ -1107,7 +1107,7 @@
     11.9504,
     11.81826,
     11.61169,
-    11.57492
+    11.57809
    ],
    "last_24_hourly_closes": [
     11.792,
@@ -1133,7 +1133,7 @@
     11.5966,
     11.5771,
     11.5702,
-    11.5749
+    11.5781
    ],
    "last_6_4h_candles": [
     {
@@ -1170,14 +1170,14 @@
      "o": 11.57012,
      "h": 11.58275,
      "l": 11.56349,
-     "c": 11.57492
+     "c": 11.57809
     }
    ]
   },
   "SUIUSDT": {
    "symbol": "SUIUSDT",
    "price": 0.933,
-   "change_15m": -0.07,
+   "change_15m": 0.0,
    "change_1h": -0.31,
    "change_4h": -0.31,
    "change_24h": -2.99,
@@ -1307,18 +1307,18 @@
   },
   "PEPEUSDT": {
    "symbol": "PEPEUSDT",
-   "price": 4.492e-06,
-   "change_15m": 0.38,
-   "change_1h": 0.22,
-   "change_4h": 0.22,
-   "change_24h": -1.34,
+   "price": 4.489e-06,
+   "change_15m": -0.04,
+   "change_1h": 0.16,
+   "change_4h": 0.16,
+   "change_24h": -1.41,
    "high_24h": 4.552e-06,
    "low_24h": 4.23e-06,
    "h1": {
     "ema20": 0.0,
     "ema50": 0.0,
     "ema200": 0.0,
-    "rsi14": 51.77,
+    "rsi14": 51.39,
     "atr14": 0.0,
     "atr_pct": 1.31
    },
@@ -1326,16 +1326,16 @@
     "ema20": 0.0,
     "ema50": 0.0,
     "ema200": 0.0,
-    "rsi14": 50.84
+    "rsi14": 50.72
    },
    "funding_pct_per_hour": -0.00317,
    "funding_apr_pct": -27.7,
    "d1": {
     "ema20": 0.0,
     "ema50": 0.0,
-    "rsi14": 56.93,
-    "change_7d": 12.13,
-    "change_30d": 0.09,
+    "rsi14": 56.85,
+    "change_7d": 12.06,
+    "change_30d": 0.02,
     "high_30d": 5.108e-06,
     "low_30d": 3.637e-06
    },
@@ -1432,14 +1432,14 @@
      "o": 4.476e-06,
      "h": 4.499e-06,
      "l": 4.47e-06,
-     "c": 4.492e-06
+     "c": 4.489e-06
     }
    ]
   },
   "WIFUSDT": {
    "symbol": "WIFUSDT",
    "price": 0.1832,
-   "change_15m": -0.11,
+   "change_15m": 0.0,
    "change_1h": -0.27,
    "change_4h": -0.27,
    "change_24h": -3.53,
@@ -1569,18 +1569,18 @@
   },
   "BONKUSDT": {
    "symbol": "BONKUSDT",
-   "price": 3.095e-06,
-   "change_15m": 0.16,
-   "change_1h": -0.32,
-   "change_4h": -0.32,
-   "change_24h": 0.29,
+   "price": 3.105e-06,
+   "change_15m": 0.32,
+   "change_1h": 0.0,
+   "change_4h": 0.0,
+   "change_24h": 0.62,
    "high_24h": 3.176e-06,
    "low_24h": 2.924e-06,
    "h1": {
     "ema20": 0.0,
     "ema50": 0.0,
     "ema200": 0.0,
-    "rsi14": 50.92,
+    "rsi14": 52.48,
     "atr14": 0.0,
     "atr_pct": 1.32
    },
@@ -1588,16 +1588,16 @@
     "ema20": 0.0,
     "ema50": 0.0,
     "ema200": 0.0,
-    "rsi14": 50.16
+    "rsi14": 50.56
    },
    "funding_pct_per_hour": 0.03022,
    "funding_apr_pct": 264.7,
    "d1": {
     "ema20": 0.0,
     "ema50": 0.0,
-    "rsi14": 45.51,
-    "change_7d": 5.34,
-    "change_30d": -17.42,
+    "rsi14": 45.7,
+    "change_7d": 5.68,
+    "change_30d": -17.16,
     "high_30d": 4.101e-06,
     "low_30d": 2.801e-06
    },
@@ -1692,43 +1692,43 @@
     },
     {
      "o": 3.104e-06,
-     "h": 3.106e-06,
+     "h": 3.107e-06,
      "l": 3.089e-06,
-     "c": 3.095e-06
+     "c": 3.101e-06
     }
    ]
   },
   "LTCUSDT": {
    "symbol": "LTCUSDT",
-   "price": 57.06,
-   "change_15m": 0.25,
-   "change_1h": 0.18,
-   "change_4h": 0.18,
-   "change_24h": -0.19,
+   "price": 57.07,
+   "change_15m": 0.05,
+   "change_1h": 0.19,
+   "change_4h": 0.19,
+   "change_24h": -0.17,
    "high_24h": 57.24,
    "low_24h": 55.05,
    "h1": {
-    "ema20": 56.822,
-    "ema50": 57.4205,
-    "ema200": 59.1819,
-    "rsi14": 53.14,
+    "ema20": 56.8229,
+    "ema50": 57.4209,
+    "ema200": 59.182,
+    "rsi14": 53.33,
     "atr14": 0.3902,
     "atr_pct": 0.68
    },
    "h4": {
-    "ema20": 57.8666,
-    "ema50": 59.1169,
+    "ema20": 57.8675,
+    "ema50": 59.1173,
     "ema200": 64.5216,
-    "rsi14": 39.1
+    "rsi14": 39.2
    },
    "funding_pct_per_hour": -0.00089,
    "funding_apr_pct": -7.8,
    "d1": {
-    "ema20": 60.585,
-    "ema50": 59.8206,
-    "rsi14": 37.59,
-    "change_7d": -3.39,
-    "change_30d": -21.36,
+    "ema20": 60.5859,
+    "ema50": 59.821,
+    "rsi14": 37.63,
+    "change_7d": -3.37,
+    "change_30d": -21.35,
     "high_30d": 74.98,
     "low_30d": 55.05
    },
@@ -1762,7 +1762,7 @@
     58.79,
     57.22,
     56.98,
-    57.06
+    57.07
    ],
    "last_24_hourly_closes": [
     56.91,
@@ -1788,7 +1788,7 @@
     57.2,
     56.95,
     56.96,
-    57.06
+    57.07
    ],
    "last_6_4h_candles": [
     {
@@ -1825,24 +1825,24 @@
      "o": 56.94,
      "h": 57.15,
      "l": 56.87,
-     "c": 57.06
+     "c": 57.07
     }
    ]
   },
   "DOTUSDT": {
    "symbol": "DOTUSDT",
-   "price": 1.0405,
-   "change_15m": 0.02,
-   "change_1h": 0.09,
-   "change_4h": 0.09,
-   "change_24h": -4.18,
+   "price": 1.04,
+   "change_15m": -0.09,
+   "change_1h": 0.04,
+   "change_4h": 0.04,
+   "change_24h": -4.23,
    "high_24h": 1.0858,
    "low_24h": 1.0214,
    "h1": {
-    "ema20": 1.0509,
+    "ema20": 1.0508,
     "ema50": 1.078,
     "ema200": 1.1238,
-    "rsi14": 38.52,
+    "rsi14": 38.14,
     "atr14": 0.0109,
     "atr_pct": 1.05
    },
@@ -1850,16 +1850,16 @@
     "ema20": 1.0884,
     "ema50": 1.1173,
     "ema200": 1.17,
-    "rsi14": 34.32
+    "rsi14": 34.15
    },
    "funding_pct_per_hour": -0.00104,
    "funding_apr_pct": -9.1,
    "d1": {
     "ema20": 1.1282,
-    "ema50": 1.1023,
-    "rsi14": 38.87,
-    "change_7d": -6.8,
-    "change_30d": -14.19,
+    "ema50": 1.1022,
+    "rsi14": 38.82,
+    "change_7d": -6.84,
+    "change_30d": -14.23,
     "high_30d": 1.3055,
     "low_30d": 1.0052
    },
@@ -1893,7 +1893,7 @@
     1.1115,
     1.0849,
     1.0473,
-    1.0405
+    1.04
    ],
    "last_24_hourly_closes": [
     1.0796,
@@ -1919,7 +1919,7 @@
     1.0514,
     1.041,
     1.0396,
-    1.0405
+    1.04
    ],
    "last_6_4h_candles": [
     {
@@ -1956,41 +1956,41 @@
      "o": 1.0393,
      "h": 1.0431,
      "l": 1.039,
-     "c": 1.0405
+     "c": 1.04
     }
    ]
   },
   "NEARUSDT": {
    "symbol": "NEARUSDT",
-   "price": 4.4952,
-   "change_15m": 0.42,
-   "change_1h": 0.36,
-   "change_4h": 0.36,
-   "change_24h": -3.37,
+   "price": 4.4924,
+   "change_15m": -0.09,
+   "change_1h": 0.29,
+   "change_4h": 0.29,
+   "change_24h": -3.43,
    "high_24h": 4.6586,
    "low_24h": 4.2501,
    "h1": {
-    "ema20": 4.4976,
-    "ema50": 4.6236,
+    "ema20": 4.4973,
+    "ema50": 4.6235,
     "ema200": 4.9004,
-    "rsi14": 46.21,
-    "atr14": 0.0647,
-    "atr_pct": 1.44
+    "rsi14": 45.86,
+    "atr14": 0.065,
+    "atr_pct": 1.45
    },
    "h4": {
-    "ema20": 4.6895,
-    "ema50": 4.8486,
-    "ema200": 4.9536,
-    "rsi14": 34.74
+    "ema20": 4.6893,
+    "ema50": 4.8485,
+    "ema200": 4.9535,
+    "rsi14": 34.53
    },
    "funding_pct_per_hour": 0.00255,
    "funding_apr_pct": 22.3,
    "d1": {
-    "ema20": 4.8311,
-    "ema50": 4.2812,
-    "rsi14": 46.18,
-    "change_7d": -10.24,
-    "change_30d": -9.22,
+    "ema20": 4.8308,
+    "ema50": 4.281,
+    "rsi14": 46.15,
+    "change_7d": -10.29,
+    "change_30d": -9.28,
     "high_30d": 5.999,
     "low_30d": 4.2501
    },
@@ -2024,7 +2024,7 @@
     4.8777,
     4.6848,
     4.4954,
-    4.4952
+    4.4924
    ],
    "last_24_hourly_closes": [
     4.6173,
@@ -2050,7 +2050,7 @@
     4.4957,
     4.4577,
     4.4792,
-    4.4952
+    4.4924
    ],
    "last_6_4h_candles": [
     {
@@ -2085,43 +2085,43 @@
     },
     {
      "o": 4.4791,
-     "h": 4.4954,
+     "h": 4.4991,
      "l": 4.4733,
-     "c": 4.4952
+     "c": 4.4924
     }
    ]
   },
   "PAXGUSDT": {
    "symbol": "PAXGUSDT",
-   "price": 4001.1,
-   "change_15m": 0.02,
+   "price": 4001.43,
+   "change_15m": -0.0,
    "change_1h": 0.05,
    "change_4h": 0.05,
    "change_24h": -0.03,
    "high_24h": 4003.05,
    "low_24h": 3980.6,
    "h1": {
-    "ema20": 3998.7684,
-    "ema50": 4012.0545,
-    "ema200": 4098.466,
-    "rsi14": 50.98,
-    "atr14": 3.7471,
+    "ema20": 3998.7998,
+    "ema50": 4012.0674,
+    "ema200": 4098.4677,
+    "rsi14": 51.52,
+    "atr14": 3.7742,
     "atr_pct": 0.09
    },
    "h4": {
-    "ema20": 4026.6453,
-    "ema50": 4074.6757,
-    "ema200": 4167.4698,
-    "rsi14": 29.1
+    "ema20": 4026.6767,
+    "ema50": 4074.6886,
+    "ema200": 4167.4715,
+    "rsi14": 29.33
    },
    "funding_pct_per_hour": -0.00202,
    "funding_apr_pct": -17.7,
    "d1": {
-    "ema20": 4112.269,
-    "ema50": 4187.6257,
-    "rsi14": 28.9,
-    "change_7d": -4.13,
-    "change_30d": -6.55,
+    "ema20": 4112.3004,
+    "ema50": 4187.6386,
+    "rsi14": 28.97,
+    "change_7d": -4.12,
+    "change_30d": -6.54,
     "high_30d": 4284.49,
     "low_30d": 3980.6
    },
@@ -2155,7 +2155,7 @@
     4030.39,
     3998.18,
     3998.49,
-    4001.1
+    4001.43
    ],
    "last_24_hourly_closes": [
     4000.76,
@@ -2181,7 +2181,7 @@
     3997.58,
     3999.17,
     3999.26,
-    4001.1
+    4001.43
    ],
    "last_6_4h_candles": [
     {
@@ -2216,16 +2216,16 @@
     },
     {
      "o": 3999.27,
-     "h": 4001.14,
+     "h": 4001.52,
      "l": 3999.26,
-     "c": 4001.1
+     "c": 4001.43
     }
    ]
   },
   "EURUSDT": {
    "symbol": "EURUSDT",
    "price": 1.11943,
-   "change_15m": 0.0,
+   "change_15m": -0.0,
    "change_1h": -0.0,
    "change_4h": -0.0,
    "change_24h": 0.03,
@@ -2356,13 +2356,13 @@
  },
  "cash": {
   "cash_usd": 246.45,
-  "locked_usd": 40.88,
-  "idle_usd": 205.57,
+  "locked_usd": 40.89,
+  "idle_usd": 205.56,
   "interest_rate_pct": 3.87,
   "income_so_far_usd": {
    "funding": 0.0317,
    "carry": -0.214,
-   "interest": 0.0536
+   "interest": 0.0537
   }
  },
  "predictions": [
@@ -2415,7 +2415,7 @@
    "yes_ask": 0.17,
    "days_left": 2.0,
    "volume_24h": 920978,
-   "liquidity": 197501,
+   "liquidity": 196875,
    "change_1d": 0.0995,
    "change_1w": 0.135,
    "fee": "yes"
@@ -2427,7 +2427,7 @@
    "yes_ask": 0.08,
    "days_left": 10.0,
    "volume_24h": 830888,
-   "liquidity": 3621016,
+   "liquidity": 3634002,
    "change_1d": null,
    "change_1w": -0.01,
    "fee": "yes"
@@ -2439,7 +2439,7 @@
    "yes_ask": 0.96,
    "days_left": 4.0,
    "volume_24h": 605872,
-   "liquidity": 2102252,
+   "liquidity": 2216994,
    "change_1d": 0.02,
    "change_1w": 0.09,
    "fee": "yes"
@@ -2451,7 +2451,7 @@
    "yes_ask": 0.127,
    "days_left": 2.0,
    "volume_24h": 551168,
-   "liquidity": 86665,
+   "liquidity": 91321,
    "change_1d": -0.0175,
    "change_1w": -0.154,
    "fee": "yes"
@@ -2463,7 +2463,7 @@
    "yes_ask": 0.05,
    "days_left": 4.0,
    "volume_24h": 525764,
-   "liquidity": 1432114,
+   "liquidity": 1539219,
    "change_1d": -0.02,
    "change_1w": -0.09,
    "fee": "yes"
@@ -2472,24 +2472,24 @@
    "market": "608547",
    "question": "Will Harry Kane win the 2026 Ballon d'Or?",
    "yes_bid": 0.702,
-   "yes_ask": 0.703,
+   "yes_ask": 0.704,
    "days_left": 2.0,
    "volume_24h": 450230,
-   "liquidity": 146743,
-   "change_1d": -0.071,
-   "change_1w": 0.051,
+   "liquidity": 144604,
+   "change_1d": -0.0705,
+   "change_1w": 0.0515,
    "fee": "yes"
   },
   {
    "market": "4824600",
    "question": "Will Aleksandar Vu\u010di\u0107 \u2013 United Serbia win the most seats in the 2026 Serbian parliamentary election?",
    "yes_bid": 0.71,
-   "yes_ask": 0.72,
+   "yes_ask": 0.73,
    "days_left": 0.8,
    "volume_24h": 409138,
-   "liquidity": 308757,
-   "change_1d": -0.06,
-   "change_1w": 0.04,
+   "liquidity": 316495,
+   "change_1d": -0.055,
+   "change_1w": 0.045,
    "fee": "yes"
   },
   {
@@ -2499,7 +2499,7 @@
    "yes_ask": 0.26,
    "days_left": 0.6,
    "volume_24h": 299172,
-   "liquidity": 228909,
+   "liquidity": 214211,
    "change_1d": 0.01,
    "change_1w": 0.05,
    "fee": "yes"
@@ -2511,7 +2511,7 @@
    "yes_ask": 0.83,
    "days_left": 6.8,
    "volume_24h": 260394,
-   "liquidity": 412427,
+   "liquidity": 403315,
    "change_1d": 0.06,
    "change_1w": 0.01,
    "fee": "no"
@@ -2523,7 +2523,7 @@
    "yes_ask": 0.9,
    "days_left": 4.0,
    "volume_24h": 232580,
-   "liquidity": 545614,
+   "liquidity": 547938,
    "change_1d": 0.04,
    "change_1w": 0.04,
    "fee": "no"
@@ -2535,7 +2535,7 @@
    "yes_ask": 0.29,
    "days_left": 0.8,
    "volume_24h": 223764,
-   "liquidity": 372544,
+   "liquidity": 378601,
    "change_1d": 0.065,
    "change_1w": -0.04,
    "fee": "yes"
@@ -2547,7 +2547,7 @@
    "yes_ask": 0.59,
    "days_left": 0.4,
    "volume_24h": 222212,
-   "liquidity": 436106,
+   "liquidity": 441650,
    "change_1d": 0.01,
    "change_1w": 0.05,
    "fee": "yes"
@@ -2559,7 +2559,7 @@
    "yes_ask": 0.28,
    "days_left": 3.0,
    "volume_24h": 212061,
-   "liquidity": 624813,
+   "liquidity": 644776,
    "change_1d": null,
    "change_1w": null,
    "fee": "no"
@@ -2571,7 +2571,7 @@
    "yes_ask": 0.39,
    "days_left": 1.0,
    "volume_24h": 171350,
-   "liquidity": 86660,
+   "liquidity": 87456,
    "change_1d": 0.045,
    "change_1w": 0.08,
    "fee": "yes"
@@ -2583,7 +2583,7 @@
    "yes_ask": 0.4,
    "days_left": 1.0,
    "volume_24h": 167458,
-   "liquidity": 79817,
+   "liquidity": 80737,
    "change_1d": null,
    "change_1w": -0.01,
    "fee": "yes"
@@ -2595,7 +2595,7 @@
    "yes_ask": 0.38,
    "days_left": 10.0,
    "volume_24h": 162327,
-   "liquidity": 442579,
+   "liquidity": 440095,
    "change_1d": 0.01,
    "change_1w": null,
    "fee": "yes"
@@ -2607,7 +2607,7 @@
    "yes_ask": 0.28,
    "days_left": 3.0,
    "volume_24h": 151656,
-   "liquidity": 321344,
+   "liquidity": 342301,
    "change_1d": -0.03,
    "change_1w": -0.04,
    "fee": "yes"
@@ -2619,7 +2619,7 @@
    "yes_ask": 0.17,
    "days_left": 1.0,
    "volume_24h": 151208,
-   "liquidity": 110492,
+   "liquidity": 113518,
    "change_1d": -0.015,
    "change_1w": -0.025,
    "fee": "yes"
@@ -2628,23 +2628,23 @@
    "market": "630805",
    "question": "Will the Democrats win the Michigan Senate race in 2026?",
    "yes_bid": 0.71,
-   "yes_ask": 0.73,
+   "yes_ask": 0.72,
    "days_left": 10.0,
    "volume_24h": 144505,
-   "liquidity": 207915,
-   "change_1d": 0.005,
-   "change_1w": 0.035,
+   "liquidity": 209420,
+   "change_1d": null,
+   "change_1w": 0.03,
    "fee": "yes"
   },
   {
    "market": "5912695",
    "question": "Will Bitcoin dip to $78,000 October 19-25?",
-   "yes_bid": 0.037,
-   "yes_ask": 0.038,
+   "yes_bid": 0.036,
+   "yes_ask": 0.037,
    "days_left": 1.0,
    "volume_24h": 139826,
-   "liquidity": 63843,
-   "change_1d": -0.03,
+   "liquidity": 55967,
+   "change_1d": -0.031,
    "change_1w": null,
    "fee": "yes"
   },
@@ -2655,7 +2655,7 @@
    "yes_ask": 0.08,
    "days_left": 7.0,
    "volume_24h": 123055,
-   "liquidity": 91980,
+   "liquidity": 96363,
    "change_1d": 0.01,
    "change_1w": 0.01,
    "fee": "no"
@@ -2663,13 +2663,13 @@
   {
    "market": "562828",
    "question": "2026 Balance of Power: D Senate, D House",
-   "yes_bid": 0.65,
-   "yes_ask": 0.66,
+   "yes_bid": 0.66,
+   "yes_ask": 0.67,
    "days_left": 10.0,
    "volume_24h": 118927,
-   "liquidity": 4245480,
-   "change_1d": -0.01,
-   "change_1w": 0.03,
+   "liquidity": 4179266,
+   "change_1d": null,
+   "change_1w": 0.04,
    "fee": "yes"
   },
   {
@@ -2679,7 +2679,7 @@
    "yes_ask": 0.048,
    "days_left": 1.0,
    "volume_24h": 113165,
-   "liquidity": 90125,
+   "liquidity": 91280,
    "change_1d": -0.0195,
    "change_1w": -0.041,
    "fee": "yes"
@@ -2691,7 +2691,7 @@
    "yes_ask": 0.067,
    "days_left": 7.0,
    "volume_24h": 110275,
-   "liquidity": 67579,
+   "liquidity": 67306,
    "change_1d": -0.0205,
    "change_1w": null,
    "fee": "yes"
@@ -2703,7 +2703,7 @@
    "yes_ask": 0.92,
    "days_left": 10.0,
    "volume_24h": 106884,
-   "liquidity": 4723353,
+   "liquidity": 4723038,
    "change_1d": -0.005,
    "change_1w": 0.01,
    "fee": "yes"
@@ -2715,7 +2715,7 @@
    "yes_ask": 0.34,
    "days_left": 10.0,
    "volume_24h": 105196,
-   "liquidity": 3980311,
+   "liquidity": 3992189,
    "change_1d": 0.01,
    "change_1w": -0.04,
    "fee": "yes"
@@ -2727,7 +2727,7 @@
    "yes_ask": 0.69,
    "days_left": 1.0,
    "volume_24h": 104930,
-   "liquidity": 166882,
+   "liquidity": 168138,
    "change_1d": 0.02,
    "change_1w": null,
    "fee": "yes"
@@ -2739,7 +2739,7 @@
    "yes_ask": 0.72,
    "days_left": 3.0,
    "volume_24h": 94898,
-   "liquidity": 371049,
+   "liquidity": 391636,
    "change_1d": 0.02,
    "change_1w": 0.035,
    "fee": "yes"
@@ -2751,7 +2751,7 @@
    "yes_ask": 0.11,
    "days_left": 7.0,
    "volume_24h": 92188,
-   "liquidity": 109116,
+   "liquidity": 109072,
    "change_1d": null,
    "change_1w": -0.19,
    "fee": "yes"
@@ -2763,7 +2763,7 @@
    "yes_ask": 0.034,
    "days_left": 7.0,
    "volume_24h": 89817,
-   "liquidity": 87124,
+   "liquidity": 87110,
    "change_1d": 0.001,
    "change_1w": -0.0515,
    "fee": "yes"
@@ -2775,7 +2775,7 @@
    "yes_ask": 0.6,
    "days_left": 0.6,
    "volume_24h": 88865,
-   "liquidity": 375942,
+   "liquidity": 372870,
    "change_1d": null,
    "change_1w": -0.06,
    "fee": "yes"
@@ -2787,7 +2787,7 @@
    "yes_ask": 0.37,
    "days_left": 0.5,
    "volume_24h": 85627,
-   "liquidity": 349674,
+   "liquidity": 283385,
    "change_1d": -0.02,
    "change_1w": -0.005,
    "fee": "yes"
@@ -2799,7 +2799,7 @@
    "yes_ask": 0.699,
    "days_left": 0.8,
    "volume_24h": 83740,
-   "liquidity": 115161,
+   "liquidity": 143477,
    "change_1d": -0.011,
    "change_1w": 0.011,
    "fee": "yes"
@@ -2811,7 +2811,7 @@
    "yes_ask": 0.26,
    "days_left": 10.0,
    "volume_24h": 81768,
-   "liquidity": 2776795,
+   "liquidity": 2788586,
    "change_1d": 0.01,
    "change_1w": -0.02,
    "fee": "yes"
@@ -2823,7 +2823,7 @@
    "yes_ask": 0.54,
    "days_left": 0.6,
    "volume_24h": 77529,
-   "liquidity": 117013,
+   "liquidity": 116707,
    "change_1d": -0.05,
    "change_1w": 0.005,
    "fee": "yes"
