@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-25T12:48:35Z",
+ "updated": "2026-10-25T12:52:35Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9247,
- "equity_pln": 1020.57,
- "return_pct": 1.13,
+ "equity_pln": 1019.7,
+ "return_pct": 1.04,
  "max_drawdown_pct": 3.8,
  "control_pln": 1053.2,
  "control_trades": 1,
- "hodl_pln": 958.34,
+ "hodl_pln": 958.69,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00758686,
    "entry": 80425.865,
-   "mark": 80327.6,
-   "upnl": 0.7455227978999955,
-   "stop": 80800.0,
+   "mark": 80356.8,
+   "upnl": 0.5239864859000176,
+   "stop": 80700.0,
    "tp": 78500.0,
    "liq": null,
    "leverage": null,
    "opened": 1792868280000,
    "reason": "Bounce-short: BTC broke the 30d low 79.75k (flush to 79.12k), lower 4h highs 81.10k/80.99k/80.72k/80.75k, below h1 ema20 80.57k and h4 ema20 81.25k. A relief bounce into 80.45k (old breakdown zone / h1 ema20) is the short; stop above the last 4h high 80.75k + buffer, TP 78.5k (~3.2R).",
-   "upnl_pln": 2.93
+   "upnl_pln": 2.06
   }
  ],
  "closed_trades": [
@@ -140,50 +140,43 @@
  ],
  "trade_count": 8,
  "win_rate_pct": 62.5,
- "brain_calls_today": 6,
+ "brain_calls_today": 7,
  "last_decision": {
-  "time": "2026-10-25T10:52:13Z",
+  "time": "2026-10-25T12:52:35Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-25T10:51:48Z",
+  "decided_at": "2026-10-25T12:52:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 261.46,
-  "equity_pln": 1026.14,
+  "equity_usd": 259.82,
+  "equity_pln": 1019.7,
   "events": [
    {
     "type": "order_cancelled",
-    "id": "o33",
-    "symbol": "SUIUSDT",
-    "side": "short",
+    "id": "o32",
+    "symbol": "XRPUSDT",
+    "side": "long",
     "status": "cancelled",
-    "trigger": 0.932,
-    "time": 1792918333529,
+    "trigger": 1.3175,
+    "time": 1792925533538,
     "detail": "cancelled by the brain"
    }
   ],
-  "market_view": "BTC grinding lower under h1 ema20 (80.50k), current 4h high 80.59k below prior 80.85k; alts making new lows (SUI 0.903, WIF/DOT/LINK h1 RSI 23-33). XRP lost 1.295, breakout long idea gone.",
-  "watch_next": "BTC 08Z 4h candle close (12Z): if high stays < 80.6k, stop -> ~80,700. Below 79.8k trail further. SUI bounce-short order at 0.926.",
-  "news": "No notable market-moving news found for the weekend; Fed 28 Oct hold still ~95%.",
+  "market_view": "BTC still capped below h1 ema20 (~80.48k) with lower 4h highs (80.92k, 80.85k, 80.59k, 80.48k); alts at/near 30d lows. Down-leg intact, weekend chop.",
+  "watch_next": "BTC 16Z 4h high < 80.5k -> trail stop to ~80,600; break of 80.0k/79.12k; SUI fill at 0.926.",
+  "news": "No market-moving news found; Fed 28 Oct hold priced ~94-95%.",
   "actions": [
-   {
-    "type": "cancel_order",
-    "symbol": "XRPUSDT",
-    "reason": "Cancel condition met: XRP trading 1.290, below 1.295 and h1 ema20 1.2951; breakout above 1.3138 no longer near, idea gone.",
-    "result": "done",
-    "detail": "cancelled 1 order(s)"
-   },
    {
     "type": "move_stop",
     "symbol": "BTCUSDT",
-    "stop": 80800,
+    "stop": 80700,
     "take_profit": 78500,
-    "reason": "Current 4h high 80,592 is a lower high under the completed 80,850; tighten stop 80,900 -> 80,800 (above 80.6k + buffer) to lock in reduced risk while keeping room.",
+    "reason": "Planned trail: 08Z 4h candle completed with high 80,592 (< 80.6k); stop above it + buffer cuts risk while keeping the bounce-short thesis.",
     "result": "done",
-    "detail": "stop 80800.0, target 78500.0"
+    "detail": "stop 80700.0, target 78500.0"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 246.480388,
+ "cash_usd": 246.480448,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
