@@ -1,15 +1,15 @@
 {
- "cash": 246.46753359607996,
+ "cash": 246.46763973250364,
  "positions": {
   "BTCUSDT": {
    "side": "short",
    "qty": 0.00758686,
    "entry": 80425.865,
-   "stop": 80960.0,
+   "stop": 80900.0,
    "tp": 78500.0,
    "opened": 1792868280000,
    "entry_fee": 0.33559887797364507,
-   "mark": 80394.8,
+   "mark": 80340.2,
    "note": "Bounce-short: BTC broke the 30d low 79.75k (flush to 79.12k), lower 4h highs 81.10k/80.99k/80.72k/80.75k, below h1 ema20 80.57k and h4 ema20 81.25k. A relief bounce into 80.45k (old breakdown zone / h1 ema20) is the short; stop above the last 4h high 80.75k + buffer, TP 78.5k (~3.2R)."
   }
  },
@@ -116,8 +116,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1792917913300,
- "next_id": 34,
+ "last_ms": 1792918333529,
+ "next_id": 35,
  "orders": [
   {
    "id": "o32",
@@ -133,17 +133,17 @@
    "note": "XRP relative-strength leader: only major green on 7d (+0.3%), h1 RSI 66, reclaimed h4 ema20 1.305 while alts sit near 30d lows. Breakout above the 1.3116 4h high to 1.3175 = momentum continuation toward 1.36 (prior range). Stop under h4 ema20 and the 1.2968 4h low. Also hedges the BTC short if the weekend bounce extends."
   },
   {
-   "id": "o33",
+   "id": "o34",
    "symbol": "SUIUSDT",
    "side": "short",
-   "qty": 243.255,
-   "trigger": 0.932,
+   "qty": 259.744,
+   "trigger": 0.926,
    "direction": "above",
-   "stop": 0.947,
-   "tp": 0.89,
-   "placed": 1792911193290,
-   "expires": 1792997593290,
-   "note": "Weakest-alt bounce-short: SUI 7d -7.8%, h4 RSI 29, below h4 ema20 0.962 and h1 ema20 0.935; short a bounce into h1 ema20 / last 4h high 0.936 rather than chase at oversold h1 RSI 33. Stop above 4h highs 0.941 + buffer, TP 0.89 (~2.8R)."
+   "stop": 0.94,
+   "tp": 0.885,
+   "placed": 1792918333529,
+   "expires": 1793004733529,
+   "note": "Weakest-alt bounce-short re-placed lower: SUI 7d -8.2%, h4 RSI 28, below h4 ema20 0.957; short a bounce toward h1 ema20 (~0.93) instead of chasing at h1 RSI 32. Stop above completed 4h high 0.936 + buffer, TP 0.885 (~2.9R)."
   }
  ],
  "order_events": [
@@ -344,6 +344,15 @@
    "trigger": 80450,
    "time": 1792868280000,
    "detail": "filled at 80425.9"
+  },
+  {
+   "id": "o33",
+   "symbol": "SUIUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 0.932,
+   "time": 1792918333529,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -400,6 +409,6 @@
  "income": {
   "funding": 0.048732381447948114,
   "carry": -0.21395110481479168,
-  "interest": 0.05726431044306969
+  "interest": 0.057370446866751225
  }
 }
