@@ -1,15 +1,15 @@
 {
- "cash": 243.6748984548357,
+ "cash": 243.67494905831788,
  "positions": {
   "SUIUSDT": {
    "side": "short",
    "qty": 242.817,
    "entry": 0.9217234000000001,
-   "stop": 0.937,
+   "stop": 0.9305,
    "tp": 0.885,
    "opened": 1792947120000,
    "entry_fee": 0.12309556094979002,
-   "mark": 0.917,
+   "mark": 0.9173,
    "note": "Weakest-alt bounce-short re-placed lower: SUI 7d -8.6%, 30d -24%, h4 RSI 28, below h4 ema20 0.953. Short a bounce into h1 ema20 ~0.923 / 4h highs 0.920; stop above completed 04Z 4h high 0.936 + buffer, TP 0.885 (~2.5R)."
   }
  },
@@ -129,21 +129,21 @@
   }
  ],
  "fills": [],
- "last_ms": 1792975745943,
- "next_id": 38,
+ "last_ms": 1792975926168,
+ "next_id": 39,
  "orders": [
   {
-   "id": "o37",
+   "id": "o38",
    "symbol": "BTCUSDT",
-   "side": "long",
-   "qty": 0.00477291,
-   "trigger": 81100,
+   "side": "short",
+   "qty": 0.00484317,
+   "trigger": 80150,
    "direction": "above",
-   "stop": 80550.0,
-   "tp": 82400.0,
-   "placed": 1792954369609,
-   "expires": 1793040769609,
-   "note": "Range-break long: BTC compressed 80.0-80.92k for 2 days with 4h highs capped ~80.85-80.92k; a push through 81.1k clears the range top and h4 ema20 80.99k and likely squeezes shorts toward h4 ema50 81.58k / h1 ema200 81.75k. Stop 80,550 back inside the range below h1 ema20, TP 82,400 (~2.4R)."
+   "stop": 80700.0,
+   "tp": 78700.0,
+   "placed": 1792975926168,
+   "expires": 1793062326168,
+   "note": "Breakdown-retest short: BTC lost 80.0k range floor that held 3x over the weekend; short a bounce back into 80.0-80.2k (old support, below h1 ema20 80.37k). Stop above 20Z 4h high 80,624 + buffer; TP 78,700 near/below 30d low 79.12k (~2.6R)."
   }
  ],
  "order_events": [
@@ -380,6 +380,15 @@
    "trigger": 0.922,
    "time": 1792947120000,
    "detail": "filled at 0.921723"
+  },
+  {
+   "id": "o37",
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 81100,
+   "time": 1792975926168,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -436,6 +445,6 @@
  "income": {
   "funding": 0.08665516571924668,
   "carry": -0.21395110481479168,
-  "interest": 0.07266676546753935
+  "interest": 0.07271736894971588
  }
 }
