@@ -1,46 +1,46 @@
 {
- "updated": "2026-10-26T14:03:36Z",
+ "updated": "2026-10-26T14:11:36Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9293,
- "equity_pln": 1023.0,
- "return_pct": 1.25,
+ "equity_pln": 1011.0,
+ "return_pct": 0.06,
  "max_drawdown_pct": 3.97,
  "control_pln": 1054.43,
  "control_trades": 1,
- "hodl_pln": 949.3,
+ "hodl_pln": 954.33,
  "positions": [
   {
    "symbol": "DOTUSDT",
    "side": "short",
    "size": 188.419,
    "entry": 1.02319295,
-   "mark": 1.0111,
-   "upnl": 2.2785415460499983,
+   "mark": 1.02,
+   "upnl": 0.6016124460500157,
    "stop": 1.033,
    "tp": 0.978,
    "liq": null,
    "leverage": null,
    "opened": 1793007000000,
    "reason": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel.",
-   "upnl_pln": 8.95
+   "upnl_pln": 2.36
   },
   {
    "symbol": "ETHUSDT",
    "side": "short",
    "size": 0.087583,
    "entry": 2333.2998000000002,
-   "mark": 2295.25,
-   "upnl": 3.3325156334000203,
+   "mark": 2311.84,
+   "upnl": 1.8795136634000074,
    "stop": 2355.0,
    "tp": 2262.0,
    "liq": null,
    "leverage": null,
    "opened": 1793008560000,
    "reason": "Bounce-retest short: ETH d1 RSI 33, 30d -14%, below h4 ema20 2354; short a bounce into h1 ema20/ema50 2329-2346 zone at 2334. Stop above 20Z 4h high 2349.7 and h1 ema50 with buffer; TP 2262 below 30d low 2279.8 (~2.2R).",
-   "upnl_pln": 13.09
+   "upnl_pln": 7.39
   }
  ],
  "closed_trades": [
@@ -265,7 +265,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 241.935083,
+ "cash_usd": 241.93521,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -327,20 +327,20 @@
   }
  ],
  "balance_warning": false,
- "other_value_usd": 12.826431,
+ "other_value_usd": 12.840061,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.941,
+   "mark": 0.942,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 12.8264,
-   "pnl": -0.0682,
+   "value": 12.8401,
+   "pnl": -0.0545,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],
