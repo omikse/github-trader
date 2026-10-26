@@ -1,15 +1,15 @@
 {
- "cash": 241.9252257040983,
+ "cash": 241.92533685136075,
  "positions": {
   "DOTUSDT": {
    "side": "short",
    "qty": 188.419,
    "entry": 1.02319295,
-   "stop": 1.036,
+   "stop": 1.033,
    "tp": 0.978,
    "opened": 1793007000000,
    "entry_fee": 0.10603394584532752,
-   "mark": 1.0181,
+   "mark": 1.0198,
    "note": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel."
   },
   "ETHUSDT": {
@@ -20,7 +20,7 @@
    "tp": 2262.0,
    "opened": 1793008560000,
    "entry_fee": 0.11239656801087002,
-   "mark": 2322.48,
+   "mark": 2320.72,
    "note": "Bounce-retest short: ETH d1 RSI 33, 30d -14%, below h4 ema20 2354; short a bounce into h1 ema20/ema50 2329-2346 zone at 2334. Stop above 20Z 4h high 2349.7 and h1 ema50 with buffer; TP 2262 below 30d low 2279.8 (~2.2R)."
   }
  },
@@ -166,8 +166,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1793019156798,
- "next_id": 44,
+ "last_ms": 1793019576973,
+ "next_id": 46,
  "orders": [
   {
    "id": "o42",
@@ -181,6 +181,32 @@
    "placed": 1793011956872,
    "expires": 1793098356872,
    "note": "Breakdown continuation: trigger below 30d low 79,121 after a failed bounce under h4 ema20 80.64k; stop back above 79.75k (inside old range), TP 77.7k (~1.9R). Small size because alt shorts already carry the bear theme."
+  },
+  {
+   "id": "o44",
+   "symbol": "SUIUSDT",
+   "side": "short",
+   "qty": 128.101,
+   "trigger": 0.926,
+   "direction": "above",
+   "stop": 0.941,
+   "tp": 0.885,
+   "placed": 1793019576973,
+   "expires": 1793105976973,
+   "note": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R)."
+  },
+  {
+   "id": "o45",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "qty": 0.07907,
+   "trigger": 4036,
+   "direction": "above",
+   "stop": 4008.0,
+   "tp": 4095.0,
+   "placed": 1793019576973,
+   "expires": 1793149176973,
+   "note": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R)."
   }
  ],
  "order_events": [
@@ -496,12 +522,12 @@
    "shares": 13.630638297872341,
    "entry": 0.94,
    "cost": 12.894583829787233,
-   "mark": 0.944,
+   "mark": 0.943,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "note": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
-   "yes_bid": 0.944,
-   "yes_ask": 0.946
+   "yes_bid": 0.943,
+   "yes_ask": 0.945
   }
  },
  "pred_closed": [],
@@ -509,6 +535,6 @@
  "income": {
   "funding": 0.18942183203389543,
   "carry": -0.21395110481479168,
-  "interest": 0.08358188681761759
+  "interest": 0.08369303408009392
  }
 }
