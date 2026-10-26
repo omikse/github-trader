@@ -1,17 +1,13 @@
 {
-  "id": "2026-10-26T06:52:16Z",
-  "decided_at": "2026-10-26T06:52:16Z",
+  "id": "2026-10-26T08:51:58Z",
+  "decided_at": "2026-10-26T08:51:58Z",
   "model": "claude-opus-5-5",
-  "market_view": "Monday-morning bounce off 30d lows fading: BTC 79.9k below h1 ema20 80.13k and h4 ema20 80.68k, alts weak (DOT new 30d low area 1.003, SUI 0.908). Bear trend intact; shorts in profit, bounce-retest ETH order resting.",
-  "news": "No fresh market-moving news found; Fed decision 28 Oct priced as hold (~94%).",
-  "watch_next": "08Z 4h close: trail BTC stop above completed 04Z high (80,176) if bounce stays capped; SUI break of 0.8989 30d low -> trail; ETH order fill at 2334.",
+  "market_view": "Broad +0.5-1% Monday-morning bounce after BTC's 79,265 low; BTC 80.2k back at h1 ema20 but under h4 ema20 80.63k, and the 08Z 4h candle (high 80,290) has not closed above 80.3k. Daily downtrend intact; alts still near 30d lows.",
+  "news": "No fresh market-moving headline found; Fed 28 Oct hold still ~94% priced.",
+  "watch_next": "12Z 4h close: BTC > 80.3k -> close BTC short and cancel ETH order; < 79.5k -> trail stops. Whether ETH order 2334 and DOT order 1.0235 fill.",
   "actions": [
-    {
-      "type": "move_stop",
-      "symbol": "SUIUSDT",
-      "stop": 0.9205,
-      "take_profit": 0.885,
-      "reason": "Lock small profit: stop above current 04Z 4h high 0.9183 + buffer and below entry 0.9217; bounce failed under h1 ema20 0.917."
-    }
+    {"type": "entry_order", "symbol": "DOTUSDT", "side": "short", "trigger": 1.0235, "stop": 1.036, "take_profit": 0.978, "risk_pct": 0.01, "expires_hours": 24,
+     "reason": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel.",
+     "invalidation": "BTC 4h close > 80.3k (breakdown failing) or DOT 4h close above 1.036."}
   ]
 }
