@@ -1,46 +1,46 @@
 {
- "updated": "2026-10-26T18:44:52Z",
+ "updated": "2026-10-26T18:52:52Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9293,
- "equity_pln": 1004.14,
- "return_pct": -0.62,
+ "equity_pln": 1008.21,
+ "return_pct": -0.21,
  "max_drawdown_pct": 5.04,
  "control_pln": 1054.43,
  "control_trades": 1,
- "hodl_pln": 956.2,
+ "hodl_pln": 954.38,
  "positions": [
   {
    "symbol": "ETHUSDT",
    "side": "short",
    "size": 0.087583,
    "entry": 2333.2998000000002,
-   "mark": 2318.23,
-   "upnl": 1.3198582934000187,
-   "stop": 2352.0,
+   "mark": 2311.32,
+   "upnl": 1.9250568234000058,
+   "stop": 2349.0,
    "tp": 2262.0,
    "liq": null,
    "leverage": null,
    "opened": 1793008560000,
    "reason": "Bounce-retest short: ETH d1 RSI 33, 30d -14%, below h4 ema20 2354; short a bounce into h1 ema20/ema50 2329-2346 zone at 2334. Stop above 20Z 4h high 2349.7 and h1 ema50 with buffer; TP 2262 below 30d low 2279.8 (~2.2R).",
-   "upnl_pln": 5.19
+   "upnl_pln": 7.56
   },
   {
    "symbol": "SUIUSDT",
    "side": "short",
    "size": 128.101,
    "entry": 0.9257222,
-   "mark": 0.9104,
-   "upnl": 1.962789142200008,
-   "stop": 0.937,
+   "mark": 0.9074,
+   "upnl": 2.3470921422000086,
+   "stop": 0.935,
    "tp": 0.885,
    "liq": null,
    "leverage": null,
    "opened": 1793026920000,
    "reason": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R).",
-   "upnl_pln": 7.71
+   "upnl_pln": 9.22
   }
  ],
  "closed_trades": [
@@ -211,66 +211,41 @@
  ],
  "trade_count": 12,
  "win_rate_pct": 41.7,
- "brain_calls_today": 9,
+ "brain_calls_today": 10,
  "last_decision": {
-  "time": "2026-10-26T16:52:52Z",
+  "time": "2026-10-26T18:52:52Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-26T16:51:33Z",
+  "decided_at": "2026-10-26T18:51:58Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 256.27,
-  "equity_pln": 1006.97,
-  "events": [
-   {
-    "type": "order_filled",
-    "id": "o44",
-    "symbol": "SUIUSDT",
-    "side": "short",
-    "status": "filled",
-    "trigger": 0.926,
-    "time": 1793026920000,
-    "detail": "filled at 0.925722"
-   },
-   {
-    "type": "position_closed",
-    "id": "t46",
-    "symbol": "DOTUSDT",
-    "side": "short",
-    "qty": 188.419,
-    "entry": 1.02319295,
-    "exit": 1.0335165,
-    "pnl": -2.1583,
-    "time": 1793027460000,
-    "why": "stop",
-    "opened": 1793007000000,
-    "reason": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel."
-   }
-  ],
-  "market_view": "BTC 79.78k back under h1/h4 ema20 after another rejection near 80.3-80.7k; lower highs, 30d low 79.12k in reach. Alts weak near 30d lows (DOT 1.005, SUI 0.908, ETH 2309). DOT short stopped on a wick to 1.0335 before the drop.",
-  "watch_next": "BTC break of 79.1k (short order 79,050); ETH 4h close < 2300 to trail; SUI new 30d low < 0.8989; PAXG breakout 4036; BTC 4h close > 80.45k = cover alt shorts.",
-  "news": "No fresh market-moving headlines found; Fed 28 Oct hold still ~92% on Polymarket.",
+  "equity_usd": 256.6,
+  "equity_pln": 1008.27,
+  "events": [],
+  "market_view": "Slow grind lower: BTC 80.08k chopping 79.3-80.7k under h4 ema20 80.55k; alts weaker, SUI/DOT/NEAR near 30d lows. ETH and SUI shorts in profit; trailing stops a notch behind completed 4h highs.",
+  "watch_next": "BTC 4h close <79.1k (order 79,050) or >80.45k (close shorts). SUI new 30d low <0.8989 -> trail. PAXG breakout >4036. Fed hold odds.",
+  "news": "No fresh market-moving news found; Fed decision 28 Oct still priced as a hold (~91%).",
   "actions": [
    {
     "type": "move_stop",
     "symbol": "ETHUSDT",
-    "stop": 2352,
+    "stop": 2349,
     "take_profit": 2262,
-    "reason": "Reduce risk: stop just above the 2349.7 4h high (highest of last 6 4h candles), ~2.3 h1 ATR from mark, still clear of chop.",
+    "reason": "Trail stop to last completed 4h high 2340.9 + ~8 buffer (was 2352); reduces risk, thesis unchanged.",
     "result": "done",
-    "detail": "stop 2352.0, target 2262.0"
+    "detail": "stop 2349.0, target 2262.0"
    },
    {
     "type": "move_stop",
     "symbol": "SUIUSDT",
-    "stop": 0.937,
+    "stop": 0.935,
     "take_profit": 0.885,
-    "reason": "Reduce risk: stop above 12Z 4h high 0.9294 and h4 ema20 0.9336 with buffer (~0.7 ATR), keeps the bounce-short thesis alive while cutting bear-theme risk after DOT stop.",
+    "reason": "Trail stop to last completed 4h high 0.9294 + ~0.006 buffer (was 0.937); reduces risk.",
     "result": "done",
-    "detail": "stop 0.937, target 0.885"
+    "detail": "stop 0.935, target 0.885"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 239.833969,
+ "cash_usd": 239.834098,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -321,20 +296,20 @@
   }
  ],
  "balance_warning": false,
- "other_value_usd": 12.458403,
+ "other_value_usd": 12.526557,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.914,
+   "mark": 0.919,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 12.4584,
-   "pnl": -0.4362,
+   "value": 12.5266,
+   "pnl": -0.368,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],
