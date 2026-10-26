@@ -1,13 +1,12 @@
 {
-  "id": "2026-10-26T08:51:58Z",
-  "decided_at": "2026-10-26T08:51:58Z",
+  "id": "2026-10-26T10:51:58Z",
+  "decided_at": "2026-10-26T10:51:58Z",
   "model": "claude-opus-5-5",
-  "market_view": "Broad +0.5-1% Monday-morning bounce after BTC's 79,265 low; BTC 80.2k back at h1 ema20 but under h4 ema20 80.63k, and the 08Z 4h candle (high 80,290) has not closed above 80.3k. Daily downtrend intact; alts still near 30d lows.",
-  "news": "No fresh market-moving headline found; Fed 28 Oct hold still ~94% priced.",
-  "watch_next": "12Z 4h close: BTC > 80.3k -> close BTC short and cancel ETH order; < 79.5k -> trail stops. Whether ETH order 2334 and DOT order 1.0235 fill.",
+  "market_view": "BTC stopped on the bounce (80,390) and sits at 80.28k, right at the 80.3k mind-changer line; alts bounced into h1 ema20 but remain well under h4 ema20 near 30d lows. ETH and DOT bounce-short orders filled; three alt shorts held with ~2.2% combined risk.",
+  "news": "No fresh market-moving news found; Fed 28 Oct hold priced ~95%.",
+  "watch_next": "BTC 12Z 4h close: > 80.45k (above 08Z high) = bounce extending -> close ETH/DOT shorts. < 79.5k = trail stops behind 4h highs. BTC breakdown order at 79,050.",
   "actions": [
-    {"type": "entry_order", "symbol": "DOTUSDT", "side": "short", "trigger": 1.0235, "stop": 1.036, "take_profit": 0.978, "risk_pct": 0.01, "expires_hours": 24,
-     "reason": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel.",
-     "invalidation": "BTC 4h close > 80.3k (breakdown failing) or DOT 4h close above 1.036."}
+    {"type": "move_stop", "symbol": "ETHUSDT", "stop": 2355, "take_profit": 2262, "reason": "Reduce risk: stop just above h4 ema20 2351.7 and current 4h high 2335; bounce through h4 ema20 would kill the retest thesis anyway."},
+    {"type": "entry_order", "symbol": "BTCUSDT", "side": "short", "trigger": 79050, "stop": 79750, "take_profit": 77700, "risk_pct": 0.01, "expires_hours": 24, "reason": "Breakdown continuation: trigger below 30d low 79,121 after a failed bounce under h4 ema20 80.64k; stop back above 79.75k (inside old range), TP 77.7k (~1.9R). Small size because alt shorts already carry the bear theme.", "invalidation": "Price reclaims 79.75k after triggering, or BTC 4h close > 80.45k before it triggers (cancel)."}
   ]
 }
