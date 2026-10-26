@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-25T23:53:05Z",
+ "updated": "2026-10-26T00:01:05Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9247,
- "equity_pln": 1010.49,
- "return_pct": 0.13,
+ "equity_pln": 1007.8,
+ "return_pct": -0.14,
  "max_drawdown_pct": 3.8,
  "control_pln": 1053.2,
  "control_trades": 1,
- "hodl_pln": 953.75,
+ "hodl_pln": 955.29,
  "positions": [
   {
    "symbol": "SUIUSDT",
    "side": "short",
    "size": 242.817,
    "entry": 0.9217234000000001,
-   "mark": 0.9168,
-   "upnl": 1.1954852178000324,
+   "mark": 0.92,
+   "upnl": 0.4184708178000101,
    "stop": 0.937,
    "tp": 0.885,
    "liq": null,
    "leverage": null,
    "opened": 1792947120000,
    "reason": "Weakest-alt bounce-short re-placed lower: SUI 7d -8.6%, 30d -24%, h4 RSI 28, below h4 ema20 0.953. Short a bounce into h1 ema20 ~0.923 / 4h highs 0.920; stop above completed 04Z 4h high 0.936 + buffer, TP 0.885 (~2.5R).",
-   "upnl_pln": 4.69
+   "upnl_pln": 1.64
   }
  ],
  "closed_trades": [
@@ -154,7 +154,7 @@
  ],
  "trade_count": 9,
  "win_rate_pct": 55.6,
- "brain_calls_today": 12,
+ "brain_calls_today": 0,
  "last_decision": {
   "time": "2026-10-25T22:52:49Z",
   "trigger": "brain session",
@@ -169,7 +169,7 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 243.66924,
+ "cash_usd": 243.67409,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -209,20 +209,20 @@
   }
  ],
  "balance_warning": false,
- "other_value_usd": 12.676494,
+ "other_value_usd": 12.8128,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.93,
+   "mark": 0.94,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 12.6765,
-   "pnl": -0.2181,
+   "value": 12.8128,
+   "pnl": -0.0818,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],
@@ -244,7 +244,7 @@
   }
  ],
  "income_pln": {
-  "funding": 0.32,
+  "funding": 0.34,
   "carry": -0.84,
   "interest": 0.28
  },
