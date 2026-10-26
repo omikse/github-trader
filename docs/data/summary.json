@@ -1,46 +1,46 @@
 {
- "updated": "2026-10-26T08:45:20Z",
+ "updated": "2026-10-26T08:53:20Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9247,
- "equity_pln": 1011.36,
- "return_pct": 0.21,
+ "equity_pln": 1007.73,
+ "return_pct": -0.14,
  "max_drawdown_pct": 3.8,
  "control_pln": 1053.2,
  "control_trades": 1,
- "hodl_pln": 956.2,
+ "hodl_pln": 957.17,
  "positions": [
   {
    "symbol": "SUIUSDT",
    "side": "short",
    "size": 242.817,
    "entry": 0.9217234000000001,
-   "mark": 0.9159,
-   "upnl": 1.4140205178000083,
+   "mark": 0.9178,
+   "upnl": 0.9526682178000322,
    "stop": 0.9205,
    "tp": 0.885,
    "liq": null,
    "leverage": null,
    "opened": 1792947120000,
    "reason": "Weakest-alt bounce-short re-placed lower: SUI 7d -8.6%, 30d -24%, h4 RSI 28, below h4 ema20 0.953. Short a bounce into h1 ema20 ~0.923 / 4h highs 0.920; stop above completed 04Z 4h high 0.936 + buffer, TP 0.885 (~2.5R).",
-   "upnl_pln": 5.55
+   "upnl_pln": 3.74
   },
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00484317,
    "entry": 80125.955,
-   "mark": 80148.1,
-   "upnl": -0.10725199965001973,
+   "mark": 80228.8,
+   "upnl": -0.49809581865000563,
    "stop": 80350.0,
    "tp": 78700.0,
    "liq": null,
    "leverage": null,
    "opened": 1792976580000,
    "reason": "Breakdown-retest short: BTC lost 80.0k range floor that held 3x over the weekend; short a bounce back into 80.0-80.2k (old support, below h1 ema20 80.37k). Stop above 20Z 4h high 80,624 + buffer; TP 78,700 near/below 30d low 79.12k (~2.6R).",
-   "upnl_pln": -0.42
+   "upnl_pln": -1.95
   }
  ],
  "closed_trades": [
@@ -169,32 +169,37 @@
  ],
  "trade_count": 9,
  "win_rate_pct": 55.6,
- "brain_calls_today": 4,
+ "brain_calls_today": 5,
  "last_decision": {
-  "time": "2026-10-26T06:53:20Z",
+  "time": "2026-10-26T08:53:20Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-26T06:52:16Z",
+  "decided_at": "2026-10-26T08:51:58Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 260.45,
-  "equity_pln": 1022.19,
+  "equity_usd": 256.74,
+  "equity_pln": 1007.62,
   "events": [],
-  "market_view": "Monday-morning bounce off 30d lows fading: BTC 79.9k below h1 ema20 80.13k and h4 ema20 80.68k, alts weak (DOT new 30d low area 1.003, SUI 0.908). Bear trend intact; shorts in profit, bounce-retest ETH order resting.",
-  "watch_next": "08Z 4h close: trail BTC stop above completed 04Z high (80,176) if bounce stays capped; SUI break of 0.8989 30d low -> trail; ETH order fill at 2334.",
-  "news": "No fresh market-moving news found; Fed decision 28 Oct priced as hold (~94%).",
+  "market_view": "Broad +0.5-1% Monday-morning bounce after BTC's 79,265 low; BTC 80.2k back at h1 ema20 but under h4 ema20 80.63k, and the 08Z 4h candle (high 80,290) has not closed above 80.3k. Daily downtrend intact; alts still near 30d lows.",
+  "watch_next": "12Z 4h close: BTC > 80.3k -> close BTC short and cancel ETH order; < 79.5k -> trail stops. Whether ETH order 2334 and DOT order 1.0235 fill.",
+  "news": "No fresh market-moving headline found; Fed 28 Oct hold still ~94% priced.",
   "actions": [
    {
-    "type": "move_stop",
-    "symbol": "SUIUSDT",
-    "stop": 0.9205,
-    "take_profit": 0.885,
-    "reason": "Lock small profit: stop above current 04Z 4h high 0.9183 + buffer and below entry 0.9217; bounce failed under h1 ema20 0.917.",
+    "type": "entry_order",
+    "symbol": "DOTUSDT",
+    "side": "short",
+    "trigger": 1.0235,
+    "stop": 1.036,
+    "take_profit": 0.978,
+    "risk_pct": 0.01,
+    "expires_hours": 24,
+    "reason": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel.",
+    "invalidation": "BTC 4h close > 80.3k (breakdown failing) or DOT 4h close above 1.036.",
     "result": "done",
-    "detail": "stop 0.9205, target 0.885"
+    "detail": "short 188.419 when price goes above 1.0235 (risk 1.0%, stop 1.036, target 0.978, expires in 24h) ok"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 243.523952,
+ "cash_usd": 243.524072,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -231,6 +236,17 @@
    "qty": 0.087583,
    "expires": 1793076726125,
    "note": "Bounce-retest short: ETH d1 RSI 33, 30d -14%, below h4 ema20 2354; short a bounce into h1 ema20/ema50 2329-2346 zone at 2334. Stop above 20Z 4h high 2349.7 and h1 ema50 with buffer; TP 2262 below 30d low 2279.8 (~2.2R)."
+  },
+  {
+   "symbol": "DOTUSDT",
+   "side": "short",
+   "trigger": 1.0235,
+   "direction": "above",
+   "stop": 1.036,
+   "tp": 0.978,
+   "qty": 188.419,
+   "expires": 1793091200583,
+   "note": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel."
   }
  ],
  "balance_warning": false,
