@@ -13,7 +13,7 @@
   "2026-10-23": 12,
   "2026-10-24": 12,
   "2026-10-25": 12,
-  "2026-10-26": 8
+  "2026-10-26": 9
  },
  "closed_trades": [
   {
@@ -169,36 +169,11 @@
    "reason": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel."
   }
  ],
- "last_closed_check_ms": 1793033152567,
+ "last_closed_check_ms": 1793033572677,
  "day": "2026-10-26",
  "day_start_equity": 257.17244257854924,
  "paused_day": null,
- "pending_events": [
-  {
-   "type": "order_filled",
-   "id": "o44",
-   "symbol": "SUIUSDT",
-   "side": "short",
-   "status": "filled",
-   "trigger": 0.926,
-   "time": 1793026920000,
-   "detail": "filled at 0.925722"
-  },
-  {
-   "type": "position_closed",
-   "id": "t46",
-   "symbol": "DOTUSDT",
-   "side": "short",
-   "qty": 188.419,
-   "entry": 1.02319295,
-   "exit": 1.0335165,
-   "pnl": -2.1583,
-   "time": 1793027460000,
-   "why": "stop",
-   "opened": 1793007000000,
-   "reason": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel."
-  }
- ],
+ "pending_events": [],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 268.3517564571816,
@@ -207,7 +182,7 @@
   "trades": 1,
   "wins": 1
  },
- "last_btc": 79803.8,
+ "last_btc": 79921.0,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -241,6 +216,6 @@
   "o39:filled",
   "o44:filled"
  ],
- "last_decision_id": "2026-10-26T14:52:13Z",
+ "last_decision_id": "2026-10-26T16:51:33Z",
  "cash_rate_day": "2026-10-26"
 }
