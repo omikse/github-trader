@@ -1,12 +1,12 @@
 {
-  "id": "2026-10-26T16:51:33Z",
-  "decided_at": "2026-10-26T16:51:33Z",
+  "id": "2026-10-26T18:51:58Z",
+  "decided_at": "2026-10-26T18:51:58Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 79.78k back under h1/h4 ema20 after another rejection near 80.3-80.7k; lower highs, 30d low 79.12k in reach. Alts weak near 30d lows (DOT 1.005, SUI 0.908, ETH 2309). DOT short stopped on a wick to 1.0335 before the drop.",
-  "news": "No fresh market-moving headlines found; Fed 28 Oct hold still ~92% on Polymarket.",
-  "watch_next": "BTC break of 79.1k (short order 79,050); ETH 4h close < 2300 to trail; SUI new 30d low < 0.8989; PAXG breakout 4036; BTC 4h close > 80.45k = cover alt shorts.",
+  "market_view": "Slow grind lower: BTC 80.08k chopping 79.3-80.7k under h4 ema20 80.55k; alts weaker, SUI/DOT/NEAR near 30d lows. ETH and SUI shorts in profit; trailing stops a notch behind completed 4h highs.",
+  "news": "No fresh market-moving news found; Fed decision 28 Oct still priced as a hold (~91%).",
+  "watch_next": "BTC 4h close <79.1k (order 79,050) or >80.45k (close shorts). SUI new 30d low <0.8989 -> trail. PAXG breakout >4036. Fed hold odds.",
   "actions": [
-    {"type": "move_stop", "symbol": "ETHUSDT", "stop": 2352, "take_profit": 2262, "reason": "Reduce risk: stop just above the 2349.7 4h high (highest of last 6 4h candles), ~2.3 h1 ATR from mark, still clear of chop."},
-    {"type": "move_stop", "symbol": "SUIUSDT", "stop": 0.937, "take_profit": 0.885, "reason": "Reduce risk: stop above 12Z 4h high 0.9294 and h4 ema20 0.9336 with buffer (~0.7 ATR), keeps the bounce-short thesis alive while cutting bear-theme risk after DOT stop."}
+    {"type": "move_stop", "symbol": "ETHUSDT", "stop": 2349, "take_profit": 2262, "reason": "Trail stop to last completed 4h high 2340.9 + ~8 buffer (was 2352); reduces risk, thesis unchanged."},
+    {"type": "move_stop", "symbol": "SUIUSDT", "stop": 0.935, "take_profit": 0.885, "reason": "Trail stop to last completed 4h high 0.9294 + ~0.006 buffer (was 0.937); reduces risk."}
   ]
 }
