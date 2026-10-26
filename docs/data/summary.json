@@ -1,61 +1,61 @@
 {
- "updated": "2026-10-26T09:57:20Z",
+ "updated": "2026-10-26T10:05:20Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9247,
- "equity_pln": 1004.39,
- "return_pct": -0.48,
+ "equity_pln": 1009.49,
+ "return_pct": 0.03,
  "max_drawdown_pct": 3.8,
  "control_pln": 1053.2,
  "control_trades": 1,
- "hodl_pln": 959.63,
+ "hodl_pln": 958.72,
  "positions": [
   {
    "symbol": "SUIUSDT",
    "side": "short",
    "size": 242.817,
    "entry": 0.9217234000000001,
-   "mark": 0.9193,
-   "upnl": 0.5884427178000183,
+   "mark": 0.917,
+   "upnl": 1.1469218178000107,
    "stop": 0.9205,
    "tp": 0.885,
    "liq": null,
    "leverage": null,
    "opened": 1792947120000,
    "reason": "Weakest-alt bounce-short re-placed lower: SUI 7d -8.6%, 30d -24%, h4 RSI 28, below h4 ema20 0.953. Short a bounce into h1 ema20 ~0.923 / 4h highs 0.920; stop above completed 04Z 4h high 0.936 + buffer, TP 0.885 (~2.5R).",
-   "upnl_pln": 2.31
+   "upnl_pln": 4.5
   },
   {
    "symbol": "DOTUSDT",
    "side": "short",
    "size": 188.419,
    "entry": 1.02319295,
-   "mark": 1.0202,
-   "upnl": 0.5639286460500199,
+   "mark": 1.0182,
+   "upnl": 0.9407666460500202,
    "stop": 1.036,
    "tp": 0.978,
    "liq": null,
    "leverage": null,
    "opened": 1793007000000,
    "reason": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel.",
-   "upnl_pln": 2.21
+   "upnl_pln": 3.69
   },
   {
    "symbol": "ETHUSDT",
    "side": "short",
    "size": 0.087583,
    "entry": 2333.2998000000002,
-   "mark": 2334.85,
-   "upnl": -0.1357711665999717,
+   "mark": 2329.66,
+   "upnl": 0.31878460340003306,
    "stop": 2367.0,
    "tp": 2262.0,
    "liq": null,
    "leverage": null,
    "opened": 1793008560000,
    "reason": "Bounce-retest short: ETH d1 RSI 33, 30d -14%, below h4 ema20 2354; short a bounce into h1 ema20/ema50 2329-2346 zone at 2334. Stop above 20Z 4h high 2349.7 and h1 ema50 with buffer; TP 2262 below 30d low 2279.8 (~2.2R).",
-   "upnl_pln": -0.53
+   "upnl_pln": 1.25
   }
  ],
  "closed_trades": [
@@ -228,7 +228,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 241.824887,
+ "cash_usd": 241.835519,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -291,7 +291,7 @@
   }
  ],
  "income_pln": {
-  "funding": 0.6,
+  "funding": 0.65,
   "carry": -0.84,
   "interest": 0.32
  },
