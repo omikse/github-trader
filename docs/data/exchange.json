@@ -1,5 +1,5 @@
 {
- "cash": 241.93491060687884,
+ "cash": 241.869811712131,
  "positions": {
   "DOTUSDT": {
    "side": "short",
@@ -9,7 +9,7 @@
    "tp": 0.978,
    "opened": 1793007000000,
    "entry_fee": 0.10603394584532752,
-   "mark": 1.0309,
+   "mark": 1.0319,
    "note": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel."
   },
   "ETHUSDT": {
@@ -20,8 +20,19 @@
    "tp": 2262.0,
    "opened": 1793008560000,
    "entry_fee": 0.11239656801087002,
-   "mark": 2324.82,
+   "mark": 2327.07,
    "note": "Bounce-retest short: ETH d1 RSI 33, 30d -14%, below h4 ema20 2354; short a bounce into h1 ema20/ema50 2329-2346 zone at 2334. Stop above 20Z 4h high 2349.7 and h1 ema50 with buffer; TP 2262 below 30d low 2279.8 (~2.2R)."
+  },
+  "SUIUSDT": {
+   "side": "short",
+   "qty": 128.101,
+   "entry": 0.9257222,
+   "stop": 0.941,
+   "tp": 0.885,
+   "opened": 1793026920000,
+   "entry_fee": 0.06522226674821001,
+   "mark": 0.9265,
+   "note": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R)."
   }
  },
  "closed": [
@@ -166,7 +177,7 @@
   }
  ],
  "fills": [],
- "last_ms": 1793026836870,
+ "last_ms": 1793027316866,
  "next_id": 46,
  "orders": [
   {
@@ -181,19 +192,6 @@
    "placed": 1793011956872,
    "expires": 1793098356872,
    "note": "Breakdown continuation: trigger below 30d low 79,121 after a failed bounce under h4 ema20 80.64k; stop back above 79.75k (inside old range), TP 77.7k (~1.9R). Small size because alt shorts already carry the bear theme."
-  },
-  {
-   "id": "o44",
-   "symbol": "SUIUSDT",
-   "side": "short",
-   "qty": 128.101,
-   "trigger": 0.926,
-   "direction": "above",
-   "stop": 0.941,
-   "tp": 0.885,
-   "placed": 1793019576973,
-   "expires": 1793105976973,
-   "note": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R)."
   },
   {
    "id": "o45",
@@ -479,26 +477,35 @@
    "trigger": 2334,
    "time": 1793008560000,
    "detail": "filled at 2333.3"
+  },
+  {
+   "id": "o44",
+   "symbol": "SUIUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 0.926,
+   "time": 1793026920000,
+   "detail": "filled at 0.925722"
   }
  ],
  "funding_rates": {
-  "BTCUSDT": 9.65925e-06,
-  "ETHUSDT": 5.0352125e-06,
-  "SOLUSDT": -2.02795833333e-07,
-  "XRPUSDT": 8.06733333333e-07,
-  "DOGEUSDT": 5.09735e-06,
-  "ADAUSDT": -4.252554166667e-06,
-  "AVAXUSDT": -3.507745833333e-06,
-  "LINKUSDT": 3.5241833333333e-05,
-  "SUIUSDT": 1.3151533333333e-05,
-  "PEPEUSDT": 3.6591166666667e-05,
-  "WIFUSDT": 7.909133333333e-06,
-  "BONKUSDT": -7.27883625e-05,
-  "LTCUSDT": 8.610416666667e-06,
-  "DOTUSDT": -1.0829083333333e-05,
-  "NEARUSDT": 3.6229420833333e-05,
-  "PAXGUSDT": 1.9175279166667e-05,
-  "EURUSDT": -4.097845833333e-06
+  "BTCUSDT": 2.1457875e-05,
+  "ETHUSDT": 2.02532625e-05,
+  "SOLUSDT": 2.9583370833333e-05,
+  "XRPUSDT": 2.0246433333333e-05,
+  "DOGEUSDT": 3.3872533333333e-05,
+  "ADAUSDT": -5.4194875e-06,
+  "AVAXUSDT": 7.224533333333e-06,
+  "LINKUSDT": 4.21765125e-05,
+  "SUIUSDT": 1.6397454166667e-05,
+  "PEPEUSDT": 5.7602720833333e-05,
+  "WIFUSDT": -1.858595833333e-06,
+  "BONKUSDT": -6.1606104166667e-05,
+  "LTCUSDT": 2.6570229166667e-05,
+  "DOTUSDT": -2.602495833333e-06,
+  "NEARUSDT": 8.8467141666667e-05,
+  "PAXGUSDT": 1.6609029166667e-05,
+  "EURUSDT": 1.476991071429e-06
  },
  "carry": {},
  "carry_closed": [
@@ -522,12 +529,12 @@
    "shares": 13.630638297872341,
    "entry": 0.94,
    "cost": 12.894583829787233,
-   "mark": 0.932,
+   "mark": 0.924,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "note": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
-   "yes_bid": 0.932,
-   "yes_ask": 0.933
+   "yes_bid": 0.924,
+   "yes_ask": 0.925
   }
  },
  "pred_closed": [],
@@ -535,6 +542,6 @@
  "income": {
   "funding": 0.19707423591327655,
   "carry": -0.21395110481479168,
-  "interest": 0.0856143857188624
+  "interest": 0.08573775771923435
  }
 }

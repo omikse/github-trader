@@ -156,20 +156,31 @@
    "reason": "Weakest-alt bounce-short re-placed lower: SUI 7d -8.6%, 30d -24%, h4 RSI 28, below h4 ema20 0.953. Short a bounce into h1 ema20 ~0.923 / 4h highs 0.920; stop above completed 04Z 4h high 0.936 + buffer, TP 0.885 (~2.5R)."
   }
  ],
- "last_closed_check_ms": 1793026836870,
+ "last_closed_check_ms": 1793027316866,
  "day": "2026-10-26",
  "day_start_equity": 257.17244257854924,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_filled",
+   "id": "o44",
+   "symbol": "SUIUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 0.926,
+   "time": 1793026920000,
+   "detail": "filled at 0.925722"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 268.3517564571816,
   "pos": null,
-  "last_t": 1793019600000,
+  "last_t": 1793023200000,
   "trades": 1,
   "wins": 1
  },
- "last_btc": 80286.3,
+ "last_btc": 80358.4,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -200,7 +211,8 @@
   "o37:cancelled",
   "o38:filled",
   "o40:filled",
-  "o39:filled"
+  "o39:filled",
+  "o44:filled"
  ],
  "last_decision_id": "2026-10-26T14:52:13Z",
  "cash_rate_day": "2026-10-26"

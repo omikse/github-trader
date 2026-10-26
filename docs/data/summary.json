@@ -1,46 +1,61 @@
 {
- "updated": "2026-10-26T15:00:36Z",
+ "updated": "2026-10-26T15:08:36Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9293,
- "equity_pln": 997.76,
- "return_pct": -1.25,
- "max_drawdown_pct": 4.06,
+ "equity_pln": 994.57,
+ "return_pct": -1.57,
+ "max_drawdown_pct": 4.48,
  "control_pln": 1054.43,
  "control_trades": 1,
- "hodl_pln": 958.97,
+ "hodl_pln": 959.83,
  "positions": [
   {
    "symbol": "DOTUSDT",
    "side": "short",
    "size": 188.419,
    "entry": 1.02319295,
-   "mark": 1.0309,
-   "upnl": -1.4521546539499675,
+   "mark": 1.0319,
+   "upnl": -1.6405736539499884,
    "stop": 1.033,
    "tp": 0.978,
    "liq": null,
    "leverage": null,
    "opened": 1793007000000,
    "reason": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel.",
-   "upnl_pln": -5.71
+   "upnl_pln": -6.45
   },
   {
    "symbol": "ETHUSDT",
    "side": "short",
    "size": 0.087583,
    "entry": 2333.2998000000002,
-   "mark": 2324.82,
-   "upnl": 0.742686323400006,
+   "mark": 2327.07,
+   "upnl": 0.5456245734000059,
    "stop": 2355.0,
    "tp": 2262.0,
    "liq": null,
    "leverage": null,
    "opened": 1793008560000,
    "reason": "Bounce-retest short: ETH d1 RSI 33, 30d -14%, below h4 ema20 2354; short a bounce into h1 ema20/ema50 2329-2346 zone at 2334. Stop above 20Z 4h high 2349.7 and h1 ema50 with buffer; TP 2262 below 30d low 2279.8 (~2.2R).",
-   "upnl_pln": 2.92
+   "upnl_pln": 2.14
+  },
+  {
+   "symbol": "SUIUSDT",
+   "side": "short",
+   "size": 128.101,
+   "entry": 0.9257222,
+   "mark": 0.9265,
+   "upnl": -0.09963695779999227,
+   "stop": 0.941,
+   "tp": 0.885,
+   "liq": null,
+   "leverage": null,
+   "opened": 1793026920000,
+   "reason": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R).",
+   "upnl_pln": -0.39
   }
  ],
  "closed_trades": [
@@ -212,7 +227,7 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 241.934911,
+ "cash_usd": 241.869812,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -251,17 +266,6 @@
    "note": "Breakdown continuation: trigger below 30d low 79,121 after a failed bounce under h4 ema20 80.64k; stop back above 79.75k (inside old range), TP 77.7k (~1.9R). Small size because alt shorts already carry the bear theme."
   },
   {
-   "symbol": "SUIUSDT",
-   "side": "short",
-   "trigger": 0.926,
-   "direction": "above",
-   "stop": 0.941,
-   "tp": 0.885,
-   "qty": 128.101,
-   "expires": 1793105976973,
-   "note": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R)."
-  },
-  {
    "symbol": "PAXGUSDT",
    "side": "long",
    "trigger": 4036,
@@ -274,20 +278,20 @@
   }
  ],
  "balance_warning": false,
- "other_value_usd": 12.703755,
+ "other_value_usd": 12.59471,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.932,
+   "mark": 0.924,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 12.7038,
-   "pnl": -0.1908,
+   "value": 12.5947,
+   "pnl": -0.2999,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],
