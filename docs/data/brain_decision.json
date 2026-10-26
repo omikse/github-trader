@@ -1,41 +1,9 @@
 {
-  "id": "2026-10-26T13:00:30Z",
-  "decided_at": "2026-10-26T13:00:30Z",
+  "id": "2026-10-26T14:52:13Z",
+  "decided_at": "2026-10-26T14:52:13Z",
   "model": "claude-opus-5-5",
-  "market_view": "Monday drift: BTC 80.26k pinned between h1 ema20 80.18k and ema50 80.40k, below h4 ema20 80.60k; 4h range 79.27k-80.45k. Alts flat near 30d lows; daily trend still down. PAXG pressing 4h highs 4031.",
-  "news": "No fresh market-moving crypto headlines found; Fed 28 Oct hold priced ~95%.",
-  "watch_next": "BTC 4h close > 80.45k (close shorts) or < 79.1k (trend leg); ETH 4h close < 2300 to trail; PAXG breakout order; DOT/SUI 30d lows.",
-  "actions": [
-    {
-      "type": "move_stop",
-      "symbol": "DOTUSDT",
-      "stop": 1.033,
-      "take_profit": 0.978,
-      "reason": "Tighten to just above the last two completed 4h highs (1.0272/1.0248) + buffer; reduces bear-theme risk while SUI slot is reused."
-    },
-    {
-      "type": "entry_order",
-      "symbol": "SUIUSDT",
-      "side": "short",
-      "trigger": 0.926,
-      "stop": 0.941,
-      "take_profit": 0.885,
-      "risk_pct": 0.008,
-      "expires_hours": 24,
-      "reason": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R).",
-      "invalidation": "BTC 4h close > 80.45k or SUI 4h close > 0.94"
-    },
-    {
-      "type": "entry_order",
-      "symbol": "PAXGUSDT",
-      "side": "long",
-      "trigger": 4036,
-      "stop": 4008,
-      "take_profit": 4095,
-      "risk_pct": 0.01,
-      "expires_hours": 36,
-      "reason": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R).",
-      "invalidation": "Fails back under 4015 after trigger"
-    }
-  ]
+  "market_view": "BTC still capped under 80.45k with lower 4h highs; 12Z candle dipped to 79,336 and bounced to 79.87k. Alts sit near 30d lows under h4 ema20. Gold 9 USD below its breakout trigger.",
+  "news": "",
+  "watch_next": "BTC 4h close < 79.1k (BTC order fires, trail ETH/DOT) or > 80.45k (close ETH/DOT, cancel BTC/SUI orders); PAXG breakout 4036; Fed 28 Oct.",
+  "actions": []
 }
