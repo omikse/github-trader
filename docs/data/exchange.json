@@ -1,5 +1,5 @@
 {
- "cash": 243.6774520825329,
+ "cash": 243.4641422609871,
  "positions": {
   "SUIUSDT": {
    "side": "short",
@@ -9,8 +9,19 @@
    "tp": 0.885,
    "opened": 1792947120000,
    "entry_fee": 0.12309556094979002,
-   "mark": 0.922,
+   "mark": 0.9154,
    "note": "Weakest-alt bounce-short re-placed lower: SUI 7d -8.6%, 30d -24%, h4 RSI 28, below h4 ema20 0.953. Short a bounce into h1 ema20 ~0.923 / 4h highs 0.920; stop above completed 04Z 4h high 0.936 + buffer, TP 0.885 (~2.5R)."
+  },
+  "BTCUSDT": {
+   "side": "short",
+   "qty": 0.00484317,
+   "entry": 80125.955,
+   "stop": 80700.0,
+   "tp": 78700.0,
+   "opened": 1792976580000,
+   "entry_fee": 0.21343499181254252,
+   "mark": 79894.1,
+   "note": "Breakdown-retest short: BTC lost 80.0k range floor that held 3x over the weekend; short a bounce back into 80.0-80.2k (old support, below h1 ema20 80.37k). Stop above 20Z 4h high 80,624 + buffer; TP 78,700 near/below 30d low 79.12k (~2.6R)."
   }
  },
  "closed": [
@@ -129,23 +140,9 @@
   }
  ],
  "fills": [],
- "last_ms": 1792976406001,
+ "last_ms": 1792976885955,
  "next_id": 39,
- "orders": [
-  {
-   "id": "o38",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "qty": 0.00484317,
-   "trigger": 80150,
-   "direction": "above",
-   "stop": 80700.0,
-   "tp": 78700.0,
-   "placed": 1792975926168,
-   "expires": 1793062326168,
-   "note": "Breakdown-retest short: BTC lost 80.0k range floor that held 3x over the weekend; short a bounce back into 80.0-80.2k (old support, below h1 ema20 80.37k). Stop above 20Z 4h high 80,624 + buffer; TP 78,700 near/below 30d low 79.12k (~2.6R)."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -389,26 +386,35 @@
    "trigger": 81100,
    "time": 1792975926168,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o38",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 80150,
+   "time": 1792976580000,
+   "detail": "filled at 80126"
   }
  ],
  "funding_rates": {
-  "BTCUSDT": 1.62973e-05,
-  "ETHUSDT": 3.108041666667e-06,
-  "SOLUSDT": 3.081154166667e-06,
-  "XRPUSDT": 1.84304625e-05,
-  "DOGEUSDT": 1.2237979166667e-05,
-  "ADAUSDT": -1.8369033333333e-05,
-  "AVAXUSDT": 8.118616666667e-06,
-  "LINKUSDT": 9.100158333333e-06,
-  "SUIUSDT": 1.05980875e-05,
-  "PEPEUSDT": 4.533333333333e-06,
-  "WIFUSDT": -2.44395125e-05,
-  "BONKUSDT": -4.7950695833333e-05,
-  "LTCUSDT": -5.325329166667e-06,
-  "DOTUSDT": -2.4812120833333e-05,
-  "NEARUSDT": 2.8247375e-06,
-  "PAXGUSDT": -6.407266666667e-06,
-  "EURUSDT": -2.3782415322581e-05
+  "BTCUSDT": 1.002325e-05,
+  "ETHUSDT": 2.3992875e-06,
+  "SOLUSDT": 2.468358333333e-06,
+  "XRPUSDT": 2.5166745833333e-05,
+  "DOGEUSDT": 1.0015408333333e-05,
+  "ADAUSDT": -3.0779329166667e-05,
+  "AVAXUSDT": -1.01196625e-05,
+  "LINKUSDT": 1.3472175e-05,
+  "SUIUSDT": -7.810483333333e-06,
+  "PEPEUSDT": 1.5290375e-05,
+  "WIFUSDT": 6.993925e-06,
+  "BONKUSDT": -4.9160191666667e-05,
+  "LTCUSDT": -7.593908333333e-06,
+  "DOTUSDT": -7.228579166667e-06,
+  "NEARUSDT": -3.25716666667e-07,
+  "PAXGUSDT": -5.596004166667e-06,
+  "EURUSDT": -5.572445833333e-06
  },
  "carry": {},
  "carry_closed": [
@@ -445,6 +451,6 @@
  "income": {
   "funding": 0.08902346188547892,
   "carry": -0.21395110481479168,
-  "interest": 0.0728520969985556
+  "interest": 0.07297726726528231
  }
 }
