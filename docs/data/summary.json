@@ -1,46 +1,46 @@
 {
- "updated": "2026-10-27T03:42:21Z",
+ "updated": "2026-10-27T03:50:21Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9293,
- "equity_pln": 1007.11,
- "return_pct": -0.32,
+ "equity_pln": 1008.6,
+ "return_pct": -0.18,
  "max_drawdown_pct": 5.04,
  "control_pln": 1054.43,
  "control_trades": 1,
- "hodl_pln": 953.09,
+ "hodl_pln": 952.33,
  "positions": [
   {
    "symbol": "ETHUSDT",
    "side": "short",
    "size": 0.087583,
    "entry": 2333.2998000000002,
-   "mark": 2315.05,
-   "upnl": 1.5983722334000043,
+   "mark": 2312.24,
+   "upnl": 1.8444804634000393,
    "stop": 2341.0,
    "tp": 2262.0,
    "liq": null,
    "leverage": null,
    "opened": 1793008560000,
    "reason": "Bounce-retest short: ETH d1 RSI 33, 30d -14%, below h4 ema20 2354; short a bounce into h1 ema20/ema50 2329-2346 zone at 2334. Stop above 20Z 4h high 2349.7 and h1 ema50 with buffer; TP 2262 below 30d low 2279.8 (~2.2R).",
-   "upnl_pln": 6.28
+   "upnl_pln": 7.25
   },
   {
    "symbol": "SUIUSDT",
    "side": "short",
    "size": 128.101,
    "entry": 0.9257222,
-   "mark": 0.9099,
-   "upnl": 2.026839642200001,
+   "mark": 0.9083,
+   "upnl": 2.231801242200007,
    "stop": 0.927,
    "tp": 0.885,
    "liq": null,
    "leverage": null,
    "opened": 1793026920000,
    "reason": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R).",
-   "upnl_pln": 7.96
+   "upnl_pln": 8.77
   }
  ],
  "closed_trades": [
@@ -241,7 +241,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 239.887737,
+ "cash_usd": 239.887866,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -340,7 +340,7 @@
  "income_pln": {
   "funding": 1.0,
   "carry": -0.84,
-  "interest": 0.38
+  "interest": 0.39
  },
  "cash_rate_pct": 3.87
 }
