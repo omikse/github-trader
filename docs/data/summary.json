@@ -1,31 +1,46 @@
 {
- "updated": "2026-10-27T15:18:59Z",
+ "updated": "2026-10-27T15:26:59Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9542,
- "equity_pln": 1006.05,
- "return_pct": -1.06,
+ "equity_pln": 1006.79,
+ "return_pct": -0.98,
  "max_drawdown_pct": 5.04,
  "control_pln": 1061.12,
  "control_trades": 1,
- "hodl_pln": 965.09,
+ "hodl_pln": 966.46,
  "positions": [
   {
    "symbol": "PAXGUSDT",
    "side": "long",
    "size": 0.07907,
    "entry": 4037.2108,
-   "mark": 4056.75,
-   "upnl": 1.544964544000013,
+   "mark": 4056.22,
+   "upnl": 1.5030574439999973,
    "stop": 4012.0,
    "tp": 4095.0,
    "liq": null,
    "leverage": null,
    "opened": 1793109840000,
    "reason": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R).",
-   "upnl_pln": 6.11
+   "upnl_pln": 5.94
+  },
+  {
+   "symbol": "XRPUSDT",
+   "side": "long",
+   "size": 161.816,
+   "entry": 1.32089615,
+   "mark": 1.32276,
+   "upnl": 0.30160075159998206,
+   "stop": 1.2985,
+   "tp": 1.365,
+   "liq": null,
+   "leverage": null,
+   "opened": 1793114460000,
+   "reason": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts.",
+   "upnl_pln": 1.19
   }
  ],
  "closed_trades": [
@@ -288,7 +303,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 240.077065,
+ "cash_usd": 239.959631,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -338,17 +353,6 @@
    "note": "Breakdown short below 30d low 79,121 in daily downtrend (h4 RSI 37, lower 4h highs 80.24k->79.91k). Stop above 04Z 4h high 79,911 (~2.5 h1 ATR); TP 77,600 (~1.6R, trail beyond)."
   },
   {
-   "symbol": "XRPUSDT",
-   "side": "long",
-   "trigger": 1.3205,
-   "direction": "above",
-   "stop": 1.2985,
-   "tp": 1.365,
-   "qty": 161.816,
-   "expires": 1793192081398,
-   "note": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts."
-  },
-  {
    "symbol": "SUIUSDT",
    "side": "short",
    "trigger": 0.929,
@@ -361,20 +365,20 @@
   }
  ],
  "balance_warning": false,
- "other_value_usd": 12.840061,
+ "other_value_usd": 12.853692,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.942,
+   "mark": 0.943,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 12.8401,
-   "pnl": -0.0545,
+   "value": 12.8537,
+   "pnl": -0.0409,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],

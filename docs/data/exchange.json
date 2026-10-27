@@ -1,5 +1,5 @@
 {
- "cash": 240.07706539458013,
+ "cash": 239.95963074556897,
  "positions": {
   "PAXGUSDT": {
    "side": "long",
@@ -9,8 +9,19 @@
    "tp": 4095.0,
    "opened": 1793109840000,
    "entry_fee": 0.17557224187579998,
-   "mark": 4056.75,
+   "mark": 4056.22,
    "note": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R)."
+  },
+  "XRPUSDT": {
+   "side": "long",
+   "qty": 161.816,
+   "entry": 1.32089615,
+   "stop": 1.2985,
+   "tp": 1.365,
+   "opened": 1793114460000,
+   "entry_fee": 0.11755817227462001,
+   "mark": 1.32276,
+   "note": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts."
   }
  },
  "closed": [
@@ -194,7 +205,7 @@
   }
  ],
  "fills": [],
- "last_ms": 1793114339394,
+ "last_ms": 1793114819379,
  "next_id": 53,
  "orders": [
   {
@@ -222,19 +233,6 @@
    "placed": 1793091201746,
    "expires": 1793220801746,
    "note": "Breakdown short below 30d low 79,121 in daily downtrend (h4 RSI 37, lower 4h highs 80.24k->79.91k). Stop above 04Z 4h high 79,911 (~2.5 h1 ATR); TP 77,600 (~1.6R, trail beyond)."
-  },
-  {
-   "id": "o50",
-   "symbol": "XRPUSDT",
-   "side": "long",
-   "qty": 161.816,
-   "trigger": 1.3205,
-   "direction": "above",
-   "stop": 1.2985,
-   "tp": 1.365,
-   "placed": 1793105681398,
-   "expires": 1793192081398,
-   "note": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts."
   },
   {
    "id": "o52",
@@ -547,6 +545,15 @@
    "trigger": 4036,
    "time": 1793109840000,
    "detail": "filled at 4037.21"
+  },
+  {
+   "id": "o50",
+   "symbol": "XRPUSDT",
+   "side": "long",
+   "status": "filled",
+   "trigger": 1.3205,
+   "time": 1793114460000,
+   "detail": "filled at 1.3209"
   }
  ],
  "funding_rates": {
@@ -590,12 +597,12 @@
    "shares": 13.630638297872341,
    "entry": 0.94,
    "cost": 12.894583829787233,
-   "mark": 0.942,
+   "mark": 0.943,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "note": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
-   "yes_bid": 0.942,
-   "yes_ask": 0.943
+   "yes_bid": 0.943,
+   "yes_ask": 0.944
   }
  },
  "pred_closed": [],
@@ -603,6 +610,6 @@
  "income": {
   "funding": 0.2689147779454985,
   "carry": -0.21395110481479168,
-  "interest": 0.10920593449057714
+  "interest": 0.10932945775402231
  }
 }
