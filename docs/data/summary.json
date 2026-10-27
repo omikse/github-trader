@@ -1,76 +1,76 @@
 {
- "updated": "2026-10-27T21:49:16Z",
+ "updated": "2026-10-27T21:57:16Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9542,
- "equity_pln": 1008.64,
- "return_pct": -0.8,
+ "equity_pln": 1008.36,
+ "return_pct": -0.83,
  "max_drawdown_pct": 5.04,
- "control_pln": 1067.61,
+ "control_pln": 1061.94,
  "control_trades": 1,
- "hodl_pln": 973.13,
+ "hodl_pln": 971.38,
  "positions": [
   {
    "symbol": "PAXGUSDT",
    "side": "long",
    "size": 0.07907,
    "entry": 4037.2108,
-   "mark": 4061.1,
-   "upnl": 1.8889190440000059,
+   "mark": 4061.01,
+   "upnl": 1.8818027440000302,
    "stop": 4030.0,
    "tp": 4095.0,
    "liq": null,
    "leverage": null,
    "opened": 1793109840000,
    "reason": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R).",
-   "upnl_pln": 7.47
+   "upnl_pln": 7.44
   },
   {
    "symbol": "XRPUSDT",
    "side": "long",
    "size": 161.816,
    "entry": 1.32089615,
-   "mark": 1.32462,
-   "upnl": 0.6025785115999777,
+   "mark": 1.323,
+   "upnl": 0.34043659159998496,
    "stop": 1.2985,
    "tp": 1.365,
    "liq": null,
    "leverage": null,
    "opened": 1793114460000,
    "reason": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts.",
-   "upnl_pln": 2.38
+   "upnl_pln": 1.35
   },
   {
    "symbol": "BTCUSDT",
    "side": "long",
    "size": 0.00322293,
    "entry": 81174.345,
-   "mark": 80955.2,
-   "upnl": -0.7062889948500132,
+   "mark": 80814.4,
+   "upnl": -1.1600775388500226,
    "stop": 80450.0,
    "tp": 82850.0,
    "liq": null,
    "leverage": null,
    "opened": 1793136660000,
    "reason": "Failed-breakdown breakout long: BTC held 79.1-79.4k 30d-low zone and reclaimed h4 ema20; trigger 81,150 is above h4 ema50 80.97k and the 24h high 80.72k. Stop 80,450 below the 20Z 4h range low area; TP 82,850 near h4 ema200 82.9k (~2.4R). Counts with XRP long as one risk-on bet (2% combined).",
-   "upnl_pln": -2.79
+   "upnl_pln": -4.59
   },
   {
    "symbol": "DOTUSDT",
    "side": "short",
    "size": 201.37,
    "entry": 1.0056982,
-   "mark": 1.0022,
-   "upnl": 0.7044325340000237,
+   "mark": 0.9989,
+   "upnl": 1.3689535340000176,
    "stop": 1.024,
    "tp": 0.955,
    "liq": null,
    "leverage": null,
    "opened": 1793137140000,
    "reason": "DOT broke its 30d low (0.995, below round 1.000; 7d -13%, h4 RSI 31, below h4 ema20 1.04). Short a retest of broken 1.000-1.006 from below. Stop 1.024 above completed 4h highs 1.0106/1.0126 plus ~1 h1 ATR (lesson: not AT the high). TP 0.955 (~2.8R). Bear-theme risk is small because ETH/SUI stops sit near entry.",
-   "upnl_pln": 2.79
+   "upnl_pln": 5.41
   }
  ],
  "closed_trades": [
@@ -313,7 +313,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 239.643797,
+ "cash_usd": 239.643899,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -346,20 +346,20 @@
  },
  "orders": [],
  "balance_warning": false,
- "other_value_usd": 12.989998,
+ "other_value_usd": 12.976368,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.953,
+   "mark": 0.952,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 12.99,
-   "pnl": 0.0954,
+   "value": 12.9764,
+   "pnl": 0.0818,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],
@@ -383,7 +383,7 @@
  "income_pln": {
   "funding": 0.8,
   "carry": -0.85,
-  "interest": 0.45
+  "interest": 0.46
  },
  "cash_rate_pct": 3.87
 }
