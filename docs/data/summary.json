@@ -1,46 +1,46 @@
 {
- "updated": "2026-10-27T17:24:59Z",
+ "updated": "2026-10-27T17:32:59Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9542,
- "equity_pln": 1006.29,
+ "equity_pln": 1006.35,
  "return_pct": -1.03,
  "max_drawdown_pct": 5.04,
  "control_pln": 1061.12,
  "control_trades": 1,
- "hodl_pln": 969.56,
+ "hodl_pln": 969.69,
  "positions": [
   {
    "symbol": "PAXGUSDT",
    "side": "long",
    "size": 0.07907,
    "entry": 4037.2108,
-   "mark": 4059.98,
-   "upnl": 1.8003606440000144,
+   "mark": 4065.51,
+   "upnl": 2.23761774400003,
    "stop": 4030.0,
    "tp": 4095.0,
    "liq": null,
    "leverage": null,
    "opened": 1793109840000,
    "reason": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R).",
-   "upnl_pln": 7.12
+   "upnl_pln": 8.85
   },
   {
    "symbol": "XRPUSDT",
    "side": "long",
    "size": 161.816,
    "entry": 1.32089615,
-   "mark": 1.32157,
-   "upnl": 0.10903971159997813,
+   "mark": 1.32046,
+   "upnl": -0.07057604840001287,
    "stop": 1.2985,
    "tp": 1.365,
    "liq": null,
    "leverage": null,
    "opened": 1793114460000,
    "reason": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts.",
-   "upnl_pln": 0.43
+   "upnl_pln": -0.28
   }
  ],
  "closed_trades": [
@@ -275,7 +275,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 239.939204,
+ "cash_usd": 239.939324,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -337,20 +337,20 @@
   }
  ],
  "balance_warning": false,
- "other_value_usd": 12.621971,
+ "other_value_usd": 12.649232,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.926,
+   "mark": 0.928,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 12.622,
-   "pnl": -0.2726,
+   "value": 12.6492,
+   "pnl": -0.2454,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],
