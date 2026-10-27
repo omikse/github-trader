@@ -1,6 +1,18 @@
 {
- "cash": 240.25878306354184,
- "positions": {},
+ "cash": 240.0833491839532,
+ "positions": {
+  "PAXGUSDT": {
+   "side": "long",
+   "qty": 0.07907,
+   "entry": 4037.2108,
+   "stop": 4008.0,
+   "tp": 4095.0,
+   "opened": 1793109840000,
+   "entry_fee": 0.17557224187579998,
+   "mark": 4033.75,
+   "note": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R)."
+  }
+ },
  "closed": [
   {
    "id": "t5",
@@ -182,22 +194,9 @@
   }
  ],
  "fills": [],
- "last_ms": 1793109521317,
+ "last_ms": 1793110001310,
  "next_id": 52,
  "orders": [
-  {
-   "id": "o45",
-   "symbol": "PAXGUSDT",
-   "side": "long",
-   "qty": 0.07907,
-   "trigger": 4036,
-   "direction": "above",
-   "stop": 4008.0,
-   "tp": 4095.0,
-   "placed": 1793019576973,
-   "expires": 1793149176973,
-   "note": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R)."
-  },
   {
    "id": "o47",
    "symbol": "DOTUSDT",
@@ -526,26 +525,35 @@
    "trigger": 79050,
    "time": 1793091201746,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o45",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "status": "filled",
+   "trigger": 4036,
+   "time": 1793109840000,
+   "detail": "filled at 4037.21"
   }
  ],
  "funding_rates": {
-  "BTCUSDT": 2.03292e-05,
-  "ETHUSDT": 2.3235533333333e-05,
-  "SOLUSDT": 2.09745375e-05,
-  "XRPUSDT": 3.39627625e-05,
-  "DOGEUSDT": 2.864435e-05,
-  "ADAUSDT": 3.60209375e-05,
-  "AVAXUSDT": 1.1379291666667e-05,
-  "LINKUSDT": 3.59401625e-05,
-  "SUIUSDT": 3.1086479166667e-05,
-  "PEPEUSDT": 2.690785e-05,
-  "WIFUSDT": 2.1742954166667e-05,
-  "BONKUSDT": -7.23182375e-05,
-  "LTCUSDT": 2.8385783333333e-05,
-  "DOTUSDT": 8.49579166667e-07,
-  "NEARUSDT": 6.64259875e-05,
-  "PAXGUSDT": 4.3014983333333e-05,
-  "EURUSDT": 1.1770995833333e-05
+  "BTCUSDT": 8.121145833333e-06,
+  "ETHUSDT": 9.109929166667e-06,
+  "SOLUSDT": -1.76287875e-05,
+  "XRPUSDT": 1.0828054166667e-05,
+  "DOGEUSDT": 2.579941666667e-06,
+  "ADAUSDT": 7.214075e-06,
+  "AVAXUSDT": -4.701145833333e-06,
+  "LINKUSDT": 2.6463391666667e-05,
+  "SUIUSDT": 3.253175e-06,
+  "PEPEUSDT": -3.49856125e-05,
+  "WIFUSDT": 4.09986125e-05,
+  "BONKUSDT": 3.2503883333333e-05,
+  "LTCUSDT": 1.577529166667e-06,
+  "DOTUSDT": -1.8809666666667e-05,
+  "NEARUSDT": 2.761345e-05,
+  "PAXGUSDT": 2.3243816666667e-05,
+  "EURUSDT": -1.9007733870968e-05
  },
  "carry": {},
  "carry_closed": [
@@ -569,11 +577,11 @@
    "shares": 13.630638297872341,
    "entry": 0.94,
    "cost": 12.894583829787233,
-   "mark": 0.938,
+   "mark": 0.939,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "note": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
-   "yes_bid": 0.938,
+   "yes_bid": 0.939,
    "yes_ask": 0.941
   }
  },
@@ -582,6 +590,6 @@
  "income": {
   "funding": 0.27636309711477075,
   "carry": -0.21395110481479168,
-  "interest": 0.10790304240730315
+  "interest": 0.10804140469447189
  }
 }

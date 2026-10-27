@@ -1,17 +1,33 @@
 {
- "updated": "2026-10-27T13:58:41Z",
+ "updated": "2026-10-27T14:06:41Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9542,
- "equity_pln": 1000.59,
- "return_pct": -1.59,
+ "equity_pln": 999.17,
+ "return_pct": -1.73,
  "max_drawdown_pct": 5.04,
  "control_pln": 1061.12,
  "control_trades": 1,
- "hodl_pln": 960.51,
- "positions": [],
+ "hodl_pln": 960.41,
+ "positions": [
+  {
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "size": 0.07907,
+   "entry": 4037.2108,
+   "mark": 4033.75,
+   "upnl": -0.273645455999987,
+   "stop": 4008.0,
+   "tp": 4095.0,
+   "liq": null,
+   "leverage": null,
+   "opened": 1793109840000,
+   "reason": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R).",
+   "upnl_pln": -1.08
+  }
+ ],
  "closed_trades": [
   {
    "id": "t51",
@@ -253,7 +269,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 240.258783,
+ "cash_usd": 240.083349,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -280,17 +296,6 @@
   "EURUSDT": "EURUSD"
  },
  "orders": [
-  {
-   "symbol": "PAXGUSDT",
-   "side": "long",
-   "trigger": 4036,
-   "direction": "above",
-   "stop": 4008.0,
-   "tp": 4095.0,
-   "qty": 0.07907,
-   "expires": 1793149176973,
-   "note": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R)."
-  },
   {
    "symbol": "DOTUSDT",
    "side": "short",
@@ -326,20 +331,20 @@
   }
  ],
  "balance_warning": false,
- "other_value_usd": 12.785539,
+ "other_value_usd": 12.799169,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.938,
+   "mark": 0.939,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 12.7855,
-   "pnl": -0.109,
+   "value": 12.7992,
+   "pnl": -0.0954,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],
