@@ -1,5 +1,5 @@
 {
- "cash": 239.9182121043267,
+ "cash": 239.91824220378172,
  "positions": {
   "PAXGUSDT": {
    "side": "long",
@@ -20,7 +20,7 @@
    "tp": 1.365,
    "opened": 1793114460000,
    "entry_fee": 0.11755817227462001,
-   "mark": 1.31907,
+   "mark": 1.31944,
    "note": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts."
   }
  },
@@ -205,8 +205,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1793134276597,
- "next_id": 53,
+ "last_ms": 1793134396658,
+ "next_id": 54,
  "orders": [
   {
    "id": "o47",
@@ -222,30 +222,17 @@
    "note": "DOT broke its 30d low (0.995, below round 1.000; 7d -13%, h4 RSI 31, below h4 ema20 1.04). Short a retest of broken 1.000-1.006 from below. Stop 1.024 above completed 4h highs 1.0106/1.0126 plus ~1 h1 ATR (lesson: not AT the high). TP 0.955 (~2.8R). Bear-theme risk is small because ETH/SUI stops sit near entry."
   },
   {
-   "id": "o48",
+   "id": "o53",
    "symbol": "BTCUSDT",
-   "side": "short",
-   "qty": 0.00260616,
-   "trigger": 79050,
-   "direction": "below",
-   "stop": 79950.0,
-   "tp": 77600.0,
-   "placed": 1793091201746,
-   "expires": 1793220801746,
-   "note": "Breakdown short below 30d low 79,121 in daily downtrend (h4 RSI 37, lower 4h highs 80.24k->79.91k). Stop above 04Z 4h high 79,911 (~2.5 h1 ATR); TP 77,600 (~1.6R, trail beyond)."
-  },
-  {
-   "id": "o52",
-   "symbol": "SUIUSDT",
-   "side": "short",
-   "qty": 140.875,
-   "trigger": 0.929,
+   "side": "long",
+   "qty": 0.00322293,
+   "trigger": 81150,
    "direction": "above",
-   "stop": 0.946,
-   "tp": 0.89,
-   "placed": 1793112761510,
-   "expires": 1793199161510,
-   "note": "Re-short SUI on retest of falling h4 ema20 (0.925) after prior short closed +0.29 by trailing stop. Weak alt (h4 RSI 41.5), trigger above 12Z 4h high 0.9236, stop 0.946 above ema20 + ~1 ATR buffer, TP 0.89 under 30d low 0.8989 (~2.3R). Small 1% so total bear risk stays ~3.5% with BTC/DOT orders."
+   "stop": 80450.0,
+   "tp": 82850.0,
+   "placed": 1793134396658,
+   "expires": 1793220796658,
+   "note": "Failed-breakdown breakout long: BTC held 79.1-79.4k 30d-low zone and reclaimed h4 ema20; trigger 81,150 is above h4 ema50 80.97k and the 24h high 80.72k. Stop 80,450 below the 20Z 4h range low area; TP 82,850 near h4 ema200 82.9k (~2.4R). Counts with XRP long as one risk-on bet (2% combined)."
   }
  ],
  "order_events": [
@@ -554,6 +541,24 @@
    "trigger": 1.3205,
    "time": 1793114460000,
    "detail": "filled at 1.3209"
+  },
+  {
+   "id": "o48",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 79050,
+   "time": 1793134396658,
+   "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o52",
+   "symbol": "SUIUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 0.929,
+   "time": 1793134396658,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -610,6 +615,6 @@
  "income": {
   "funding": 0.22261812695374228,
   "carry": -0.21395110481479168,
-  "interest": 0.11420746750379505
+  "interest": 0.11423756695883361
  }
 }

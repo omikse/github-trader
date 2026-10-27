@@ -1,16 +1,16 @@
 {
- "updated": "2026-10-27T20:51:16Z",
+ "updated": "2026-10-27T20:53:16Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9542,
- "equity_pln": 1005.63,
- "return_pct": -1.1,
+ "equity_pln": 1006.0,
+ "return_pct": -1.06,
  "max_drawdown_pct": 5.04,
- "control_pln": 1056.0,
+ "control_pln": 1056.42,
  "control_trades": 1,
- "hodl_pln": 969.55,
+ "hodl_pln": 969.68,
  "positions": [
   {
    "symbol": "PAXGUSDT",
@@ -32,15 +32,15 @@
    "side": "long",
    "size": 161.816,
    "entry": 1.32089615,
-   "mark": 1.31907,
-   "upnl": -0.29550028840001324,
+   "mark": 1.31944,
+   "upnl": -0.23562836840001625,
    "stop": 1.2985,
    "tp": 1.365,
    "liq": null,
    "leverage": null,
    "opened": 1793114460000,
    "reason": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts.",
-   "upnl_pln": -1.17
+   "upnl_pln": -0.93
   }
  ],
  "closed_trades": [
@@ -239,22 +239,51 @@
  ],
  "trade_count": 14,
  "win_rate_pct": 42.9,
- "brain_calls_today": 10,
+ "brain_calls_today": 11,
  "last_decision": {
-  "time": "2026-10-27T18:52:59Z",
+  "time": "2026-10-27T20:53:16Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-27T18:47:30Z",
+  "decided_at": "2026-10-27T20:52:28Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 254.22,
-  "equity_pln": 1005.22,
+  "equity_usd": 254.37,
+  "equity_pln": 1005.85,
   "events": [],
-  "market_view": "Pre-Fed bounce extending slowly: BTC 80.58k, above h4 ema20, h1 RSI 60, but the 20Z 4h candle is not closed so my 80.6k cancel line is not triggered yet. PAXG holding its breakout (4055), XRP long just above entry (1.3234). DOT/SUI pressing their retest-short triggers.",
-  "watch_next": "BTC 20Z 4h close: > 80.6k -> cancel BTC and SUI short orders (keep DOT only if < 1.0); SUI/DOT trigger fills; XRP push to 1.34; PAXG trail after 4h close > 4080.",
-  "news": "No new market-moving news; Fed decision Wed 28 Oct with hold consensus (~94% on Polymarket), BTC options expiry Fri.",
-  "actions": []
+  "market_view": "Pre-Fed bounce extended: BTC 20Z 4h closed 80,707 above my 80.6k cancel line, now 80.65k under h4 ema50 80.97k. Bear-retest shorts on BTC/SUI lose their reason; DOT still weak below 1.0. Gold breakout and XRP RS long holding.",
+  "watch_next": "BTC acceptance above 81k (h4 ema50) vs rejection back < 80.3k; PAXG 4h close > 4080 to trail; XRP > 1.34; DOT retest of 1.006; Fed odds.",
+  "news": "No new catalyst; Fed decision Wed 28 Oct (hold consensus), ~11B BTC options expiry Fri 30 Oct.",
+  "actions": [
+   {
+    "type": "cancel_order",
+    "symbol": "BTCUSDT",
+    "reason": "Plan rule hit: BTC 4h close 80,707 > 80.6k, bounce extending; breakdown short below 79.05k no longer the base case before Fed.",
+    "result": "done",
+    "detail": "cancelled 1 order(s)"
+   },
+   {
+    "type": "cancel_order",
+    "symbol": "SUIUSDT",
+    "reason": "Plan rule hit: BTC 4h close > 80.6k; SUI ema20 retest-short would fight a broad bounce.",
+    "result": "done",
+    "detail": "cancelled 1 order(s)"
+   },
+   {
+    "type": "entry_order",
+    "symbol": "BTCUSDT",
+    "side": "long",
+    "trigger": 81150,
+    "stop": 80450,
+    "take_profit": 82850,
+    "risk_pct": 0.01,
+    "expires_hours": 24,
+    "reason": "Failed-breakdown breakout long: BTC held 79.1-79.4k 30d-low zone and reclaimed h4 ema20; trigger 81,150 is above h4 ema50 80.97k and the 24h high 80.72k. Stop 80,450 below the 20Z 4h range low area; TP 82,850 near h4 ema200 82.9k (~2.4R). Counts with XRP long as one risk-on bet (2% combined).",
+    "invalidation": "BTC back below 80.4k after trigger, or Fed hawkish surprise.",
+    "result": "done",
+    "detail": "long 0.00322293 when price goes above 81150 (risk 1.0%, stop 80450.0, target 82850.0, expires in 24h) ok"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 239.918212,
+ "cash_usd": 239.918242,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -299,25 +328,14 @@
   },
   {
    "symbol": "BTCUSDT",
-   "side": "short",
-   "trigger": 79050,
-   "direction": "below",
-   "stop": 79950.0,
-   "tp": 77600.0,
-   "qty": 0.00260616,
-   "expires": 1793220801746,
-   "note": "Breakdown short below 30d low 79,121 in daily downtrend (h4 RSI 37, lower 4h highs 80.24k->79.91k). Stop above 04Z 4h high 79,911 (~2.5 h1 ATR); TP 77,600 (~1.6R, trail beyond)."
-  },
-  {
-   "symbol": "SUIUSDT",
-   "side": "short",
-   "trigger": 0.929,
+   "side": "long",
+   "trigger": 81150,
    "direction": "above",
-   "stop": 0.946,
-   "tp": 0.89,
-   "qty": 140.875,
-   "expires": 1793199161510,
-   "note": "Re-short SUI on retest of falling h4 ema20 (0.925) after prior short closed +0.29 by trailing stop. Weak alt (h4 RSI 41.5), trigger above 12Z 4h high 0.9236, stop 0.946 above ema20 + ~1 ATR buffer, TP 0.89 under 30d low 0.8989 (~2.3R). Small 1% so total bear risk stays ~3.5% with BTC/DOT orders."
+   "stop": 80450.0,
+   "tp": 82850.0,
+   "qty": 0.00322293,
+   "expires": 1793220796658,
+   "note": "Failed-breakdown breakout long: BTC held 79.1-79.4k 30d-low zone and reclaimed h4 ema20; trigger 81,150 is above h4 ema50 80.97k and the 24h high 80.72k. Stop 80,450 below the 20Z 4h range low area; TP 82,850 near h4 ema200 82.9k (~2.4R). Counts with XRP long as one risk-on bet (2% combined)."
   }
  ],
  "balance_warning": false,
