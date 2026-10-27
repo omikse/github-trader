@@ -1,15 +1,15 @@
 {
- "cash": 240.08399354492207,
+ "cash": 240.0840902273368,
  "positions": {
   "PAXGUSDT": {
    "side": "long",
    "qty": 0.07907,
    "entry": 4037.2108,
-   "stop": 4008.0,
+   "stop": 4012.0,
    "tp": 4095.0,
    "opened": 1793109840000,
    "entry_fee": 0.17557224187579998,
-   "mark": 4048.79,
+   "mark": 4049.33,
    "note": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R)."
   }
  },
@@ -194,8 +194,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1793112401337,
- "next_id": 52,
+ "last_ms": 1793112761510,
+ "next_id": 53,
  "orders": [
   {
    "id": "o47",
@@ -235,6 +235,19 @@
    "placed": 1793105681398,
    "expires": 1793192081398,
    "note": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts."
+  },
+  {
+   "id": "o52",
+   "symbol": "SUIUSDT",
+   "side": "short",
+   "qty": 140.875,
+   "trigger": 0.929,
+   "direction": "above",
+   "stop": 0.946,
+   "tp": 0.89,
+   "placed": 1793112761510,
+   "expires": 1793199161510,
+   "note": "Re-short SUI on retest of falling h4 ema20 (0.925) after prior short closed +0.29 by trailing stop. Weak alt (h4 RSI 41.5), trigger above 12Z 4h high 0.9236, stop 0.946 above ema20 + ~1 ATR buffer, TP 0.89 under 30d low 0.8989 (~2.3R). Small 1% so total bear risk stays ~3.5% with BTC/DOT orders."
   }
  ],
  "order_events": [
@@ -590,6 +603,6 @@
  "income": {
   "funding": 0.27636309711477075,
   "carry": -0.21395110481479168,
-  "interest": 0.10868576566325173
+  "interest": 0.10878244807798475
  }
 }
