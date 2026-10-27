@@ -14,7 +14,7 @@
   "2026-10-24": 12,
   "2026-10-25": 12,
   "2026-10-26": 12,
-  "2026-10-27": 11
+  "2026-10-27": 12
  },
  "closed_trades": [
   {
@@ -196,52 +196,11 @@
    "reason": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R)."
   }
  ],
- "last_closed_check_ms": 1793141116576,
+ "last_closed_check_ms": 1793141536857,
  "day": "2026-10-27",
  "day_start_equity": 254.90836716282234,
  "paused_day": null,
- "pending_events": [
-  {
-   "type": "order_cancelled",
-   "id": "o48",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "status": "cancelled",
-   "trigger": 79050,
-   "time": 1793134396658,
-   "detail": "cancelled by the brain"
-  },
-  {
-   "type": "order_cancelled",
-   "id": "o52",
-   "symbol": "SUIUSDT",
-   "side": "short",
-   "status": "cancelled",
-   "trigger": 0.929,
-   "time": 1793134396658,
-   "detail": "cancelled by the brain"
-  },
-  {
-   "type": "order_filled",
-   "id": "o53",
-   "symbol": "BTCUSDT",
-   "side": "long",
-   "status": "filled",
-   "trigger": 81150,
-   "time": 1793136660000,
-   "detail": "filled at 81174.3"
-  },
-  {
-   "type": "order_filled",
-   "id": "o47",
-   "symbol": "DOTUSDT",
-   "side": "short",
-   "status": "filled",
-   "trigger": 1.006,
-   "time": 1793137140000,
-   "detail": "filled at 1.0057"
-  }
- ],
+ "pending_events": [],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 267.9137812475627,
@@ -255,7 +214,7 @@
   "trades": 1,
   "wins": 1
  },
- "last_btc": 80787.1,
+ "last_btc": 80734.0,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -296,6 +255,6 @@
   "o53:filled",
   "o47:filled"
  ],
- "last_decision_id": "2026-10-27T20:52:28Z",
+ "last_decision_id": "2026-10-27T22:51:58Z",
  "cash_rate_day": "2026-10-27"
 }
