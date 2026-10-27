@@ -1,14 +1,14 @@
-# Notebook (updated 2026-10-27T16:51:32Z)
+# Notebook (updated 2026-10-27T18:47:30Z)
 
 ## Big picture
-- Regime: daily downtrend (BTC 30d -4.7%, d1 RSI 44), pre-Fed bounce. BTC 80.45k, above h4 ema20 80.31k. 16Z 4h close 80,435 (just under my 80.45k "bounce extending" line); 4h high 80,566. 30d low 79,121. Funding cool (+4% APR).
+- Regime: daily downtrend (BTC 30d -4.6%, d1 RSI 44), pre-Fed bounce. 18:45Z BTC 80.58k (24h high 80.72k), above h4 ema20 80.32k, h1 RSI 60; 20Z 4h candle still open. 30d low 79,121. Funding slightly negative (-5% APR) = shorts not crowded.
 - Events: Fed decision Wed 28 Oct (hold consensus, hike risk talk moved to Dec); ~$11B BTC options expiry Fri 30 Oct.
-- Alts bounced with BTC: ETH 2344 (at 2345-2350 resistance, h1 RSI 62 still rising), SUI 0.923 (h4 ema20 0.926), NEAR/XRP strongest (+2%). DOT weakest: 0.9885, h4 RSI 33, under h4 ema20 1.022, 30d low 0.976.
-- Gold PAXG breakout confirmed: 4h close 4062.5, mark 4058. EUR 1.114 at 30d low area, h4 RSI 24 (oversold, no chase).
+- Alts bounced with BTC: ETH 2344 (stalling at 2345-2355), SUI 0.924 (h4 ema20 0.926), NEAR/XRP/PEPE strongest. DOT bounced to 1.002 (h4 RSI 38, under h4 ema20 1.024), 30d low 0.976.
+- Gold PAXG holding breakout: 4054.7 (4h high 4065.5). EUR 1.1137 near 30d low 1.1112, h4 RSI 23 (oversold, no chase).
 - Mind-changers: BTC 4h close > 80.6k = bounce extending -> cancel BTC and SUI short orders (keep DOT only if DOT stays < 1.0). 4h close < 79.1k = trend leg to 78k.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 254.29 USD (1006 PLN, peak 265.7). Closed 6W/8L, net -4.33.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 254.47 USD (1006 PLN, peak 265.7). Closed 6W/8L, net -4.33.
 - Resting orders at edges/retests/breakouts, 1-2% risk, aim >=2R, trail behind 4h structure.
 - Trade range breaks and breakdown RETESTS, not the middle. No fresh breakdown shorts at h1 RSI < 35.
 - Book now balanced: longs PAXG + XRP (live); bear-theme shorts only as resting orders (BTC 1%, DOT 1.5%, SUI 1% = 3.5% cap).
@@ -44,6 +44,7 @@
 - Passed: Israel election/sports/other (no edge vs crowd).
 
 ## Session log
+- 2026-10-27T18:47:30Z | eq 254.47 USD (1006 PLN) | No changes. BTC 80.58k testing 80.6k cancel line but 20Z 4h not closed; decide orders on that close. PAXG/XRP small green.
 - 2026-10-27T16:51:32Z | eq 254.29 USD (1006 PLN) | XRP breakout long filled 1.3209. PAXG 4h close > 4060 -> stop 4012->4030. Orders kept; cancel line moved to BTC 4h close > 80.6k.
 - 2026-10-27T14:52:10Z | eq 253.75 USD (1003 PLN) | SUI short trailed out +0.29; PAXG breakout long filled 4037. Raised PAXG stop 4012; new SUI retest-short order 0.929 (1%).
 - 2026-10-27T12:58:00Z | eq 253.58 USD (1003 PLN) | Pre-Fed bounce; ETH short stopped 2331 (-0.13). Added XRP breakout long order 1.3205.
@@ -53,4 +54,3 @@
 - 2026-10-27T04:52:00Z | eq 257.54 USD (1012 PLN) | ETH stop 2341->2337.
 - 2026-10-27T02:51:22Z | eq 256.51 USD (1008 PLN) | DOT new 30d low; added DOT retest-short order 1.006.
 - 2026-10-27T00:47:00Z | eq 254.50 USD (1000 PLN) | Asia-open chop. No changes.
-- 2026-10-26T22:52:30Z | eq 256.66 USD (1008 PLN) | Flat chop. No changes.
