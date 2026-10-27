@@ -1,18 +1,6 @@
 {
- "cash": 239.90488042766643,
- "positions": {
-  "SUIUSDT": {
-   "side": "short",
-   "qty": 128.101,
-   "entry": 0.9257222,
-   "stop": 0.922,
-   "tp": 0.885,
-   "opened": 1793026920000,
-   "entry_fee": 0.06522226674821001,
-   "mark": 0.9236,
-   "note": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R)."
-  }
- },
+ "cash": 240.25779240570967,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -178,11 +166,24 @@
    "why": "stop",
    "opened": 1793008560000,
    "reason": "Bounce-retest short: ETH d1 RSI 33, 30d -14%, below h4 ema20 2354; short a bounce into h1 ema20/ema50 2329-2346 zone at 2334. Stop above 20Z 4h high 2349.7 and h1 ema50 with buffer; TP 2262 below 30d low 2279.8 (~2.2R)."
+  },
+  {
+   "id": "t51",
+   "symbol": "SUIUSDT",
+   "side": "short",
+   "qty": 128.101,
+   "entry": 0.9257222,
+   "exit": 0.922461,
+   "pnl": 0.2875,
+   "time": 1793105640000,
+   "why": "stop",
+   "opened": 1793026920000,
+   "reason": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R)."
   }
  ],
  "fills": [],
- "last_ms": 1793105681398,
- "next_id": 51,
+ "last_ms": 1793106161304,
+ "next_id": 52,
  "orders": [
   {
    "id": "o45",
@@ -568,12 +569,12 @@
    "shares": 13.630638297872341,
    "entry": 0.94,
    "cost": 12.894583829787233,
-   "mark": 0.938,
+   "mark": 0.941,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "note": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
-   "yes_bid": 0.938,
-   "yes_ask": 0.939
+   "yes_bid": 0.941,
+   "yes_ask": 0.942
   }
  },
  "pred_closed": [],
@@ -581,6 +582,6 @@
  "income": {
   "funding": 0.27636309711477075,
   "carry": -0.21395110481479168,
-  "interest": 0.10677089062336768
+  "interest": 0.1069123845751609
  }
 }
