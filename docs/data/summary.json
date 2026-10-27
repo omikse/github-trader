@@ -1,46 +1,46 @@
 {
- "updated": "2026-10-27T11:00:41Z",
+ "updated": "2026-10-27T11:08:41Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9542,
- "equity_pln": 1012.11,
- "return_pct": -0.46,
+ "equity_pln": 1009.24,
+ "return_pct": -0.74,
  "max_drawdown_pct": 5.04,
  "control_pln": 1061.12,
  "control_trades": 1,
- "hodl_pln": 959.95,
+ "hodl_pln": 960.72,
  "positions": [
   {
    "symbol": "ETHUSDT",
    "side": "short",
    "size": 0.087583,
    "entry": 2333.2998000000002,
-   "mark": 2313.97,
-   "upnl": 1.6929618734000378,
+   "mark": 2316.28,
+   "upnl": 1.4906451434000028,
    "stop": 2331.0,
    "tp": 2262.0,
    "liq": null,
    "leverage": null,
    "opened": 1793008560000,
    "reason": "Bounce-retest short: ETH d1 RSI 33, 30d -14%, below h4 ema20 2354; short a bounce into h1 ema20/ema50 2329-2346 zone at 2334. Stop above 20Z 4h high 2349.7 and h1 ema50 with buffer; TP 2262 below 30d low 2279.8 (~2.2R).",
-   "upnl_pln": 6.69
+   "upnl_pln": 5.89
   },
   {
    "symbol": "SUIUSDT",
    "side": "short",
    "size": 128.101,
    "entry": 0.9257222,
-   "mark": 0.9123,
-   "upnl": 1.7193972422000066,
+   "mark": 0.9156,
+   "upnl": 1.2966639422000104,
    "stop": 0.922,
    "tp": 0.885,
    "liq": null,
    "leverage": null,
    "opened": 1793026920000,
    "reason": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R).",
-   "upnl_pln": 6.8
+   "upnl_pln": 5.13
   }
  ],
  "closed_trades": [
@@ -237,7 +237,7 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 239.912583,
+ "cash_usd": 239.912711,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -336,7 +336,7 @@
  "income_pln": {
   "funding": 1.08,
   "carry": -0.85,
-  "interest": 0.41
+  "interest": 0.42
  },
  "cash_rate_pct": 3.87
 }
