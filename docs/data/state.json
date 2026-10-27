@@ -168,13 +168,41 @@
    "why": "stop",
    "opened": 1793007000000,
    "reason": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel."
+  },
+  {
+   "id": "t49",
+   "symbol": "ETHUSDT",
+   "side": "short",
+   "qty": 0.087583,
+   "entry": 2333.2998000000002,
+   "exit": 2332.1655,
+   "pnl": -0.1254,
+   "time": 1793104740000,
+   "why": "stop",
+   "opened": 1793008560000,
+   "reason": "Bounce-retest short: ETH d1 RSI 33, 30d -14%, below h4 ema20 2354; short a bounce into h1 ema20/ema50 2329-2346 zone at 2334. Stop above 20Z 4h high 2349.7 and h1 ema50 with buffer; TP 2262 below 30d low 2279.8 (~2.2R)."
   }
  ],
- "last_closed_check_ms": 1793104601285,
+ "last_closed_check_ms": 1793105081329,
  "day": "2026-10-27",
  "day_start_equity": 254.90836716282234,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "position_closed",
+   "id": "t49",
+   "symbol": "ETHUSDT",
+   "side": "short",
+   "qty": 0.087583,
+   "entry": 2333.2998000000002,
+   "exit": 2332.1655,
+   "pnl": -0.1254,
+   "time": 1793104740000,
+   "why": "stop",
+   "opened": 1793008560000,
+   "reason": "Bounce-retest short: ETH d1 RSI 33, 30d -14%, below h4 ema20 2354; short a bounce into h1 ema20/ema50 2329-2346 zone at 2334. Stop above 20Z 4h high 2349.7 and h1 ema50 with buffer; TP 2262 below 30d low 2279.8 (~2.2R)."
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 268.3517564571816,
@@ -183,7 +211,7 @@
   "trades": 1,
   "wins": 1
  },
- "last_btc": 80085.9,
+ "last_btc": 80199.0,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
