@@ -196,11 +196,32 @@
    "reason": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R)."
   }
  ],
- "last_closed_check_ms": 1793134396658,
+ "last_closed_check_ms": 1793134876584,
  "day": "2026-10-27",
  "day_start_equity": 254.90836716282234,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_cancelled",
+   "id": "o48",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 79050,
+   "time": 1793134396658,
+   "detail": "cancelled by the brain"
+  },
+  {
+   "type": "order_cancelled",
+   "id": "o52",
+   "symbol": "SUIUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 0.929,
+   "time": 1793134396658,
+   "detail": "cancelled by the brain"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 267.9137812475627,
@@ -210,11 +231,11 @@
    "qty": 0.00986185340357147,
    "stop": 80019.84296208432
   },
-  "last_t": 1793127600000,
+  "last_t": 1793131200000,
   "trades": 1,
   "wins": 1
  },
- "last_btc": 80671.2,
+ "last_btc": 80685.0,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -249,7 +270,9 @@
   "o44:filled",
   "o42:cancelled",
   "o45:filled",
-  "o50:filled"
+  "o50:filled",
+  "o48:cancelled",
+  "o52:cancelled"
  ],
  "last_decision_id": "2026-10-27T20:52:28Z",
  "cash_rate_day": "2026-10-27"
