@@ -1,13 +1,11 @@
 {
-  "id": "2026-10-27T02:51:22Z",
-  "decided_at": "2026-10-27T02:51:22Z",
+  "id": "2026-10-27T04:52:00Z",
+  "decided_at": "2026-10-27T04:52:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 79.8k chopping under h4 ema20 80.42k, daily downtrend intact. Alts drifting back toward 30d lows; DOT just printed a new 30d low 0.995 (below 1.000). ETH/SUI shorts in profit with stops near entry.",
-  "news": "No fresh market-moving crypto news found; FOMC 28 Oct expected hold (Polymarket 0.935).",
-  "watch_next": "DOT retest order 1.006; BTC 4h close > 80.45k (close ETH/SUI, cancel BTC/DOT orders) or < 79.1k (breakdown order); trail ETH/SUI after 04Z 4h candle completes; ETH time limit 27 Oct 20Z.",
+  "market_view": "BTC drifting down to 79.5k under h4 ema20 80.32k (h4 RSI 36), approaching 30d low 79.12k. Alts at/near 30d lows; DOT oversold at new lows. ETH/SUI shorts in profit.",
+  "news": "No fresh market-moving news found; Fed decision 28 Oct still priced ~94% hold.",
+  "watch_next": "BTC break < 79.1k (order 79,050) or 4h close > 80.45k (close ETH/SUI, cancel BTC/DOT); DOT retest 1.006; trail ETH/SUI after 08Z candle; ETH time limit 27 Oct 20Z.",
   "actions": [
-    {"type": "entry_order", "symbol": "DOTUSDT", "side": "short", "trigger": 1.006, "stop": 1.024, "take_profit": 0.955, "risk_pct": 0.015, "expires_hours": 24,
-     "reason": "DOT broke its 30d low (0.995, below round 1.000; 7d -13%, h4 RSI 31, below h4 ema20 1.04). Short a retest of broken 1.000-1.006 from below. Stop 1.024 above completed 4h highs 1.0106/1.0126 plus ~1 h1 ATR (lesson: not AT the high). TP 0.955 (~2.8R). Bear-theme risk is small because ETH/SUI stops sit near entry.",
-     "invalidation": "4h close back above 1.025 or BTC 4h close > 80.45k."}
+    {"type": "move_stop", "symbol": "ETHUSDT", "stop": 2337, "take_profit": 2262, "reason": "Trail: last completed 4h high 2329.5 (00Z) + ~8 buffer; cuts worst case to near breakeven while keeping room for chop."}
   ]
 }
