@@ -170,11 +170,22 @@
    "reason": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel."
   }
  ],
- "last_closed_check_ms": 1793091201746,
+ "last_closed_check_ms": 1793091681638,
  "day": "2026-10-27",
  "day_start_equity": 254.90836716282234,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_cancelled",
+   "id": "o42",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 79050,
+   "time": 1793091201746,
+   "detail": "cancelled by the brain"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 268.3517564571816,
@@ -183,7 +194,7 @@
   "trades": 1,
   "wins": 1
  },
- "last_btc": 79651.5,
+ "last_btc": 79737.8,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -215,7 +226,8 @@
   "o38:filled",
   "o40:filled",
   "o39:filled",
-  "o44:filled"
+  "o44:filled",
+  "o42:cancelled"
  ],
  "last_decision_id": "2026-10-27T08:53:00Z",
  "cash_rate_day": "2026-10-27"
