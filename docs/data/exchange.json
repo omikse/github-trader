@@ -1,5 +1,5 @@
 {
- "cash": 239.90484623634202,
+ "cash": 239.90488042766643,
  "positions": {
   "SUIUSDT": {
    "side": "short",
@@ -9,7 +9,7 @@
    "tp": 0.885,
    "opened": 1793026920000,
    "entry_fee": 0.06522226674821001,
-   "mark": 0.9203,
+   "mark": 0.9236,
    "note": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R)."
   }
  },
@@ -181,8 +181,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1793105561326,
- "next_id": 50,
+ "last_ms": 1793105681398,
+ "next_id": 51,
  "orders": [
   {
    "id": "o45",
@@ -222,6 +222,19 @@
    "placed": 1793091201746,
    "expires": 1793220801746,
    "note": "Breakdown short below 30d low 79,121 in daily downtrend (h4 RSI 37, lower 4h highs 80.24k->79.91k). Stop above 04Z 4h high 79,911 (~2.5 h1 ATR); TP 77,600 (~1.6R, trail beyond)."
+  },
+  {
+   "id": "o50",
+   "symbol": "XRPUSDT",
+   "side": "long",
+   "qty": 161.816,
+   "trigger": 1.3205,
+   "direction": "above",
+   "stop": 1.2985,
+   "tp": 1.365,
+   "placed": 1793105681398,
+   "expires": 1793192081398,
+   "note": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts."
   }
  ],
  "order_events": [
@@ -568,6 +581,6 @@
  "income": {
   "funding": 0.27636309711477075,
   "carry": -0.21395110481479168,
-  "interest": 0.10673669929895493
+  "interest": 0.10677089062336768
  }
 }
