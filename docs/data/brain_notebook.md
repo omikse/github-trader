@@ -1,31 +1,31 @@
-# Notebook (updated 2026-10-27T12:58:00Z)
+# Notebook (updated 2026-10-27T14:52:10Z)
 
 ## Big picture
-- Regime: daily downtrend (BTC 30d -5%, d1 RSI 42.5), but a pre-Fed bounce now: BTC 80.2k (12:45Z) testing h4 ema20 80.28k, h1 RSI 56. Completed 4h highs: 80.24k (00Z), 79.91k (04Z), 80.0k (08Z). 12Z 4h candle forming (h 80.24k). 30d low 79,121. Funding +17% APR.
-- Events: Fed decision Wed 28 Oct (hold consensus); ~$11B BTC options expiry Fri 30 Oct (pin/vol risk).
-- Alts bouncing ~1% off 30d lows, still under h4 ema20: DOT 0.992 (30d low 0.978, h4 RSI 34), SUI 0.919 (ema20 0.925), ETH 2330 (ema20 2335), AVAX 8.84, LINK 11.39, WIF 0.178. XRP strongest (1.315, above h4 ema20 1.299, breaking 1-day range 1.311). NEAR +2.6% 1h, funding 68% APR (crowded). BONK funding -60%, PEPE -20%: never short those.
-- Gold PAXG 4026.6 rising toward breakout 4036 (h4 RSI 52). EUR 1.1152 weak near 30d low 1.1112.
-- Mind-changers: BTC 4h close > 80.45k = bounce extending -> close SUI short, cancel BTC/DOT short orders. 4h close < 79.1k = trend leg to 78k; trail behind completed 4h highs.
+- Regime: daily downtrend (BTC 30d -5%, d1 RSI 42), pre-Fed compression. BTC 80.16k (14:45Z) just under h4 ema20 80.27k. Completed 4h highs: 80.0k (04Z), 79.91k (08Z); 12Z 4h candle h 80.34k / l 79.70k. 30d low 79,121. Funding cooled to +7% APR.
+- Events: Fed decision Wed 28 Oct (hold ~94% priced); ~$11B BTC options expiry Fri 30 Oct (pin/vol risk).
+- Alts bounced ~1% off 30d lows, still under h4 ema20: DOT 0.986 (30d low 0.976, h4 ema20 1.026, h4 RSI 31), SUI 0.918 (ema20 0.925), ETH 2327 (ema20 2334), AVAX 8.83, LINK 11.38. XRP strongest (1.3147, 4h high 1.3195, above ema20 1.299). WIF weak (h4 RSI 35, 0.177 near 30d low 0.175, funding +36%). PEPE funding -31%: never short.
+- Gold PAXG broke out: 4048 (h1 RSI 69, 4h high 4049.75), holding long. EUR 1.1146 weak near 30d low 1.1112 (h4 RSI 26 - oversold, no chase).
+- Mind-changers: BTC 4h close > 80.45k = bounce extending -> cancel BTC/DOT/SUI short orders. 4h close < 79.1k = trend leg to 78k.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 253.58 USD (1003 PLN, peak 265.7). Closed 5W/8L net -4.62.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 253.75 USD (1003 PLN, peak 265.7). Closed 6W/8L.
 - Resting orders at edges/retests/breakouts, 1-2% risk, aim >=2R, trail behind 4h structure.
 - Trade range breaks and breakdown RETESTS, not the middle. No fresh breakdown shorts at h1 RSI < 35.
-- Bear-theme risk cap ~3.5%: SUI (stop locks ~+0.5), BTC order 1%, DOT order 1.5%.
-- Long side: XRP relative-strength breakout order (1.5%) and PAXG breakout (1%) balance the book.
-- Side income: Fed-hold Yes. Carry only if funding > 60% APR sustained on majors/large alts (NEAR 68% just spiked - not sustained yet).
+- Bear-theme risk cap ~3.5%: BTC order 1%, DOT order 1.5%, SUI order 1%.
+- Long side: PAXG long (1%) open, XRP breakout order (1.5%) balance the book.
+- Side income: Fed-hold Yes. Carry only if funding > 60% APR sustained on majors/large alts.
 
 ## Active plans
-- SUI SHORT @0.9257 (26 Oct 15:02Z), mark 0.9188. Stop 0.922 (locks ~+0.5), TP 0.885. Completed 4h highs 0.9136 (04Z), 0.916 (08Z). After new 30d low (< 0.8989): stop above last completed 4h high + ~0.006. Close if BTC 4h close > 80.45k; close if not below 0.90 by 28 Oct 12Z.
-- XRP LONG ORDER (12:58Z): trigger 1.3205 (above 1-day range highs 1.310-1.315), stop 1.2985 (below h4 ema20), TP 1.365 (d1 ema50 ~1.36), 1.5% risk, expires 28 Oct ~13Z. If filled: after 4h close > 1.34 move stop to ~1.315; invalid on 4h close < 1.30 or BTC 4h close < 79.1k.
-- BTC SHORT ORDER: trigger 79,050 (below 30d low), stop 79,950, TP 77,600, 1% risk, expires 28 Oct ~20:53Z. Cancel if BTC 4h close > 80.45k. Once filled trail above completed 4h highs.
+- PAXG LONG @4037.2 (27 Oct 14:04Z), mark 4048. Stop 4012 (raised from 4008, under 12Z 4h low 4015), TP 4095. After 4h close > 4060: stop to ~4030. Exit if 4h close back < 4025 (failed breakout). Time limit: if not > 4060 by 29 Oct 12Z, tighten to ~entry.
+- SUI SHORT ORDER (14:52Z): trigger 0.929 (retest h4 ema20), stop 0.946, TP 0.89, 1% risk, expires 28 Oct ~15Z. Cancel if BTC 4h close > 80.45k. If filled and new 30d low (< 0.8989): stop above last completed 4h high + ~0.006.
+- XRP LONG ORDER: trigger 1.3205, stop 1.2985, TP 1.365, 1.5% risk, expires 28 Oct ~13Z. If filled: after 4h close > 1.34 stop to ~1.315; invalid on 4h close < 1.30 or BTC 4h close < 79.1k.
+- BTC SHORT ORDER: trigger 79,050 (below 30d low), stop 79,950, TP 77,600, 1% risk, expires 28 Oct ~21Z. Cancel if BTC 4h close > 80.45k. Once filled trail above completed 4h highs.
 - DOT SHORT ORDER: retest of broken 1.000, trigger 1.006, stop 1.024, TP 0.955, 1.5% risk, expires 28 Oct ~03Z. Cancel if DOT 4h close > 1.025 or BTC 4h close > 80.45k. Do NOT chase a dump without retest.
-- PAXG LONG ORDER: trigger 4036 (above 4h highs 4028-4034), stop 4008, TP 4095, 1% risk, expires 28 Oct ~01Z. Gold now 4026.6, approaching. If filled: stop to ~entry-5 after 4h close > 4060.
 
 ## Watchlist
-- ETH re-short: only on rejection of 2345-2350 (prior 4h high 2349.7) with h1 RSI rolling over, and only if BTC stays < 80.45k. Otherwise stand aside.
+- ETH re-short: only on rejection of 2345-2350 with h1 RSI rolling over, BTC < 80.45k.
 - BTC failed-breakdown long: 4h close > 80.9k -> long > 81.1k, stop < 80.5k.
-- WIF (7d -13%): short bounce to ~0.182 (h4 ema20) if h1 RSI > 55.
+- WIF (crowded +36% funding, near 30d low 0.175): short bounce to ~0.182 (h4 ema20) if h1 RSI > 55; or break < 0.174 with retest.
 - EUR: short only on break < 1.111 with retest.
 
 ## Lessons
@@ -40,10 +40,11 @@
 - Git: clone may be on detached HEAD equal to origin/main; commit there and push HEAD:main (local main branch is stale/diverged).
 
 ## Predictions
-- Fed holds 28 Oct (market 2589812, Yes): paid 0.94, 13.63 shares (12.89 USD), bid 0.936 (27 Oct 12:45Z; still consensus hold, hike 25bp at 0.06-0.07). My P ~95%. Hold to resolution (~29 Oct) unless hike odds > 15% (sell). Sell if >= 0.98 early.
+- Fed holds 28 Oct (market 2589812, Yes): paid 0.94, 13.63 shares (12.89 USD), bid 0.942 (27 Oct 14:45Z; consensus hold, hike 25bp 0.05-0.06). My P ~95%. Hold to resolution (~29 Oct) unless hike odds > 15% (sell). Sell if >= 0.98 early.
 - Passed: Israel election/sports/other (no edge vs crowd).
 
 ## Session log
+- 2026-10-27T14:52:10Z | eq 253.75 USD (1003 PLN) | SUI short trailed out +0.29; PAXG breakout long filled 4037. Raised PAXG stop 4012; new SUI retest-short order 0.929 (1%).
 - 2026-10-27T12:58:00Z | eq 253.58 USD (1003 PLN) | Pre-Fed bounce; ETH short stopped 2331 (-0.13). Added XRP relative-strength breakout long order 1.3205. Kept SUI, BTC/DOT/PAXG orders.
 - 2026-10-27T10:52:00Z | eq 256.09 USD (1013 PLN) | Mild bounce inside compression. No changes.
 - 2026-10-27T08:53:00Z | eq 257.29 USD (1011 PLN) | Trailed ETH stop 2337->2331, SUI 0.927->0.922. Re-placed BTC breakdown order (stop 79,950).
@@ -53,4 +54,3 @@
 - 2026-10-27T00:47:00Z | eq 254.50 USD (1000 PLN) | Asia-open chop. No changes.
 - 2026-10-26T22:52:30Z | eq 256.66 USD (1008 PLN) | Flat chop. No changes.
 - 2026-10-26T20:52:17Z | eq 257.36 USD (1011 PLN) | Trailed ETH stop 2349->2341, SUI 0.935->0.927.
-- 2026-10-26T18:51:58Z | eq 255.42 USD (1004 PLN) | Trailed ETH stop 2352->2349, SUI 0.937->0.935.

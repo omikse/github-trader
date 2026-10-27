@@ -1,22 +1,14 @@
 {
-  "id": "2026-10-27T12:58:00Z",
-  "decided_at": "2026-10-27T12:58:00Z",
+  "id": "2026-10-27T14:52:10Z",
+  "decided_at": "2026-10-27T14:52:10Z",
   "model": "claude-opus-5-5",
-  "market_view": "Pre-Fed bounce inside compression: BTC 80.2k testing h4 ema20 80.28k, 12Z 4h candle forming with high 80.24k; no 4h close > 80.45k yet so bear plans stand. ETH short stopped at 2331 (~flat). XRP is the relative leader, breaking its 1-day range high 1.311.",
-  "news": "No new catalyst; Fed decision Wed 28 Oct (hold consensus) and ~$11B BTC options expiry Fri 30 Oct.",
-  "watch_next": "BTC 12Z 4h close vs 80.45k (bounce extending -> close SUI, cancel BTC/DOT orders); XRP order fill; PAXG breakout 4036; SUI stop 0.922.",
+  "market_view": "Pre-Fed compression: BTC 80.16k just under h4 ema20 80.27k, 12Z 4h high 80.34k (no close > 80.45k). Alts bounced ~1% but stay under h4 ema20. Gold broke out (PAXG 4048, filled long 4037). XRP strongest, pressing 1.32.",
+  "news": "Fed decision Wed 28 Oct (hold ~94% priced), ~$11B BTC options expiry Fri; coverage frames $80k as the key level into the Fed.",
+  "watch_next": "BTC 16Z 4h close vs 80.45k / 79.1k; SUI reaction at h4 ema20 0.925-0.93; XRP 1.3205 trigger; PAXG hold above 4036.",
   "actions": [
-    {
-      "type": "entry_order",
-      "symbol": "XRPUSDT",
-      "side": "long",
-      "trigger": 1.3205,
-      "stop": 1.2985,
-      "take_profit": 1.365,
-      "risk_pct": 0.015,
-      "expires_hours": 24,
-      "reason": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts.",
-      "invalidation": "4h close back below 1.30 after fill, or BTC 4h close < 79.1k (market-wide breakdown)."
-    }
+    {"type": "move_stop", "symbol": "PAXGUSDT", "stop": 4012, "take_profit": 4095, "reason": "Gold breakout filled; raise stop just under current 4h candle low 4015.3 to cut risk while keeping room. TP 4095 unchanged."},
+    {"type": "entry_order", "symbol": "SUIUSDT", "side": "short", "trigger": 0.929, "stop": 0.946, "take_profit": 0.89, "risk_pct": 0.01, "expires_hours": 24,
+      "reason": "Re-short SUI on retest of falling h4 ema20 (0.925) after prior short closed +0.29 by trailing stop. Weak alt (h4 RSI 41.5), trigger above 12Z 4h high 0.9236, stop 0.946 above ema20 + ~1 ATR buffer, TP 0.89 under 30d low 0.8989 (~2.3R). Small 1% so total bear risk stays ~3.5% with BTC/DOT orders.",
+      "invalidation": "SUI 4h close > 0.946 or BTC 4h close > 80.45k (cancel order)."}
   ]
 }
