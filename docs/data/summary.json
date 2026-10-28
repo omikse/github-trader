@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-28T20:04:49Z",
+ "updated": "2026-10-28T20:11:49Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9624,
- "equity_pln": 976.2,
- "return_pct": -4.19,
+ "equity_pln": 975.21,
+ "return_pct": -4.29,
  "max_drawdown_pct": 6.37,
  "control_pln": 1059.91,
  "control_trades": 2,
- "hodl_pln": 982.57,
+ "hodl_pln": 980.22,
  "positions": [
   {
    "symbol": "PAXGUSDT",
    "side": "long",
    "size": 0.063744,
    "entry": 4076.2225,
-   "mark": 4071.08,
-   "upnl": -0.32780351999999535,
+   "mark": 4067.03,
+   "upnl": -0.585966719999978,
    "stop": 4040.0,
    "tp": 4145.0,
    "liq": null,
    "leverage": null,
    "opened": 1793217600000,
    "reason": "Gold breakout re-entry: trigger 4075 sits above the 4070.84 24h high + buffer (wick lesson); gold reclaimed h4 ema20 4033 and is pressing h4 ema50 4050. Stop 4040 under the 08Z 4h base; TP 4145 toward d1 ema20 4094 then h4 ema200 4141 (~2R). Separate theme from crypto longs.",
-   "upnl_pln": -1.3
+   "upnl_pln": -2.32
   }
  ],
  "closed_trades": [
@@ -310,7 +310,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 233.03705,
+ "cash_usd": 246.667804,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -361,24 +361,26 @@
   }
  ],
  "balance_warning": false,
- "other_value_usd": 13.617008,
- "predictions": [
+ "other_value_usd": 0,
+ "predictions": [],
+ "pred_closed": [
   {
+   "id": "p61",
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
+   "shares": 13.630638297872341,
    "entry": 0.94,
-   "mark": 0.999,
-   "end": "2026-10-29T03:59:00Z",
-   "opened": 1792704918998,
-   "shares": 13.6306,
+   "exit": 1.0,
    "cost": 12.8946,
-   "value": 13.617,
-   "pnl": 0.7224,
-   "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
+   "pnl": 0.7361,
+   "time": 1793218069100,
+   "opened": 1792704918998,
+   "why": "resolved win",
+   "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
+   "pnl_pln": 2.92
   }
  ],
- "pred_closed": [],
  "carry": [],
  "carry_closed": [
   {
@@ -398,7 +400,7 @@
  "income_pln": {
   "funding": 0.1,
   "carry": -0.85,
-  "interest": 0.53
+  "interest": 0.54
  },
  "cash_rate_pct": 3.87
 }

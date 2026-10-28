@@ -1,5 +1,5 @@
 {
- "cash": 233.0370501897402,
+ "cash": 246.667803712732,
  "positions": {
   "PAXGUSDT": {
    "side": "long",
@@ -9,7 +9,7 @@
    "tp": 4145.0,
    "opened": 1793217600000,
    "entry_fee": 0.14290909987199998,
-   "mark": 4071.08,
+   "mark": 4067.03,
    "note": "Gold breakout re-entry: trigger 4075 sits above the 4070.84 24h high + buffer (wick lesson); gold reclaimed h4 ema20 4033 and is pressing h4 ema50 4050. Stop 4040 under the 08Z 4h base; TP 4145 toward d1 ema20 4094 then h4 ema200 4141 (~2R). Separate theme from crypto longs."
   }
  },
@@ -246,8 +246,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1793217889027,
- "next_id": 61,
+ "last_ms": 1793218309082,
+ "next_id": 62,
  "orders": [
   {
    "id": "o59",
@@ -663,26 +663,28 @@
    "reason": "BONK funding 265% APR (~0.73%/day) and was 108% APR 2h ago; break-even ~0.8 day on 0.6% round-trip. Price-neutral. Close when funding < 30% APR or negative."
   }
  ],
- "predictions": {
-  "2589812": {
+ "predictions": {},
+ "pred_closed": [
+  {
+   "id": "p61",
+   "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "shares": 13.630638297872341,
    "entry": 0.94,
-   "cost": 12.894583829787233,
-   "mark": 0.999,
-   "end": "2026-10-29T03:59:00Z",
+   "exit": 1.0,
+   "cost": 12.8946,
+   "pnl": 0.7361,
+   "time": 1793218069100,
    "opened": 1792704918998,
-   "note": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
-   "yes_bid": 0.999,
-   "yes_ask": 1.0
+   "why": "resolved win",
+   "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
- },
- "pred_closed": [],
+ ],
  "cash_rate": 0.0387,
  "income": {
   "funding": 0.025498823882707924,
   "carry": -0.21395110481479168,
-  "interest": 0.13500389768237595
+  "interest": 0.13511912280184823
  }
 }
