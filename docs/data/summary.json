@@ -1,76 +1,76 @@
 {
- "updated": "2026-10-28T00:44:16Z",
+ "updated": "2026-10-28T00:52:16Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9542,
- "equity_pln": 1007.59,
- "return_pct": -0.9,
+ "equity_pln": 1006.44,
+ "return_pct": -1.02,
  "max_drawdown_pct": 5.04,
- "control_pln": 1055.21,
+ "control_pln": 1055.64,
  "control_trades": 1,
- "hodl_pln": 969.3,
+ "hodl_pln": 969.44,
  "positions": [
   {
    "symbol": "PAXGUSDT",
    "side": "long",
    "size": 0.07907,
    "entry": 4037.2108,
-   "mark": 4065.55,
-   "upnl": 2.2407805440000272,
+   "mark": 4066.05,
+   "upnl": 2.2803155440000276,
    "stop": 4038.0,
    "tp": 4095.0,
    "liq": null,
    "leverage": null,
    "opened": 1793109840000,
    "reason": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R).",
-   "upnl_pln": 8.86
+   "upnl_pln": 9.02
   },
   {
    "symbol": "XRPUSDT",
    "side": "long",
    "size": 161.816,
    "entry": 1.32089615,
-   "mark": 1.3255,
-   "upnl": 0.7449765915999764,
+   "mark": 1.32612,
+   "upnl": 0.8453025115999869,
    "stop": 1.2985,
    "tp": 1.365,
    "liq": null,
    "leverage": null,
    "opened": 1793114460000,
    "reason": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts.",
-   "upnl_pln": 2.95
+   "upnl_pln": 3.34
   },
   {
    "symbol": "BTCUSDT",
    "side": "long",
    "size": 0.00322293,
    "entry": 81174.345,
-   "mark": 80640.2,
-   "upnl": -1.7215119448500131,
+   "mark": 80651.4,
+   "upnl": -1.6854151288500225,
    "stop": 80450.0,
    "tp": 82850.0,
    "liq": null,
    "leverage": null,
    "opened": 1793136660000,
    "reason": "Failed-breakdown breakout long: BTC held 79.1-79.4k 30d-low zone and reclaimed h4 ema20; trigger 81,150 is above h4 ema50 80.97k and the 24h high 80.72k. Stop 80,450 below the 20Z 4h range low area; TP 82,850 near h4 ema200 82.9k (~2.4R). Counts with XRP long as one risk-on bet (2% combined).",
-   "upnl_pln": -6.81
+   "upnl_pln": -6.66
   },
   {
    "symbol": "DOTUSDT",
    "side": "short",
    "size": 201.37,
    "entry": 1.0056982,
-   "mark": 1.0006,
-   "upnl": 1.026624534000033,
+   "mark": 1.0022,
+   "upnl": 0.7044325340000237,
    "stop": 1.018,
    "tp": 0.955,
    "liq": null,
    "leverage": null,
    "opened": 1793137140000,
    "reason": "DOT broke its 30d low (0.995, below round 1.000; 7d -13%, h4 RSI 31, below h4 ema20 1.04). Short a retest of broken 1.000-1.006 from below. Stop 1.024 above completed 4h highs 1.0106/1.0126 plus ~1 h1 ATR (lesson: not AT the high). TP 0.955 (~2.8R). Bear-theme risk is small because ETH/SUI stops sit near entry.",
-   "upnl_pln": 4.06
+   "upnl_pln": 2.79
   }
  ],
  "closed_trades": [
@@ -269,82 +269,22 @@
  ],
  "trade_count": 14,
  "win_rate_pct": 42.9,
- "brain_calls_today": 0,
+ "brain_calls_today": 1,
  "last_decision": {
-  "time": "2026-10-27T22:52:16Z",
+  "time": "2026-10-28T00:52:16Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-27T22:51:58Z",
+  "decided_at": "2026-10-28T00:52:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 255.83,
-  "equity_pln": 1011.6,
-  "events": [
-   {
-    "type": "order_cancelled",
-    "id": "o48",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "status": "cancelled",
-    "trigger": 79050,
-    "time": 1793134396658,
-    "detail": "cancelled by the brain"
-   },
-   {
-    "type": "order_cancelled",
-    "id": "o52",
-    "symbol": "SUIUSDT",
-    "side": "short",
-    "status": "cancelled",
-    "trigger": 0.929,
-    "time": 1793134396658,
-    "detail": "cancelled by the brain"
-   },
-   {
-    "type": "order_filled",
-    "id": "o53",
-    "symbol": "BTCUSDT",
-    "side": "long",
-    "status": "filled",
-    "trigger": 81150,
-    "time": 1793136660000,
-    "detail": "filled at 81174.3"
-   },
-   {
-    "type": "order_filled",
-    "id": "o47",
-    "symbol": "DOTUSDT",
-    "side": "short",
-    "status": "filled",
-    "trigger": 1.006,
-    "time": 1793137140000,
-    "detail": "filled at 1.0057"
-   }
-  ],
-  "market_view": "Pre-Fed bounce stalled: BTC wicked to 81.2k and fell back to 80.8k, filling my breakout long at the top. Alts mildly bid, DOT still weakest and filled my retest short. Gold holding its breakout.",
-  "watch_next": "BTC 4h close vs 80.3k (cut long) / 81.2k (confirm); DOT under 1.0; PAXG 4080 for trail; Fed outcome.",
-  "news": "Fed decision Wed 28 Oct, hold expected (~3.5% hike odds); 2026 FOMC days have tended to bring crypto selling.",
-  "actions": [
-   {
-    "type": "move_stop",
-    "symbol": "PAXGUSDT",
-    "stop": 4038,
-    "take_profit": 4095,
-    "reason": "Lock breakeven on gold breakout before Fed volatility; 4h lows 4054-4057 hold, stop below entry area gives room.",
-    "result": "done",
-    "detail": "stop 4038.0, target 4095.0"
-   },
-   {
-    "type": "move_stop",
-    "symbol": "DOTUSDT",
-    "stop": 1.018,
-    "take_profit": 0.955,
-    "reason": "Retest short filled; cut risk to above the completed 4h highs 1.0062 plus ~1 ATR buffer (lesson: not at the high).",
-    "result": "done",
-    "detail": "stop 1.018, target 0.955"
-   }
-  ]
+  "equity_usd": 254.61,
+  "equity_pln": 1006.78,
+  "events": [],
+  "market_view": "Quiet pre-Fed drift: BTC 80.69k, 00Z 4h closed 80.80k between the 80.3k cut level and the 81.2k confirm level. PAXG holding 4064 near highs, XRP strongest major, DOT pinned under 1.00.",
+  "watch_next": "BTC 4h close < 80.3k (cut long) or > 81.2k/81.8k (trail); Fed outcome ~18Z; PAXG 4h close > 4080 to trail; DOT < 0.98 to trail.",
+  "news": "No fresh market-moving news; Fed decision Wed ~18Z with hold consensus, ~$11B BTC options expiry Fri.",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 239.608791,
+ "cash_usd": 239.608893,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -377,20 +317,20 @@
  },
  "orders": [],
  "balance_warning": false,
- "other_value_usd": 13.058151,
+ "other_value_usd": 13.071782,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.958,
+   "mark": 0.959,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 13.0582,
-   "pnl": 0.1636,
+   "value": 13.0718,
+   "pnl": 0.1772,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],
