@@ -1,14 +1,14 @@
-# Notebook (updated 2026-10-28T08:53:00Z)
+# Notebook (updated 2026-10-28T10:52:00Z)
 
 ## Big picture
-- Regime: daily downtrend (BTC 30d -2.3%, d1 RSI 49) with a pre-Fed bounce now pushing the 81.2k range top. BTC 81.53k at 08:40Z, 08Z 4h candle high 81,688 (not closed). h1 RSI 71 (stretched). h4 ema20 80.59k, ema50 81.0k, ema200 82.9k, d1 ema20 81.73k. 30d low 79,121.
+- Regime: daily downtrend (BTC 30d -2.5%, d1 RSI 48) with a pre-Fed bounce at the 81.2k range top. BTC 81.40k at 10:40Z, 08Z 4h candle high 81,688 (closes 12Z). h1 RSI 69, cooling sideways. h4 ema20 80.59k, ema50 81.0k, ema200 82.9k, d1 ema20 81.73k. 30d low 79,121.
 - Events: Fed decision Wed 28 Oct ~18Z (hold consensus); 2026 FOMC days tended to bring selling. ~$11B BTC options expiry Fri 30 Oct.
 - Alts: broad bounce (SOL +3.3%, SUI +3.5%, ETH 2375 reclaimed h4 ema50 2369 -> short-cap idea dead). DOT spiked to 1.104 (wick) and stopped our short.
 - Gold PAXG 4049, back above h4 ema20 4033, at h4 ema50 4050; 24h high 4070.8.
 - Mind-changers: BTC 4h close > 81.8k = reversal confirmed (trail up). 4h close < 80.6k = bounce failing (stop handles). < 79.1k = trend leg to 78k.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 252.5 USD (998 PLN, peak 265.7). Closed 6W/10L, net -7.62.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 251.1 USD (993 PLN, peak 265.7). Closed 6W/10L, net -7.62.
 - Resting orders at edges/retests/breakouts, 1-2% risk, aim >=2R, trail behind 4h structure.
 - Trade range breaks and breakdown RETESTS, not the middle. No fresh breakdown shorts at h1 RSI < 35.
 - Book: risk-on longs BTC + XRP (one bet, now with tightened stops), gold breakout order (separate theme). No new crypto risk before Fed.
@@ -44,6 +44,7 @@
 - Passed: Israel election/sports (no edge vs crowd).
 
 ## Session log
+- 2026-10-28T10:52Z | eq 251.09 USD (993 PLN) | No changes: BTC 81.4k/XRP 1.327 longs green, PAXG 4047 below 4075 trigger; Fed hold Yes 0.948. Waiting for Fed ~18Z.
 - 2026-10-28T08:53Z | eq 252.50 USD (998 PLN) | DOT short stopped 1.0185 on spike (-2.80). BTC 81.53k breaking range: stops raised BTC 80,650, XRP 1.314. PAXG breakout order 4075.
 - 2026-10-28T06:53Z | eq 252.84 | No changes; PAXG BE stop hit (-0.49).
 - 2026-10-28T04:51Z | eq 253.39 | No changes; pre-Fed.
@@ -53,4 +54,3 @@
 - 2026-10-27T20:52Z | eq 254.27 | Cancelled BTC/SUI shorts; BTC breakout long order 81,150.
 - 2026-10-27T16:51Z | eq 254.29 | XRP breakout long filled 1.3209.
 - 2026-10-27T14:52Z | eq 253.75 | SUI short trailed out +0.29; PAXG long filled 4037.
-- 2026-10-27T12:58Z | eq 253.58 | ETH short stopped (-0.13). Added XRP breakout order.
