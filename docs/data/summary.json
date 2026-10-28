@@ -1,76 +1,76 @@
 {
- "updated": "2026-10-27T23:56:16Z",
+ "updated": "2026-10-28T00:04:16Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9542,
- "equity_pln": 1012.2,
+ "equity_pln": 1012.22,
  "return_pct": -0.45,
  "max_drawdown_pct": 5.04,
- "control_pln": 1061.84,
+ "control_pln": 1058.95,
  "control_trades": 1,
- "hodl_pln": 971.35,
+ "hodl_pln": 970.46,
  "positions": [
   {
    "symbol": "PAXGUSDT",
    "side": "long",
    "size": 0.07907,
    "entry": 4037.2108,
-   "mark": 4063.09,
-   "upnl": 2.0462683440000244,
+   "mark": 4065.5,
+   "upnl": 2.236827044000013,
    "stop": 4038.0,
    "tp": 4095.0,
    "liq": null,
    "leverage": null,
    "opened": 1793109840000,
    "reason": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R).",
-   "upnl_pln": 8.09
+   "upnl_pln": 8.84
   },
   {
    "symbol": "XRPUSDT",
    "side": "long",
    "size": 161.816,
    "entry": 1.32089615,
-   "mark": 1.32997,
-   "upnl": 1.4682941116000081,
+   "mark": 1.32743,
+   "upnl": 1.0572814716000103,
    "stop": 1.2985,
    "tp": 1.365,
    "liq": null,
    "leverage": null,
    "opened": 1793114460000,
    "reason": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts.",
-   "upnl_pln": 5.81
+   "upnl_pln": 4.18
   },
   {
    "symbol": "BTCUSDT",
    "side": "long",
    "size": 0.00322293,
    "entry": 81174.345,
-   "mark": 80810.3,
-   "upnl": -1.1732915518499945,
+   "mark": 80736.2,
+   "upnl": -1.4121106648500132,
    "stop": 80450.0,
    "tp": 82850.0,
    "liq": null,
    "leverage": null,
    "opened": 1793136660000,
    "reason": "Failed-breakdown breakout long: BTC held 79.1-79.4k 30d-low zone and reclaimed h4 ema20; trigger 81,150 is above h4 ema50 80.97k and the 24h high 80.72k. Stop 80,450 below the 20Z 4h range low area; TP 82,850 near h4 ema200 82.9k (~2.4R). Counts with XRP long as one risk-on bet (2% combined).",
-   "upnl_pln": -4.64
+   "upnl_pln": -5.58
   },
   {
    "symbol": "DOTUSDT",
    "side": "short",
    "size": 201.37,
    "entry": 1.0056982,
-   "mark": 1.0004,
-   "upnl": 1.0668985340000285,
+   "mark": 0.9976,
+   "upnl": 1.6307345340000112,
    "stop": 1.018,
    "tp": 0.955,
    "liq": null,
    "leverage": null,
    "opened": 1793137140000,
    "reason": "DOT broke its 30d low (0.995, below round 1.000; 7d -13%, h4 RSI 31, below h4 ema20 1.04). Short a retest of broken 1.000-1.006 from below. Stop 1.024 above completed 4h highs 1.0106/1.0126 plus ~1 h1 ATR (lesson: not AT the high). TP 0.955 (~2.8R). Bear-theme risk is small because ETH/SUI stops sit near entry.",
-   "upnl_pln": 4.22
+   "upnl_pln": 6.45
   }
  ],
  "closed_trades": [
@@ -269,7 +269,7 @@
  ],
  "trade_count": 14,
  "win_rate_pct": 42.9,
- "brain_calls_today": 12,
+ "brain_calls_today": 0,
  "last_decision": {
   "time": "2026-10-27T22:52:16Z",
   "trigger": "brain session",
@@ -344,7 +344,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 239.615773,
+ "cash_usd": 239.608281,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -353,7 +353,7 @@
    "side": "long",
    "entry": 80747.3535,
    "qty": 0.00986185340357147,
-   "stop": 80069.99179880047
+   "stop": 80092.42363571125
   }
  },
  "pairs": {
@@ -412,7 +412,7 @@
   }
  ],
  "income_pln": {
-  "funding": 0.68,
+  "funding": 0.65,
   "carry": -0.85,
   "interest": 0.46
  },
