@@ -1,17 +1,6 @@
 {
- "cash": 239.51883751821035,
+ "cash": 239.2065992986056,
  "positions": {
-  "PAXGUSDT": {
-   "side": "long",
-   "qty": 0.07907,
-   "entry": 4037.2108,
-   "stop": 4038.0,
-   "tp": 4095.0,
-   "opened": 1793109840000,
-   "entry_fee": 0.17557224187579998,
-   "mark": 4037.5,
-   "note": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R)."
-  },
   "XRPUSDT": {
    "side": "long",
    "qty": 161.816,
@@ -20,7 +9,7 @@
    "tp": 1.365,
    "opened": 1793114460000,
    "entry_fee": 0.11755817227462001,
-   "mark": 1.32839,
+   "mark": 1.32756,
    "note": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts."
   },
   "BTCUSDT": {
@@ -31,7 +20,7 @@
    "tp": 82850.0,
    "opened": 1793136660000,
    "entry_fee": 0.1438905774519675,
-   "mark": 80863.0,
+   "mark": 80850.1,
    "note": "Failed-breakdown breakout long: BTC held 79.1-79.4k 30d-low zone and reclaimed h4 ema20; trigger 81,150 is above h4 ema50 80.97k and the 24h high 80.72k. Stop 80,450 below the 20Z 4h range low area; TP 82,850 near h4 ema200 82.9k (~2.4R). Counts with XRP long as one risk-on bet (2% combined)."
   },
   "DOTUSDT": {
@@ -42,7 +31,7 @@
    "tp": 0.955,
    "opened": 1793137140000,
    "entry_fee": 0.11138459559370001,
-   "mark": 1.0046,
+   "mark": 1.0032,
    "note": "DOT broke its 30d low (0.995, below round 1.000; 7d -13%, h4 RSI 31, below h4 ema20 1.04). Short a retest of broken 1.000-1.006 from below. Stop 1.024 above completed 4h highs 1.0106/1.0126 plus ~1 h1 ATR (lesson: not AT the high). TP 0.955 (~2.8R). Bear-theme risk is small because ETH/SUI stops sit near entry."
   }
  },
@@ -224,11 +213,24 @@
    "why": "stop",
    "opened": 1793026920000,
    "reason": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R)."
+  },
+  {
+   "id": "t54",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "qty": 0.07907,
+   "entry": 4037.2108,
+   "exit": 4035.48125,
+   "pnl": -0.4878,
+   "time": 1793163060000,
+   "why": "stop (gap)",
+   "opened": 1793109840000,
+   "reason": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R)."
   }
  ],
  "fills": [],
- "last_ms": 1793163090607,
- "next_id": 54,
+ "last_ms": 1793163150770,
+ "next_id": 55,
  "orders": [],
  "order_events": [
   {
@@ -628,6 +630,6 @@
  "income": {
   "funding": 0.07229895623928403,
   "carry": -0.21395110481479168,
-  "interest": 0.1204272251475731
+  "interest": 0.12044155038340379
  }
 }

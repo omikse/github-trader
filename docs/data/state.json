@@ -15,7 +15,7 @@
   "2026-10-25": 12,
   "2026-10-26": 12,
   "2026-10-27": 12,
-  "2026-10-28": 2
+  "2026-10-28": 3
  },
  "closed_trades": [
   {
@@ -195,9 +195,22 @@
    "why": "stop",
    "opened": 1793026920000,
    "reason": "SUI re-short on a bounce: weakest major alt (7d -8.2%, h4 RSI 37, below h4 ema20 0.936). Previous short exited at small profit by trailing stop 0.9205. Trigger 0.926 above recent 4h highs 0.9207; stop 0.941 above h4 ema20 + buffer (~1 h1 ATR); TP 0.885 below 30d low 0.8989 (~2.7R)."
+  },
+  {
+   "id": "t54",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "qty": 0.07907,
+   "entry": 4037.2108,
+   "exit": 4035.48125,
+   "pnl": -0.4878,
+   "time": 1793163060000,
+   "why": "stop (gap)",
+   "opened": 1793109840000,
+   "reason": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R)."
   }
  ],
- "last_closed_check_ms": 1793163090607,
+ "last_closed_check_ms": 1793163150770,
  "day": "2026-10-28",
  "day_start_equity": 256.079068442065,
  "paused_day": null,
@@ -215,7 +228,7 @@
   "trades": 1,
   "wins": 1
  },
- "last_btc": 80859.7,
+ "last_btc": 80850.1,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -256,6 +269,6 @@
   "o53:filled",
   "o47:filled"
  ],
- "last_decision_id": "2026-10-28T02:52:00Z",
+ "last_decision_id": "2026-10-28T04:51:58Z",
  "cash_rate_day": "2026-10-28"
 }
