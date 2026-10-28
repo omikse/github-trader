@@ -1,9 +1,22 @@
 {
-  "id": "2026-10-28T14:52:30Z",
-  "decided_at": "2026-10-28T14:52:30Z",
+  "id": "2026-10-28T16:54:00Z",
+  "decided_at": "2026-10-28T16:54:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 80.49k drifted back under d1 ema50 after the failed pre-Fed bounce, mid-range between 80.1k and 81.7k; alts -1.5-2% on 4h, ETH/SOL weakest. No clean edge 3 hours before the Fed.",
-  "news": "Consensus Fed hold today ~18Z; commentary flags $80k as the pre-Fed downside risk level.",
-  "watch_next": "Fed reaction: BTC 4h close < 80.3k -> breakdown short (BTC or ETH < 2310); reclaim/hold > 81.2k -> long. PAXG 4075 trigger (cancel on 4h close < 4030). PEPE blow-off fade. Fed Yes resolves ~29 Oct 04Z.",
-  "actions": []
+  "market_view": "BTC 80.36k drifting at the 24h low (80.31k) under h4 ema50 80.94k ahead of Fed ~18Z; alts flat-weak, ETH 2328 near 24h low. Flat book; PAXG 4040 under breakout trigger.",
+  "news": "No new news; Fed expected to hold today, crypto commentary flags $80k risk into the decision.",
+  "watch_next": "Fed reaction: BTC 4h close <80.3k / fill of 79,550 short; reclaim of 81.2k for a long; Fed-hold Yes resolution.",
+  "actions": [
+    {
+      "type": "entry_order",
+      "symbol": "BTCUSDT",
+      "side": "short",
+      "trigger": 79550,
+      "stop": 80650,
+      "take_profit": 77400,
+      "risk_pct": 0.015,
+      "expires_hours": 18,
+      "reason": "Post-Fed breakdown catch: fills only if BTC breaks well below 24h low 80.3k toward 30d low 79.1k after the decision; stop above h4 ema20/prior lows 80.65k, TP 77.4k ~2R. Daily downtrend, d1 RSI 44.",
+      "invalidation": "BTC reclaims 80.65k after fill, or Fed reaction reclaims 81.2k before fill (cancel)."
+    }
+  ]
 }
