@@ -1,9 +1,15 @@
 {
-  "id": "2026-10-28T06:53:00Z",
-  "decided_at": "2026-10-28T06:53:00Z",
+  "id": "2026-10-28T08:51:40Z",
+  "decided_at": "2026-10-28T08:51:40Z",
   "model": "claude-opus-5-5",
-  "market_view": "Pre-Fed chop: BTC 80.80k inside 80.5-81.2k, XRP holding 1.325 above h1 ema20, DOT capped under 1.01. Gold long stopped at breakeven.",
-  "news": "Fed decision today ~18Z, hold consensus; no new market-moving crypto news found.",
-  "watch_next": "BTC 4h close > 81.2k (add) or < 80.3k (cut long); Fed reaction after 18Z; PAXG reclaim 4065 or bounce at 4000.",
-  "actions": []
+  "market_view": "Pre-Fed bounce extending: BTC 81.53k broke the 81.2k range top intra-4h (high 81,688), ETH reclaimed 2370 h4 ema50, alts green. DOT short stopped on a 1.104 spike wick (-2.80). Gold 4049, below 4071 high.",
+  "news": "No fresh market-moving news found; Fed decision today ~18Z, hold consensus; ~11B BTC options expiry Fri.",
+  "watch_next": "BTC 12Z 4h close > 81.2k (hold) and > 81.8k (stop to 80.9k); Fed reaction 18Z; PAXG breakout order 4075; XRP > 1.342.",
+  "actions": [
+    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 80650, "take_profit": 82850, "reason": "Range top 81.2k broken intra-candle; tighten from 80,450 to just under the 04Z 4h low 80,730 to cut risk into the Fed while leaving room for chop."},
+    {"type": "move_stop", "symbol": "XRPUSDT", "stop": 1.314, "take_profit": 1.365, "reason": "XRP holding above h4 ema20 1.312; stop under completed 4h low 1.3158, cuts risk before Fed."},
+    {"type": "entry_order", "symbol": "PAXGUSDT", "side": "long", "trigger": 4075, "stop": 4040, "take_profit": 4145, "risk_pct": 0.01, "expires_hours": 24,
+      "reason": "Gold breakout re-entry: trigger 4075 sits above the 4070.84 24h high + buffer (wick lesson); gold reclaimed h4 ema20 4033 and is pressing h4 ema50 4050. Stop 4040 under the 08Z 4h base; TP 4145 toward d1 ema20 4094 then h4 ema200 4141 (~2R). Separate theme from crypto longs.",
+      "invalidation": "PAXG 4h close back < 4040 after fill, or hawkish Fed surprise pushing dollar up."}
+  ]
 }
