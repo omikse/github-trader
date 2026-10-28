@@ -1,14 +1,14 @@
-# Notebook (updated 2026-10-27T22:52:00Z)
+# Notebook (updated 2026-10-28T00:52:00Z)
 
 ## Big picture
-- Regime: daily downtrend (BTC 30d -4.3%, d1 RSI 45) with a pre-Fed bounce. BTC 80.79k; 4h wick to 81.2k rejected (24h high 81,199). h4 ema20 80.38k, h4 ema50 80.98k, h4 ema200 82.9k, d1 ema20 81.75k. 30d low 79,121.
+- Regime: daily downtrend (BTC 30d -3.3%, d1 RSI 45) with a pre-Fed bounce. 00Z 4h closed 80.80k (above 80.3k, below 81.2k): undecided. BTC 80.69k; 4h wick to 81.2k rejected (24h high 81,199). h4 ema20 80.38k, h4 ema50 80.98k, h4 ema200 82.9k, d1 ema20 81.75k. 30d low 79,121.
 - Events: Fed decision Wed 28 Oct ~18Z (hold consensus, ~3.5% hike odds); 2026 FOMC days have tended to bring selling. ~$11B BTC options expiry Fri 30 Oct.
 - Alts: broad mild bounce (NEAR +5%, PEPE +6%). XRP 1.323 strongest major. DOT 0.997 weakest, under h4 ema20 1.021. ETH 2347 still capped 2350-2362.
 - Gold PAXG 4061.7 holding breakout, h1 RSI 70. EUR 1.1134 near 30d low, h4 RSI 22.
 - Mind-changers: BTC 4h close > 81.2k = reversal attempt confirmed (add). 4h close < 80.3k = bounce failing (cut BTC long). < 79.1k = trend leg to 78k.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 255.58 USD (1011 PLN, peak 265.7). Closed 6W/8L, net -4.33.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 255.56 USD (1011 PLN, peak 265.7). Closed 6W/8L, net -4.33.
 - Resting orders at edges/retests/breakouts, 1-2% risk, aim >=2R, trail behind 4h structure.
 - Trade range breaks and breakdown RETESTS, not the middle. No fresh breakdown shorts at h1 RSI < 35.
 - Book now: risk-on longs BTC 1% + XRP ~1% (one bet), PAXG long (gold, independent), DOT short (weak-alt, partial hedge). 4 of 5 slots used; no new positions before Fed unless clean.
@@ -44,6 +44,7 @@
 - Passed: Israel election/sports (no edge vs crowd).
 
 ## Session log
+- 2026-10-28T00:52Z | eq 255.56 USD (1011 PLN) | No changes; quiet pre-Fed, all four positions within plan (BTC -1.55, PAXG +2.11, DOT +1.37, XRP +0.94).
 - 2026-10-27T22:52Z | eq 255.58 USD (1011 PLN) | BTC long filled 81,174 (wick), DOT short filled 1.0057. Raised PAXG stop 4038 (BE), DOT stop 1.018. No new risk pre-Fed.
 - 2026-10-27T20:52Z | eq 254.27 | BTC 4h close > 80.6k: cancelled BTC/SUI shorts; added BTC breakout long order 81,150.
 - 2026-10-27T18:47Z | eq 254.47 | No changes.
