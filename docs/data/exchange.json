@@ -1,6 +1,18 @@
 {
- "cash": 233.17982707275593,
- "positions": {},
+ "cash": 233.0370501897402,
+ "positions": {
+  "PAXGUSDT": {
+   "side": "long",
+   "qty": 0.063744,
+   "entry": 4076.2225,
+   "stop": 4040.0,
+   "tp": 4145.0,
+   "opened": 1793217600000,
+   "entry_fee": 0.14290909987199998,
+   "mark": 4071.08,
+   "note": "Gold breakout re-entry: trigger 4075 sits above the 4070.84 24h high + buffer (wick lesson); gold reclaimed h4 ema20 4033 and is pressing h4 ema50 4050. Stop 4040 under the 08Z 4h base; TP 4145 toward d1 ema20 4094 then h4 ema200 4141 (~2R). Separate theme from crypto longs."
+  }
+ },
  "closed": [
   {
    "id": "t5",
@@ -234,22 +246,9 @@
   }
  ],
  "fills": [],
- "last_ms": 1793217409019,
+ "last_ms": 1793217889027,
  "next_id": 61,
  "orders": [
-  {
-   "id": "o56",
-   "symbol": "PAXGUSDT",
-   "side": "long",
-   "qty": 0.063744,
-   "trigger": 4075,
-   "direction": "above",
-   "stop": 4040.0,
-   "tp": 4145.0,
-   "placed": 1793177568674,
-   "expires": 1793263968674,
-   "note": "Gold breakout re-entry: trigger 4075 sits above the 4070.84 24h high + buffer (wick lesson); gold reclaimed h4 ema20 4033 and is pressing h4 ema50 4050. Stop 4040 under the 08Z 4h base; TP 4145 toward d1 ema20 4094 then h4 ema200 4141 (~2R). Separate theme from crypto longs."
-  },
   {
    "id": "o59",
    "symbol": "BTCUSDT",
@@ -619,26 +618,35 @@
    "trigger": 1.006,
    "time": 1793137140000,
    "detail": "filled at 1.0057"
+  },
+  {
+   "id": "o56",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "status": "filled",
+   "trigger": 4075,
+   "time": 1793217600000,
+   "detail": "filled at 4076.22"
   }
  ],
  "funding_rates": {
-  "BTCUSDT": -8.245016666667e-06,
-  "ETHUSDT": -1.846191666667e-06,
-  "SOLUSDT": -2.76651875e-05,
-  "XRPUSDT": 4.2614125e-06,
-  "DOGEUSDT": -1.9301166666667e-05,
-  "ADAUSDT": -3.6786233333333e-05,
-  "AVAXUSDT": -2.2129125e-06,
-  "LINKUSDT": -2.6029625e-05,
-  "SUIUSDT": -2.1982116666667e-05,
-  "PEPEUSDT": -2.4833358333333e-05,
-  "WIFUSDT": -1.2626879166667e-05,
-  "BONKUSDT": -7.17133125e-05,
-  "LTCUSDT": -2.498465e-05,
-  "DOTUSDT": -1.6246804166667e-05,
-  "NEARUSDT": -1.0823879166667e-05,
-  "PAXGUSDT": 5.3385625e-06,
-  "EURUSDT": 1.1069145833333e-05
+  "BTCUSDT": 3.0977375e-06,
+  "ETHUSDT": 2.277820833333e-06,
+  "SOLUSDT": 3.99845833333e-07,
+  "XRPUSDT": 1.63353e-05,
+  "DOGEUSDT": -6.955725e-06,
+  "ADAUSDT": 1.51317875e-05,
+  "AVAXUSDT": 2.19367375e-05,
+  "LINKUSDT": -1.39936375e-05,
+  "SUIUSDT": 5.55585e-06,
+  "PEPEUSDT": 4.831e-06,
+  "WIFUSDT": 9.316183333333e-06,
+  "BONKUSDT": -5.6427479166667e-05,
+  "LTCUSDT": -1.3635870833333e-05,
+  "DOTUSDT": -9.503404166667e-06,
+  "NEARUSDT": -7.5415e-07,
+  "PAXGUSDT": -8.4104625e-06,
+  "EURUSDT": 5.7145125e-06
  },
  "carry": {},
  "carry_closed": [
@@ -675,6 +683,6 @@
  "income": {
   "funding": 0.025498823882707924,
   "carry": -0.21395110481479168,
-  "interest": 0.13487168082612222
+  "interest": 0.13500389768237595
  }
 }

@@ -249,20 +249,31 @@
    "reason": "Failed-breakdown breakout long: BTC held 79.1-79.4k 30d-low zone and reclaimed h4 ema20; trigger 81,150 is above h4 ema50 80.97k and the 24h high 80.72k. Stop 80,450 below the 20Z 4h range low area; TP 82,850 near h4 ema200 82.9k (~2.4R). Counts with XRP long as one risk-on bet (2% combined)."
   }
  ],
- "last_closed_check_ms": 1793217409019,
+ "last_closed_check_ms": 1793217889027,
  "day": "2026-10-28",
  "day_start_equity": 256.079068442065,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_filled",
+   "id": "o56",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "status": "filled",
+   "trigger": 4075,
+   "time": 1793217600000,
+   "detail": "filled at 4076.22"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 267.4918606522851,
   "pos": null,
-  "last_t": 1793210400000,
+  "last_t": 1793214000000,
   "trades": 2,
   "wins": 2
  },
- "last_btc": 81450.0,
+ "last_btc": 81575.0,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -301,7 +312,8 @@
   "o48:cancelled",
   "o52:cancelled",
   "o53:filled",
-  "o47:filled"
+  "o47:filled",
+  "o56:filled"
  ],
  "last_decision_id": "2026-10-28T18:53:00Z",
  "cash_rate_day": "2026-10-28"
