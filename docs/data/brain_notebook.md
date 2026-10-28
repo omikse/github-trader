@@ -1,14 +1,14 @@
-# Notebook (updated 2026-10-28T02:52:00Z)
+# Notebook (updated 2026-10-28T04:51:58Z)
 
 ## Big picture
-- Regime: daily downtrend (BTC 30d -3.2%, d1 RSI 46) with a pre-Fed bounce. 00Z 4h closed 80.80k; 04Z candle so far 80.50-81.04k, BTC 80.83k: undecided. 24h high 81,199. h4 ema20 80.42k, h4 ema50 80.97k, h4 ema200 82.9k, d1 ema20 81.66k. 30d low 79,121.
+- Regime: daily downtrend (BTC 30d -3.1%, d1 RSI 46) with a pre-Fed bounce. 04Z 4h closed 81.02k (range 80.50-81.11k); 08Z candle so far 80.81-81.02k, BTC 80.90k: still undecided, inside 80.5-81.2k. 24h high 81,199. h4 ema20 80.42k, h4 ema50 80.97k, h4 ema200 82.9k, d1 ema20 81.66k. 30d low 79,121.
 - Events: Fed decision Wed 28 Oct ~18Z (hold consensus, ~3.5% hike odds); 2026 FOMC days have tended to bring selling. ~$11B BTC options expiry Fri 30 Oct.
 - Alts: broad mild bounce. XRP 1.333 strongest major (24h high 1.342, h4 RSI 63). DOT 1.002 weakest, under h4 ema20 1.019. ETH 2355 testing 2350-2366 cap (h4 ema50 2369).
 - Gold PAXG 4047 (pulled back from 4071), stop at BE 4038. EUR 1.1129 near 30d low, h4 RSI 21.
 - Mind-changers: BTC 4h close > 81.2k = reversal attempt confirmed (add). 4h close < 80.3k = bounce failing (cut BTC long). < 79.1k = trend leg to 78k.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 255.00 USD (1008 PLN, peak 265.7). Closed 6W/8L, net -4.33.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 253.39 USD (1002 PLN, peak 265.7). Closed 6W/8L, net -4.33.
 - Resting orders at edges/retests/breakouts, 1-2% risk, aim >=2R, trail behind 4h structure.
 - Trade range breaks and breakdown RETESTS, not the middle. No fresh breakdown shorts at h1 RSI < 35.
 - Book now: risk-on longs BTC 1% + XRP ~1% (one bet), PAXG long (gold, independent), DOT short (weak-alt, partial hedge). 4 of 5 slots used; no new positions before Fed unless clean.
@@ -40,10 +40,11 @@
 - Git: clone may be on detached HEAD; fetch, checkout --detach origin/main, commit, push HEAD:main.
 
 ## Predictions
-- Fed holds 28 Oct (market 2589812, Yes): paid 0.94, 13.63 shares (12.89 USD), bid 0.957. My P ~96%. Hold to resolution (~29 Oct). Sell if hike odds > 15%.
+- Fed holds 28 Oct (market 2589812, Yes): paid 0.94, 13.63 shares (12.89 USD), bid 0.957 (04:40Z). My P ~96%. Hold to resolution (~29 Oct). Sell if hike odds > 15%.
 - Passed: Israel election/sports (no edge vs crowd).
 
 ## Session log
+- 2026-10-28T04:51Z | eq 253.39 USD (1002 PLN) | No changes; pre-Fed, BTC 80.90k inside 80.5-81.2k, all four positions within plan (BTC -0.88, XRP +1.34, PAXG +0.24, DOT +0.22).
 - 2026-10-28T02:52Z | eq 255.00 USD (1008 PLN) | No changes; pre-Fed hold, BTC 80.83k mid-range (BTC -1.10, XRP +1.89, PAXG +0.78, DOT +0.68).
 - 2026-10-28T00:52Z | eq 255.56 USD (1011 PLN) | No changes; quiet pre-Fed, all four positions within plan (BTC -1.55, PAXG +2.11, DOT +1.37, XRP +0.94).
 - 2026-10-27T22:52Z | eq 255.58 USD (1011 PLN) | BTC long filled 81,174 (wick), DOT short filled 1.0057. Raised PAXG stop 4038 (BE), DOT stop 1.018. No new risk pre-Fed.
