@@ -1,5 +1,5 @@
 {
- "cash": 239.17914537442297,
+ "cash": 236.48190939387803,
  "positions": {
   "XRPUSDT": {
    "side": "long",
@@ -9,7 +9,7 @@
    "tp": 1.365,
    "opened": 1793114460000,
    "entry_fee": 0.11755817227462001,
-   "mark": 1.32564,
+   "mark": 1.32748,
    "note": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts."
   },
   "BTCUSDT": {
@@ -20,19 +20,8 @@
    "tp": 82850.0,
    "opened": 1793136660000,
    "entry_fee": 0.1438905774519675,
-   "mark": 80918.0,
+   "mark": 81013.8,
    "note": "Failed-breakdown breakout long: BTC held 79.1-79.4k 30d-low zone and reclaimed h4 ema20; trigger 81,150 is above h4 ema50 80.97k and the 24h high 80.72k. Stop 80,450 below the 20Z 4h range low area; TP 82,850 near h4 ema200 82.9k (~2.4R). Counts with XRP long as one risk-on bet (2% combined)."
-  },
-  "DOTUSDT": {
-   "side": "short",
-   "qty": 201.37,
-   "entry": 1.0056982,
-   "stop": 1.018,
-   "tp": 0.955,
-   "opened": 1793137140000,
-   "entry_fee": 0.11138459559370001,
-   "mark": 1.0,
-   "note": "DOT broke its 30d low (0.995, below round 1.000; 7d -13%, h4 RSI 31, below h4 ema20 1.04). Short a retest of broken 1.000-1.006 from below. Stop 1.024 above completed 4h highs 1.0106/1.0126 plus ~1 h1 ATR (lesson: not AT the high). TP 0.955 (~2.8R). Bear-theme risk is small because ETH/SUI stops sit near entry."
   }
  },
  "closed": [
@@ -226,11 +215,24 @@
    "why": "stop (gap)",
    "opened": 1793109840000,
    "reason": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R)."
+  },
+  {
+   "id": "t55",
+   "symbol": "DOTUSDT",
+   "side": "short",
+   "qty": 201.37,
+   "entry": 1.0056982,
+   "exit": 1.018509,
+   "pnl": -2.8039,
+   "time": 1793174280000,
+   "why": "stop",
+   "opened": 1793137140000,
+   "reason": "DOT broke its 30d low (0.995, below round 1.000; 7d -13%, h4 RSI 31, below h4 ema20 1.04). Short a retest of broken 1.000-1.006 from below. Stop 1.024 above completed 4h highs 1.0106/1.0126 plus ~1 h1 ATR (lesson: not AT the high). TP 0.955 (~2.8R). Bear-theme risk is small because ETH/SUI stops sit near entry."
   }
  ],
  "fills": [],
- "last_ms": 1793174148558,
- "next_id": 55,
+ "last_ms": 1793174628541,
+ "next_id": 56,
  "orders": [],
  "order_events": [
   {
@@ -577,23 +579,23 @@
   }
  ],
  "funding_rates": {
-  "BTCUSDT": 8.4432625e-06,
-  "ETHUSDT": 1.53345e-05,
-  "SOLUSDT": -2.04666666667e-07,
-  "XRPUSDT": 2.4268475e-05,
-  "DOGEUSDT": 3.2415e-06,
-  "ADAUSDT": 1.6604558333333e-05,
-  "AVAXUSDT": 6.111541666667e-06,
-  "LINKUSDT": -1.27851375e-05,
-  "SUIUSDT": 2.0205154166667e-05,
-  "PEPEUSDT": 8.9130683333333e-05,
-  "WIFUSDT": -2.4636958333333e-05,
-  "BONKUSDT": -8.52354375e-05,
-  "LTCUSDT": -1.1730479166667e-05,
-  "DOTUSDT": 5.7427875e-06,
-  "NEARUSDT": 4.2400216666667e-05,
-  "PAXGUSDT": 3.7971454166667e-05,
-  "EURUSDT": -6.2552958333333e-05
+  "BTCUSDT": 9.045941666667e-06,
+  "ETHUSDT": 8.418795833333e-06,
+  "SOLUSDT": 2.045533333333e-06,
+  "XRPUSDT": 1.15449625e-05,
+  "DOGEUSDT": 5.955991666667e-06,
+  "ADAUSDT": 1.83783125e-05,
+  "AVAXUSDT": -1.0546e-05,
+  "LINKUSDT": -1.65266625e-05,
+  "SUIUSDT": 5.154008333333e-06,
+  "PEPEUSDT": 7.8614233333333e-05,
+  "WIFUSDT": -4.0309820833333e-05,
+  "BONKUSDT": -0.000120703525,
+  "LTCUSDT": -1.949355e-05,
+  "DOTUSDT": -3.716783333333e-06,
+  "NEARUSDT": 4.3871220833333e-05,
+  "PAXGUSDT": 1.8652395833333e-05,
+  "EURUSDT": -5.9075391666667e-05
  },
  "carry": {},
  "carry_closed": [
@@ -628,8 +630,8 @@
  "pred_closed": [],
  "cash_rate": 0.0387,
  "income": {
-  "funding": 0.04222531313724754,
+  "funding": 0.0373853225402136,
   "carry": -0.21395110481479168,
-  "interest": 0.1230612693027145
+  "interest": 0.12317951188631787
  }
 }
