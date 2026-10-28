@@ -1,76 +1,76 @@
 {
- "updated": "2026-10-28T04:43:30Z",
+ "updated": "2026-10-28T04:51:30Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9542,
- "equity_pln": 1000.55,
- "return_pct": -1.6,
+ "equity_pln": 1000.67,
+ "return_pct": -1.58,
  "max_drawdown_pct": 5.04,
- "control_pln": 1064.67,
+ "control_pln": 1063.77,
  "control_trades": 1,
- "hodl_pln": 972.22,
+ "hodl_pln": 971.94,
  "positions": [
   {
    "symbol": "PAXGUSDT",
    "side": "long",
    "size": 0.07907,
    "entry": 4037.2108,
-   "mark": 4040.29,
-   "upnl": 0.24347234400001014,
+   "mark": 4037.5,
+   "upnl": 0.022867044000013003,
    "stop": 4038.0,
    "tp": 4095.0,
    "liq": null,
    "leverage": null,
    "opened": 1793109840000,
    "reason": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R).",
-   "upnl_pln": 0.96
+   "upnl_pln": 0.09
   },
   {
    "symbol": "XRPUSDT",
    "side": "long",
    "size": 161.816,
    "entry": 1.32089615,
-   "mark": 1.32945,
-   "upnl": 1.3841497915999958,
+   "mark": 1.32839,
+   "upnl": 1.212624831599986,
    "stop": 1.2985,
    "tp": 1.365,
    "liq": null,
    "leverage": null,
    "opened": 1793114460000,
    "reason": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts.",
-   "upnl_pln": 5.47
+   "upnl_pln": 4.79
   },
   {
    "symbol": "BTCUSDT",
    "side": "long",
    "size": 0.00322293,
    "entry": 81174.345,
-   "mark": 80882.8,
-   "upnl": -0.9396291268499944,
+   "mark": 80863.0,
+   "upnl": -1.0034431408500037,
    "stop": 80450.0,
    "tp": 82850.0,
    "liq": null,
    "leverage": null,
    "opened": 1793136660000,
    "reason": "Failed-breakdown breakout long: BTC held 79.1-79.4k 30d-low zone and reclaimed h4 ema20; trigger 81,150 is above h4 ema50 80.97k and the 24h high 80.72k. Stop 80,450 below the 20Z 4h range low area; TP 82,850 near h4 ema200 82.9k (~2.4R). Counts with XRP long as one risk-on bet (2% combined).",
-   "upnl_pln": -3.72
+   "upnl_pln": -3.97
   },
   {
    "symbol": "DOTUSDT",
    "side": "short",
    "size": 201.37,
    "entry": 1.0056982,
-   "mark": 1.0068,
-   "upnl": -0.22186946599996368,
+   "mark": 1.0046,
+   "upnl": 0.22114453400003226,
    "stop": 1.018,
    "tp": 0.955,
    "liq": null,
    "leverage": null,
    "opened": 1793137140000,
    "reason": "DOT broke its 30d low (0.995, below round 1.000; 7d -13%, h4 RSI 31, below h4 ema20 1.04). Short a retest of broken 1.000-1.006 from below. Stop 1.024 above completed 4h highs 1.0106/1.0126 plus ~1 h1 ATR (lesson: not AT the high). TP 0.955 (~2.8R). Bear-theme risk is small because ETH/SUI stops sit near entry.",
-   "upnl_pln": -0.88
+   "upnl_pln": 0.87
   }
  ],
  "closed_trades": [
@@ -284,7 +284,7 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 239.518736,
+ "cash_usd": 239.518838,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -317,20 +317,20 @@
  },
  "orders": [],
  "balance_warning": false,
- "other_value_usd": 13.044521,
+ "other_value_usd": 13.03089,
  "predictions": [
   {
    "market": "2589812",
    "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
    "outcome": "Yes",
    "entry": 0.94,
-   "mark": 0.957,
+   "mark": 0.956,
    "end": "2026-10-29T03:59:00Z",
    "opened": 1792704918998,
    "shares": 13.6306,
    "cost": 12.8946,
-   "value": 13.0445,
-   "pnl": 0.1499,
+   "value": 13.0309,
+   "pnl": 0.1363,
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me."
   }
  ],
