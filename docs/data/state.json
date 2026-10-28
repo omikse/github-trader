@@ -247,13 +247,41 @@
    "why": "stop",
    "opened": 1793136660000,
    "reason": "Failed-breakdown breakout long: BTC held 79.1-79.4k 30d-low zone and reclaimed h4 ema20; trigger 81,150 is above h4 ema50 80.97k and the 24h high 80.72k. Stop 80,450 below the 20Z 4h range low area; TP 82,850 near h4 ema200 82.9k (~2.4R). Counts with XRP long as one risk-on bet (2% combined)."
+  },
+  {
+   "id": "t62",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "qty": 0.063744,
+   "entry": 4076.2225,
+   "exit": 4037.98,
+   "pnl": -2.7222,
+   "time": 1793230800000,
+   "why": "stop",
+   "opened": 1793217600000,
+   "reason": "Gold breakout re-entry: trigger 4075 sits above the 4070.84 24h high + buffer (wick lesson); gold reclaimed h4 ema20 4033 and is pressing h4 ema50 4050. Stop 4040 under the 08Z 4h base; TP 4145 toward d1 ema20 4094 then h4 ema200 4141 (~2R). Separate theme from crypto longs."
   }
  ],
- "last_closed_check_ms": 1793230803839,
+ "last_closed_check_ms": 1793231283842,
  "day": "2026-10-28",
  "day_start_equity": 256.079068442065,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "position_closed",
+   "id": "t62",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "qty": 0.063744,
+   "entry": 4076.2225,
+   "exit": 4037.98,
+   "pnl": -2.7222,
+   "time": 1793230800000,
+   "why": "stop",
+   "opened": 1793217600000,
+   "reason": "Gold breakout re-entry: trigger 4075 sits above the 4070.84 24h high + buffer (wick lesson); gold reclaimed h4 ema20 4033 and is pressing h4 ema50 4050. Stop 4040 under the 08Z 4h base; TP 4145 toward d1 ema20 4094 then h4 ema200 4141 (~2R). Separate theme from crypto longs."
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 267.4918606522851,
@@ -262,7 +290,7 @@
   "trades": 2,
   "wins": 2
  },
- "last_btc": 81259.2,
+ "last_btc": 81256.6,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
