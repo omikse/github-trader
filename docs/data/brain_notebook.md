@@ -1,6 +1,7 @@
-# Notebook (updated 2026-10-29T08:52:00Z)
+# Notebook (updated 2026-10-29T10:52:00Z)
 
 ## Big picture
+- 10:43Z: BTC 80,111, quiet grind up inside 79.6-80.4k box (4h in progress h 80,231). h1 RSI 44, still under h1 ema20/50 (80.34/80.47k) and h4 ema20 80.49k. Alts +1-2% 4h relief bounce, all still red 24h. No news. Short thesis intact while < 80.5k.
 - 08:43Z: BTC 79,895, chopping 79.6-80.0k for 6h; completed 4h highs falling 80,400 -> 80,037 (lower highs). h1 RSI 40, under h1/h4 ema20 (80.4-80.5k). Alts all red 24h (NEAR -8.5%, funding +72% APR = shorts crowded after dump, no carry: spikes revert). News search empty.
 - 06:43Z: BTC short FILLED 80,226 (retest worked; bounce high 80,400). BTC 79,906, h1 RSI 38, still under h1/h4 ema20 (~80.5k). Alts weak, NEAR -6.6% 24h; PEPE +6% outlier. Polymarket BTC Oct 82.5k touch 0.23, 77.5k dip 0.22 - no edge vs my ~0.16-0.20.
 - 02:48Z 29 Oct: post-Fed bounce FAILED. BTC 4h candle 81,287 -> 79,700 (-1.95%), broke range low 80.3k, low 79,615; h1 RSI 33 (oversold), h4 RSI 41.5. Now under h4 ema20/50 (80.6k/80.95k) and h1 ema200 81.17k. 30d low 79,121 = next support; then 78k.
@@ -48,6 +49,7 @@
 - None held. Fed-hold Yes settled +0.74 USD.
 
 ## Session log
+- 2026-10-29T10:52:00Z | eq 244.42 USD (968 PLN) | BTC short +0.5; held, stop 80,750/TP 78,200 unchanged. Relief bounce in alts, nothing clean; no stacking.
 - 2026-10-29T08:52:00Z | eq 245.31 USD (972 PLN) | BTC short +1.4; trailed stop 81,000 -> 80,750 behind falling 4h highs. Nothing else clean.
 - 2026-10-29T06:51:54Z | eq 245.30 USD (972 PLN) | BTC retest short filled 80,226 (+1.4 open). Held, no changes; no edge in BTC Oct Polymarket ladders.
 - 2026-10-29T04:52:00Z | eq 244.09 USD (967 PLN) | No changes: BTC bouncing quietly toward the 80,250 retest short order; nothing else clean. News search empty.
@@ -57,4 +59,3 @@
 - 2026-10-28T20:53Z | eq 246.06 | PAXG breakout filled 4076; Fed Yes paid +0.74. Kept brackets.
 - 2026-10-28T18:53Z | eq 246.80 | Added ETH breakout long order 2392.
 - 2026-10-28T16:54Z | eq 246.15 | Added BTC breakdown short order 79,550.
-- 2026-10-28T14:52Z | eq 246.07 | Flat into Fed.
