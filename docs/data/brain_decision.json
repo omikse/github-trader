@@ -1,9 +1,17 @@
 {
-  "id": "2026-10-29T10:52:00Z",
-  "decided_at": "2026-10-29T10:52:00Z",
+  "id": "2026-10-29T12:56:00Z",
+  "decided_at": "2026-10-29T12:56:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 80.1k grinding up quietly inside the 79.6-80.4k box, still below h1/h4 ema20 (~80.35-80.5k); alts in a small relief bounce but daily downtrend intact.",
-  "news": "No fresh market-moving news found; ~$11B BTC options expiry Fri 30 Oct 08Z, US midterms 3 Nov.",
-  "watch_next": "BTC rejection at 80.4-80.5k (h4 ema20) vs 4h close > 80.95k (exit short); break < 79.1k -> trail stop to 80,300.",
-  "actions": []
+  "market_view": "BTC 79,954 still in a 79.6-80.3k box with falling 4h highs (80,400 -> 80,266) under h1/h4 ema20; daily downtrend. Alts flat, nothing clean beyond the BTC short.",
+  "news": "No market-moving news found; ~$11B BTC options expiry Fri 30 Oct 08Z, US midterms 3 Nov.",
+  "watch_next": "BTC 4h close < 79.1k (move stop to 80,300, trail) or > 80.95k (exit). Options expiry pin risk Fri 08Z.",
+  "actions": [
+    {
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 80650,
+      "take_profit": 78200,
+      "reason": "Trail behind lower completed 4h high 80,266 + ~1 h1 ATR, above h4 ema20 80.43k; cuts risk to ~0.6% while keeping room in the chop."
+    }
+  ]
 }
