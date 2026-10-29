@@ -1,33 +1,17 @@
 {
- "updated": "2026-10-29T16:45:44Z",
+ "updated": "2026-10-29T16:52:44Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9473,
- "equity_pln": 945.88,
- "return_pct": -6.81,
- "max_drawdown_pct": 9.39,
+ "equity_pln": 942.99,
+ "return_pct": -7.1,
+ "max_drawdown_pct": 9.44,
  "control_pln": 1026.47,
  "control_trades": 3,
- "hodl_pln": 975.79,
- "positions": [
-  {
-   "symbol": "BTCUSDT",
-   "side": "long",
-   "size": 0.00348606,
-   "entry": 81874.555,
-   "mark": 81321.9,
-   "upnl": -1.926588489299996,
-   "stop": 80900.0,
-   "tp": 84000.0,
-   "liq": null,
-   "leverage": null,
-   "opened": 1793290140000,
-   "reason": "Range breakout: buy above the 81,709 Fed-day high (+buffer) after the failed breakdown below 80.3k squeezed shorts to 81,404. Stop 80,900 back inside the range/under h4 ema50, TP 84,000 (~2.3R) toward h4 ema200 82.8k and beyond.",
-   "upnl_pln": -7.6
-  }
- ],
+ "hodl_pln": 974.32,
+ "positions": [],
  "closed_trades": [
   {
    "id": "t64",
@@ -308,52 +292,55 @@
  ],
  "trade_count": 20,
  "win_rate_pct": 30.0,
- "brain_calls_today": 8,
+ "brain_calls_today": 9,
  "last_decision": {
-  "time": "2026-10-29T14:53:45Z",
+  "time": "2026-10-29T16:52:44Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-29T14:53:00Z",
+  "decided_at": "2026-10-29T16:51:34Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 241.71,
-  "equity_pln": 954.1,
+  "equity_usd": 239.2,
+  "equity_pln": 944.19,
   "events": [
    {
-    "type": "position_closed",
-    "id": "t64",
+    "type": "order_filled",
+    "id": "o65",
     "symbol": "BTCUSDT",
-    "side": "short",
-    "qty": 0.00436762,
-    "entry": 80225.925,
-    "exit": 80690.325,
-    "pnl": -2.4149,
-    "time": 1793284380000,
-    "why": "stop",
-    "opened": 1793250540000,
-    "reason": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R)."
+    "side": "long",
+    "status": "filled",
+    "trigger": 81850,
+    "time": 1793290140000,
+    "detail": "filled at 81874.6"
    }
   ],
-  "market_view": "BTC short stopped on a squeeze to 81,404; the post-Fed breakdown failed and BTC is chopping in a 79.6-81.7k range on its h4 ema50 with options expiry tomorrow. No edge inside the range; only a breakout above the Fed high is worth trading.",
-  "watch_next": "BTC 4h close vs 81.7k (long order) and 79.1k (swap to short plan); PEPE post-wick structure; BONK funding persistence for carry.",
-  "news": "No relevant fresh news found; ~11B BTC options expiry Fri 08Z, US midterms 3 Nov.",
+  "market_view": "BTC breakout long filled 81,875 but the move topped at 81,882 and fell back to 81,377, below the 81,709 Fed high: a failed breakout inside the 79.6-81.9k chop range, with ~$11B options expiry Fri 08Z likely pinning 80-82k.",
+  "watch_next": "BTC 4h close > 81.9k (re-breakout) or < 79.1k (breakdown order). BONK/SOL funding persistence for carry.",
+  "news": "No fresh market-moving news found; options expiry Fri 30 Oct and US midterms 3 Nov are the scheduled events.",
   "actions": [
+   {
+    "type": "close",
+    "symbol": "BTCUSDT",
+    "reason": "Breakout thesis gone: price back below 81,709 within an hour, 4h high 81,882 rejected. Cutting at ~-1.7 instead of waiting for 80,900 stop (~-3.4) in a range that options expiry will likely pin.",
+    "result": "done",
+    "detail": "closed 0.00348606 at ~81199.3"
+   },
    {
     "type": "entry_order",
     "symbol": "BTCUSDT",
-    "side": "long",
-    "trigger": 81850,
-    "stop": 80900,
-    "take_profit": 84000,
+    "side": "short",
+    "trigger": 78900,
+    "stop": 79950,
+    "take_profit": 76800,
     "risk_pct": 0.015,
     "expires_hours": 48,
-    "reason": "Range breakout: buy above the 81,709 Fed-day high (+buffer) after the failed breakdown below 80.3k squeezed shorts to 81,404. Stop 80,900 back inside the range/under h4 ema50, TP 84,000 (~2.3R) toward h4 ema200 82.8k and beyond.",
-    "invalidation": "Fill then 4h close back under 81.2k, or a 4h close < 79.6k before fill (cancel).",
+    "reason": "Range-edge breakdown: below the 30d low 79,121 (+buffer) the daily downtrend (d1 ema20 81.6k, 30d -2.7%) resumes toward 77k. Stop back above the 79.6-79.9k post-Fed lows.",
+    "invalidation": "Reclaim of 79.95k after fill, or BTC 4h close > 81.9k before fill (cancel).",
     "result": "done",
-    "detail": "long 0.00348606 when price goes above 81850 (risk 1.5%, stop 80900.0, target 84000.0, expires in 48h) ok"
+    "detail": "short 0.0031562400000000003 when price goes below 78900 (risk 1.5%, stop 79950.0, target 76800.0, expires in 48h) ok"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 241.553604,
+ "cash_usd": 238.893698,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -379,7 +366,19 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [],
+ "orders": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "trigger": 78900,
+   "direction": "below",
+   "stop": 79950.0,
+   "tp": 76800.0,
+   "qty": 0.0031562400000000003,
+   "expires": 1793465564895,
+   "note": "Range-edge breakdown: below the 30d low 79,121 (+buffer) the daily downtrend (d1 ema20 81.6k, 30d -2.7%) resumes toward 77k. Stop back above the 79.6-79.9k post-Fed lows."
+  }
+ ],
  "balance_warning": false,
  "other_value_usd": 0,
  "predictions": [],
