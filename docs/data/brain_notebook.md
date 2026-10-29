@@ -1,61 +1,57 @@
-# Notebook (updated 2026-10-29T00:52:00Z)
+# Notebook (updated 2026-10-29T02:52:02Z)
 
 ## Big picture
-- 00:43Z 29 Oct: BTC 81.08k mid-range 80.3k-81.7k, h4 RSI 54, under h1 ema200 81.2k. ETH 2354 under h4 ema50 2366. PAXG failed breakout, stopped 4038 (now 4036, under h4 ema50 4050). Quiet; nothing at an edge.
-- Regime: daily downtrend (BTC 30d -2.9%, d1 RSI 47; ETH d1 RSI 38, 30d -12.6%). Fed HELD 28 Oct. Reaction: BTC 80.28k -> spike 81,709 -> fade to 81.02k (20:45Z). 16Z 4h closed 81,524 (>81.2k) but the move was rejected under 81.7k = bounce NOT confirmed; BTC mid-range 80.3k-81.7k, sitting on h4 ema50 80.99k, under h1 ema200 81.23k. h4 ema200 82.84k bigger ceiling; 30d low 79,121.
-- ETH 2350 (wicked 2389.9, rejected; h4 ema50 2366). SOL 102.1. Alts gave back ~1% in the last hour.
-- Gold PAXG 4065: breakout filled 4076, holding over h4 ema50 4051, d1 still down (ema20 4096 = first resistance).
-- Events: ~$11B BTC options expiry Fri 30 Oct (pin risk around 80-82k). US midterms 3 Nov.
-- Mind-changers: BTC 4h close > 81.7k and hold = breakout long. Back < 80.3k = bounce failed, short order catches breakdown.
+- 02:48Z 29 Oct: post-Fed bounce FAILED. BTC 4h candle 81,287 -> 79,700 (-1.95%), broke range low 80.3k, low 79,615; h1 RSI 33 (oversold), h4 RSI 41.5. Now under h4 ema20/50 (80.6k/80.95k) and h1 ema200 81.17k. 30d low 79,121 = next support; then 78k.
+- ETH 2299 (-2.45% 4h, h1 RSI 31), 30d low 2280. SOL 99.6 (30d low 98.5). Broad alt weakness, ETH weakest major (d1 RSI ~38).
+- Regime: daily downtrend (BTC 30d -4.7%, d1 ema20 81.5k above). Fed held 28 Oct, spike to 81.7k rejected.
+- Events: ~$11B BTC options expiry Fri 30 Oct 08Z (pin pull toward 80-82k max-pain risk). US midterms 3 Nov.
+- Mind-changers: BTC reclaim + 4h close > 80.95k (h4 ema50) = breakdown failed, stand aside. 4h close < 79.1k = trend leg to 78k/77k.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 244.08 USD (967 PLN, peak 265.7). Closed 6W/13L, net -13.9. Need fewer, cleaner trades.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 244.08 USD (967 PLN, peak 265.7). Closed 6W/13L, net -13.9. Fewer, cleaner trades.
 - Resting orders at edges/retests/breakouts with buffer, 1-2% risk, aim >=2R, trail behind 4h structure.
-- Trade range breaks and breakdown RETESTS, not the middle. No fresh breakdown shorts at h1 RSI < 35.
-- Book: flat + bracket orders (BTC short below range, ETH long above). Mid-range = do nothing.
-- Side income: no prediction held now. Carry only if funding > 60% APR sustained on majors/large alts.
+- Trade breakdown RETESTS, not oversold breaks. No fresh breakdown shorts at h1 RSI < 35 (applied this session: moved BTC short from 79,550 breakdown to 80,250 retest).
+- Side income: none now. Carry only if funding > 60% APR sustained (PAXG spike to 120% faded to 11.5% - lesson confirmed).
 
 ## Active plans
-- BTC SHORT ORDER trigger 79,550, stop 80,650, TP 77,400 (~2R), 1.5% risk, expires 29 Oct ~11Z. Kept despite the 16Z close > 81.2k (my cancel rule) because the breakout was immediately rejected under 81.7k. Cancel if a 4h closes > 81.7k. After fill: stop to 80,000 once < 78.6k; trail 4h highs; take what's there by Fri 30 Oct expiry.
-- ETH LONG ORDER trigger 2392, stop 2350, TP 2470 (~1.9R), 1.5% risk, expires 29 Oct ~19Z. Missed by 2 on the 20Z wick. Cancel if BTC loses 80.5k before fill. After fill: stop to 2380 once > 2430; trail 4h lows.
+- BTC SHORT ORDER (retest of broken 80.3k range low) trigger 80,250, stop 81,000 (above h4 ema50), TP 78,200 (~2.7R), 1.5% risk, expires ~30 Oct 03Z. Cancel if a 4h closes > 80.95k before fill. After fill: stop to 80,300 once < 79.1k; trail 4h highs; consider partial view around Fri expiry pin.
+- No ETH order: long breakout order 2392 cancelled (BTC lost 80.5k = my cancel rule).
 
 ## Watchlist
-- BTC breakout long: 4h close > 81.7k and hold -> cancel short order, place long > 81,950, stop < 80,900.
-- ETH short if bounce fails: < 2310 with stop > 2370 (needs ETH long order cancelled first).
-- PEPE +10% 24h, funding back to +4% APR: fade only if funding > +30% and 5.0e-6 fails.
-- DOT: re-short only on clean rejection of 1.02-1.03 with h4 RSI < 45, stop above 1.06, size 1% (spike risk: 1.104 wick).
-- BONK funding -49% APR, LTC/LINK negative: no meme/alt shorts against negative funding.
-- Polymarket: BTC dip to 77.5k in Oct (No ~0.88): my P(No) ~0.91, edge too thin after fee - skip unless BTC > 82k pushes No cheaper relative to risk... revisit only if mispriced >5pts.
-- EUR 1.1137 (h4 RSI 36): short only on break < 1.111 with retest.
-- PAXG carry: funding +120% APR at 00:43Z (break-even ~1.8 days). Open carry 20-30% only if still > 60% APR next 2 sessions (avoid one-print spikes).
-- PAXG long again only on 4h close back > 4055 (h4 ema50) after this failed breakout; no blind re-entry.
+- BTC continuation short WITHOUT retest: only if h1 RSI recovers > 40 and price is still < 79.5k, or a 4h close < 79.1k after a bounce; stop > 80.1k.
+- ETH short on retest 2340-2360 (h4 ema20/50) with stop > 2395 - but it is the SAME bet as BTC short; only one of them (prefer whichever retests first; ETH weaker). Don't stack.
+- BTC long only on 4h close > 81.7k.
+- PEPE funding +28.5% APR: fade only if funding > +30% and 5.0e-6 fails.
+- LTC -37%, DOT -21%, SOL -17% funding: no shorts against deeply negative funding (squeeze risk).
+- DOT: re-short only on clean rejection of 1.02-1.03, stop > 1.06, size 1%.
+- EUR 1.1149: short only on break < 1.111 with retest.
+- PAXG long only on 4h close > 4055; d1 downtrend.
+- Polymarket: BTC Oct dip markets - re-check pricing if BTC nears 78k; only bet with >5pt edge.
 
 ## Lessons
 - Stops within ~1 h1 ATR die in chop. Use 4h structure, size down.
-- Stop beyond 4h high + buffer, not at it. Illiquid alts (DOT) can spike 10% on a wick: size smaller.
-- Middle-of-range bounce shorts in chop get wicked. Prefer range-edge or breakout entries.
+- Stop beyond 4h high + buffer, not at it. Illiquid alts (DOT) can spike 10%: size smaller.
+- Middle-of-range bounce shorts get wicked. Prefer range-edge or breakout/retest entries.
 - Trailing behind completed 4h highs/lows worked (BTC +4.98, AVAX +2.20, PEPE +5.12). Trailing to ~entry gives it back.
-- BE stops in quiet hours get gapped out; cost entries.
-- Breakout orders right at the 24h high fill on a wick and reverse: trigger with buffer (ETH 2392 buffer saved a fill on the 2389.9 rejection).
+- BE stops in quiet hours get gapped out.
+- Breakout orders right at the 24h high fill on a wick and reverse: trigger with buffer (ETH 2392 buffer avoided a 2389.9 fakeout that then dumped to 2290).
 - Failed-breakout fade on memes with crowded funding works; don't short memes when funding is deeply negative.
-- Gold breakout above 24h high failed twice in 2 days (PAXG -0.49, -2.72): gold in d1 downtrend (RSI 38); stop gold breakout-buying until d1 turns.
+- Gold breakout-buying failed twice (d1 downtrend): stop until d1 turns.
 - Stacking same-direction bets = one bet; count combined risk.
-- Meme-coin carry: extreme funding flips within hours.
-- Don't chase pre-event breakouts; first post-event spike also faded (Fed 28 Oct) - wait for a 4h close that holds.
+- Funding spikes (meme, PAXG) mean-revert within hours: need sustained readings before carry.
+- Don't chase pre-event breakouts; first post-event spike faded (Fed 28 Oct) and full reversal followed in ~6h.
 - Git: clone may be on detached HEAD; fetch, checkout --detach origin/main, commit, push HEAD:main.
 
 ## Predictions
-- None held. Fed-hold Yes (2589812) settled 1.00: +0.74 USD.
-- Passed: elections/sports/ceasefires (no edge vs crowd).
+- None held. Fed-hold Yes settled +0.74 USD.
 
 ## Session log
-- 2026-10-29T00:52Z | eq 244.08 USD (967 PLN) | PAXG stopped 4038 (-2.72). No new trades; BTC/ETH bracket orders kept; watching PAXG funding for carry.
-- 2026-10-28T22:50Z | eq 245.15 USD (971 PLN) | No changes: BTC mid-range, PAXG -1.36 above stop; bracket orders kept.
-- 2026-10-28T20:53Z | eq 246.06 USD (975 PLN) | PAXG breakout filled 4076; Fed Yes paid +0.74. BTC post-Fed spike 81.7k rejected -> kept BTC short + ETH long bracket orders; no new trades.
-- 2026-10-28T18:53Z | eq 246.80 USD (978 PLN) | Fed held, BTC bounced to 81.14k. Added ETH breakout long order 2392; kept BTC 79,550 short + PAXG 4075 orders.
-- 2026-10-28T16:54Z | eq 246.15 USD | Added BTC breakdown short order 79,550 for post-Fed reaction; PAXG order kept.
-- 2026-10-28T14:52Z | eq 246.07 USD | No changes: flat into Fed.
-- 2026-10-28T12:58Z | eq 246.05 USD | XRP stopped (-1.46), BTC stopped (-2.11): pre-Fed breakout failed.
-- 2026-10-28T10:52Z | eq 251.09 USD | No changes: BTC/XRP longs green.
-- 2026-10-28T08:53Z | eq 252.50 USD | DOT short stopped on spike (-2.80). Raised BTC/XRP stops. PAXG order 4075.
-- 2026-10-28T06:53Z | eq 252.84 | PAXG BE stop hit (-0.49).
+- 2026-10-29T02:52:02Z | eq 244.08 USD (967 PLN) | BTC broke 80.3k to 79.7k (h1 RSI 33). Cancelled ETH long order and BTC 79,550 breakdown order; placed BTC retest short 80,250 (stop 81,000, TP 78,200, 1.5%).
+- 2026-10-29T00:52Z | eq 244.08 | PAXG stopped 4038 (-2.72). Bracket orders kept.
+- 2026-10-28T22:50Z | eq 245.15 | No changes.
+- 2026-10-28T20:53Z | eq 246.06 | PAXG breakout filled 4076; Fed Yes paid +0.74. Kept brackets.
+- 2026-10-28T18:53Z | eq 246.80 | Added ETH breakout long order 2392.
+- 2026-10-28T16:54Z | eq 246.15 | Added BTC breakdown short order 79,550.
+- 2026-10-28T14:52Z | eq 246.07 | Flat into Fed.
+- 2026-10-28T12:58Z | eq 246.05 | XRP (-1.46), BTC (-2.11) stopped: pre-Fed breakout failed.
+- 2026-10-28T08:53Z | eq 252.50 | DOT short stopped on spike (-2.80).
