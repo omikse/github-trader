@@ -1,34 +1,32 @@
 {
- "updated": "2026-10-29T14:33:44Z",
+ "updated": "2026-10-29T14:41:44Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9473,
- "equity_pln": 955.96,
- "return_pct": -5.82,
- "max_drawdown_pct": 8.19,
- "control_pln": 1024.69,
+ "equity_pln": 954.1,
+ "return_pct": -6.0,
+ "max_drawdown_pct": 8.37,
+ "control_pln": 1006.7,
  "control_trades": 2,
- "hodl_pln": 968.08,
- "positions": [
+ "hodl_pln": 974.35,
+ "positions": [],
+ "closed_trades": [
   {
+   "id": "t64",
    "symbol": "BTCUSDT",
    "side": "short",
-   "size": 0.00436762,
+   "qty": 0.00436762,
    "entry": 80225.925,
-   "mark": 80626.3,
-   "upnl": -1.7486858575,
-   "stop": 80650.0,
-   "tp": 78200.0,
-   "liq": null,
-   "leverage": null,
+   "exit": 80690.325,
+   "pnl": -2.4149,
+   "time": 1793284380000,
+   "why": "stop",
    "opened": 1793250540000,
    "reason": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R).",
-   "upnl_pln": -6.9
-  }
- ],
- "closed_trades": [
+   "pnl_pln": -9.53
+  },
   {
    "id": "t62",
    "symbol": "PAXGUSDT",
@@ -292,8 +290,8 @@
    "pnl_pln": -21.31
   }
  ],
- "trade_count": 19,
- "win_rate_pct": 31.6,
+ "trade_count": 20,
+ "win_rate_pct": 30.0,
  "brain_calls_today": 7,
  "last_decision": {
   "time": "2026-10-29T12:56:32Z",
@@ -319,7 +317,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 243.930442,
+ "cash_usd": 241.708429,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {

@@ -1,18 +1,6 @@
 {
- "cash": 243.93044246772544,
- "positions": {
-  "BTCUSDT": {
-   "side": "short",
-   "qty": 0.00436762,
-   "entry": 80225.925,
-   "stop": 80650.0,
-   "tp": 78200.0,
-   "opened": 1793250540000,
-   "entry_fee": 0.19271799500167502,
-   "mark": 80626.3,
-   "note": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R)."
-  }
- },
+ "cash": 241.7084285433738,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -256,11 +244,24 @@
    "why": "stop",
    "opened": 1793217600000,
    "reason": "Gold breakout re-entry: trigger 4075 sits above the 4070.84 24h high + buffer (wick lesson); gold reclaimed h4 ema20 4033 and is pressing h4 ema50 4050. Stop 4040 under the 08Z 4h base; TP 4145 toward d1 ema20 4094 then h4 ema200 4141 (~2R). Separate theme from crypto longs."
+  },
+  {
+   "id": "t64",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00436762,
+   "entry": 80225.925,
+   "exit": 80690.325,
+   "pnl": -2.4149,
+   "time": 1793284380000,
+   "why": "stop",
+   "opened": 1793250540000,
+   "reason": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R)."
   }
  ],
  "fills": [],
- "last_ms": 1793284424766,
- "next_id": 64,
+ "last_ms": 1793284904766,
+ "next_id": 65,
  "orders": [],
  "order_events": [
   {
@@ -698,6 +699,6 @@
  "income": {
   "funding": 0.04155059908944239,
   "carry": -0.21395110481479168,
-  "interest": 0.15372236600581707
+  "interest": 0.15386474215627793
  }
 }
