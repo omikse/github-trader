@@ -1,5 +1,5 @@
 {
- "cash": 244.08443157786547,
+ "cash": 244.08448554739624,
  "positions": {},
  "closed": [
   {
@@ -247,34 +247,21 @@
   }
  ],
  "fills": [],
- "last_ms": 1793242157906,
- "next_id": 63,
+ "last_ms": 1793242338085,
+ "next_id": 64,
  "orders": [
   {
-   "id": "o59",
+   "id": "o63",
    "symbol": "BTCUSDT",
    "side": "short",
-   "qty": 0.00310946,
-   "trigger": 79550,
-   "direction": "below",
-   "stop": 80650.0,
-   "tp": 77400.0,
-   "placed": 1793206370627,
-   "expires": 1793271170627,
-   "note": "Post-Fed breakdown catch: fills only if BTC breaks well below 24h low 80.3k toward 30d low 79.1k after the decision; stop above h4 ema20/prior lows 80.65k, TP 77.4k ~2R. Daily downtrend, d1 RSI 44."
-  },
-  {
-   "id": "o60",
-   "symbol": "ETHUSDT",
-   "side": "long",
-   "qty": 0.08294499999999999,
-   "trigger": 2392,
+   "qty": 0.00436762,
+   "trigger": 80250,
    "direction": "above",
-   "stop": 2350.0,
-   "tp": 2470.0,
-   "placed": 1793213569388,
-   "expires": 1793299969388,
-   "note": "Post-Fed relief breakout: fills only above 24h high 2383.8 + buffer if the bounce extends; stop under h4 ema50 2367 / 2350, TP 2470 ~1.9R. Brackets the BTC breakdown short order on the other side."
+   "stop": 81000.0,
+   "tp": 78200.0,
+   "placed": 1793242338085,
+   "expires": 1793328738085,
+   "note": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R)."
   }
  ],
  "order_events": [
@@ -628,6 +615,24 @@
    "trigger": 4075,
    "time": 1793217600000,
    "detail": "filled at 4076.22"
+  },
+  {
+   "id": "o60",
+   "symbol": "ETHUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 2392,
+   "time": 1793242338085,
+   "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o59",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 79550,
+   "time": 1793242338085,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -686,6 +691,6 @@
  "income": {
   "funding": 0.014506370071595935,
   "carry": -0.21395110481479168,
-  "interest": 0.1420377101622642
+  "interest": 0.14209167969301942
  }
 }

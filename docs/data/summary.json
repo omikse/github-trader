@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T02:49:17Z",
+ "updated": "2026-10-29T02:52:18Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,7 +10,7 @@
  "max_drawdown_pct": 7.12,
  "control_pln": 1059.91,
  "control_trades": 2,
- "hodl_pln": 960.9,
+ "hodl_pln": 961.33,
  "positions": [],
  "closed_trades": [
   {
@@ -278,37 +278,51 @@
  ],
  "trade_count": 19,
  "win_rate_pct": 31.6,
- "brain_calls_today": 1,
+ "brain_calls_today": 2,
  "last_decision": {
-  "time": "2026-10-29T00:52:03Z",
+  "time": "2026-10-29T02:52:18Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-29T00:52:00Z",
+  "decided_at": "2026-10-29T02:52:02Z",
   "model": "claude-opus-5-5",
   "equity_usd": 244.08,
-  "equity_pln": 967.15,
-  "events": [
+  "equity_pln": 967.16,
+  "events": [],
+  "market_view": "Post-Fed bounce failed: BTC broke the 80.3k range low to 79.7k (4h -1.95%), ETH 2299, alts weak; but h1 RSI ~31-33 is oversold right above 30d lows (BTC 79.1k, ETH 2280). Short the retest, not the hole.",
+  "watch_next": "Does BTC bounce into 80.0-80.3k and reject (order fills) or slice through 79.1k without a retest? Cancel short order on a 4h close > 80.95k.",
+  "news": "No specific catalyst found; ~$11B BTC options expiry Fri 30 Oct, US midterms 3 Nov.",
+  "actions": [
    {
-    "type": "position_closed",
-    "id": "t62",
-    "symbol": "PAXGUSDT",
-    "side": "long",
-    "qty": 0.063744,
-    "entry": 4076.2225,
-    "exit": 4037.98,
-    "pnl": -2.7222,
-    "time": 1793230800000,
-    "why": "stop",
-    "opened": 1793217600000,
-    "reason": "Gold breakout re-entry: trigger 4075 sits above the 4070.84 24h high + buffer (wick lesson); gold reclaimed h4 ema20 4033 and is pressing h4 ema50 4050. Stop 4040 under the 08Z 4h base; TP 4145 toward d1 ema20 4094 then h4 ema200 4141 (~2R). Separate theme from crypto longs."
+    "type": "cancel_order",
+    "symbol": "ETHUSDT",
+    "reason": "ETH long breakout idea is dead: BTC lost 80.5k (my cancel rule) and ETH dumped to 2299.",
+    "result": "done",
+    "detail": "cancelled 1 order(s)"
+   },
+   {
+    "type": "cancel_order",
+    "symbol": "BTCUSDT",
+    "reason": "Replace 79,550 breakdown trigger: it would fill at h1 RSI ~30 right above the 79.1k 30d low (lesson: no breakdown shorts at h1 RSI<35). Replacing with a retest entry.",
+    "result": "done",
+    "detail": "cancelled 1 order(s)"
+   },
+   {
+    "type": "entry_order",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "trigger": 80250,
+    "stop": 81000,
+    "take_profit": 78200,
+    "risk_pct": 0.015,
+    "expires_hours": 24,
+    "reason": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R).",
+    "invalidation": "4h close above 80.95k (h4 ema50) = breakdown failed.",
+    "result": "done",
+    "detail": "short 0.00436762 when price goes above 80250 (risk 1.5%, stop 81000.0, target 78200.0, expires in 24h) ok"
    }
-  ],
-  "market_view": "BTC 81.08k stuck mid-range 80.3k-81.7k after Fed; ETH 2354 under h4 ema50; PAXG gold breakout failed and stopped at 4038. Nothing at a range edge.",
-  "watch_next": "BTC 4h close >81.7k (cancel short, go long) or <80.3k (short order 79,550); ETH 2392 breakout; PAXG funding still >60% APR for carry; options expiry Fri 30 Oct.",
-  "news": "",
-  "actions": []
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 244.084432,
+ "cash_usd": 244.084486,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -338,24 +352,13 @@
   {
    "symbol": "BTCUSDT",
    "side": "short",
-   "trigger": 79550,
-   "direction": "below",
-   "stop": 80650.0,
-   "tp": 77400.0,
-   "qty": 0.00310946,
-   "expires": 1793271170627,
-   "note": "Post-Fed breakdown catch: fills only if BTC breaks well below 24h low 80.3k toward 30d low 79.1k after the decision; stop above h4 ema20/prior lows 80.65k, TP 77.4k ~2R. Daily downtrend, d1 RSI 44."
-  },
-  {
-   "symbol": "ETHUSDT",
-   "side": "long",
-   "trigger": 2392,
+   "trigger": 80250,
    "direction": "above",
-   "stop": 2350.0,
-   "tp": 2470.0,
-   "qty": 0.08294499999999999,
-   "expires": 1793299969388,
-   "note": "Post-Fed relief breakout: fills only above 24h high 2383.8 + buffer if the bounce extends; stop under h4 ema50 2367 / 2350, TP 2470 ~1.9R. Brackets the BTC breakdown short order on the other side."
+   "stop": 81000.0,
+   "tp": 78200.0,
+   "qty": 0.00436762,
+   "expires": 1793328738085,
+   "note": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R)."
   }
  ],
  "balance_warning": false,
