@@ -1,12 +1,9 @@
 {
-  "id": "2026-10-29T16:51:34Z",
-  "decided_at": "2026-10-29T16:51:34Z",
+  "id": "2026-10-29T18:47:00Z",
+  "decided_at": "2026-10-29T18:47:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC breakout long filled 81,875 but the move topped at 81,882 and fell back to 81,377, below the 81,709 Fed high: a failed breakout inside the 79.6-81.9k chop range, with ~$11B options expiry Fri 08Z likely pinning 80-82k.",
-  "news": "No fresh market-moving news found; options expiry Fri 30 Oct and US midterms 3 Nov are the scheduled events.",
-  "watch_next": "BTC 4h close > 81.9k (re-breakout) or < 79.1k (breakdown order). BONK/SOL funding persistence for carry.",
-  "actions": [
-    {"type": "close", "symbol": "BTCUSDT", "reason": "Breakout thesis gone: price back below 81,709 within an hour, 4h high 81,882 rejected. Cutting at ~-1.7 instead of waiting for 80,900 stop (~-3.4) in a range that options expiry will likely pin."},
-    {"type": "entry_order", "symbol": "BTCUSDT", "side": "short", "trigger": 78900, "stop": 79950, "take_profit": 76800, "risk_pct": 0.015, "expires_hours": 48, "reason": "Range-edge breakdown: below the 30d low 79,121 (+buffer) the daily downtrend (d1 ema20 81.6k, 30d -2.7%) resumes toward 77k. Stop back above the 79.6-79.9k post-Fed lows.", "invalidation": "Reclaim of 79.95k after fill, or BTC 4h close > 81.9k before fill (cancel)."}
-  ]
+  "market_view": "BTC rejected the 81.9k range top and is back mid-range at 80.56k with flat emas and RSI 50; alts weaker, several near 30d lows. No edge in the middle of a pinned range before Friday's options expiry.",
+  "news": "",
+  "watch_next": "BTC 4h close beyond 79.1k (short order) or 81.9k; post-expiry (Fri 08Z) range resolution; alt 30d lows (SOL 98.5, ETH 2,280).",
+  "actions": []
 }

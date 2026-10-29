@@ -1,6 +1,7 @@
-# Notebook (updated 2026-10-29T16:51:34Z)
+# Notebook (updated 2026-10-29T18:47:00Z)
 
 ## Big picture
+- 18:45Z 29 Oct: BTC rejected 81,882 and fell back to 80,560 = mid-range, h1/h4 emas flat ~80.6k, RSI 50. Alts weaker than BTC (NEAR -5.8% 24h, DOT/XRP -3.4%, SOL near 30d low 98.5, ETH 2,325 near 30d low 2,280). Range 79.6-81.9k intact; no edge in the middle.
 - 16:50Z 29 Oct: BTC breakout long filled 81,875, high only 81,882, now 81,377: FAILED breakout above the 81,709 Fed high. BTC remains in a 79.6-81.9k chop range. h1 RSI 62, above h1 emas (80.5k); h4 ema50 80.92k, d1 ema20 81.67k (price below), h4 ema200 82.76k overhead.
 - Daily trend still mildly down (30d -2.7%, 30d low 79,121, high 87,229). No momentum either side.
 - Alts -0.5 to -1% 1h in sync with BTC. PEPE +10% 24h after its 6.585e-6 wick, funding now -62.7% APR (shorts crowded). BONK funding 115% APR, SOL 65.9%, SUI 40% (longs crowded in some alts).
@@ -19,6 +20,7 @@
 
 ## Watchlist
 - BTC long: only on a 4h CLOSE > 81.9k then retest holding 81.7k; stop < 81.0k. Swap out the short order if that happens.
+- If BTC breaks < 79.1k, alts likely lead lower: SOL < 98.5 / ETH < 2,280 are confirmation, not extra bets (one bet).
 - ETH (weakest major, funding -11%): long trigger above 2,400 if BTC breaks up (use as the "up" order while BTC carries the short). Short on rejection 2390-2400 only if BTC breaks down.
 - BONK funding 115% APR (57.7 last session): carry if > 60% for 3+ sessions (2 of 3 so far counting this one). SOL 65.9% - first reading.
 - PEPE: funding -62.7% = no shorts. Long only on 4h close > 5.6e-6 with wide stop.
@@ -41,6 +43,7 @@
 - None held.
 
 ## Session log
+- 2026-10-29T18:47:00Z | eq 238.90 | Mid-range chop, stood aside; kept BTC breakdown short order 78,900.
 - 2026-10-29T16:51Z | eq 239.82 | BTC breakout long filled 81,875 and failed (now 81,377): closed (~-1.7). Placed BTC breakdown short order 78,900 (stop 79,950, TP 76,800, 1.5%).
 - 2026-10-29T14:53Z | eq 241.71 | BTC short stopped 80,690 (-2.41). Placed BTC breakout long order 81,850.
 - 2026-10-29T12:56Z | eq 245.12 | BTC short +1.2; trailed stop to 80,650.
