@@ -1,6 +1,7 @@
-# Notebook (updated 2026-10-29T02:52:02Z)
+# Notebook (updated 2026-10-29T04:52:00Z)
 
 ## Big picture
+- 04:43Z: quiet bounce after breakdown. BTC 79,985 (low 79,615), h1 RSI 38.6, under h1 ema20/50 (~80.6k) = retest zone 80.25-80.6k is ahead. Alts weak (NEAR -5%, ADA/AVAX -3.9% 24h); PEPE the outlier (+3.5%, near 30d high 5.23e-6).
 - 02:48Z 29 Oct: post-Fed bounce FAILED. BTC 4h candle 81,287 -> 79,700 (-1.95%), broke range low 80.3k, low 79,615; h1 RSI 33 (oversold), h4 RSI 41.5. Now under h4 ema20/50 (80.6k/80.95k) and h1 ema200 81.17k. 30d low 79,121 = next support; then 78k.
 - ETH 2299 (-2.45% 4h, h1 RSI 31), 30d low 2280. SOL 99.6 (30d low 98.5). Broad alt weakness, ETH weakest major (d1 RSI ~38).
 - Regime: daily downtrend (BTC 30d -4.7%, d1 ema20 81.5k above). Fed held 28 Oct, spike to 81.7k rejected.
@@ -21,7 +22,7 @@
 - BTC continuation short WITHOUT retest: only if h1 RSI recovers > 40 and price is still < 79.5k, or a 4h close < 79.1k after a bounce; stop > 80.1k.
 - ETH short on retest 2340-2360 (h4 ema20/50) with stop > 2395 - but it is the SAME bet as BTC short; only one of them (prefer whichever retests first; ETH weaker). Don't stack.
 - BTC long only on 4h close > 81.7k.
-- PEPE funding +28.5% APR: fade only if funding > +30% and 5.0e-6 fails.
+- PEPE (4.99e-6, funding 11% APR, near 30d high 5.23e-6): fade only on failed break of 5.23e-6 with funding > +30%; long only on 4h close > 5.25e-6 (but alts weak).
 - LTC -37%, DOT -21%, SOL -17% funding: no shorts against deeply negative funding (squeeze risk).
 - DOT: re-short only on clean rejection of 1.02-1.03, stop > 1.06, size 1%.
 - EUR 1.1149: short only on break < 1.111 with retest.
@@ -46,6 +47,7 @@
 - None held. Fed-hold Yes settled +0.74 USD.
 
 ## Session log
+- 2026-10-29T04:52:00Z | eq 244.09 USD (967 PLN) | No changes: BTC bouncing quietly toward the 80,250 retest short order; nothing else clean. News search empty.
 - 2026-10-29T02:52:02Z | eq 244.08 USD (967 PLN) | BTC broke 80.3k to 79.7k (h1 RSI 33). Cancelled ETH long order and BTC 79,550 breakdown order; placed BTC retest short 80,250 (stop 81,000, TP 78,200, 1.5%).
 - 2026-10-29T00:52Z | eq 244.08 | PAXG stopped 4038 (-2.72). Bracket orders kept.
 - 2026-10-28T22:50Z | eq 245.15 | No changes.
