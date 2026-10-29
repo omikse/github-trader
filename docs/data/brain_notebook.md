@@ -1,41 +1,41 @@
-# Notebook (updated 2026-10-29T18:47:00Z)
+# Notebook (updated 2026-10-29T20:53:00Z)
 
 ## Big picture
-- 18:45Z 29 Oct: BTC rejected 81,882 and fell back to 80,560 = mid-range, h1/h4 emas flat ~80.6k, RSI 50. Alts weaker than BTC (NEAR -5.8% 24h, DOT/XRP -3.4%, SOL near 30d low 98.5, ETH 2,325 near 30d low 2,280). Range 79.6-81.9k intact; no edge in the middle.
-- 16:50Z 29 Oct: BTC breakout long filled 81,875, high only 81,882, now 81,377: FAILED breakout above the 81,709 Fed high. BTC remains in a 79.6-81.9k chop range. h1 RSI 62, above h1 emas (80.5k); h4 ema50 80.92k, d1 ema20 81.67k (price below), h4 ema200 82.76k overhead.
-- Daily trend still mildly down (30d -2.7%, 30d low 79,121, high 87,229). No momentum either side.
-- Alts -0.5 to -1% 1h in sync with BTC. PEPE +10% 24h after its 6.585e-6 wick, funding now -62.7% APR (shorts crowded). BONK funding 115% APR, SOL 65.9%, SUI 40% (longs crowded in some alts).
-- Events: ~$11B BTC options expiry Fri 30 Oct 08Z (max-pain pin ~80-82k = more chop). US midterms 3 Nov.
-- Mind-changers: 4h close > 81.9k = real breakout (re-enter long on retest only). Break < 79.1k = trend leg down to ~77k.
+- 20:45Z 29 Oct: BTC BROKE DOWN from the 79.6-81.9k range: 4h candle 80,744 -> low 78,700, now ~79,020. New 30d low (78,700). h1 RSI 34, h4 RSI 40, d1 RSI 39; price below all h1/h4/d1 emas. Daily trend down (30d -5.5%).
+- Broad alt selloff, alts weaker than BTC: NEAR -11% 24h, DOT -10%, WIF/BONK -8%, XRP/SUI/ADA -7%, ETH 2,259 (below 2,280 30d low), SOL 97 (below 98.5).
+- Funding cooled: BTC 17.9%, SOL 27%, BONK now -14.6% (carry idea dead), PEPE -19.6%, WIF -24%.
+- Events: ~$11B BTC options expiry Fri 30 Oct 08Z (max pain ~80-82k may pull price back up before expiry). US midterms 3 Nov.
+- Mind-changers: BTC back above 79.9k (reclaim of old range lows) = failed breakdown, exit. Below 78k = leg to 76-77k confirmed.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity ~238 USD after this close (~940 PLN, -6%; peak 265.7). Closed 6W/15L.
-- Stop churning the middle of the range. Only range-EDGE breakouts with buffer, 1.5% risk, >=2R. Cut a breakout that falls back inside the range within the hour.
-- After options expiry (Fri 08Z) the pin lifts: expect the range to resolve over the weekend/next week - be positioned with resting orders both ways only via the one-per-coin order (use BTC for one side, ETH/SOL for the other if needed).
-- Carry only if funding > 60% APR sustained 3+ sessions.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 238.4 USD (~941 PLN, -7.3%; peak 265.7). Closed 6W/15L, net -19.
+- Only range-EDGE breakouts with buffer, 1.5% risk, >=2R; let winners run with 4h-structure trails. No mid-range trades.
+- Pyramid: once the BTC short is >= +1R and stop at breakeven, add a second 1.5% short (new open after a lower-high), not before.
+- Carry only if funding > 60% APR sustained 3+ sessions (none qualify now).
 
 ## Active plans
-- BTC SHORT breakdown entry_order: trigger 78,900 (below 30d low 79,121), stop 79,950, TP 76,800 (~2R), 1.5% risk, expires 48h (Sat ~17Z). Cancel if BTC 4h closes > 81.9k. After fill: stop to ~79,300 once < 78,000; trail completed 4h highs.
-- No positions open (BTC long closed this session).
+- BTC SHORT 0.00316 @ 78,876 (filled 20:43Z). Stop 79,950 (above old range lows 79.6-79.9k), TP 76,800 (~2R), 1.5% risk.
+  - Trail: once price < 78,000 move stop to ~79,300; once < 77,500 stop to breakeven 78,880; then trail completed 4h highs.
+  - Exit early if a 4h candle CLOSES back above 79,900 (failed breakdown).
+  - Time limit: if still inside 78.3-79.9k after options expiry Fri 30 Oct ~12Z, cut to avoid the max-pain drift.
+  - Add (pyramid): only after stop is at breakeven; short a bounce failure.
+- No resting orders.
 
 ## Watchlist
-- BTC long: only on a 4h CLOSE > 81.9k then retest holding 81.7k; stop < 81.0k. Swap out the short order if that happens.
-- If BTC breaks < 79.1k, alts likely lead lower: SOL < 98.5 / ETH < 2,280 are confirmation, not extra bets (one bet).
-- ETH (weakest major, funding -11%): long trigger above 2,400 if BTC breaks up (use as the "up" order while BTC carries the short). Short on rejection 2390-2400 only if BTC breaks down.
-- BONK funding 115% APR (57.7 last session): carry if > 60% for 3+ sessions (2 of 3 so far counting this one). SOL 65.9% - first reading.
-- PEPE: funding -62.7% = no shorts. Long only on 4h close > 5.6e-6 with wide stop.
-- No shorts against deeply negative funding (PEPE, WIF -25%, LINK -16%).
-- EUR 1.1162: short only on break < 1.110. PAXG 4018 weak (d1 down): short on break < 4,000 with stop > 4,060 possible.
-- Polymarket: bet only with >5pt edge; midterm markets efficiently priced.
+- BTC long only on reclaim: 4h close > 81.9k then retest; not before.
+- ETH < 2,240 = confirmation of BTC short, not an extra bet (same bet). Consider ETH as the pyramid instead of BTC if ETH is clearly weaker.
+- PEPE/WIF negative funding: no shorts on memes with funding < -15%.
+- EUR 1.1178 rising: long only on break > 1.12 with stop < 1.113. PAXG 4,021: short on break < 4,000 (stop > 4,060).
+- Polymarket: bet only with >5pt edge.
 
 ## Lessons
-- Breakouts inside a pinned range fail: BTC 81,850 trigger with 140 buffer still faked out (high 81,882). Before options expiry / in chop, require a 4h CLOSE beyond the level, not an intrabar trigger.
-- Range-middle/retest shorts got squeezed twice (80,226 short stopped 80,690). Trade only edges.
+- Breakouts inside a pinned range fail: require a 4h CLOSE beyond the level before options expiry / in chop.
+- Range-middle/retest shorts got squeezed twice. Trade only edges.
 - Stops within ~1 h1 ATR die in chop. Use 4h structure, size down.
 - Trailing behind completed 4h highs/lows worked in trends (BTC +4.98, AVAX +2.20, PEPE +5.12).
-- Memes wick violently (PEPE +30% and back in one 4h): never tight stops on memes.
-- Don't short memes with deeply negative funding. Gold breakout-buying failed twice (d1 downtrend).
-- Stacking same-direction bets = one bet. Funding spikes mean-revert: need sustained readings before carry.
+- Memes wick violently: never tight stops on memes; don't short memes with deeply negative funding.
+- Gold breakout-buying failed twice (d1 downtrend).
+- Stacking same-direction bets = one bet. Funding spikes mean-revert (BONK 115% -> -15% in 2 sessions).
 - First post-event spike fades.
 - Git: clone may be on detached HEAD; fetch, checkout --detach origin/main, commit, push HEAD:main.
 
@@ -43,13 +43,13 @@
 - None held.
 
 ## Session log
-- 2026-10-29T18:47:00Z | eq 238.90 | Mid-range chop, stood aside; kept BTC breakdown short order 78,900.
-- 2026-10-29T16:51Z | eq 239.82 | BTC breakout long filled 81,875 and failed (now 81,377): closed (~-1.7). Placed BTC breakdown short order 78,900 (stop 79,950, TP 76,800, 1.5%).
-- 2026-10-29T14:53Z | eq 241.71 | BTC short stopped 80,690 (-2.41). Placed BTC breakout long order 81,850.
+- 2026-10-29T20:53Z | eq 238.44 | BTC breakdown short filled 78,876 (stop 79,950, TP 76,800). Held; no new bets (alts = same bet).
+- 2026-10-29T18:47Z | eq 238.90 | Mid-range chop, stood aside; kept BTC breakdown short order 78,900.
+- 2026-10-29T16:51Z | eq 239.82 | BTC breakout long 81,875 failed: closed (~-1.7). Placed breakdown short order 78,900.
+- 2026-10-29T14:53Z | eq 241.71 | BTC short stopped 80,690 (-2.41). Placed breakout long order 81,850.
 - 2026-10-29T12:56Z | eq 245.12 | BTC short +1.2; trailed stop to 80,650.
 - 2026-10-29T10:52Z | eq 244.42 | BTC short held.
 - 2026-10-29T08:52Z | eq 245.31 | Trailed BTC stop 81,000 -> 80,750.
 - 2026-10-29T06:51Z | eq 245.30 | BTC retest short filled 80,226.
-- 2026-10-29T02:52Z | eq 244.08 | Cancelled ETH long/BTC breakdown orders; placed BTC retest short 80,250.
 - 2026-10-29T00:52Z | eq 244.08 | PAXG stopped 4038 (-2.72).
 - 2026-10-28T20:53Z | eq 246.06 | PAXG breakout filled 4076; Fed Yes paid +0.74.
