@@ -263,11 +263,22 @@
    "reason": "Gold breakout re-entry: trigger 4075 sits above the 4070.84 24h high + buffer (wick lesson); gold reclaimed h4 ema20 4033 and is pressing h4 ema50 4050. Stop 4040 under the 08Z 4h base; TP 4145 toward d1 ema20 4094 then h4 ema200 4141 (~2R). Separate theme from crypto longs."
   }
  ],
- "last_closed_check_ms": 1793250497983,
+ "last_closed_check_ms": 1793250977960,
  "day": "2026-10-29",
  "day_start_equity": 244.0813901315287,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_filled",
+   "id": "o63",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 80250,
+   "time": 1793250540000,
+   "detail": "filled at 80225.9"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 267.4918606522851,
@@ -276,7 +287,7 @@
   "trades": 2,
   "wins": 2
  },
- "last_btc": 80247.7,
+ "last_btc": 80341.3,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -318,7 +329,8 @@
   "o47:filled",
   "o56:filled",
   "o60:cancelled",
-  "o59:cancelled"
+  "o59:cancelled",
+  "o63:filled"
  ],
  "last_decision_id": "2026-10-29T04:52:00Z",
  "cash_rate_day": "2026-10-29"

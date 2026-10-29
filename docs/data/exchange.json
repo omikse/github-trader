@@ -1,6 +1,18 @@
 {
- "cash": 244.08692971746999,
- "positions": {},
+ "cash": 243.89434334193638,
+ "positions": {
+  "BTCUSDT": {
+   "side": "short",
+   "qty": 0.00436762,
+   "entry": 80225.925,
+   "stop": 81000.0,
+   "tp": 78200.0,
+   "opened": 1793250540000,
+   "entry_fee": 0.19271799500167502,
+   "mark": 80341.3,
+   "note": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R)."
+  }
+ },
  "closed": [
   {
    "id": "t5",
@@ -247,23 +259,9 @@
   }
  ],
  "fills": [],
- "last_ms": 1793250497983,
+ "last_ms": 1793250977960,
  "next_id": 64,
- "orders": [
-  {
-   "id": "o63",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "qty": 0.00436762,
-   "trigger": 80250,
-   "direction": "above",
-   "stop": 81000.0,
-   "tp": 78200.0,
-   "placed": 1793242338085,
-   "expires": 1793328738085,
-   "note": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R)."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -633,6 +631,15 @@
    "trigger": 79550,
    "time": 1793242338085,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o63",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 80250,
+   "time": 1793250540000,
+   "detail": "filled at 80225.9"
   }
  ],
  "funding_rates": {
@@ -691,6 +698,6 @@
  "income": {
   "funding": 0.014506370071595935,
   "carry": -0.21395110481479168,
-  "interest": 0.14453584976666375
+  "interest": 0.14466746923472515
  }
 }

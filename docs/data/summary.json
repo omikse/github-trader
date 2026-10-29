@@ -1,17 +1,33 @@
 {
- "updated": "2026-10-29T05:08:17Z",
+ "updated": "2026-10-29T05:16:17Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9624,
- "equity_pln": 967.17,
- "return_pct": -5.08,
- "max_drawdown_pct": 7.12,
+ "equity_pln": 964.41,
+ "return_pct": -5.35,
+ "max_drawdown_pct": 7.39,
  "control_pln": 1059.91,
  "control_trades": 2,
- "hodl_pln": 966.59,
- "positions": [],
+ "hodl_pln": 967.71,
+ "positions": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "size": 0.00436762,
+   "entry": 80225.925,
+   "mark": 80341.3,
+   "upnl": -0.5039141575,
+   "stop": 81000.0,
+   "tp": 78200.0,
+   "liq": null,
+   "leverage": null,
+   "opened": 1793250540000,
+   "reason": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R).",
+   "upnl_pln": -2.0
+  }
+ ],
  "closed_trades": [
   {
    "id": "t62",
@@ -314,7 +330,7 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 244.08693,
+ "cash_usd": 243.894343,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -340,19 +356,7 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [
-  {
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "trigger": 80250,
-   "direction": "above",
-   "stop": 81000.0,
-   "tp": 78200.0,
-   "qty": 0.00436762,
-   "expires": 1793328738085,
-   "note": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R)."
-  }
- ],
+ "orders": [],
  "balance_warning": false,
  "other_value_usd": 0,
  "predictions": [],
