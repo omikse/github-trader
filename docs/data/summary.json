@@ -1,17 +1,33 @@
 {
- "updated": "2026-10-29T20:38:05Z",
+ "updated": "2026-10-29T20:46:05Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9473,
- "equity_pln": 943.0,
- "return_pct": -7.09,
- "max_drawdown_pct": 9.44,
- "control_pln": 982.41,
+ "equity_pln": 942.29,
+ "return_pct": -7.16,
+ "max_drawdown_pct": 9.61,
+ "control_pln": 953.67,
  "control_trades": 3,
- "hodl_pln": 957.24,
- "positions": [],
+ "hodl_pln": 945.63,
+ "positions": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "size": 0.0031562400000000003,
+   "entry": 78876.33,
+   "mark": 78885.3,
+   "upnl": -0.028311472800003675,
+   "stop": 79950.0,
+   "tp": 76800.0,
+   "liq": null,
+   "leverage": null,
+   "opened": 1793306580000,
+   "reason": "Range-edge breakdown: below the 30d low 79,121 (+buffer) the daily downtrend (d1 ema20 81.6k, 30d -2.7%) resumes toward 77k. Stop back above the 79.6-79.9k post-Fed lows.",
+   "upnl_pln": -0.11
+  }
+ ],
  "closed_trades": [
   {
    "id": "t66",
@@ -336,7 +352,7 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 238.897662,
+ "cash_usd": 238.760875,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -367,19 +383,7 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [
-  {
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "trigger": 78900,
-   "direction": "below",
-   "stop": 79950.0,
-   "tp": 76800.0,
-   "qty": 0.0031562400000000003,
-   "expires": 1793465564895,
-   "note": "Range-edge breakdown: below the 30d low 79,121 (+buffer) the daily downtrend (d1 ema20 81.6k, 30d -2.7%) resumes toward 77k. Stop back above the 79.6-79.9k post-Fed lows."
-  }
- ],
+ "orders": [],
  "balance_warning": false,
  "other_value_usd": 0,
  "predictions": [],

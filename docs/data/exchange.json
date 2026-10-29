@@ -1,6 +1,18 @@
 {
- "cash": 238.89766194677134,
- "positions": {},
+ "cash": 238.7608750084839,
+ "positions": {
+  "BTCUSDT": {
+   "side": "short",
+   "qty": 0.0031562400000000003,
+   "entry": 78876.33,
+   "stop": 79950.0,
+   "tp": 76800.0,
+   "opened": 1793306580000,
+   "entry_fee": 0.13692394528956003,
+   "mark": 78885.3,
+   "note": "Range-edge breakdown: below the 30d low 79,121 (+buffer) the daily downtrend (d1 ema20 81.6k, 30d -2.7%) resumes toward 77k. Stop back above the 79.6-79.9k post-Fed lows."
+  }
+ },
  "closed": [
   {
    "id": "t5",
@@ -273,23 +285,9 @@
   }
  ],
  "fills": [],
- "last_ms": 1793306285788,
+ "last_ms": 1793306765728,
  "next_id": 68,
- "orders": [
-  {
-   "id": "o67",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "qty": 0.0031562400000000003,
-   "trigger": 78900,
-   "direction": "below",
-   "stop": 79950.0,
-   "tp": 76800.0,
-   "placed": 1793292764895,
-   "expires": 1793465564895,
-   "note": "Range-edge breakdown: below the 30d low 79,121 (+buffer) the daily downtrend (d1 ema20 81.6k, 30d -2.7%) resumes toward 77k. Stop back above the 79.6-79.9k post-Fed lows."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -677,6 +675,15 @@
    "trigger": 81850,
    "time": 1793290140000,
    "detail": "filled at 81874.6"
+  },
+  {
+   "id": "o67",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 78900,
+   "time": 1793306580000,
+   "detail": "filled at 78876.3"
   }
  ],
  "funding_rates": {
@@ -735,6 +742,6 @@
  "income": {
   "funding": 0.04155059908944239,
   "carry": -0.21395110481479168,
-  "interest": 0.16009968975569752
+  "interest": 0.1602366967578225
  }
 }
