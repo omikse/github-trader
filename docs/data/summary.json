@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T16:52:44Z",
+ "updated": "2026-10-29T17:00:44Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,9 +10,23 @@
  "max_drawdown_pct": 9.44,
  "control_pln": 1026.47,
  "control_trades": 3,
- "hodl_pln": 974.32,
+ "hodl_pln": 973.84,
  "positions": [],
  "closed_trades": [
+  {
+   "id": "t66",
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "qty": 0.00348606,
+   "entry": 81874.555,
+   "exit": 81156.14585,
+   "pnl": -2.817,
+   "time": 1793292764895,
+   "why": "manual close",
+   "opened": 1793290140000,
+   "reason": "Range breakout: buy above the 81,709 Fed-day high (+buffer) after the failed breakdown below 80.3k squeezed shorts to 81,404. Stop 80,900 back inside the range/under h4 ema50, TP 84,000 (~2.3R) toward h4 ema200 82.8k and beyond.",
+   "pnl_pln": -11.12
+  },
   {
    "id": "t64",
    "symbol": "BTCUSDT",
@@ -290,8 +304,8 @@
    "pnl_pln": -21.31
   }
  ],
- "trade_count": 20,
- "win_rate_pct": 30.0,
+ "trade_count": 21,
+ "win_rate_pct": 28.6,
  "brain_calls_today": 9,
  "last_decision": {
   "time": "2026-10-29T16:52:44Z",
@@ -340,7 +354,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 238.893698,
+ "cash_usd": 238.893839,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
