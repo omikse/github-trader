@@ -1,17 +1,33 @@
 {
- "updated": "2026-10-29T16:05:44Z",
+ "updated": "2026-10-29T16:13:44Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9473,
- "equity_pln": 954.1,
- "return_pct": -6.0,
- "max_drawdown_pct": 8.37,
+ "equity_pln": 950.2,
+ "return_pct": -6.39,
+ "max_drawdown_pct": 8.75,
  "control_pln": 1026.47,
  "control_trades": 3,
- "hodl_pln": 980.75,
- "positions": [],
+ "hodl_pln": 979.55,
+ "positions": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "size": 0.00348606,
+   "entry": 81874.555,
+   "mark": 81635.2,
+   "upnl": -0.8344058912999858,
+   "stop": 80900.0,
+   "tp": 84000.0,
+   "liq": null,
+   "leverage": null,
+   "opened": 1793290140000,
+   "reason": "Range breakout: buy above the 81,709 Fed-day high (+buffer) after the failed breakdown below 80.3k squeezed shorts to 81,404. Stop 80,900 back inside the range/under h4 ema50, TP 84,000 (~2.3R) toward h4 ema200 82.8k and beyond.",
+   "upnl_pln": -3.29
+  }
+ ],
  "closed_trades": [
   {
    "id": "t64",
@@ -337,7 +353,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 241.709924,
+ "cash_usd": 241.55308,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -363,19 +379,7 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [
-  {
-   "symbol": "BTCUSDT",
-   "side": "long",
-   "trigger": 81850,
-   "direction": "above",
-   "stop": 80900.0,
-   "tp": 84000.0,
-   "qty": 0.00348606,
-   "expires": 1793458425022,
-   "note": "Range breakout: buy above the 81,709 Fed-day high (+buffer) after the failed breakdown below 80.3k squeezed shorts to 81,404. Stop 80,900 back inside the range/under h4 ema50, TP 84,000 (~2.3R) toward h4 ema200 82.8k and beyond."
-  }
- ],
+ "orders": [],
  "balance_warning": false,
  "other_value_usd": 0,
  "predictions": [],

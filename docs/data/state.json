@@ -276,11 +276,22 @@
    "reason": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R)."
   }
  ],
- "last_closed_check_ms": 1793289944801,
+ "last_closed_check_ms": 1793290424949,
  "day": "2026-10-29",
  "day_start_equity": 244.0813901315287,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_filled",
+   "id": "o65",
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "status": "filled",
+   "trigger": 81850,
+   "time": 1793290140000,
+   "detail": "filled at 81874.6"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 260.0435214840671,
@@ -289,7 +300,7 @@
   "trades": 3,
   "wins": 2
  },
- "last_btc": 81735.0,
+ "last_btc": 81635.2,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -332,7 +343,8 @@
   "o56:filled",
   "o60:cancelled",
   "o59:cancelled",
-  "o63:filled"
+  "o63:filled",
+  "o65:filled"
  ],
  "last_decision_id": "2026-10-29T14:53:00Z",
  "cash_rate_day": "2026-10-29"
