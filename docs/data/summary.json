@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T04:44:17Z",
+ "updated": "2026-10-29T04:52:18Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,7 +10,7 @@
  "max_drawdown_pct": 7.12,
  "control_pln": 1059.91,
  "control_trades": 2,
- "hodl_pln": 963.4,
+ "hodl_pln": 964.03,
  "positions": [],
  "closed_trades": [
   {
@@ -278,51 +278,43 @@
  ],
  "trade_count": 19,
  "win_rate_pct": 31.6,
- "brain_calls_today": 2,
+ "brain_calls_today": 3,
  "last_decision": {
-  "time": "2026-10-29T02:52:18Z",
+  "time": "2026-10-29T04:52:18Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-29T02:52:02Z",
+  "decided_at": "2026-10-29T04:52:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 244.08,
-  "equity_pln": 967.16,
-  "events": [],
-  "market_view": "Post-Fed bounce failed: BTC broke the 80.3k range low to 79.7k (4h -1.95%), ETH 2299, alts weak; but h1 RSI ~31-33 is oversold right above 30d lows (BTC 79.1k, ETH 2280). Short the retest, not the hole.",
-  "watch_next": "Does BTC bounce into 80.0-80.3k and reject (order fills) or slice through 79.1k without a retest? Cancel short order on a 4h close > 80.95k.",
-  "news": "No specific catalyst found; ~$11B BTC options expiry Fri 30 Oct, US midterms 3 Nov.",
-  "actions": [
+  "equity_usd": 244.09,
+  "equity_pln": 967.17,
+  "events": [
    {
-    "type": "cancel_order",
+    "type": "order_cancelled",
+    "id": "o60",
     "symbol": "ETHUSDT",
-    "reason": "ETH long breakout idea is dead: BTC lost 80.5k (my cancel rule) and ETH dumped to 2299.",
-    "result": "done",
-    "detail": "cancelled 1 order(s)"
+    "side": "long",
+    "status": "cancelled",
+    "trigger": 2392,
+    "time": 1793242338085,
+    "detail": "cancelled by the brain"
    },
    {
-    "type": "cancel_order",
-    "symbol": "BTCUSDT",
-    "reason": "Replace 79,550 breakdown trigger: it would fill at h1 RSI ~30 right above the 79.1k 30d low (lesson: no breakdown shorts at h1 RSI<35). Replacing with a retest entry.",
-    "result": "done",
-    "detail": "cancelled 1 order(s)"
-   },
-   {
-    "type": "entry_order",
+    "type": "order_cancelled",
+    "id": "o59",
     "symbol": "BTCUSDT",
     "side": "short",
-    "trigger": 80250,
-    "stop": 81000,
-    "take_profit": 78200,
-    "risk_pct": 0.015,
-    "expires_hours": 24,
-    "reason": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R).",
-    "invalidation": "4h close above 80.95k (h4 ema50) = breakdown failed.",
-    "result": "done",
-    "detail": "short 0.00436762 when price goes above 80250 (risk 1.5%, stop 81000.0, target 78200.0, expires in 24h) ok"
+    "status": "cancelled",
+    "trigger": 79550,
+    "time": 1793242338085,
+    "detail": "cancelled by the brain"
    }
-  ]
+  ],
+  "market_view": "BTC broke the 80.3k range low to 79,615 and is bouncing quietly to 79,985 (h1 RSI 38.6) back toward the broken level and h1 ema20/50 ~80.6k; daily downtrend intact, alts weaker than BTC.",
+  "watch_next": "Did the 80,250 retest short fill? If filled and BTC < 79.1k, move stop to 80,300. Cancel if a 4h closes > 80.95k. PEPE vs 5.23e-6.",
+  "news": "No fresh market-moving news found; Fri 30 Oct BTC options expiry and US midterms 3 Nov are the scheduled events.",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 244.086498,
+ "cash_usd": 244.086642,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
