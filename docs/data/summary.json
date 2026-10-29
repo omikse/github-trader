@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-29T07:00:17Z",
+ "updated": "2026-10-29T07:08:17Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9624,
- "equity_pln": 972.48,
- "return_pct": -4.55,
+ "equity_pln": 973.39,
+ "return_pct": -4.47,
  "max_drawdown_pct": 7.4,
- "control_pln": 1059.91,
+ "control_pln": 1058.1,
  "control_trades": 2,
- "hodl_pln": 962.13,
+ "hodl_pln": 961.5,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00436762,
    "entry": 80225.925,
-   "mark": 79877.4,
-   "upnl": 1.522224760500038,
+   "mark": 79825.0,
+   "upnl": 1.7510880485000127,
    "stop": 81000.0,
    "tp": 78200.0,
    "liq": null,
    "leverage": null,
    "opened": 1793250540000,
    "reason": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R).",
-   "upnl_pln": 6.03
+   "upnl_pln": 6.94
   }
  ],
  "closed_trades": [
@@ -320,12 +320,17 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 243.905183,
+ "cash_usd": 243.905313,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
-  "equity": 267.4918606522851,
-  "pos": null
+  "equity": 267.10925853201087,
+  "pos": {
+   "side": "short",
+   "entry": 79816.57175,
+   "qty": 0.008715486062959832,
+   "stop": 80649.520311512
+  }
  },
  "pairs": {
   "BTCUSDT": "XBTUSD",
