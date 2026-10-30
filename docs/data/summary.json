@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-30T11:55:28Z",
+ "updated": "2026-10-30T12:03:29Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9251,
- "equity_pln": 974.08,
- "return_pct": -3.49,
+ "equity_pln": 973.31,
+ "return_pct": -3.57,
  "max_drawdown_pct": 10.31,
  "control_pln": 999.86,
  "control_trades": 5,
- "hodl_pln": 921.67,
+ "hodl_pln": 922.41,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0031010300000000003,
    "entry": 78276.51000000001,
-   "mark": 77245.7,
-   "upnl": 3.1965727343000383,
+   "mark": 77307.9,
+   "upnl": 3.003688668300047,
    "stop": 78750.0,
    "tp": 75500.0,
    "liq": null,
    "leverage": null,
    "opened": 1793336640000,
    "reason": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R.",
-   "upnl_pln": 12.55
+   "upnl_pln": 11.79
   }
  ],
  "closed_trades": [
@@ -361,7 +361,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 244.969949,
+ "cash_usd": 244.975449,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -413,11 +413,11 @@
   {
    "symbol": "BONKUSDT",
    "notional": 61.19,
-   "earned": 0.0533,
+   "earned": 0.0582,
    "fees": 0.1836,
-   "net_if_closed_now": -0.3139,
-   "funding_pct_per_hour": 0.01376,
-   "funding_apr_pct": 120.5,
+   "net_if_closed_now": -0.3089,
+   "funding_pct_per_hour": 0.00808,
+   "funding_apr_pct": 70.8,
    "opened": 1793343314035,
    "reason": "BONK funding > 60% APR for 3 sessions (96, 76, now 153%). At 153% APR (0.42%/day) break-even on 0.6% round-trip costs ~1.5 days. Close if funding < 30% for 2 sessions or negative."
   }
@@ -438,9 +438,9 @@
   }
  ],
  "income_pln": {
-  "funding": 0.31,
-  "carry": -1.35,
-  "interest": 0.68
+  "funding": 0.32,
+  "carry": -1.33,
+  "interest": 0.69
  },
  "cash_rate_pct": 3.87
 }
