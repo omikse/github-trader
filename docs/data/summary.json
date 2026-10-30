@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-30T10:44:13Z",
+ "updated": "2026-10-30T10:52:14Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
- "fx_usd_pln": 3.9473,
- "equity_pln": 975.56,
- "return_pct": -3.89,
+ "fx_usd_pln": 3.9251,
+ "equity_pln": 971.06,
+ "return_pct": -3.79,
  "max_drawdown_pct": 10.31,
- "control_pln": 1005.52,
+ "control_pln": 999.86,
  "control_trades": 5,
- "hodl_pln": 930.8,
+ "hodl_pln": 924.6,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0031010300000000003,
    "entry": 78276.51000000001,
-   "mark": 77572.4,
-   "upnl": 2.183466233300047,
-   "stop": 79000.0,
+   "mark": 77491.0,
+   "upnl": 2.435890075300029,
+   "stop": 78750.0,
    "tp": 75500.0,
    "liq": null,
    "leverage": null,
    "opened": 1793336640000,
    "reason": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R.",
-   "upnl_pln": 8.62
+   "upnl_pln": 9.56
   }
  ],
  "closed_trades": [
@@ -41,7 +41,7 @@
    "why": "target",
    "opened": 1793306580000,
    "reason": "Range-edge breakdown: below the 30d low 79,121 (+buffer) the daily downtrend (d1 ema20 81.6k, 30d -2.7%) resumes toward 77k. Stop back above the 79.6-79.9k post-Fed lows.",
-   "pnl_pln": 24.8
+   "pnl_pln": 24.66
   },
   {
    "id": "t66",
@@ -55,7 +55,7 @@
    "why": "manual close",
    "opened": 1793290140000,
    "reason": "Range breakout: buy above the 81,709 Fed-day high (+buffer) after the failed breakdown below 80.3k squeezed shorts to 81,404. Stop 80,900 back inside the range/under h4 ema50, TP 84,000 (~2.3R) toward h4 ema200 82.8k and beyond.",
-   "pnl_pln": -11.12
+   "pnl_pln": -11.06
   },
   {
    "id": "t64",
@@ -69,7 +69,7 @@
    "why": "stop",
    "opened": 1793250540000,
    "reason": "Retest short of the broken 80.3k range low after failed post-Fed bounce; daily downtrend, under h4 ema20/50. Stop above h4 ema50 80.95k, TP 78.2k below the 79.1k 30d low (~2.7R).",
-   "pnl_pln": -9.53
+   "pnl_pln": -9.48
   },
   {
    "id": "t62",
@@ -83,7 +83,7 @@
    "why": "stop",
    "opened": 1793217600000,
    "reason": "Gold breakout re-entry: trigger 4075 sits above the 4070.84 24h high + buffer (wick lesson); gold reclaimed h4 ema20 4033 and is pressing h4 ema50 4050. Stop 4040 under the 08Z 4h base; TP 4145 toward d1 ema20 4094 then h4 ema200 4141 (~2R). Separate theme from crypto longs.",
-   "pnl_pln": -10.75
+   "pnl_pln": -10.68
   },
   {
    "id": "t58",
@@ -97,7 +97,7 @@
    "why": "stop",
    "opened": 1793136660000,
    "reason": "Failed-breakdown breakout long: BTC held 79.1-79.4k 30d-low zone and reclaimed h4 ema20; trigger 81,150 is above h4 ema50 80.97k and the 24h high 80.72k. Stop 80,450 below the 20Z 4h range low area; TP 82,850 near h4 ema200 82.9k (~2.4R). Counts with XRP long as one risk-on bet (2% combined).",
-   "pnl_pln": -8.32
+   "pnl_pln": -8.27
   },
   {
    "id": "t57",
@@ -111,7 +111,7 @@
    "why": "stop",
    "opened": 1793114460000,
    "reason": "XRP relative-strength breakout: strongest major (24h +1.4%, h4 RSI 57, above h4 ema20 1.299) while alts sit near 30d lows; trigger 1.3205 above the 1-day range highs 1.310-1.315. Stop 1.2985 below h4 ema20 and the range middle; TP 1.365 near d1 ema50 1.36 (~2R). Also partly hedges the bear-theme shorts.",
-   "pnl_pln": -5.75
+   "pnl_pln": -5.72
   },
   {
    "id": "t55",
@@ -125,7 +125,7 @@
    "why": "stop",
    "opened": 1793137140000,
    "reason": "DOT broke its 30d low (0.995, below round 1.000; 7d -13%, h4 RSI 31, below h4 ema20 1.04). Short a retest of broken 1.000-1.006 from below. Stop 1.024 above completed 4h highs 1.0106/1.0126 plus ~1 h1 ATR (lesson: not AT the high). TP 0.955 (~2.8R). Bear-theme risk is small because ETH/SUI stops sit near entry.",
-   "pnl_pln": -11.07
+   "pnl_pln": -11.01
   },
   {
    "id": "t54",
@@ -139,7 +139,7 @@
    "why": "stop (gap)",
    "opened": 1793109840000,
    "reason": "Gold breakout long, uncorrelated with crypto shorts: PAXG h1 RSI 67, pressing 4h highs 4031.8 after holding 3980 30d low; trigger above 4h high, stop below h4 ema20 4019 / 4015 4h low, TP 4095 (~2.1R).",
-   "pnl_pln": -1.93
+   "pnl_pln": -1.91
   },
   {
    "id": "t51",
@@ -181,7 +181,7 @@
    "why": "stop",
    "opened": 1793007000000,
    "reason": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel.",
-   "pnl_pln": -8.52
+   "pnl_pln": -8.47
   },
   {
    "id": "t43",
@@ -209,7 +209,7 @@
    "why": "stop",
    "opened": 1792976580000,
    "reason": "Breakdown-retest short: BTC lost 80.0k range floor that held 3x over the weekend; short a bounce back into 80.0-80.2k (old support, below h1 ema20 80.37k). Stop above 20Z 4h high 80,624 + buffer; TP 78,700 near/below 30d low 79.12k (~2.6R).",
-   "pnl_pln": -6.74
+   "pnl_pln": -6.7
   },
   {
    "id": "t36",
@@ -223,7 +223,7 @@
    "why": "stop",
    "opened": 1792868280000,
    "reason": "Bounce-short: BTC broke the 30d low 79.75k (flush to 79.12k), lower 4h highs 81.10k/80.99k/80.72k/80.75k, below h1 ema20 80.57k and h4 ema20 81.25k. A relief bounce into 80.45k (old breakdown zone / h1 ema20) is the short; stop above the last 4h high 80.75k + buffer, TP 78.5k (~3.2R).",
-   "pnl_pln": -12.07
+   "pnl_pln": -12.0
   },
   {
    "id": "t31",
@@ -251,7 +251,7 @@
    "why": "target",
    "opened": 1792776600000,
    "reason": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding).",
-   "pnl_pln": 20.23
+   "pnl_pln": 20.11
   },
   {
    "id": "t22",
@@ -265,7 +265,7 @@
    "why": "stop",
    "opened": 1792744500000,
    "reason": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R.",
-   "pnl_pln": 3.33
+   "pnl_pln": 3.31
   },
   {
    "id": "t15",
@@ -279,7 +279,7 @@
    "why": "stop",
    "opened": 1792651560000,
    "reason": "",
-   "pnl_pln": 19.66
+   "pnl_pln": 19.55
   },
   {
    "id": "t14",
@@ -293,7 +293,7 @@
    "why": "stop",
    "opened": 1792654920000,
    "reason": "",
-   "pnl_pln": 8.69
+   "pnl_pln": 8.64
   },
   {
    "id": "t12",
@@ -307,7 +307,7 @@
    "why": "stop",
    "opened": 1792674540000,
    "reason": "",
-   "pnl_pln": -1.16
+   "pnl_pln": -1.15
   },
   {
    "id": "t8",
@@ -319,7 +319,7 @@
    "pnl": -5.1595,
    "time": 1792657080000,
    "why": "stop",
-   "pnl_pln": -20.37
+   "pnl_pln": -20.25
   },
   {
    "id": "t5",
@@ -331,37 +331,37 @@
    "pnl": -5.3977,
    "time": 1792639980000,
    "why": "stop",
-   "pnl_pln": -21.31
+   "pnl_pln": -21.19
   }
  ],
  "trade_count": 22,
  "win_rate_pct": 31.8,
- "brain_calls_today": 5,
+ "brain_calls_today": 6,
  "last_decision": {
-  "time": "2026-10-30T08:52:14Z",
+  "time": "2026-10-30T10:52:14Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-30T08:51:29Z",
+  "decided_at": "2026-10-30T10:51:49Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 246.3,
-  "equity_pln": 972.23,
+  "equity_usd": 247.4,
+  "equity_pln": 971.06,
   "events": [],
-  "market_view": "BTC 77.8k grinding under h1 ema20 (78.7k) after the 76.3k low; bounce capped at 78.67k (4h high). d1/h4 downtrend intact, alts weak (ETH -4%, BONK -5.6%). Options expiry passed without a pull to 80k.",
-  "watch_next": "BTC 4h close < 77,000 -> trail stop to 78,700; < 76,300 -> breakeven and pyramid consideration. 4h close > 78,700 -> bounce resuming, watch 79k. BONK funding stays > 30% APR.",
-  "news": "No fresh market-moving news found; US midterms 3 Nov ahead.",
+  "market_view": "BTC 77.6k grinding lower under h1 ema20 78.5k after the bounce topped at 78,667; d1 downtrend intact (RSI 35). Alts slightly bid, PEPE squeezing on negative funding. BONK funding cooled to 129% APR but still well above carry threshold.",
+  "watch_next": "4h close < 77,000 (trail stop to 78,000 area) or < 76,300 (pyramid after breakeven); 4h close > 78,700 = close short. BONK funding trend.",
+  "news": "No clear market-moving headlines found; US midterms 3 Nov remain the next scheduled event.",
   "actions": [
    {
     "type": "move_stop",
     "symbol": "BTCUSDT",
-    "stop": 79000,
+    "stop": 78750,
     "take_profit": 75500,
-    "reason": "Expiry passed and the bounce topped at 78,667 (completed 4h high). Trail stop to 79,000 (above that high + ~0.5 ATR) to cut risk while keeping the bounce-fail thesis intact.",
+    "reason": "Trail stop just above the completed 4h bounce high 78,667 (structure, ~1.8 h1 ATR away). A move back above it means the bounce-fail thesis is wrong; locks risk to ~+0.6 USD loss max vs +2.1 open profit.",
     "result": "done",
-    "detail": "stop 79000.0, target 75500.0"
+    "detail": "stop 78750.0, target 75500.0"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 244.962215,
+ "cash_usd": 244.962313,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -406,7 +406,7 @@
    "opened": 1792704918998,
    "why": "resolved win",
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
-   "pnl_pln": 2.91
+   "pnl_pln": 2.89
   }
  ],
  "carry": [
@@ -439,8 +439,8 @@
  ],
  "income_pln": {
   "funding": 0.32,
-  "carry": -1.39,
-  "interest": 0.69
+  "carry": -1.38,
+  "interest": 0.68
  },
  "cash_rate_pct": 3.87
 }
