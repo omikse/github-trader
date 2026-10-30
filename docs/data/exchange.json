@@ -1,5 +1,5 @@
 {
- "cash": 245.0948561345603,
+ "cash": 244.9114210092717,
  "positions": {
   "BTCUSDT": {
    "side": "short",
@@ -9,7 +9,7 @@
    "tp": 75500.0,
    "opened": 1793336640000,
    "entry_fee": 0.13350579319291503,
-   "mark": 78332.4,
+   "mark": 78381.7,
    "note": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R."
   }
  },
@@ -298,7 +298,7 @@
   }
  ],
  "fills": [],
- "last_ms": 1793342833875,
+ "last_ms": 1793343314035,
  "next_id": 70,
  "orders": [],
  "order_events": [
@@ -727,7 +727,16 @@
   "PAXGUSDT": -6.549604166667e-06,
   "EURUSDT": -3.2239958333333e-05
  },
- "carry": {},
+ "carry": {
+  "BONKUSDT": {
+   "notional": 61.19,
+   "opened": 1793343314035,
+   "earned": 0.0,
+   "fees": 0.18356999999999998,
+   "rate_at_open": 0.0001752502625,
+   "note": "BONK funding > 60% APR for 3 sessions (96, 76, now 153%). At 153% APR (0.42%/day) break-even on 0.6% round-trip costs ~1.5 days. Close if funding < 30% for 2 sessions or negative."
+  }
+ },
  "carry_closed": [
   {
    "id": "c20",
@@ -763,7 +772,7 @@
  "cash_rate": 0.0387,
  "income": {
   "funding": 0.07859754734164534,
-  "carry": -0.21395110481479168,
-  "interest": 0.17060044617503223
+  "carry": -0.39752110481479164,
+  "interest": 0.17073532088643345
  }
 }
