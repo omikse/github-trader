@@ -1,18 +1,6 @@
 {
- "cash": 238.79482952802883,
- "positions": {
-  "BTCUSDT": {
-   "side": "short",
-   "qty": 0.0031562400000000003,
-   "entry": 78876.33,
-   "stop": 79950.0,
-   "tp": 76800.0,
-   "opened": 1793306580000,
-   "entry_fee": 0.13692394528956003,
-   "mark": 77238.7,
-   "note": "Range-edge breakdown: below the 30d low 79,121 (+buffer) the daily downtrend (d1 ema20 81.6k, 30d -2.7%) resumes toward 77k. Stop back above the 79.6-79.9k post-Fed lows."
-  }
- },
+ "cash": 245.2150468542996,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -282,11 +270,24 @@
    "why": "manual close",
    "opened": 1793290140000,
    "reason": "Range breakout: buy above the 81,709 Fed-day high (+buffer) after the failed breakdown below 80.3k squeezed shorts to 81,404. Stop 80,900 back inside the range/under h4 ema50, TP 84,000 (~2.3R) toward h4 ema200 82.8k and beyond."
+  },
+  {
+   "id": "t68",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.0031562400000000003,
+   "entry": 78876.33,
+   "exit": 76800.0,
+   "pnl": 6.2832,
+   "time": 1793319720000,
+   "why": "target",
+   "opened": 1793306580000,
+   "reason": "Range-edge breakdown: below the 30d low 79,121 (+buffer) the daily downtrend (d1 ema20 81.6k, 30d -2.7%) resumes toward 77k. Stop back above the 79.6-79.9k post-Fed lows."
   }
  ],
  "fills": [],
- "last_ms": 1793319605674,
- "next_id": 68,
+ "last_ms": 1793320085666,
+ "next_id": 69,
  "orders": [],
  "order_events": [
   {
@@ -742,6 +743,6 @@
  "income": {
   "funding": 0.07200371405193548,
   "carry": -0.21395110481479168,
-  "interest": 0.16373810134028532
+  "interest": 0.16387920601103909
  }
 }
