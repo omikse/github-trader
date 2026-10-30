@@ -1,11 +1,17 @@
 {
-  "id": "2026-10-30T10:51:49Z",
-  "decided_at": "2026-10-30T10:51:49Z",
+  "id": "2026-10-30T12:53:12Z",
+  "decided_at": "2026-10-30T12:53:12Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 77.6k grinding lower under h1 ema20 78.5k after the bounce topped at 78,667; d1 downtrend intact (RSI 35). Alts slightly bid, PEPE squeezing on negative funding. BONK funding cooled to 129% APR but still well above carry threshold.",
-  "news": "No clear market-moving headlines found; US midterms 3 Nov remain the next scheduled event.",
-  "watch_next": "4h close < 77,000 (trail stop to 78,000 area) or < 76,300 (pyramid after breakeven); 4h close > 78,700 = close short. BONK funding trend.",
+  "market_view": "BTC 77.35k grinding below h1 ema20 (78.3k); the 08-12Z 4h candle made a lower high (78,096) and closed 77,262. d1/h4 downtrend intact (RSI ~35), alts weak except PEPE squeeze. BONK funding cooling to 71% APR.",
+  "news": "No fresh market-moving headline found; US midterms 3 Nov remain the scheduled macro event.",
+  "watch_next": "4h close < 76,300 -> trail stop below 77.5k area and consider pyramid; 4h close > 78,100 -> short likely stopped/close. BONK funding: close carry if < 30% APR for 2 sessions.",
   "actions": [
-    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 78750, "take_profit": 75500, "reason": "Trail stop just above the completed 4h bounce high 78,667 (structure, ~1.8 h1 ATR away). A move back above it means the bounce-fail thesis is wrong; locks risk to ~+0.6 USD loss max vs +2.1 open profit."}
+    {
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 78250,
+      "take_profit": 75500,
+      "reason": "Trail to breakeven-ish (entry 78,276) just above the new completed 4h lower high 78,096 (+~0.25 h1 ATR, ~1.2% from price). Trade becomes risk-free; a reclaim above 78.1-78.25k would mean the bounce-fail thesis is wrong."
+    }
   ]
 }
