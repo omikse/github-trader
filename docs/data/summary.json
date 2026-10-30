@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-30T09:56:13Z",
+ "updated": "2026-10-30T10:04:13Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9473,
- "equity_pln": 975.96,
- "return_pct": -3.85,
+ "equity_pln": 977.54,
+ "return_pct": -3.69,
  "max_drawdown_pct": 10.31,
  "control_pln": 1005.52,
  "control_trades": 5,
- "hodl_pln": 930.38,
+ "hodl_pln": 928.86,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0031010300000000003,
    "entry": 78276.51000000001,
-   "mark": 77537.1,
-   "upnl": 2.2929325923000112,
+   "mark": 77410.5,
+   "upnl": 2.6855229903000293,
    "stop": 79000.0,
    "tp": 75500.0,
    "liq": null,
    "leverage": null,
    "opened": 1793336640000,
    "reason": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R.",
-   "upnl_pln": 9.05
+   "upnl_pln": 10.6
   }
  ],
  "closed_trades": [
@@ -361,7 +361,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 244.954377,
+ "cash_usd": 244.96172,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -413,11 +413,11 @@
   {
    "symbol": "BONKUSDT",
    "notional": 61.19,
-   "earned": 0.0359,
+   "earned": 0.0449,
    "fees": 0.1836,
-   "net_if_closed_now": -0.3313,
-   "funding_pct_per_hour": 0.0207,
-   "funding_apr_pct": 181.3,
+   "net_if_closed_now": -0.3223,
+   "funding_pct_per_hour": 0.01471,
+   "funding_apr_pct": 128.9,
    "opened": 1793343314035,
    "reason": "BONK funding > 60% APR for 3 sessions (96, 76, now 153%). At 153% APR (0.42%/day) break-even on 0.6% round-trip costs ~1.5 days. Close if funding < 30% for 2 sessions or negative."
   }
@@ -438,8 +438,8 @@
   }
  ],
  "income_pln": {
-  "funding": 0.33,
-  "carry": -1.43,
+  "funding": 0.32,
+  "carry": -1.39,
   "interest": 0.68
  },
  "cash_rate_pct": 3.87
