@@ -1,5 +1,5 @@
 {
- "cash": 245.21544963612465,
+ "cash": 245.21548578122616,
  "positions": {},
  "closed": [
   {
@@ -286,9 +286,23 @@
   }
  ],
  "fills": [],
- "last_ms": 1793321424165,
- "next_id": 69,
- "orders": [],
+ "last_ms": 1793321544280,
+ "next_id": 70,
+ "orders": [
+  {
+   "id": "o69",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.0031010300000000003,
+   "trigger": 78300,
+   "direction": "above",
+   "stop": 79400.0,
+   "tp": 75500.0,
+   "placed": 1793321544280,
+   "expires": 1793407944280,
+   "note": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R."
+  }
+ ],
  "order_events": [
   {
    "id": "o2",
@@ -743,6 +757,6 @@
  "income": {
   "funding": 0.07200371405193548,
   "carry": -0.21395110481479168,
-  "interest": 0.16428198783601447
+  "interest": 0.16431813293753253
  }
 }
