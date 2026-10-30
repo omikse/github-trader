@@ -1,34 +1,34 @@
-# Notebook (updated 2026-10-30T08:50Z)
+# Notebook (updated 2026-10-30T10:52Z)
 
 ## Big picture
-- 30 Oct 08:45Z: BTC 77,820. Bounce from 76,330 topped at 78,667 (4h high), now below h1 ema20 78.7k, h4 ema20 79.7k, d1 ema20 81.0k (d1 RSI 36). ETH 2,222 (-4% 24h), SOL 96.9, alts weak. Options expiry 08Z passed without pull to 80k.
-- Funding: BONK +177%, PEPE +60%, SOL -47%, ADA -45%, LINK -29%, WIF -25%. Alt shorts crowded (squeeze risk on any BTC reclaim).
-- Trend: d1 downtrend, lower highs since 87.2k. US midterms 3 Nov.
-- Key levels BTC: resistance 78.7k, 79.4k, 79.9k; support 76.3k, then 75k.
+- 30 Oct 10:40Z: BTC 77,608. Bounce from 76,330 topped at 78,667 (04-08Z 4h high); price below h1 ema20 78.5k, h4 ema20 79.7k, d1 ema20 81.0k (d1 RSI 35). ETH 2,242, SOL 97, alts slightly bid today. PEPE +4% squeezing (funding -37%).
+- Funding: BONK +129% (down from 177%), PAXG +52%, NEAR -71%, SOL -67%, WIF -43%, LTC -40%. Alt shorts crowded (squeeze risk on any BTC reclaim).
+- Trend: d1 downtrend, lower highs since 87.2k. US midterms 3 Nov (Polymarket: D House 93%).
+- Key levels BTC: resistance 78.7k, 79.4k, 79.9k; support 77.2k, 76.3k, then 75k.
 - Mind-changers: 4h close > 79,400 = breakdown failed, go neutral. 4h close < 76,000 = continuation to 74-75k.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 246.36 USD (~972 PLN, -2.8%; peak 265.7). Closed 7W/15L.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 247.03 USD (~975 PLN, -3.9%; peak 265.7). Closed 7W/15L.
 - Range-EDGE breakouts / bounce-fails with structure stops, ~1.5% risk, >=2R; trail behind completed 4h highs/lows. No mid-range trades.
 - Pyramid only into a position at breakeven.
 - Carry only if funding > 60% APR sustained 3+ sessions; size <= 25%.
 
 ## Active plans
-- BTC SHORT 78,276 (opened 05:04Z), stop 79,000 (trailed 08:50Z from 79,400), TP 75,500.
-  - Trail: stop to 78,700 once 4h close < 77,000; breakeven (78,280) once < 76,500; then completed 4h highs.
-  - Close early if a 4h candle closes > 78,900.
+- BTC SHORT 78,276 (opened 05:04Z), stop 78,750 (trailed 10:52Z above 4h high 78,667), TP 75,500. Open +2.07.
+  - Trail: breakeven (78,280) once 4h close < 77,000; then above each completed 4h high.
+  - Close early if a 4h candle closes > 78,500 (reclaim of h1 ema20 / bounce zone).
   - Add (pyramid) only after stop at breakeven and a 4h close < 76,300.
-  - Time limit: if still 77.5-79k by Sun 1 Nov 12Z, close.
-- BONK CARRY 25% opened 06:55Z: funding 96 -> 76 -> 153 -> 177% APR. Net if closed now -0.34 (fees). Break-even ~1.3 days at 177%.
+  - Time limit: if still 77.2-78.7k by Sun 1 Nov 12Z, close.
+- BONK CARRY 25% opened 06:55Z: funding 96 -> 76 -> 153 -> 177 -> 129% APR. Net if closed now -0.32 (fees). Break-even ~1.7 days at 129%.
   - Close if funding < 30% APR for 2 sessions or turns negative; review by Tue 3 Nov regardless.
 
 ## Watchlist
 - BTC long only on reclaim: 4h close > 79,900 then retest.
 - ETH short alternative if ETH < 2,170 with BTC weak (not stacked with BTC short - same bet).
-- Alt short-squeeze long (SOL/ADA/LINK with deeply negative funding) only if BTC 4h closes > 79,400.
-- PEPE funding 82 -> 60%: carry candidate only if > 60% for 2 more sessions (no 2nd meme carry while BONK open unless small).
-- EUR 1.119: long only on break > 1.12, stop < 1.113. PAXG 3,988: short on 4h close < 3,980 (stop > 4,050).
-- Polymarket: bet only with >5pt edge.
+- Alt short-squeeze long (SOL/NEAR/ADA with deeply negative funding) only if BTC 4h closes > 79,400.
+- PEPE: squeezing on negative funding; no short. Long only if BTC turns up.
+- EUR 1.120 at the break level: long on 4h close > 1.121, stop < 1.113. PAXG 3,984: short on 4h close < 3,975 (stop > 4,050).
+- Polymarket: bet only with >5pt edge (midterm markets look fairly priced).
 
 ## Lessons
 - Range-edge breakdown short with 4h-close confirmation + structure stop worked (+6.28 at 2R). Bounce-fail resting order filled as planned and is in profit.
@@ -45,6 +45,7 @@
 - None held.
 
 ## Session log
+- 2026-10-30T10:52Z | eq 247.03 | BTC short +2.07; trailed stop 79,000 -> 78,750. BONK carry held (129%).
 - 2026-10-30T08:50Z | eq 246.36 | BTC short +1.42; trailed stop 79,400 -> 79,000. BONK carry held (177%).
 - 2026-10-30T06:55Z | eq 244.74 | BTC short filled 78,276 (held, -0.35). Opened BONK carry 25% (funding 153%).
 - 2026-10-30T04:52Z | eq 245.22 | Flat. BTC bounced to 78.1k toward 78,300 short trigger; kept order.
@@ -54,4 +55,3 @@
 - 2026-10-29T20:53Z | eq 238.44 | BTC breakdown short filled 78,876.
 - 2026-10-29T18:47Z | eq 238.90 | Mid-range chop, stood aside.
 - 2026-10-29T16:51Z | eq 239.82 | BTC breakout long 81,875 failed: closed (~-1.7).
-- 2026-10-29T14:53Z | eq 241.71 | BTC short stopped 80,690 (-2.41).
