@@ -1,15 +1,15 @@
 {
- "cash": 244.97845921387488,
+ "cash": 244.79497575451668,
  "positions": {
   "BTCUSDT": {
    "side": "short",
    "qty": 0.0031010300000000003,
    "entry": 78276.51000000001,
-   "stop": 78250.0,
+   "stop": 78150.0,
    "tp": 75500.0,
    "opened": 1793336640000,
    "entry_fee": 0.13350579319291503,
-   "mark": 76832.1,
+   "mark": 77075.2,
    "note": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R."
   }
  },
@@ -298,8 +298,8 @@
   }
  ],
  "fills": [],
- "last_ms": 1793371529094,
- "next_id": 70,
+ "last_ms": 1793371949160,
+ "next_id": 71,
  "orders": [],
  "order_events": [
   {
@@ -727,16 +727,7 @@
   "PAXGUSDT": 2.5769870967742e-05,
   "EURUSDT": -6.8283983333333e-05
  },
- "carry": {
-  "BONKUSDT": {
-   "notional": 61.19,
-   "opened": 1793343314035,
-   "earned": 0.05552460536300674,
-   "fees": 0.18356999999999998,
-   "rate_at_open": 0.0001752502625,
-   "note": "BONK funding > 60% APR for 3 sessions (96, 76, now 153%). At 153% APR (0.42%/day) break-even on 0.6% round-trip costs ~1.5 days. Close if funding < 30% for 2 sessions or negative."
-  }
- },
+ "carry": {},
  "carry_closed": [
   {
    "id": "c20",
@@ -749,6 +740,18 @@
    "pnl": -0.214,
    "why": "manual close",
    "reason": "BONK funding 265% APR (~0.73%/day) and was 108% APR 2h ago; break-even ~0.8 day on 0.6% round-trip. Price-neutral. Close when funding < 30% APR or negative."
+  },
+  {
+   "id": "c70",
+   "symbol": "BONKUSDT",
+   "notional": 61.19,
+   "opened": 1793343314035,
+   "time": 1793371949160,
+   "earned": 0.0555,
+   "fees": 0.3671,
+   "pnl": -0.3116,
+   "why": "manual close",
+   "reason": "BONK funding > 60% APR for 3 sessions (96, 76, now 153%). At 153% APR (0.42%/day) break-even on 0.6% round-trip costs ~1.5 days. Close if funding < 30% for 2 sessions or negative."
   }
  ],
  "predictions": {},
@@ -772,7 +775,7 @@
  "cash_rate": 0.0387,
  "income": {
   "funding": 0.08430294923958925,
-  "carry": -0.34199649945178495,
-  "interest": 0.1765435182289714
+  "carry": -0.5255664994517849,
+  "interest": 0.17663005887077862
  }
 }
