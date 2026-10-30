@@ -303,25 +303,31 @@
    "reason": "Range-edge breakdown: below the 30d low 79,121 (+buffer) the daily downtrend (d1 ema20 81.6k, 30d -2.7%) resumes toward 77k. Stop back above the 79.6-79.9k post-Fed lows."
   }
  ],
- "last_closed_check_ms": 1793336400730,
+ "last_closed_check_ms": 1793336880692,
  "day": "2026-10-30",
  "day_start_equity": 242.27435124297426,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_filled",
+   "id": "o69",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 78300,
+   "time": 1793336640000,
+   "detail": "filled at 78276.5"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
-  "equity": 251.6905083439628,
-  "pos": {
-   "side": "short",
-   "entry": 78719.8204,
-   "qty": 0.0058645915678720425,
-   "stop": 78118.64336838892
-  },
-  "last_t": 1793329200000,
-  "trades": 4,
-  "wins": 2
+  "equity": 254.7349994734633,
+  "pos": null,
+  "last_t": 1793332800000,
+  "trades": 5,
+  "wins": 3
  },
- "last_btc": 78070.0,
+ "last_btc": 78305.2,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -366,7 +372,8 @@
   "o59:cancelled",
   "o63:filled",
   "o65:filled",
-  "o67:filled"
+  "o67:filled",
+  "o69:filled"
  ],
  "last_decision_id": "2026-10-30T04:52:30Z",
  "cash_rate_day": "2026-10-30"

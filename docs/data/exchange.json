@@ -1,6 +1,18 @@
 {
- "cash": 245.21995643694777,
- "positions": {},
+ "cash": 245.08659027035748,
+ "positions": {
+  "BTCUSDT": {
+   "side": "short",
+   "qty": 0.0031010300000000003,
+   "entry": 78276.51000000001,
+   "stop": 79400.0,
+   "tp": 75500.0,
+   "opened": 1793336640000,
+   "entry_fee": 0.13350579319291503,
+   "mark": 78305.2,
+   "note": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R."
+  }
+ },
  "closed": [
   {
    "id": "t5",
@@ -286,23 +298,9 @@
   }
  ],
  "fills": [],
- "last_ms": 1793336400730,
+ "last_ms": 1793336880692,
  "next_id": 70,
- "orders": [
-  {
-   "id": "o69",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "qty": 0.0031010300000000003,
-   "trigger": 78300,
-   "direction": "above",
-   "stop": 79400.0,
-   "tp": 75500.0,
-   "placed": 1793321544280,
-   "expires": 1793407944280,
-   "note": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -699,26 +697,35 @@
    "trigger": 78900,
    "time": 1793306580000,
    "detail": "filled at 78876.3"
+  },
+  {
+   "id": "o69",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 78300,
+   "time": 1793336640000,
+   "detail": "filled at 78276.5"
   }
  ],
  "funding_rates": {
-  "BTCUSDT": 3.6298782407407e-05,
-  "ETHUSDT": 3.527324074074e-06,
-  "SOLUSDT": -2.4817171296296e-05,
-  "XRPUSDT": -1.0135532407407e-05,
-  "DOGEUSDT": 5.26949074074e-07,
-  "ADAUSDT": -2.4904212962963e-05,
-  "AVAXUSDT": 1.1153287037037e-05,
-  "LINKUSDT": 7.462032407407e-06,
-  "SUIUSDT": 8.988967592593e-06,
-  "PEPEUSDT": -2.6730416666667e-05,
-  "WIFUSDT": -9.8196898148148e-05,
-  "BONKUSDT": 8.6826523148148e-05,
-  "LTCUSDT": -1.0520865740741e-05,
-  "DOTUSDT": 6.201712962963e-06,
-  "NEARUSDT": -5.6447685185185e-05,
-  "PAXGUSDT": 6.2670314814815e-05,
-  "EURUSDT": -1.4224990740741e-05
+  "BTCUSDT": 2.7126829166667e-05,
+  "ETHUSDT": 8.171995833333e-06,
+  "SOLUSDT": -2.0180358333333e-05,
+  "XRPUSDT": -5.113616666667e-06,
+  "DOGEUSDT": -2.2414445833333e-05,
+  "ADAUSDT": 8.828058333333e-06,
+  "AVAXUSDT": 1.0031945833333e-05,
+  "LINKUSDT": 1.8022641666667e-05,
+  "SUIUSDT": 4.025308333333e-06,
+  "PEPEUSDT": 0.000139848479166667,
+  "WIFUSDT": -8.81459125e-05,
+  "BONKUSDT": 0.000145665691666667,
+  "LTCUSDT": -1.5950391666667e-05,
+  "DOTUSDT": 2.04135125e-05,
+  "NEARUSDT": -2.8134283333333e-05,
+  "PAXGUSDT": 2.45215125e-05,
+  "EURUSDT": -1.9799334821429e-05
  },
  "carry": {},
  "carry_closed": [
@@ -757,6 +764,6 @@
  "income": {
   "funding": 0.07200371405193548,
   "carry": -0.21395110481479168,
-  "interest": 0.16878878865920657
+  "interest": 0.16892841526183525
  }
 }
