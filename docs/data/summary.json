@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-30T20:44:02Z",
+ "updated": "2026-10-30T20:52:02Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9251,
- "equity_pln": 977.6,
- "return_pct": -3.14,
+ "equity_pln": 978.77,
+ "return_pct": -3.03,
  "max_drawdown_pct": 10.31,
  "control_pln": 999.86,
  "control_trades": 5,
- "hodl_pln": 917.67,
+ "hodl_pln": 916.53,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0031010300000000003,
    "entry": 78276.51000000001,
-   "mark": 76910.6,
-   "upnl": 4.235727887300011,
+   "mark": 76815.0,
+   "upnl": 4.53218635530003,
    "stop": 77650.0,
    "tp": 75500.0,
    "liq": null,
    "leverage": null,
    "opened": 1793336640000,
    "reason": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R.",
-   "upnl_pln": 16.63
+   "upnl_pln": 17.79
   }
  ],
  "closed_trades": [
@@ -336,32 +336,22 @@
  ],
  "trade_count": 22,
  "win_rate_pct": 31.8,
- "brain_calls_today": 10,
+ "brain_calls_today": 11,
  "last_decision": {
-  "time": "2026-10-30T18:52:02Z",
+  "time": "2026-10-30T20:52:02Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-30T18:52:00Z",
+  "decided_at": "2026-10-30T20:51:12Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 250.48,
-  "equity_pln": 983.17,
+  "equity_usd": 249.36,
+  "equity_pln": 978.77,
   "events": [],
-  "market_view": "BTC 76,575 pressing the 24h low 76,330 after another lower 4h high (16-20Z high 77,554 < 77,947). D1/h4 downtrend intact, RSI ~32 but no bounce. ETH 2,225 holding its 2,170 low better than BTC; PAXG still dumping (3,897).",
-  "watch_next": "4h close < 76,300 = continuation to 75.5k TP (consider pyramid add); bounce back above 77,600 would hit trailed stop. Trail behind next completed 4h high.",
-  "news": "No fresh market-moving headline found; US midterms 3 Nov is the next scheduled event.",
-  "actions": [
-   {
-    "type": "move_stop",
-    "symbol": "BTCUSDT",
-    "stop": 77650,
-    "take_profit": 75500,
-    "reason": "Trail per plan: current 4h candle high 77,554 is lower than prior 77,947 and price < 77k. Stop 77,650 sits above it (~1.7 h1 ATR away) and locks ~+1.9 USD profit.",
-    "result": "done",
-    "detail": "stop 77650.0, target 75500.0"
-   }
-  ]
+  "market_view": "BTC printed a new 24h low 76,155 and bounced to 76,856; still below h1/h4/d1 emas with lower 4h highs, d1 downtrend intact. 16-20Z 4h closed 76,778, above the 76,300 pyramid trigger, so no add.",
+  "watch_next": "20-24Z 4h candle: trail stop above its high if lower than 77,554; add only on 4h close < 76,300; flip neutral on 4h close > 79,400.",
+  "news": "No fresh market-moving news found; US midterms 3 Nov.",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 244.828523,
+ "cash_usd": 244.828658,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
