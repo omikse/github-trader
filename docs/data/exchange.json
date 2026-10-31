@@ -1,5 +1,5 @@
 {
- "cash": 244.9691025941976,
+ "cash": 244.91349490790464,
  "positions": {
   "BTCUSDT": {
    "side": "short",
@@ -9,8 +9,19 @@
    "tp": 75500.0,
    "opened": 1793336640000,
    "entry_fee": 0.13350579319291503,
-   "mark": 77507.4,
+   "mark": 77517.0,
    "note": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R."
+  },
+  "LINKUSDT": {
+   "side": "long",
+   "qty": 8.5715,
+   "entry": 11.823546,
+   "stop": 11.4,
+   "tp": 12.6,
+   "opened": 1793473860000,
+   "entry_fee": 0.05574003849645001,
+   "mark": 11.81,
+   "note": "Alt relative-strength breakout: LINK +5% 24h, h1 RSI 65, h4 RSI 57 above h4 ema20/50, pushing through the 11.71-11.72 multi-candle high. Entry on confirmation at 11.82, stop 11.40 below the 4h consolidation lows, TP 12.60 near d1 ema50/prior daily closes (~1.9R). Also the rotation leg if BTC breaks up and stops my short."
   }
  },
  "closed": [
@@ -298,23 +309,9 @@
   }
  ],
  "fills": [],
- "last_ms": 1793473686267,
+ "last_ms": 1793474166267,
  "next_id": 72,
- "orders": [
-  {
-   "id": "o71",
-   "symbol": "LINKUSDT",
-   "side": "long",
-   "qty": 8.5715,
-   "trigger": 11.82,
-   "direction": "above",
-   "stop": 11.4,
-   "tp": 12.6,
-   "placed": 1793472726317,
-   "expires": 1793559126317,
-   "note": "Alt relative-strength breakout: LINK +5% 24h, h1 RSI 65, h4 RSI 57 above h4 ema20/50, pushing through the 11.71-11.72 multi-candle high. Entry on confirmation at 11.82, stop 11.40 below the 4h consolidation lows, TP 12.60 near d1 ema50/prior daily closes (~1.9R). Also the rotation leg if BTC breaks up and stops my short."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -720,6 +717,15 @@
    "trigger": 78300,
    "time": 1793336640000,
    "detail": "filled at 78276.5"
+  },
+  {
+   "id": "o71",
+   "symbol": "LINKUSDT",
+   "side": "long",
+   "status": "filled",
+   "trigger": 11.82,
+   "time": 1793473860000,
+   "detail": "filled at 11.8235"
   }
  ],
  "funding_rates": {
@@ -790,6 +796,6 @@
  "income": {
   "funding": 0.22984910557225793,
   "carry": -0.5255664994517849,
-  "interest": 0.2052107422188959
+  "interest": 0.20534309442237741
  }
 }
