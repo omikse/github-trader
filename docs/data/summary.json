@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-31T18:44:06Z",
+ "updated": "2026-10-31T18:52:06Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9251,
- "equity_pln": 970.24,
- "return_pct": -3.87,
+ "equity_pln": 971.2,
+ "return_pct": -3.77,
  "max_drawdown_pct": 10.31,
  "control_pln": 999.86,
  "control_trades": 5,
- "hodl_pln": 925.41,
+ "hodl_pln": 924.46,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0031010300000000003,
    "entry": 78276.51000000001,
-   "mark": 77559.0,
-   "upnl": 2.225020035300029,
+   "mark": 77479.8,
+   "upnl": 2.47062161130002,
    "stop": 77650.0,
    "tp": 75500.0,
    "liq": null,
    "leverage": null,
    "opened": 1793336640000,
    "reason": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R.",
-   "upnl_pln": 8.73
+   "upnl_pln": 9.7
   }
  ],
  "closed_trades": [
@@ -336,22 +336,37 @@
  ],
  "trade_count": 22,
  "win_rate_pct": 31.8,
- "brain_calls_today": 9,
+ "brain_calls_today": 10,
  "last_decision": {
-  "time": "2026-10-31T16:52:06Z",
+  "time": "2026-10-31T18:52:06Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-31T16:52:30Z",
+  "decided_at": "2026-10-31T18:51:30Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 247.47,
-  "equity_pln": 971.34,
+  "equity_usd": 247.43,
+  "equity_pln": 971.2,
   "events": [],
-  "market_view": "BTC still pinned 77.0-77.6k for a full day under falling h4/d1 emas (h4 RSI 39, d1 RSI 36). Short holds with stop 77,650 locking ~+1.9; last completed 4h high 77,587 + ATR gives 77,889, so no valid trail. NEAR/LINK show relative strength.",
-  "watch_next": "4h close below 77,000 (toward 76.3k/TP) or stop-out at 77,650; on stop-out look at bounce-fail re-short only on 4h rejection of 78.0-78.6k, or NEAR/LINK long if BTC 4h closes > 77,700. Time limit Sun 1 Nov 12Z.",
+  "market_view": "BTC grinding up in a tight weekend range to a new 24h high 77,636, right under my short's stop 77,650 (profit locked ~+1.9). Alts lead: LINK +5% breaking its 24h high, NEAR +5%.",
+  "watch_next": "BTC stop-out at 77,650 or 4h close < 77,000; LINK entry fill at 11.82; on BTC stop-out look for 4h rejection of 78.0-78.6k to re-short. Time limit for BTC short Sun 1 Nov 12Z.",
   "news": "",
-  "actions": []
+  "actions": [
+   {
+    "type": "entry_order",
+    "symbol": "LINKUSDT",
+    "side": "long",
+    "trigger": 11.82,
+    "stop": 11.4,
+    "take_profit": 12.6,
+    "risk_pct": 0.015,
+    "expires_hours": 24,
+    "reason": "Alt relative-strength breakout: LINK +5% 24h, h1 RSI 65, h4 RSI 57 above h4 ema20/50, pushing through the 11.71-11.72 multi-candle high. Entry on confirmation at 11.82, stop 11.40 below the 4h consolidation lows, TP 12.60 near d1 ema50/prior daily closes (~1.9R). Also the rotation leg if BTC breaks up and stops my short.",
+    "invalidation": "4h close back below 11.55 after fill, or BTC 4h close < 76,800 risk-off before fill.",
+    "result": "done",
+    "detail": "long 8.5715 when price goes above 11.82 (risk 1.5%, stop 11.4, target 12.6, expires in 24h) ok"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 244.962635,
+ "cash_usd": 244.96277,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -377,7 +392,19 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [],
+ "orders": [
+  {
+   "symbol": "LINKUSDT",
+   "side": "long",
+   "trigger": 11.82,
+   "direction": "above",
+   "stop": 11.4,
+   "tp": 12.6,
+   "qty": 8.5715,
+   "expires": 1793559126317,
+   "note": "Alt relative-strength breakout: LINK +5% 24h, h1 RSI 65, h4 RSI 57 above h4 ema20/50, pushing through the 11.71-11.72 multi-candle high. Entry on confirmation at 11.82, stop 11.40 below the 4h consolidation lows, TP 12.60 near d1 ema50/prior daily closes (~1.9R). Also the rotation leg if BTC breaks up and stops my short."
+  }
+ ],
  "balance_warning": false,
  "other_value_usd": 0,
  "predictions": [],
