@@ -1,21 +1,21 @@
-# Notebook (updated 2026-10-31T08:50Z)
+# Notebook (updated 2026-10-31T10:50Z)
 
 ## Big picture
+- 31 Oct 10:50Z: BTC 77,353, still pinned 77.0-77.4k (08-12Z candle so far 77,123-77,397). h1 RSI 49 above h1 ema20 77.28k; h4 RSI 38, d1 RSI 35. Last completed 4h high 77,369 + ATR 368 = 77,737 > stop, so no trail. Funding: PEPE -95%, EUR -58%, LINK -42%; PAXG +27%, BTC +23%.
 - 31 Oct 08:50Z: BTC 77,200, dead-flat weekend: last three 4h candles 77.0-77.5k, 04-08Z high 77,369. h1 RSI 46, h4 RSI 37, d1 RSI 34; still below h1 ema50 78.0k / h4 ema20 78.5k. Trail candidate 77,369+ATR 407 = 77,776 > stop, so no trail. Funding: EUR -85%, PEPE -35%, LTC -27%, SUI -26%; BTC +24%.
-- 31 Oct 06:50Z: BTC 77,368, drifting up inside 77.0-77.5k (04-08Z candle 77,000-77,368). h1 RSI 48, price just above h1 ema20 77.29k; h4 RSI 38, d1 RSI 35. Last completed 4h high 77,494 + ATR 438 = 77,932 > stop, so no trail. Weekend squeeze continues; 77.5-77.65k is the test.
 - Funding 22:42Z: EUR -167%, SOL -49%, LTC -27%; PEPE +93%, PAXG +24%, LINK +21%, BTC +14%. Funding flips fast; don't build plans on single readings.
 - Trend: d1 downtrend, lower highs since 87.2k. US midterms 3 Nov.
 - Key levels BTC: resistance 77.6k, 78.1k; support 76.3k, then 75k.
 - Mind-changers: 4h close > 79,400 = breakdown failed, go neutral. 4h close < 76,000 = continuation to 74-75k.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 248.23 USD (~974 PLN, -3.5%; peak 265.7). Closed 7W/15L.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 247.78 USD (~973 PLN, -3.6%; peak 265.7). Closed 7W/15L.
 - Range-EDGE breakouts / bounce-fails with structure stops, ~1.5% risk, >=2R; trail behind completed 4h highs/lows. No mid-range trades.
 - Pyramid only into a position at breakeven or better.
 - Carry only if funding > 60% APR sustained 3+ sessions; size <= 25%.
 
 ## Active plans
-- BTC SHORT 78,276 (opened 05:04Z), stop 77,650 (trailed 18:52Z above 16-20Z high 77,554; profit locked ~+1.9), TP 75,500. Open +3.32 at 08:42Z. Stop 77,650 stays: 20-24Z high 77,204 + ~600 = 77,800 is NOT lower, so no trail. If stopped at 77,650 that locks ~+1.9; then watch for bounce-fail re-short only if 4h rejects 78.0-78.6k.
+- BTC SHORT 78,276 (opened 05:04Z), stop 77,650 (trailed 18:52Z above 16-20Z high 77,554; profit locked ~+1.9), TP 75,500. Open +2.86 at 10:43Z. Stop 77,650 stays: 20-24Z high 77,204 + ~600 = 77,800 is NOT lower, so no trail. If stopped at 77,650 that locks ~+1.9; then watch for bounce-fail re-short only if 4h rejects 78.0-78.6k.
   - Keep trailing above each new completed 4h high (>= ~1 h1 ATR ~ 615 away).
   - Add (pyramid, close + reopen bigger or rely on new position after close; ~1.5% risk, stop above last 4h high) only on 4h close < 76,300.
   - If TP 75.5k hits: look for bounce-fail re-short into 76.3-77k zone (resting order).
@@ -44,6 +44,7 @@
 - None held.
 
 ## Session log
+- 2026-10-31T10:50Z | eq 247.78 | BTC short +2.86; dead-flat 77.0-77.4k. Held, stop 77,650 (no valid trail). No news search (weekend).
 - 2026-10-31T08:50Z | eq 248.23 | BTC short +3.32; flat 77.0-77.4k weekend range. Held, stop 77,650 (no valid trail). No news search.
 - 2026-10-31T06:50Z | eq 247.70 | BTC short +2.82; slow grind up to 77.37k inside range. Held, stop 77,650 (no valid trail). No news search.
 - 2026-10-31T04:45Z | eq 248.67 | BTC short +3.79; 00-04Z lower high 77,494. Held, stop 77,650. No news search (weekend).
@@ -53,4 +54,3 @@
 - 2026-10-30T20:51Z | eq 249.23 | BTC short +4.40; new low 76,155 then bounce. Held, stop 77,650. No news edge.
 - 2026-10-30T18:52Z | eq 250.17 | BTC short +5.28; trailed stop 78,050 -> 77,650 (locks profit). No news edge.
 - 2026-10-30T16:51Z | eq 247.50 | BTC short +2.68; trailed stop 78,150 -> 78,050.
-- 2026-10-30T14:52Z | eq 249.43 | BTC short +4.48; trailed stop 78,250 -> 78,150. Closed BONK carry (funding -47%).
