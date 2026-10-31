@@ -1,15 +1,15 @@
-# Notebook (updated 2026-10-31T04:45Z)
+# Notebook (updated 2026-10-31T06:50Z)
 
 ## Big picture
+- 31 Oct 06:50Z: BTC 77,368, drifting up inside 77.0-77.5k (04-08Z candle 77,000-77,368). h1 RSI 48, price just above h1 ema20 77.29k; h4 RSI 38, d1 RSI 35. Last completed 4h high 77,494 + ATR 438 = 77,932 > stop, so no trail. Weekend squeeze continues; 77.5-77.65k is the test.
 - 31 Oct 04:45Z: BTC 77,053. 00-04Z candle 77,000-77,494 closed 77,018 (lower high again, small range). h1 RSI 43, h4 RSI 35, d1 RSI 34. Trail candidate 77,494+ATR 474 = 77,968 > current stop, so no trail. PAXG still dumping (h4 RSI 20, no fresh short at extreme). Weekend squeeze.
-- 31 Oct 02:45Z: BTC 77,316, flat weekend drift. 20-24Z candle closed at high 77,204; 00-04Z so far 77,111-77,494 (tight). h1 ema20 77.36k (price at it), h1 RSI 46. Stop 77,650 still above all post-low 4h highs. No change to thesis; weekend chop risk.
 - Funding 22:42Z: EUR -167%, SOL -49%, LTC -27%; PEPE +93%, PAXG +24%, LINK +21%, BTC +14%. Funding flips fast; don't build plans on single readings.
 - Trend: d1 downtrend, lower highs since 87.2k. US midterms 3 Nov.
 - Key levels BTC: resistance 77.6k, 78.1k; support 76.3k, then 75k.
 - Mind-changers: 4h close > 79,400 = breakdown failed, go neutral. 4h close < 76,000 = continuation to 74-75k.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 248.67 USD (~976 PLN, -3.3%; peak 265.7). Closed 7W/15L.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 247.70 USD (~972 PLN, -3.7%; peak 265.7). Closed 7W/15L.
 - Range-EDGE breakouts / bounce-fails with structure stops, ~1.5% risk, >=2R; trail behind completed 4h highs/lows. No mid-range trades.
 - Pyramid only into a position at breakeven or better.
 - Carry only if funding > 60% APR sustained 3+ sessions; size <= 25%.
@@ -44,6 +44,7 @@
 - None held.
 
 ## Session log
+- 2026-10-31T06:50Z | eq 247.70 | BTC short +2.82; slow grind up to 77.37k inside range. Held, stop 77,650 (no valid trail). No news search.
 - 2026-10-31T04:45Z | eq 248.67 | BTC short +3.79; 00-04Z lower high 77,494. Held, stop 77,650. No news search (weekend).
 - 2026-10-31T02:45Z | eq 247.84 | BTC short +2.98; tight 00-04Z candle under 77.5k. Held, stop 77,650. No news search (weekend).
 - 2026-10-31T00:51Z | eq 247.94 | BTC short +3.09; 20-24Z inside bar closed at high, bounce. Held, stop 77,650 (no valid trail). No news edge.
@@ -53,4 +54,3 @@
 - 2026-10-30T16:51Z | eq 247.50 | BTC short +2.68; trailed stop 78,150 -> 78,050.
 - 2026-10-30T14:52Z | eq 249.43 | BTC short +4.48; trailed stop 78,250 -> 78,150. Closed BONK carry (funding -47%).
 - 2026-10-30T12:55Z | eq 247.86 | BTC short +2.88; trailed stop 78,750 -> 78,250 (breakeven). BONK carry held.
-- 2026-10-30T10:52Z | eq 247.03 | BTC short +2.07; trailed stop 79,000 -> 78,750.
