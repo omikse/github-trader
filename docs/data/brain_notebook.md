@@ -1,10 +1,10 @@
-# Notebook (updated 2026-11-01T06:46Z)
+# Notebook (updated 2026-11-01T08:47Z)
 
 ## Big picture
-- 1 Nov 06:45Z: BTC 77,790, grind up continues; 04-08Z 4h in progress (high 77,900). 00-04Z closed 77,661. h1 RSI 61, h4 43, d1 37. h4 ema20 78,172, ema50 79,349. Thin Sunday volume; no news catalyst found.
+- 1 Nov 08:45Z: BTC 78,034 (24h high 78,044), slow grind up for 5 straight 4h candles. 04-08Z closed 77,823 (below 78.2k trigger). 08-12Z in progress. h1 RSI 66, h4 45, d1 39. h4 ema20 78,161, ema50 79,298. Thin Sunday volume; no news catalyst found.
 - Trend: d1 downtrend, lower highs since 87.2k; first red October in years. US midterms Tue 3 Nov (Polymarket: D House 94%).
-- Funding (06:43Z): BTC +18%, LINK +40%, BONK +204% (spike), PEPE -57%, PAXG -34%, NEAR -16%. Single readings, not plans.
-- Alts: AVAX strongest (+5% 24h, 8.93, h1 RSI 79 = overbought, intrabar above 8.90; 4h not closed); DOT/SOL/ADA weakest.
+- Funding (08:43Z): BTC +23%, LINK +43%, DOT +35%, BONK +219% (2nd reading >200%; a 3rd next session = carry candidate, small), NEAR -43%, PAXG -37%, PEPE -18%.
+- Alts: AVAX wicked to 9.03 then closed 4h at 8.86, now 8.79 (fading); LINK 11.81 nearing 11.95 trigger; ETH 2,270 at h4 ema20; DOT/SOL/ADA weakest.
 - Key levels BTC: resistance 77.75k, 78.1-78.2k (h4 ema20), 79.4k; support 77.0k, 76.3k, 30d low 76,155, then 75k.
 - Mind-changers: 4h close > 79,400 = downtrend paused, look long. 4h close < 76,000 = continuation to 74-75k.
 
@@ -47,6 +47,7 @@
 - None held.
 
 ## Session log
+- 2026-11-01T08:47Z | eq 245.02 | Flat. 08Z 4h closed 77,823 (< 78.2k); BTC 78.03k intrabar at h4 ema20. Stood aside per rule; decide on 12Z close.
 - 2026-11-01T06:46Z | eq 245.01 | Flat. BTC 77.8k testing range top intrabar (h 77.9k), no 4h close > 78.2k; AVAX overextended. Stood aside; check 08Z close.
 - 2026-11-01T04:51Z | eq 245.01 | Flat. BTC grinding at range top 77.7k, no 4h close beyond 76.9k/78.2k. Stood aside; next decision 08Z close.
 - 2026-11-01T02:52Z | eq 245.01 | BTC short stopped 77,689 (+1.56) on wick to 77,743. Flat; no new entries (weekend chop, waiting for 4h close beyond 76.9k/78.2k).
@@ -56,4 +57,3 @@
 - 2026-10-31T18:51Z | eq 247.18 | BTC short +2.22. Placed LINK breakout long entry 11.82.
 - 2026-10-31T16:52Z | eq 247.48 | BTC short +2.53; pinned 77.0-77.6k. Held.
 - 2026-10-31T14:51Z | eq 247.75 | BTC short +2.81; flat. Held.
-- 2026-10-31T12:51Z | eq 247.41 | BTC short +2.48. Held.
