@@ -1,5 +1,5 @@
 {
- "cash": 245.0181533406957,
+ "cash": 244.87124358309754,
  "positions": {},
  "closed": [
   {
@@ -312,7 +312,7 @@
   }
  ],
  "fills": [],
- "last_ms": 1793530016800,
+ "last_ms": 1793530316929,
  "next_id": 74,
  "orders": [],
  "order_events": [
@@ -750,7 +750,16 @@
   "PAXGUSDT": -1.9539866666667e-05,
   "EURUSDT": -6.2943679166667e-05
  },
- "carry": {},
+ "carry": {
+  "BONKUSDT": {
+   "notional": 49.0,
+   "opened": 1793530316929,
+   "earned": 0.0,
+   "fees": 0.147,
+   "rate_at_open": 0.000277360391666667,
+   "note": "BONK funding 243% APR, 3rd consecutive session >200% (sustained, not a single spike). 0.67%/day vs 0.6% round-trip fees -> break-even ~0.9 days. Plan: hold >=3 days; close only if funding < 50% APR for 2 sessions (earlier BONK carries lost by closing after <1 day)."
+  }
+ },
  "carry_closed": [
   {
    "id": "c20",
@@ -798,7 +807,7 @@
  "cash_rate": 0.0387,
  "income": {
   "funding": 0.2543855255604549,
-  "carry": -0.5255664994517849,
-  "interest": 0.22147843794942598
+  "carry": -0.6725664994517849,
+  "interest": 0.22156868035124228
  }
 }

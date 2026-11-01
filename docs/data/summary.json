@@ -1,16 +1,16 @@
 {
- "updated": "2026-11-01T10:46:56Z",
+ "updated": "2026-11-01T10:51:56Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9251,
- "equity_pln": 961.72,
- "return_pct": -4.71,
+ "equity_pln": 961.14,
+ "return_pct": -4.77,
  "max_drawdown_pct": 10.31,
  "control_pln": 999.86,
  "control_trades": 5,
- "hodl_pln": 929.65,
+ "hodl_pln": 929.49,
  "positions": [],
  "closed_trades": [
   {
@@ -348,22 +348,31 @@
  ],
  "trade_count": 24,
  "win_rate_pct": 33.3,
- "brain_calls_today": 5,
+ "brain_calls_today": 6,
  "last_decision": {
-  "time": "2026-11-01T08:51:40Z",
+  "time": "2026-11-01T10:51:56Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-01T08:47:00Z",
+  "decided_at": "2026-11-01T10:51:11Z",
   "model": "claude-opus-5-5",
   "equity_usd": 245.02,
-  "equity_pln": 961.71,
+  "equity_pln": 961.72,
   "events": [],
-  "market_view": "BTC grinding up on thin Sunday volume to 78.03k, right at the h4 ema20 (78.16k); the 04-08Z 4h closed 77,823, below the 78.2k confirmation level. Alts mixed: AVAX faded from 9.03, LINK approaching 11.95.",
-  "watch_next": "12Z 4h close: BTC > 78,200 -> long on retest 77.9-78.1k (stop < 77.3k, TP 79.4k), LINK long if 4h close > 11.95; rejection wick at 78.0-78.3k -> re-short (stop > 78.4k); BONK funding still >200% -> consider small carry.",
-  "news": "No market-moving news found; US midterms Tue 3 Nov are the next catalyst.",
-  "actions": []
+  "market_view": "BTC 77.9k, 08-12Z 4h candle wicked 78,135 but trades below the 78.2k/h4 ema20 trigger; no 4h close beyond the weekend range (76.9k-78.2k). d1 downtrend intact. Thin Sunday tape.",
+  "watch_next": "12Z 4h close: >78,200 -> BTC long on retest 77.9-78.1k (stop <77.3k, TP 79.4k); <76,900 -> short. BONK funding stays >100%.",
+  "news": "No fresh catalyst found; US midterms Tue 3 Nov are the scheduled event.",
+  "actions": [
+   {
+    "type": "carry_open",
+    "symbol": "BONKUSDT",
+    "size_pct": 0.2,
+    "reason": "BONK funding 243% APR, 3rd consecutive session >200% (sustained, not a single spike). 0.67%/day vs 0.6% round-trip fees -> break-even ~0.9 days. Plan: hold >=3 days; close only if funding < 50% APR for 2 sessions (earlier BONK carries lost by closing after <1 day).",
+    "result": "done",
+    "detail": "carry on BONKUSDT: 49.00 USD, cost 0.15 USD, funding now 243.0%/yr ok"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 245.018153,
+ "cash_usd": 244.871244,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -411,7 +420,19 @@
    "pnl_pln": 2.89
   }
  ],
- "carry": [],
+ "carry": [
+  {
+   "symbol": "BONKUSDT",
+   "notional": 49.0,
+   "earned": 0.0,
+   "fees": 0.147,
+   "net_if_closed_now": -0.294,
+   "funding_pct_per_hour": 0.02774,
+   "funding_apr_pct": 243.0,
+   "opened": 1793530316929,
+   "reason": "BONK funding 243% APR, 3rd consecutive session >200% (sustained, not a single spike). 0.67%/day vs 0.6% round-trip fees -> break-even ~0.9 days. Plan: hold >=3 days; close only if funding < 50% APR for 2 sessions (earlier BONK carries lost by closing after <1 day)."
+  }
+ ],
  "carry_closed": [
   {
    "id": "c70",
@@ -442,7 +463,7 @@
  ],
  "income_pln": {
   "funding": 1.0,
-  "carry": -2.06,
+  "carry": -2.64,
   "interest": 0.87
  },
  "cash_rate_pct": 3.87
