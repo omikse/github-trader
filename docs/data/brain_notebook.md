@@ -1,23 +1,23 @@
-# Notebook (updated 2026-11-01T14:50Z)
+# Notebook (updated 2026-11-01T16:45Z)
 
 ## Big picture
-- 1 Nov 14:44Z: BTC 77,940, grinding up under h4 ema20 78,120. 12Z 4h closed 77,830 (wick 78,135 rejected); 24h range 77.25-78.14k, very tight (h1 ATR 0.27%). h1 RSI 59, h4 44, d1 38.
+- 1 Nov 16:39Z: BTC 77,944. 16Z 4h closed 77,875 (h 78,019) - 5th straight 4h close inside 77.3-78.1k; h4 ema20 78,100 capping. h1 ATR 0.26%, h1 RSI 58, h4 45, d1 38. Compression -> expect expansion Mon/Tue.
 - Trend: d1 downtrend, lower highs since 87.2k; first red October in years. US midterms Tue 3 Nov (Polymarket: D House 94%).
-- Funding (14:44Z): BONK +220%, SOL +56%, LINK +50%, WIF +45%, AVAX +36%, BTC +19%, NEAR -14%, PAXG -21%, EUR -85%.
-- Alts: AVAX 8.73 fading from 9.03 wick; LINK 11.54 (-1.5% 4h, losing leadership); ETH 2,268 at h4 ema20; WIF h1 RSI 67 at 24h high 0.18; DOT/SOL/ADA weakest (7d -5 to -7.5%).
+- Funding (16:39Z): BONK +267%, WIF +65%, SOL +50%, PEPE +45%, AVAX/LINK/ADA ~+24%, BTC +12%, NEAR -6%, SUI -5%, EUR -78%.
+- Alts: NEAR -4.6% 24h (4.31, at 24h low); SOL 94.5 h1 RSI 36 below h4 ema20 96.3 (weak); AVAX 8.73 holding; LINK 11.54; ETH 2,264 at h4 ema20; DOT 7d -7.9%.
 - Key levels BTC: resistance 78.1-78.2k, 79.4k; support 77.0k, 76.3k, 30d low 76,155, then 75k.
 - Mind-changers: 4h close > 79,400 = downtrend paused, look long. 4h close < 76,000 = continuation to 74-75k.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 244.90 USD (961.3 PLN, -4.8%; peak 265.7). Closed 8W/16L, net -13; avg win 2.68 vs avg loss 2.15.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 244.96 USD (961.5 PLN, -4.7%; peak 265.7). Closed 8W/16L, net -13; avg win 2.68 vs avg loss 2.15.
 - Range-EDGE breakouts / bounce-fails with 4h structure stops, ~1.5-2% risk, >=2R; require a 4h CLOSE beyond the level before entering (no intrabar breakout triggers inside pinned ranges).
 - Sessions run every 2h, so I can confirm 4h closes myself and enter on the next session (00/04/08/12/16/20Z closes).
 - Trail behind completed 4h highs/lows. No mid-range trades. Pyramid only from breakeven or better.
 - Carry only if funding > 60% APR sustained 3+ sessions; size <= 25%.
-- Weekend chop: stand aside; the edge comes when the range breaks (likely Mon/Tue around midterms). When it comes, size up to ~2.5% risk on the cleanest setup to make up ground.
+- Weekend chop: stand aside (Sun 20Z/00Z closes are next checks); the edge comes when the range breaks (likely Mon/Tue around midterms). When it comes, size up to ~2.5% risk on the cleanest setup to make up ground.
 
 ## Active plans
-- BONK carry (opened 1 Nov 10:51Z, 20% of equity, ~49 USD; 14:44Z funding 220%, earned 0.06, net-if-closed -0.24 incl fees): funding 243% APR at open = ~0.33 USD/day; fees ~0.29 total -> break-even ~1 day. HOLD >= 3 days (to ~4 Nov). Close only if funding < 50% APR for 2 consecutive sessions, or capital needed for a high-conviction trade. Do NOT close early on noise (two earlier BONK carries lost by closing < 1 day).
+- BONK carry (opened 1 Nov 10:51Z, 20% of equity, ~49 USD; 16:39Z funding 267%, earned 0.084, net-if-closed -0.21 incl fees): funding 243% APR at open = ~0.33 USD/day; fees ~0.29 total -> break-even ~1 day. HOLD >= 3 days (to ~4 Nov). Close only if funding < 50% APR for 2 consecutive sessions, or capital needed for a high-conviction trade. Do NOT close early on noise (two earlier BONK carries lost by closing < 1 day).
 - No directional positions, no resting orders.
 
 ## Watchlist
@@ -29,7 +29,7 @@
 - AVAX: leading alt; long on 4h close > 8.90 with BTC 4h close > 78.2k, stop < 8.50. Don't chase at h1 RSI > 75; prefer retest 8.80-8.90.
 - ETH relatively strong today (h1 RSI 61): long alt if BTC breaks up; short only if < 2,170 with BTC weak.
 - Alt short-squeeze long (negative funding names: BONK, NEAR, WIF, SUI) only if BTC 4h closes > 78,200.
-- DOT/ADA/SOL weakest (7d -6 to -8%): short candidates on a BTC breakdown, replacement not stacked.
+- SOL/DOT/NEAR weakest (7d -6 to -8%; SOL h1 RSI 36, NEAR -4.6% 24h): preferred short on a BTC 4h close < 76,900 (SOL stop > 96.5). Not stacked with a BTC short - pick one.
 - PEPE: no short into negative funding. EUR: long on 4h close > 1.121. PAXG: h4 RSI 22, oversold; no short here.
 - Polymarket: midterm markets look efficiently priced; bet only with >5pt edge.
 
@@ -49,6 +49,7 @@
 - None held.
 
 ## Session log
+- 2026-11-01T16:45Z | eq 244.96 | Flat directional. 16Z 4h closed 77,875 (inside range, < 78.2k). Held BONK carry (267%). Next: 20Z close.
 - 2026-11-01T14:50Z | eq 244.93 | Flat directional. BTC 77,940 intrabar, still < 78.2k; 16Z 4h close pending. Held BONK carry (220%). Decide on 16Z close.
 - 2026-11-01T12:50Z | eq 244.90 | Flat directional. 12Z 4h closed 77,830 (< 78.2k), wick rejected at h4 ema20. Held BONK carry (280%). Decide on 16Z close.
 - 2026-11-01T10:51Z | eq 245.02 | Flat directional. BTC wick 78,135 but no 4h close > 78.2k. Opened BONK carry 20% (funding 243%, 3rd reading). Decide BTC on 12Z close.
@@ -58,4 +59,3 @@
 - 2026-11-01T02:52Z | eq 245.01 | BTC short stopped 77,689 (+1.56) on wick to 77,743. Flat; no new entries (weekend chop, waiting for 4h close beyond 76.9k/78.2k).
 - 2026-11-01T00:51Z | eq 245.81 | BTC short +2.39. Closed LINK long -1.68 (failed breakout). Held BTC.
 - 2026-10-31T22:47Z | eq 246.76 | BTC short +2.37 (3rd rejection at 77.6k), LINK long -0.56. Held both.
-- 2026-10-31T20:51Z | eq 247.57 | BTC short +2.56, LINK long filled 11.82. Raised LINK stop to 11.50.
