@@ -1,10 +1,10 @@
-# Notebook (updated 2026-11-01T04:51)Z
+# Notebook (updated 2026-11-01T06:46Z)
 
 ## Big picture
-- 1 Nov 04:50Z: BTC 77,700, slow grind up hugging range top. 00-04Z 4h closed 77,661 (high 77,743). h1 RSI 58, h4 42, d1 37. h4 ema20 78,163, ema50 79,345. Volume thin (Sunday).
+- 1 Nov 06:45Z: BTC 77,790, grind up continues; 04-08Z 4h in progress (high 77,900). 00-04Z closed 77,661. h1 RSI 61, h4 43, d1 37. h4 ema20 78,172, ema50 79,349. Thin Sunday volume; no news catalyst found.
 - Trend: d1 downtrend, lower highs since 87.2k; first red October in years. US midterms Tue 3 Nov (Polymarket: D House 94%).
-- Funding (04:48Z): BTC +22%, LINK +39%, PEPE -58%, PAXG -18%, NEAR -6.5%. Single readings, not plans.
-- Alts: AVAX strongest today (+3% 24h, h1 RSI 72, above h4 ema20 8.61); DOT/SOL/ADA still weakest.
+- Funding (06:43Z): BTC +18%, LINK +40%, BONK +204% (spike), PEPE -57%, PAXG -34%, NEAR -16%. Single readings, not plans.
+- Alts: AVAX strongest (+5% 24h, 8.93, h1 RSI 79 = overbought, intrabar above 8.90; 4h not closed); DOT/SOL/ADA weakest.
 - Key levels BTC: resistance 77.75k, 78.1-78.2k (h4 ema20), 79.4k; support 77.0k, 76.3k, 30d low 76,155, then 75k.
 - Mind-changers: 4h close > 79,400 = downtrend paused, look long. 4h close < 76,000 = continuation to 74-75k.
 
@@ -24,7 +24,7 @@
 - BTC short: 4h close < 76,900 (below weekend low) -> short, stop above that candle high/77.5k, TP 75.5k then 74.5k. Bounce-fail into 77.6-78.1k with rejection wick on 4h = re-short (stop > 78.3k).
 - LINK long again only on 4h CLOSE > 11.95. Now 11.55, fading.
 - NEAR: squeeze candidate if BTC breaks up; 4h close > 4.56 trigger (funding now only -6.5%).
-- AVAX: leading alt; long on 4h close > 8.90 with BTC 4h close > 78.2k, stop < 8.50.
+- AVAX: leading alt; long on 4h close > 8.90 with BTC 4h close > 78.2k, stop < 8.50. Don't chase at h1 RSI > 75; prefer retest 8.80-8.90.
 - ETH relatively strong today (h1 RSI 61): long alt if BTC breaks up; short only if < 2,170 with BTC weak.
 - Alt short-squeeze long (negative funding names: BONK, NEAR, WIF, SUI) only if BTC 4h closes > 78,200.
 - DOT/ADA/SOL weakest (7d -6 to -8%): short candidates on a BTC breakdown, replacement not stacked.
@@ -47,6 +47,7 @@
 - None held.
 
 ## Session log
+- 2026-11-01T06:46Z | eq 245.01 | Flat. BTC 77.8k testing range top intrabar (h 77.9k), no 4h close > 78.2k; AVAX overextended. Stood aside; check 08Z close.
 - 2026-11-01T04:51Z | eq 245.01 | Flat. BTC grinding at range top 77.7k, no 4h close beyond 76.9k/78.2k. Stood aside; next decision 08Z close.
 - 2026-11-01T02:52Z | eq 245.01 | BTC short stopped 77,689 (+1.56) on wick to 77,743. Flat; no new entries (weekend chop, waiting for 4h close beyond 76.9k/78.2k).
 - 2026-11-01T00:51Z | eq 245.81 | BTC short +2.39. Closed LINK long -1.68 (failed breakout). Held BTC.
@@ -56,4 +57,3 @@
 - 2026-10-31T16:52Z | eq 247.48 | BTC short +2.53; pinned 77.0-77.6k. Held.
 - 2026-10-31T14:51Z | eq 247.75 | BTC short +2.81; flat. Held.
 - 2026-10-31T12:51Z | eq 247.41 | BTC short +2.48. Held.
-- 2026-10-31T10:50Z | eq 247.78 | BTC short +2.86. Held.
