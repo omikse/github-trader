@@ -1,46 +1,31 @@
 {
- "updated": "2026-11-01T00:44:23Z",
+ "updated": "2026-11-01T00:51:23Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9251,
- "equity_pln": 965.12,
- "return_pct": -4.38,
+ "equity_pln": 964.17,
+ "return_pct": -4.47,
  "max_drawdown_pct": 10.31,
  "control_pln": 999.86,
  "control_trades": 5,
- "hodl_pln": 924.65,
+ "hodl_pln": 924.99,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0031010300000000003,
    "entry": 78276.51000000001,
-   "mark": 77495.9,
-   "upnl": 2.420695028300047,
+   "mark": 77524.2,
+   "upnl": 2.332935879300038,
    "stop": 77650.0,
    "tp": 75500.0,
    "liq": null,
    "leverage": null,
    "opened": 1793336640000,
    "reason": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R.",
-   "upnl_pln": 9.5
-  },
-  {
-   "symbol": "LINKUSDT",
-   "side": "long",
-   "size": 8.5715,
-   "entry": 11.823546,
-   "mark": 11.64639,
-   "upnl": -1.5184926540000008,
-   "stop": 11.5,
-   "tp": 12.6,
-   "liq": null,
-   "leverage": null,
-   "opened": 1793473860000,
-   "reason": "Alt relative-strength breakout: LINK +5% 24h, h1 RSI 65, h4 RSI 57 above h4 ema20/50, pushing through the 11.71-11.72 multi-candle high. Entry on confirmation at 11.82, stop 11.40 below the 4h consolidation lows, TP 12.60 near d1 ema50/prior daily closes (~1.9R). Also the rotation leg if BTC breaks up and stops my short.",
-   "upnl_pln": -5.96
+   "upnl_pln": 9.16
   }
  ],
  "closed_trades": [
@@ -351,22 +336,30 @@
  ],
  "trade_count": 22,
  "win_rate_pct": 31.8,
- "brain_calls_today": 0,
+ "brain_calls_today": 1,
  "last_decision": {
-  "time": "2026-10-31T22:52:23Z",
+  "time": "2026-11-01T00:51:23Z",
   "trigger": "brain session",
-  "decided_at": "2026-10-31T22:47:00Z",
+  "decided_at": "2026-11-01T00:50:59Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 246.72,
-  "equity_pln": 968.39,
+  "equity_usd": 245.82,
+  "equity_pln": 964.86,
   "events": [],
-  "market_view": "BTC still pinned 77.0-77.6k, third 4h rejection at 77.6k; short stop 77,650 locks ~+1.9 if hit, no valid trail (last 4h high + ATR = 77,884). LINK breakout long pulled back to 11.76 from 11.93, still above the 11.54 4h low and stop 11.50.",
-  "watch_next": "Daily close at 00Z; BTC 4h close > 77,700 (stop-out, then NEAR/LINK rotation) or < 76,300 (pyramid short). LINK 4h close < 11.55 = exit early. BTC time limit Sun 1 Nov 12Z.",
-  "news": "",
-  "actions": []
+  "market_view": "BTC still pinned 77.0-77.64k all weekend (h4 RSI 40, d1 RSI 36, d1 downtrend); short +2.39 with profit-locking stop 77,650. LINK breakout failed: 20-24Z 4h candle wicked to 11.93 and closed 11.63, back below the 11.72 breakout level.",
+  "watch_next": "BTC 4h close < 76,300 (pyramid short) or stop-out at 77,650; BTC short time limit Sun 1 Nov 12Z if still in range. LINK re-entry only on 4h close > 11.95.",
+  "news": "No fresh market-moving news found (weekend); US midterms Tue 3 Nov, jobs data later in week.",
+  "actions": [
+   {
+    "type": "close",
+    "symbol": "LINKUSDT",
+    "reason": "Breakout thesis gone: the 20-24Z 4h candle closed 11.63, back below the 11.72 breakout level after a rejection wick at 11.93; funding flipped to +39% APR (longs now pay). Cut the loser at ~-1.6 instead of waiting for the 11.50 stop (~-2.8).",
+    "result": "done",
+    "detail": "closed 8.5715 at ~11.65295"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 244.936011,
+ "cash_usd": 243.310187,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
