@@ -1,34 +1,48 @@
 {
- "updated": "2026-11-01T00:51:23Z",
+ "updated": "2026-11-01T00:59:23Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9251,
- "equity_pln": 964.17,
- "return_pct": -4.47,
+ "equity_pln": 964.06,
+ "return_pct": -4.48,
  "max_drawdown_pct": 10.31,
  "control_pln": 999.86,
  "control_trades": 5,
- "hodl_pln": 924.99,
+ "hodl_pln": 925.06,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0031010300000000003,
    "entry": 78276.51000000001,
-   "mark": 77524.2,
-   "upnl": 2.332935879300038,
+   "mark": 77529.8,
+   "upnl": 2.31557011130002,
    "stop": 77650.0,
    "tp": 75500.0,
    "liq": null,
    "leverage": null,
    "opened": 1793336640000,
    "reason": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R.",
-   "upnl_pln": 9.16
+   "upnl_pln": 9.09
   }
  ],
  "closed_trades": [
+  {
+   "id": "t72",
+   "symbol": "LINKUSDT",
+   "side": "long",
+   "qty": 8.5715,
+   "entry": 11.823546,
+   "exit": 11.64025688,
+   "pnl": -1.6817,
+   "time": 1793494283955,
+   "why": "manual close",
+   "opened": 1793473860000,
+   "reason": "Alt relative-strength breakout: LINK +5% 24h, h1 RSI 65, h4 RSI 57 above h4 ema20/50, pushing through the 11.71-11.72 multi-candle high. Entry on confirmation at 11.82, stop 11.40 below the 4h consolidation lows, TP 12.60 near d1 ema50/prior daily closes (~1.9R). Also the rotation leg if BTC breaks up and stops my short.",
+   "pnl_pln": -6.6
+  },
   {
    "id": "t68",
    "symbol": "BTCUSDT",
@@ -334,8 +348,8 @@
    "pnl_pln": -21.19
   }
  ],
- "trade_count": 22,
- "win_rate_pct": 31.8,
+ "trade_count": 23,
+ "win_rate_pct": 30.4,
  "brain_calls_today": 1,
  "last_decision": {
   "time": "2026-11-01T00:51:23Z",
@@ -359,7 +373,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 243.310187,
+ "cash_usd": 243.310321,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {

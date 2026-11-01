@@ -303,13 +303,41 @@
    "why": "target",
    "opened": 1793306580000,
    "reason": "Range-edge breakdown: below the 30d low 79,121 (+buffer) the daily downtrend (d1 ema20 81.6k, 30d -2.7%) resumes toward 77k. Stop back above the 79.6-79.9k post-Fed lows."
+  },
+  {
+   "id": "t72",
+   "symbol": "LINKUSDT",
+   "side": "long",
+   "qty": 8.5715,
+   "entry": 11.823546,
+   "exit": 11.64025688,
+   "pnl": -1.6817,
+   "time": 1793494283955,
+   "why": "manual close",
+   "opened": 1793473860000,
+   "reason": "Alt relative-strength breakout: LINK +5% 24h, h1 RSI 65, h4 RSI 57 above h4 ema20/50, pushing through the 11.71-11.72 multi-candle high. Entry on confirmation at 11.82, stop 11.40 below the 4h consolidation lows, TP 12.60 near d1 ema50/prior daily closes (~1.9R). Also the rotation leg if BTC breaks up and stops my short."
   }
  ],
- "last_closed_check_ms": 1793494283955,
+ "last_closed_check_ms": 1793494763867,
  "day": "2026-11-01",
  "day_start_equity": 245.89469045817847,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "position_closed",
+   "id": "t72",
+   "symbol": "LINKUSDT",
+   "side": "long",
+   "qty": 8.5715,
+   "entry": 11.823546,
+   "exit": 11.64025688,
+   "pnl": -1.6817,
+   "time": 1793494283955,
+   "why": "manual close",
+   "opened": 1793473860000,
+   "reason": "Alt relative-strength breakout: LINK +5% 24h, h1 RSI 65, h4 RSI 57 above h4 ema20/50, pushing through the 11.71-11.72 multi-candle high. Entry on confirmation at 11.82, stop 11.40 below the 4h consolidation lows, TP 12.60 near d1 ema50/prior daily closes (~1.9R). Also the rotation leg if BTC breaks up and stops my short."
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 254.7349994734633,
@@ -318,7 +346,7 @@
   "trades": 5,
   "wins": 3
  },
- "last_btc": 77524.2,
+ "last_btc": 77529.8,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
