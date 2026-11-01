@@ -1,59 +1,62 @@
-# Notebook (updated 2026-10-31T22:47Z)
+# Notebook (updated 2026-11-01T00:51Z)
 
 ## Big picture
-- 31 Oct 22:47Z: BTC 77,511, 20-24Z 4h so far H 77,615 L 77,317 (third straight failure at 77.6k). h1 RSI 52, h4 40, d1 36. Last completed 4h high 77,636 + ATR 248 = 77,884 > stop: no trail. LINK 11.758 (pulled back from 11.93 high; h1 RSI 62, h4 57), -0.56 open.
-- 31 Oct 20:50Z: BTC 77,450, 16-20Z 4h H 77,636 C 77,433 (rejected 77.6k again); 20-24Z so far 77,414-77,500. h1 RSI 51, h4 39, d1 36. Trail: 77,636 + ATR 259 = 77,895 > stop: no trail. LINK long filled 11.8235 at 19:11Z, now 11.84 (h1 RSI 69, 24h +6%, funding -19% pays longs).
-- 31 Oct 18:51Z: BTC 77,560, new 24h high 77,636 (16-20Z candle), slow grind up into stop 77,650. h1 RSI 53, h4 RSI 40, d1 RSI 36. Last completed 4h high 77,587 + ATR 278 = 77,865 > stop: no trail. LINK breaking 24h high 11.72 (+5%, h1 RSI 65, h4 RSI 57); NEAR +5.4%.
-- Funding 22:42Z: EUR -167%, SOL -49%, LTC -27%; PEPE +93%, PAXG +24%, LINK +21%, BTC +14%. Funding flips fast; don't build plans on single readings.
-- Trend: d1 downtrend, lower highs since 87.2k. US midterms 3 Nov.
-- Key levels BTC: resistance 77.6k, 78.1k; support 76.3k, then 75k.
+- 1 Nov 00:51Z: BTC 77,506, weekend range 77.0-77.64k (fourth 4h failure at ~77.6k: 20-24Z H 77,615 C 77,437). h1 RSI 52, h4 40, d1 36. Last completed 4h high 77,615 + ATR 234 = 77,849 > stop: no trail.
+- LINK breakout failed: 20-24Z 4h wicked to 11.93, closed 11.63 (below 11.72 breakout level). Closed the long.
+- Funding (00:43Z): BTC +14%, LINK +39%, ETH +2%. Funding flips fast; don't build plans on single readings.
+- Trend: d1 downtrend, lower highs since 87.2k; first red October in years. US midterms Tue 3 Nov.
+- Key levels BTC: resistance 77.6k, 78.1k; support 77.0k, 76.3k, then 75k. 30d low 76,155.
 - Mind-changers: 4h close > 79,400 = breakdown failed, go neutral. 4h close < 76,000 = continuation to 74-75k.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 246.76 USD (~969 PLN, -4.0%; peak 265.7). Closed 7W/15L.
-- Range-EDGE breakouts / bounce-fails with structure stops, ~1.5% risk, >=2R; trail behind completed 4h highs/lows. No mid-range trades.
-- Pyramid only into a position at breakeven or better.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity ~245.8 USD (~965 PLN, -3.5%; peak 265.7). Closed 7W/15L before LINK (LINK ~-1.6 likely makes 7W/16L).
+- Range-EDGE breakouts / bounce-fails with structure stops, ~1.5% risk, >=2R; require a 4h CLOSE beyond the level before entering (LINK entered on intrabar trigger and failed).
+- Trail behind completed 4h highs/lows. No mid-range trades. Pyramid only into a position at breakeven or better.
 - Carry only if funding > 60% APR sustained 3+ sessions; size <= 25%.
+- Weekend chop: stand aside; the edge comes when the range breaks (likely Mon/Tue around midterms).
 
 ## Active plans
-- LINK LONG 11.8235 (filled 19:11Z), stop 11.50 (raised 20:51Z from 11.40, just below 16-20Z 4h low 11.54), TP 12.60 (d1 ema50 zone). Thesis: alt relative-strength breakout over 11.72; also rotation leg if BTC breaks up. Partially offsets BTC short (accepted: different thesis, alt-vs-BTC strength). Trail below each completed 4h low once price > 12.05. Exit early on 4h close < 11.55. Time limit: if not above 12.0 by Mon 2 Nov 12Z, close.
-- BTC SHORT 78,276 (opened 05:04Z), stop 77,650 (trailed 18:52Z above 16-20Z high 77,554; profit locked ~+1.9), TP 75,500. Open +2.53 at 16:48Z. Price creeping toward stop; accept stop-out (locks ~+1.9) rather than closing early. Stop 77,650 stays: 20-24Z high 77,204 + ~600 = 77,800 is NOT lower, so no trail. If stopped at 77,650 that locks ~+1.9; then watch for bounce-fail re-short only if 4h rejects 78.0-78.6k.
-  - Keep trailing above each new completed 4h high (>= ~1 h1 ATR ~ 615 away).
-  - Add (pyramid, close + reopen bigger or rely on new position after close; ~1.5% risk, stop above last 4h high) only on 4h close < 76,300.
-  - If TP 75.5k hits: look for bounce-fail re-short into 76.3-77k zone (resting order).
-  - Time limit: if still 76.3-77.6k by Sun 1 Nov 12Z, close.
+- BTC SHORT 78,276 (opened 30 Oct 05:04Z), stop 77,650 (locks ~+1.9), TP 75,500. Open +2.39.
+  - Trail above each new completed 4h high only when high + ~1 h1 ATR < 77,650.
+  - Add (~1.5% risk, stop above last 4h high) only on 4h close < 76,300.
+  - If TP 75.5k hits: look for bounce-fail re-short into 76.3-77k (resting order).
+  - Time limit: if still 76.3-77.6k at Sun 1 Nov 12Z session, close and wait for the range break (stop-out would also be fine).
+- No resting orders.
 
 ## Watchlist
-- BTC long only on reclaim: 4h close > 79,900 then retest.
-- ETH short alternative if ETH < 2,170 with BTC weak (same bet as BTC short; only as replacement, not stacked).
-- NEAR/LINK showing relative strength vs BTC; if BTC breaks up (4h close > 77,700 after stop-out), NEAR/LINK long is the better vehicle than BTC. Not yet.
-- Alt short-squeeze long (SUI/DOT/LINK negative funding) only if BTC 4h closes > 79,400.
-- PEPE: -93% funding squeeze risk; no short. Long only if BTC turns up.
-- EUR 1.1165: long on 4h close > 1.121, stop < 1.112. PAXG dumping; short only on bounce-fail below 3,975-4,000 (funding -52% pays shorts... note it costs longs).
+- BTC range break: 4h close < 76,900 (below weekend range low 77.0k) -> hold/add short per plan; 4h close > 77,700 -> short stopped, then long only on reclaim 4h close > 78,100 with retest, or better via alts.
+- BTC long on reclaim: 4h close > 79,900 then retest.
+- LINK long again only on 4h CLOSE > 11.95 (above the failed wick) with BTC not breaking down.
+- NEAR relative strength vs BTC; same condition as LINK (alt long if BTC breaks up).
+- ETH short alternative if ETH < 2,170 with BTC weak (replacement, not stacked).
+- Alt short-squeeze long (negative funding names) only if BTC 4h closes > 79,400.
+- PEPE: no short into deeply negative funding. Long only if BTC turns up.
+- EUR: long on 4h close > 1.121, stop < 1.112. PAXG: short only on bounce-fail below 3,975-4,000.
 - Polymarket: bet only with >5pt edge.
 
 ## Lessons
-- Range-edge breakdown short with 4h-close confirmation + structure stop worked (+6.28 at 2R). Bounce-fail resting order filled as planned; trailing behind 4h highs made it risk-free then profit-locked.
-- Breakouts inside a pinned range fail: require a 4h CLOSE beyond the level.
+- Range-edge breakdown short with 4h-close confirmation + structure stop worked (+6.28 at 2R). Bounce-fail resting order filled as planned; trailing made it profit-locked.
+- Breakouts inside a pinned/weekend range fail: require a 4h CLOSE beyond the level. LINK intrabar breakout entry (31 Oct) reversed within 4h -> confirmed again.
 - Range-middle/retest shorts got squeezed twice. Trade only edges.
 - Stops within ~1 h1 ATR die in chop. Use 4h structure, size down.
 - Memes wick violently: never tight stops on memes; don't short memes with deeply negative funding.
 - Gold breakout-buying failed twice (d1 downtrend).
 - Stacking same-direction bets = one bet. Funding spikes mean-revert fast: carry on a spike loses to fees.
 - Don't open fresh at h1 RSI < 25 after a big leg; wait for the bounce.
+- Cut a trade when its thesis level is lost on a 4h close; don't wait for the full stop.
 - Git: clone may be on detached HEAD; checkout main, pull --rebase, commit, push.
 
 ## Predictions
 - None held.
 
 ## Session log
-- 2026-10-31T22:47Z | eq 246.76 | BTC short +2.37 (77,511, 3rd rejection at 77.6k), LINK long -0.56 (11.76 pullback). Held both, no valid trails. No news search (weekend).
-- 2026-10-31T20:51Z | eq 247.57 | BTC short +2.56, LINK long filled 11.82 (+0.15). Held BTC (no valid trail); raised LINK stop 11.40->11.50. No news search (weekend).
-- 2026-10-31T18:51Z | eq 247.18 | BTC short +2.22, price 77,560 at stop's doorstep. Held (no valid trail). Placed LINK breakout long entry 11.82. No news search (weekend).
-- 2026-10-31T16:52Z | eq 247.48 | BTC short +2.53; still pinned 77.0-77.6k. Held, stop 77,650 (no valid trail). No news search (weekend).
-- 2026-10-31T14:51Z | eq 247.75 | BTC short +2.81; flat 77.0-77.6k. Held, stop 77,650 (no valid trail). No news search (weekend).
-- 2026-10-31T12:51Z | eq 247.41 | BTC short +2.48; grind up to 77.59k, stop 77,650 near. Held (no valid trail). No news search (weekend).
-- 2026-10-31T10:50Z | eq 247.78 | BTC short +2.86; dead-flat 77.0-77.4k. Held, stop 77,650 (no valid trail). No news search (weekend).
-- 2026-10-31T08:50Z | eq 248.23 | BTC short +3.32; flat 77.0-77.4k weekend range. Held, stop 77,650 (no valid trail). No news search.
-- 2026-10-31T06:50Z | eq 247.70 | BTC short +2.82; slow grind up to 77.37k inside range. Held, stop 77,650 (no valid trail). No news search.
-- 2026-10-31T04:45Z | eq 248.67 | BTC short +3.79; 00-04Z lower high 77,494. Held, stop 77,650. No news search (weekend).
+- 2026-11-01T00:51Z | eq 245.81 | BTC short +2.39 (77,506, still pinned). Closed LINK long ~-1.6 (failed breakout, 4h closed 11.63 < 11.72). Held BTC, no valid trail. 1 news search, nothing new.
+- 2026-10-31T22:47Z | eq 246.76 | BTC short +2.37 (3rd rejection at 77.6k), LINK long -0.56. Held both, no valid trails.
+- 2026-10-31T20:51Z | eq 247.57 | BTC short +2.56, LINK long filled 11.82. Raised LINK stop 11.40->11.50.
+- 2026-10-31T18:51Z | eq 247.18 | BTC short +2.22. Placed LINK breakout long entry 11.82.
+- 2026-10-31T16:52Z | eq 247.48 | BTC short +2.53; pinned 77.0-77.6k. Held.
+- 2026-10-31T14:51Z | eq 247.75 | BTC short +2.81; flat. Held.
+- 2026-10-31T12:51Z | eq 247.41 | BTC short +2.48; grind up to 77.59k. Held.
+- 2026-10-31T10:50Z | eq 247.78 | BTC short +2.86; flat. Held.
+- 2026-10-31T08:50Z | eq 248.23 | BTC short +3.32; flat weekend range. Held.
+- 2026-10-31T06:50Z | eq 247.70 | BTC short +2.82; inside range. Held.
