@@ -1,18 +1,6 @@
 {
- "cash": 244.9554959707558,
- "positions": {
-  "BTCUSDT": {
-   "side": "long",
-   "qty": 0.00532104,
-   "entry": 78073.21494,
-   "stop": 77700.0,
-   "tp": 79400.0,
-   "opened": 1793580754987,
-   "entry_fee": 0.22848688479338572,
-   "mark": 77843.2,
-   "note": "Plan trigger met: 00Z 4h close 78,239 > 78,200 range top after 7 inside closes (weekend compression 77.3-78.1k); entering on the retest at ~78.0k. Stop below the 4h lows 77,511/77,521; TP 79,400 = next resistance (h4 ema50 79.1k) ~2.6R. Half-size because alts are not confirming and d1 trend is down."
-  }
- },
+ "cash": 242.53570202490087,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -321,6 +309,19 @@
    "why": "stop",
    "opened": 1793336640000,
    "reason": "Bounce-fail re-short: after the 78.9k->76.6k breakdown leg (d1 downtrend, below h1/h4/d1 emas), an oversold/expiry bounce into the old breakdown zone 78.0-78.6k should be sold. Stop above 79.4k (top of the post-breakdown 4h consolidation), TP 75.5k ~2.5R."
+  },
+  {
+   "id": "t74",
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "qty": 0.00532104,
+   "entry": 78073.21494,
+   "exit": 77661.15,
+   "pnl": -2.6484,
+   "time": 1793620020000,
+   "why": "stop",
+   "opened": 1793580754987,
+   "reason": "Plan trigger met: 00Z 4h close 78,239 > 78,200 range top after 7 inside closes (weekend compression 77.3-78.1k); entering on the retest at ~78.0k. Stop below the 4h lows 77,511/77,521; TP 79,400 = next resistance (h4 ema50 79.1k) ~2.6R. Half-size because alts are not confirming and d1 trend is down."
   }
  ],
  "fills": [
@@ -333,8 +334,8 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793619604797,
- "next_id": 74,
+ "last_ms": 1793620084794,
+ "next_id": 75,
  "orders": [],
  "order_events": [
   {
@@ -829,6 +830,6 @@
  "income": {
   "funding": 0.22780704442604358,
   "carry": -0.3533966676142852,
-  "interest": 0.2417166021000916
+  "interest": 0.2418176316605531
  }
 }
