@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-02T05:55:52Z",
+ "updated": "2026-11-02T06:03:52Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9251,
- "equity_pln": 965.23,
- "return_pct": -4.37,
+ "equity_pln": 964.6,
+ "return_pct": -4.43,
  "max_drawdown_pct": 10.31,
- "control_pln": 996.82,
+ "control_pln": 995.13,
  "control_trades": 5,
- "hodl_pln": 933.82,
+ "hodl_pln": 933.44,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "long",
    "size": 0.00532104,
    "entry": 78073.21494,
-   "mark": 78263.9,
-   "upnl": 1.0146428316623408,
+   "mark": 78232.0,
+   "upnl": 0.8449016556623719,
    "stop": 77700.0,
    "tp": 79400.0,
    "liq": null,
    "leverage": null,
    "opened": 1793580754987,
    "reason": "Plan trigger met: 00Z 4h close 78,239 > 78,200 range top after 7 inside closes (weekend compression 77.3-78.1k); entering on the retest at ~78.0k. Stop below the 4h lows 77,511/77,521; TP 79,400 = next resistance (h4 ema50 79.1k) ~2.6R. Half-size because alts are not confirming and d1 trend is down.",
-   "upnl_pln": 3.98
+   "upnl_pln": 3.32
   }
  ],
  "closed_trades": [
@@ -389,7 +389,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 244.898996,
+ "cash_usd": 244.908031,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -446,9 +446,9 @@
   {
    "symbol": "BONKUSDT",
    "notional": 49.0,
-   "earned": 0.2515,
+   "earned": 0.263,
    "fees": 0.147,
-   "net_if_closed_now": -0.0425,
+   "net_if_closed_now": -0.031,
    "funding_pct_per_hour": 0.02339,
    "funding_apr_pct": 204.9,
    "opened": 1793530316929,
@@ -484,8 +484,8 @@
   }
  ],
  "income_pln": {
-  "funding": 0.95,
-  "carry": -1.65,
+  "funding": 0.94,
+  "carry": -1.61,
   "interest": 0.93
  },
  "cash_rate_pct": 3.87
