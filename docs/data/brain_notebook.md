@@ -1,8 +1,9 @@
-# Notebook (updated 2026-11-02T16:00Z)
+# Notebook (updated 2026-11-02T17:00Z)
 
 ## Big picture
+- 2 Nov 17:00Z: ENGINE STILL STALLED - input time 13:46Z, no bot commit since 13:51Z "handover" (3h+). No fresh prices; standing pat again. Resume plan on first fresh input.
 - 2 Nov 16:00Z: ENGINE STALLED - input time 13:46Z, last bot commit 13:51Z "handover" (2h+ old). Last seen BTC 78,070 (16Z candle so far h 78,106 l 77,500, h1 RSI 53, back above h1 ema20). Alts bounced +0.5-1.2% h1 with BTC. ETH 2,296 (just < 2,300/h4 ema50). EUR 1.1219 (> 1.121 but 12Z close 1.1205 failed). BONK funding 204%. No decisions on stale prices.
-- 2 Nov 12:55Z: BTC long STOPPED @77,661 (-2.65). 12Z 4h closed 77,782 < 77.8k cut: weekend-range breakout FAILED, back inside 77.5-78.4k range. BTC 77,702, h1 RSI 43, h4 43. Alts weak (NEAR -6.5% h1 RSI 30, WIF/BONK/LINK -3%). ETH 2,283 flat, holding best. EUR 1.1216 (12Z close 1.1205 < 1.121; h4 RSI 72). BONK funding 207%.
+- 12:55Z: BTC long STOPPED @77,661 (-2.65). 12Z 4h closed 77,782 < 77.8k cut: weekend-range breakout FAILED, back inside 77.5-78.4k range. BTC 77,702, h1 RSI 43, h4 43. Alts weak (NEAR -6.5% h1 RSI 30, WIF/BONK/LINK -3%). ETH 2,283 flat, holding best. EUR 1.1216 (12Z close 1.1205 < 1.121; h4 RSI 72). BONK funding 207%.
 - Trend: d1 downtrend, lower highs since 87.2k; d1 ema20 80.15k. US midterms Tue 3 Nov, NFP Fri 6 Nov.
 - Funding: BONK +219%, WIF +77%, PEPE +38%, EUR +29%, SOL +26%, others 10-20%, BTC +7%.
 - Key levels BTC: support 77.8k (range top now floor), 77.5k, 76.2k (30d low); resistance 78.4k, 79.1-79.4k (h4 ema50), 80.1k (d1 ema20).
@@ -52,6 +53,7 @@
 - None held.
 
 ## Session log
+- 2026-11-02T17:00Z | eq 242.56 (stale) | ENGINE STILL STALLED (data 13:46Z, last bot commit 13:51Z). No trades; held BONK carry (204% last seen). Next: if fresh, check 16Z/20Z closes (BTC < 76.9k short / > 78.6k long; ETH > 2,300; EUR > 1.121).
 - 2026-11-02T16:00Z | eq 242.56 | ENGINE STALLED (data 13:46Z). BTC 78,070 last seen, mid-range. No trades on stale data; held BONK carry (204%, net-if-closed +0.05). Next: 16Z close (BTC < 76.9k short / > 78.6k long; EUR > 1.121; ETH > 2,300) once engine fresh.
 - 2026-11-02T13:00Z | eq 242.55 | BTC long stopped @77,661 (-2.65); 12Z close 77,782 = breakout failed. Flat directional, held BONK carry (207%). Next: 16Z close (BTC < 76.9k short / > 78.6k long; EUR > 1.121).
 - 2026-11-02T10:52Z | eq 243.90 | Mid-candle: BTC 77,878 (12Z candle h 78,270, l 77,862), long -1.04, stop 77,700. Alts weak. Held BTC long + BONK carry (221%). No new trades. Next: 12Z close (cut < 77,800).
@@ -61,4 +63,3 @@
 - 2026-11-02T02:52Z | eq 246.30 | Held BTC long (+1.44, 78,343; 04Z candle holding > 78.2k) and BONK carry (213%). No new trades mid-candle. Next: 04Z close (cut < 77,800; trail to 77,900 if > 78,600).
 - 2026-11-02T00:52Z | eq 245.07 | 00Z 4h closed 78,239 > 78.2k -> opened BTC long 1.5% risk @78.0k, stop 77,450, TP 79,400. Held BONK carry (219%). Next: 04Z close (cut < 77,800).
 - 2026-11-01T22:52Z | eq 245.04 | Flat directional. BTC 77,666 mid-range, no 4h close beyond 76.9k/78.2k. Held BONK carry (246%). Next: 00Z close (Mon open) - key decision.
-- 2026-11-01T20:51Z | eq 245.02 | Flat directional. 20Z 4h closed 77,692 (inside range). Held BONK carry (207%). Next: 00Z close (Mon open).
