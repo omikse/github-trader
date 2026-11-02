@@ -20,7 +20,7 @@
   "2026-10-30": 12,
   "2026-10-31": 12,
   "2026-11-01": 11,
-  "2026-11-02": 6
+  "2026-11-02": 7
  },
  "closed_trades": [
   {
@@ -345,26 +345,11 @@
    "reason": "Plan trigger met: 00Z 4h close 78,239 > 78,200 range top after 7 inside closes (weekend compression 77.3-78.1k); entering on the retest at ~78.0k. Stop below the 4h lows 77,511/77,521; TP 79,400 = next resistance (h4 ema50 79.1k) ~2.6R. Half-size because alts are not confirming and d1 trend is down."
   }
  ],
- "last_closed_check_ms": 1793623924771,
+ "last_closed_check_ms": 1793624344949,
  "day": "2026-11-02",
  "day_start_equity": 245.07262964761497,
  "paused_day": null,
- "pending_events": [
-  {
-   "type": "position_closed",
-   "id": "t74",
-   "symbol": "BTCUSDT",
-   "side": "long",
-   "qty": 0.00532104,
-   "entry": 78073.21494,
-   "exit": 77661.15,
-   "pnl": -2.6484,
-   "time": 1793620020000,
-   "why": "stop",
-   "opened": 1793580754987,
-   "reason": "Plan trigger met: 00Z 4h close 78,239 > 78,200 range top after 7 inside closes (weekend compression 77.3-78.1k); entering on the retest at ~78.0k. Stop below the 4h lows 77,511/77,521; TP 79,400 = next resistance (h4 ema50 79.1k) ~2.6R. Half-size because alts are not confirming and d1 trend is down."
-  }
- ],
+ "pending_events": [],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 248.76609681058443,
@@ -373,7 +358,7 @@
   "trades": 6,
   "wins": 3
  },
- "last_btc": 77666.2,
+ "last_btc": 77661.1,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -422,6 +407,6 @@
   "o69:filled",
   "o71:filled"
  ],
- "last_decision_id": "2026-11-02T10:52:30Z",
+ "last_decision_id": "2026-11-02T13:00:00Z",
  "cash_rate_day": "2026-11-02"
 }
