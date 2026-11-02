@@ -1,5 +1,5 @@
 {
- "cash": 242.54181473760474,
+ "cash": 242.39491446792326,
  "positions": {},
  "closed": [
   {
@@ -334,9 +334,23 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793645113471,
- "next_id": 75,
- "orders": [],
+ "last_ms": 1793645533373,
+ "next_id": 77,
+ "orders": [
+  {
+   "id": "o76",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00617787,
+   "trigger": 77450,
+   "direction": "above",
+   "stop": 78150.0,
+   "tp": 75500.0,
+   "placed": 1793645533373,
+   "expires": 1793731933373,
+   "note": "Range breakdown: 16Z 4h closed 77,404 below the 77.5k floor, BTC 76.8k with all alts weak. Short a bounce-fail retest of the broken floor (77.45k), stop above 16Z candle high 78,106, TP 75.5k (~2.8R). Same pattern as the profitable 30 Oct bounce-fail short."
+  }
+ ],
  "order_events": [
   {
    "id": "o2",
@@ -772,16 +786,7 @@
   "PAXGUSDT": 2.91995375e-05,
   "EURUSDT": -5.54109875e-05
  },
- "carry": {
-  "BONKUSDT": {
-   "notional": 49.0,
-   "opened": 1793530316929,
-   "earned": 0.31933790775833343,
-   "fees": 0.147,
-   "rate_at_open": 0.000277360391666667,
-   "note": "BONK funding 243% APR, 3rd consecutive session >200% (sustained, not a single spike). 0.67%/day vs 0.6% round-trip fees -> break-even ~0.9 days. Plan: hold >=3 days; close only if funding < 50% APR for 2 sessions (earlier BONK carries lost by closing after <1 day)."
-  }
- },
+ "carry": {},
  "carry_closed": [
   {
    "id": "c20",
@@ -806,6 +811,18 @@
    "pnl": -0.3116,
    "why": "manual close",
    "reason": "BONK funding > 60% APR for 3 sessions (96, 76, now 153%). At 153% APR (0.42%/day) break-even on 0.6% round-trip costs ~1.5 days. Close if funding < 30% for 2 sessions or negative."
+  },
+  {
+   "id": "c75",
+   "symbol": "BONKUSDT",
+   "notional": 49.0,
+   "opened": 1793530316929,
+   "time": 1793645533373,
+   "earned": 0.3193,
+   "fees": 0.294,
+   "pnl": 0.0253,
+   "why": "manual close",
+   "reason": "BONK funding 243% APR, 3rd consecutive session >200% (sustained, not a single spike). 0.67%/day vs 0.6% round-trip fees -> break-even ~0.9 days. Plan: hold >=3 days; close only if funding < 50% APR for 2 sessions (earlier BONK carries lost by closing after <1 day)."
   }
  ],
  "predictions": {},
@@ -829,7 +846,7 @@
  "cash_rate": 0.0387,
  "income": {
   "funding": 0.22780704442604358,
-  "carry": -0.3532285916934517,
-  "interest": 0.2477622684435119
+  "carry": -0.5002285916934517,
+  "interest": 0.24786199876202458
  }
 }
