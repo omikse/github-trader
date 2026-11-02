@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-02T02:59:52Z",
+ "updated": "2026-11-02T03:07:52Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9251,
- "equity_pln": 966.69,
- "return_pct": -4.22,
+ "equity_pln": 967.64,
+ "return_pct": -4.13,
  "max_drawdown_pct": 10.31,
- "control_pln": 1000.84,
+ "control_pln": 1003.12,
  "control_trades": 5,
- "hodl_pln": 934.72,
+ "hodl_pln": 935.24,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "long",
    "size": 0.00532104,
    "entry": 78073.21494,
-   "mark": 78339.8,
-   "upnl": 1.4185097676623872,
+   "mark": 78383.0,
+   "upnl": 1.6483786956623718,
    "stop": 77450.0,
    "tp": 79400.0,
    "liq": null,
    "leverage": null,
    "opened": 1793580754987,
    "reason": "Plan trigger met: 00Z 4h close 78,239 > 78,200 range top after 7 inside closes (weekend compression 77.3-78.1k); entering on the retest at ~78.0k. Stop below the 4h lows 77,511/77,521; TP 79,400 = next resistance (h4 ema50 79.1k) ~2.6R. Half-size because alts are not confirming and d1 trend is down.",
-   "upnl_pln": 5.57
+   "upnl_pln": 6.47
   }
  ],
  "closed_trades": [
@@ -379,7 +379,7 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 244.866875,
+ "cash_usd": 244.87803,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -388,7 +388,7 @@
    "side": "long",
    "entry": 78278.31959999999,
    "qty": 0.013477918008762996,
-   "stop": 77797.42052276758
+   "stop": 77803.27371292848
   }
  },
  "pairs": {
@@ -436,11 +436,11 @@
   {
    "symbol": "BONKUSDT",
    "notional": 49.0,
-   "earned": 0.2149,
+   "earned": 0.2268,
    "fees": 0.147,
-   "net_if_closed_now": -0.0791,
-   "funding_pct_per_hour": 0.02434,
-   "funding_apr_pct": 213.2,
+   "net_if_closed_now": -0.0672,
+   "funding_pct_per_hour": 0.02647,
+   "funding_apr_pct": 231.9,
    "opened": 1793530316929,
    "reason": "BONK funding 243% APR, 3rd consecutive session >200% (sustained, not a single spike). 0.67%/day vs 0.6% round-trip fees -> break-even ~0.9 days. Plan: hold >=3 days; close only if funding < 50% APR for 2 sessions (earlier BONK carries lost by closing after <1 day)."
   }
@@ -475,7 +475,7 @@
  ],
  "income_pln": {
   "funding": 0.98,
-  "carry": -1.8,
+  "carry": -1.75,
   "interest": 0.92
  },
  "cash_rate_pct": 3.87
