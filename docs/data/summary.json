@@ -1,16 +1,16 @@
 {
- "updated": "2026-11-01T23:56:34Z",
+ "updated": "2026-11-02T00:04:34Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9251,
- "equity_pln": 961.88,
- "return_pct": -4.7,
+ "equity_pln": 961.93,
+ "return_pct": -4.69,
  "max_drawdown_pct": 10.31,
- "control_pln": 999.86,
+ "control_pln": 1003.04,
  "control_trades": 5,
- "hodl_pln": 933.58,
+ "hodl_pln": 935.22,
  "positions": [],
  "closed_trades": [
   {
@@ -348,7 +348,7 @@
  ],
  "trade_count": 24,
  "win_rate_pct": 33.3,
- "brain_calls_today": 11,
+ "brain_calls_today": 0,
  "last_decision": {
   "time": "2026-11-01T22:52:34Z",
   "trigger": "brain session",
@@ -363,12 +363,17 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 245.059287,
+ "cash_usd": 245.072687,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
-  "equity": 254.7349994734633,
-  "pos": null
+  "equity": 254.1547336480754,
+  "pos": {
+   "side": "long",
+   "entry": 78278.31959999999,
+   "qty": 0.013477918008762996,
+   "stop": 77797.42052276758
+  }
  },
  "pairs": {
   "BTCUSDT": "XBTUSD",
@@ -415,11 +420,11 @@
   {
    "symbol": "BONKUSDT",
    "notional": 49.0,
-   "earned": 0.1767,
+   "earned": 0.19,
    "fees": 0.147,
-   "net_if_closed_now": -0.1173,
-   "funding_pct_per_hour": 0.02711,
-   "funding_apr_pct": 237.5,
+   "net_if_closed_now": -0.104,
+   "funding_pct_per_hour": 0.02496,
+   "funding_apr_pct": 218.6,
    "opened": 1793530316929,
    "reason": "BONK funding 243% APR, 3rd consecutive session >200% (sustained, not a single spike). 0.67%/day vs 0.6% round-trip fees -> break-even ~0.9 days. Plan: hold >=3 days; close only if funding < 50% APR for 2 sessions (earlier BONK carries lost by closing after <1 day)."
   }
@@ -454,7 +459,7 @@
  ],
  "income_pln": {
   "funding": 1.0,
-  "carry": -1.95,
+  "carry": -1.89,
   "interest": 0.91
  },
  "cash_rate_pct": 3.87
