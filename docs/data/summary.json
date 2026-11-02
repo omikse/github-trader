@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-02T02:43:52Z",
+ "updated": "2026-11-02T02:51:52Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9251,
- "equity_pln": 967.38,
- "return_pct": -4.15,
+ "equity_pln": 967.36,
+ "return_pct": -4.16,
  "max_drawdown_pct": 10.31,
- "control_pln": 1002.57,
+ "control_pln": 1002.67,
  "control_trades": 5,
- "hodl_pln": 935.11,
+ "hodl_pln": 935.14,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "long",
    "size": 0.00532104,
    "entry": 78073.21494,
-   "mark": 78372.5,
-   "upnl": 1.5925077756623718,
+   "mark": 78374.4,
+   "upnl": 1.6026177516623408,
    "stop": 77450.0,
    "tp": 79400.0,
    "liq": null,
    "leverage": null,
    "opened": 1793580754987,
    "reason": "Plan trigger met: 00Z 4h close 78,239 > 78,200 range top after 7 inside closes (weekend compression 77.3-78.1k); entering on the retest at ~78.0k. Stop below the 4h lows 77,511/77,521; TP 79,400 = next resistance (h4 ema50 79.1k) ~2.6R. Half-size because alts are not confirming and d1 trend is down.",
-   "upnl_pln": 6.25
+   "upnl_pln": 6.29
   }
  ],
  "closed_trades": [
@@ -364,35 +364,22 @@
  ],
  "trade_count": 24,
  "win_rate_pct": 33.3,
- "brain_calls_today": 1,
+ "brain_calls_today": 2,
  "last_decision": {
-  "time": "2026-11-02T00:52:34Z",
+  "time": "2026-11-02T02:51:52Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-02T00:51:36Z",
+  "decided_at": "2026-11-02T02:52:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 245.07,
-  "equity_pln": 961.94,
+  "equity_usd": 246.46,
+  "equity_pln": 967.36,
   "events": [],
-  "market_view": "00Z 4h (and daily) closed BTC 78,239, the first close above the 78.2k weekend range top after 7 closes inside; price now retesting 78.0k (h4 ema20 78,083). Alts lag (SOL/LINK/NEAR weak), so the breakout is marginal: taking it at reduced risk per the written plan.",
-  "watch_next": "04Z 4h close: hold long while > 77,800; close if a 4h closes back < 77,800. Trail stop to 77,900 on a 4h close > 78,600. BONK carry hold while funding > 50% APR.",
-  "news": "No fresh crypto catalyst found; US midterms Tue 3 Nov, NFP Fri 6 Nov.",
-  "actions": [
-   {
-    "type": "open",
-    "symbol": "BTCUSDT",
-    "side": "long",
-    "stop": 77450,
-    "take_profit": 79400,
-    "risk_pct": 0.015,
-    "reason": "Plan trigger met: 00Z 4h close 78,239 > 78,200 range top after 7 inside closes (weekend compression 77.3-78.1k); entering on the retest at ~78.0k. Stop below the 4h lows 77,511/77,521; TP 79,400 = next resistance (h4 ema50 79.1k) ~2.6R. Half-size because alts are not confirming and d1 trend is down.",
-    "invalidation": "A 4h close back below 77,800 (back inside the range) = failed breakout, close early.",
-    "result": "done",
-    "detail": "long 0.00532104 (~415.33 USD, risk 1.5%, stop 77450.0, target 79400.0) ok"
-   }
-  ]
+  "market_view": "BTC 78,343: the 00Z breakout above the 78.2k weekend range top is holding on the retest (current 4h low 77,933, high 78,518). ETH leading at its 24h high; LINK/NEAR/PEPE lag. Mid-candle, so no new entries; let the long work.",
+  "watch_next": "04Z 4h close: < 77,800 -> cut BTC long; > 78,600 -> trail stop to 77,900 and consider ETH add on ETH 4h close > 2,300. BONK funding (hold carry while > 50%).",
+  "news": "No fresh market-moving crypto news found; US midterms Tue 3 Nov and NFP Fri 6 Nov are the week's catalysts.",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 244.866677,
+ "cash_usd": 244.866776,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
