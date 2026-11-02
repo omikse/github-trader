@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-02T08:59:04Z",
+ "updated": "2026-11-02T09:07:04Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9251,
- "equity_pln": 962.58,
- "return_pct": -4.63,
+ "equity_pln": 964.03,
+ "return_pct": -4.49,
  "max_drawdown_pct": 10.31,
  "control_pln": 976.43,
  "control_trades": 6,
- "hodl_pln": 932.24,
+ "hodl_pln": 933.05,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "long",
    "size": 0.00532104,
    "entry": 78073.21494,
-   "mark": 78131.5,
-   "upnl": 0.3101371356623718,
+   "mark": 78199.8,
+   "upnl": 0.6735641676623872,
    "stop": 77700.0,
    "tp": 79400.0,
    "liq": null,
    "leverage": null,
    "opened": 1793580754987,
    "reason": "Plan trigger met: 00Z 4h close 78,239 > 78,200 range top after 7 inside closes (weekend compression 77.3-78.1k); entering on the retest at ~78.0k. Stop below the 4h lows 77,511/77,521; TP 79,400 = next resistance (h4 ema50 79.1k) ~2.6R. Half-size because alts are not confirming and d1 trend is down.",
-   "upnl_pln": 1.22
+   "upnl_pln": 2.64
   }
  ],
  "closed_trades": [
@@ -379,7 +379,7 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 244.926793,
+ "cash_usd": 244.9332,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -431,11 +431,11 @@
   {
    "symbol": "BONKUSDT",
    "notional": 49.0,
-   "earned": 0.2855,
+   "earned": 0.2956,
    "fees": 0.147,
-   "net_if_closed_now": -0.0085,
-   "funding_pct_per_hour": 0.02064,
-   "funding_apr_pct": 180.8,
+   "net_if_closed_now": 0.0016,
+   "funding_pct_per_hour": 0.02287,
+   "funding_apr_pct": 200.3,
    "opened": 1793530316929,
    "reason": "BONK funding 243% APR, 3rd consecutive session >200% (sustained, not a single spike). 0.67%/day vs 0.6% round-trip fees -> break-even ~0.9 days. Plan: hold >=3 days; close only if funding < 50% APR for 2 sessions (earlier BONK carries lost by closing after <1 day)."
   }
@@ -469,8 +469,8 @@
   }
  ],
  "income_pln": {
-  "funding": 0.92,
-  "carry": -1.52,
+  "funding": 0.91,
+  "carry": -1.48,
   "interest": 0.94
  },
  "cash_rate_pct": 3.87
