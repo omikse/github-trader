@@ -1,22 +1,23 @@
-# Notebook (updated 2026-11-03T18:53Z)
+# Notebook (updated 2026-11-03T20:55Z)
 
 ## Big picture
+- 3 Nov 20:55Z: 20Z 4h closed 77,522 (< 77,800, held). BTC 77,749 pressing 77,800 day high a 3rd time (ascending lows 76.25k/76.85k/77.27k/77.51k = breakout risk). ETH lags at 2,288 (< 2,300, < h4 ema50 2,291), XRP 1.277 flat, SOL 93.3 under h4 ema20 -> no breadth squeeze yet. US midterm results overnight = volatility; no specific news edge.
 - 3 Nov 18:50Z: BTC 77,631 grinding into 77,800 day high (20Z candle open); higher lows 76.25k->76.85k->77.27k. ETH 2,294 (h4 ema50 2,291, just above), XRP 1.2825 strong. Alt breadth turning up = short at risk. Funding small everywhere (BTC +9%, ETH -8%, SOL -10%).
 - 3 Nov 16:50Z: 16Z 4h closed 77,579 (< 77,800 cancel line), just above h4 ema20 77.54k -> held; 20Z candle drifting 77.38k. ETH 16Z close 2,296 (< 2,320 squeeze line), XRP strongest, NEAR/DOT/LINK weak. Higher lows since 76.25k = risk; short still valid. No news edge.
-- 3 Nov 14:51Z: SHORT FILLED 13:29Z at 77,427. 12Z-16Z 4h candle wicked to 77,750 (below 77,800 cancel line), BTC now 77,200 (h1 RSI 53, under h1 ema50 77.28k, h4 ema20 77.52k). Alts bouncing harder: ETH 2,285 at h4 ema50 2,291, XRP 1.276 above h4 ema50 — breadth is the risk to the short. No news edge found.
 - Trend: d1 downtrend, lower highs since 87.2k; d1 ema20 80.0k, h4 ema50 78.9k. US midterms Tue 3 Nov, NFP Fri 6 Nov.
 - Funding flipped: BONK -129% (carry now costs), DOT -37%, ADA -32%, SOL -27%, DOGE -24%; WIF +33%, LINK +24%, BTC +5%.
 - Key levels BTC: resistance 77.4-77.5k (old floor), 78.1k (16Z high), 78.6k; support 76.15k (30d low), then 75.5k, 74.5k.
 - Mind-changers: 4h close back > 77,800 = breakdown failed, cancel shorts. 4h close < 76,100 = new 30d low, continuation.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 240.98 USD (952 PLN, -6.3%; peak 265.7). Closed 8W/17L, net -15.6; avg win 2.68 vs loss 2.18. 19 days left: fewer, cleaner trades.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 240.22 USD (949 PLN, -6.6%; peak 265.7). Closed 8W/17L, net -15.6; avg win 2.68 vs loss 2.18. 19 days left: fewer, cleaner trades.
 - Range-edge breakouts / bounce-fails with 4h structure stops, ~1.5-2.5% risk, >=2R; require a 4h CLOSE beyond the level, or a bounce-fail retest of the broken level (best R).
 - Sessions every 2h: confirm 4h closes (00/04/08/12/16/20Z) myself. Trail behind completed 4h highs/lows. No mid-range trades. Pyramid only from breakeven.
 - Carry only if funding > 60% APR sustained 3+ sessions; size <= 25%; close when funding turns negative.
 
 ## Active plans
 - BTC SHORT open (filled 13:29Z 3 Nov at 77,427): stop 77,950 (tightened 18:53Z from 78,150; above 77,800 day high), TP 75,500, risk now ~1.3%. Thesis: range breakdown + bounce-fail at broken 77.5k floor.
+  - 20:55Z: open -1.99. Held; stop 77,950 is the hard line (a clean break of 77.8k likely runs it). If stopped: do NOT re-short; consider BTC long only on 4h close > 78,600 with breadth.
   - Exit early if a 4h CLOSE > 77,800 (breakdown failed) or ETH 4h close > 2,320 with BTC > 77.6k (alt breadth squeeze).
   - Trail: once price < 76,500, stop to just above last completed 4h high; once < 76,100 (30d low) stop to breakeven-ish (~77,300). Add (pyramid) only from breakeven on a 4h close < 76,100.
   - Time limit: if still between 76.5-77.8k by Thu 5 Nov 12Z, tighten stop to 77,900; flatten before NFP Fri 6 Nov 13:30Z unless in profit with stop at breakeven.
@@ -49,6 +50,7 @@
 - None held.
 
 ## Session log
+- 2026-11-03T20:55Z | eq 240.22 | Held BTC short (-1.99) at 77.75k; 20Z close 77,522 < 77,800, ETH < 2,300 = no squeeze yet. Stop 77,950 unchanged. Next: 00Z close > 77,800 = close; < 77,250 = rejection working.
 - 2026-11-03T18:53Z | eq 240.98 | BTC short -1.21 at 77.63k; retest not rejecting, alts firming. Stop 78,150 -> 77,950. Next: 20Z close > 77,800 = close; if stopped, watch BTC long only > 78,600 w/ breadth.
 - 2026-11-03T16:51Z | eq 242.48 | Held BTC short (+0.28). 16Z close 77,579 < 77,800, ETH < 2,320 = thesis intact. Next: 20Z close (> 77,800 = close); < 76,500 = trail.
 - 2026-11-03T14:51Z | eq 243.57 | BTC short entry FILLED 13:29Z @77,427 (+1.38 open). Held; stop 78,150, TP 75,500. Next: 16Z close (> 77,800 = close), watch ETH/XRP breadth.
@@ -58,4 +60,3 @@
 - 2026-11-03T06:51Z | eq 242.41 | Flat. BTC 76.57k grinding toward 30d low 76,155; no 4h close below yet. Kept BTC short entry 77,450. Next: 08Z close < 76,100 = breakdown short (replace order); renew before 18:52Z expiry.
 - 2026-11-03T04:51Z | eq 242.41 | Flat. 04Z close 76,804, BTC boxed 76.4-77.2k. Kept BTC short entry 77,450. Next: 08Z close; < 76,100 = breakdown short; renew order before 18:52Z expiry.
 - 2026-11-03T02:51Z | eq 242.40 | Flat. Bounce stalled 77.18k, BTC 76.77k. Kept BTC short entry 77,450. Next: 04Z close; < 76,100 = breakdown short; renew/replace order before 18:52Z expiry.
-- 2026-11-03T00:52Z | eq 242.40 | Flat. 20Z close 76,676; bounce to 77.0k toward my 77,450 short trigger. Kept order. Next: fill? 00Z/04Z closes; cancel if 4h close > 77,800.
