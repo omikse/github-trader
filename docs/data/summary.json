@@ -1,34 +1,32 @@
 {
- "updated": "2026-11-03T21:44:02Z",
+ "updated": "2026-11-03T21:51:57Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9526,
- "equity_pln": 945.62,
- "return_pct": -6.96,
+ "equity_pln": 942.58,
+ "return_pct": -7.26,
  "max_drawdown_pct": 10.31,
  "control_pln": 984.78,
  "control_trades": 7,
- "hodl_pln": 936.08,
- "positions": [
+ "hodl_pln": 934.74,
+ "positions": [],
+ "closed_trades": [
   {
+   "id": "t77",
    "symbol": "BTCUSDT",
    "side": "short",
-   "size": 0.00617787,
+   "qty": 0.00617787,
    "entry": 77426.765,
-   "mark": 77907.5,
-   "upnl": -2.9699183344500035,
-   "stop": 77950.0,
-   "tp": 75500.0,
-   "liq": null,
-   "leverage": null,
+   "exit": 77988.975,
+   "pnl": -4.0013,
+   "time": 1793742240000,
+   "why": "stop",
    "opened": 1793712540000,
    "reason": "Range breakdown: 16Z 4h closed 77,404 below the 77.5k floor, BTC 76.8k with all alts weak. Short a bounce-fail retest of the broken floor (77.45k), stop above 16Z candle high 78,106, TP 75.5k (~2.8R). Same pattern as the profitable 30 Oct bounce-fail short.",
-   "upnl_pln": -11.74
-  }
- ],
- "closed_trades": [
+   "pnl_pln": -15.82
+  },
   {
    "id": "t74",
    "symbol": "BTCUSDT",
@@ -376,8 +374,8 @@
    "pnl_pln": -21.33
   }
  ],
- "trade_count": 25,
- "win_rate_pct": 32.0,
+ "trade_count": 26,
+ "win_rate_pct": 30.8,
  "brain_calls_today": 11,
  "last_decision": {
   "time": "2026-11-03T20:56:02Z",
@@ -393,7 +391,7 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 242.209593,
+ "cash_usd": 238.471478,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {

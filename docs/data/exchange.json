@@ -1,18 +1,6 @@
 {
- "cash": 242.20959289790846,
- "positions": {
-  "BTCUSDT": {
-   "side": "short",
-   "qty": 0.00617787,
-   "entry": 77426.765,
-   "stop": 77950.0,
-   "tp": 75500.0,
-   "opened": 1793712540000,
-   "entry_fee": 0.2630828687798025,
-   "mark": 77907.5,
-   "note": "Range breakdown: 16Z 4h closed 77,404 below the 77.5k floor, BTC 76.8k with all alts weak. Short a bounce-fail retest of the broken floor (77.45k), stop above 16Z candle high 78,106, TP 75.5k (~2.8R). Same pattern as the profitable 30 Oct bounce-fail short."
-  }
- },
+ "cash": 238.4714784588638,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -334,6 +322,19 @@
    "why": "stop",
    "opened": 1793580754987,
    "reason": "Plan trigger met: 00Z 4h close 78,239 > 78,200 range top after 7 inside closes (weekend compression 77.3-78.1k); entering on the retest at ~78.0k. Stop below the 4h lows 77,511/77,521; TP 79,400 = next resistance (h4 ema50 79.1k) ~2.6R. Half-size because alts are not confirming and d1 trend is down."
+  },
+  {
+   "id": "t77",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00617787,
+   "entry": 77426.765,
+   "exit": 77988.975,
+   "pnl": -4.0013,
+   "time": 1793742240000,
+   "why": "stop",
+   "opened": 1793712540000,
+   "reason": "Range breakdown: 16Z 4h closed 77,404 below the 77.5k floor, BTC 76.8k with all alts weak. Short a bounce-fail retest of the broken floor (77.45k), stop above 16Z candle high 78,106, TP 75.5k (~2.8R). Same pattern as the profitable 30 Oct bounce-fail short."
   }
  ],
  "fills": [
@@ -346,8 +347,8 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793742242316,
- "next_id": 77,
+ "last_ms": 1793742717348,
+ "next_id": 78,
  "orders": [],
  "order_events": [
   {
@@ -854,6 +855,6 @@
  "income": {
   "funding": 0.2779712451627594,
   "carry": -0.5002285916934517,
-  "interest": 0.27545909679065494
+  "interest": 0.27559811238673965
  }
 }
