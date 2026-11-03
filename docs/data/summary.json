@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-03T14:44:12Z",
+ "updated": "2026-11-03T14:51:12Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9526,
- "equity_pln": 962.75,
- "return_pct": -5.28,
+ "equity_pln": 963.55,
+ "return_pct": -5.2,
  "max_drawdown_pct": 10.31,
  "control_pln": 984.78,
  "control_trades": 7,
- "hodl_pln": 927.56,
+ "hodl_pln": 927.21,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00617787,
    "entry": 77426.765,
-   "mark": 77202.8,
-   "upnl": 1.3836266545499785,
+   "mark": 77169.8,
+   "upnl": 1.5874963645499784,
    "stop": 78150.0,
    "tp": 75500.0,
    "liq": null,
    "leverage": null,
    "opened": 1793712540000,
    "reason": "Range breakdown: 16Z 4h closed 77,404 below the 77.5k floor, BTC 76.8k with all alts weak. Short a bounce-fail retest of the broken floor (77.45k), stop above 16Z candle high 78,106, TP 75.5k (~2.8R). Same pattern as the profitable 30 Oct bounce-fail short.",
-   "upnl_pln": 5.47
+   "upnl_pln": 6.27
   }
  ],
  "closed_trades": [
@@ -378,22 +378,33 @@
  ],
  "trade_count": 25,
  "win_rate_pct": 32.0,
- "brain_calls_today": 7,
+ "brain_calls_today": 8,
  "last_decision": {
-  "time": "2026-11-03T12:52:12Z",
+  "time": "2026-11-03T14:51:12Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-03T12:52:00Z",
+  "decided_at": "2026-11-03T14:51:30Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 242.41,
-  "equity_pln": 958.17,
-  "events": [],
-  "market_view": "BTC 77,280 bouncing inside the 76.25-77.4k box after 12Z close 76,975; approaching my 77,450 bounce-fail short trigger (broken floor + h4 ema20 77.5k). Alts bouncing mildly, XRP strongest; d1 downtrend intact.",
-  "watch_next": "Whether the 77,450 short fills and rejects; 16Z 4h close (> 77,800 cancels the idea); renew the order before 18:52Z expiry.",
-  "news": "No market-moving crypto/macro news found; US midterms today, NFP Friday.",
+  "equity_usd": 243.73,
+  "equity_pln": 963.36,
+  "events": [
+   {
+    "type": "order_filled",
+    "id": "o76",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "status": "filled",
+    "trigger": 77450,
+    "time": 1793712540000,
+    "detail": "filled at 77426.8"
+   }
+  ],
+  "market_view": "BTC short entry filled at 77,427 on the bounce into the broken 77.5k floor; current 4h wicked to 77,750 but is back at 77.2k below h1 ema50/h4 ema20. Alts (ETH, XRP) bouncing harder, which is the main risk to the short.",
+  "watch_next": "16Z 4h close: > 77,800 = close short; < 76,500 = trail stop above last 4h high. Watch ETH vs 2,320 for breadth squeeze.",
+  "news": "No market-moving crypto or macro news found; US midterms today, NFP Friday.",
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 242.164535,
+ "cash_usd": 242.164644,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
