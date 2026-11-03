@@ -1,6 +1,18 @@
 {
- "cash": 242.4147613619013,
- "positions": {},
+ "cash": 242.15181418037812,
+ "positions": {
+  "BTCUSDT": {
+   "side": "short",
+   "qty": 0.00617787,
+   "entry": 77426.765,
+   "stop": 78150.0,
+   "tp": 75500.0,
+   "opened": 1793712540000,
+   "entry_fee": 0.2630828687798025,
+   "mark": 77708.9,
+   "note": "Range breakdown: 16Z 4h closed 77,404 below the 77.5k floor, BTC 76.8k with all alts weak. Short a bounce-fail retest of the broken floor (77.45k), stop above 16Z candle high 78,106, TP 75.5k (~2.8R). Same pattern as the profitable 30 Oct bounce-fail short."
+  }
+ },
  "closed": [
   {
    "id": "t5",
@@ -334,23 +346,9 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793712251973,
+ "last_ms": 1793712732025,
  "next_id": 77,
- "orders": [
-  {
-   "id": "o76",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "qty": 0.00617787,
-   "trigger": 77450,
-   "direction": "above",
-   "stop": 78150.0,
-   "tp": 75500.0,
-   "placed": 1793645533373,
-   "expires": 1793731933373,
-   "note": "Range breakdown: 16Z 4h closed 77,404 below the 77.5k floor, BTC 76.8k with all alts weak. Short a bounce-fail retest of the broken floor (77.45k), stop above 16Z candle high 78,106, TP 75.5k (~2.8R). Same pattern as the profitable 30 Oct bounce-fail short."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -765,6 +763,15 @@
    "trigger": 11.82,
    "time": 1793473860000,
    "detail": "filled at 11.8235"
+  },
+  {
+   "id": "o76",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 77450,
+   "time": 1793712540000,
+   "detail": "filled at 77426.8"
   }
  ],
  "funding_rates": {
@@ -847,6 +854,6 @@
  "income": {
   "funding": 0.22780704442604358,
   "carry": -0.5002285916934517,
-  "interest": 0.2677088927401101
+  "interest": 0.2678445799967738
  }
 }

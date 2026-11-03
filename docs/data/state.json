@@ -346,11 +346,22 @@
    "reason": "Plan trigger met: 00Z 4h close 78,239 > 78,200 range top after 7 inside closes (weekend compression 77.3-78.1k); entering on the retest at ~78.0k. Stop below the 4h lows 77,511/77,521; TP 79,400 = next resistance (h4 ema50 79.1k) ~2.6R. Half-size because alts are not confirming and d1 trend is down."
   }
  ],
- "last_closed_check_ms": 1793712251973,
+ "last_closed_check_ms": 1793712732025,
  "day": "2026-11-03",
  "day_start_equity": 242.4004174538295,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_filled",
+   "id": "o76",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 77450,
+   "time": 1793712540000,
+   "detail": "filled at 77426.8"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 249.1477871438825,
@@ -359,7 +370,7 @@
   "trades": 7,
   "wins": 4
  },
- "last_btc": 77211.5,
+ "last_btc": 77708.9,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -406,7 +417,8 @@
   "o65:filled",
   "o67:filled",
   "o69:filled",
-  "o71:filled"
+  "o71:filled",
+  "o76:filled"
  ],
  "last_decision_id": "2026-11-03T12:52:00Z",
  "cash_rate_day": "2026-11-03"
