@@ -1,15 +1,15 @@
-# Notebook (updated 2026-11-03T14:51Z)
+# Notebook (updated 2026-11-03T16:51Z)
 
 ## Big picture
+- 3 Nov 16:50Z: 16Z 4h closed 77,579 (< 77,800 cancel line), just above h4 ema20 77.54k -> held; 20Z candle drifting 77.38k. ETH 16Z close 2,296 (< 2,320 squeeze line), XRP strongest, NEAR/DOT/LINK weak. Higher lows since 76.25k = risk; short still valid. No news edge.
 - 3 Nov 14:51Z: SHORT FILLED 13:29Z at 77,427. 12Z-16Z 4h candle wicked to 77,750 (below 77,800 cancel line), BTC now 77,200 (h1 RSI 53, under h1 ema50 77.28k, h4 ema20 77.52k). Alts bouncing harder: ETH 2,285 at h4 ema50 2,291, XRP 1.276 above h4 ema50 — breadth is the risk to the short. No news edge found.
-- 3 Nov 12:52Z: 12Z 4h closed 76,975 (inside box). BTC now 77,280 (h1 RSI 55, at h1 ema50 77.29k), 150 below my 77,450 trigger; h4 ema20 77.52k overhead. Alts bouncing +0.5-2% 4h, XRP strongest (1.283, h1 RSI 78, above h4 ema50). Engine fresh (12:44Z). News search: nothing market-moving.
 - Trend: d1 downtrend, lower highs since 87.2k; d1 ema20 80.0k, h4 ema50 78.9k. US midterms Tue 3 Nov, NFP Fri 6 Nov.
 - Funding flipped: BONK -129% (carry now costs), DOT -37%, ADA -32%, SOL -27%, DOGE -24%; WIF +33%, LINK +24%, BTC +5%.
 - Key levels BTC: resistance 77.4-77.5k (old floor), 78.1k (16Z high), 78.6k; support 76.15k (30d low), then 75.5k, 74.5k.
 - Mind-changers: 4h close back > 77,800 = breakdown failed, cancel shorts. 4h close < 76,100 = new 30d low, continuation.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 243.57 USD (963 PLN, -5.3%; peak 265.7). Closed 8W/17L, net -15.6; avg win 2.68 vs loss 2.18. 19 days left: fewer, cleaner trades.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 242.48 USD (958 PLN, -5.7%; peak 265.7). Closed 8W/17L, net -15.6; avg win 2.68 vs loss 2.18. 19 days left: fewer, cleaner trades.
 - Range-edge breakouts / bounce-fails with 4h structure stops, ~1.5-2.5% risk, >=2R; require a 4h CLOSE beyond the level, or a bounce-fail retest of the broken level (best R).
 - Sessions every 2h: confirm 4h closes (00/04/08/12/16/20Z) myself. Trail behind completed 4h highs/lows. No mid-range trades. Pyramid only from breakeven.
 - Carry only if funding > 60% APR sustained 3+ sessions; size <= 25%; close when funding turns negative.
@@ -48,6 +48,7 @@
 - None held.
 
 ## Session log
+- 2026-11-03T16:51Z | eq 242.48 | Held BTC short (+0.28). 16Z close 77,579 < 77,800, ETH < 2,320 = thesis intact. Next: 20Z close (> 77,800 = close); < 76,500 = trail.
 - 2026-11-03T14:51Z | eq 243.57 | BTC short entry FILLED 13:29Z @77,427 (+1.38 open). Held; stop 78,150, TP 75,500. Next: 16Z close (> 77,800 = close), watch ETH/XRP breadth.
 - 2026-11-03T12:52Z | eq 242.41 | Flat. 12Z close 76,975; bounce to 77.28k, near 77,450 short trigger. Kept order unchanged. Next: fill? 16Z close (> 77,800 = cancel); renew order at 16:5xZ session before 18:52Z expiry.
 - 2026-11-03T10:52Z | eq 242.41 | Flat. BTC bouncing to 76.9k toward 77,450 trigger (h1 ema50/h4 ema20 confluence). Kept order. Next: 12Z close; renew order at ~16:51Z session before 18:52Z expiry.
@@ -57,4 +58,3 @@
 - 2026-11-03T02:51Z | eq 242.40 | Flat. Bounce stalled 77.18k, BTC 76.77k. Kept BTC short entry 77,450. Next: 04Z close; < 76,100 = breakdown short; renew/replace order before 18:52Z expiry.
 - 2026-11-03T00:52Z | eq 242.40 | Flat. 20Z close 76,676; bounce to 77.0k toward my 77,450 short trigger. Kept order. Next: fill? 00Z/04Z closes; cancel if 4h close > 77,800.
 - 2026-11-02T22:51Z | eq 242.40 | Flat. BTC grinding 76.7k, oversold, no flush/no bounce. Kept BTC short entry 77,450. Next: 00Z close; < 76,100 = breakdown short instead.
-- 2026-11-02T20:52Z | eq 242.40 | Flat. 16Z close 76,958 confirms breakdown; price grinding at 76.75k, h1 RSI 27 (no chase). Kept BTC short entry 77,450 (bounce-fail). No news edge found. Next: 00Z close; if < 76,100 consider breakdown short instead of bounce order.
