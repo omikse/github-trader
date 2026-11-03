@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T08:43:52Z",
+ "updated": "2026-11-03T08:51:52Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -8,9 +8,9 @@
  "equity_pln": 954.83,
  "return_pct": -5.73,
  "max_drawdown_pct": 10.31,
- "control_pln": 1015.42,
+ "control_pln": 1013.99,
  "control_trades": 6,
- "hodl_pln": 914.69,
+ "hodl_pln": 915.13,
  "positions": [],
  "closed_trades": [
   {
@@ -362,22 +362,22 @@
  ],
  "trade_count": 25,
  "win_rate_pct": 32.0,
- "brain_calls_today": 4,
+ "brain_calls_today": 5,
  "last_decision": {
-  "time": "2026-11-03T06:51:52Z",
+  "time": "2026-11-03T08:51:52Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-03T06:51:30Z",
+  "decided_at": "2026-11-03T08:51:30Z",
   "model": "claude-opus-5-5",
   "equity_usd": 242.41,
-  "equity_pln": 954.82,
+  "equity_pln": 954.83,
   "events": [],
-  "market_view": "BTC 76,575 bleeding slowly toward the 30d low 76,155 (24h low 76,254); h1/h4/d1 RSI ~35, d1 downtrend intact. No 4h close below 76,100 yet, so no breakdown short; bounce-fail short order at 77,450 stays.",
-  "watch_next": "08Z 4h close: < 76,100 = breakdown short (replace bounce order, stop > 77,200); bounce to 77,450 fills the order; renew before 18:52Z expiry.",
-  "news": "No market-moving crypto news found; US midterms today, NFP Fri 6 Nov.",
+  "market_view": "08Z 4h closed 76,694, above the 30d low 76,155; BTC 76,392 grinding lower, RSI ~33-35 on h1/h4/d1, d1 downtrend intact. No 4h close below 76,100 yet, so no breakdown short; bounce-fail short order at 77,450 stays.",
+  "watch_next": "12Z 4h close: < 76,100 = breakdown short (replace bounce order, stop > 77,200); bounce to 77,450 fills the order; renew before 18:52Z expiry.",
+  "news": "US midterms today, NFP Friday; no crypto-specific catalyst.",
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 242.409758,
+ "cash_usd": 242.409901,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -487,7 +487,7 @@
  "income_pln": {
   "funding": 0.9,
   "carry": -1.97,
-  "interest": 1.03
+  "interest": 1.04
  },
  "cash_rate_pct": 3.87
 }
