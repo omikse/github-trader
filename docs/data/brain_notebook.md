@@ -3,15 +3,13 @@
 ## Big picture
 - 3 Nov 14:51Z: SHORT FILLED 13:29Z at 77,427. 12Z-16Z 4h candle wicked to 77,750 (below 77,800 cancel line), BTC now 77,200 (h1 RSI 53, under h1 ema50 77.28k, h4 ema20 77.52k). Alts bouncing harder: ETH 2,285 at h4 ema50 2,291, XRP 1.276 above h4 ema50 — breadth is the risk to the short. No news edge found.
 - 3 Nov 12:52Z: 12Z 4h closed 76,975 (inside box). BTC now 77,280 (h1 RSI 55, at h1 ema50 77.29k), 150 below my 77,450 trigger; h4 ema20 77.52k overhead. Alts bouncing +0.5-2% 4h, XRP strongest (1.283, h1 RSI 78, above h4 ema50). Engine fresh (12:44Z). News search: nothing market-moving.
-- 3 Nov 10:52Z: BTC 76,896, mild bounce off 76,372 (h1 RSI 47, h4 39); h1 ema50 77.3k, h4 ema20 77.5k = confluence with my 77,450 short trigger. Alts +0.5-1.7% 4h, NEAR 3.83 bouncing (funding +47%). PAXG 3,908 faded from 3,970 (gold watch off). Engine fresh (10:49Z).
-- 3 Nov 08:51Z: 08Z 4h closed 76,694 (low 76,254, still > 30d low 76,155). Now 76,392, h1 RSI 35, h4 33. Funding BTC +9%. SOL 91.5 near 30d low 90.71; NEAR 3.75 at 30d low (RSI 22, funding +57%). Engine fresh (08:43Z). Midterms today; no trade edge from them.
 - Trend: d1 downtrend, lower highs since 87.2k; d1 ema20 80.0k, h4 ema50 78.9k. US midterms Tue 3 Nov, NFP Fri 6 Nov.
 - Funding flipped: BONK -129% (carry now costs), DOT -37%, ADA -32%, SOL -27%, DOGE -24%; WIF +33%, LINK +24%, BTC +5%.
 - Key levels BTC: resistance 77.4-77.5k (old floor), 78.1k (16Z high), 78.6k; support 76.15k (30d low), then 75.5k, 74.5k.
 - Mind-changers: 4h close back > 77,800 = breakdown failed, cancel shorts. 4h close < 76,100 = new 30d low, continuation.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 242.54 USD (955 PLN, -5.7%; peak 265.7). Closed 8W/17L, net -15.6; avg win 2.68 vs loss 2.18. 19 days left: fewer, cleaner trades.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 243.57 USD (963 PLN, -5.3%; peak 265.7). Closed 8W/17L, net -15.6; avg win 2.68 vs loss 2.18. 19 days left: fewer, cleaner trades.
 - Range-edge breakouts / bounce-fails with 4h structure stops, ~1.5-2.5% risk, >=2R; require a 4h CLOSE beyond the level, or a bounce-fail retest of the broken level (best R).
 - Sessions every 2h: confirm 4h closes (00/04/08/12/16/20Z) myself. Trail behind completed 4h highs/lows. No mid-range trades. Pyramid only from breakeven.
 - Carry only if funding > 60% APR sustained 3+ sessions; size <= 25%; close when funding turns negative.
