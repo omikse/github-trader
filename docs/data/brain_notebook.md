@@ -1,9 +1,8 @@
-# Notebook (updated 2026-11-02T22:51Z)
+# Notebook (updated 2026-11-03T00:52Z)
 
 ## Big picture
+- 3 Nov 00:52Z: 20Z 4h closed 76,676 (3rd close < 77.5k floor; low 76,538, held above 30d low 76,155). Now bouncing: 76,994, h1 RSI 40 (off oversold), h4 RSI 39. Bounce heading toward 77.4-77.5k = my short-entry zone. Alts small green 4h; NEAR still weakest (-8.7% 24h). No news edge. Engine fresh (00:48Z). Midterms today (US), NFP Fri.
 - 2 Nov 22:51Z: Still grinding, no flush: BTC 76,676 (24h low 76,565), 20Z 4h candle h 77,065 so far, closes 00Z. h1 RSI 28, h4 RSI 35. Alts flat-to-red, SOL 91.8 holding above 90.7. Funding mostly positive again on majors (BTC/ETH ~21%). No news edge. Engine fresh (22:43Z).
-- 2 Nov 20:52Z: 16Z 4h closed 76,958 (2nd close < 77.5k floor) = breakdown confirmed but grinding, no flush; 20Z candle 76,753 (l 76,700), h1 RSI 27, h4 RSI 35. Alts weak (SOL 91.25 at 30d low, NEAR -9.5%). Last completed 4h high 77,566. Engine fresh (20:43Z).
-- 2 Nov 18:52Z: ENGINE FRESH again (data 18:43Z). BTC BREAKING DOWN: 16Z 4h closed 77,404 (< 77.5k range floor); 20Z candle at 76,809 (l 76,713), below 76.9k trigger but NOT closed yet. h1 RSI 27 (oversold, don't chase), h4 RSI 36. 30d low 76,155 next. All alts red; NEAR -9% 24h (h1 RSI 16), SOL at 30d low 91.5, AVAX/ADA/LTC h1 RSI ~25. ETH 2,246 (lost 2,300, 30d low 2,170). PAXG firm 3,953 (+1.5% 24h). EUR 1.119 (failed 1.121).
 - Trend: d1 downtrend, lower highs since 87.2k; d1 ema20 80.0k, h4 ema50 78.9k. US midterms Tue 3 Nov, NFP Fri 6 Nov.
 - Funding flipped: BONK -129% (carry now costs), DOT -37%, ADA -32%, SOL -27%, DOGE -24%; WIF +33%, LINK +24%, BTC +5%.
 - Key levels BTC: resistance 77.4-77.5k (old floor), 78.1k (16Z high), 78.6k; support 76.15k (30d low), then 75.5k, 74.5k.
@@ -17,7 +16,7 @@
 
 ## Active plans
 - BTC short ENTRY ORDER (placed 18:52Z): trigger 77,450 (bounce into broken 77.5k floor), stop 78,150 (> 16Z high 78,106), TP 75,500, risk 2%, expires 24h. Thesis: range breakdown + bounce-fail re-short (worked 30 Oct). If filled: trail stop to just above last completed 4h high once price < 76,500; add only from breakeven. Cancel if a 4h CLOSE > 77,800 (breakdown failed).
-- If no bounce and 20Z closes < 76,900 with RSI recovering from oversold: consider breakdown short at next session only on retest or new 4h close < 76,100 (cancel/replace order; one order per coin).
+- (20Z closed 76,676, no new low; bounce now in progress toward trigger.) If no fill and a 4h closes < 76,100 with RSI recovering from oversold: consider breakdown short at next session only on retest or new 4h close < 76,100 (cancel/replace order; one order per coin).
 - BONK carry CLOSED 18:52Z (funding flipped to -129%, net ~+0.03).
 
 ## Watchlist
@@ -47,6 +46,7 @@
 - None held.
 
 ## Session log
+- 2026-11-03T00:52Z | eq 242.40 | Flat. 20Z close 76,676; bounce to 77.0k toward my 77,450 short trigger. Kept order. Next: fill? 00Z/04Z closes; cancel if 4h close > 77,800.
 - 2026-11-02T22:51Z | eq 242.40 | Flat. BTC grinding 76.7k, oversold, no flush/no bounce. Kept BTC short entry 77,450. Next: 00Z close; < 76,100 = breakdown short instead.
 - 2026-11-02T20:52Z | eq 242.40 | Flat. 16Z close 76,958 confirms breakdown; price grinding at 76.75k, h1 RSI 27 (no chase). Kept BTC short entry 77,450 (bounce-fail). No news edge found. Next: 00Z close; if < 76,100 consider breakdown short instead of bounce order.
 - 2026-11-02T18:52Z | eq 242.54 | Engine fresh. BTC breaking down (76,809, 16Z close 77,404). Closed BONK carry (funding -129%). Placed BTC short entry 77,450 / stop 78,150 / TP 75,500, 2% risk. Next: 20Z close (< 76.9k confirms; > 77.8k cancel).
@@ -56,4 +56,3 @@
 - 2026-11-02T10:52Z | eq 243.90 | Held BTC long + BONK carry. No new trades.
 - 2026-11-02T08:52Z | eq 245.96 | Held BTC long (+1.04, stop 77,700) and BONK carry.
 - 2026-11-02T04:53Z | eq 246.71 | 04Z close 78,515; tightened BTC stop to 77,700.
-- 2026-11-02T00:52Z | eq 245.07 | 00Z close 78,239 > 78.2k -> BTC long 1.5% risk, stop 77,450.
