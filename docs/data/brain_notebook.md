@@ -1,8 +1,8 @@
-# Notebook (updated 2026-11-03T02:51Z)
+# Notebook (updated 2026-11-03T04:51Z)
 
 ## Big picture
+- 3 Nov 04:51Z: 04Z 4h closed 76,804 (low 76,427, still > 30d low 76,155). Now 76,875, tight 76.4-77.2k box, h1 RSI 41, h4 38. Funding BTC +18%. Alts mildly red 24h, NEAR -9.8%. No news edge. Engine fresh (04:43Z).
 - 3 Nov 02:51Z: Bounce stalled at 77,179 (00Z candle, short of 77,450 trigger), back to 76,772. h1 RSI 36, h4 36. Funding BTC +29%. Alts flat; NEAR at 30d low (h1 RSI 20, no chase). No news edge. Engine fresh (02:43Z).
-- 3 Nov 00:52Z: 20Z 4h closed 76,676 (3rd close < 77.5k floor; low 76,538, held above 30d low 76,155). Now bouncing: 76,994, h1 RSI 40 (off oversold), h4 RSI 39. Bounce heading toward 77.4-77.5k = my short-entry zone. Alts small green 4h; NEAR still weakest (-8.7% 24h). No news edge. Engine fresh (00:48Z). Midterms today (US), NFP Fri.
 - Trend: d1 downtrend, lower highs since 87.2k; d1 ema20 80.0k, h4 ema50 78.9k. US midterms Tue 3 Nov, NFP Fri 6 Nov.
 - Funding flipped: BONK -129% (carry now costs), DOT -37%, ADA -32%, SOL -27%, DOGE -24%; WIF +33%, LINK +24%, BTC +5%.
 - Key levels BTC: resistance 77.4-77.5k (old floor), 78.1k (16Z high), 78.6k; support 76.15k (30d low), then 75.5k, 74.5k.
@@ -46,6 +46,7 @@
 - None held.
 
 ## Session log
+- 2026-11-03T04:51Z | eq 242.41 | Flat. 04Z close 76,804, BTC boxed 76.4-77.2k. Kept BTC short entry 77,450. Next: 08Z close; < 76,100 = breakdown short; renew order before 18:52Z expiry.
 - 2026-11-03T02:51Z | eq 242.40 | Flat. Bounce stalled 77.18k, BTC 76.77k. Kept BTC short entry 77,450. Next: 04Z close; < 76,100 = breakdown short; renew/replace order before 18:52Z expiry.
 - 2026-11-03T00:52Z | eq 242.40 | Flat. 20Z close 76,676; bounce to 77.0k toward my 77,450 short trigger. Kept order. Next: fill? 00Z/04Z closes; cancel if 4h close > 77,800.
 - 2026-11-02T22:51Z | eq 242.40 | Flat. BTC grinding 76.7k, oversold, no flush/no bounce. Kept BTC short entry 77,450. Next: 00Z close; < 76,100 = breakdown short instead.
@@ -55,4 +56,3 @@
 - 2026-11-02T16:00Z | eq 242.56 | ENGINE STALLED (data 13:46Z). No trades on stale data.
 - 2026-11-02T13:00Z | eq 242.55 | BTC long stopped @77,661 (-2.65); breakout failed. Held BONK carry.
 - 2026-11-02T10:52Z | eq 243.90 | Held BTC long + BONK carry. No new trades.
-- 2026-11-02T08:52Z | eq 245.96 | Held BTC long (+1.04, stop 77,700) and BONK carry.
