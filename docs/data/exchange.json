@@ -1,6 +1,18 @@
 {
- "cash": 234.72193019281977,
- "positions": {},
+ "cash": 234.29995532192623,
+ "positions": {
+  "EURUSDT": {
+   "side": "long",
+   "qty": 683.304,
+   "entry": 1.12313684,
+   "stop": 1.1188,
+   "tp": 1.131,
+   "opened": 1793768580000,
+   "entry_fee": 0.422094142425648,
+   "mark": 1.12301,
+   "note": "EUR broke 1.121 resistance (failed twice before) and extended to 1.126; h1 RSI 80 so don't chase - buy a pullback to 1.1228 (half of the breakout leg, above broken 1.121). Above h4 ema20/50 and d1 ema20; d1 ema50 1.127 is next, TP 1.131 ~2R. Funding -47% APR pays longs."
+  }
+ },
  "closed": [
   {
    "id": "t5",
@@ -360,23 +372,9 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793768428613,
+ "last_ms": 1793768908602,
  "next_id": 82,
- "orders": [
-  {
-   "id": "o79",
-   "symbol": "EURUSDT",
-   "side": "long",
-   "qty": 683.304,
-   "trigger": 1.1228,
-   "direction": "below",
-   "stop": 1.1188,
-   "tp": 1.131,
-   "placed": 1793760734481,
-   "expires": 1793847134481,
-   "note": "EUR broke 1.121 resistance (failed twice before) and extended to 1.126; h1 RSI 80 so don't chase - buy a pullback to 1.1228 (half of the breakout leg, above broken 1.121). Above h4 ema20/50 and d1 ema20; d1 ema50 1.127 is next, TP 1.131 ~2R. Funding -47% APR pays longs."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -818,6 +816,15 @@
    "trigger": 75950,
    "time": 1793761260000,
    "detail": "filled at 75927.2"
+  },
+  {
+   "id": "o79",
+   "symbol": "EURUSDT",
+   "side": "long",
+   "status": "filled",
+   "trigger": 1.1228,
+   "time": 1793768580000,
+   "detail": "filled at 1.12314"
   }
  ],
  "funding_rates": {
@@ -900,6 +907,6 @@
  "income": {
   "funding": 0.2778891343224107,
   "carry": -0.5002285916934517,
-  "interest": 0.2830008450289471
+  "interest": 0.283120116561052
  }
 }
