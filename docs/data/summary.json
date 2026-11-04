@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-04T08:59:28Z",
+ "updated": "2026-11-04T09:07:28Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9526,
- "equity_pln": 929.99,
- "return_pct": -8.5,
+ "equity_pln": 929.65,
+ "return_pct": -8.53,
  "max_drawdown_pct": 11.24,
- "control_pln": 984.78,
+ "control_pln": 979.89,
  "control_trades": 7,
- "hodl_pln": 941.39,
+ "hodl_pln": 940.49,
  "positions": [
   {
    "symbol": "EURUSDT",
    "side": "long",
    "size": 683.304,
    "entry": 1.12313684,
-   "mark": 1.12442,
-   "upnl": 0.8767883606400416,
+   "mark": 1.12426,
+   "upnl": 0.7674597206400839,
    "stop": 1.1188,
    "tp": 1.131,
    "liq": null,
    "leverage": null,
    "opened": 1793768580000,
    "reason": "EUR broke 1.121 resistance (failed twice before) and extended to 1.126; h1 RSI 80 so don't chase - buy a pullback to 1.1228 (half of the breakout leg, above broken 1.121). Above h4 ema20/50 and d1 ema20; d1 ema50 1.127 is next, TP 1.131 ~2R. Funding -47% APR pays longs.",
-   "upnl_pln": 3.47
+   "upnl_pln": 3.03
   }
  ],
  "closed_trades": [
@@ -421,12 +421,17 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 234.408542,
+ "cash_usd": 234.437842,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
-  "equity": 249.1477871438825,
-  "pos": null
+  "equity": 248.86112824534348,
+  "pos": {
+   "side": "long",
+   "entry": 78418.08944999998,
+   "qty": 0.006646400097212494,
+   "stop": 77379.7655880145
+  }
  },
  "pairs": {
   "BTCUSDT": "XBTUSD",
@@ -524,7 +529,7 @@
   }
  ],
  "income_pln": {
-  "funding": 1.52,
+  "funding": 1.63,
   "carry": -1.98,
   "interest": 1.13
  },
