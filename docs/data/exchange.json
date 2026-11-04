@@ -1,5 +1,5 @@
 {
- "cash": 234.46843768219912,
+ "cash": 234.4684781942644,
  "positions": {
   "EURUSDT": {
    "side": "long",
@@ -9,7 +9,7 @@
    "tp": 1.131,
    "opened": 1793768580000,
    "entry_fee": 0.422094142425648,
-   "mark": 1.12453,
+   "mark": 1.12431,
    "note": "EUR broke 1.121 resistance (failed twice before) and extended to 1.126; h1 RSI 80 so don't chase - buy a pullback to 1.1228 (half of the breakout leg, above broken 1.121). Above h4 ema20/50 and d1 ema20; d1 ema50 1.127 is next, TP 1.131 ~2R. Funding -47% APR pays longs."
   }
  },
@@ -372,8 +372,8 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793789376153,
- "next_id": 83,
+ "last_ms": 1793789556309,
+ "next_id": 84,
  "orders": [
   {
    "id": "o82",
@@ -387,6 +387,19 @@
    "placed": 1793775148698,
    "expires": 1793861548698,
    "note": "Gold broke out of the 3,900-3,970 range with a strong 04Z 4h candle to 4,016 (h4 RSI 69, above h4 ema20/50). Don't chase at h1 RSI 74 under d1 ema20 4,020: buy the retest of the broken 3,970 area at 3,978. Stop below 4h lows 3,923-3,935; TP 4,100 near d1 ema50 4,113 (~2.1R). Small size: correlated with the EUR long (USD weakness) and gold breakouts failed twice before."
+  },
+  {
+   "id": "o83",
+   "symbol": "ETHUSDT",
+   "side": "long",
+   "qty": 0.058200999999999996,
+   "trigger": 2306,
+   "direction": "below",
+   "stop": 2258.0,
+   "tp": 2420.0,
+   "placed": 1793789556309,
+   "expires": 1793875956309,
+   "note": "ETH relative-strength leader: 4h closed 2,300.5 above h4 ema50 2,290 after the 75.6k BTC sweep V-reversal, now 2,325 with h1 RSI 69 (don't chase). Buy retest of the 2,300-2,310 breakout zone; stop below h1 ema200/h4 ema20 (~2,280) structure; TP 2,420 just above d1 ema50 2,401, ~2.4R."
   }
  ],
  "order_events": [
@@ -921,6 +934,6 @@
  "income": {
   "funding": 0.4417703227113162,
   "carry": -0.5002285916934517,
-  "interest": 0.2877212884448498
+  "interest": 0.2877618005101217
  }
 }
