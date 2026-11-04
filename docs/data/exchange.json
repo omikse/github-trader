@@ -1,5 +1,5 @@
 {
- "cash": 238.47452112130057,
+ "cash": 238.47464405916975,
  "positions": {},
  "closed": [
   {
@@ -347,9 +347,23 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793753114400,
- "next_id": 78,
- "orders": [],
+ "last_ms": 1793753534487,
+ "next_id": 79,
+ "orders": [
+  {
+   "id": "o78",
+   "symbol": "EURUSDT",
+   "side": "long",
+   "qty": 947.666,
+   "trigger": 1.1208,
+   "direction": "below",
+   "stop": 1.117,
+   "tp": 1.13,
+   "placed": 1793753534487,
+   "expires": 1793839934487,
+   "note": "EUR breaking 1.121 (failed twice before) with h1/h4 above ema20/50 and price above d1 ema20 1.1197; buy the retest of the broken level 1.1205-1.121 rather than chase. Funding -68% APR pays longs ~0.19%/day of notional = extra carry while waiting. TP 1.130 toward d1 ema50 1.127/prior range, ~2.4R."
+  }
+ ],
  "order_events": [
   {
    "id": "o2",
@@ -855,6 +869,6 @@
  "income": {
   "funding": 0.2779712451627594,
   "carry": -0.5002285916934517,
-  "interest": 0.278640774823373
+  "interest": 0.27876371269256156
  }
 }
