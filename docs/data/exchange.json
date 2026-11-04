@@ -1,18 +1,6 @@
 {
- "cash": 238.3574767424581,
- "positions": {
-  "BTCUSDT": {
-   "side": "short",
-   "qty": 0.00289989,
-   "entry": 75927.215,
-   "stop": 77100.0,
-   "tp": 73800.0,
-   "opened": 1793761260000,
-   "entry_fee": 0.1210993143284925,
-   "mark": 76937.7,
-   "note": "Breakdown of the 30d low 76,155 after the 77.97k bull trap, d1 downtrend (d1 ema20 79.5k), alts breaking 30d lows. Sell-stop 200 below the low so a wick doesn't fill; stop above the 00Z 4h candle body/ 77k pivot; TP 73.8k ~1.9R. Reduced risk 1.5% because the fill is not 4h-close confirmed."
-  }
- },
+ "cash": 234.72179195792646,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -347,6 +335,19 @@
    "why": "stop",
    "opened": 1793712540000,
    "reason": "Range breakdown: 16Z 4h closed 77,404 below the 77.5k floor, BTC 76.8k with all alts weak. Short a bounce-fail retest of the broken floor (77.45k), stop above 16Z candle high 78,106, TP 75.5k (~2.8R). Same pattern as the profitable 30 Oct bounce-fail short."
+  },
+  {
+   "id": "t81",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00289989,
+   "entry": 75927.215,
+   "exit": 77138.55,
+   "pnl": -3.7569,
+   "time": 1793767740000,
+   "why": "stop",
+   "opened": 1793761260000,
+   "reason": "Breakdown of the 30d low 76,155 after the 77.97k bull trap, d1 downtrend (d1 ema20 79.5k), alts breaking 30d lows. Sell-stop 200 below the low so a wick doesn't fill; stop above the 00Z 4h candle body/ 77k pivot; TP 73.8k ~1.9R. Reduced risk 1.5% because the fill is not 4h-close confirmed."
   }
  ],
  "fills": [
@@ -359,8 +360,8 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793767648585,
- "next_id": 81,
+ "last_ms": 1793767948703,
+ "next_id": 82,
  "orders": [
   {
    "id": "o79",
@@ -899,6 +900,6 @@
  "income": {
   "funding": 0.2778891343224107,
   "carry": -0.5002285916934517,
-  "interest": 0.28277782114956984
+  "interest": 0.2828626101356622
  }
 }
