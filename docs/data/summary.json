@@ -1,17 +1,33 @@
 {
- "updated": "2026-11-04T03:00:14Z",
+ "updated": "2026-11-04T03:08:14Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9526,
- "equity_pln": 942.6,
- "return_pct": -7.26,
+ "equity_pln": 943.8,
+ "return_pct": -7.14,
  "max_drawdown_pct": 10.31,
  "control_pln": 984.78,
  "control_trades": 7,
- "hodl_pln": 913.89,
- "positions": [],
+ "hodl_pln": 910.45,
+ "positions": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "size": 0.00289989,
+   "entry": 75927.215,
+   "mark": 75783.8,
+   "upnl": 0.41588772434998145,
+   "stop": 77100.0,
+   "tp": 73800.0,
+   "liq": null,
+   "leverage": null,
+   "opened": 1793761260000,
+   "reason": "Breakdown of the 30d low 76,155 after the 77.97k bull trap, d1 downtrend (d1 ema20 79.5k), alts breaking 30d lows. Sell-stop 200 below the low so a wick doesn't fill; stop above the 00Z 4h candle body/ 77k pivot; TP 73.8k ~1.9R. Reduced risk 1.5% because the fill is not 4h-close confirmed.",
+   "upnl_pln": 1.64
+  }
+ ],
  "closed_trades": [
   {
    "id": "t77",
@@ -427,7 +443,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 238.476892,
+ "cash_usd": 238.355925,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -464,17 +480,6 @@
    "qty": 683.304,
    "expires": 1793847134481,
    "note": "EUR broke 1.121 resistance (failed twice before) and extended to 1.126; h1 RSI 80 so don't chase - buy a pullback to 1.1228 (half of the breakout leg, above broken 1.121). Above h4 ema20/50 and d1 ema20; d1 ema50 1.127 is next, TP 1.131 ~2R. Funding -47% APR pays longs."
-  },
-  {
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "trigger": 75950,
-   "direction": "below",
-   "stop": 77100.0,
-   "tp": 73800.0,
-   "qty": 0.00289989,
-   "expires": 1793847134481,
-   "note": "Breakdown of the 30d low 76,155 after the 77.97k bull trap, d1 downtrend (d1 ema20 79.5k), alts breaking 30d lows. Sell-stop 200 below the low so a wick doesn't fill; stop above the 00Z 4h candle body/ 77k pivot; TP 73.8k ~1.9R. Reduced risk 1.5% because the fill is not 4h-close confirmed."
   }
  ],
  "balance_warning": false,
