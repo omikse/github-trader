@@ -1,5 +1,5 @@
 {
- "cash": 234.34098336839494,
+ "cash": 234.34109128979154,
  "positions": {
   "EURUSDT": {
    "side": "long",
@@ -9,7 +9,7 @@
    "tp": 1.131,
    "opened": 1793768580000,
    "entry_fee": 0.422094142425648,
-   "mark": 1.12315,
+   "mark": 1.12284,
    "note": "EUR broke 1.121 resistance (failed twice before) and extended to 1.126; h1 RSI 80 so don't chase - buy a pullback to 1.1228 (half of the breakout leg, above broken 1.121). Above h4 ema20/50 and d1 ema20; d1 ema50 1.127 is next, TP 1.131 ~2R. Funding -47% APR pays longs."
   }
  },
@@ -372,9 +372,23 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793774668612,
- "next_id": 82,
- "orders": [],
+ "last_ms": 1793775148698,
+ "next_id": 83,
+ "orders": [
+  {
+   "id": "o82",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "qty": 0.046918999999999995,
+   "trigger": 3978,
+   "direction": "below",
+   "stop": 3920.0,
+   "tp": 4100.0,
+   "placed": 1793775148698,
+   "expires": 1793861548698,
+   "note": "Gold broke out of the 3,900-3,970 range with a strong 04Z 4h candle to 4,016 (h4 RSI 69, above h4 ema20/50). Don't chase at h1 RSI 74 under d1 ema20 4,020: buy the retest of the broken 3,970 area at 3,978. Stop below 4h lows 3,923-3,935; TP 4,100 near d1 ema50 4,113 (~2.1R). Small size: correlated with the EUR long (USD weakness) and gold breakouts failed twice before."
+  }
+ ],
  "order_events": [
   {
    "id": "o2",
@@ -907,6 +921,6 @@
  "income": {
   "funding": 0.3176224727961739,
   "carry": -0.5002285916934517,
-  "interest": 0.2844148245557459
+  "interest": 0.2845227459523486
  }
 }
