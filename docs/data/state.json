@@ -386,11 +386,22 @@
    "reason": "EUR broke 1.121 resistance (failed twice before) and extended to 1.126; h1 RSI 80 so don't chase - buy a pullback to 1.1228 (half of the breakout leg, above broken 1.121). Above h4 ema20/50 and d1 ema20; d1 ema50 1.127 is next, TP 1.131 ~2R. Funding -47% APR pays longs."
   }
  ],
- "last_closed_check_ms": 1793832755544,
+ "last_closed_check_ms": 1793833235530,
  "day": "2026-11-04",
  "day_start_equity": 238.47373096839488,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_cancelled",
+   "id": "o85",
+   "symbol": "ETHUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 2355,
+   "time": 1793832755544,
+   "detail": "cancelled by the brain"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 248.86112824534348,
@@ -404,7 +415,7 @@
   "trades": 7,
   "wins": 4
  },
- "last_btc": 80744.2,
+ "last_btc": 80544.0,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -456,7 +467,8 @@
   "o78:cancelled",
   "o80:filled",
   "o79:filled",
-  "o83:cancelled"
+  "o83:cancelled",
+  "o85:cancelled"
  ],
  "last_decision_id": "2026-11-04T22:51:40Z",
  "cash_rate_day": "2026-11-04"
