@@ -1,18 +1,6 @@
 {
- "cash": 234.6042289890889,
- "positions": {
-  "EURUSDT": {
-   "side": "long",
-   "qty": 683.304,
-   "entry": 1.12313684,
-   "stop": 1.1215,
-   "tp": 1.131,
-   "opened": 1793768580000,
-   "entry_fee": 0.422094142425648,
-   "mark": 1.12443,
-   "note": "EUR broke 1.121 resistance (failed twice before) and extended to 1.126; h1 RSI 80 so don't chase - buy a pullback to 1.1228 (half of the breakout leg, above broken 1.121). Above h4 ema20/50 and d1 ema20; d1 ema50 1.127 is next, TP 1.131 ~2R. Funding -47% APR pays longs."
-  }
- },
+ "cash": 232.69602840559787,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -360,6 +348,19 @@
    "why": "stop",
    "opened": 1793761260000,
    "reason": "Breakdown of the 30d low 76,155 after the 77.97k bull trap, d1 downtrend (d1 ema20 79.5k), alts breaking 30d lows. Sell-stop 200 below the low so a wick doesn't fill; stop above the 00Z 4h candle body/ 77k pivot; TP 73.8k ~1.9R. Reduced risk 1.5% because the fill is not 4h-close confirmed."
+  },
+  {
+   "id": "t84",
+   "symbol": "EURUSDT",
+   "side": "long",
+   "qty": 683.304,
+   "entry": 1.12313684,
+   "exit": 1.12093925,
+   "pnl": -2.345,
+   "time": 1793810400000,
+   "why": "stop",
+   "opened": 1793768580000,
+   "reason": "EUR broke 1.121 resistance (failed twice before) and extended to 1.126; h1 RSI 80 so don't chase - buy a pullback to 1.1228 (half of the breakout leg, above broken 1.121). Above h4 ema20/50 and d1 ema20; d1 ema50 1.127 is next, TP 1.131 ~2R. Funding -47% APR pays longs."
   }
  ],
  "fills": [
@@ -372,8 +373,8 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793804477609,
- "next_id": 84,
+ "last_ms": 1793813195619,
+ "next_id": 85,
  "orders": [
   {
    "id": "o82",
@@ -855,23 +856,23 @@
   }
  ],
  "funding_rates": {
-  "BTCUSDT": 1.1788029166667e-05,
-  "ETHUSDT": 2.23773125e-05,
-  "SOLUSDT": -2.22411e-05,
-  "XRPUSDT": 8.395879166667e-06,
-  "DOGEUSDT": -1.0869554166667e-05,
-  "ADAUSDT": 5.226504166667e-06,
-  "AVAXUSDT": 2.5523979166667e-05,
-  "LINKUSDT": 9.559095833333e-06,
-  "SUIUSDT": 1.84805875e-05,
-  "PEPEUSDT": -3.0901904166667e-05,
-  "WIFUSDT": 1.9693758333333e-05,
-  "BONKUSDT": 0.000168813045833333,
-  "LTCUSDT": -5.958241666667e-06,
-  "DOTUSDT": 2.89092375e-05,
-  "NEARUSDT": 1.5535366666667e-05,
-  "PAXGUSDT": 3.638315e-05,
-  "EURUSDT": -3.9896340517241e-05
+  "BTCUSDT": -3.378216666667e-06,
+  "ETHUSDT": -1.6430795833333e-05,
+  "SOLUSDT": -1.05537125e-05,
+  "XRPUSDT": 1.26107125e-05,
+  "DOGEUSDT": 5.3244791666667e-05,
+  "ADAUSDT": 7.941625e-07,
+  "AVAXUSDT": 2.276091666667e-06,
+  "LINKUSDT": -7.522466666667e-06,
+  "SUIUSDT": -6.491320833333e-06,
+  "PEPEUSDT": -6.845645833333e-06,
+  "WIFUSDT": -3.705329166667e-06,
+  "BONKUSDT": -0.00024727505,
+  "LTCUSDT": -4.2601045833333e-05,
+  "DOTUSDT": 1.8406370833333e-05,
+  "NEARUSDT": -2.3525016666667e-05,
+  "PAXGUSDT": 4.351975e-05,
+  "EURUSDT": -1.58956375e-05
  },
  "carry": {},
  "carry_closed": [
@@ -932,8 +933,8 @@
  ],
  "cash_rate": 0.0387,
  "income": {
-  "funding": 0.5741652734383305,
+  "funding": 0.5863655124932169,
   "carry": -0.5002285916934517,
-  "interest": 0.29111764460767586
+  "interest": 0.29360710972682524
  }
 }
