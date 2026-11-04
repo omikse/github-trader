@@ -1,5 +1,5 @@
 {
- "cash": 238.47661064701086,
+ "cash": 238.47675113713024,
  "positions": {},
  "closed": [
   {
@@ -347,21 +347,34 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793760254421,
- "next_id": 79,
+ "last_ms": 1793760734481,
+ "next_id": 81,
  "orders": [
   {
-   "id": "o78",
+   "id": "o79",
    "symbol": "EURUSDT",
    "side": "long",
-   "qty": 947.666,
-   "trigger": 1.1208,
+   "qty": 683.304,
+   "trigger": 1.1228,
    "direction": "below",
-   "stop": 1.117,
-   "tp": 1.13,
-   "placed": 1793753534487,
-   "expires": 1793839934487,
-   "note": "EUR breaking 1.121 (failed twice before) with h1/h4 above ema20/50 and price above d1 ema20 1.1197; buy the retest of the broken level 1.1205-1.121 rather than chase. Funding -68% APR pays longs ~0.19%/day of notional = extra carry while waiting. TP 1.130 toward d1 ema50 1.127/prior range, ~2.4R."
+   "stop": 1.1188,
+   "tp": 1.131,
+   "placed": 1793760734481,
+   "expires": 1793847134481,
+   "note": "EUR broke 1.121 resistance (failed twice before) and extended to 1.126; h1 RSI 80 so don't chase - buy a pullback to 1.1228 (half of the breakout leg, above broken 1.121). Above h4 ema20/50 and d1 ema20; d1 ema50 1.127 is next, TP 1.131 ~2R. Funding -47% APR pays longs."
+  },
+  {
+   "id": "o80",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00289989,
+   "trigger": 75950,
+   "direction": "below",
+   "stop": 77100.0,
+   "tp": 73800.0,
+   "placed": 1793760734481,
+   "expires": 1793847134481,
+   "note": "Breakdown of the 30d low 76,155 after the 77.97k bull trap, d1 downtrend (d1 ema20 79.5k), alts breaking 30d lows. Sell-stop 200 below the low so a wick doesn't fill; stop above the 00Z 4h candle body/ 77k pivot; TP 73.8k ~1.9R. Reduced risk 1.5% because the fill is not 4h-close confirmed."
   }
  ],
  "order_events": [
@@ -787,6 +800,15 @@
    "trigger": 77450,
    "time": 1793712540000,
    "detail": "filled at 77426.8"
+  },
+  {
+   "id": "o78",
+   "symbol": "EURUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 1.1208,
+   "time": 1793760734481,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -869,6 +891,6 @@
  "income": {
   "funding": 0.2779712451627594,
   "carry": -0.5002285916934517,
-  "interest": 0.2807303005335669
+  "interest": 0.28087079065292175
  }
 }
