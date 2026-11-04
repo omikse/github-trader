@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-04T10:53Z)
+# Notebook (updated 2026-11-04T12:51Z)
 
 ## Big picture
+- 4 Nov 12:51Z: BTC 78,162. 08Z 4h closed 78,372 after high 78,618 = 2nd rejection at 78.6k; 12Z 4h drifting lower (low 77,904). Still range 75.6-78.6k. ETH 2,315 (12Z low 2,308, near my 2,306 order). Alts flat/-1% 4h. EUR 1.1255 (high 1.1267), gold 4,032 (h1 RSI 72).
 - 4 Nov 10:53Z: BTC 78,417 (08Z 4h in progress, high 78,590) still under 78.6k trigger. ETH 2,325 leading (04Z 4h closed 2,300.5 > h4 ema50 2,290); XRP/AVAX/SUI also above h4 ema50 = breadth improving. EUR 1.1244, gold 4,035 (h1 RSI 74).
 - 4 Nov 08:50Z: BTC 78,296, testing h4 ema50 78.35k / h1 ema200 78.5k; 04Z 4h closed 78,019 (V-reversal from sweep confirmed). Still no 4h close > 78,600. ETH stronger (2,322, above h4 ema50, closed 2,300). Alts broadly +2-11% 24h (BONK/PEPE/NEAR/SUI lead). Gold 4,032, EUR 1.1245.
 - Alts all +2-5% 4h; NEAR/BONK/PEPE strongest bounce. Funding negative on LINK/LTC/DOT/ADA/BONK (shorts crowded).
@@ -10,7 +11,7 @@
 - Mind-changers: BTC 4h close > 78,600 with alt breadth = bull leg toward 80k; 4h close < 75,600 = real breakdown.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 235.35 USD (920 PLN, -8.5%; peak 265.7). Closed 8W/19L, net -23.4. 17 days left: fewer, cleaner trades, but each must be >=2R.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 236.16 USD (923 PLN, -8.5%; peak 265.7). Closed 8W/19L, net -23.4. 17 days left: fewer, cleaner trades, but each must be >=2R.
 - Win-rate is poor on BTC range trades (4 losses in a row). Shift focus to clean trends: USD-weakness (EUR, gold) and confirmed BTC range breaks only.
 - Entries: after a 4h CLOSE beyond a level or on retest of it. No stop-entry orders for breaks (they fill on sweeps). Stops behind 4h structure, risk 1-2%.
 - Prefer trades where funding pays me (EUR long: -45% APR pays longs).
@@ -52,6 +53,7 @@
 - None held.
 
 ## Session log
+- 2026-11-04T12:51Z | eq 236.16 | No action. EUR long +1.65 held (stop 1.1188, move to 1.1215 once > 1.1270). PAXG 3,978 + ETH 2,306 retest orders kept. BTC rejected 78.6k again.
 - 2026-11-04T10:53Z | eq 235.35 | EUR long +0.86 held (stop 1.1188). PAXG 3,978 order kept. Added ETH retest long order 2,306 (stop 2,258, TP 2,420, 1.25%). BTC still < 78.6k close.
 - 2026-11-04T08:50Z | eq 235.24 | No action. EUR long +0.87 held (stop 1.1188). PAXG 3,978 order kept. BTC at 78.3k resistance without 4h close > 78.6k: wait.
 - 2026-11-04T06:51Z | eq 234.18 | BTC short stopped 04:49Z (-3.76) on V-reversal from the 75.6k sweep. EUR long filled 1.1231, held. Placed PAXG retest long order 3,978 (stop 3,920, TP 4,100, 1.25%). No BTC trade mid-range.
@@ -61,4 +63,3 @@
 - 2026-11-03T22:52Z | eq 238.47 | BTC short stopped 21:44Z @77,989 (-4.00). Flat.
 - 2026-11-03T20:55Z | eq 240.22 | Held BTC short (-1.99). Stop 77,950.
 - 2026-11-03T18:53Z | eq 240.98 | BTC short -1.21; stop 78,150 -> 77,950.
-- 2026-11-03T16:51Z | eq 242.48 | Held BTC short (+0.28).
