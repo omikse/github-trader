@@ -1,5 +1,5 @@
 {
- "cash": 232.69739904969632,
+ "cash": 232.6974847388327,
  "positions": {},
  "closed": [
   {
@@ -373,8 +373,8 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793817995496,
- "next_id": 85,
+ "last_ms": 1793818295571,
+ "next_id": 86,
  "orders": [
   {
    "id": "o82",
@@ -390,17 +390,17 @@
    "note": "Gold broke out of the 3,900-3,970 range with a strong 04Z 4h candle to 4,016 (h4 RSI 69, above h4 ema20/50). Don't chase at h1 RSI 74 under d1 ema20 4,020: buy the retest of the broken 3,970 area at 3,978. Stop below 4h lows 3,923-3,935; TP 4,100 near d1 ema50 4,113 (~2.1R). Small size: correlated with the EUR long (USD weakness) and gold breakouts failed twice before."
   },
   {
-   "id": "o83",
+   "id": "o85",
    "symbol": "ETHUSDT",
    "side": "long",
-   "qty": 0.058200999999999996,
-   "trigger": 2306,
+   "qty": 0.055765999999999996,
+   "trigger": 2355,
    "direction": "below",
-   "stop": 2258.0,
-   "tp": 2420.0,
-   "placed": 1793789556309,
-   "expires": 1793875956309,
-   "note": "ETH relative-strength leader: 4h closed 2,300.5 above h4 ema50 2,290 after the 75.6k BTC sweep V-reversal, now 2,325 with h1 RSI 69 (don't chase). Buy retest of the 2,300-2,310 breakout zone; stop below h1 ema200/h4 ema20 (~2,280) structure; TP 2,420 just above d1 ema50 2,401, ~2.4R."
+   "stop": 2295.0,
+   "tp": 2520.0,
+   "placed": 1793818295571,
+   "expires": 1793947895571,
+   "note": "Crypto range broke up (BTC 4h close 80.2k > 78.6k with breadth); ETH is the relative-strength leader. Buy the pullback to 2,355 = prior 4h highs 2,337-2,360 / d1 ema20 2,355 instead of chasing h1 RSI 77. Stop under 2,300 breakout base; TP 2,520 (~2.75R) below h4 ema200 2,437 -> next supply."
   }
  ],
  "order_events": [
@@ -853,6 +853,15 @@
    "trigger": 1.1228,
    "time": 1793768580000,
    "detail": "filled at 1.12314"
+  },
+  {
+   "id": "o83",
+   "symbol": "ETHUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 2306,
+   "time": 1793818295571,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -935,6 +944,6 @@
  "income": {
   "funding": 0.5863655124932169,
   "carry": -0.5002285916934517,
-  "interest": 0.29497775382534736
+  "interest": 0.29506344296173775
  }
 }
