@@ -1,6 +1,18 @@
 {
- "cash": 231.1511573513113,
- "positions": {},
+ "cash": 231.03920041864106,
+ "positions": {
+  "PAXGUSDT": {
+   "side": "long",
+   "qty": 0.049866,
+   "entry": 4086.2255,
+   "stop": 4038.0,
+   "tp": 4200.0,
+   "opened": 1793889900000,
+   "entry_fee": 0.11207004643065001,
+   "mark": 4095.75,
+   "note": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R)."
+  }
+ },
  "closed": [
   {
    "id": "t5",
@@ -386,23 +398,9 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793889884553,
+ "last_ms": 1793890304674,
  "next_id": 90,
- "orders": [
-  {
-   "id": "o88",
-   "symbol": "PAXGUSDT",
-   "side": "long",
-   "qty": 0.049866,
-   "trigger": 4085,
-   "direction": "below",
-   "stop": 4038.0,
-   "tp": 4200.0,
-   "placed": 1793847113036,
-   "expires": 1793933513036,
-   "note": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R)."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -898,6 +896,15 @@
    "trigger": 4042,
    "time": 1793847113036,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o88",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "status": "filled",
+   "trigger": 4085,
+   "time": 1793889900000,
+   "detail": "filled at 4086.23"
   }
  ],
  "funding_rates": {
@@ -980,6 +987,6 @@
  "income": {
   "funding": 0.5514588097526384,
   "carry": -0.5002285916934517,
-  "interest": 0.3150318592499815
+  "interest": 0.3151449730104263
  }
 }

@@ -23,7 +23,7 @@
   "2026-11-02": 11,
   "2026-11-03": 12,
   "2026-11-04": 12,
-  "2026-11-05": 7
+  "2026-11-05": 8
  },
  "closed_trades": [
   {
@@ -400,26 +400,11 @@
    "reason": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R)."
   }
  ],
- "last_closed_check_ms": 1793889884553,
+ "last_closed_check_ms": 1793890304674,
  "day": "2026-11-05",
  "day_start_equity": 232.70278398567865,
  "paused_day": null,
- "pending_events": [
-  {
-   "type": "position_closed",
-   "id": "t89",
-   "symbol": "ETHUSDT",
-   "side": "long",
-   "qty": 0.055713,
-   "entry": 2410.723,
-   "exit": 2385.874023,
-   "pnl": -1.5314,
-   "time": 1793883164682,
-   "why": "manual close",
-   "opened": 1793841600000,
-   "reason": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R)."
-  }
- ],
+ "pending_events": [],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 256.43731561628107,
@@ -428,7 +413,7 @@
   "trades": 8,
   "wins": 5
  },
- "last_btc": 78829.7,
+ "last_btc": 78514.4,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -484,8 +469,9 @@
   "o85:cancelled",
   "o82:cancelled",
   "o86:filled",
-  "o87:cancelled"
+  "o87:cancelled",
+  "o88:filled"
  ],
- "last_decision_id": "2026-11-05T12:52:00Z",
+ "last_decision_id": "2026-11-05T14:52:00Z",
  "cash_rate_day": "2026-11-05"
 }
