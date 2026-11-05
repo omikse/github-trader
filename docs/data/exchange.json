@@ -1,5 +1,5 @@
 {
- "cash": 232.6302480656237,
+ "cash": 232.63037984215197,
  "positions": {
   "ETHUSDT": {
    "side": "long",
@@ -9,7 +9,7 @@
    "tp": 2560.0,
    "opened": 1793841600000,
    "entry_fee": 0.07386973577445,
-   "mark": 2427.64,
+   "mark": 2425.47,
    "note": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R)."
   }
  },
@@ -385,21 +385,21 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793846632811,
- "next_id": 88,
+ "last_ms": 1793847113036,
+ "next_id": 89,
  "orders": [
   {
-   "id": "o87",
+   "id": "o88",
    "symbol": "PAXGUSDT",
    "side": "long",
-   "qty": 0.05654,
-   "trigger": 4042,
+   "qty": 0.049866,
+   "trigger": 4085,
    "direction": "below",
-   "stop": 3995.0,
-   "tp": 4150.0,
-   "placed": 1793839912962,
-   "expires": 1793926312962,
-   "note": "Gold broke 3,940-4,045 4h range (now 4,077); buy pullback to prior 4h highs ~4,043 as support, stop under 4h structure, TP 4,150 (~2.3R)."
+   "stop": 4038.0,
+   "tp": 4200.0,
+   "placed": 1793847113036,
+   "expires": 1793933513036,
+   "note": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R)."
   }
  ],
  "order_events": [
@@ -888,6 +888,15 @@
    "trigger": 2410,
    "time": 1793841600000,
    "detail": "filled at 2410.72"
+  },
+  {
+   "id": "o87",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 4042,
+   "time": 1793847113036,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -970,6 +979,6 @@
  "income": {
   "funding": 0.5849619820495892,
   "carry": -0.5002285916934517,
-  "interest": 0.30310003597050383
+  "interest": 0.3032318124987776
  }
 }
