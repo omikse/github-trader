@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T00:50:52Z",
+ "updated": "2026-11-05T00:51:52Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -8,9 +8,9 @@
  "equity_pln": 909.8,
  "return_pct": -9.5,
  "max_drawdown_pct": 12.63,
- "control_pln": 1032.05,
+ "control_pln": 1032.68,
  "control_trades": 7,
- "hodl_pln": 959.0,
+ "hodl_pln": 959.3,
  "positions": [],
  "closed_trades": [
   {
@@ -404,44 +404,55 @@
  ],
  "trade_count": 28,
  "win_rate_pct": 28.6,
- "brain_calls_today": 0,
+ "brain_calls_today": 1,
  "last_decision": {
-  "time": "2026-11-04T22:52:35Z",
+  "time": "2026-11-05T00:51:52Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-04T22:51:40Z",
+  "decided_at": "2026-11-05T00:52:00Z",
   "model": "claude-opus-5-5",
   "equity_usd": 232.7,
-  "equity_pln": 909.79,
-  "events": [],
-  "market_view": "BTC 80.84k pushing back toward 81.2k after holding 79.86k twice on 4h; ETH 2,442 reclaimed h4 ema200 (2,436) with 4h lows at 2,403 twice. Both h1 RSI ~75: extended, no chase.",
-  "watch_next": "00Z 4h close: BTC > 81.2k = bull leg toward 82.5-84k; ETH order fill at 2,410; BTC 4h close < 78.6k cancels everything long.",
-  "news": "Searches returned nothing current; NFP Fri 6 Nov 13:30Z.",
+  "equity_pln": 909.8,
+  "events": [
+   {
+    "type": "order_cancelled",
+    "id": "o85",
+    "symbol": "ETHUSDT",
+    "side": "long",
+    "status": "cancelled",
+    "trigger": 2355,
+    "time": 1793832755544,
+    "detail": "cancelled by the brain"
+   }
+  ],
+  "market_view": "BTC holds 79.9k support three times after range breakout, consolidating 80.5k under 81.2k; ETH 2,424 above 2,403 double 4h low. Gold broke its range and is extended at 4,077 into h4 ema200.",
+  "watch_next": "ETH fill at 2,410; BTC 4h close vs 79.6k/81.2k; gold reaction at 4,083-4,113 and retest of 4,043.",
+  "news": "No useful news found; NFP Fri 6 Nov 13:30Z.",
   "actions": [
    {
     "type": "cancel_order",
-    "symbol": "ETHUSDT",
-    "reason": "2,355 retest is 3.5% below; ETH has built higher support at 2,403 (two 4h lows). Replacing with a nearer retest order.",
+    "symbol": "PAXGUSDT",
+    "reason": "3,978 retest unlikely after gold ran to 4,077; replacing with retest of new support 4,043.",
     "result": "done",
     "detail": "cancelled 1 order(s)"
    },
    {
     "type": "entry_order",
-    "symbol": "ETHUSDT",
+    "symbol": "PAXGUSDT",
     "side": "long",
-    "trigger": 2410,
-    "stop": 2350,
-    "take_profit": 2560,
-    "risk_pct": 0.015,
-    "expires_hours": 30,
-    "reason": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R).",
-    "invalidation": "ETH 4h close < 2,380 after fill, or BTC 4h close < 78,600.",
+    "trigger": 4042,
+    "stop": 3995,
+    "take_profit": 4150,
+    "risk_pct": 0.0125,
+    "expires_hours": 24,
+    "reason": "Gold broke 3,940-4,045 4h range (now 4,077); buy pullback to prior 4h highs ~4,043 as support, stop under 4h structure, TP 4,150 (~2.3R).",
+    "invalidation": "4h close < 4,020 before fill, or after fill a 4h close < 4,000.",
     "result": "done",
-    "detail": "long 0.055713 when price goes below 2410 (risk 1.5%, stop 2350.0, target 2560.0, expires in 30h) ok"
+    "detail": "long 0.05654 when price goes below 4042 (risk 1.2%, stop 3995.0, target 4150.0, expires in 24h) ok"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 232.703641,
+ "cash_usd": 232.703658,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -474,17 +485,6 @@
  },
  "orders": [
   {
-   "symbol": "PAXGUSDT",
-   "side": "long",
-   "trigger": 3978,
-   "direction": "below",
-   "stop": 3920.0,
-   "tp": 4100.0,
-   "qty": 0.046918999999999995,
-   "expires": 1793861548698,
-   "note": "Gold broke out of the 3,900-3,970 range with a strong 04Z 4h candle to 4,016 (h4 RSI 69, above h4 ema20/50). Don't chase at h1 RSI 74 under d1 ema20 4,020: buy the retest of the broken 3,970 area at 3,978. Stop below 4h lows 3,923-3,935; TP 4,100 near d1 ema50 4,113 (~2.1R). Small size: correlated with the EUR long (USD weakness) and gold breakouts failed twice before."
-  },
-  {
    "symbol": "ETHUSDT",
    "side": "long",
    "trigger": 2410,
@@ -494,6 +494,17 @@
    "qty": 0.055713,
    "expires": 1793940755544,
    "note": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R)."
+  },
+  {
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "trigger": 4042,
+   "direction": "below",
+   "stop": 3995.0,
+   "tp": 4150.0,
+   "qty": 0.05654,
+   "expires": 1793926312962,
+   "note": "Gold broke 3,940-4,045 4h range (now 4,077); buy pullback to prior 4h highs ~4,043 as support, stop under 4h structure, TP 4,150 (~2.3R)."
   }
  ],
  "balance_warning": false,

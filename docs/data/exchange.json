@@ -1,5 +1,5 @@
 {
- "cash": 232.70364069325538,
+ "cash": 232.70365786380884,
  "positions": {},
  "closed": [
   {
@@ -373,22 +373,9 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793839852834,
- "next_id": 87,
+ "last_ms": 1793839912962,
+ "next_id": 88,
  "orders": [
-  {
-   "id": "o82",
-   "symbol": "PAXGUSDT",
-   "side": "long",
-   "qty": 0.046918999999999995,
-   "trigger": 3978,
-   "direction": "below",
-   "stop": 3920.0,
-   "tp": 4100.0,
-   "placed": 1793775148698,
-   "expires": 1793861548698,
-   "note": "Gold broke out of the 3,900-3,970 range with a strong 04Z 4h candle to 4,016 (h4 RSI 69, above h4 ema20/50). Don't chase at h1 RSI 74 under d1 ema20 4,020: buy the retest of the broken 3,970 area at 3,978. Stop below 4h lows 3,923-3,935; TP 4,100 near d1 ema50 4,113 (~2.1R). Small size: correlated with the EUR long (USD weakness) and gold breakouts failed twice before."
-  },
   {
    "id": "o86",
    "symbol": "ETHUSDT",
@@ -401,6 +388,19 @@
    "placed": 1793832755544,
    "expires": 1793940755544,
    "note": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R)."
+  },
+  {
+   "id": "o87",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "qty": 0.05654,
+   "trigger": 4042,
+   "direction": "below",
+   "stop": 3995.0,
+   "tp": 4150.0,
+   "placed": 1793839912962,
+   "expires": 1793926312962,
+   "note": "Gold broke 3,940-4,045 4h range (now 4,077); buy pullback to prior 4h highs ~4,043 as support, stop under 4h structure, TP 4,150 (~2.3R)."
   }
  ],
  "order_events": [
@@ -871,6 +871,15 @@
    "trigger": 2355,
    "time": 1793832755544,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o82",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 3978,
+   "time": 1793839912962,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -953,6 +962,6 @@
  "income": {
   "funding": 0.5863655124932169,
   "carry": -0.5002285916934517,
-  "interest": 0.3012193973840818
+  "interest": 0.3012365679375586
  }
 }
