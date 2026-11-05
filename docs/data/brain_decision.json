@@ -1,9 +1,15 @@
 {
-  "id": "2026-11-05T10:52:00Z",
-  "decided_at": "2026-11-05T10:52:00Z",
+  "id": "2026-11-05T12:52:00Z",
+  "decided_at": "2026-11-05T12:52:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC still coiling 80.2-80.9k above the broken range (7 straight 4h closes > 79.8k); ETH 2,418 holding 2,410 lows just under h4 ema200 2,432; gold flat 4,114, overbought on h4. Quiet drift ahead of Friday NFP.",
+  "market_view": "Broad -1% hour across crypto: BTC slipped out of the 80.2-80.9k coil to 79.6k (testing support), ETH lost its 2,403-2,410 4h lows to 2,391. ETH 12Z 4h close 2,418 < 2,420 triggered my pre-set scratch rule. Gold 4,108 consolidating above breakout.",
   "news": "",
-  "watch_next": "12Z 4h close: ETH < 2,420 -> scratch per time-limit plan. PAXG 4,085 retest order; BTC 4h close < 78,600 would invalidate the long bias.",
-  "actions": []
+  "watch_next": "BTC 4h close vs 79.6k / 78.6k; ETH reaction at 2,350-2,365 (h1 ema50); PAXG 4,085 retest fill; NFP Fri 13:30Z.",
+  "actions": [
+    {
+      "type": "close",
+      "symbol": "ETHUSDT",
+      "reason": "Pre-committed time rule: 12Z 4h close 2,418 < 2,420 after 3 candles, and now the 2,403-2,410 retest lows that defined the trade broke (2,391) with BTC leaving its coil. Thesis stalled; scratch at small loss rather than wait for 2,350 stop."
+    }
+  ]
 }
