@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-05T12:52Z)
+# Notebook (updated 2026-11-05T14:52Z)
 
 ## Big picture
+- 5 Nov 14:52Z: selloff extended. BTC 78,830 (4h candle low 78,745, closes 16Z), now on h4 ema20/50 ~78.8k; h4 ema200 81.5k overhead. ETH 2,363 (low 2,357), SUI/NEAR/ADA -3% 4h = weak breadth. Gold 4,086 testing h4 ema200 4,083 (PAXG order nearly filled). No clear news catalyst found.
 - 5 Nov 12:52Z: broad -1% hour. BTC 79,645 dropped out of 80.2-80.9k coil (12Z 4h close 80,296; current candle low 79,560). ETH 2,391 lost 2,403-2,410 4h lows (12Z close 2,418). Alts/memes -1-2%. Gold 4,108 (4h lows 4,101-4,105), h4 RSI 73, PAXG funding +36%. EUR 1.1217 soft.
 - 4 Nov: BTC broke the 75.6-78.6k range (16Z 4h close 80,201, high 81,180); then 8 4h closes > 79.8k but no follow-through under h4 ema200 81.5k. 30d high 85.6k.
 - ETH: h4 ema200 2,430 rejected repeatedly; supports 2,365 (h1 ema50), 2,350, 2,310 (24h low). 30d high 2,699.
@@ -20,7 +21,7 @@
 - No crypto positions. ETH long scratched 12:52Z (pre-set rule).
 
 ## Watchlist
-- BTC: if 4h close < 78,600 -> short on retest of 78.6-79k from below, stop above 79.9k, small (1-1.5%). If 4h close > 80,900 -> long retest order ~80.3k, stop < 79.5k.
+- BTC (key at 16Z close): if 4h close < 78,600 -> short on retest of 78.6-79k from below, stop above 79.9k, small (1-1.5%). If 4h close > 80,900 -> long retest order ~80.3k, stop < 79.5k.
 - ETH long again only after 4h close > 2,440 (above h4 ema200) and retest holds; or a flush to 2,310-2,330 that reclaims on 4h close.
 - EUR long only on 4h close > 1.1270; funding pays longs (-39% APR).
 - Deeply negative funding on BONK (-73%), AVAX: no shorts there (squeeze risk). PEPE funding +60%: longs crowded, possible short if memes break down with BTC < 78.6k.
@@ -47,6 +48,7 @@
 - None held.
 
 ## Session log
+- 2026-11-05T14:52Z | eq 231.15 | No action. BTC 78.8k testing 78.6k trigger level (16Z close decides). PAXG 4,085 order kept (price 4,086).
 - 2026-11-05T12:52Z | eq 231.53 | Closed ETH long (12Z close 2,418 < 2,420 rule; 2,403 lows broke, now 2,391). PAXG 4,085 order kept. BTC 79.6k testing support.
 - 2026-11-05T10:52Z | eq 233.03 | No action. ETH 2,418, BTC 80.4k coil, gold 4,114.
 - 2026-11-05T08:45Z | eq 233.24 | No action. ETH 2,422, BTC 80.5k coil, gold 4,115.
