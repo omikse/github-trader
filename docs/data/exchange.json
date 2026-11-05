@@ -1,6 +1,18 @@
 {
- "cash": 232.70406903451916,
- "positions": {},
+ "cash": 232.63033437966905,
+ "positions": {
+  "ETHUSDT": {
+   "side": "long",
+   "qty": 0.055713,
+   "entry": 2410.723,
+   "stop": 2350.0,
+   "tp": 2560.0,
+   "opened": 1793841600000,
+   "entry_fee": 0.07386973577445,
+   "mark": 2411.13,
+   "note": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R)."
+  }
+ },
  "closed": [
   {
    "id": "t5",
@@ -373,22 +385,9 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793841352802,
+ "last_ms": 1793841832804,
  "next_id": 88,
  "orders": [
-  {
-   "id": "o86",
-   "symbol": "ETHUSDT",
-   "side": "long",
-   "qty": 0.055713,
-   "trigger": 2410,
-   "direction": "below",
-   "stop": 2350.0,
-   "tp": 2560.0,
-   "placed": 1793832755544,
-   "expires": 1793940755544,
-   "note": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R)."
-  },
   {
    "id": "o87",
    "symbol": "PAXGUSDT",
@@ -880,6 +879,15 @@
    "trigger": 3978,
    "time": 1793839912962,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o86",
+   "symbol": "ETHUSDT",
+   "side": "long",
+   "status": "filled",
+   "trigger": 2410,
+   "time": 1793841600000,
+   "detail": "filled at 2410.72"
   }
  ],
  "funding_rates": {
@@ -962,6 +970,6 @@
  "income": {
   "funding": 0.5863655124932169,
   "carry": -0.5002285916934517,
-  "interest": 0.3016477386479421
+  "interest": 0.30178281957224284
  }
 }
