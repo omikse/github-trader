@@ -1,4 +1,4 @@
-# Notebook (updated 2026-11-05T16:52Z)
+# Notebook (updated 2026-11-05T18:51Z)
 
 ## Big picture
 - 5 Nov 16:52Z: BREAKDOWN. 12-16Z 4h candle: BTC 80,296 -> low 75,420 (new 30d low) -> close 75,902; now 76,623 bouncing, h1 RSI 28. ETH 2,267 (low 2,234), alts -6..-9% 24h, memes funding deeply negative (BONK -303%, PEPE -108%). The 4 Nov breakout above 78.6k failed -> bearish regime until BTC reclaims 79k on a 4h close.
@@ -38,7 +38,7 @@
 - Memes wick violently; don't short memes with deeply negative funding.
 - Stacking same-theme bets = one bet. Funding spikes mean-revert; carry barely broke even.
 - Don't open fresh at h1 RSI < 25-30 or > 74 after a big leg.
-- If input time_utc is >40 min stale, stand pat.
+- If input time_utc is >40 min stale, stand pat. (5 Nov 18:51Z: engine silent since 17:04Z 'handover' commit.)
 - Git: clone may be on detached HEAD; checkout main, pull --rebase, commit, push.
 - 4h candle list: last item is IN PROGRESS; second-to-last is the latest close.
 
@@ -46,6 +46,7 @@
 - None held.
 
 ## Session log
+- 2026-11-05T18:51Z | eq 232.35 (stale) | No action: input 1h51m stale (engine last commit 17:04Z 'handover'). BTC short order 78.3k + PAXG long (stop 4,055) left as planned.
 - 2026-11-05T16:52Z | eq 231.88 | BTC flushed to 75.4k (4h close 75.9k = failed breakout). Placed BTC short retest order 78.3k (stop 79.9k, TP 75k, 1.5%). PAXG filled 4,086, stop raised 4,038 -> 4,055.
 - 2026-11-05T14:52Z | eq 231.15 | No action. BTC 78.8k testing 78.6k. PAXG 4,085 order kept.
 - 2026-11-05T12:52Z | eq 231.53 | Closed ETH long (12Z close < 2,420 rule). PAXG 4,085 order kept.
@@ -55,4 +56,3 @@
 - 2026-11-05T04:51Z | eq 233.57 | No action.
 - 2026-11-05T02:51Z | eq 233.64 | ETH order filled 2,410.7. PAXG order 4,042 -> 4,085.
 - 2026-11-05T00:52Z | eq 232.70 | PAXG order 3,978 -> 4,042.
-- 2026-11-04T18:51Z | eq 232.70 | EUR long stopped (-2.35). BTC broke range.
