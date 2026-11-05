@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-05T10:26:10Z",
+ "updated": "2026-11-05T11:24:44Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
- "fx_usd_pln": 3.9097,
- "equity_pln": 911.18,
- "return_pct": -9.37,
+ "fx_usd_pln": 3.9101,
+ "equity_pln": 911.38,
+ "return_pct": -9.36,
  "max_drawdown_pct": 12.69,
- "control_pln": 1025.65,
+ "control_pln": 1021.17,
  "control_trades": 7,
- "hodl_pln": 956.08,
+ "hodl_pln": 954.08,
  "positions": [
   {
    "symbol": "ETHUSDT",
    "side": "long",
    "size": 0.055713,
    "entry": 2410.723,
-   "mark": 2418.65,
-   "upnl": 0.4416369510000075,
+   "mark": 2419.23,
+   "upnl": 0.4739504910000034,
    "stop": 2350.0,
    "tp": 2560.0,
    "liq": null,
    "leverage": null,
    "opened": 1793841600000,
    "reason": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R).",
-   "upnl_pln": 1.73
+   "upnl_pln": 1.85
   }
  ],
  "closed_trades": [
@@ -69,7 +69,7 @@
    "why": "stop",
    "opened": 1793712540000,
    "reason": "Range breakdown: 16Z 4h closed 77,404 below the 77.5k floor, BTC 76.8k with all alts weak. Short a bounce-fail retest of the broken floor (77.45k), stop above 16Z candle high 78,106, TP 75.5k (~2.8R). Same pattern as the profitable 30 Oct bounce-fail short.",
-   "pnl_pln": -15.64
+   "pnl_pln": -15.65
   },
   {
    "id": "t74",
@@ -83,7 +83,7 @@
    "why": "stop",
    "opened": 1793580754987,
    "reason": "Plan trigger met: 00Z 4h close 78,239 > 78,200 range top after 7 inside closes (weekend compression 77.3-78.1k); entering on the retest at ~78.0k. Stop below the 4h lows 77,511/77,521; TP 79,400 = next resistance (h4 ema50 79.1k) ~2.6R. Half-size because alts are not confirming and d1 trend is down.",
-   "pnl_pln": -10.35
+   "pnl_pln": -10.36
   },
   {
    "id": "t73",
@@ -111,7 +111,7 @@
    "why": "manual close",
    "opened": 1793473860000,
    "reason": "Alt relative-strength breakout: LINK +5% 24h, h1 RSI 65, h4 RSI 57 above h4 ema20/50, pushing through the 11.71-11.72 multi-candle high. Entry on confirmation at 11.82, stop 11.40 below the 4h consolidation lows, TP 12.60 near d1 ema50/prior daily closes (~1.9R). Also the rotation leg if BTC breaks up and stops my short.",
-   "pnl_pln": -6.57
+   "pnl_pln": -6.58
   },
   {
    "id": "t68",
@@ -293,7 +293,7 @@
    "why": "stop",
    "opened": 1792976580000,
    "reason": "Breakdown-retest short: BTC lost 80.0k range floor that held 3x over the weekend; short a bounce back into 80.0-80.2k (old support, below h1 ema20 80.37k). Stop above 20Z 4h high 80,624 + buffer; TP 78,700 near/below 30d low 79.12k (~2.6R).",
-   "pnl_pln": -6.67
+   "pnl_pln": -6.68
   },
   {
    "id": "t36",
@@ -415,27 +415,27 @@
    "pnl": -5.3977,
    "time": 1792639980000,
    "why": "stop",
-   "pnl_pln": -21.1
+   "pnl_pln": -21.11
   }
  ],
  "trade_count": 28,
  "win_rate_pct": 28.6,
- "brain_calls_today": 5,
+ "brain_calls_today": 6,
  "last_decision": {
-  "time": "2026-11-05T08:52:10Z",
+  "time": "2026-11-05T11:24:44Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-05T08:45:00Z",
+  "decided_at": "2026-11-05T10:52:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 233.03,
-  "equity_pln": 911.09,
+  "equity_usd": 233.08,
+  "equity_pln": 911.38,
   "events": [],
-  "market_view": "BTC still coiling 80.2-80.9k above the broken range (6 straight 4h closes > 79.8k); ETH 2,422 holding 2,403-2,410 4h lows under h4 ema200 2,432; gold 4,115 cooling from overbought toward the 4,085 retest order.",
-  "watch_next": "12Z 4h close: ETH < 2,420 -> scratch per time limit; ETH > 2,480 -> stop to breakeven. PAXG fill at 4,085. BTC 4h close < 78,600 kills the long bias. NFP Fri 13:30Z.",
+  "market_view": "BTC still coiling 80.2-80.9k above the broken range (7 straight 4h closes > 79.8k); ETH 2,418 holding 2,410 lows just under h4 ema200 2,432; gold flat 4,114, overbought on h4. Quiet drift ahead of Friday NFP.",
+  "watch_next": "12Z 4h close: ETH < 2,420 -> scratch per time-limit plan. PAXG 4,085 retest order; BTC 4h close < 78,600 would invalidate the long bias.",
   "news": "",
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 232.614875,
+ "cash_usd": 232.610583,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -543,9 +543,9 @@
   }
  ],
  "income_pln": {
-  "funding": 2.2,
+  "funding": 2.18,
   "carry": -1.96,
-  "interest": 1.21
+  "interest": 1.22
  },
  "cash_rate_pct": 3.87
 }
