@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-05T17:03:47Z",
+ "updated": "2026-11-05T18:55:15Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9101,
- "equity_pln": 907.04,
- "return_pct": -9.79,
+ "equity_pln": 904.92,
+ "return_pct": -10.0,
  "max_drawdown_pct": 13.64,
  "control_pln": 1002.7,
  "control_trades": 8,
- "hodl_pln": 904.28,
+ "hodl_pln": 904.66,
  "positions": [
   {
    "symbol": "PAXGUSDT",
    "side": "long",
    "size": 0.049866,
    "entry": 4086.2255,
-   "mark": 4106.31,
-   "upnl": 1.0015336770000194,
+   "mark": 4095.2,
+   "upnl": 0.4475224169999904,
    "stop": 4055.0,
    "tp": 4200.0,
    "liq": null,
    "leverage": null,
    "opened": 1793889900000,
    "reason": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R).",
-   "upnl_pln": 3.92
+   "upnl_pln": 1.75
   }
  ],
  "closed_trades": [
@@ -434,46 +434,22 @@
  ],
  "trade_count": 29,
  "win_rate_pct": 27.6,
- "brain_calls_today": 9,
+ "brain_calls_today": 10,
  "last_decision": {
-  "time": "2026-11-05T16:52:47Z",
+  "time": "2026-11-05T18:55:15Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-05T16:52:14Z",
+  "decided_at": "2026-11-05T18:51:50Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 232.19,
-  "equity_pln": 907.9,
+  "equity_usd": 231.41,
+  "equity_pln": 904.82,
   "events": [],
-  "market_view": "BTC failed breakout confirmed: 12-16Z 4h candle -5.5% to 75,420 and closed 75,902, far below the 78.6k trigger; broad alt flush (-6 to -9% 24h). Bouncing at h1 RSI ~28, too stretched to short at market. Gold decoupled upward (4,103).",
-  "watch_next": "Does BTC bounce reach 78.3k and reject (order fills)? 4h close back > 79k cancels the bear idea. PAXG holding > 4,083.",
-  "news": "Searches show generic ETF-outflow/liquidation headlines; no clear single catalyst found for today's flush. NFP Fri 13:30Z.",
-  "actions": [
-   {
-    "type": "move_stop",
-    "symbol": "PAXGUSDT",
-    "stop": 4055,
-    "take_profit": 4200,
-    "reason": "Reduce risk: put stop under the 12-16Z 4h low 4,063 (2.4 h1 ATR away) instead of 4,038.",
-    "result": "done",
-    "detail": "stop 4055.0, target 4200.0"
-   },
-   {
-    "type": "entry_order",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "trigger": 78300,
-    "stop": 79900,
-    "take_profit": 75000,
-    "risk_pct": 0.015,
-    "expires_hours": 20,
-    "reason": "Failed breakout: 4h close 75,902 broke 78.6k range floor after 4h of no follow-through under h4 ema200. Sell the retest of broken support / h4 ema20 ~78.3k from below; stop above 79.9k (above h1 ema50 and old breakdown candle body), TP 75.0k just under the 75.4k flush low (~2R). Shorts receive +28% APR funding.",
-    "invalidation": "4h close back above 79,000 (reclaims range) or price rips through 79.9k; if filled and no rejection within 2 4h candles, scratch.",
-    "result": "done",
-    "detail": "short 0.00206561 when price goes above 78300 (risk 1.5%, stop 79900.0, target 75000.0, expires in 20h) ok"
-   }
-  ]
+  "market_view": "Input data is ~1h51m stale (time_utc 16:59:47Z; last engine commit 17:04Z 'handover'), so standing pat. Last seen: BTC bouncing from 75.4k flush in bear regime; gold long +0.6%.",
+  "watch_next": "Engine resumed? BTC reaction at 78.3k retest (short order) vs 4h close >79k; PAXG >4,130 by Sat; NFP Fri 13:30Z.",
+  "news": "",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 231.012681,
+ "cash_usd": 231.004273,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -576,9 +552,9 @@
   }
  ],
  "income_pln": {
-  "funding": 2.04,
+  "funding": 2.0,
   "carry": -1.96,
-  "interest": 1.24
+  "interest": 1.25
  },
  "cash_rate_pct": 3.87
 }
