@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-05T20:47:15Z",
+ "updated": "2026-11-05T20:52:15Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9101,
- "equity_pln": 903.8,
- "return_pct": -10.11,
+ "equity_pln": 904.41,
+ "return_pct": -10.05,
  "max_drawdown_pct": 13.64,
- "control_pln": 996.9,
+ "control_pln": 995.9,
  "control_trades": 8,
- "hodl_pln": 905.5,
+ "hodl_pln": 906.09,
  "positions": [
   {
    "symbol": "PAXGUSDT",
    "side": "long",
    "size": 0.049866,
    "entry": 4086.2255,
-   "mark": 4089.24,
-   "upnl": 0.15032105699998857,
+   "mark": 4092.73,
+   "upnl": 0.3243533970000004,
    "stop": 4055.0,
    "tp": 4200.0,
    "liq": null,
    "leverage": null,
    "opened": 1793889900000,
    "reason": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R).",
-   "upnl_pln": 0.59
+   "upnl_pln": 1.27
   }
  ],
  "closed_trades": [
@@ -434,22 +434,44 @@
  ],
  "trade_count": 29,
  "win_rate_pct": 27.6,
- "brain_calls_today": 10,
+ "brain_calls_today": 11,
  "last_decision": {
-  "time": "2026-11-05T18:55:15Z",
+  "time": "2026-11-05T20:52:15Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-05T18:51:50Z",
+  "decided_at": "2026-11-05T20:50:54Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 231.41,
-  "equity_pln": 904.82,
+  "equity_usd": 231.23,
+  "equity_pln": 904.13,
   "events": [],
-  "market_view": "Input data is ~1h51m stale (time_utc 16:59:47Z; last engine commit 17:04Z 'handover'), so standing pat. Last seen: BTC bouncing from 75.4k flush in bear regime; gold long +0.6%.",
-  "watch_next": "Engine resumed? BTC reaction at 78.3k retest (short order) vs 4h close >79k; PAXG >4,130 by Sat; NFP Fri 13:30Z.",
-  "news": "",
-  "actions": []
+  "market_view": "BTC is bear-flagging under the flush: bounce capped at 76.96k, two 4h candles inside 75.5-77k, h1/h4 ema20 falling to ~78.1k. Alts weak (ETH -7% 24h, h1 RSI 26). Gold holding 4,090 above h4 ema200.",
+  "watch_next": "Did BTC bounce into 77.5k and reject (short fill)? 4h close > 79k cancels the bear plan. PAXG > 4,130 or close < 4,055.",
+  "news": "No fresh catalyst found in search; NFP Fri 6 Nov 13:30Z is the next scheduled event.",
+  "actions": [
+   {
+    "type": "cancel_order",
+    "symbol": "BTCUSDT",
+    "reason": "78.3k trigger now likely too far: bounce stalled at 76.96k and the falling h1 ema20 will be ~77.5k soon. Re-placing lower per 're-place orders when price runs away' lesson.",
+    "result": "done",
+    "detail": "cancelled 1 order(s)"
+   },
+   {
+    "type": "entry_order",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "trigger": 77500,
+    "stop": 79000,
+    "take_profit": 74000,
+    "risk_pct": 0.015,
+    "expires_hours": 16,
+    "reason": "Bear-flag retest short after the 5 Nov failed breakout and flush to 75.4k: sell a bounce into 77.5k (above the 76.96k bounce high, at falling h1/h4 ema20) with stop above the 78.6k broken floor; TP 74k below the 75.4k low (~2.3R).",
+    "invalidation": "4h close above 79,000 (flush was a sweep), or no rejection within two 4h candles after fill.",
+    "result": "done",
+    "detail": "short 0.0021879300000000003 when price goes above 77500 (risk 1.5%, stop 79000.0, target 74000.0, expires in 16h) ok"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 230.987908,
+ "cash_usd": 230.987988,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -484,13 +506,13 @@
   {
    "symbol": "BTCUSDT",
    "side": "short",
-   "trigger": 78300,
+   "trigger": 77500,
    "direction": "above",
-   "stop": 79900.0,
-   "tp": 75000.0,
-   "qty": 0.00206561,
-   "expires": 1793969567261,
-   "note": "Failed breakout: 4h close 75,902 broke 78.6k range floor after 4h of no follow-through under h4 ema200. Sell the retest of broken support / h4 ema20 ~78.3k from below; stop above 79.9k (above h1 ema50 and old breakdown candle body), TP 75.0k just under the 75.4k flush low (~2R). Shorts receive +28% APR funding."
+   "stop": 79000.0,
+   "tp": 74000.0,
+   "qty": 0.0021879300000000003,
+   "expires": 1793969535273,
+   "note": "Bear-flag retest short after the 5 Nov failed breakout and flush to 75.4k: sell a bounce into 77.5k (above the 76.96k bounce high, at falling h1/h4 ema20) with stop above the 78.6k broken floor; TP 74k below the 75.4k low (~2.3R)."
   }
  ],
  "balance_warning": false,

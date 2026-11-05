@@ -1,5 +1,5 @@
 {
- "cash": 230.98790827302878,
+ "cash": 230.98798833970164,
  "positions": {
   "PAXGUSDT": {
    "side": "long",
@@ -9,7 +9,7 @@
    "tp": 4200.0,
    "opened": 1793889900000,
    "entry_fee": 0.11207004643065001,
-   "mark": 4089.24,
+   "mark": 4092.73,
    "note": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R)."
   }
  },
@@ -398,21 +398,21 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793911635147,
- "next_id": 91,
+ "last_ms": 1793911935273,
+ "next_id": 92,
  "orders": [
   {
-   "id": "o90",
+   "id": "o91",
    "symbol": "BTCUSDT",
    "side": "short",
-   "qty": 0.00206561,
-   "trigger": 78300,
+   "qty": 0.0021879300000000003,
+   "trigger": 77500,
    "direction": "above",
-   "stop": 79900.0,
-   "tp": 75000.0,
-   "placed": 1793897567261,
-   "expires": 1793969567261,
-   "note": "Failed breakout: 4h close 75,902 broke 78.6k range floor after 4h of no follow-through under h4 ema200. Sell the retest of broken support / h4 ema20 ~78.3k from below; stop above 79.9k (above h1 ema50 and old breakdown candle body), TP 75.0k just under the 75.4k flush low (~2R). Shorts receive +28% APR funding."
+   "stop": 79000.0,
+   "tp": 74000.0,
+   "placed": 1793911935273,
+   "expires": 1793969535273,
+   "note": "Bear-flag retest short after the 5 Nov failed breakout and flush to 75.4k: sell a bounce into 77.5k (above the 76.96k bounce high, at falling h1/h4 ema20) with stop above the 78.6k broken floor; TP 74k below the 75.4k low (~2.3R)."
   }
  ],
  "order_events": [
@@ -919,6 +919,15 @@
    "trigger": 4085,
    "time": 1793889900000,
    "detail": "filled at 4086.23"
+  },
+  {
+   "id": "o90",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 78300,
+   "time": 1793911935273,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -1001,6 +1010,6 @@
  "income": {
   "funding": 0.4944760395999412,
   "carry": -0.5002285916934517,
-  "interest": 0.3208355975507782
+  "interest": 0.32091566422364814
  }
 }
