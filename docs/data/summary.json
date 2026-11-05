@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T12:52:44Z",
+ "updated": "2026-11-05T13:00:44Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -8,11 +8,25 @@
  "equity_pln": 903.82,
  "return_pct": -10.11,
  "max_drawdown_pct": 13.2,
- "control_pln": 1002.66,
+ "control_pln": 1004.54,
  "control_trades": 7,
- "hodl_pln": 945.62,
+ "hodl_pln": 946.47,
  "positions": [],
  "closed_trades": [
+  {
+   "id": "t89",
+   "symbol": "ETHUSDT",
+   "side": "long",
+   "qty": 0.055713,
+   "entry": 2410.723,
+   "exit": 2385.874023,
+   "pnl": -1.5314,
+   "time": 1793883164682,
+   "why": "manual close",
+   "opened": 1793841600000,
+   "reason": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R).",
+   "pnl_pln": -5.99
+  },
   {
    "id": "t84",
    "symbol": "EURUSDT",
@@ -402,8 +416,8 @@
    "pnl_pln": -21.11
   }
  ],
- "trade_count": 28,
- "win_rate_pct": 28.6,
+ "trade_count": 29,
+ "win_rate_pct": 27.6,
  "brain_calls_today": 7,
  "last_decision": {
   "time": "2026-11-05T12:52:44Z",
@@ -427,7 +441,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 231.149251,
+ "cash_usd": 231.149387,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {

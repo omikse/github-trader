@@ -385,13 +385,41 @@
    "why": "stop",
    "opened": 1793768580000,
    "reason": "EUR broke 1.121 resistance (failed twice before) and extended to 1.126; h1 RSI 80 so don't chase - buy a pullback to 1.1228 (half of the breakout leg, above broken 1.121). Above h4 ema20/50 and d1 ema20; d1 ema50 1.127 is next, TP 1.131 ~2R. Funding -47% APR pays longs."
+  },
+  {
+   "id": "t89",
+   "symbol": "ETHUSDT",
+   "side": "long",
+   "qty": 0.055713,
+   "entry": 2410.723,
+   "exit": 2385.874023,
+   "pnl": -1.5314,
+   "time": 1793883164682,
+   "why": "manual close",
+   "opened": 1793841600000,
+   "reason": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R)."
   }
  ],
- "last_closed_check_ms": 1793883164682,
+ "last_closed_check_ms": 1793883644558,
  "day": "2026-11-05",
  "day_start_equity": 232.70278398567865,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "position_closed",
+   "id": "t89",
+   "symbol": "ETHUSDT",
+   "side": "long",
+   "qty": 0.055713,
+   "entry": 2410.723,
+   "exit": 2385.874023,
+   "pnl": -1.5314,
+   "time": 1793883164682,
+   "why": "manual close",
+   "opened": 1793841600000,
+   "reason": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R)."
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 248.86112824534348,
@@ -405,7 +433,7 @@
   "trades": 7,
   "wins": 4
  },
- "last_btc": 79556.7,
+ "last_btc": 79628.9,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
