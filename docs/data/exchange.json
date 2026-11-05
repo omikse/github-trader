@@ -1,18 +1,6 @@
 {
- "cash": 232.60663873074031,
- "positions": {
-  "ETHUSDT": {
-   "side": "long",
-   "qty": 0.055713,
-   "entry": 2410.723,
-   "stop": 2350.0,
-   "tp": 2560.0,
-   "opened": 1793841600000,
-   "entry_fee": 0.07386973577445,
-   "mark": 2391.62,
-   "note": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R)."
-  }
- },
+ "cash": 231.1492511903987,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -373,6 +361,19 @@
    "why": "stop",
    "opened": 1793768580000,
    "reason": "EUR broke 1.121 resistance (failed twice before) and extended to 1.126; h1 RSI 80 so don't chase - buy a pullback to 1.1228 (half of the breakout leg, above broken 1.121). Above h4 ema20/50 and d1 ema20; d1 ema50 1.127 is next, TP 1.131 ~2R. Funding -47% APR pays longs."
+  },
+  {
+   "id": "t89",
+   "symbol": "ETHUSDT",
+   "side": "long",
+   "qty": 0.055713,
+   "entry": 2410.723,
+   "exit": 2385.874023,
+   "pnl": -1.5314,
+   "time": 1793883164682,
+   "why": "manual close",
+   "opened": 1793841600000,
+   "reason": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R)."
   }
  ],
  "fills": [
@@ -385,8 +386,8 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793882684529,
- "next_id": 89,
+ "last_ms": 1793883164682,
+ "next_id": 90,
  "orders": [
   {
    "id": "o88",
@@ -979,6 +980,6 @@
  "income": {
   "funding": 0.5514588097526384,
   "carry": -0.5002285916934517,
-  "interest": 0.312993873384166
+  "interest": 0.31312569833740617
  }
 }
