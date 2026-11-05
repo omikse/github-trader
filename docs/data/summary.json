@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-05T04:47:10Z",
+ "updated": "2026-11-05T04:51:10Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9097,
- "equity_pln": 913.2,
- "return_pct": -9.17,
+ "equity_pln": 912.64,
+ "return_pct": -9.22,
  "max_drawdown_pct": 12.69,
- "control_pln": 1029.69,
+ "control_pln": 1027.32,
  "control_trades": 7,
- "hodl_pln": 957.93,
+ "hodl_pln": 956.84,
  "positions": [
   {
    "symbol": "ETHUSDT",
    "side": "long",
    "size": 0.055713,
    "entry": 2410.723,
-   "mark": 2427.51,
-   "upnl": 0.9352541310000145,
+   "mark": 2425.19,
+   "upnl": 0.8059999710000054,
    "stop": 2350.0,
    "tp": 2560.0,
    "liq": null,
    "leverage": null,
    "opened": 1793841600000,
    "reason": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R).",
-   "upnl_pln": 3.66
+   "upnl_pln": 3.15
   }
  ],
  "closed_trades": [
@@ -420,65 +420,33 @@
  ],
  "trade_count": 28,
  "win_rate_pct": 28.6,
- "brain_calls_today": 2,
+ "brain_calls_today": 3,
  "last_decision": {
-  "time": "2026-11-05T02:51:53Z",
+  "time": "2026-11-05T04:51:10Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-05T02:50:50Z",
+  "decided_at": "2026-11-05T04:51:30Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 233.43,
-  "equity_pln": 912.66,
+  "equity_usd": 233.47,
+  "equity_pln": 912.78,
   "events": [
    {
     "type": "order_cancelled",
-    "id": "o82",
+    "id": "o87",
     "symbol": "PAXGUSDT",
     "side": "long",
     "status": "cancelled",
-    "trigger": 3978,
-    "time": 1793839912962,
+    "trigger": 4042,
+    "time": 1793847113036,
     "detail": "cancelled by the brain"
-   },
-   {
-    "type": "order_filled",
-    "id": "o86",
-    "symbol": "ETHUSDT",
-    "side": "long",
-    "status": "filled",
-    "trigger": 2410,
-    "time": 1793841600000,
-    "detail": "filled at 2410.72"
    }
   ],
-  "market_view": "BTC 80.6k holding above the broken 78.6k range (4h lows ~79.9k x3), consolidating under 81.2k. ETH retest long filled 2,410.7, now 2,429. Gold ripped through h4 ema200 4,083 to 4,122 (h1 RSI 85), leaving my 4,042 retest order far behind.",
-  "watch_next": "ETH > 2,480 -> stop to breakeven; ETH 4h close < 2,380 -> cut. Gold pullback to ~4,085 (old ema200 / breakout) for the re-placed order; 4h close < 4,060 weakens it.",
-  "news": "No useful fresh news; NFP Fri 6 Nov 13:30Z is the next macro event.",
-  "actions": [
-   {
-    "type": "cancel_order",
-    "symbol": "PAXGUSDT",
-    "reason": "Gold broke out to 4,122; 4,042 retest is now 2% away and unlikely. Replacing with retest of the new breakout level ~4,085.",
-    "result": "done",
-    "detail": "cancelled 1 order(s)"
-   },
-   {
-    "type": "entry_order",
-    "symbol": "PAXGUSDT",
-    "side": "long",
-    "trigger": 4085,
-    "stop": 4038,
-    "take_profit": 4200,
-    "risk_pct": 0.011,
-    "expires_hours": 24,
-    "reason": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R).",
-    "invalidation": "4h close < 4,060 before fill, or after fill a 4h close < 4,050.",
-    "result": "done",
-    "detail": "long 0.049866 when price goes below 4085 (risk 1.1%, stop 4038.0, target 4200.0, expires in 24h) ok"
-   }
-  ]
+  "market_view": "BTC coiling 80.2-80.8k after the range break, holding above 79.6k; ETH sitting on its h4 ema200 ~2,430 with 2,403 support intact; gold extended at 4,131 (h1 RSI 86) after breaking out.",
+  "watch_next": "ETH by 12Z must be > 2,420 (time stop) and push toward 2,480 to trigger breakeven stop; BTC 4h close > 81.2k or < 79.6k; gold pullback to 4,085 for the resting order; NFP Fri 13:30Z.",
+  "news": "",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 232.627541,
+ "cash_usd": 232.627607,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
