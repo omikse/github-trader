@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-05T22:44:15Z",
+ "updated": "2026-11-05T22:52:15Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9101,
- "equity_pln": 901.43,
+ "equity_pln": 901.39,
  "return_pct": -10.35,
  "max_drawdown_pct": 13.64,
- "control_pln": 1005.84,
+ "control_pln": 1009.17,
  "control_trades": 8,
- "hodl_pln": 900.18,
+ "hodl_pln": 898.21,
  "positions": [
   {
    "symbol": "PAXGUSDT",
    "side": "long",
    "size": 0.049866,
    "entry": 4086.2255,
-   "mark": 4077.51,
-   "upnl": -0.43460712299998966,
+   "mark": 4077.23,
+   "upnl": -0.44856960299999965,
    "stop": 4055.0,
    "tp": 4200.0,
    "liq": null,
    "leverage": null,
    "opened": 1793889900000,
    "reason": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R).",
-   "upnl_pln": -1.7
+   "upnl_pln": -1.75
   }
  ],
  "closed_trades": [
@@ -434,44 +434,33 @@
  ],
  "trade_count": 29,
  "win_rate_pct": 27.6,
- "brain_calls_today": 11,
+ "brain_calls_today": 12,
  "last_decision": {
-  "time": "2026-11-05T20:52:15Z",
+  "time": "2026-11-05T22:52:15Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-05T20:50:54Z",
+  "decided_at": "2026-11-05T22:52:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 231.23,
-  "equity_pln": 904.13,
-  "events": [],
-  "market_view": "BTC is bear-flagging under the flush: bounce capped at 76.96k, two 4h candles inside 75.5-77k, h1/h4 ema20 falling to ~78.1k. Alts weak (ETH -7% 24h, h1 RSI 26). Gold holding 4,090 above h4 ema200.",
-  "watch_next": "Did BTC bounce into 77.5k and reject (short fill)? 4h close > 79k cancels the bear plan. PAXG > 4,130 or close < 4,055.",
-  "news": "No fresh catalyst found in search; NFP Fri 6 Nov 13:30Z is the next scheduled event.",
-  "actions": [
+  "equity_usd": 230.51,
+  "equity_pln": 901.32,
+  "events": [
    {
-    "type": "cancel_order",
-    "symbol": "BTCUSDT",
-    "reason": "78.3k trigger now likely too far: bounce stalled at 76.96k and the falling h1 ema20 will be ~77.5k soon. Re-placing lower per 're-place orders when price runs away' lesson.",
-    "result": "done",
-    "detail": "cancelled 1 order(s)"
-   },
-   {
-    "type": "entry_order",
+    "type": "order_cancelled",
+    "id": "o90",
     "symbol": "BTCUSDT",
     "side": "short",
-    "trigger": 77500,
-    "stop": 79000,
-    "take_profit": 74000,
-    "risk_pct": 0.015,
-    "expires_hours": 16,
-    "reason": "Bear-flag retest short after the 5 Nov failed breakout and flush to 75.4k: sell a bounce into 77.5k (above the 76.96k bounce high, at falling h1/h4 ema20) with stop above the 78.6k broken floor; TP 74k below the 75.4k low (~2.3R).",
-    "invalidation": "4h close above 79,000 (flush was a sweep), or no rejection within two 4h candles after fill.",
-    "result": "done",
-    "detail": "short 0.0021879300000000003 when price goes above 77500 (risk 1.5%, stop 79000.0, target 74000.0, expires in 16h) ok"
+    "status": "cancelled",
+    "trigger": 78300,
+    "time": 1793911935273,
+    "detail": "cancelled by the brain"
    }
-  ]
+  ],
+  "market_view": "BTC 75.7k grinding along the 75.4k flag low after the -5% 12-16Z candle; ETH printed a new low 2,215. h1 RSI ~25 on both: oversold, nothing to chase. Gold 4,078 slightly under the 4,082 h4 ema200, last 4h close 4,105 still holds.",
+  "watch_next": "00Z 4h closes: BTC < 75.4k (let short order expire, wait for retest) or bounce toward 77.5k order; PAXG two 4h closes < 4,080 = exit. NFP Fri 13:30Z.",
+  "news": "",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 230.972646,
+ "cash_usd": 230.972774,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
