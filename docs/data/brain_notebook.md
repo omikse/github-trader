@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-05T06:51Z)
+# Notebook (updated 2026-11-05T08:45Z)
 
 ## Big picture
+- 5 Nov 08:45Z: BTC 80,520, coil 80.2-80.9k continues (6 4h closes > 79.8k; 04Z close 80,302). ETH 2,422, 04Z 4h close 2,414 (slightly soft), lows 2,403-2,410 hold. Gold 4,115 flat, 4h low 4,101; h4 RSI 77. Breadth mild (+1-4% majors, memes red 24h).
 - 5 Nov 06:51Z: BTC 80,384 still coiling 80.2-80.8k (5 4h closes > 79.8k). ETH 2,422 flat, 4h lows 2,403-2,405 holding. Gold pulled back 4,131 -> 4,115 (h1 RSI 73), cooling toward 4,085 order.
 - 4 Nov: BTC BROKE the 75.6-78.6k range (16Z 4h close 80,201, high 81,180). Since then 4 consecutive 4h candles held > 79.8k (04Z close 80,470); 5 Nov 04:51Z BTC 80,600, tight 80.2-80.8k coil under 81.2k. h4 ema200 81.6k overhead, 30d high 85.6k.
 - ETH leads (+6.6% 24h): 2,427, 4h lows 2,403-2,405 x3 = support, h4 ema200 2,433 sitting right on price (4h closes 2,423/2,422); 30d high 2,699.
@@ -50,6 +51,7 @@
 - None held.
 
 ## Session log
+- 2026-11-05T08:45Z | eq 233.24 | No action. ETH 2,422 (+0.6), BTC 80.5k coil, gold 4,115; PAXG 4,085 order kept. ETH scratch check at 12Z close (<2,420 -> close).
 - 2026-11-05T06:51Z | eq 233.24 | No action. ETH 2,422 (+0.6), BTC 80.4k coil, gold eased to 4,115; PAXG 4,085 order kept. ETH scratch check at 12Z close.
 - 2026-11-05T04:51Z | eq 233.57 | No action. ETH 2,427 (+0.9 open), BTC coil 80.6k, gold 4,131 overbought; PAXG 4,085 order kept.
 - 2026-11-05T02:51Z | eq 233.64 | ETH order filled 2,410.7 (now 2,429). PAXG order 4,042 -> 4,085 (stop 4,038, TP 4,200, 1.1%); gold at 4,122.
@@ -59,4 +61,3 @@
 - 2026-11-04T18:51Z | eq 232.70 | EUR long stopped (-2.35). BTC broke range. New ETH retest order 2,355.
 - 2026-11-04T17:26Z | eq ~235.7 | No action; waiting on 16Z 4h close.
 - 2026-11-04T15:03Z | eq 235.71 | No action. EUR stop 1.1215.
-- 2026-11-04T14:51Z | eq 236.21 | EUR stop -> 1.1215.
