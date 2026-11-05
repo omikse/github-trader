@@ -1,15 +1,15 @@
 {
- "cash": 231.02394766943476,
+ "cash": 231.02396369783375,
  "positions": {
   "PAXGUSDT": {
    "side": "long",
    "qty": 0.049866,
    "entry": 4086.2255,
-   "stop": 4038.0,
+   "stop": 4055.0,
    "tp": 4200.0,
    "opened": 1793889900000,
    "entry_fee": 0.11207004643065001,
-   "mark": 4110.54,
+   "mark": 4109.74,
    "note": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R)."
   }
  },
@@ -398,9 +398,23 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793897507169,
- "next_id": 90,
- "orders": [],
+ "last_ms": 1793897567261,
+ "next_id": 91,
+ "orders": [
+  {
+   "id": "o90",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00206561,
+   "trigger": 78300,
+   "direction": "above",
+   "stop": 79900.0,
+   "tp": 75000.0,
+   "placed": 1793897567261,
+   "expires": 1793969567261,
+   "note": "Failed breakout: 4h close 75,902 broke 78.6k range floor after 4h of no follow-through under h4 ema200. Sell the retest of broken support / h4 ema20 ~78.3k from below; stop above 79.9k (above h1 ema50 and old breakdown candle body), TP 75.0k just under the 75.4k flush low (~2R). Shorts receive +28% APR funding."
+  }
+ ],
  "order_events": [
   {
    "id": "o2",
@@ -987,6 +1001,6 @@
  "income": {
   "funding": 0.534284312932587,
   "carry": -0.5002285916934517,
-  "interest": 0.31706672062409447
+  "interest": 0.31708274902308614
  }
 }
