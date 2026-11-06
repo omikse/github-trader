@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-06T16:51Z)
+# Notebook (updated 2026-11-06T18:51Z)
 
 ## Big picture
+- 18:51Z 6 Nov: quiet. BTC 75,788 (h1 RSI 41, h4 RSI 38), 4h candles 75.3-76.0k, still in 74.8-76.3k base under falling h4 ema20 77.18k. XRP weakest (-3.8% 24h, 1.186, near 30d low 1.172). Alts +1-3%, PEPE +5%. PAXG 4,056 above h4 ema20. EUR 1.1143 h1 RSI 28.
 - 16:51Z 6 Nov: engine live again (input 16:44Z). 12:53Z order never executed. Post-NFP: BTC swept new 30d low 74,790 in 12-16Z 4h, closed 75,767 (no close < 75.1k). Now 75,567, h1 RSI 37, h1 ema20 76.08k, h4 ema20 77.15k, h4 ema50 77.96k, h4 ema200 81.15k. ETH 2,223 (h4 ema20 2,282), XRP 1.191 (30d low 1.172), PAXG 4,045, EUR 1.1147 (h1 RSI 28, weak). Alts +1-2.5% 24h, PEPE +8% (funding 37%) while BTC/ETH/XRP lag: mixed breadth.
 - 5 Nov: BREAKDOWN from 80.3k to 75.4k. 4 Nov breakout above 78.6k failed -> bearish regime until BTC reclaims 79k on a 4h close. Since then a 74.8-76.3k base/bear flag.
 - Gold: PAXG 4,045 at h4 ema20 4,035. Res 4,082, 4,105; sup 4,016, 4,000. No gold trade until 4h close > 4,082.
@@ -23,7 +24,7 @@
 - EUR long only on 4h close > 1.1270.
 - No shorts on memes/SOL/SUI/LINK with deeply negative funding (squeeze risk). BONK funding -93% APR.
 - NEAR funding now 19% APR (dropped) - no carry.
-- EUR perp funding 80% at 16:44Z (was 89-127%); EUR weak h1 RSI 28 post-NFP, carry on <=25% pays pennies: skip unless >100% sustained. Older: 127% (04:50Z), 89.5% (06/08Z), 115% (10:43Z) - feed is live. Break-even ~2.4 days but on <=25% size the payoff is ~0.3 USD: not worth it before NFP (EUR can move hard). Reconsider after NFP if still >60%. PAXG 25%: no.
+- EUR perp funding 144% at 18:40Z, 80% at 16:44Z (swinging; weekend FX - still skip) (was 89-127%); EUR weak h1 RSI 28 post-NFP, carry on <=25% pays pennies: skip unless >100% sustained. Older: 127% (04:50Z), 89.5% (06/08Z), 115% (10:43Z) - feed is live. Break-even ~2.4 days but on <=25% size the payoff is ~0.3 USD: not worth it before NFP (EUR can move hard). Reconsider after NFP if still >60%. PAXG 25%: no.
 - Polymarket: bet only with clear >5pt edge; BTC daily-level markets have been fairly priced all of 6 Nov. Current list is Iran/ceasefire + sports: no informational edge.
 - If BTC 4h closes < 74,790 and then retests 74.8-75.3k from below with rejection -> short retest, stop above 76.3k (4h structure), TP 72.5k, 1.5%. Not if h1 RSI < 30.
 
@@ -50,6 +51,7 @@
 - None held.
 
 ## Session log
+- 2026-11-06T18:51Z | eq 229.20 | No action. BTC 75.79k chopping in base; BTC 77.1k short order verified resting (exp 16:51Z 7 Nov). Weak XRP noted (watch for 1.172 break, but same bear theme as BTC order).
 - 2026-11-06T16:51Z | eq 229.20 | Engine live again; 12:53Z order never executed. Placed BTC short order 77.1k (stop 78.6k, TP 73.9k, 1.5%, 24h). BTC 75.57k after post-NFP sweep to 74.79k.
 - 2026-11-06T14:52Z | eq 229.19 (stale) | No action: engine stalled since 12:33Z (input 2h23m old). 12:53Z BTC short order re-placement probably pending execution.
 - 2026-11-06T12:53Z | eq 229.19 | Re-placed BTC 77.5k short order (stop 79k, TP 74k, 1.5%, 24h) as old one expired; pre-NFP, BTC 76.2k. No Polymarket edge.
@@ -59,4 +61,3 @@
 - 2026-11-06T04:52Z | eq 229.18 | No action. BTC 75.7k still coiling, 4h close 75,802. 77.5k short order kept (exp 12:52Z). No Polymarket edge.
 - 2026-11-06T02:52Z | eq 229.18 | No action. PAXG long stopped 4,053 (-1.88). BTC coiling 75.1-76.3k; 77.5k short order kept (exp 12:52Z, pre-NFP).
 - 2026-11-06T00:51Z | eq 231.15 | No action. BTC swept 75.1k, closed 4h 75,980, bounce 76.2k. BTC 77.5k short order + PAXG long kept. Skipped Polymarket BTC>78k Nov 6 (17c, fair ~15%).
-- 2026-11-05T22:52Z | eq 230.59 | No action. BTC 75.7k drifting to flag low, ETH new low 2,215. BTC 77.5k short order + PAXG long kept.
