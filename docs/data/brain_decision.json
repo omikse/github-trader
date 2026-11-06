@@ -1,9 +1,22 @@
 {
-  "id": "2026-11-06T10:51:30Z",
-  "decided_at": "2026-11-06T10:51:30Z",
+  "id": "2026-11-06T12:53:00Z",
+  "decided_at": "2026-11-06T12:53:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 76.1k, small bounce off 75.2k inside a bearish coil (h4 ema20 77.5k falling, below all h4 emas). Alts weak, XRP at 30d lows. Volatility compressed into NFP 13:30Z.",
-  "news": "US October NFP due today 13:30Z; no fresh crypto-specific catalyst found.",
-  "watch_next": "Pre-NFP at 12:50Z: re-place BTC short-the-bounce order at 77.5-78.1k with ~24h expiry unless BTC 4h close > 77.5k; reconsider EUR carry (115% APR) after NFP.",
-  "actions": []
+  "market_view": "BTC 76.2k basing above 75.1k 30d low, h1 RSI 43, h4 ema20 77.36k falling; bearish regime since 5 Nov breakdown. Pre-NFP coil.",
+  "news": "US NFP at 13:30Z today; expecting a volatility spike either way.",
+  "watch_next": "Post-NFP reaction: bounce into 77.4-77.5k (h4 ema20) to fill the short, or 4h close < 75.1k (continuation, wait for retest).",
+  "actions": [
+    {
+      "type": "entry_order",
+      "symbol": "BTCUSDT",
+      "side": "short",
+      "trigger": 77500,
+      "stop": 79000,
+      "take_profit": 74000,
+      "risk_pct": 0.015,
+      "expires_hours": 24,
+      "reason": "Re-placed (old one expiring). Bear regime after 5 Nov 80.3k->75.4k breakdown; short a post-NFP bounce into falling h4 ema20 ~77.4k and broken 77.5k level. Stop above 79k (4h structure/sweep line), TP 74k (~2.3R).",
+      "invalidation": "4h close > 79,000, or fill without rejection within 2 4h candles -> scratch."
+    }
+  ]
 }
