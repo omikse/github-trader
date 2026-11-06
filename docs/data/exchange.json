@@ -1,5 +1,5 @@
 {
- "cash": 229.1976212125339,
+ "cash": 229.19770878488853,
  "positions": {},
  "closed": [
   {
@@ -399,9 +399,23 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793983606501,
- "next_id": 93,
- "orders": [],
+ "last_ms": 1793983906684,
+ "next_id": 94,
+ "orders": [
+  {
+   "id": "o93",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00216932,
+   "trigger": 77100,
+   "direction": "above",
+   "stop": 78600.0,
+   "tp": 73900.0,
+   "placed": 1793983906684,
+   "expires": 1794070306684,
+   "note": "Bear regime since 5 Nov breakdown (below all h4 emas, d1 RSI 38, new 30d low 74,790 post-NFP). Sell a bounce into the falling h4 ema20 ~77.1k / 77k bounce highs; stop above h4 ema50 77.96k and 78.3k structure, TP 73.9k below the 74.8k sweep low (~2.1R). Re-placement of the 12:53Z order that never executed."
+  }
+ ],
  "order_events": [
   {
    "id": "o2",
@@ -1006,6 +1020,6 @@
  "income": {
   "funding": 0.4529151413810657,
   "carry": -0.5002285916934517,
-  "interest": 0.3414615729519407
+  "interest": 0.34154914530656233
  }
 }
