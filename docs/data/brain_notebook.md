@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-06T18:51Z)
+# Notebook (updated 2026-11-06T20:51Z)
 
 ## Big picture
+- 20:51Z 6 Nov: dead quiet Friday evening. BTC 75,800 (h1 RSI 42, h4 ema20 77.04k), last closed 4h 75,774. XRP leaking to new 30d low 1.1724 (h1 RSI 28, h4 RSI 29) - 4h close (00Z) below 1.1716 not yet confirmed. EUR 1.1135 h1 RSI 25, funding 145%. BONK funding -249% APR. PAXG 4,051 flat.
 - 18:51Z 6 Nov: quiet. BTC 75,788 (h1 RSI 41, h4 RSI 38), 4h candles 75.3-76.0k, still in 74.8-76.3k base under falling h4 ema20 77.18k. XRP weakest (-3.8% 24h, 1.186, near 30d low 1.172). Alts +1-3%, PEPE +5%. PAXG 4,056 above h4 ema20. EUR 1.1143 h1 RSI 28.
 - 16:51Z 6 Nov: engine live again (input 16:44Z). 12:53Z order never executed. Post-NFP: BTC swept new 30d low 74,790 in 12-16Z 4h, closed 75,767 (no close < 75.1k). Now 75,567, h1 RSI 37, h1 ema20 76.08k, h4 ema20 77.15k, h4 ema50 77.96k, h4 ema200 81.15k. ETH 2,223 (h4 ema20 2,282), XRP 1.191 (30d low 1.172), PAXG 4,045, EUR 1.1147 (h1 RSI 28, weak). Alts +1-2.5% 24h, PEPE +8% (funding 37%) while BTC/ETH/XRP lag: mixed breadth.
 - 5 Nov: BREAKDOWN from 80.3k to 75.4k. 4 Nov breakout above 78.6k failed -> bearish regime until BTC reclaims 79k on a 4h close. Since then a 74.8-76.3k base/bear flag.
@@ -19,6 +20,7 @@
 - BTC SHORT entry_order (placed 16:51Z 6 Nov, exp ~16:51Z 7 Nov): trigger 77,100 (h4 ema20), stop 78,600, TP 73,900, 1.5% risk (~2.1R). Thesis: sell bounce into falling emas in bear regime. Cancel if 4h close > 78,600 before fill. If filled: no rejection within 2 4h candles -> scratch; once < 76k move stop to ~77.5k; trail above completed 4h highs. If BTC 4h closes < 74,790, cancel and use the retest-short watchlist idea. If unfilled by expiry, re-place at the then-h4 ema20 if regime unchanged.
 
 ## Watchlist
+- XRP breakdown: if 00Z/04Z 4h closes < 1.1716, short a retest of 1.18-1.19 that rejects, stop > 1.205 (4h high), TP ~1.12, 1.5%. Not at h1 RSI < 30. It is the same bear theme as the BTC order: if BTC order fills, skip XRP (or cancel BTC order and take XRP if XRP is clearly the cleaner setup).
 - ETH short only if BTC order is not used: retest 2,317-2,350 rejecting (same theme as BTC short, don't stack both).
 - Long reversal only after BTC 4h close > 79k (sweep reclaim) -> long retest ~78.6k, stop < 77.5k.
 - EUR long only on 4h close > 1.1270.
@@ -51,6 +53,7 @@
 - None held.
 
 ## Session log
+- 2026-11-06T20:51Z | eq 229.20 | No action. BTC 75.8k flat; BTC 77.1k short order verified resting (exp 16:51Z 7 Nov). XRP at new 30d low but oversold - added retest-short to watchlist.
 - 2026-11-06T18:51Z | eq 229.20 | No action. BTC 75.79k chopping in base; BTC 77.1k short order verified resting (exp 16:51Z 7 Nov). Weak XRP noted (watch for 1.172 break, but same bear theme as BTC order).
 - 2026-11-06T16:51Z | eq 229.20 | Engine live again; 12:53Z order never executed. Placed BTC short order 77.1k (stop 78.6k, TP 73.9k, 1.5%, 24h). BTC 75.57k after post-NFP sweep to 74.79k.
 - 2026-11-06T14:52Z | eq 229.19 (stale) | No action: engine stalled since 12:33Z (input 2h23m old). 12:53Z BTC short order re-placement probably pending execution.
@@ -60,4 +63,3 @@
 - 2026-11-06T06:52Z | eq 229.19 | No action (input 40 min stale, BTC 75.4k bleeding toward 75.1k, RSI 28). 77.5k short order kept (exp 12:52Z).
 - 2026-11-06T04:52Z | eq 229.18 | No action. BTC 75.7k still coiling, 4h close 75,802. 77.5k short order kept (exp 12:52Z). No Polymarket edge.
 - 2026-11-06T02:52Z | eq 229.18 | No action. PAXG long stopped 4,053 (-1.88). BTC coiling 75.1-76.3k; 77.5k short order kept (exp 12:52Z, pre-NFP).
-- 2026-11-06T00:51Z | eq 231.15 | No action. BTC swept 75.1k, closed 4h 75,980, bounce 76.2k. BTC 77.5k short order + PAXG long kept. Skipped Polymarket BTC>78k Nov 6 (17c, fair ~15%).
