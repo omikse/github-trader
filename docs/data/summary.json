@@ -1,34 +1,32 @@
 {
- "updated": "2026-11-06T01:23:34Z",
+ "updated": "2026-11-06T01:31:34Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9101,
- "equity_pln": 899.82,
- "return_pct": -10.5,
- "max_drawdown_pct": 13.71,
- "control_pln": 1002.59,
+ "equity_pln": 896.12,
+ "return_pct": -10.87,
+ "max_drawdown_pct": 13.89,
+ "control_pln": 999.98,
  "control_trades": 8,
- "hodl_pln": 902.12,
- "positions": [
+ "hodl_pln": 903.67,
+ "positions": [],
+ "closed_trades": [
   {
+   "id": "t92",
    "symbol": "PAXGUSDT",
    "side": "long",
-   "size": 0.049866,
+   "qty": 0.049866,
    "entry": 4086.2255,
-   "mark": 4071.04,
-   "upnl": -0.7572401430000024,
-   "stop": 4055.0,
-   "tp": 4200.0,
-   "liq": null,
-   "leverage": null,
+   "exit": 4052.9725,
+   "pnl": -1.8814,
+   "time": 1793928600000,
+   "why": "stop",
    "opened": 1793889900000,
    "reason": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R).",
-   "upnl_pln": -2.96
-  }
- ],
- "closed_trades": [
+   "pnl_pln": -7.36
+  },
   {
    "id": "t89",
    "symbol": "ETHUSDT",
@@ -432,8 +430,8 @@
    "pnl_pln": -21.11
   }
  ],
- "trade_count": 29,
- "win_rate_pct": 27.6,
+ "trade_count": 30,
+ "win_rate_pct": 26.7,
  "brain_calls_today": 1,
  "last_decision": {
   "time": "2026-11-06T00:51:34Z",
@@ -449,7 +447,7 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 230.950821,
+ "cash_usd": 229.181602,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {

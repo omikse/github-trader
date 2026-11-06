@@ -1,18 +1,6 @@
 {
- "cash": 230.950820803778,
- "positions": {
-  "PAXGUSDT": {
-   "side": "long",
-   "qty": 0.049866,
-   "entry": 4086.2255,
-   "stop": 4055.0,
-   "tp": 4200.0,
-   "opened": 1793889900000,
-   "entry_fee": 0.11207004643065001,
-   "mark": 4071.04,
-   "note": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R)."
-  }
- },
+ "cash": 229.1816024019706,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -386,6 +374,19 @@
    "why": "manual close",
    "opened": 1793841600000,
    "reason": "Range break confirmed (BTC 4h closes > 79.8k); ETH leader reclaimed h4 ema200 2,436; buy retest of 2,403 double 4h low. Stop below 2,350 structure, TP 2,560 (2.5R)."
+  },
+  {
+   "id": "t92",
+   "symbol": "PAXGUSDT",
+   "side": "long",
+   "qty": 0.049866,
+   "entry": 4086.2255,
+   "exit": 4052.9725,
+   "pnl": -1.8814,
+   "time": 1793928600000,
+   "why": "stop",
+   "opened": 1793889900000,
+   "reason": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R)."
   }
  ],
  "fills": [
@@ -398,8 +399,8 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793928214810,
- "next_id": 92,
+ "last_ms": 1793928694789,
+ "next_id": 93,
  "orders": [
   {
    "id": "o91",
@@ -1010,6 +1011,6 @@
  "income": {
   "funding": 0.4529151413810657,
   "carry": -0.5002285916934517,
-  "interest": 0.3253090265191308
+  "interest": 0.32544276238850334
  }
 }
