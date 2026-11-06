@@ -1,5 +1,5 @@
 {
- "cash": 229.19316546218354,
+ "cash": 229.19566078882337,
  "positions": {},
  "closed": [
   {
@@ -399,23 +399,9 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1793968332756,
+ "last_ms": 1793976886475,
  "next_id": 93,
- "orders": [
-  {
-   "id": "o91",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "qty": 0.0021879300000000003,
-   "trigger": 77500,
-   "direction": "above",
-   "stop": 79000.0,
-   "tp": 74000.0,
-   "placed": 1793911935273,
-   "expires": 1793969535273,
-   "note": "Bear-flag retest short after the 5 Nov failed breakout and flush to 75.4k: sell a bounce into 77.5k (above the 76.96k bounce high, at falling h1/h4 ema20) with stop above the 78.6k broken floor; TP 74k below the 75.4k low (~2.3R)."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -929,26 +915,35 @@
    "trigger": 78300,
    "time": 1793911935273,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o91",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "expired",
+   "trigger": 77500,
+   "time": 1793969580000,
+   "detail": ""
   }
  ],
  "funding_rates": {
-  "BTCUSDT": 3.810991666667e-06,
-  "ETHUSDT": -5.679679166667e-06,
-  "SOLUSDT": 5.3101625e-06,
-  "XRPUSDT": 1.9178120833333e-05,
-  "DOGEUSDT": 9.957383333333e-06,
-  "ADAUSDT": -7.704533333333e-06,
-  "AVAXUSDT": 1.489616666667e-06,
-  "LINKUSDT": 5.375958333333e-06,
-  "SUIUSDT": -1.5808841666667e-05,
-  "PEPEUSDT": 5.8802454166667e-05,
-  "WIFUSDT": -2.2449141666667e-05,
-  "BONKUSDT": -0.000142143158333333,
-  "LTCUSDT": -5.745529166667e-06,
-  "DOTUSDT": 1.70815e-06,
-  "NEARUSDT": -9.74415e-06,
-  "PAXGUSDT": 2.472175e-05,
-  "EURUSDT": 0.000104433275
+  "BTCUSDT": -4.533908333333e-06,
+  "ETHUSDT": -1.4279295833333e-05,
+  "SOLUSDT": -7.625654166667e-06,
+  "XRPUSDT": 1.5299983333333e-05,
+  "DOGEUSDT": -2.3283475e-05,
+  "ADAUSDT": -1.3601695833333e-05,
+  "AVAXUSDT": 1.0767275e-05,
+  "LINKUSDT": 6.1252e-06,
+  "SUIUSDT": -5.6188e-06,
+  "PEPEUSDT": 4.11288875e-05,
+  "WIFUSDT": -2.6623416666667e-05,
+  "BONKUSDT": -0.00018790035,
+  "LTCUSDT": 3.741525e-06,
+  "DOTUSDT": 7.198325e-06,
+  "NEARUSDT": 2.90266875e-05,
+  "PAXGUSDT": 2.6378925e-05,
+  "EURUSDT": 0.000127013079166667
  },
  "carry": {},
  "carry_closed": [
@@ -1011,6 +1006,6 @@
  "income": {
   "funding": 0.4529151413810657,
   "carry": -0.5002285916934517,
-  "interest": 0.3370058226014642
+  "interest": 0.3395011492413086
  }
 }

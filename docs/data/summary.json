@@ -1,16 +1,16 @@
 {
- "updated": "2026-11-06T12:32:12Z",
+ "updated": "2026-11-06T14:54:46Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9321,
- "equity_pln": 901.21,
+ "equity_pln": 901.22,
  "return_pct": -10.87,
  "max_drawdown_pct": 13.94,
- "control_pln": 1002.87,
+ "control_pln": 1012.73,
  "control_trades": 8,
- "hodl_pln": 910.38,
+ "hodl_pln": 904.52,
  "positions": [],
  "closed_trades": [
   {
@@ -432,22 +432,33 @@
  ],
  "trade_count": 30,
  "win_rate_pct": 26.7,
- "brain_calls_today": 6,
+ "brain_calls_today": 7,
  "last_decision": {
-  "time": "2026-11-06T10:52:13Z",
+  "time": "2026-11-06T14:54:46Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-06T10:51:30Z",
+  "decided_at": "2026-11-06T14:52:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 229.19,
-  "equity_pln": 901.2,
-  "events": [],
-  "market_view": "BTC 76.1k, small bounce off 75.2k inside a bearish coil (h4 ema20 77.5k falling, below all h4 emas). Alts weak, XRP at 30d lows. Volatility compressed into NFP 13:30Z.",
-  "watch_next": "Pre-NFP at 12:50Z: re-place BTC short-the-bounce order at 77.5-78.1k with ~24h expiry unless BTC 4h close > 77.5k; reconsider EUR carry (115% APR) after NFP.",
-  "news": "US October NFP due today 13:30Z; no fresh crypto-specific catalyst found.",
+  "equity_usd": 229.2,
+  "equity_pln": 901.22,
+  "events": [
+   {
+    "type": "order_expired",
+    "id": "o91",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "status": "expired",
+    "trigger": 77500,
+    "time": 1793969580000,
+    "detail": ""
+   }
+  ],
+  "market_view": "Engine data stale (12:28Z, last bot commit 12:33Z handover); post-NFP price action unknown. Flat, no positions; standing pat.",
+  "watch_next": "Whether engine resumed and whether the 12:53Z BTC 77.5k short order is resting; BTC 4h closes vs 79k / 75.1k.",
+  "news": "No usable NFP reaction found in search.",
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 229.193165,
+ "cash_usd": 229.195661,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -478,19 +489,7 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [
-  {
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "trigger": 77500,
-   "direction": "above",
-   "stop": 79000.0,
-   "tp": 74000.0,
-   "qty": 0.0021879300000000003,
-   "expires": 1793969535273,
-   "note": "Bear-flag retest short after the 5 Nov failed breakout and flush to 75.4k: sell a bounce into 77.5k (above the 76.96k bounce high, at falling h1/h4 ema20) with stop above the 78.6k broken floor; TP 74k below the 75.4k low (~2.3R)."
-  }
- ],
+ "orders": [],
  "balance_warning": false,
  "other_value_usd": 0,
  "predictions": [],
