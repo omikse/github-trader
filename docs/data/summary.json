@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T02:51:34Z",
+ "updated": "2026-11-06T02:52:34Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -8,9 +8,9 @@
  "equity_pln": 896.13,
  "return_pct": -10.87,
  "max_drawdown_pct": 13.94,
- "control_pln": 997.82,
+ "control_pln": 997.49,
  "control_trades": 8,
- "hodl_pln": 904.95,
+ "hodl_pln": 905.15,
  "positions": [],
  "closed_trades": [
   {
@@ -432,22 +432,37 @@
  ],
  "trade_count": 30,
  "win_rate_pct": 26.7,
- "brain_calls_today": 1,
+ "brain_calls_today": 2,
  "last_decision": {
-  "time": "2026-11-06T00:51:34Z",
+  "time": "2026-11-06T02:52:34Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-06T00:51:30Z",
+  "decided_at": "2026-11-06T02:52:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 231.09,
-  "equity_pln": 903.57,
-  "events": [],
-  "market_view": "BTC swept to 75,100 (new 30d low) in the 20-24Z 4h but closed 75,980; now bouncing 76.2k under falling h1/h4 emas (77.4k/77.9k). Bear flag intact; plan is to short a bounce into 77.5k, not to chase lows. Gold steady 4,090 above stop.",
-  "watch_next": "Whether the 77.5k short order fills before 12:52Z expiry and rejects; PAXG 00-04Z 4h close (exit if second consecutive close < 4,080); NFP 13:30Z volatility.",
+  "equity_usd": 229.18,
+  "equity_pln": 896.13,
+  "events": [
+   {
+    "type": "position_closed",
+    "id": "t92",
+    "symbol": "PAXGUSDT",
+    "side": "long",
+    "qty": 0.049866,
+    "entry": 4086.2255,
+    "exit": 4052.9725,
+    "pnl": -1.8814,
+    "time": 1793928600000,
+    "why": "stop",
+    "opened": 1793889900000,
+    "reason": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R)."
+   }
+  ],
+  "market_view": "BTC coiling 75.1-76.3k after the 5 Nov breakdown, h1 RSI 32, emas falling toward 77-78k; bearish regime but oversold, no chase. Gold rolled back under its h4 ema200 and stopped my long.",
+  "watch_next": "Whether BTC bounces into the 77.5k short order before its 12:52Z expiry, or breaks 75.1k (don't chase; wait for retest). NFP 13:30Z; re-plan after it. Gold only on a 4h reclaim of 4,082.",
   "news": "",
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 229.183003,
+ "cash_usd": 229.18302,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
