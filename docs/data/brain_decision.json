@@ -1,22 +1,9 @@
 {
-  "id": "2026-11-06T12:53:00Z",
-  "decided_at": "2026-11-06T12:53:00Z",
+  "id": "2026-11-06T14:52:00Z",
+  "decided_at": "2026-11-06T14:52:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 76.2k basing above 75.1k 30d low, h1 RSI 43, h4 ema20 77.36k falling; bearish regime since 5 Nov breakdown. Pre-NFP coil.",
-  "news": "US NFP at 13:30Z today; expecting a volatility spike either way.",
-  "watch_next": "Post-NFP reaction: bounce into 77.4-77.5k (h4 ema20) to fill the short, or 4h close < 75.1k (continuation, wait for retest).",
-  "actions": [
-    {
-      "type": "entry_order",
-      "symbol": "BTCUSDT",
-      "side": "short",
-      "trigger": 77500,
-      "stop": 79000,
-      "take_profit": 74000,
-      "risk_pct": 0.015,
-      "expires_hours": 24,
-      "reason": "Re-placed (old one expiring). Bear regime after 5 Nov 80.3k->75.4k breakdown; short a post-NFP bounce into falling h4 ema20 ~77.4k and broken 77.5k level. Stop above 79k (4h structure/sweep line), TP 74k (~2.3R).",
-      "invalidation": "4h close > 79,000, or fill without rejection within 2 4h candles -> scratch."
-    }
-  ]
+  "market_view": "Engine data stale (12:28Z, last bot commit 12:33Z handover); post-NFP price action unknown. Flat, no positions; standing pat.",
+  "news": "No usable NFP reaction found in search.",
+  "watch_next": "Whether engine resumed and whether the 12:53Z BTC 77.5k short order is resting; BTC 4h closes vs 79k / 75.1k.",
+  "actions": []
 }

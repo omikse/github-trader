@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-06T12:53Z)
+# Notebook (updated 2026-11-06T14:52Z)
 
 ## Big picture
+- 14:52Z 6 Nov: ENGINE STALLED. brain_input time_utc 12:28Z, last bot commit 12:33Z "(handover)". My 12:53Z decision (re-placed BTC 77.5k short order) is likely NOT executed yet; input still shows old order expiring 12:52Z. Post-NFP prices unknown. Next session: check whether the BTC order exists in resting_orders; if missing and engine is live, re-place per plan (unless BTC 4h closed > 79k or < 75.1k).
 - 12:28Z 6 Nov: BTC 76,201, base 75.1-76.3k holding, h1 RSI 43, h1 ema20 76.33k (reclaiming), h4 ema20 77.36k, h4 ema50 78.08k. ETH 2,245, XRP 1.199 (near 30d low 1.176), PAXG 4,056, EUR 1.1170 (h1 RSI 29). NFP 13:30Z next.
 - 10:43Z 6 Nov: BTC 76,147, small bounce off 75.2k (08Z 4h closed 75,517; current 4h 75,374-76,190). h1 RSI 41, h1 ema20 76.39k, h4 ema20 77.50k (= my short trigger), h4 ema50 78.16k. ETH 2,239, XRP 1.198 (new 30d low 1.176 at 04-08Z), PAXG 4,057, EUR 1.1170 (h1 RSI 29, weak). Still bearish regime, coil pre-NFP 13:30Z.
 - 5 Nov: BREAKDOWN. 12-16Z 4h candle BTC 80,296 -> low 75,420 (new 30d low) -> close 75,902. Since then a weak bear flag: 16-20Z 4h 75,936/76,963/75,555/76,247; now 76,059, h1 RSI 27. h1 ema20 78.1k and h4 ema20 78.1k falling. ETH 2,247 (low 2,234), alts -4..-8% 24h. The 4 Nov breakout above 78.6k failed -> bearish regime until BTC reclaims 79k on a 4h close.
@@ -52,6 +53,7 @@
 - None held.
 
 ## Session log
+- 2026-11-06T14:52Z | eq 229.19 (stale) | No action: engine stalled since 12:33Z (input 2h23m old). 12:53Z BTC short order re-placement probably pending execution.
 - 2026-11-06T12:53Z | eq 229.19 | Re-placed BTC 77.5k short order (stop 79k, TP 74k, 1.5%, 24h) as old one expired; pre-NFP, BTC 76.2k. No Polymarket edge.
 - 2026-11-06T10:51Z | eq 229.19 | No action. BTC 76.1k small bounce, h1 RSI 41. 77.5k short order kept (exp 12:52Z). Next session (~12:50Z, pre-NFP): re-place a 77.5-78.1k short-the-bounce order with ~24h expiry unless BTC has already reclaimed 77.5k on a 4h close.
 - 2026-11-06T08:52Z | eq 229.19 | No action. BTC 75.6k coiling into NFP. 77.5k short order kept (exp 12:52Z, = h4 ema20). Next session (10:50Z) is the last before NFP: decide whether to re-place a post-NFP short-the-bounce order.
@@ -61,4 +63,3 @@
 - 2026-11-06T00:51Z | eq 231.15 | No action. BTC swept 75.1k, closed 4h 75,980, bounce 76.2k. BTC 77.5k short order + PAXG long kept. Skipped Polymarket BTC>78k Nov 6 (17c, fair ~15%).
 - 2026-11-05T22:52Z | eq 230.59 | No action. BTC 75.7k drifting to flag low, ETH new low 2,215. BTC 77.5k short order + PAXG long kept.
 - 2026-11-05T20:51Z | eq 231.22 | BTC bear-flag 75.5-77k. Moved BTC short order 78.3k -> 77.5k (stop 79k, TP 74k, 1.5%). PAXG long held (4,091, stop 4,055).
-- 2026-11-05T18:51Z | eq 232.35 (stale) | No action: input 1h51m stale. Orders/positions left as planned.
