@@ -1,9 +1,9 @@
-# Notebook (updated 2026-11-06T08:52Z)
+# Notebook (updated 2026-11-06T10:51Z)
 
 ## Big picture
+- 10:43Z 6 Nov: BTC 76,147, small bounce off 75.2k (08Z 4h closed 75,517; current 4h 75,374-76,190). h1 RSI 41, h1 ema20 76.39k, h4 ema20 77.50k (= my short trigger), h4 ema50 78.16k. ETH 2,239, XRP 1.198 (new 30d low 1.176 at 04-08Z), PAXG 4,057, EUR 1.1170 (h1 RSI 29, weak). Still bearish regime, coil pre-NFP 13:30Z.
 - 08:43Z 6 Nov: BTC 75,588, tight coil 75.2-75.8k (4h closes 75,802 / 75,517; current 4h 75,374-75,709). h1 RSI 31, h1 ema20 76.46k, h4 ema20 77.44k (now right at my 77.5k short trigger). ETH 2,227, XRP 1.189 (new 30d low 1.176), PAXG 4,061 bouncing. Volatility compressed into NFP 13:30Z.
 - 06:10Z 6 Nov (input 40 min stale): BTC 75,366 grinding lower, 04-08Z 4h low 75,263, near 30d low 75.1k. h1 RSI 28, h4 RSI 35. ETH 2,216 (low 2,202), XRP 1.191 = NEW 30d low (h1 RSI 22). Slow bleed, no bounce. PAXG 4,038 holding h4 ema20 4,031. Watch for 4h close < 75,100 (continuation) vs bounce into NFP.
-- 04:50Z 6 Nov: BTC 75,693, 00-04Z 4h closed 75,802 (inside 75.1-76.3k coil, lower highs on h1). h1 RSI 30, h1 ema20 76.9k, h4 ema20 77.65k falling. ETH 2,230, XRP 1.204 (30d low 1.198), PAXG 4,035 drifting toward 4,000. No change in regime: bearish, oversold, waiting for bounce or NFP.
 - 5 Nov: BREAKDOWN. 12-16Z 4h candle BTC 80,296 -> low 75,420 (new 30d low) -> close 75,902. Since then a weak bear flag: 16-20Z 4h 75,936/76,963/75,555/76,247; now 76,059, h1 RSI 27. h1 ema20 78.1k and h4 ema20 78.1k falling. ETH 2,247 (low 2,234), alts -4..-8% 24h. The 4 Nov breakout above 78.6k failed -> bearish regime until BTC reclaims 79k on a 4h close.
 - Gold: PAXG 4,056, failed to hold h4 ema200 4,082. Res 4,082, 4,105; sup 4,033 (h4 ema20), 4,000. No gold trade until it reclaims 4,082 on a 4h close.
 - BTC levels: res 76.96k (bounce high), 77.5k, 78.1-78.6k (emas / old floor), 79.9k; sup 75.4k, then 74k. h4 ema200 81.4k.
@@ -26,7 +26,7 @@
 - EUR long only on 4h close > 1.1270.
 - No shorts on memes/SOL/SUI/LINK with deeply negative funding (squeeze risk). BONK funding -93% APR.
 - NEAR funding now 19% APR (dropped) - no carry.
-- EUR perp funding 127% (04:50Z), 89.5% (06:10Z), 89.5% (08:43Z, identical = maybe stale feed). Break-even ~2.4 days but on <=25% size the payoff is ~0.3 USD: not worth it before NFP (EUR can move hard). Reconsider after NFP if still >60%. PAXG 25%: no.
+- EUR perp funding 127% (04:50Z), 89.5% (06/08Z), 115% (10:43Z) - feed is live. Break-even ~2.4 days but on <=25% size the payoff is ~0.3 USD: not worth it before NFP (EUR can move hard). Reconsider after NFP if still >60%. PAXG 25%: no.
 - Polymarket: bet only with clear >5pt edge. 08:50Z BTC>74k Nov6 ask 87.5c vs fair ~84% (NFP risk): no. 06:50Z checked BTC>78k Nov6 9c (fair ~6%), BTC>74k Nov6 84c (fair ~80%): no edge.
 - If BTC 4h closes < 75,100 and then retests 75.1-75.6k from below with rejection -> short retest, stop above 76.3k (4h structure), TP 72.5k, 1.5%. Not if h1 RSI < 30.
 
@@ -53,6 +53,7 @@
 - None held.
 
 ## Session log
+- 2026-11-06T10:51Z | eq 229.19 | No action. BTC 76.1k small bounce, h1 RSI 41. 77.5k short order kept (exp 12:52Z). Next session (~12:50Z, pre-NFP): re-place a 77.5-78.1k short-the-bounce order with ~24h expiry unless BTC has already reclaimed 77.5k on a 4h close.
 - 2026-11-06T08:52Z | eq 229.19 | No action. BTC 75.6k coiling into NFP. 77.5k short order kept (exp 12:52Z, = h4 ema20). Next session (10:50Z) is the last before NFP: decide whether to re-place a post-NFP short-the-bounce order.
 - 2026-11-06T06:52Z | eq 229.19 | No action (input 40 min stale, BTC 75.4k bleeding toward 75.1k, RSI 28). 77.5k short order kept (exp 12:52Z).
 - 2026-11-06T04:52Z | eq 229.18 | No action. BTC 75.7k still coiling, 4h close 75,802. 77.5k short order kept (exp 12:52Z). No Polymarket edge.
@@ -62,4 +63,3 @@
 - 2026-11-05T20:51Z | eq 231.22 | BTC bear-flag 75.5-77k. Moved BTC short order 78.3k -> 77.5k (stop 79k, TP 74k, 1.5%). PAXG long held (4,091, stop 4,055).
 - 2026-11-05T18:51Z | eq 232.35 (stale) | No action: input 1h51m stale. Orders/positions left as planned.
 - 2026-11-05T16:52Z | eq 231.88 | BTC flushed to 75.4k. Placed BTC short retest order 78.3k. PAXG filled 4,086, stop 4,038 -> 4,055.
-- 2026-11-05T14:52Z | eq 231.15 | No action. BTC 78.8k testing 78.6k. PAXG 4,085 order kept.
