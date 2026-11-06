@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-06T02:52Z)
+# Notebook (updated 2026-11-06T04:52Z)
 
 ## Big picture
+- 04:50Z 6 Nov: BTC 75,693, 00-04Z 4h closed 75,802 (inside 75.1-76.3k coil, lower highs on h1). h1 RSI 30, h1 ema20 76.9k, h4 ema20 77.65k falling. ETH 2,230, XRP 1.204 (30d low 1.198), PAXG 4,035 drifting toward 4,000. No change in regime: bearish, oversold, waiting for bounce or NFP.
 - 02:50Z 6 Nov: BTC 75,985 flat, coiling 75.1-76.3k (00-04Z 4h so far 75,784-76,301). h1 RSI 32, h1 ema20 77.1k falling. ETH 2,238, XRP 1.215 near 30d low 1.197. Alts bounced slightly off lows. Gold rolled over: PAXG 4,056, back under h4 ema200 4,082 -> my long stopped.
 - 00:40Z 6 Nov: 20-24Z 4h swept to 75,100 (new 30d low) and closed 75,980 = wick/stop-run, not a clean breakdown close. Now 76,205, h1 RSI 34. ETH 2,243 (low 2,202). Flag 75.1-77k still intact; short-the-bounce plan unchanged.
 - 22:40Z 5 Nov: BTC 75,672, grinding under the 75.4-77k flag (20-24Z 4h so far 76,247/76,258/75,620). ETH 2,229 made new low 2,215. h1 RSI ~25 both = oversold, no chase. Alts -5..-10% 24h, broad weakness.
@@ -25,7 +26,8 @@
 - Long reversal only after BTC 4h close > 79k (sweep reclaim) -> long retest ~78.6k, stop < 77.5k.
 - EUR long only on 4h close > 1.1270.
 - No shorts on memes/SOL/SUI/LINK with deeply negative funding (squeeze risk). BONK funding -93% APR.
-- NEAR funding 59.6% APR: carry candidate only if > 60% for 3+ sessions.
+- NEAR funding now 19% APR (dropped) - no carry.
+- EUR perp funding 127% APR (04:50Z 6 Nov), PAXG 43%: watch; carry only if >60% for 3+ sessions (first sighting for EUR now).
 - Polymarket: bet only with clear >5pt edge.
 
 ## Lessons
@@ -51,6 +53,7 @@
 - None held.
 
 ## Session log
+- 2026-11-06T04:52Z | eq 229.18 | No action. BTC 75.7k still coiling, 4h close 75,802. 77.5k short order kept (exp 12:52Z). No Polymarket edge.
 - 2026-11-06T02:52Z | eq 229.18 | No action. PAXG long stopped 4,053 (-1.88). BTC coiling 75.1-76.3k; 77.5k short order kept (exp 12:52Z, pre-NFP).
 - 2026-11-06T00:51Z | eq 231.15 | No action. BTC swept 75.1k, closed 4h 75,980, bounce 76.2k. BTC 77.5k short order + PAXG long kept. Skipped Polymarket BTC>78k Nov 6 (17c, fair ~15%).
 - 2026-11-05T22:52Z | eq 230.59 | No action. BTC 75.7k drifting to flag low, ETH new low 2,215. BTC 77.5k short order + PAXG long kept.
@@ -60,4 +63,3 @@
 - 2026-11-05T14:52Z | eq 231.15 | No action. BTC 78.8k testing 78.6k. PAXG 4,085 order kept.
 - 2026-11-05T12:52Z | eq 231.53 | Closed ETH long (12Z close < 2,420 rule).
 - 2026-11-05T10:52Z | eq 233.03 | No action. ETH 2,418, BTC 80.4k coil.
-- 2026-11-05T08:45Z | eq 233.24 | No action.
