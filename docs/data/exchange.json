@@ -1,5 +1,5 @@
 {
- "cash": 229.27962866822438,
+ "cash": 229.27964619724744,
  "positions": {},
  "closed": [
   {
@@ -399,9 +399,23 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794264663914,
- "next_id": 94,
- "orders": [],
+ "last_ms": 1794264723979,
+ "next_id": 95,
+ "orders": [
+  {
+   "id": "o94",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.0029075900000000003,
+   "trigger": 75300,
+   "direction": "above",
+   "stop": 76400.0,
+   "tp": 72600.0,
+   "placed": 1794264723979,
+   "expires": 1794351123979,
+   "note": "Short retest of broken 74.8-75.5k base (two 4h rejections at 75.47-75.50k) under h4 ema20 75.49k after confirmed 4h-close breakdown; stop above 76.3k 4h structure and h4 ema50, TP 72.6k below 30d low 73.44k (~2.5R). Re-send: prior two decisions were dropped by engine (decision_max_age 45 min during stall)."
+  }
+ ],
  "order_events": [
   {
    "id": "o2",
@@ -1015,6 +1029,6 @@
  "income": {
   "funding": 0.4529151413810657,
   "carry": -0.5002285916934517,
-  "interest": 0.4234690286421892
+  "interest": 0.4234865576652474
  }
 }
