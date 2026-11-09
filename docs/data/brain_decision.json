@@ -1,13 +1,22 @@
 {
-  "id": "2026-11-09T18:51:30Z",
-  "decided_at": "2026-11-09T18:51:30Z",
+  "id": "2026-11-09T20:52:30Z",
+  "decided_at": "2026-11-09T20:52:30Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC confirmed the breakdown of its 74.8-76.3k base with 4h closes at 74.7k and 73.8k (30d low 73.4k); the first bounce rejected at 75.47k, just under the h4 ema20. Alts weak (XRP -12% 7d, ETH near 30d low). Input is 1h37m stale, so using a resting order rather than a market open.",
-  "news": "No clear market-moving headlines found.",
-  "watch_next": "Whether the 75.3k BTC short order fills and rejects; a 4h close above 76.3k cancels the idea; a 4h close below 73.4k means re-place lower.",
+  "market_view": "Engine stalled: input is from 17:14Z (3.5h old), 18:51Z decision not yet executed. Last known: BTC 74.8k after confirmed 4h-close breakdown below 74.79k base; retest rejected 75.47k. Bear regime.",
+  "news": "",
+  "watch_next": "Whether the engine resumed and the BTC 75.3k short order is resting (or filled); if BTC 4h closed > 76.3k, cancel.",
   "actions": [
-    {"type": "entry_order", "symbol": "BTCUSDT", "side": "short", "trigger": 75300, "stop": 76400, "take_profit": 72600, "risk_pct": 0.015, "expires_hours": 24,
-      "reason": "Sell the retest of the broken 74.8-75.3k base after confirmed 4h-close breakdown (closes 74,738 and 73,777); first bounce rejected at 75,474 under h4 ema20 75.5k; bear regime, d1 RSI 36. Stop above 76.3k 4h structure, TP above 30d-low extension 72.6k (~2.5R).",
-      "invalidation": "BTC 4h close above 76,300 (breakdown failed), or no rejection within two 4h candles after fill."}
+    {
+      "type": "entry_order",
+      "symbol": "BTCUSDT",
+      "side": "short",
+      "trigger": 75300,
+      "stop": 76400,
+      "take_profit": 72600,
+      "risk_pct": 0.015,
+      "expires_hours": 24,
+      "reason": "Re-send of 18:51Z plan (engine stalled, not executed). Short retest of broken 74.8-75.3k base under h4 ema20 75.5k after confirmed 4h-close breakdown; stop above 76.3k 4h structure, TP 72.6k (~2.5R).",
+      "invalidation": "BTC 4h close > 76,300 (breakdown failed)."
+    }
   ]
 }
