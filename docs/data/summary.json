@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-10T20:12:53Z",
+ "updated": "2026-11-10T20:20:53Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9099,
- "equity_pln": 916.83,
- "return_pct": -8.81,
+ "equity_pln": 913.66,
+ "return_pct": -9.12,
  "max_drawdown_pct": 13.94,
  "control_pln": 998.71,
  "control_trades": 9,
- "hodl_pln": 872.28,
+ "hodl_pln": 875.58,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0029075900000000003,
    "entry": 75277.41,
-   "mark": 73390.8,
-   "upnl": 5.485488369900002,
+   "mark": 73668.2,
+   "upnl": 4.678922903900019,
    "stop": 74300.0,
    "tp": 71800.0,
    "liq": null,
    "leverage": null,
    "opened": 1794269280000,
    "reason": "Short retest of broken 74.8-75.5k base (two 4h rejections at 75.47-75.50k) under h4 ema20 75.49k after confirmed 4h-close breakdown; stop above 76.3k 4h structure and h4 ema50, TP 72.6k below 30d low 73.44k (~2.5R). Re-send: prior two decisions were dropped by engine (decision_max_age 45 min during stall).",
-   "upnl_pln": 21.45
+   "upnl_pln": 18.29
   }
  ],
  "closed_trades": [
@@ -463,7 +463,7 @@
   "error": "not executed: decision is 66 min old (limit 45)"
  },
  "brain_mode": "session",
- "cash_usd": 229.003352,
+ "cash_usd": 229.003484,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
