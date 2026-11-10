@@ -1,12 +1,17 @@
 {
-  "id": "2026-11-10T08:51:22Z",
-  "decided_at": "2026-11-10T08:51:22Z",
+  "id": "2026-11-10T10:58:00Z",
+  "decided_at": "2026-11-10T10:58:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 74,454: 08:00Z 4h closed 74,748 with another lower high (74,889) under h4 ema20 75.25k; h1 below ema20/50, d1 RSI 36. Bear regime intact, short +2.39. Alts weak (XRP/SOL at 30d lows, oversold). BONK funding 165% APR, 5th straight session > 100%.",
-  "news": "No new market-moving crypto/macro news found.",
-  "watch_next": "12:00Z 4h close: < 74.0k -> stop to 75,000; < 73.4k -> stop 74,800. BONK funding persistence (close carry if < 40% APR). PAXG 4h close > 4,110 for long setup.",
+  "market_view": "Input stale (09:25Z, engine ~90 min behind). BTC 74,220 at last print, lower 4h highs 75,474 -> 75,323 -> 74,889, h1/h4 below ema20, d1 RSI 35: bear trend intact, short +3.07 USD. BONK carry funding still 182% APR.",
+  "news": "Search found no fresh market-moving news.",
+  "watch_next": "BTC < 74,000 / 73,444 30d low for stop trail to 74,800; 4h close > 75,000 would stop us out near entry. BONK funding level. Engine freshness.",
   "actions": [
-    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 75350, "take_profit": 72600, "reason": "Tighten 75,500 -> 75,350: above the two latest 4h lower highs (75,323 / 74,889) and h4 ema20 75.25k; ~2 h1 ATR room, risk now near breakeven (entry 75,277)."},
-    {"type": "carry_open", "symbol": "BONKUSDT", "size_pct": 0.2, "reason": "BONK funding 159/156/178/208/165% APR over 5 sessions (~0.45%/day); break-even 0.6/0.45 = ~1.3 days, ~10 days left. 20% size, close if funding < 40% APR or turns negative."}
+    {
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 75000,
+      "take_profit": 72600,
+      "reason": "Lock small profit: stop above the latest completed 4h lower high 74,889 and h1 ema50 74,980 (entry 75,277). A move back over 75k breaks the lower-high sequence and kills the thesis."
+    }
   ]
 }
