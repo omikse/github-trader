@@ -1,12 +1,15 @@
 {
-  "id": "2026-11-10T12:53:42Z",
-  "decided_at": "2026-11-10T12:53:42Z",
+  "id": "2026-11-10T14:52:00Z",
+  "decided_at": "2026-11-10T14:52:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 74,115 printing a 4th straight lower 4h high (74,792), below h1/h4 ema20, d1 RSI 35; bear grind toward the 73,444 30d low. Alts at 30d lows and very oversold (SOL/XRP d1 RSI 25), so no new alt shorts. Short +3.39 USD.",
-  "news": "No fresh market-moving news found.",
-  "watch_next": "BTC < 73,444 -> stop to 74,500 then trail above completed 4h highs; 4h close > 74,900 stops us out with profit. BONK funding (close carry if < 40% APR).",
+  "market_view": "BTC still making lower 4h highs (last closed 74,792) but the current 4h swept the 30d low 73,400 and bounced to 74.2k; short holds with stop 74.9k above structure, locking ~+1 USD. Alts at new lows with negative funding.",
+  "news": "",
+  "watch_next": "12-16Z 4h close: >74.5k with long wick = bounce risk, tighten; <73.4k 4h close = trail stop to 74.5k. 20:00Z time-stop tightening.",
   "actions": [
-    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 74900, "take_profit": 72600,
-     "reason": "Tighten 75,350 -> 74,900 (10:58Z move to 75,000 never executed): just above the last two completed 4h lower highs 74,889/74,792 and h1 ema50 74.90k, ~2 h1 ATR room; locks ~+1.1 USD."}
+    {
+      "type": "carry_close",
+      "symbol": "BONKUSDT",
+      "reason": "BONK funding flipped from 155-208% APR to -19.3% APR; plan rule: close carry when funding turns negative. Net ~-0.23."
+    }
   ]
 }
