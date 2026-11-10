@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-10T00:51Z)
+# Notebook (updated 2026-11-10T02:52Z)
 
 ## Big picture
+- 02:52Z 10 Nov: BTC 74,735, short +1.58 (entry 75,277). 4h closed 75,253 (h 75,284); current 4h h 75,323 rejected again. h1 below ema20/50, h4 RSI 42. Funding cooled to +7.8% APR. Alts weak (ETH 2,117, XRP 1.091, SOL 85.9 near lows). PAXG back to 4,098 (in the 4,100-4,105 zone). No news edge.
 - 00:51Z 10 Nov: BTC short FILLED 00:08Z at 75,277. BTC 74,964; last closed 4h 75,253 (h 75,284) - another rejection under h4 ema20 75.45k. h1 RSI 51, funding +13% APR (shorts paid). No news edge found.
 - 22:53Z 9 Nov: engine fresh again (input 22:49Z). BTC 75,158. Broke the 74.79k base on 4h closes (74,738 / 73,777), low 73,602 (30d low 73,444). Bounce back into the broken base: 4h highs 75,500 and 75,474 both rejected; current 4h candle high 75,244. h4 ema20 75.49k, ema50 76.56k, ema200 80.2k; d1 RSI 37, d1 ema20 78.1k. Bear regime; bounce = retest from below.
 - Alts flat/weak: ETH 2,133 (30d low 2,071), SOL 86.9 (near 85 low), XRP 1.101 (30d low 1.075). AVAX +9% 24h (8.66) is odd strength. BONK funding +159% APR (spiky; was -144% days ago).
@@ -21,9 +22,9 @@
 - XRP: weakest major; short a retest of 1.14-1.15 rejecting (stop > 1.18) only if BTC order cancelled. Don't stack.
 - ETH: short retest 2,190-2,200 only if BTC order not used.
 - Long reversal only after BTC 4h close > 78.6k.
-- PAXG: now 4,119 above 4,105. Long only on a pullback to 4,100-4,105 that holds on a 4h close, stop < 4,060, TP 4,200. Remember 6 Nov loss - gold failed during crypto dump.
+- PAXG: 4,098 at 02:52Z (pulled back into zone). Long only on a pullback to 4,100-4,105 that holds on a 4h close, stop < 4,060, TP 4,200. Remember 6 Nov loss - gold failed during crypto dump.
 - EUR: long only on 4h close > 1.1275; negative funding pays longs.
-- BONK funding +159%: watch for carry if it stays > 60% for 3 sessions (it flipped from -144%, likely spiky). No meme shorts.
+- BONK funding +159% (00:51Z), +156% (02:52Z) = 2 sessions: if still > 60% next session, consider small carry (<= 20%), break-even ~1.4 days (it flipped from -144%, likely spiky). No meme shorts.
 - Polymarket: Iran/ceasefire + streamer markets, no edge.
 
 ## Lessons
@@ -47,6 +48,7 @@
 - None held.
 
 ## Session log
+- 2026-11-10T02:52Z | eq 230.74 | BTC short +1.58, holding per plan (stop 76.4k, TP 72.6k). No new action.
 - 2026-11-10T00:51Z | eq 230.07 | BTC short filled 75,277 (+0.91). Holding, no new action.
 - 2026-11-09T22:53Z | eq 229.28 (input fresh) | Engine had dropped 18:51/20:52 orders (45-min age rule). Re-sent BTC short order 75.3k/76.4k/72.6k, 1.5%, 24h. BTC 75.16k retesting base.
 - 2026-11-09T20:52Z | eq 229.27 (engine stalled) | Re-sent BTC short order (dropped).
