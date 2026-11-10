@@ -1,10 +1,10 @@
-# Notebook (updated 2026-11-10T10:58Z)
+# Notebook (updated 2026-11-10T12:54Z)
 
 ## Big picture
-- 10:58Z 10 Nov (input from 09:25Z, engine stalled ~90 min): BTC 74,220, short +3.07, 4h in progress low 74,084. Earlier 08:51Z: BTC 74,454. 08:00Z 4h closed 74,748 (lower highs 75,474 -> 75,323 -> 74,889). h1 below ema20 74.75k/ema50 75.0k, h4 ema20 75.25k, h4 RSI 41, d1 RSI 36, d1 ema20 77.8k. Funding +14% APR. Bear regime; bounce = retest from below.
-- Alts weak: ETH 2,111 (30d low 2,071, d1 RSI 33), SOL 85.6 (30d low 85.0, d1 RSI 26), XRP 1.085 (d1 RSI 26, h4 RSI 30, 30d low 1.075). Oversold: bounce risk for fresh shorts.
-- Gold PAXG 4,103: 08:00Z 4h closed 4,099 (still hugging 4,100). h4 RSI 59, 30d high 4,206.
-- EUR 1.1243 (30d high 1.1275), h4 RSI 77 (stretched), funding -50% APR (longs paid).
+- 12:54Z 10 Nov (input fresh 12:45Z): BTC 74,115, short +3.39. 08-12Z 4h closed 74,313 (h 74,792, l 74,020): 4th straight lower high (75,474 -> 75,323 -> 74,889 -> 74,792). h1 below ema20 74.59k/ema50 74.90k, h4 ema20 75.13k, h4 RSI 38, d1 RSI 35, d1 ema20 77.7k. Funding +8% APR. Bear regime, grinding toward 30d low 73,444.
+- Alts weaker: ETH 2,086 (30d low 2,071), SOL 84.65 (30d low 84.12, d1 RSI 25), XRP 1.076 (30d low 1.0737, d1 RSI 25), DOT at 30d low. Very oversold: bounce risk for fresh alt shorts. PEPE outlier strong (d1 RSI 63).
+- Gold PAXG 4,063: lost 4,100 (4h close 4,058). h4 RSI 49. Gold long idea off for now.
+- EUR 1.1213, pulled back from 1.1275 30d high; funding +74% APR now (longs pay).
 - BTC levels: res 75.3-75.5k, 76.3k, 76.6k; sup 73.6k, 73.4k, 72.5k.
 - Mind-changers: BTC 4h close > 76,000 = exit short; > 78.6k = bear plan off.
 - No news edge (search 08:51Z found nothing new).
@@ -16,15 +16,15 @@
 - Carry only if funding > 60% APR sustained 3+ sessions; size <= 25%.
 
 ## Active plans
-- BTC SHORT open (filled 00:08Z 10 Nov @75,277, ~0.0029 BTC). Stop 76,400 -> 75,700 -> 75,500 -> 75,350 -> 75,000 (10:58Z, above latest completed 4h high 74,889 and h1 ema50; locks ~+0.8 USD). TP 72,600. Thesis: confirmed 4h breakdown of 74.8k base, retest rejected under h4 ema20, lower highs each 4h. Management: once < 73,400 stop to 74,800; then trail above completed 4h highs. Pyramid only on a lower-high retest now that stop ~ breakeven. Exit on 4h close > 75,400. Time limit: if still 74.0-75.3k by 20:00Z 10 Nov, tighten stop to just above latest 4h high.
-- BONK CARRY (opened 08:51Z 10 Nov, 20% equity ~46 USD). Funding 159/156/178/208/165/182% APR; ~0.2 USD/day, break-even ~1.3 days. Close if funding < 40% APR for 2 sessions or turns negative, or capital needed for a better trade. Hold to ~20 Nov otherwise; close before 21 Nov end.
+- BTC SHORT open (filled 00:08Z 10 Nov @75,277, ~0.0029 BTC). Stop 76,400 -> 75,700 -> 75,500 -> 75,350 -> 74,900 (12:54Z; the 10:58Z 75,000 move never executed, engine stale). 74,900 sits above the last two 4h highs 74,889/74,792 and h1 ema50 74.90k; locks ~+1.1 USD. TP 72,600. Thesis: confirmed 4h breakdown of 74.8k base, retest rejected under h4 ema20, lower highs each 4h. Management: once < 73,400 stop to 74,800; then trail above completed 4h highs. Pyramid only on a lower-high retest now that stop ~ breakeven. Exit on 4h close > 75,400. Time limit: if still 73.6-74.8k by 20:00Z 10 Nov, tighten stop to just above latest completed 4h high.
+- BONK CARRY (opened 08:51Z 10 Nov, 20% equity ~46 USD). Funding 159/156/178/208/165/182/155% APR; ~0.2 USD/day, break-even ~1.3 days. Close if funding < 40% APR for 2 sessions or turns negative, or capital needed for a better trade. Hold to ~20 Nov otherwise; close before 21 Nov end.
 
 ## Watchlist
 - XRP: weakest major but d1 RSI 27 oversold; short only a retest of 1.14-1.15 rejecting (stop > 1.18). Don't stack with BTC short (same bet).
 - ETH: short retest 2,190-2,200 only if BTC short closed.
 - Long reversal only after BTC 4h close > 78.6k.
-- PAXG: long only after a 4h close back > 4,105 then a hold of 4,100 on retest; stop < 4,060, TP 4,200. 6 Nov loss: gold failed during crypto dump.
-- EUR: long only on 4h close > 1.1275; negative funding pays longs.
+- PAXG: lost 4,100; long only after a 4h close back > 4,110 and hold; else ignore. 6 Nov loss: gold failed during crypto dump.
+- EUR: long only on 4h close > 1.1275; funding now +74% APR (costly for longs) -> skip unless it flips back.
 - PEPE funding 75% APR (h4 RSI 63, trending up): second carry candidate only if > 100% for 3 sessions. No meme shorts.
 - Polymarket: no edge found.
 
@@ -49,6 +49,7 @@
 - None held.
 
 ## Session log
+- 2026-11-10T12:54Z | eq 232.50 (input fresh) | BTC short +3.39; stop 75.35k -> 74.9k (10:58Z move was never executed). BONK carry 155%.
 - 2026-11-10T10:58Z | eq 232.14 (input 09:25Z, engine stalled) | BTC short +3.07; stop 75.35k -> 75.0k. BONK carry holding (182%). If decision dropped by 45-min rule, re-send stop move.
 - 2026-11-10T08:51Z | eq 231.59 | BTC short +2.39; stop 75.5k -> 75.35k after new lower-high 4h. Opened BONK carry 20% (funding 165%).
 - 2026-11-10T06:53Z | eq 231.22 | BTC short +2.03; stop 75.7k -> 75.5k. PAXG lost 4.1k on close, no long.
@@ -58,4 +59,3 @@
 - 2026-11-09T22:53Z | eq 229.28 | Re-sent BTC short order 75.3k/76.4k/72.6k, 1.5%, 24h (earlier ones dropped by 45-min rule).
 - 2026-11-09T20:52Z | eq 229.27 (engine stalled) | Re-sent BTC short order (dropped).
 - 2026-11-09T18:51Z | eq 229.27 (stale) | BTC broke 74.79k base on 4h closes. Placed BTC short order 75.3k (dropped).
-- 2026-11-06T22:51Z | eq 229.20 | No action. 77.1k short order resting (expired 7 Nov).
