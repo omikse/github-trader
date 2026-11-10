@@ -1,20 +1,20 @@
-# Notebook (updated 2026-11-10T20:51:43Z)
+# Notebook (updated 2026-11-10T22:52:00Z)
 
 ## Big picture
-- 20:50Z 10 Nov (input 20:41Z, fresh): BTC 73,620. New 30d low 72,585 in the 16-20Z 4h, which CLOSED 73,387 with a long lower wick; 20-24Z bouncing (h 73,677). h1 RSI 43, h4 38, d1 34. Under h1 ema20 73.96k, h4 ema20 74.76k, d1 ema20 77.7k. Lower highs 75.3k -> 74.9k -> 74.8k -> 74.8k -> 73.6k. Bear trend intact, bounce = retest of broken 73.4k from below.
+- 22:50Z 10 Nov (input 22:41Z, fresh): BTC 73,685. New 30d low 72,585 (16-20Z, closed 73,387 w/ long lower wick). 20-24Z 4h in progress: h 73,960 (tagged h1 ema20 73.92k and rejected so far). h1 RSI 44, h4 38, d1 34. Under h4 ema20 74.77k, d1 ema20 77.7k. Lower highs intact. Bear trend, bounce = retest of 73.4-74.0k from below. News: 2nd week of ~$1.3B crypto fund outflows.
 - Alts deeply oversold: ETH 2,050 (d1 RSI 30), SOL 83.2 (d1 24), XRP 1.059 (d1 24), DOT d1 28. Funding mostly negative/flat on alts (shorts crowded). BONK +175% (meme spike, ignore). EUR funding +83%.
 - PAXG 4,021 weak (h1 RSI 31). EUR 1.116.
 - BTC levels: res 73.6-74.0k, 74.3k, 74.8k; sup 72.6k, then ~71.5-72k.
 - Mind-changers: BTC 4h close > 74,100 = breakdown failed (stop handles it); > 76,000 bear plan off.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 233.81 USD (914 PLN, -9.1%; peak 265.7). Closed 8W/22L. ~11 days left: fewer, cleaner trades, each >=2R, risk 1.5-2%.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 233.64 USD (914 PLN, -9.1%; peak 265.7). Closed 8W/22L. ~11 days left: fewer, cleaner trades, each >=2R, risk 1.5-2%.
 - Trade WITH confirmed 4h-close breaks, on retests not chases. No stop-entry break orders. Stops behind 4h structure, not inside 1 h1 ATR (~590 on BTC).
 - Trail behind completed 4h highs; pyramid only from breakeven.
 - Carry only if funding > 60% APR sustained 3+ sessions on a non-meme; size <= 25%.
 
 ## Active plans
-- BTC SHORT open (filled 00:08Z 10 Nov @75,277, ~0.0029 BTC, +4.81 at 20:41Z). Stop 74,300 -> 74,050 (this session; above h1 ema20 and 74.0k, locks ~+3.6). TP 71,800. Trail: stop to ~150 above the latest completed 4h high once that is below current stop AND >= ~0.8% from price. If BTC prints a new low < 72.5k, trail to ~73,700. Time limit: by 12:00Z 11 Nov, if no new low below 72.6k, close.
+- BTC SHORT open (filled 00:08Z 10 Nov @75,277, ~0.0029 BTC, +4.63 at 22:41Z). Stop 74,050 (unchanged 22:52Z; above 20-24Z high 73,960 and 74.0k, locks ~+3.6). TP 71,800. Trail: stop to ~150 above the latest completed 4h high once that is below current stop AND >= ~0.8% from price. If BTC prints a new low < 72.5k, trail to ~73,700. Time limit: by 12:00Z 11 Nov, if no new low below 72.6k, close.
 - If stopped out: no re-short unless a fresh 4h rejection of 74-74.8k; consider long squeeze only per watchlist.
 - No resting orders.
 
@@ -46,6 +46,7 @@
 - None held.
 
 ## Session log
+- 2026-11-10T22:52Z | eq 233.64 | BTC bounce capped 73.96k at h1 ema20; short +4.63 held, stop 74.05k/TP 71.8k unchanged. No new trades.
 - 2026-11-10T20:51:43Z | eq 233.81 | BTC bounced from new low 72.58k; short +4.81. Stop 74.3k -> 74.05k, TP 71.8k. No new trades.
 - 2026-11-10T18:52Z | eq 235.02 (input 51 min old) | BTC short +6.02 holding; stop 74.3k/TP 71.8k unchanged.
 - 2026-11-10T16:51Z | eq 235.38 | BTC broke 73.4k (4h close 73.14k). Stop 74.9k -> 74.3k, TP 72.6k -> 71.8k.
@@ -55,4 +56,3 @@
 - 2026-11-10T08:51Z | eq 231.59 | stop 75.5k -> 75.35k. Opened BONK carry 20%.
 - 2026-11-10T06:53Z | eq 231.22 | stop 75.7k -> 75.5k.
 - 2026-11-10T04:51Z | eq 231.12 | stop 76.4k -> 75.7k.
-- 2026-11-10T02:52Z | eq 230.74 | BTC short +1.58, holding.
