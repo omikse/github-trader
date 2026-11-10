@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-10T22:43:54Z",
+ "updated": "2026-11-10T22:51:54Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9099,
- "equity_pln": 914.02,
- "return_pct": -9.09,
+ "equity_pln": 913.25,
+ "return_pct": -9.16,
  "max_drawdown_pct": 13.94,
  "control_pln": 998.71,
  "control_trades": 9,
- "hodl_pln": 875.03,
+ "hodl_pln": 876.05,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0029075900000000003,
    "entry": 75277.41,
-   "mark": 73640.7,
-   "upnl": 4.758881628900019,
+   "mark": 73707.9,
+   "upnl": 4.563491580900028,
    "stop": 74050.0,
    "tp": 71800.0,
    "liq": null,
    "leverage": null,
    "opened": 1794269280000,
    "reason": "Short retest of broken 74.8-75.5k base (two 4h rejections at 75.47-75.50k) under h4 ema20 75.49k after confirmed 4h-close breakdown; stop above 76.3k 4h structure and h4 ema50, TP 72.6k below 30d low 73.44k (~2.5R). Re-send: prior two decisions were dropped by engine (decision_max_age 45 min during stall).",
-   "upnl_pln": 18.61
+   "upnl_pln": 17.84
   }
  ],
  "closed_trades": [
@@ -448,32 +448,22 @@
  ],
  "trade_count": 30,
  "win_rate_pct": 26.7,
- "brain_calls_today": 11,
+ "brain_calls_today": 12,
  "last_decision": {
-  "time": "2026-11-10T20:51:54Z",
+  "time": "2026-11-10T22:51:54Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-10T20:51:43Z",
+  "decided_at": "2026-11-10T22:52:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 233.5,
-  "equity_pln": 912.95,
+  "equity_usd": 233.61,
+  "equity_pln": 913.39,
   "events": [],
-  "market_view": "BTC made a new 30d low 72,585 then bounced; 16-20Z 4h closed 73,387 with a long lower wick, now 73,620 (h1 RSI 43). Still under h1 ema20 73.96k and h4 ema20 74.76k, so bear trend intact but the breakdown is being retested from below. Alts oversold (d1 RSI 24-30), funding mixed.",
-  "watch_next": "Does BTC reject 73.6-74.0k (short resumes toward 72.6k/71.8k) or reclaim 74k (stop takes us out with profit)? Time limit 12:00Z 11 Nov for a new low below 72.6k.",
-  "news": "No market-moving crypto/macro headline found this session.",
-  "actions": [
-   {
-    "type": "move_stop",
-    "symbol": "BTCUSDT",
-    "stop": 74050,
-    "take_profit": 71800,
-    "reason": "Trail per plan: latest completed 4h high 73,588 and current 4h high 73,677 are well below old stop 74,300. Stop 74,050 sits above h1 ema20 73.96k and the 74.0k round level (not tighter, to avoid ~1 ATR chop), locking ~+3.6 USD of the +4.8 open profit.",
-    "result": "done",
-    "detail": "stop 74050.0, target 71800.0"
-   }
-  ]
+  "market_view": "BTC 73,685 bouncing off new 30d low 72,585; 20-24Z 4h high 73,960 stalled at h1 ema20 73.9k, still below h4 ema20 74.77k. Bear trend intact; alts deeply oversold (d1 RSI 24-30), so no fresh alt shorts.",
+  "watch_next": "20-24Z 4h close: below 73.4-73.6k favors continuation to 72.6k/71.8k; reclaim of 74.05k stops us out in profit. Time limit 12:00Z 11 Nov for a new low below 72.6k, else close.",
+  "news": "Crypto funds saw a second straight week of ~$1.3B outflows; no fresh catalyst found.",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 229.012157,
+ "cash_usd": 229.012288,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
