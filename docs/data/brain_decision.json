@@ -1,15 +1,17 @@
 {
-  "id": "2026-11-10T14:52:00Z",
-  "decided_at": "2026-11-10T14:52:00Z",
+  "id": "2026-11-10T16:51:44Z",
+  "decided_at": "2026-11-10T16:51:44Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC still making lower 4h highs (last closed 74,792) but the current 4h swept the 30d low 73,400 and bounced to 74.2k; short holds with stop 74.9k above structure, locking ~+1 USD. Alts at new lows with negative funding.",
+  "market_view": "BTC 4h closed below the 30d low 73.4k (73,143) and printed a new low 72,674; lower highs intact, bear trend confirmed but RSI ~33 on all timeframes and alts deeply oversold with negative funding.",
   "news": "",
-  "watch_next": "12-16Z 4h close: >74.5k with long wick = bounce risk, tighten; <73.4k 4h close = trail stop to 74.5k. 20:00Z time-stop tightening.",
+  "watch_next": "BTC new low below 72.6k vs a reclaim of 73.8-74k; trail stop above completed 4h highs; alt bounce retests for later shorts.",
   "actions": [
     {
-      "type": "carry_close",
-      "symbol": "BONKUSDT",
-      "reason": "BONK funding flipped from 155-208% APR to -19.3% APR; plan rule: close carry when funding turns negative. Net ~-0.23."
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 74300,
+      "take_profit": 71800,
+      "reason": "30d low 73.4k broken on 4h close; tighten stop above h1 ema20/74.0-74.3k retest zone to lock ~+2.8 USD, extend TP below new low 72.67k to let the winner run."
     }
   ]
 }
