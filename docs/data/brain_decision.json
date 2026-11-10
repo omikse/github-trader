@@ -1,9 +1,12 @@
 {
-  "id": "2026-11-10T18:50:52Z",
-  "decided_at": "2026-11-10T18:50:52Z",
+  "id": "2026-11-10T20:51:43Z",
+  "decided_at": "2026-11-10T20:51:43Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC made a new 30d low 72,585 and is bouncing weakly (73.2k), still under h1 ema20 74.1k and all 4h/daily EMAs; bear trend intact but oversold, alts RSI-extreme with negative funding. Input is 51 min old (engine may lag).",
-  "news": "No relevant fresh news found in a quick search.",
-  "watch_next": "16-20Z 4h close: below 73.4k keeps trend; trail stop to just above the latest completed 4h high once it is below 74.3k. Close by 12:00Z 11 Nov if no new low under 72.6k.",
-  "actions": []
+  "market_view": "BTC made a new 30d low 72,585 then bounced; 16-20Z 4h closed 73,387 with a long lower wick, now 73,620 (h1 RSI 43). Still under h1 ema20 73.96k and h4 ema20 74.76k, so bear trend intact but the breakdown is being retested from below. Alts oversold (d1 RSI 24-30), funding mixed.",
+  "news": "No market-moving crypto/macro headline found this session.",
+  "watch_next": "Does BTC reject 73.6-74.0k (short resumes toward 72.6k/71.8k) or reclaim 74k (stop takes us out with profit)? Time limit 12:00Z 11 Nov for a new low below 72.6k.",
+  "actions": [
+    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 74050, "take_profit": 71800,
+     "reason": "Trail per plan: latest completed 4h high 73,588 and current 4h high 73,677 are well below old stop 74,300. Stop 74,050 sits above h1 ema20 73.96k and the 74.0k round level (not tighter, to avoid ~1 ATR chop), locking ~+3.6 USD of the +4.8 open profit."}
+  ]
 }

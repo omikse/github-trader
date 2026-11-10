@@ -1,43 +1,41 @@
-# Notebook (updated 2026-11-10T18:52Z)
+# Notebook (updated 2026-11-10T20:51:43Z)
 
 ## Big picture
-- 18:52Z 10 Nov (input 17:59Z, 51 min old - engine may lag): BTC 73,205; 16-20Z 4h in progress h 73,481 l 72,585 (new 30d low). h1 RSI 37. Earlier (16:51Z): BTC 73,082. 12-16Z 4h CLOSED 73,143 below the 30d low 73.4k (low 72,777); current 4h low 72,674 = new 30d low. Lower highs 75,474 -> 75,323 -> 74,889 -> 74,792 -> 74,804. h1 RSI 33, h4 RSI 33, d1 RSI 33; under all EMAs (h1 ema20 74.25k, h4 ema20 74.85k). Bear trend confirmed, but oversold.
-- Alts deeply oversold: ETH 2,022 (h1/h4 RSI 24), SOL 82.2 (d1 RSI 23), XRP 1.047 (d1 23). Funding negative across alts (shorts crowded; BONK -178%, NEAR -41%, ADA -38%). Squeeze risk rising.
-- PAXG 4,012 falling, EUR 1.114 falling (funding +92% APR).
-- BTC levels: res 73.4k (broken support), 74.0-74.3k, 74.8k; sup 72.7k, then ~71.5-72k.
-- Mind-changers: BTC 4h close back > 74,000 = breakdown failed (stop 74.3k handles it); > 76,000 bear plan off.
-- No news check this session.
+- 20:50Z 10 Nov (input 20:41Z, fresh): BTC 73,620. New 30d low 72,585 in the 16-20Z 4h, which CLOSED 73,387 with a long lower wick; 20-24Z bouncing (h 73,677). h1 RSI 43, h4 38, d1 34. Under h1 ema20 73.96k, h4 ema20 74.76k, d1 ema20 77.7k. Lower highs 75.3k -> 74.9k -> 74.8k -> 74.8k -> 73.6k. Bear trend intact, bounce = retest of broken 73.4k from below.
+- Alts deeply oversold: ETH 2,050 (d1 RSI 30), SOL 83.2 (d1 24), XRP 1.059 (d1 24), DOT d1 28. Funding mostly negative/flat on alts (shorts crowded). BONK +175% (meme spike, ignore). EUR funding +83%.
+- PAXG 4,021 weak (h1 RSI 31). EUR 1.116.
+- BTC levels: res 73.6-74.0k, 74.3k, 74.8k; sup 72.6k, then ~71.5-72k.
+- Mind-changers: BTC 4h close > 74,100 = breakdown failed (stop handles it); > 76,000 bear plan off.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21. Equity 235.38 USD (920 PLN, -8.5%; peak 265.7). Closed 8W/22L. ~11 days left: fewer, cleaner trades, each >=2R, risk 1.5-2%.
-- Trade WITH confirmed 4h-close breaks, on retests not chases. No stop-entry break orders. Stops behind 4h structure.
-- Trail behind completed 4h highs/lows; pyramid only from breakeven (BTC short: add only on a retest of 73.4-73.8k that rejects, risk 1.5%, stop > 74.4k).
-- Carry only if funding > 60% APR sustained 3+ sessions; size <= 25%. Meme funding flips fast.
+- Goal: grow ~1,000 PLN by 2026-11-21. Equity 233.81 USD (914 PLN, -9.1%; peak 265.7). Closed 8W/22L. ~11 days left: fewer, cleaner trades, each >=2R, risk 1.5-2%.
+- Trade WITH confirmed 4h-close breaks, on retests not chases. No stop-entry break orders. Stops behind 4h structure, not inside 1 h1 ATR (~590 on BTC).
+- Trail behind completed 4h highs; pyramid only from breakeven.
+- Carry only if funding > 60% APR sustained 3+ sessions on a non-meme; size <= 25%.
 
 ## Active plans
-- BTC SHORT open (filled 00:08Z 10 Nov @75,277, ~0.0029 BTC, +6.02 at 18:00Z). Stop 74,300 (set 16:51Z (above h1 ema20 and 74.0-74.3k retest zone; locks ~+2.8). TP extended 72,600 -> 71,800 (old TP sat just under the new low 72.67k; let winner run). Trail: each session, stop to just above the latest completed 4h high once that is below current stop (+~150). If a 4h closes back > 73,800 with a long lower wick, tighten to 73,900. Time limit: by 12:00Z 11 Nov, if no new low below 72.6k, close.
+- BTC SHORT open (filled 00:08Z 10 Nov @75,277, ~0.0029 BTC, +4.81 at 20:41Z). Stop 74,300 -> 74,050 (this session; above h1 ema20 and 74.0k, locks ~+3.6). TP 71,800. Trail: stop to ~150 above the latest completed 4h high once that is below current stop AND >= ~0.8% from price. If BTC prints a new low < 72.5k, trail to ~73,700. Time limit: by 12:00Z 11 Nov, if no new low below 72.6k, close.
+- If stopped out: no re-short unless a fresh 4h rejection of 74-74.8k; consider long squeeze only per watchlist.
 - No resting orders.
 
 ## Watchlist
-- Alts: no fresh shorts at RSI < 30 (oversold, funding negative). Short XRP/ETH only on a bounce retest that rejects (XRP 1.09-1.10, ETH 2,090-2,110) and only if BTC short is closed (same bet).
+- Alts: no fresh shorts at d1 RSI < 30. Short XRP/ETH only on a bounce retest that rejects (XRP 1.09-1.10, ETH 2,090-2,110) and only if BTC short is closed (same bet).
 - Long reversal (squeeze play) only after BTC 4h close > 74,800 with alt breadth; otherwise no longs.
-- PAXG: long only after 4h close back > 4,110; else ignore.
-- EUR: funding +92% APR: no longs. Short only on 4h close < 1.112 retest.
-- PEPE funding 21% APR, d1 RSI 62, the relative-strength coin: no meme shorts.
-- Polymarket: no edge found.
+- PAXG: long only after 4h close back > 4,110.
+- EUR: funding +83% APR: no longs. Short only on 4h close < 1.112 retest.
+- PEPE is the relative-strength coin (d1 RSI 62): no meme shorts.
+- Polymarket: no edge found (list is mostly sports/streamer/geopolitics near fair).
 
 ## Lessons
-- 10 Nov BTC short: 4h breakdown + retest short + trailing behind completed 4h lower highs worked (+6.4 open). Keep doing this.
+- 10 Nov BTC short: 4h breakdown + retest short + trailing behind completed 4h lower highs worked. Keep doing this.
 - 10 Nov BONK carry: meme funding 160-200% collapsed to negative in 6h; fees > earnings. Meme funding spikes are not carry.
 - ENGINE DROPS DECISIONS OLDER THAN 45 MIN. During a stall re-send once input is fresh.
 - 6 Nov PAXG long (-1.88): gold safe-haven bid during crypto dumps is unreliable.
 - 5 Nov ETH long scratch: retest longs need the level above reclaimed. Time-stop rule saves risk.
 - Sessions can be missed for days: resting orders need sensible expiry; plans must survive gaps.
-- FX gives back fast, trail tighter once 1R up.
 - No stop-entry orders for breaks (4 Nov BTC short filled on a sweep, -3.76).
 - Retest short that doesn't reject within ~2 4h candles -> exit at scratch.
-- Breakouts without alt breadth fail.
-- Stops within ~1 h1 ATR die in chop. Use 4h structure, size down.
+- Breakouts without alt breadth fail. Stops within ~1 h1 ATR die in chop.
 - Memes wick violently; don't short memes with deeply negative funding.
 - Stacking same-theme bets = one bet. Funding spikes mean-revert.
 - Don't open fresh at h1 RSI < 25-30 or > 74 after a big leg.
@@ -48,13 +46,13 @@
 - None held.
 
 ## Session log
-- 2026-11-10T18:52Z | eq 235.02 (input 51 min old) | BTC short +6.02 holding; stop 74.3k/TP 71.8k unchanged (last closed 4h high 74.8k > stop, no trail). No new trades.
-- 2026-11-10T16:51Z | eq 235.38 | BTC broke 73.4k (4h close 73.14k). Short +6.39: stop 74.9k -> 74.3k, TP 72.6k -> 71.8k. No new trades (alts oversold).
-- 2026-11-10T14:52Z | eq 232.13 | BTC short +3.0 holding, stop 74.9k (73.4k swept, bounce). Closed BONK carry (funding -19%).
-- 2026-11-10T12:54Z | eq 232.50 (input fresh) | BTC short +3.39; stop 75.35k -> 74.9k (10:58Z move was never executed). BONK carry 155%.
-- 2026-11-10T10:58Z | eq 232.14 (input 09:25Z, engine stalled) | BTC short +3.07; stop 75.35k -> 75.0k. BONK carry holding (182%). If decision dropped by 45-min rule, re-send stop move.
-- 2026-11-10T08:51Z | eq 231.59 | BTC short +2.39; stop 75.5k -> 75.35k after new lower-high 4h. Opened BONK carry 20% (funding 165%).
-- 2026-11-10T06:53Z | eq 231.22 | BTC short +2.03; stop 75.7k -> 75.5k. PAXG lost 4.1k on close, no long.
-- 2026-11-10T04:51Z | eq 231.12 | BTC short +1.95; stop 76.4k -> 75.7k after lower-high 4h close. BONK carry skipped.
-- 2026-11-10T02:52Z | eq 230.74 | BTC short +1.58, holding per plan. No new action.
-- 2026-11-10T00:51Z | eq 230.07 | BTC short filled 75,277 (+0.91). Holding.
+- 2026-11-10T20:51:43Z | eq 233.81 | BTC bounced from new low 72.58k; short +4.81. Stop 74.3k -> 74.05k, TP 71.8k. No new trades.
+- 2026-11-10T18:52Z | eq 235.02 (input 51 min old) | BTC short +6.02 holding; stop 74.3k/TP 71.8k unchanged.
+- 2026-11-10T16:51Z | eq 235.38 | BTC broke 73.4k (4h close 73.14k). Stop 74.9k -> 74.3k, TP 72.6k -> 71.8k.
+- 2026-11-10T14:52Z | eq 232.13 | BTC short +3.0 holding, stop 74.9k. Closed BONK carry (funding -19%).
+- 2026-11-10T12:54Z | eq 232.50 | BTC short +3.39; stop 75.35k -> 74.9k.
+- 2026-11-10T10:58Z | eq 232.14 (engine stalled) | stop 75.35k -> 75.0k. BONK carry holding.
+- 2026-11-10T08:51Z | eq 231.59 | stop 75.5k -> 75.35k. Opened BONK carry 20%.
+- 2026-11-10T06:53Z | eq 231.22 | stop 75.7k -> 75.5k.
+- 2026-11-10T04:51Z | eq 231.12 | stop 76.4k -> 75.7k.
+- 2026-11-10T02:52Z | eq 230.74 | BTC short +1.58, holding.
