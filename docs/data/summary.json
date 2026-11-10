@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-10T02:44:03Z",
+ "updated": "2026-11-10T02:52:04Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9199,
- "equity_pln": 904.49,
- "return_pct": -10.27,
+ "equity_pln": 903.08,
+ "return_pct": -10.41,
  "max_drawdown_pct": 13.94,
  "control_pln": 1001.26,
  "control_trades": 9,
- "hodl_pln": 890.53,
+ "hodl_pln": 892.0,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0029075900000000003,
    "entry": 75277.41,
-   "mark": 74735.1,
-   "upnl": 1.5768151328999933,
+   "mark": 74858.3,
+   "upnl": 1.2186000449000018,
    "stop": 76400.0,
    "tp": 72600.0,
    "liq": null,
    "leverage": null,
    "opened": 1794269280000,
    "reason": "Short retest of broken 74.8-75.5k base (two 4h rejections at 75.47-75.50k) under h4 ema20 75.49k after confirmed 4h-close breakdown; stop above 76.3k 4h structure and h4 ema50, TP 72.6k below 30d low 73.44k (~2.5R). Re-send: prior two decisions were dropped by engine (decision_max_age 45 min during stall).",
-   "upnl_pln": 6.18
+   "upnl_pln": 4.78
   }
  ],
  "closed_trades": [
@@ -448,33 +448,22 @@
  ],
  "trade_count": 30,
  "win_rate_pct": 26.7,
- "brain_calls_today": 1,
+ "brain_calls_today": 2,
  "last_decision": {
-  "time": "2026-11-10T00:52:04Z",
+  "time": "2026-11-10T02:52:04Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-10T00:52:00Z",
+  "decided_at": "2026-11-10T02:52:30Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 230.24,
-  "equity_pln": 902.53,
-  "events": [
-   {
-    "type": "order_filled",
-    "id": "o94",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "status": "filled",
-    "trigger": 75300,
-    "time": 1794269280000,
-    "detail": "filled at 75277.4"
-   }
-  ],
-  "market_view": "BTC short filled at 75,277 on the retest of the broken 74.8k base; last 4h candle rejected again at 75.28k under h4 ema20. Bear regime on d1/4h intact.",
-  "watch_next": "BTC < 74,000 -> move stop to 75,600; 4h close > 76,000 or no progress by 08:00Z close with price > 75.3k -> scratch.",
-  "news": "No fresh market-moving news found.",
+  "equity_usd": 230.42,
+  "equity_pln": 903.23,
+  "events": [],
+  "market_view": "BTC short from 75,277 working (74,735): fourth 4h rejection at 75.28-75.32k under h4 ema20 75.42k; h1 below ema20/50, alts weak near 30d lows. Bear regime intact.",
+  "watch_next": "BTC < 74,000 -> move stop to ~75,600; 08:00Z 4h close: if back > 75.3k with no progress, scratch. BONK funding 3rd session > 60% -> consider small carry. PAXG 4,100-4,105 hold on 4h close.",
+  "news": "No fresh market-moving crypto/macro news found.",
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 229.167214,
+ "cash_usd": 229.167345,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
