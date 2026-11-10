@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-09T22:53Z)
+# Notebook (updated 2026-11-10T00:51Z)
 
 ## Big picture
+- 00:51Z 10 Nov: BTC short FILLED 00:08Z at 75,277. BTC 74,964; last closed 4h 75,253 (h 75,284) - another rejection under h4 ema20 75.45k. h1 RSI 51, funding +13% APR (shorts paid). No news edge found.
 - 22:53Z 9 Nov: engine fresh again (input 22:49Z). BTC 75,158. Broke the 74.79k base on 4h closes (74,738 / 73,777), low 73,602 (30d low 73,444). Bounce back into the broken base: 4h highs 75,500 and 75,474 both rejected; current 4h candle high 75,244. h4 ema20 75.49k, ema50 76.56k, ema200 80.2k; d1 RSI 37, d1 ema20 78.1k. Bear regime; bounce = retest from below.
 - Alts flat/weak: ETH 2,133 (30d low 2,071), SOL 86.9 (near 85 low), XRP 1.101 (30d low 1.075). AVAX +9% 24h (8.66) is odd strength. BONK funding +159% APR (spiky; was -144% days ago).
 - Gold PAXG 4,119: above 4,105 resistance, 30d high 4,206. EUR 1.1217 near 30d high 1.1275, funding -93% APR (longs get paid).
@@ -14,8 +15,7 @@
 - Carry only if funding > 60% APR sustained 3+ sessions; size <= 25%.
 
 ## Active plans
-- BTC SHORT entry_order (sent 22:53Z, exp 24h): trigger 75,300, stop 76,400, TP 72,600, 1.5% risk (~2.5R). Thesis: confirmed 4h breakdown, base retest rejected twice at 75.47-75.50k, under h4 ema20. Cancel if BTC 4h closes > 76,300 before fill. If filled: no rejection within 2 4h candles -> scratch; once < 74k move stop to ~75.6k; then trail above completed 4h highs. If unfilled and BTC 4h closes < 73,400, cancel and re-place at the new broken level.
-- VERIFY next session that the order is resting (two previous sends were dropped).
+- BTC SHORT open (filled 00:08Z 10 Nov @75,277, ~0.0029 BTC), stop 76,400, TP 72,600, 1.5% risk (~2.4R). Thesis: confirmed 4h breakdown of 74.8k base, retest rejected 3x at 75.28-75.50k under h4 ema20. Management: if no move < 74.6k by the 08:00Z 4h close (2 candles after fill) and price back > 75.3k -> scratch. Once < 74,000 move stop to ~75,600; once < 73,400 stop to 74,800; then trail above completed 4h highs. Pyramid only after stop at breakeven, on a lower-high retest. Exit at once on 4h close > 76,000.
 
 ## Watchlist
 - XRP: weakest major; short a retest of 1.14-1.15 rejecting (stop > 1.18) only if BTC order cancelled. Don't stack.
@@ -47,6 +47,7 @@
 - None held.
 
 ## Session log
+- 2026-11-10T00:51Z | eq 230.07 | BTC short filled 75,277 (+0.91). Holding, no new action.
 - 2026-11-09T22:53Z | eq 229.28 (input fresh) | Engine had dropped 18:51/20:52 orders (45-min age rule). Re-sent BTC short order 75.3k/76.4k/72.6k, 1.5%, 24h. BTC 75.16k retesting base.
 - 2026-11-09T20:52Z | eq 229.27 (engine stalled) | Re-sent BTC short order (dropped).
 - 2026-11-09T18:51Z | eq 229.27 (stale) | BTC broke 74.79k base on 4h closes. Placed BTC short order 75.3k (dropped).
