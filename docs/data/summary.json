@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-10T12:48:53Z",
+ "updated": "2026-11-10T12:53:53Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9099,
- "equity_pln": 908.09,
- "return_pct": -9.68,
+ "equity_pln": 907.72,
+ "return_pct": -9.71,
  "max_drawdown_pct": 13.94,
  "control_pln": 998.71,
  "control_trades": 9,
- "hodl_pln": 881.83,
+ "hodl_pln": 882.3,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0029075900000000003,
    "entry": 75277.41,
-   "mark": 74194.1,
-   "upnl": 3.1498213228999936,
-   "stop": 75350.0,
+   "mark": 74233.5,
+   "upnl": 3.0352622769000104,
+   "stop": 74900.0,
    "tp": 72600.0,
    "liq": null,
    "leverage": null,
    "opened": 1794269280000,
    "reason": "Short retest of broken 74.8-75.5k base (two 4h rejections at 75.47-75.50k) under h4 ema20 75.49k after confirmed 4h-close breakdown; stop above 76.3k 4h structure and h4 ema50, TP 72.6k below 30d low 73.44k (~2.5R). Re-send: prior two decisions were dropped by engine (decision_max_age 45 min during stall).",
-   "upnl_pln": 12.32
+   "upnl_pln": 11.87
   }
  ],
  "closed_trades": [
@@ -448,22 +448,32 @@
  ],
  "trade_count": 30,
  "win_rate_pct": 26.7,
- "brain_calls_today": 6,
+ "brain_calls_today": 7,
  "last_decision": {
-  "time": "2026-11-10T12:24:53Z",
+  "time": "2026-11-10T12:53:53Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-10T10:58:00Z",
+  "decided_at": "2026-11-10T12:53:42Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 232.09,
-  "equity_pln": 907.44,
+  "equity_usd": 232.16,
+  "equity_pln": 907.72,
   "events": [],
-  "market_view": "Input stale (09:25Z, engine ~90 min behind). BTC 74,220 at last print, lower 4h highs 75,474 -> 75,323 -> 74,889, h1/h4 below ema20, d1 RSI 35: bear trend intact, short +3.07 USD. BONK carry funding still 182% APR.",
-  "watch_next": "BTC < 74,000 / 73,444 30d low for stop trail to 74,800; 4h close > 75,000 would stop us out near entry. BONK funding level. Engine freshness.",
-  "news": "Search found no fresh market-moving news.",
-  "error": "not executed: decision is 87 min old (limit 45)"
+  "market_view": "BTC 74,115 printing a 4th straight lower 4h high (74,792), below h1/h4 ema20, d1 RSI 35; bear grind toward the 73,444 30d low. Alts at 30d lows and very oversold (SOL/XRP d1 RSI 25), so no new alt shorts. Short +3.39 USD.",
+  "watch_next": "BTC < 73,444 -> stop to 74,500 then trail above completed 4h highs; 4h close > 74,900 stops us out with profit. BONK funding (close carry if < 40% APR).",
+  "news": "No fresh market-moving news found.",
+  "actions": [
+   {
+    "type": "move_stop",
+    "symbol": "BTCUSDT",
+    "stop": 74900,
+    "take_profit": 72600,
+    "reason": "Tighten 75,350 -> 74,900 (10:58Z move to 75,000 never executed): just above the last two completed 4h lower highs 74,889/74,792 and h1 ema50 74.90k, ~2 h1 ATR room; locks ~+1.1 USD.",
+    "result": "done",
+    "detail": "stop 74900.0, target 72600.0"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 229.103834,
+ "cash_usd": 229.103898,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
