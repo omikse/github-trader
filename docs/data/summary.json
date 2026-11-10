@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-10T16:44:53Z",
+ "updated": "2026-11-10T16:51:53Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9099,
- "equity_pln": 920.29,
- "return_pct": -8.46,
+ "equity_pln": 923.07,
+ "return_pct": -8.19,
  "max_drawdown_pct": 13.94,
  "control_pln": 998.71,
  "control_trades": 9,
- "hodl_pln": 868.62,
+ "hodl_pln": 865.7,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0029075900000000003,
    "entry": 75277.41,
-   "mark": 73081.1,
-   "upnl": 6.385968992899993,
-   "stop": 74900.0,
-   "tp": 72600.0,
+   "mark": 72836.8,
+   "upnl": 7.096293229900002,
+   "stop": 74300.0,
+   "tp": 71800.0,
    "liq": null,
    "leverage": null,
    "opened": 1794269280000,
    "reason": "Short retest of broken 74.8-75.5k base (two 4h rejections at 75.47-75.50k) under h4 ema20 75.49k after confirmed 4h-close breakdown; stop above 76.3k 4h structure and h4 ema50, TP 72.6k below 30d low 73.44k (~2.5R). Re-send: prior two decisions were dropped by engine (decision_max_age 45 min during stall).",
-   "upnl_pln": 24.97
+   "upnl_pln": 27.75
   }
  ],
  "closed_trades": [
@@ -448,30 +448,32 @@
  ],
  "trade_count": 30,
  "win_rate_pct": 26.7,
- "brain_calls_today": 8,
+ "brain_calls_today": 9,
  "last_decision": {
-  "time": "2026-11-10T14:52:53Z",
+  "time": "2026-11-10T16:51:53Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-10T14:52:00Z",
+  "decided_at": "2026-11-10T16:51:44Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 232.83,
-  "equity_pln": 910.33,
+  "equity_usd": 236.09,
+  "equity_pln": 923.07,
   "events": [],
-  "market_view": "BTC still making lower 4h highs (last closed 74,792) but the current 4h swept the 30d low 73,400 and bounced to 74.2k; short holds with stop 74.9k above structure, locking ~+1 USD. Alts at new lows with negative funding.",
-  "watch_next": "12-16Z 4h close: >74.5k with long wick = bounce risk, tighten; <73.4k 4h close = trail stop to 74.5k. 20:00Z time-stop tightening.",
+  "market_view": "BTC 4h closed below the 30d low 73.4k (73,143) and printed a new low 72,674; lower highs intact, bear trend confirmed but RSI ~33 on all timeframes and alts deeply oversold with negative funding.",
+  "watch_next": "BTC new low below 72.6k vs a reclaim of 73.8-74k; trail stop above completed 4h highs; alt bounce retests for later shorts.",
   "news": "",
   "actions": [
    {
-    "type": "carry_close",
-    "symbol": "BONKUSDT",
-    "reason": "BONK funding flipped from 155-208% APR to -19.3% APR; plan rule: close carry when funding turns negative. Net ~-0.23.",
+    "type": "move_stop",
+    "symbol": "BTCUSDT",
+    "stop": 74300,
+    "take_profit": 71800,
+    "reason": "30d low 73.4k broken on 4h close; tighten stop above h1 ema20/74.0-74.3k retest zone to lock ~+2.8 USD, extend TP below new low 72.67k to let the winner run.",
     "result": "done",
-    "detail": "closed carry: earned 0.05, fees 0.28, net -0.23 USD"
+    "detail": "stop 74300.0, target 71800.0"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 228.989571,
+ "cash_usd": 228.989686,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
