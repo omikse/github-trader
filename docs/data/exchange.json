@@ -1,5 +1,5 @@
 {
- "cash": 232.42404772714679,
+ "cash": 232.28474976541003,
  "positions": {},
  "closed": [
   {
@@ -412,7 +412,7 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794415436667,
+ "last_ms": 1794415916791,
  "next_id": 98,
  "orders": [
   {
@@ -990,7 +990,16 @@
   "PAXGUSDT": 3.7263441666667e-05,
   "EURUSDT": 0.0002515191125
  },
- "carry": {},
+ "carry": {
+  "EURUSDT": {
+   "notional": 46.48,
+   "opened": 1794415916791,
+   "earned": 0.0,
+   "fees": 0.13943999999999998,
+   "rate_at_open": 0.0002515191125,
+   "note": "EUR perp funding has stayed > +75% APR for 4+ sessions and is now +220% APR (0.6%/day): break-even ~1 day at current rate, ~3 days at 80%. Non-meme, low-vol underlying. Close if funding < 30% APR for 2 sessions or negative."
+  }
+ },
  "carry_closed": [
   {
    "id": "c20",
@@ -1062,7 +1071,7 @@
  "cash_rate": 0.04014,
  "income": {
   "funding": 0.5606036853986536,
-  "carry": -0.7265072911517432,
-  "interest": 0.46418651651434273
+  "carry": -0.8659472911517432,
+  "interest": 0.46432855477753826
  }
 }
