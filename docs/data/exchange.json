@@ -1,18 +1,6 @@
 {
- "cash": 229.07217506034644,
- "positions": {
-  "BTCUSDT": {
-   "side": "short",
-   "qty": 0.0029075900000000003,
-   "entry": 75277.41,
-   "stop": 74050.0,
-   "tp": 71800.0,
-   "opened": 1794269280000,
-   "entry_fee": 0.12038171449804502,
-   "mark": 73927.4,
-   "note": "Short retest of broken 74.8-75.5k base (two 4h rejections at 75.47-75.50k) under h4 ema20 75.49k after confirmed 4h-close breakdown; stop above 76.3k 4h structure and h4 ema50, TP 72.6k below 30d low 73.44k (~2.5R). Re-send: prior two decisions were dropped by engine (decision_max_age 45 min during stall)."
-  }
- },
+ "cash": 232.4149864389004,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -399,6 +387,19 @@
    "why": "stop",
    "opened": 1793889900000,
    "reason": "Gold reclaimed h4 ema200 4,083 and d1 ema50 4,114 with a +1.5% 4h candle; h1 RSI 85 is too extended to chase, so buy the pullback to the 4,083-4,085 breakout level. Stop under 4,040 (old 4h highs), TP 4,200 under 30d high 4,206 (~2.4R)."
+  },
+  {
+   "id": "t96",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.0029075900000000003,
+   "entry": 75277.41,
+   "exit": 74087.025,
+   "pnl": 3.2223,
+   "time": 1794384480000,
+   "why": "stop",
+   "opened": 1794269280000,
+   "reason": "Short retest of broken 74.8-75.5k base (two 4h rejections at 75.47-75.50k) under h4 ema20 75.49k after confirmed 4h-close breakdown; stop above 76.3k 4h structure and h4 ema50, TP 72.6k below 30d low 73.44k (~2.5R). Re-send: prior two decisions were dropped by engine (decision_max_age 45 min during stall)."
   }
  ],
  "fills": [
@@ -411,8 +412,8 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794384326669,
- "next_id": 96,
+ "last_ms": 1794384806645,
+ "next_id": 97,
  "orders": [],
  "order_events": [
   {
@@ -1048,6 +1049,6 @@
  "income": {
   "funding": 0.5606036853986536,
   "carry": -0.7265072911517432,
-  "interest": 0.4549872907032648
+  "interest": 0.4551252282680419
  }
 }
