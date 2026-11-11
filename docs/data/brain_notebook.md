@@ -1,10 +1,10 @@
-# Notebook (updated 2026-11-11T10:51Z)
+# Notebook (updated 2026-11-11T12:53Z)
 
 ## Big picture
-- 10:51Z 11 Nov (input 10:42Z, fresh): BTC 73,982. 30d low 72,585. Chop 73.1-74.1k for ~20h; last closed 4h c 73,977, in-progress 08-12Z h 74,085. Under h1 ema50 74.15k, h4 ema20 74.54k, h4 ema50 75.76k, d1 ema20 77.3k. RSI h1 52 / h4 42 / d1 35. Bear trend intact, slow grind up toward resistance = where the resting short sits.
-- Alts: ETH 2,059 (d1 RSI 31, h4 ema20 2,115), SOL 83.8, XRP 1.064 small bounces. AVAX standout: 8.705 (+4.9% 24h, at 24h high, h1 RSI 71 = extended, above all h4 emas except ema200 9.19). PEPE weak (-4.2% 24h).
+- 12:53Z 11 Nov (input 12:47Z, fresh): BTC 73,966. 30d low 72,585. Chop 73.1-74.1k for ~22h; latest closed 4h c 73,921 (h 74,085), in-progress 12-16Z h 74,014. Under h1 ema50 74.14k, h4 ema20 74.48k, h4 ema50 75.69k, d1 ema20 77.3k. RSI h1 52 / h4 42 / d1 35. Bear trend intact, coiling under resistance where the resting short sits.
+- Alts: ETH 2,055 (d1 RSI 30, h4 ema20 2,109), SOL 83.9 (d1 RSI 26), XRP 1.058 (d1 RSI 24) - oversold, no fresh shorts. AVAX cooled to 8.55 (+2.3%, h1 RSI 57) above h4 ema20 8.40. NEAR 3.755 +3.5% (funding -53%). PEPE -5.9%.
 - Funding modest; BONK 140% (meme, ignore), EUR +81%, PAXG +48%, NEAR -42%.
-- PAXG 4,035 drifting lower. EUR 1.1138 (h1 RSI 30, 24h low 1.1129) - near 1.112 trigger.
+- PAXG 4,029 drifting lower. EUR 1.1132 (h1 RSI 26 oversold, funding +99%) - at 1.112-1.113 support; no chase short here.
 - BTC levels: res 74.0-74.1k, 74.5-74.8k, 75.75k; sup 73.1k, 72.6k, then ~71.5-72k.
 - Mind-changers: BTC 4h close > 75,000 = bear plan weakening; > 76,000 bear plan off.
 - News: nothing new ("trades heavily under 74.6k, risk mood wary"; worst-November narrative, ~$1.3B weekly outflows).
@@ -46,6 +46,7 @@
 - None held.
 
 ## Session log
+- 2026-11-11T12:53Z | eq 232.42 | BTC 73.97k still chopping; flat. Kept resting BTC short 74,700. No trades (alts oversold, nothing clean).
 - 2026-11-11T10:51Z | eq 232.42 | BTC 73.98k chop grinding up; flat. Kept resting BTC short 74,700. No new trades (AVAX extended, alts oversold).
 - 2026-11-11T08:51Z | eq 232.42 | BTC short stopped 74,087 (+3.22, wick to 74,085). Flat. Placed BTC resting short 74,700 (stop 75,750, TP 72,300, 1.5%, 24h).
 - 2026-11-11T06:52Z | eq 233.72 | BTC 73.68k chop; short +4.65 held, stop 74.05k/TP 71.8k unchanged.
@@ -55,4 +56,3 @@
 - 2026-11-10T22:52Z | eq 233.64 | BTC bounce capped 73.96k; short held.
 - 2026-11-10T20:51Z | eq 233.81 | BTC new low 72.58k then bounce; stop 74.3k -> 74.05k, TP 71.8k.
 - 2026-11-10T16:51Z | eq 235.38 | BTC 4h close 73.14k; stop 74.9k -> 74.3k, TP 71.8k.
-- 2026-11-10T14:52Z | eq 232.13 | Closed BONK carry (funding -19%).
