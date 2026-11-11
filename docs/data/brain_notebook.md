@@ -1,13 +1,13 @@
-# Notebook (updated 2026-11-11T08:51Z)
+# Notebook (updated 2026-11-11T10:51Z)
 
 ## Big picture
-- 08:51Z 11 Nov (input 08:42Z, fresh): BTC 73,702. 30d low 72,585. 4h candles: 04-08Z h 74,022 c 73,977; in-progress 08-12Z h 74,085 l 73,609. Chop 73.1-74.1k for ~18h, under h1 ema50 74.18k, h4 ema20 74.51k, h4 ema50 75.75k, d1 ema20 77.3k. RSI h1 47 / h4 40 / d1 34. Bear trend intact, bounce capped.
-- Alts: ETH 2,058 (d1 RSI 31), SOL 83.1 & XRP 1.058 (d1 RSI ~24, oversold, near 30d lows), DOT 28. AVAX the only strong one (+1.8% 24h, h1 RSI 66, above h4 ema20 8.39). PEPE relative strength fading (-3.4% 24h).
-- Funding modest; BONK 133% (meme, ignore), EUR +75%, PAXG +45%.
-- PAXG 4,046 flat. EUR 1.1145 (h1 RSI 31).
+- 10:51Z 11 Nov (input 10:42Z, fresh): BTC 73,982. 30d low 72,585. Chop 73.1-74.1k for ~20h; last closed 4h c 73,977, in-progress 08-12Z h 74,085. Under h1 ema50 74.15k, h4 ema20 74.54k, h4 ema50 75.76k, d1 ema20 77.3k. RSI h1 52 / h4 42 / d1 35. Bear trend intact, slow grind up toward resistance = where the resting short sits.
+- Alts: ETH 2,059 (d1 RSI 31, h4 ema20 2,115), SOL 83.8, XRP 1.064 small bounces. AVAX standout: 8.705 (+4.9% 24h, at 24h high, h1 RSI 71 = extended, above all h4 emas except ema200 9.19). PEPE weak (-4.2% 24h).
+- Funding modest; BONK 140% (meme, ignore), EUR +81%, PAXG +48%, NEAR -42%.
+- PAXG 4,035 drifting lower. EUR 1.1138 (h1 RSI 30, 24h low 1.1129) - near 1.112 trigger.
 - BTC levels: res 74.0-74.1k, 74.5-74.8k, 75.75k; sup 73.1k, 72.6k, then ~71.5-72k.
 - Mind-changers: BTC 4h close > 75,000 = bear plan weakening; > 76,000 bear plan off.
-- News: nothing new (worst-November narrative, ~$1.3B weekly outflows).
+- News: nothing new ("trades heavily under 74.6k, risk mood wary"; worst-November narrative, ~$1.3B weekly outflows).
 
 ## Strategy for this experiment
 - Goal: grow ~1,000 PLN by 2026-11-21. Equity 232.42 USD (909 PLN, -9.6%; peak 265.7). Closed 9W/22L. ~10 days left: fewer, cleaner trades, each >=2R, risk 1.5-2%.
@@ -22,7 +22,7 @@
 ## Watchlist
 - BTC breakdown: 4h close < 72,500 -> short the retest of 72.6-73.0k (rejection), stop above 73.6k, TP ~70.5k. Cancel the 74.7k resting order if this happens.
 - Alts: no fresh shorts at d1 RSI < 30 (SOL, XRP, DOT oversold). ETH short only on a 2,100-2,115 rejection and only if no BTC short is open/resting (same bet).
-- AVAX: relative-strength long only if BTC reclaims 74.8k with alt breadth; alone, breakouts without breadth fail.
+- AVAX: relative-strength long only if BTC reclaims 74.8k with alt breadth; alone, breakouts without breadth fail. Do not chase at h1 RSI > 70. Pullback long idea: 8.45-8.50 (h1 ema20/ema50) holding + BTC not breaking down; would conflict with BTC short only loosely (different coin, but same market) - max 1.5% risk.
 - Long reversal only after BTC 4h close > 74,800 with alt breadth.
 - PAXG: long only after 4h close > 4,110. EUR: no longs (funding +75%); short only on 4h close < 1.112 retest.
 - Polymarket: list is sports/geopolitics; no edge found.
@@ -46,6 +46,7 @@
 - None held.
 
 ## Session log
+- 2026-11-11T10:51Z | eq 232.42 | BTC 73.98k chop grinding up; flat. Kept resting BTC short 74,700. No new trades (AVAX extended, alts oversold).
 - 2026-11-11T08:51Z | eq 232.42 | BTC short stopped 74,087 (+3.22, wick to 74,085). Flat. Placed BTC resting short 74,700 (stop 75,750, TP 72,300, 1.5%, 24h).
 - 2026-11-11T06:52Z | eq 233.72 | BTC 73.68k chop; short +4.65 held, stop 74.05k/TP 71.8k unchanged.
 - 2026-11-11T04:52Z | eq 233.55 | BTC 73.73k chop; short held, stop/TP unchanged.
