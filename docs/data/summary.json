@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-11T17:55:56Z",
+ "updated": "2026-11-11T18:03:56Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9099,
- "equity_pln": 910.31,
- "return_pct": -9.46,
+ "equity_pln": 911.09,
+ "return_pct": -9.38,
  "max_drawdown_pct": 13.94,
  "control_pln": 998.71,
  "control_trades": 9,
- "hodl_pln": 885.04,
+ "hodl_pln": 884.35,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00307925,
    "entry": 74677.59,
-   "mark": 74464.1,
-   "upnl": 0.6573890824999713,
+   "mark": 74405.7,
+   "upnl": 0.8372172824999982,
    "stop": 75750.0,
    "tp": 72300.0,
    "liq": null,
    "leverage": null,
    "opened": 1794417720000,
    "reason": "Bear-trend re-short at resistance: 74.5-74.8k = h4 ema20 74.51k + 24h high 74.80k + breakdown level of 10 Nov. Limit fill on a bounce into it; stop above h4 ema50 75.75k, TP 72.3k under 30d low 72.58k (~2.3R).",
-   "upnl_pln": 2.57
+   "upnl_pln": 3.27
   }
  ],
  "closed_trades": [
@@ -486,7 +486,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 232.170837,
+ "cash_usd": 232.183522,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -538,11 +538,11 @@
   {
    "symbol": "EURUSDT",
    "notional": 46.48,
-   "earned": 0.0117,
+   "earned": 0.0227,
    "fees": 0.1394,
-   "net_if_closed_now": -0.2672,
-   "funding_pct_per_hour": 0.0237,
-   "funding_apr_pct": 207.6,
+   "net_if_closed_now": -0.2562,
+   "funding_pct_per_hour": 0.02266,
+   "funding_apr_pct": 198.5,
    "opened": 1794415916791,
    "reason": "EUR perp funding has stayed > +75% APR for 4+ sessions and is now +220% APR (0.6%/day): break-even ~1 day at current rate, ~3 days at 80%. Non-meme, low-vol underlying. Close if funding < 30% APR for 2 sessions or negative."
   }
@@ -602,8 +602,8 @@
   }
  ],
  "income_pln": {
-  "funding": 2.19,
-  "carry": -3.34,
+  "funding": 2.2,
+  "carry": -3.3,
   "interest": 1.82
  },
  "cash_rate_pct": 4.014
