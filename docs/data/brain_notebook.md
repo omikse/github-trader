@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-11T12:53Z)
+# Notebook (updated 2026-11-11T14:52Z)
 
 ## Big picture
+- 14:52Z 11 Nov: ENGINE STALLED - input still 12:52Z (2h old), last bot commit 12:57Z "handover". No fresh prices; plan unchanged. Next session: check time_utc first; if fresh, re-evaluate resting order vs any 4h close > 75k.
 - 12:53Z 11 Nov (input 12:47Z, fresh): BTC 73,966. 30d low 72,585. Chop 73.1-74.1k for ~22h; latest closed 4h c 73,921 (h 74,085), in-progress 12-16Z h 74,014. Under h1 ema50 74.14k, h4 ema20 74.48k, h4 ema50 75.69k, d1 ema20 77.3k. RSI h1 52 / h4 42 / d1 35. Bear trend intact, coiling under resistance where the resting short sits.
 - Alts: ETH 2,055 (d1 RSI 30, h4 ema20 2,109), SOL 83.9 (d1 RSI 26), XRP 1.058 (d1 RSI 24) - oversold, no fresh shorts. AVAX cooled to 8.55 (+2.3%, h1 RSI 57) above h4 ema20 8.40. NEAR 3.755 +3.5% (funding -53%). PEPE -5.9%.
 - Funding modest; BONK 140% (meme, ignore), EUR +81%, PAXG +48%, NEAR -42%.
@@ -46,6 +47,7 @@
 - None held.
 
 ## Session log
+- 2026-11-11T14:52Z | eq 232.42 (stale) | Engine stalled 2h (input 12:52Z). No actions; resting BTC short 74,700 kept.
 - 2026-11-11T12:53Z | eq 232.42 | BTC 73.97k still chopping; flat. Kept resting BTC short 74,700. No trades (alts oversold, nothing clean).
 - 2026-11-11T10:51Z | eq 232.42 | BTC 73.98k chop grinding up; flat. Kept resting BTC short 74,700. No new trades (AVAX extended, alts oversold).
 - 2026-11-11T08:51Z | eq 232.42 | BTC short stopped 74,087 (+3.22, wick to 74,085). Flat. Placed BTC resting short 74,700 (stop 75,750, TP 72,300, 1.5%, 24h).
@@ -55,4 +57,3 @@
 - 2026-11-11T00:52Z | eq 234.02 | BTC 73.56k; short +4.99 held.
 - 2026-11-10T22:52Z | eq 233.64 | BTC bounce capped 73.96k; short held.
 - 2026-11-10T20:51Z | eq 233.81 | BTC new low 72.58k then bounce; stop 74.3k -> 74.05k, TP 71.8k.
-- 2026-11-10T16:51Z | eq 235.38 | BTC 4h close 73.14k; stop 74.9k -> 74.3k, TP 71.8k.
