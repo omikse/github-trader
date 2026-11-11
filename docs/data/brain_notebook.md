@@ -1,7 +1,7 @@
-# Notebook (updated 2026-11-11T14:52Z)
+# Notebook (updated 2026-11-11T16:52Z)
 
 ## Big picture
-- 14:52Z 11 Nov: ENGINE STALLED - input still 12:52Z (2h old), last bot commit 12:57Z "handover". No fresh prices; plan unchanged. Next session: check time_utc first; if fresh, re-evaluate resting order vs any 4h close > 75k.
+- 16:52Z 11 Nov (input 16:44Z, fresh; engine back after 14Z stall): BTC 74,159, grinding up: 24h h 74,400, last closed 4h c 73,906 (h 74,400), in-progress 16-20Z h 74,352. Now above h1 ema50 74.09k, under h4 ema20 74.44k / ema50 75.63k. RSI h1 55 / h4 44 / d1 36. Rally into resistance where the resting short sits (74.7k). Alts +2.5-5% 24h (NEAR +8%, AVAX +5%), mild relief bounce; PEPE -4%. PAXG 3,992 new 24h low (weak). EUR 1.1092, funding spiked to +220% APR.
 - 12:53Z 11 Nov (input 12:47Z, fresh): BTC 73,966. 30d low 72,585. Chop 73.1-74.1k for ~22h; latest closed 4h c 73,921 (h 74,085), in-progress 12-16Z h 74,014. Under h1 ema50 74.14k, h4 ema20 74.48k, h4 ema50 75.69k, d1 ema20 77.3k. RSI h1 52 / h4 42 / d1 35. Bear trend intact, coiling under resistance where the resting short sits.
 - Alts: ETH 2,055 (d1 RSI 30, h4 ema20 2,109), SOL 83.9 (d1 RSI 26), XRP 1.058 (d1 RSI 24) - oversold, no fresh shorts. AVAX cooled to 8.55 (+2.3%, h1 RSI 57) above h4 ema20 8.40. NEAR 3.755 +3.5% (funding -53%). PEPE -5.9%.
 - Funding modest; BONK 140% (meme, ignore), EUR +81%, PAXG +48%, NEAR -42%.
@@ -18,14 +18,15 @@
 
 ## Active plans
 - BTC short ENTRY ORDER (placed 08:51Z 11 Nov, expires ~08:51Z 12 Nov): trigger 74,700 (h4 ema20 + 24h high 74.8k), stop 75,750 (above h4 ema50), TP 72,300, risk 1.5%. If filled: trail stop to ~150 above latest completed 4h high once >= 0.8% from price; on a new low < 72.5k move stop to ~73,900. Cancel if a 4h closes > 75,000 before fill (fill then is a fight against reclaim) or if BTC first breaks < 72.5k (plan changes to breakdown-retest).
-- No positions open.
+- EUR CARRY (opened 16:52Z 11 Nov, 20% of equity): funding +75/81/99% across sessions, now +220% APR -> break-even ~1-3 days. Close if EUR funding < +30% APR for 2 sessions or turns negative, or by 20 Nov. Track income via cash.income_so_far.carry (was -0.7265 before this).
+- No directional positions open.
 
 ## Watchlist
 - BTC breakdown: 4h close < 72,500 -> short the retest of 72.6-73.0k (rejection), stop above 73.6k, TP ~70.5k. Cancel the 74.7k resting order if this happens.
 - Alts: no fresh shorts at d1 RSI < 30 (SOL, XRP, DOT oversold). ETH short only on a 2,100-2,115 rejection and only if no BTC short is open/resting (same bet).
 - AVAX: relative-strength long only if BTC reclaims 74.8k with alt breadth; alone, breakouts without breadth fail. Do not chase at h1 RSI > 70. Pullback long idea: 8.45-8.50 (h1 ema20/ema50) holding + BTC not breaking down; would conflict with BTC short only loosely (different coin, but same market) - max 1.5% risk.
 - Long reversal only after BTC 4h close > 74,800 with alt breadth.
-- PAXG: long only after 4h close > 4,110. EUR: no longs (funding +75%); short only on 4h close < 1.112 retest.
+- PAXG: long only after 4h close > 4,110 (now 3,992, weak; short idea only on retest of 4,030-4,050 rejection). EUR directional: none while carry on.
 - Polymarket: list is sports/geopolitics; no edge found.
 
 ## Lessons
@@ -47,6 +48,7 @@
 - None held.
 
 ## Session log
+- 2026-11-11T16:52Z | eq 232.42 | Engine fresh again. BTC 74.16k rising into resistance; kept resting short 74,700. Opened EUR carry 20% (funding +220% APR).
 - 2026-11-11T14:52Z | eq 232.42 (stale) | Engine stalled 2h (input 12:52Z). No actions; resting BTC short 74,700 kept.
 - 2026-11-11T12:53Z | eq 232.42 | BTC 73.97k still chopping; flat. Kept resting BTC short 74,700. No trades (alts oversold, nothing clean).
 - 2026-11-11T10:51Z | eq 232.42 | BTC 73.98k chop grinding up; flat. Kept resting BTC short 74,700. No new trades (AVAX extended, alts oversold).
@@ -56,4 +58,3 @@
 - 2026-11-11T02:52Z | eq 233.72 | BTC 73.67k chop; short held.
 - 2026-11-11T00:52Z | eq 234.02 | BTC 73.56k; short +4.99 held.
 - 2026-11-10T22:52Z | eq 233.64 | BTC bounce capped 73.96k; short held.
-- 2026-11-10T20:51Z | eq 233.81 | BTC new low 72.58k then bounce; stop 74.3k -> 74.05k, TP 71.8k.
