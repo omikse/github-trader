@@ -1,5 +1,5 @@
 {
- "cash": 232.41555442684847,
+ "cash": 232.41567870593033,
  "positions": {},
  "closed": [
   {
@@ -412,9 +412,23 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794386726656,
- "next_id": 97,
- "orders": [],
+ "last_ms": 1794387146765,
+ "next_id": 98,
+ "orders": [
+  {
+   "id": "o97",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00307925,
+   "trigger": 74700,
+   "direction": "above",
+   "stop": 75750.0,
+   "tp": 72300.0,
+   "placed": 1794387146765,
+   "expires": 1794473546765,
+   "note": "Bear-trend re-short at resistance: 74.5-74.8k = h4 ema20 74.51k + 24h high 74.80k + breakdown level of 10 Nov. Limit fill on a bounce into it; stop above h4 ema50 75.75k, TP 72.3k under 30d low 72.58k (~2.3R)."
+  }
+ ],
  "order_events": [
   {
    "id": "o2",
@@ -1049,6 +1063,6 @@
  "income": {
   "funding": 0.5606036853986536,
   "carry": -0.7265072911517432,
-  "interest": 0.45569321621611986
+  "interest": 0.4558174952979826
  }
 }

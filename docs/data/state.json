@@ -27,7 +27,7 @@
   "2026-11-06": 11,
   "2026-11-09": 2,
   "2026-11-10": 12,
-  "2026-11-11": 4
+  "2026-11-11": 5
  },
  "closed_trades": [
   {
@@ -430,26 +430,11 @@
    "reason": "Short retest of broken 74.8-75.5k base (two 4h rejections at 75.47-75.50k) under h4 ema20 75.49k after confirmed 4h-close breakdown; stop above 76.3k 4h structure and h4 ema50, TP 72.6k below 30d low 73.44k (~2.5R). Re-send: prior two decisions were dropped by engine (decision_max_age 45 min during stall)."
   }
  ],
- "last_closed_check_ms": 1794386726656,
+ "last_closed_check_ms": 1794387146765,
  "day": "2026-11-11",
  "day_start_equity": 233.75603327668688,
  "paused_day": null,
- "pending_events": [
-  {
-   "type": "position_closed",
-   "id": "t96",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "qty": 0.0029075900000000003,
-   "entry": 75277.41,
-   "exit": 74087.025,
-   "pnl": 3.2223,
-   "time": 1794384480000,
-   "why": "stop",
-   "opened": 1794269280000,
-   "reason": "Short retest of broken 74.8-75.5k base (two 4h rejections at 75.47-75.50k) under h4 ema20 75.49k after confirmed 4h-close breakdown; stop above 76.3k 4h structure and h4 ema50, TP 72.6k below 30d low 73.44k (~2.5R). Re-send: prior two decisions were dropped by engine (decision_max_age 45 min during stall)."
-  }
- ],
+ "pending_events": [],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 255.43070451799173,
@@ -458,7 +443,7 @@
   "trades": 9,
   "wins": 5
  },
- "last_btc": 73672.3,
+ "last_btc": 73664.2,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -521,6 +506,6 @@
   "o93:expired",
   "o94:filled"
  ],
- "last_decision_id": "2026-11-11T06:52:30Z",
+ "last_decision_id": "2026-11-11T08:51:31Z",
  "cash_rate_day": "2026-11-11"
 }

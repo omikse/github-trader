@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T08:45:26Z",
+ "updated": "2026-11-11T08:52:26Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,7 +10,7 @@
  "max_drawdown_pct": 13.94,
  "control_pln": 998.71,
  "control_trades": 9,
- "hodl_pln": 875.63,
+ "hodl_pln": 875.53,
  "positions": [],
  "closed_trades": [
   {
@@ -446,22 +446,52 @@
  ],
  "trade_count": 31,
  "win_rate_pct": 29.0,
- "brain_calls_today": 4,
+ "brain_calls_today": 5,
  "last_decision": {
-  "time": "2026-11-11T06:52:11Z",
+  "time": "2026-11-11T08:52:26Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-11T06:52:30Z",
+  "decided_at": "2026-11-11T08:51:31Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 234.26,
-  "equity_pln": 915.94,
-  "events": [],
-  "market_view": "BTC 73.68k still chopping 73.1-73.96k for ~14h under h1 ema50 74.2k and h4 ema20 74.6k; bear trend intact but no follow-through below 72.6k. Alts oversold (SOL/XRP d1 RSI ~24).",
-  "watch_next": "BTC new low <72.6k (trail stop to ~73.7k) or 4h close >74.1k (stop). 12:00Z time-stop: close short if no new low by then.",
-  "news": "No new catalyst; 'worst November in years' narrative and second week of ~$1.3B crypto fund outflows.",
-  "actions": []
+  "equity_usd": 232.42,
+  "equity_pln": 908.72,
+  "events": [
+   {
+    "type": "position_closed",
+    "id": "t96",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "qty": 0.0029075900000000003,
+    "entry": 75277.41,
+    "exit": 74087.025,
+    "pnl": 3.2223,
+    "time": 1794384480000,
+    "why": "stop",
+    "opened": 1794269280000,
+    "reason": "Short retest of broken 74.8-75.5k base (two 4h rejections at 75.47-75.50k) under h4 ema20 75.49k after confirmed 4h-close breakdown; stop above 76.3k 4h structure and h4 ema50, TP 72.6k below 30d low 73.44k (~2.5R). Re-send: prior two decisions were dropped by engine (decision_max_age 45 min during stall)."
+   }
+  ],
+  "market_view": "BTC short (75,277) was stopped at 74,087 for +3.22 by a 74.08k wick of the 04-08Z 4h candle; price back at 73.7k inside the 73.1-74.1k chop. Daily/4h trend still down (under h4 ema20 74.5k, d1 RSI 34); alts weak except AVAX.",
+  "watch_next": "Whether BTC rallies into 74.5-74.8k (h4 ema20 / 24h high) and the resting short fills, or loses 72.6k on a 4h close for a breakdown-retest short.",
+  "news": "No new catalyst: 'worst November in 7 years' narrative and ~1.3B weekly fund outflows continue.",
+  "actions": [
+   {
+    "type": "entry_order",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "trigger": 74700,
+    "stop": 75750,
+    "take_profit": 72300,
+    "risk_pct": 0.015,
+    "expires_hours": 24,
+    "reason": "Bear-trend re-short at resistance: 74.5-74.8k = h4 ema20 74.51k + 24h high 74.80k + breakdown level of 10 Nov. Limit fill on a bounce into it; stop above h4 ema50 75.75k, TP 72.3k under 30d low 72.58k (~2.3R).",
+    "invalidation": "4h close above 75,000 (trend reclaim) or BTC 4h close > h4 ema50 ~75.75k.",
+    "result": "done",
+    "detail": "short 0.00307925 when price goes above 74700 (risk 1.5%, stop 75750.0, target 72300.0, expires in 24h) ok"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 232.415554,
+ "cash_usd": 232.415679,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -487,7 +517,19 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [],
+ "orders": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "trigger": 74700,
+   "direction": "above",
+   "stop": 75750.0,
+   "tp": 72300.0,
+   "qty": 0.00307925,
+   "expires": 1794473546765,
+   "note": "Bear-trend re-short at resistance: 74.5-74.8k = h4 ema20 74.51k + 24h high 74.80k + breakdown level of 10 Nov. Limit fill on a bounce into it; stop above h4 ema50 75.75k, TP 72.3k under 30d low 72.58k (~2.3R)."
+  }
+ ],
  "balance_warning": false,
  "other_value_usd": 0,
  "predictions": [],
