@@ -1,9 +1,17 @@
 {
-  "id": "2026-11-12T02:52:30Z",
-  "decided_at": "2026-11-12T02:52:30Z",
-  "model": "claude-opus-5-5",
-  "market_view": "BTC 73.73k grinding lower under h1 ema20/50 and h4 ema20 after rejection at 74.75k; lower highs intact. Alts flat, AVAX the only relative strength; PAXG and EUR making new lows.",
-  "news": "Nothing new: worst-November narrative, wary risk mood.",
-  "watch_next": "After 00-04Z 4h closes, trail BTC stop to ~150-200 above its high (~74.3k). New low < 72.5k -> stop to ~73.9k. EUR funding stays > 30% APR.",
-  "actions": []
+ "id": "2026-11-12T04:55:30Z",
+ "decided_at": "2026-11-12T04:55:30Z",
+ "model": "claude-opus-5-5",
+ "market_view": "BTC 73.68k grinding lower with a 3rd straight lower 4h high (74,754 > 74,718 > 74,116); under h1/h4 emas, d1 RSI 35. Alts flat, ETH weak, AVAX relative strength. Short trend intact.",
+ "news": "Nothing new; worst-November-in-years narrative, risk mood wary.",
+ "watch_next": "04-08Z 4h high for next trail (<73.9k -> stop ~74,050); break < 73.3k/72.6k toward TP 72,300; EUR funding (close carry if < 30% APR 2 sessions).",
+ "actions": [
+  {
+   "type": "move_stop",
+   "symbol": "BTCUSDT",
+   "stop": 74300,
+   "take_profit": 72300,
+   "reason": "Trail per plan to ~185 above completed 00-04Z 4h high 74,116 (lower-high sequence); locks profit on short from 74,678."
+  }
+ ]
 }
