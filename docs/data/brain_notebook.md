@@ -1,8 +1,8 @@
-# Notebook (updated 2026-11-12T04:55Z)
+# Notebook (updated 2026-11-12T06:50Z)
 
 ## Big picture
+- 06:50Z 12 Nov (input 06:46Z, fresh): BTC 73,487, grind lower continues. 04-08Z 4h in progress h 73,764 l 73,442 (would be 4th lower high). Under h1 ema20/50 (73.83/74.01k), h4 ema20 74.26k. RSI h1 41 / h4 39 / d1 34. ETH 2,043, PAXG 3,961 new low, EUR 1.1073 (funding back up 205% APR). PEPE -13% 24h. News: nothing new (worst-November narrative).
 - 04:55Z 12 Nov (input 04:46Z, fresh): BTC 73,677, slow grind lower. Completed 00-04Z 4h h 74,116 c 73,707 (3rd lower high: 74,754 > 74,718 > 74,116). Under h1 ema20/50 (73.91/74.06k), h4 ema20 74.28k. RSI h1 45 / h4 40 / d1 35. ETH 2,049 (d1 RSI 30). AVAX 8.575 holding above h4 emas. EUR 1.1077 (RSI 29), funding fell to 131% APR. News: nothing new.
-- 02:52Z 12 Nov (input 02:41Z, fresh): BTC 73,731, slow grind lower. Completed 20-24Z 4h h 74,718 c 73,928; 00-04Z in progress h 74,116 l 73,500. Under h1 ema20/50 (73.96/74.09k) and h4 ema20 74.35k. RSI h1 46 / h4 41 / d1 35. Alts flat; AVAX 8.58 holding above h4 emas (relative strength). PAXG 3,967 new low (h1 RSI 28), EUR 1.1072 (h1 RSI 24). EUR funding 214% APR. News: nothing new.
 - Alts: ETH 2,055 (d1 RSI 30, h4 ema20 2,109), SOL 83.9 (d1 RSI 26), XRP 1.058 (d1 RSI 24) - oversold, no fresh shorts. AVAX cooled to 8.55 (+2.3%, h1 RSI 57) above h4 ema20 8.40. NEAR 3.755 +3.5% (funding -53%). PEPE -5.9%.
 - Funding modest; BONK 140% (meme, ignore), EUR +81%, PAXG +48%, NEAR -42%.
 - PAXG 4,029 drifting lower. EUR 1.1132 (h1 RSI 26 oversold, funding +99%) - at 1.112-1.113 support; no chase short here.
@@ -18,7 +18,7 @@
 
 ## Active plans
 - BTC SHORT (filled 74,678 at 17:22Z 11 Nov, risk 1.5%): stop 74,300 (trailed 04:55Z 12 Nov: ~185 above completed 00-04Z 4h high 74,116; locks ~+1.17 USD min), TP 72,300 (under 30d low 72.58k). Thesis: bear-trend re-short of relief bounce at 74.5-74.8k resistance. Manage: if a 4h CLOSES > 75,000 -> close at market (reclaim, reason gone). Keep trailing to ~150-200 above each new completed 4h high (lower highs only). Next trail after 04-08Z closes: if its high stays < ~73.9k, stop -> ~74,050-74,100 (still >=150 above high). New low < 72.5k -> stop to ~73,900. Time limit: no progress below 73.9k by ~12Z 13 Nov -> close/scratch. Don't stack ETH/alt shorts on top (same bet).
-- EUR CARRY (opened 16:52Z 11 Nov, 20% equity, notional 46.5): funding +220 -> 198% APR. Close if funding < +30% APR for 2 sessions or negative, or by 20 Nov. 20:52Z: funding 213% APR, net-if-closed -0.23. 04:55Z: 131% APR (falling), net -0.14, earned 0.14. Still >60%: keep.
+- EUR CARRY (opened 16:52Z 11 Nov, 20% equity, notional 46.5): funding +220 -> 198% APR. Close if funding < +30% APR for 2 sessions or negative, or by 20 Nov. 20:52Z: funding 213% APR, net-if-closed -0.23. 04:55Z: 131% APR, 06:50Z: 205% APR, earned 0.15, net -0.13. Keep.
 
 ## Watchlist
 - BTC breakdown < 72,500 while short is on: trail per plan; no second BTC entry unless current short is at breakeven stop (pyramid).
@@ -47,6 +47,7 @@
 - None held.
 
 ## Session log
+- 2026-11-12T06:50Z | eq 236.03 | BTC 73.49k, short +3.67 held (stop 74,300/TP 72,300); 04-08Z 4h not closed yet, trail after it closes. EUR carry kept (205% APR). No actions.
 - 2026-11-12T04:55Z | eq 235.43 | BTC 73.68k, short +3.10. Trailed stop 74,950 -> 74,300 (above 00-04Z 4h high 74,116). TP 72,300. EUR carry kept (131% APR).
 - 2026-11-12T02:52Z | eq 235.22 | BTC 73.73k grinding lower, short +2.91 held (stop 74,950/TP 72,300). EUR carry kept (214% APR). No actions.
 - 2026-11-12T00:52Z | eq 234.47 | BTC 73.96k quiet, short +2.20 held (stop 74,950/TP 72,300). EUR carry kept (227% APR). No actions.
@@ -56,4 +57,3 @@
 - 2026-11-11T16:52Z | eq 232.42 | Engine fresh again. BTC 74.16k rising into resistance; kept resting short 74,700. Opened EUR carry 20% (funding +220% APR).
 - 2026-11-11T14:52Z | eq 232.42 (stale) | Engine stalled 2h (input 12:52Z). No actions; resting BTC short 74,700 kept.
 - 2026-11-11T12:53Z | eq 232.42 | BTC 73.97k still chopping; flat. Kept resting BTC short 74,700. No trades (alts oversold, nothing clean).
-- 2026-11-11T10:51Z | eq 232.42 | BTC 73.98k chop grinding up; flat. Kept resting BTC short 74,700. No new trades (AVAX extended, alts oversold).
