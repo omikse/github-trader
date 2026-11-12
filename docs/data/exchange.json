@@ -1,5 +1,5 @@
 {
- "cash": 240.87141581907304,
+ "cash": 240.87151976979328,
  "positions": {},
  "closed": [
   {
@@ -425,9 +425,23 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794494736847,
- "next_id": 99,
- "orders": [],
+ "last_ms": 1794495156973,
+ "next_id": 100,
+ "orders": [
+  {
+   "id": "o99",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00350737,
+   "trigger": 72850,
+   "direction": "above",
+   "stop": 73800.0,
+   "tp": 70600.0,
+   "placed": 1794495156973,
+   "expires": 1794581556973,
+   "note": "Retest short of the broken 30d low 72.6-72.9k after BTC broke down to 71,657; oversold now (h1 RSI 22) so not chasing, wait for the bounce. Stop 73,800 ~200 above 08-12Z 4h lower high 73,594; TP 70,600 toward the 70k round (~2.4R). Same template as the +8.30 short."
+  }
+ ],
  "order_events": [
   {
    "id": "o2",
@@ -1080,6 +1094,6 @@
  "income": {
   "funding": 0.6136011224010989,
   "carry": -0.6541369212409733,
-  "interest": 0.4815347682313336
+  "interest": 0.48163871895159305
  }
 }
