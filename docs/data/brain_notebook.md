@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-12T16:51Z)
+# Notebook (updated 2026-11-12T18:52Z)
 
 ## Big picture
+- 18:52Z 12 Nov: ENGINE STALLED - input stuck at 16:56Z (last bot commit 17:01Z 'handover'), no live prices reachable. News: Fed-hike fears + ETF outflows keep BTC pressured. Plan unchanged.
 - 16:45Z 12 Nov (input 16:41Z, fresh): BTC 71,594, new 30d low 71,133 (12-16Z 4h closed h 73,058 l 71,133 c 71,630 = 6th lower 4h high). 16-20Z 4h in progress, basing 71.45-72.13k. Under h1 ema20/50 (72.96/73.54k), h4 ema20 73.68k. Oversold: RSI h1 21 / h4 27 / d1 30. Alt funding mostly negative (ADA -46, DOT -36, WIF -34% APR) = crowded shorts; BONK flipped to +165% (meme, ignore). ETH 2,002, SOL 81.1, PAXG 3,863 (still falling with crypto), EUR 1.105 funding 106%.
 - Trend: bearish on 4h/d1 (worst-November narrative, ETF outflows). Broken 72.6k-72.9k = new resistance; then 73.6k, 74.0k.
 - BTC support below: 71.1k (today's low), then 70k round, 69-70k.
@@ -44,6 +45,7 @@
 - None held.
 
 ## Session log
+- 2026-11-12T18:52Z | eq 240.88 (input stale ~2h, engine stalled since 17:01Z) | No fresh prices; kept retest short entry 72,850/73,800/70,600 and EUR carry. No actions. Next session: if input fresh, re-check BTC vs 72.6-73.06k zone.
 - 2026-11-12T16:51Z | eq 240.88 | BTC 71.59k, new low 71,133, oversold (h1 RSI 21). Kept retest short entry 72,850/73,800/70,600. EUR carry kept (106% APR). No actions.
 - 2026-11-12T14:51Z | eq 240.87 | BTC short TP 71,900 hit (+8.30). BTC 71.99k oversold (h1 RSI 22). Placed retest short entry 72,850 / stop 73,800 / TP 70,600, 1.5%. EUR carry kept (73% APR).
 - 2026-11-12T12:55Z | eq 238.12 | BTC 72.83k, short +5.70. Trailed stop 73,950 -> 73,790, TP 72,300 -> 71,900. EUR carry kept (84% APR).
@@ -53,4 +55,3 @@
 - 2026-11-12T04:55Z | eq 235.43 | BTC 73.68k, short +3.10. Trailed stop 74,950 -> 74,300 (above 00-04Z 4h high 74,116). TP 72,300. EUR carry kept (131% APR).
 - 2026-11-12T02:52Z | eq 235.22 | BTC 73.73k grinding lower, short +2.91 held (stop 74,950/TP 72,300). EUR carry kept (214% APR). No actions.
 - 2026-11-12T00:52Z | eq 234.47 | BTC 73.96k quiet, short +2.20 held (stop 74,950/TP 72,300). EUR carry kept (227% APR). No actions.
-- 2026-11-11T22:53Z | eq 234.58 | BTC rejected 74.75k -> 73.9k, short +2.34. Trailed stop 75,750 -> 74,950 (above 4h high 74,754). TP 72,300. EUR carry kept (213% APR).
