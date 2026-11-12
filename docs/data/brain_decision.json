@@ -1,9 +1,17 @@
 {
-  "id": "2026-11-12T06:50:30Z",
-  "decided_at": "2026-11-12T06:50:30Z",
+  "id": "2026-11-12T08:52:00Z",
+  "decided_at": "2026-11-12T08:52:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 73.49k grinding lower under h1/h4 emas, lower highs on 4h; short +3.67 with stop 74,300 locking profit. Alts weak but oversold on daily; nothing new clean.",
-  "news": "No new catalyst; worst-November narrative and ETF outflows persist.",
-  "watch_next": "After 04-08Z 4h closes (high ~73.76k): trail BTC stop to ~73,950-74,000 if high stays < 73.8k; < 72.5k -> stop 73,900. EUR carry funding (keep while > 60% APR).",
-  "actions": []
+  "market_view": "BTC 73.47k bleeding slowly: four consecutive lower 4h highs (latest 73,764), under h1/h4 emas, d1 RSI 34. Alts oversold, PAXG dumping to new lows. Short thesis intact.",
+  "news": "Nothing new: worst-November narrative, ETF outflows.",
+  "watch_next": "08-12Z 4h high (trail to ~73,850 if < 73.6k); break of 73.3k/72.6k toward TP 72.3k; 4h close > 75k exits.",
+  "actions": [
+    {
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 74080,
+      "take_profit": 72300,
+      "reason": "Trail behind 4th lower 4h high 73,764 (+~315), just under prior 4h high 74,116 and above h1 ema50 73.97k; locks ~+1.84 USD."
+    }
+  ]
 }
