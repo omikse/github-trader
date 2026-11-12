@@ -1,34 +1,32 @@
 {
- "updated": "2026-11-12T14:21:36Z",
+ "updated": "2026-11-12T14:29:36Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9676,
- "equity_pln": 954.92,
- "return_pct": -6.4,
+ "equity_pln": 955.68,
+ "return_pct": -6.33,
  "max_drawdown_pct": 13.94,
  "control_pln": 1013.45,
  "control_trades": 9,
- "hodl_pln": 868.29,
- "positions": [
+ "hodl_pln": 864.66,
+ "positions": [],
+ "closed_trades": [
   {
+   "id": "t98",
    "symbol": "BTCUSDT",
    "side": "short",
-   "size": 0.00307925,
+   "qty": 0.00307925,
    "entry": 74677.59,
-   "mark": 72001.4,
-   "upnl": 8.240658057500006,
-   "stop": 73790.0,
-   "tp": 71900.0,
-   "liq": null,
-   "leverage": null,
+   "exit": 71900.0,
+   "pnl": 8.3047,
+   "time": 1794493260000,
+   "why": "target",
    "opened": 1794417720000,
    "reason": "Bear-trend re-short at resistance: 74.5-74.8k = h4 ema20 74.51k + 24h high 74.80k + breakdown level of 10 Nov. Limit fill on a bounce into it; stop above h4 ema50 75.75k, TP 72.3k under 30d low 72.58k (~2.3R).",
-   "upnl_pln": 32.7
-  }
- ],
- "closed_trades": [
+   "pnl_pln": 32.95
+  },
   {
    "id": "t96",
    "symbol": "BTCUSDT",
@@ -460,8 +458,8 @@
    "pnl_pln": -21.42
   }
  ],
- "trade_count": 31,
- "win_rate_pct": 29.0,
+ "trade_count": 32,
+ "win_rate_pct": 31.2,
  "brain_calls_today": 7,
  "last_decision": {
   "time": "2026-11-12T12:53:37Z",
@@ -487,7 +485,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 232.439934,
+ "cash_usd": 240.871178,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {

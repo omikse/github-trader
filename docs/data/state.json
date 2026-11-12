@@ -429,13 +429,41 @@
    "why": "stop",
    "opened": 1794269280000,
    "reason": "Short retest of broken 74.8-75.5k base (two 4h rejections at 75.47-75.50k) under h4 ema20 75.49k after confirmed 4h-close breakdown; stop above 76.3k 4h structure and h4 ema50, TP 72.6k below 30d low 73.44k (~2.5R). Re-send: prior two decisions were dropped by engine (decision_max_age 45 min during stall)."
+  },
+  {
+   "id": "t98",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00307925,
+   "entry": 74677.59,
+   "exit": 71900.0,
+   "pnl": 8.3047,
+   "time": 1794493260000,
+   "why": "target",
+   "opened": 1794417720000,
+   "reason": "Bear-trend re-short at resistance: 74.5-74.8k = h4 ema20 74.51k + 24h high 74.80k + breakdown level of 10 Nov. Limit fill on a bounce into it; stop above h4 ema50 75.75k, TP 72.3k under 30d low 72.58k (~2.3R)."
   }
  ],
- "last_closed_check_ms": 1794493296859,
+ "last_closed_check_ms": 1794493776857,
  "day": "2026-11-12",
  "day_start_equity": 234.4708201349391,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "position_closed",
+   "id": "t98",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00307925,
+   "entry": 74677.59,
+   "exit": 71900.0,
+   "pnl": 8.3047,
+   "time": 1794493260000,
+   "why": "target",
+   "opened": 1794417720000,
+   "reason": "Bear-trend re-short at resistance: 74.5-74.8k = h4 ema20 74.51k + 24h high 74.80k + breakdown level of 10 Nov. Limit fill on a bounce into it; stop above h4 ema50 75.75k, TP 72.3k under 30d low 72.58k (~2.3R)."
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 255.43070451799173,
@@ -444,7 +472,7 @@
   "trades": 9,
   "wins": 5
  },
- "last_btc": 71992.5,
+ "last_btc": 71691.8,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
