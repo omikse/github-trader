@@ -445,11 +445,22 @@
    "reason": "Bear-trend re-short at resistance: 74.5-74.8k = h4 ema20 74.51k + 24h high 74.80k + breakdown level of 10 Nov. Limit fill on a bounce into it; stop above h4 ema50 75.75k, TP 72.3k under 30d low 72.58k (~2.3R)."
   }
  ],
- "last_closed_check_ms": 1794538330878,
+ "last_closed_check_ms": 1794538810740,
  "day": "2026-11-13",
  "day_start_equity": 240.92574222155918,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_cancelled",
+   "id": "o99",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 72850,
+   "time": 1794538330878,
+   "detail": "cancelled by the brain"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 255.43070451799173,
@@ -458,7 +469,7 @@
   "trades": 9,
   "wins": 5
  },
- "last_btc": 70061.8,
+ "last_btc": 70147.5,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -520,7 +531,8 @@
   "o91:expired",
   "o93:expired",
   "o94:filled",
-  "o97:filled"
+  "o97:filled",
+  "o99:cancelled"
  ],
  "last_decision_id": "2026-11-13T02:51:00Z",
  "cash_rate_day": "2026-11-13"
