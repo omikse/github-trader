@@ -1,9 +1,12 @@
 {
-  "id": "2026-11-13T12:54:30Z",
-  "decided_at": "2026-11-13T12:54:30Z",
+  "id": "2026-11-13T15:48:30Z",
+  "decided_at": "2026-11-13T15:48:30Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 69.27k basing in a tight 68.5-69.5k range above the 67.5k sweep low; 4h/d1 bearish and oversold. Relief retest toward the 70k broken level (= h1 ema20) is still the setup for the resting short.",
-  "news": "",
-  "watch_next": "Fill/rejection at 70,050; BTC 4h close > 71k = cancel short order; EUR funding < 30% APR (2 sessions -> close carry).",
-  "actions": []
+  "market_view": "BTC relief bounce reached 70,190, filled our 70,029 retest short and rejected; price back at 68.1k testing the 67.5k low, trend bearish on 4h/d1. Short is ~2R in profit, so lock in risk reduction above the rejection high.",
+  "news": "No fresh catalyst found; ongoing ETF outflows / risk-off backdrop.",
+  "watch_next": "Whether BTC breaks 67.5k toward 66.8k TP; trail stop above next completed 4h lower high; EUR funding vs 30% APR line.",
+  "actions": [
+    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 70350, "take_profit": 66800,
+     "reason": "Trail: stop ~160 above the 70,190 relief-bounce rejection high (beyond round 70k to avoid sweep), cutting risk from 1.5% to ~0.5% while the short is ~2R up. TP stays below the 67.5k sweep low."}
+  ]
 }
