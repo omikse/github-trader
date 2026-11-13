@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-13T15:45:41Z",
+ "updated": "2026-11-13T15:47:41Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9852,
- "equity_pln": 987.06,
- "return_pct": -3.68,
+ "equity_pln": 983.84,
+ "return_pct": -3.99,
  "max_drawdown_pct": 13.94,
  "control_pln": 1017.94,
  "control_trades": 9,
- "hodl_pln": 826.16,
+ "hodl_pln": 828.66,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0036991100000000002,
    "entry": 70028.985,
-   "mark": 68173.0,
-   "upnl": 6.865492673350003,
-   "stop": 70950.0,
+   "mark": 68403.1,
+   "upnl": 6.014327462349981,
+   "stop": 70350.0,
    "tp": 66800.0,
    "liq": null,
    "leverage": null,
    "opened": 1794577080000,
    "reason": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short.",
-   "upnl_pln": 27.36
+   "upnl_pln": 23.97
   }
  ],
  "closed_trades": [
@@ -476,33 +476,32 @@
  ],
  "trade_count": 32,
  "win_rate_pct": 31.2,
- "brain_calls_today": 7,
+ "brain_calls_today": 8,
  "last_decision": {
-  "time": "2026-11-13T15:29:41Z",
+  "time": "2026-11-13T15:47:41Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-13T12:54:30Z",
+  "decided_at": "2026-11-13T15:48:30Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 246.35,
-  "equity_pln": 981.77,
-  "events": [
+  "equity_usd": 246.94,
+  "equity_pln": 984.12,
+  "events": [],
+  "market_view": "BTC relief bounce reached 70,190, filled our 70,029 retest short and rejected; price back at 68.1k testing the 67.5k low, trend bearish on 4h/d1. Short is ~2R in profit, so lock in risk reduction above the rejection high.",
+  "watch_next": "Whether BTC breaks 67.5k toward 66.8k TP; trail stop above next completed 4h lower high; EUR funding vs 30% APR line.",
+  "news": "No fresh catalyst found; ongoing ETF outflows / risk-off backdrop.",
+  "actions": [
    {
-    "type": "order_filled",
-    "id": "o101",
+    "type": "move_stop",
     "symbol": "BTCUSDT",
-    "side": "short",
-    "status": "filled",
-    "trigger": 70050,
-    "time": 1794577080000,
-    "detail": "filled at 70029"
+    "stop": 70350,
+    "take_profit": 66800,
+    "reason": "Trail: stop ~160 above the 70,190 relief-bounce rejection high (beyond round 70k to avoid sweep), cutting risk from 1.5% to ~0.5% while the short is ~2R up. TP stays below the 67.5k sweep low.",
+    "result": "done",
+    "detail": "stop 70350.0, target 66800.0"
    }
-  ],
-  "market_view": "BTC 69.27k basing in a tight 68.5-69.5k range above the 67.5k sweep low; 4h/d1 bearish and oversold. Relief retest toward the 70k broken level (= h1 ema20) is still the setup for the resting short.",
-  "watch_next": "Fill/rejection at 70,050; BTC 4h close > 71k = cancel short order; EUR funding < 30% APR (2 sessions -> close carry).",
-  "news": "",
-  "error": "not executed: decision is 155 min old (limit 45)"
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 240.868923,
+ "cash_usd": 240.868951,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
