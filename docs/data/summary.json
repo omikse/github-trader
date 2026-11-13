@@ -1,16 +1,16 @@
 {
- "updated": "2026-11-13T06:23:10Z",
+ "updated": "2026-11-13T07:12:31Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9676,
- "equity_pln": 956.04,
+ "equity_pln": 956.07,
  "return_pct": -6.29,
  "max_drawdown_pct": 13.94,
  "control_pln": 1013.45,
  "control_trades": 9,
- "hodl_pln": 827.47,
+ "hodl_pln": 833.92,
  "positions": [],
  "closed_trades": [
   {
@@ -460,55 +460,33 @@
  ],
  "trade_count": 32,
  "win_rate_pct": 31.2,
- "brain_calls_today": 3,
+ "brain_calls_today": 4,
  "last_decision": {
-  "time": "2026-11-13T04:52:10Z",
+  "time": "2026-11-13T07:12:31Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-13T04:52:30Z",
+  "decided_at": "2026-11-13T06:52:43Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 240.95,
-  "equity_pln": 955.99,
+  "equity_usd": 240.97,
+  "equity_pln": 956.07,
   "events": [
    {
     "type": "order_cancelled",
-    "id": "o99",
+    "id": "o100",
     "symbol": "BTCUSDT",
     "side": "short",
     "status": "cancelled",
-    "trigger": 72850,
-    "time": 1794538330878,
+    "trigger": 71450,
+    "time": 1794545530877,
     "detail": "cancelled by the brain"
    }
   ],
-  "market_view": "BTC flushed 71.4k -> 68.5k (new 30d low, lowest since late 2024) in the 00-04Z 4h; h1 RSI 10, h4 17, d1 25 = extreme oversold inside a clean bear trend. No chase; the broken 70k round level is the new retest zone for a short.",
-  "watch_next": "Did BTC bounce into 69.6-70.3k and reject (short filled)? Or reclaim 71.4k (bear plan weakening)? EUR carry funding (108% APR).",
-  "news": "BTC lost 0k amid ETF outflow streak, AI/tech-driven risk-off and >B long liquidations earlier this week; hotter CPI on 10 Nov.",
-  "actions": [
-   {
-    "type": "cancel_order",
-    "symbol": "BTCUSDT",
-    "reason": "Re-anchor rule: BTC bled to 68.5k without retesting 71.45k; that order's TP 68,900 is already passed, so its R:R no longer reflects the market. Moving the retest level down to broken 70k.",
-    "result": "done",
-    "detail": "cancelled 1 order(s)"
-   },
-   {
-    "type": "entry_order",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "trigger": 70050,
-    "stop": 70950,
-    "take_profit": 66800,
-    "risk_pct": 0.015,
-    "expires_hours": 36,
-    "reason": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short.",
-    "invalidation": "BTC 4h close above 71,000 (back inside the broken shelf) or no rejection within 2 4h candles after fill.",
-    "result": "done",
-    "detail": "short 0.0036991100000000002 when price goes above 70050 (risk 1.5%, stop 70950.0, target 66800.0, expires in 36h) ok"
-   }
-  ]
+  "market_view": "BTC swept 67,500 (new 30d low) and bounced to ~68.4k; h1/h4 RSI ~16, extreme oversold, alts bouncing on deeply negative funding. Trend still bearish below 70-70.6k; waiting for a relief retest to short rather than chasing.",
+  "watch_next": "Whether BTC relief rally reaches the 70,050 retest short trigger and rejects; cancel if 4h close > 71k; re-anchor if bleed < 66.5k. EUR carry funding (now 92% APR).",
+  "news": "No fresh catalyst found; ongoing risk-off/ETF-outflow selloff context.",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 240.962436,
+ "cash_usd": 240.969144,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -572,11 +550,11 @@
   {
    "symbol": "EURUSDT",
    "notional": 46.48,
-   "earned": 0.2889,
+   "earned": 0.2949,
    "fees": 0.1394,
-   "net_if_closed_now": 0.01,
-   "funding_pct_per_hour": 0.01053,
-   "funding_apr_pct": 92.2,
+   "net_if_closed_now": 0.016,
+   "funding_pct_per_hour": 0.01285,
+   "funding_apr_pct": 112.6,
    "opened": 1794415916791,
    "reason": "EUR perp funding has stayed > +75% APR for 4+ sessions and is now +220% APR (0.6%/day): break-even ~1 day at current rate, ~3 days at 80%. Non-meme, low-vol underlying. Close if funding < 30% APR for 2 sessions or negative."
   }
@@ -637,7 +615,7 @@
  ],
  "income_pln": {
   "funding": 2.43,
-  "carry": -2.29,
+  "carry": -2.27,
   "interest": 1.97
  },
  "cash_rate_pct": 4.014
