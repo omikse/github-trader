@@ -1,6 +1,18 @@
 {
- "cash": 240.99524969686516,
- "positions": {},
+ "cash": 240.868706488611,
+ "positions": {
+  "BTCUSDT": {
+   "side": "short",
+   "qty": 0.0036991100000000002,
+   "entry": 70028.985,
+   "stop": 70950.0,
+   "tp": 66800.0,
+   "opened": 1794577080000,
+   "entry_fee": 0.1424747052868425,
+   "mark": 68543.5,
+   "note": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short."
+  }
+ },
  "closed": [
   {
    "id": "t5",
@@ -425,23 +437,9 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794574291617,
+ "last_ms": 1794583781724,
  "next_id": 102,
- "orders": [
-  {
-   "id": "o101",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "qty": 0.0036991100000000002,
-   "trigger": 70050,
-   "direction": "above",
-   "stop": 70950.0,
-   "tp": 66800.0,
-   "placed": 1794545530877,
-   "expires": 1794675130877,
-   "note": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -1009,32 +1007,41 @@
    "trigger": 71450,
    "time": 1794545530877,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o101",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 70050,
+   "time": 1794577080000,
+   "detail": "filled at 70029"
   }
  ],
  "funding_rates": {
-  "BTCUSDT": 5.802220833333e-06,
-  "ETHUSDT": -2.278158333333e-06,
-  "SOLUSDT": -3.1555133333333e-05,
-  "XRPUSDT": 4.087645833333e-06,
-  "DOGEUSDT": -1.2915966666667e-05,
-  "ADAUSDT": -9.00229166667e-07,
-  "AVAXUSDT": 2.93585e-05,
-  "LINKUSDT": -1.3769141666667e-05,
-  "SUIUSDT": -4.294925e-06,
-  "PEPEUSDT": -2.334091666667e-06,
-  "WIFUSDT": 1.654605e-05,
-  "BONKUSDT": 0.000179486020833333,
-  "LTCUSDT": 3.114891666667e-06,
-  "DOTUSDT": 4.791666667e-09,
-  "NEARUSDT": -3.2325229166667e-05,
-  "PAXGUSDT": 4.8551441666667e-05,
-  "EURUSDT": 3.9986618055556e-05
+  "BTCUSDT": 1.5951520833333e-05,
+  "ETHUSDT": 1.40516875e-05,
+  "SOLUSDT": 1.792216666667e-06,
+  "XRPUSDT": 1.7908129166667e-05,
+  "DOGEUSDT": 2.3369233333333e-05,
+  "ADAUSDT": 6.227408333333e-06,
+  "AVAXUSDT": 5.2700608333333e-05,
+  "LINKUSDT": 2.0060558333333e-05,
+  "SUIUSDT": 2.2860016666667e-05,
+  "PEPEUSDT": 4.801954166667e-06,
+  "WIFUSDT": -1.4021579166667e-05,
+  "BONKUSDT": 0.000289451770833333,
+  "LTCUSDT": 1.692670833333e-06,
+  "DOTUSDT": 1.28902125e-05,
+  "NEARUSDT": -1.993695833333e-06,
+  "PAXGUSDT": 5.1785633333333e-05,
+  "EURUSDT": 4.0303993055556e-05
  },
  "carry": {
   "EURUSDT": {
    "notional": 46.48,
    "opened": 1794415916791,
-   "earned": 0.31595369120802835,
+   "earned": 0.3215736799996951,
    "fees": 0.13943999999999998,
    "rate_at_open": 0.0002515191125,
    "note": "EUR perp funding has stayed > +75% APR for 4+ sessions and is now +220% APR (0.6%/day): break-even ~1 day at current rate, ~3 days at 80%. Non-meme, low-vol underlying. Close if funding < 30% APR for 2 sessions or negative."
@@ -1110,8 +1117,8 @@
  ],
  "cash_rate": 0.04014,
  "income": {
-  "funding": 0.6136011224010989,
-  "carry": -0.5499935999437148,
-  "interest": 0.5012253247262115
+  "funding": 0.6217689576915111,
+  "carry": -0.5443736111520482,
+  "interest": 0.5033689976767519
  }
 }
