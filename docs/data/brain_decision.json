@@ -1,9 +1,14 @@
 {
-  "id": "2026-11-13T00:52:30Z",
-  "decided_at": "2026-11-13T00:52:30Z",
+  "id": "2026-11-13T02:51:00Z",
+  "decided_at": "2026-11-13T02:51:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 70.8k, fresh 30d low 70,605 after 9 consecutive lower 4h highs; h1 RSI 20 / h4 23 = deeply oversold, so no chasing shorts. Trend still bearish; waiting for a retest of the broken 72.6-73k zone.",
-  "news": "Selloff to lowest BTC since Oct 2024 framed as macro pressure plus leverage unwind; no new catalyst.",
-  "watch_next": "Whether BTC 4h closes < 70,500 (cancel 72,850 retest order, re-plan lower retest short ~71.4-71.6k) or bounces toward 72-72.9k to fill it; EUR funding stays > 30% APR.",
-  "actions": []
+  "market_view": "BTC broke 70.6k and printed a new 30d low 70,113 (lowest since Oct 2024); h1 RSI 16, h4 21, d1 28. Trend firmly bearish but stretched; the old 72,850 retest is now ~2,700 away and stale. Re-anchor the retest short to the freshly broken 71.0-71.6k shelf.",
+  "news": "Ongoing ETF outflows / leverage-unwind selloff; no new scheduled catalyst found.",
+  "watch_next": "Does BTC bounce into 71.2-71.6k and reject (fill), or keep bleeding below 70k without retest (then don't chase; next level 69k). EUR carry funding (84% APR).",
+  "actions": [
+    {"type": "cancel_order", "symbol": "BTCUSDT", "reason": "Cancel rule triggered: BTC dumped to 70,113 (<70.5k) without retesting 72.6-72.9k; trigger now ~2,700 above price, idea stale."},
+    {"type": "entry_order", "symbol": "BTCUSDT", "side": "short", "trigger": 71450, "stop": 72300, "take_profit": 68900, "risk_pct": 0.015, "expires_hours": 36,
+     "reason": "Retest short of the freshly broken 71.0-71.6k shelf (16-20Z and 20-24Z 4h highs 71,61x, 12 Nov lows 71,02-71,13k) after a new 30d low 70,113; h1 ema20 ~71.8k caps. Stop ~170 above the 72,129 4h high, TP 68,900 below 69k (~3R). Same template as the +8.30 trade.",
+     "invalidation": "4h close above 72,300 / reclaim of 72.1k shelf; or no rejection within ~2 4h candles after fill -> exit at scratch."}
+  ]
 }

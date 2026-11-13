@@ -1,12 +1,10 @@
-# Notebook (updated 2026-11-13T00:52Z)
+# Notebook (updated 2026-11-13T02:51Z)
 
 ## Big picture
-- 00:52Z 13 Nov (input 00:44Z, fresh): BTC 70,803, new 30d low 70,605 (lowest since Oct 2024 per news). 20-24Z 4h closed h 71,613 c 71,371 = 9th lower 4h high; current 4h h 71,429. RSI h1 20 / h4 23 / d1 29 (deeply oversold, no chase). h1 ema20/50 72.09/72.96k, h4 ema20 73.21k. ETH 2,001, SOL 81.0, PAXG 3,882, EUR funding 92%. News: macro/leverage-unwind selloff continues.
-- 22:46Z 12 Nov (input 22:43Z, fresh): BTC 71,356, slow bleed, 20-24Z 4h h 71,613 = 8th lower 4h high; 16-20Z closed 71,602. RSI h1 24.5 / h4 26 / d1 30. h1 ema20/50 72.32/73.12k, h4 ema20 73.46k. ETH 2,011, SOL 81.3, PAXG 3,876, EUR funding 88%. News: nothing new.
-- Trend: bearish on 4h/d1 (worst-November narrative, ETF outflows). Broken 72.6k-72.9k = new resistance; then 73.6k, 74.0k.
-- BTC support below: 70.6k (new low), then 70k round, 69k. Resistance: 71.1-71.6k (recent 4h highs), 72.1k, 72.6-73.06k zone.
-- Mind-changers: BTC 4h close > 74,000 = bear plan weakening; > 75,000 bear plan off.
-- News: nothing new (worst-November narrative continues).
+- 02:51Z 13 Nov (input 02:44Z, fresh): BTC 70,125, new 30d low 70,113 (below 70.6k, lowest since Oct 2024). 00-04Z 4h in progress h 71,429 l 70,113; 20-24Z closed h 71,613 c 71,371. RSI h1 16 / h4 21 / d1 28 (extreme oversold; no chase). h1 ema20/50 71.81/72.78k, h4 ema20 73.14k. ETH 1,987, SOL 80.1, PAXG 3,905, EUR funding 84%.
+- Trend: bearish 4h/d1 (ETF outflows, leverage unwind, worst-November narrative). Broken shelf 71.0-71.6k = first resistance; then 72.1k, 72.6-73.06k.
+- Support: 70k round, 69k, 68k.
+- Mind-changers: BTC 4h close > 72,300 = short idea off near-term; > 74,000 bear plan weakening.
 
 ## Strategy for this experiment
 - Goal: grow ~1,000 PLN by 2026-11-21. Equity 240.90 USD (956 PLN, -6.3%; peak 265.7). Closed 10W/22L. ~9 days left: fewer, cleaner trades, each >=2R, risk 1.5-2%.
@@ -15,8 +13,8 @@
 - Carry only if funding > 60% APR sustained 3+ sessions on a non-meme; size <= 25%.
 
 ## Active plans
-- BTC RETEST SHORT entry_order (placed 14:51Z 12 Nov, expires 24h ~14:51Z 13 Nov): trigger 72,850 (retest of broken 30d low 72.6-72.9k), stop 73,800 (~200 above 08-12Z 4h high 73,594), TP 70,600 (~2.4R), risk 1.5%. If filled: trail ~200 above each new completed 4h lower high; 4h close > 74,000 -> close. If price bounces to >73,300 without filling then fades, fine; if BTC first dumps <70.5k without retest, cancel (move gone, don't chase). 16:45Z: kept; trigger ~1,250 above price, inside broken 72.6-73.06k zone (12-16Z 4h high 73,058). 20:52Z/22:46Z/00:52Z: kept (h4 ema20 73.21k; trigger ~2,050 above price at 00:52Z). Cancel rule stands: 4h close < 70,500 without retest -> cancel and instead plan a lower retest short near the then-broken level (~71.4-71.6k). If not filled by expiry 14:52Z 13 Nov, re-place a new retest short only near the then h4 ema20 / last 4h lower high.
-- EUR CARRY (opened 16:52Z 11 Nov, 20% equity, notional 46.5): funding 198-227% APR first day, 84% 12:55Z, 73% 14:51Z, 106% 16:45Z, 82% 20:52Z, 88% 22:46Z, 92% 00:52Z. earned 0.26, net-if-closed -0.02. Close if funding < +30% APR for 2 sessions or negative, or by 20 Nov. Keep.
+- BTC RETEST SHORT entry_order (placed 02:51Z 13 Nov, expires 36h ~14:51Z 14 Nov): trigger 71,450 (retest of broken 71.0-71.6k shelf), stop 72,300 (~170 above 72,129 4h high), TP 68,900 (~3R), risk 1.5%. Replaced the stale 72,850 order (cancel rule triggered by drop to 70,113). If filled: trail ~200 above each new completed 4h lower high; no rejection within 2 4h candles -> scratch. If BTC bleeds < 69k without retest, cancel and re-anchor to the then-broken level (~70.0-70.5k).
+- EUR CARRY (opened 16:52Z 11 Nov, 20% equity, notional 46.5): funding 84% APR now (range 73-227%). earned 0.27, net-if-closed -0.01. Close if funding < +30% APR for 2 sessions or negative, or by 20 Nov. Keep.
 
 ## Watchlist
 - ETH short only on 2,060-2,100 rejection AND only if no BTC short is open/resting (same bet) -> not now.
@@ -45,6 +43,7 @@
 - None held.
 
 ## Session log
+- 2026-11-13T02:51Z | eq 240.94 | BTC 70.13k new 30d low 70,113, h1 RSI 16. Cancelled stale 72,850 short entry; placed retest short entry 71,450/72,300/68,900, 1.5%, 36h. EUR carry kept (84%).
 - 2026-11-13T00:52Z | eq 240.93 | BTC 70.80k new low 70,605, RSI h1 20. Kept retest short entry 72,850/73,800/70,600 and EUR carry (92% APR). No actions.
 - 2026-11-12T22:46Z | eq 240.92 | BTC 71.36k slow bleed, oversold. Kept retest short entry 72,850/73,800/70,600 and EUR carry (88% APR). No actions.
 - 2026-11-12T20:52Z | eq 240.90 | Engine fresh again. BTC 71.39k basing, oversold. Kept retest short entry 72,850/73,800/70,600 and EUR carry (82% APR). No actions.
@@ -54,4 +53,3 @@
 - 2026-11-12T12:55Z | eq 238.12 | BTC 72.83k, short +5.70. Trailed stop 73,950 -> 73,790, TP 72,300 -> 71,900. EUR carry kept (84% APR).
 - 2026-11-12T10:52Z | eq 236.50 (input stale 85 min) | BTC 73.35k, short +4.09. Trailed stop 74,080 -> 73,950. TP 72,300. EUR carry kept (90% APR).
 - 2026-11-12T08:52Z | eq 236.10 | BTC 73.47k, short +3.71. Trailed stop 74,300 -> 74,080 (4th lower 4h high 73,764). TP 72,300. EUR carry kept (200% APR).
-- 2026-11-12T06:50Z | eq 236.03 | BTC 73.49k, short +3.67 held (stop 74,300/TP 72,300); 04-08Z 4h not closed yet, trail after it closes. EUR carry kept (205% APR). No actions.
