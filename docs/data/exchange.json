@@ -1,5 +1,5 @@
 {
- "cash": 240.94936477320178,
+ "cash": 240.949483622905,
  "positions": {},
  "closed": [
   {
@@ -425,21 +425,21 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794545050728,
- "next_id": 101,
+ "last_ms": 1794545530877,
+ "next_id": 102,
  "orders": [
   {
-   "id": "o100",
+   "id": "o101",
    "symbol": "BTCUSDT",
    "side": "short",
-   "qty": 0.0038919700000000002,
-   "trigger": 71450,
+   "qty": 0.0036991100000000002,
+   "trigger": 70050,
    "direction": "above",
-   "stop": 72300.0,
-   "tp": 68900.0,
-   "placed": 1794538330878,
-   "expires": 1794667930878,
-   "note": "Retest short of the freshly broken 71.0-71.6k shelf (16-20Z and 20-24Z 4h highs 71,61x, 12 Nov lows 71,02-71,13k) after a new 30d low 70,113; h1 ema20 ~71.8k caps. Stop ~170 above the 72,129 4h high, TP 68,900 below 69k (~3R). Same template as the +8.30 trade."
+   "stop": 70950.0,
+   "tp": 66800.0,
+   "placed": 1794545530877,
+   "expires": 1794675130877,
+   "note": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short."
   }
  ],
  "order_events": [
@@ -1000,6 +1000,15 @@
    "trigger": 72850,
    "time": 1794538330878,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o100",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 71450,
+   "time": 1794545530877,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -1103,6 +1112,6 @@
  "income": {
   "funding": 0.6136011224010989,
   "carry": -0.5886396039135712,
-  "interest": 0.4939864050325581
+  "interest": 0.4941052547357908
  }
 }
