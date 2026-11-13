@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-13T21:59:13Z",
+ "updated": "2026-11-13T22:07:13Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9852,
- "equity_pln": 984.91,
- "return_pct": -3.89,
+ "equity_pln": 986.9,
+ "return_pct": -3.69,
  "max_drawdown_pct": 13.94,
  "control_pln": 1017.94,
  "control_trades": 9,
- "hodl_pln": 827.94,
+ "hodl_pln": 826.32,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0036991100000000002,
    "entry": 70028.985,
-   "mark": 68343.7,
-   "upnl": 6.234054596350013,
+   "mark": 68210.2,
+   "upnl": 6.727885781350014,
    "stop": 69280.0,
    "tp": 66800.0,
    "liq": null,
    "leverage": null,
    "opened": 1794577080000,
    "reason": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short.",
-   "upnl_pln": 24.84
+   "upnl_pln": 26.81
   }
  ],
  "closed_trades": [
@@ -501,7 +501,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 240.908303,
+ "cash_usd": 240.912998,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -553,11 +553,11 @@
   {
    "symbol": "EURUSDT",
    "notional": 46.48,
-   "earned": 0.3326,
+   "earned": 0.3351,
    "fees": 0.1394,
-   "net_if_closed_now": 0.0537,
-   "funding_pct_per_hour": 0.00537,
-   "funding_apr_pct": 47.1,
+   "net_if_closed_now": 0.0562,
+   "funding_pct_per_hour": 0.00549,
+   "funding_apr_pct": 48.1,
    "opened": 1794415916791,
    "reason": "EUR perp funding has stayed > +75% APR for 4+ sessions and is now +220% APR (0.6%/day): break-even ~1 day at current rate, ~3 days at 80%. Non-meme, low-vol underlying. Close if funding < 30% APR for 2 sessions or negative."
   }
@@ -617,8 +617,8 @@
   }
  ],
  "income_pln": {
-  "funding": 2.57,
-  "carry": -2.13,
+  "funding": 2.58,
+  "carry": -2.12,
   "interest": 2.03
  },
  "cash_rate_pct": 4.014
