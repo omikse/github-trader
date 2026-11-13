@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T08:48:31Z",
+ "updated": "2026-11-13T08:51:31Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,7 +10,7 @@
  "max_drawdown_pct": 13.94,
  "control_pln": 1013.45,
  "control_trades": 9,
- "hodl_pln": 829.84,
+ "hodl_pln": 829.31,
  "positions": [],
  "closed_trades": [
   {
@@ -460,33 +460,22 @@
  ],
  "trade_count": 32,
  "win_rate_pct": 31.2,
- "brain_calls_today": 4,
+ "brain_calls_today": 5,
  "last_decision": {
-  "time": "2026-11-13T07:12:31Z",
+  "time": "2026-11-13T08:51:31Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-13T06:52:43Z",
+  "decided_at": "2026-11-13T08:50:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 240.97,
-  "equity_pln": 956.07,
-  "events": [
-   {
-    "type": "order_cancelled",
-    "id": "o100",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "status": "cancelled",
-    "trigger": 71450,
-    "time": 1794545530877,
-    "detail": "cancelled by the brain"
-   }
-  ],
-  "market_view": "BTC swept 67,500 (new 30d low) and bounced to ~68.4k; h1/h4 RSI ~16, extreme oversold, alts bouncing on deeply negative funding. Trend still bearish below 70-70.6k; waiting for a relief retest to short rather than chasing.",
-  "watch_next": "Whether BTC relief rally reaches the 70,050 retest short trigger and rejects; cancel if 4h close > 71k; re-anchor if bleed < 66.5k. EUR carry funding (now 92% APR).",
-  "news": "No fresh catalyst found; ongoing risk-off/ETF-outflow selloff context.",
+  "equity_usd": 240.98,
+  "equity_pln": 956.1,
+  "events": [],
+  "market_view": "BTC 68.77k basing above the 67.5k sweep low after a -6.4% day; h4 RSI 20 deeply oversold, trend still bearish on 4h/d1. A relief bounce into the broken 70k level (h1 ema20 ~70.4k) is the short opportunity; no chasing here.",
+  "watch_next": "Does BTC bounce to 70k and reject (order fills) or lose 67.5k? If it bleeds below 66.5k without a retest, re-anchor the short order ~1-1.5 h1 ATR above price. EUR carry funding still > 30%.",
+  "news": "",
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 240.976545,
+ "cash_usd": 240.976589,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
