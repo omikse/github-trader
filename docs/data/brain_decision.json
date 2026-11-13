@@ -1,9 +1,17 @@
 {
-  "id": "2026-11-13T18:48:00Z",
-  "decided_at": "2026-11-13T18:48:00Z",
+  "id": "2026-11-13T20:51:18Z",
+  "decided_at": "2026-11-13T20:51:18Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 68.79k basing in 68.0-69.5k below h1 ema20 after the 70,190 lower high; 4h/d1 trend bearish but oversold (h4 RSI 23). Short +4.6 with stop 70,350 protects most risk.",
-  "news": "No new market-moving news found; ongoing ETF outflow / risk-off backdrop.",
-  "watch_next": "Close of 16-20Z 4h candle: if high stays ~69.07k trail BTC stop to ~69,300. EUR funding vs 30% line. 4h close < 67.5k -> consider extending TP to ~66k.",
-  "actions": []
+  "market_view": "BTC 68.83k still basing 68.0-69.5k under h1 ema20 69.4k; 16-20Z 4h candle closed with a lower high 69,073 (after 70,190). 4h/d1 trend bearish, RSI h4 24 / d1 26 oversold but no reclaim.",
+  "news": "No fresh market-moving headlines found; backdrop remains ETF outflows / risk-off.",
+  "watch_next": "Next completed 4h lower high to trail further; 4h close < 67,500 -> consider extending TP to ~66,000; 4h close > 69,500 = bounce risk (stop handles). EUR carry funding vs 30% APR.",
+  "actions": [
+    {
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 69280,
+      "take_profit": 66800,
+      "reason": "Planned trail: 16-20Z 4h candle closed with lower high 69,073; stop to ~200 above it (69,280) locks ~+2.8 USD on the 70,029 short while keeping room against h1 ATR 570 chop."
+    }
+  ]
 }
