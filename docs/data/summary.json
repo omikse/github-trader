@@ -1,16 +1,16 @@
 {
- "updated": "2026-11-13T02:44:10Z",
+ "updated": "2026-11-13T02:52:10Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9676,
- "equity_pln": 955.94,
+ "equity_pln": 955.95,
  "return_pct": -6.3,
  "max_drawdown_pct": 13.94,
  "control_pln": 1013.45,
  "control_trades": 9,
- "hodl_pln": 845.77,
+ "hodl_pln": 845.0,
  "positions": [],
  "closed_trades": [
   {
@@ -460,22 +460,44 @@
  ],
  "trade_count": 32,
  "win_rate_pct": 31.2,
- "brain_calls_today": 1,
+ "brain_calls_today": 2,
  "last_decision": {
-  "time": "2026-11-13T00:52:10Z",
+  "time": "2026-11-13T02:52:10Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-13T00:52:30Z",
+  "decided_at": "2026-11-13T02:51:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 240.93,
-  "equity_pln": 955.9,
+  "equity_usd": 240.94,
+  "equity_pln": 955.95,
   "events": [],
-  "market_view": "BTC 70.8k, fresh 30d low 70,605 after 9 consecutive lower 4h highs; h1 RSI 20 / h4 23 = deeply oversold, so no chasing shorts. Trend still bearish; waiting for a retest of the broken 72.6-73k zone.",
-  "watch_next": "Whether BTC 4h closes < 70,500 (cancel 72,850 retest order, re-plan lower retest short ~71.4-71.6k) or bounces toward 72-72.9k to fill it; EUR funding stays > 30% APR.",
-  "news": "Selloff to lowest BTC since Oct 2024 framed as macro pressure plus leverage unwind; no new catalyst.",
-  "actions": []
+  "market_view": "BTC broke 70.6k and printed a new 30d low 70,113 (lowest since Oct 2024); h1 RSI 16, h4 21, d1 28. Trend firmly bearish but stretched; the old 72,850 retest is now ~2,700 away and stale. Re-anchor the retest short to the freshly broken 71.0-71.6k shelf.",
+  "watch_next": "Does BTC bounce into 71.2-71.6k and reject (fill), or keep bleeding below 70k without retest (then don't chase; next level 69k). EUR carry funding (84% APR).",
+  "news": "Ongoing ETF outflows / leverage-unwind selloff; no new scheduled catalyst found.",
+  "actions": [
+   {
+    "type": "cancel_order",
+    "symbol": "BTCUSDT",
+    "reason": "Cancel rule triggered: BTC dumped to 70,113 (<70.5k) without retesting 72.6-72.9k; trigger now ~2,700 above price, idea stale.",
+    "result": "done",
+    "detail": "cancelled 1 order(s)"
+   },
+   {
+    "type": "entry_order",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "trigger": 71450,
+    "stop": 72300,
+    "take_profit": 68900,
+    "risk_pct": 0.015,
+    "expires_hours": 36,
+    "reason": "Retest short of the freshly broken 71.0-71.6k shelf (16-20Z and 20-24Z 4h highs 71,61x, 12 Nov lows 71,02-71,13k) after a new 30d low 70,113; h1 ema20 ~71.8k caps. Stop ~170 above the 72,129 4h high, TP 68,900 below 69k (~3R). Same template as the +8.30 trade.",
+    "invalidation": "4h close above 72,300 / reclaim of 72.1k shelf; or no rejection within ~2 4h candles after fill -> exit at scratch.",
+    "result": "done",
+    "detail": "short 0.0038919700000000002 when price goes above 71450 (risk 1.5%, stop 72300.0, target 68900.0, expires in 36h) ok"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 240.93776,
+ "cash_usd": 240.937879,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -505,13 +527,13 @@
   {
    "symbol": "BTCUSDT",
    "side": "short",
-   "trigger": 72850,
+   "trigger": 71450,
    "direction": "above",
-   "stop": 73800.0,
-   "tp": 70600.0,
-   "qty": 0.00350737,
-   "expires": 1794581556973,
-   "note": "Retest short of the broken 30d low 72.6-72.9k after BTC broke down to 71,657; oversold now (h1 RSI 22) so not chasing, wait for the bounce. Stop 73,800 ~200 above 08-12Z 4h lower high 73,594; TP 70,600 toward the 70k round (~2.4R). Same template as the +8.30 short."
+   "stop": 72300.0,
+   "tp": 68900.0,
+   "qty": 0.0038919700000000002,
+   "expires": 1794667930878,
+   "note": "Retest short of the freshly broken 71.0-71.6k shelf (16-20Z and 20-24Z 4h highs 71,61x, 12 Nov lows 71,02-71,13k) after a new 30d low 70,113; h1 ema20 ~71.8k caps. Stop ~170 above the 72,129 4h high, TP 68,900 below 69k (~3R). Same template as the +8.30 trade."
   }
  ],
  "balance_warning": false,

@@ -1,5 +1,5 @@
 {
- "cash": 240.9377600462136,
+ "cash": 240.93787887892418,
  "positions": {},
  "closed": [
   {
@@ -425,21 +425,21 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794537850769,
- "next_id": 100,
+ "last_ms": 1794538330878,
+ "next_id": 101,
  "orders": [
   {
-   "id": "o99",
+   "id": "o100",
    "symbol": "BTCUSDT",
    "side": "short",
-   "qty": 0.00350737,
-   "trigger": 72850,
+   "qty": 0.0038919700000000002,
+   "trigger": 71450,
    "direction": "above",
-   "stop": 73800.0,
-   "tp": 70600.0,
-   "placed": 1794495156973,
-   "expires": 1794581556973,
-   "note": "Retest short of the broken 30d low 72.6-72.9k after BTC broke down to 71,657; oversold now (h1 RSI 22) so not chasing, wait for the bounce. Stop 73,800 ~200 above 08-12Z 4h lower high 73,594; TP 70,600 toward the 70k round (~2.4R). Same template as the +8.30 short."
+   "stop": 72300.0,
+   "tp": 68900.0,
+   "placed": 1794538330878,
+   "expires": 1794667930878,
+   "note": "Retest short of the freshly broken 71.0-71.6k shelf (16-20Z and 20-24Z 4h highs 71,61x, 12 Nov lows 71,02-71,13k) after a new 30d low 70,113; h1 ema20 ~71.8k caps. Stop ~170 above the 72,129 4h high, TP 68,900 below 69k (~3R). Same template as the +8.30 trade."
   }
  ],
  "order_events": [
@@ -991,6 +991,15 @@
    "trigger": 74700,
    "time": 1794417720000,
    "detail": "filled at 74677.6"
+  },
+  {
+   "id": "o99",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 72850,
+   "time": 1794538330878,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -1094,6 +1103,6 @@
  "income": {
   "funding": 0.6136011224010989,
   "carry": -0.5984621931848643,
-  "interest": 0.49220426731582645
+  "interest": 0.49232310002636487
  }
 }
