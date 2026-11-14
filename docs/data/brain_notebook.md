@@ -1,8 +1,9 @@
-# Notebook (updated 2026-11-14T18:52Z)
+# Notebook (updated 2026-11-14T20:50Z)
 
 ## Big picture
+- 20:50Z 14 Nov (input 20:41Z): BTC 65,438, holding 65k (lows 64,999/65,010) while alts print new 24h lows (-10..-14%) = BTC relatively strong, alts weak. Last two 4h highs 66,127 then 65,827 (lower highs). h1 ema20 66,617, ATR 613, h1 RSI 30, h4 19. BTC funding +5.6%, alts -17..-112% APR (BONK). Short order 66,700 = ~2 h1 ATR above, at h1 ema20: kept.
 - 18:52Z 14 Nov (input 18:41Z): BTC 65,834, retested 65k (low 64,999 = double bottom w/ 65,010), basing. h1 RSI 31, h1 ema20 66,885 (~resting short trigger zone), h4 RSI 21. Funding BTC +3%, alts -20..-73% APR (crowded shorts). No new news. Resting short 66,700 unchanged.
-- 16:51Z 14 Nov (input 16:41Z, fresh): BTC short TP 65,300 HIT 15:22Z (+17.22). BTC swept 65,010 (new 30d low, 65k round), now 65,425. h1 RSI 21 / h4 18.8 / d1 21 = extremely oversold; h1 ATR 588, h1 ema20 67.1k, h4 ema20 69.4k. Completed 4h: 12-16Z h 67,256 l 65,010 c 65,687 (lower high). BTC funding -2.8% APR; alts deeply negative (shorts crowded). 7d -13.6%, 30d -20.3%. Weekend thin liquidity; news = capitulation/risk-off narrative.
+- 16:51Z 14 Nov: BTC short TP 65,300 hit (+17.22); 65,010 sweep = new 30d low. d1 RSI 21, 7d -13.6%, 30d -20.3%. Weekend thin liquidity; capitulation/risk-off narrative.
 - Trend: bearish 4h/d1. Resistance 65.9-66.9k (broken shelf), 67.25-67.5k (4h highs), 68.4k, 69k. Support 65.0k, 64k, 62.5k.
 - Mind-changers: BTC 4h close > 67,500 = breakdown failed (no shorts); > 69,000 relief rally in play.
 
@@ -48,6 +49,7 @@
 - None held.
 
 ## Session log
+- 2026-11-14T20:50Z | eq 258.19 | BTC 65.4k holding 65k, alts new lows; 4h lower highs 66,127/65,827. Kept short order 66,700/67,700/64,150. No actions.
 - 2026-11-14T18:52Z | eq 258.18 | BTC 65.8k, double bottom ~65.0k, basing. Kept retest short order 66,700/67,700/64,150. No actions.
 - 2026-11-14T16:51Z | eq 258.18 | Short TP 65,300 hit (+17.22). BTC 65.4k after 65,010 sweep, RSI ~20. Placed retest short order 66,700/stop 67,700/TP 64,150, 1.5%.
 - 2026-11-14T14:47Z | eq 254.65 | BTC broke weekend range to new low 65,936, 66.28k; short +13.8. Trailed stop 67,800->67,500, TP 65,300 kept.
@@ -57,4 +59,3 @@
 - 2026-11-14T06:51Z | eq 251.10 | BTC 67.25k basing; short +10.3, stop 68,550/TP 65,300 kept. No actions.
 - 2026-11-14T04:51Z | eq 252.07 | BTC new low 66,402, 4h close 66,683; short +11.3. Trailed stop 68,700->68,550, TP 66,200->65,300.
 - 2026-11-14T02:52Z | eq 249.47 | BTC swept 66,840 (TP missed by 40), 67.7k; trailed short stop 69,230->68,700, TP 66,200. Closed EUR carry (funding -8%).
-- 2026-11-14T00:46Z | eq 247.84 | BTC 68.17k, 20-24Z lower high 69,056; trailed short stop 69,280->69,230, TP 66,800. EUR carry kept (97%).
