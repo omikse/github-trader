@@ -1,9 +1,11 @@
 {
-  "id": "2026-11-13T22:52:00Z",
-  "decided_at": "2026-11-13T22:52:00Z",
+  "id": "2026-11-14T00:46:00Z",
+  "decided_at": "2026-11-14T00:46:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 68.36k grinding lower inside 4h downtrend; 20-24Z candle made a lower low 67,900 above the 67.5k sweep, high 69,056 still under the 69,073 lower high. Short +6.2 with stop 69,280 locking profit.",
-  "news": "",
-  "watch_next": "00Z 4h close: trail BTC short stop ~200 above the new completed 4h high; consider extending TP to ~66,000 on a 4h close < 67,500. EUR carry funding vs 30% threshold.",
-  "actions": []
+  "market_view": "BTC 68.17k grinding flat after the 20-24Z 4h candle closed with another lower high (69,056) and a 67,795 low; 4h/d1 trend bearish but deeply oversold (h4 RSI 22). Short in profit, trail and let TP 66,800 work.",
+  "news": "No fresh catalyst found; backdrop remains ETF outflows and risk-off, thin weekend liquidity.",
+  "watch_next": "Next completed 4h high (00-04Z) for another trail; 4h close < 67,500 -> consider extending TP to ~66,000; EUR funding level.",
+  "actions": [
+    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 69230, "take_profit": 66800, "reason": "Trail ~175 above the completed 20-24Z 4h lower high 69,056; locks ~+3 USD while giving room for weekend wicks."}
+  ]
 }
