@@ -1,7 +1,7 @@
-# Notebook (updated 2026-11-14T10:52Z)
+# Notebook (updated 2026-11-14T12:52Z)
 
 ## Big picture
-- 10:52Z 14 Nov (input 10:45Z, fresh): BTC 67,178, tight range 66.9-67.45k since 08Z (in-progress 08-12Z candle h 67,451). h1 RSI 35, h1 ema20 67.88k (price below). 04-08Z 4h closed 67,110 (h 67,392) = latest completed lower high. 4h lower highs 70,190 -> 69,073 -> 69,056 -> 68,370 -> 67,392. RSI h1 29 / h4 22 / d1 23 = deeply oversold. h1 ema20 68.0k, h4 ema20 70.2k. 7d -11.5%, 30d -18.4%. BTC funding ~+1.5% APR (flat). Alts funding negative (crowded shorts). Weekend thin liquidity.
+- 12:52Z 14 Nov (input 12:40Z, fresh): BTC 67,171, tight weekend range 66.9-67.45k since 08Z. 08-12Z 4h closed 67,211 (h 67,451, l 66,909) = inside/doji, slightly higher high than 04-08Z (67,392). h1 RSI 34.5, h1 ema20 67.76k, h1 ATR 504. Funding BTC +8.5% APR. 4h lower highs 70,190 -> 69,073 -> 69,056 -> 68,370 -> 67,392. RSI h1 29 / h4 22 / d1 23 = deeply oversold. h1 ema20 68.0k, h4 ema20 70.2k. 7d -11.5%, 30d -18.4%. BTC funding ~+1.5% APR (flat). Alts funding negative (crowded shorts). Weekend thin liquidity.
 - Trend: bearish 4h/d1 (ETF outflows, risk-off). Resistance 67.4k, 68.0-68.4k, 69.0k, 70.0-70.6k. Support 66.4k, 65k, 64k.
 - Mind-changers: BTC 4h close > 68,400 = bounce in play; > 70,600 short idea off; > 72,600 bear plan weakening.
 
@@ -12,7 +12,7 @@
 - Carry only if funding > 60% APR sustained 3+ sessions on a non-meme; size <= 25%.
 
 ## Active plans
-- BTC RETEST SHORT (filled 13:38Z 13 Nov @70,029, risk 1.5%): 08:51Z stop 68,550 -> 67,800 (~400 above completed 4h high 67,392 and below h1 ema20 68.0k; 1.4 h1 ATR from price; locks ~+8.2 USD), TP 65,300 kept. At 10:45Z +10.6 USD; 10:52Z held (no new 4h close; stop = ~1.2 h1 ATR above price). Next (after 12Z close): after each 4h close trail ~250-400 above the latest completed 4h high if lower (not tighter than ~1.2 h1 ATR in weekend chop). If BTC 4h closes < 65,500, consider TP ~64,200. Re-entry only on a 68.0-68.8k retest that rejects (new 1% short, stop > 69.3k) after this one closes -- not at RSI < 30. Time limit: if still 66.0-67.8k by Sun 15 Nov 12Z, tighten stop to ~67,500.
+- BTC RETEST SHORT (filled 13:38Z 13 Nov @70,029, risk 1.5%): 08:51Z stop 68,550 -> 67,800 (~400 above completed 4h high 67,392 and below h1 ema20 68.0k; 1.4 h1 ATR from price; locks ~+8.2 USD), TP 65,300 kept. At 12:40Z +10.6 USD. 12:52Z held: 08-12Z high 67,451 > 67,392, so no lower high to trail behind; stop 67,800 = ~350 above it, ~1.25 h1 ATR above price. Next (after 12Z close): after each 4h close trail ~250-400 above the latest completed 4h high if lower (not tighter than ~1.2 h1 ATR in weekend chop). If BTC 4h closes < 65,500, consider TP ~64,200. Re-entry only on a 68.0-68.8k retest that rejects (new 1% short, stop > 69.3k) after this one closes -- not at RSI < 30. Time limit: if still 66.0-67.8k by Sun 15 Nov 12Z, tighten stop to ~67,500.
 - EUR CARRY: closed 02:52Z 14 Nov. Re-open only if funding > 60% APR for 3 sessions (now -53%).
 
 ## Watchlist
@@ -46,6 +46,7 @@
 - None held.
 
 ## Session log
+- 2026-11-14T12:52Z | eq 251.39 | BTC 67.17k, 08-12Z inside candle (h 67,451, no lower high). Short +10.6, stop 67,800/TP 65,300 kept. No actions.
 - 2026-11-14T10:52Z | eq 251.36 | BTC 67.18k tight weekend range; short +10.6, stop 67,800/TP 65,300 kept. No actions.
 - 2026-11-14T08:51Z | eq 251.93 | BTC 67.0k sideways; 04-08Z lower high 67,392. Trailed short stop 68,550->67,800 (locks ~+8.2), TP 65,300.
 - 2026-11-14T06:51Z | eq 251.10 | BTC 67.25k basing; short +10.3, stop 68,550/TP 65,300 kept. No actions.
@@ -55,4 +56,3 @@
 - 2026-11-13T22:52Z | eq 247.10 | BTC 68.36k, lower low 67,900; short +6.2, stop 69,280/TP 66,800 kept (4h candle not closed). EUR carry kept (48%). No actions.
 - 2026-11-13T20:51Z | eq 245.34 | BTC 68.83k, 16-20Z lower high 69,073; trailed short stop 70,350->69,280 (locks ~+2.8), TP 66,800. EUR carry kept (38.4%).
 - 2026-11-13T18:48Z | eq 245.48 | BTC 68.79k basing, short +4.6; stop 70,350/TP 66,800 kept, trail next session after 20Z close. EUR carry funding 44.5% (counter reset). No actions.
-- 2026-11-13T16:55Z | eq 246.19 | BTC 68.58k, short +5.3; 70,190 lower high confirmed, stop 70,350/TP 66,800 kept. EUR carry funding 29.4% (counter 1/2). No actions.
