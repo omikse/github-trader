@@ -1,15 +1,15 @@
 {
- "cash": 240.93823664655298,
+ "cash": 240.79881023916766,
  "positions": {
   "BTCUSDT": {
    "side": "short",
    "qty": 0.0036991100000000002,
    "entry": 70028.985,
-   "stop": 69230.0,
-   "tp": 66800.0,
+   "stop": 68700.0,
+   "tp": 66200.0,
    "opened": 1794577080000,
    "entry_fee": 0.1424747052868425,
-   "mark": 67638.4,
+   "mark": 67670.6,
    "note": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short."
   }
  },
@@ -437,8 +437,8 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794624673522,
- "next_id": 102,
+ "last_ms": 1794624733592,
+ "next_id": 103,
  "orders": [],
  "order_events": [
   {
@@ -1037,16 +1037,7 @@
   "PAXGUSDT": 5.9152e-06,
   "EURUSDT": -9.080125e-06
  },
- "carry": {
-  "EURUSDT": {
-   "notional": 46.48,
-   "opened": 1794415916791,
-   "earned": 0.34534604483273385,
-   "fees": 0.13943999999999998,
-   "rate_at_open": 0.0002515191125,
-   "note": "EUR perp funding has stayed > +75% APR for 4+ sessions and is now +220% APR (0.6%/day): break-even ~1 day at current rate, ~3 days at 80%. Non-meme, low-vol underlying. Close if funding < 30% APR for 2 sessions or negative."
-  }
- },
+ "carry": {},
  "carry_closed": [
   {
    "id": "c20",
@@ -1095,6 +1086,18 @@
    "pnl": -0.2263,
    "why": "manual close",
    "reason": "BONK funding 159/156/178/208/165% APR over 5 sessions (~0.45%/day); break-even 0.6/0.45 = ~1.3 days, ~10 days left. 20% size, close if funding < 40% APR or turns negative."
+  },
+  {
+   "id": "c102",
+   "symbol": "EURUSDT",
+   "notional": 46.48,
+   "opened": 1794415916791,
+   "time": 1794624733592,
+   "earned": 0.3453,
+   "fees": 0.2789,
+   "pnl": 0.0665,
+   "why": "manual close",
+   "reason": "EUR perp funding has stayed > +75% APR for 4+ sessions and is now +220% APR (0.6%/day): break-even ~1 day at current rate, ~3 days at 80%. Non-meme, low-vol underlying. Close if funding < 30% APR for 2 sessions or negative."
   }
  ],
  "predictions": {},
@@ -1118,7 +1121,7 @@
  "cash_rate": 0.04014,
  "income": {
   "funding": 0.6582857967035176,
-  "carry": -0.5206012463190095,
-  "interest": 0.5126099517735767
+  "carry": -0.6600412463190095,
+  "interest": 0.5126235443882626
  }
 }

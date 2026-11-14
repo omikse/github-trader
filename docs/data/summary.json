@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-14T02:51:13Z",
+ "updated": "2026-11-14T02:52:13Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9852,
- "equity_pln": 995.39,
- "return_pct": -2.87,
+ "equity_pln": 994.4,
+ "return_pct": -2.96,
  "max_drawdown_pct": 13.94,
  "control_pln": 1017.94,
  "control_trades": 9,
- "hodl_pln": 819.4,
+ "hodl_pln": 819.79,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0036991100000000002,
    "entry": 70028.985,
-   "mark": 67638.4,
-   "upnl": 8.843036879350024,
-   "stop": 69230.0,
-   "tp": 66800.0,
+   "mark": 67670.6,
+   "upnl": 8.72392553734998,
+   "stop": 68700.0,
+   "tp": 66200.0,
    "liq": null,
    "leverage": null,
    "opened": 1794577080000,
    "reason": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short.",
-   "upnl_pln": 35.24
+   "upnl_pln": 34.77
   }
  ],
  "closed_trades": [
@@ -476,32 +476,39 @@
  ],
  "trade_count": 32,
  "win_rate_pct": 31.2,
- "brain_calls_today": 1,
+ "brain_calls_today": 2,
  "last_decision": {
-  "time": "2026-11-14T00:51:13Z",
+  "time": "2026-11-14T02:52:13Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-14T00:46:00Z",
+  "decided_at": "2026-11-14T02:51:49Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 247.27,
-  "equity_pln": 985.43,
+  "equity_usd": 249.65,
+  "equity_pln": 994.91,
   "events": [],
-  "market_view": "BTC 68.17k grinding flat after the 20-24Z 4h candle closed with another lower high (69,056) and a 67,795 low; 4h/d1 trend bearish but deeply oversold (h4 RSI 22). Short in profit, trail and let TP 66,800 work.",
-  "watch_next": "Next completed 4h high (00-04Z) for another trail; 4h close < 67,500 -> consider extending TP to ~66,000; EUR funding level.",
-  "news": "No fresh catalyst found; backdrop remains ETF outflows and risk-off, thin weekend liquidity.",
+  "market_view": "BTC made a new 30d low at 66,840 in the 00-04Z candle (missed TP 66,800 by ~40) and bounced to 67.7k; 4h/d1 trend still bearish but h4 RSI 21 = oversold, bounce risk. Short +8.6 USD.",
+  "watch_next": "04Z 4h close: if lower high < 68,500, trail stop ~180 above it; TP 66,200 below new 30d low. EUR carry gone.",
+  "news": "No fresh catalyst found; weekend thin liquidity, ongoing ETF outflow/risk-off narrative.",
   "actions": [
+   {
+    "type": "carry_close",
+    "symbol": "EURUSDT",
+    "reason": "EUR funding turned negative (-8% APR) after 97% last session; plan rule: close when negative. Net if closed ~+0.07.",
+    "result": "done",
+    "detail": "closed carry: earned 0.35, fees 0.28, net +0.07 USD"
+   },
    {
     "type": "move_stop",
     "symbol": "BTCUSDT",
-    "stop": 69230,
-    "take_profit": 66800,
-    "reason": "Trail ~175 above the completed 20-24Z 4h lower high 69,056; locks ~+3 USD while giving room for weekend wicks.",
+    "stop": 68700,
+    "take_profit": 66200,
+    "reason": "Trail stop 69,230->68,700 (above in-progress 4h high 68,370 + ~1.5 h1 ATR, below h1 ema20 68.8k) to lock ~+4.9 USD after TP was missed by 40 at the 66,840 low; extend TP below the new 30d low toward 65-66k support.",
     "result": "done",
-    "detail": "stop 69230.0, target 66800.0"
+    "detail": "stop 68700.0, target 66200.0"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 240.938237,
+ "cash_usd": 240.79881,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -549,20 +556,21 @@
    "pnl_pln": 2.93
   }
  ],
- "carry": [
+ "carry": [],
+ "carry_closed": [
   {
+   "id": "c102",
    "symbol": "EURUSDT",
    "notional": 46.48,
-   "earned": 0.3453,
-   "fees": 0.1394,
-   "net_if_closed_now": 0.0665,
-   "funding_pct_per_hour": -0.00091,
-   "funding_apr_pct": -8.0,
    "opened": 1794415916791,
-   "reason": "EUR perp funding has stayed > +75% APR for 4+ sessions and is now +220% APR (0.6%/day): break-even ~1 day at current rate, ~3 days at 80%. Non-meme, low-vol underlying. Close if funding < 30% APR for 2 sessions or negative."
-  }
- ],
- "carry_closed": [
+   "time": 1794624733592,
+   "earned": 0.3453,
+   "fees": 0.2789,
+   "pnl": 0.0665,
+   "why": "manual close",
+   "reason": "EUR perp funding has stayed > +75% APR for 4+ sessions and is now +220% APR (0.6%/day): break-even ~1 day at current rate, ~3 days at 80%. Non-meme, low-vol underlying. Close if funding < 30% APR for 2 sessions or negative.",
+   "pnl_pln": 0.27
+  },
   {
    "id": "c95",
    "symbol": "BONKUSDT",
@@ -618,7 +626,7 @@
  ],
  "income_pln": {
   "funding": 2.62,
-  "carry": -2.07,
+  "carry": -2.63,
   "interest": 2.04
  },
  "cash_rate_pct": 4.014
