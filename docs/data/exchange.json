@@ -1,18 +1,6 @@
 {
- "cash": 240.81981978952123,
- "positions": {
-  "BTCUSDT": {
-   "side": "short",
-   "qty": 0.0036991100000000002,
-   "entry": 70028.985,
-   "stop": 67800.0,
-   "tp": 65300.0,
-   "opened": 1794577080000,
-   "entry_fee": 0.1424747052868425,
-   "mark": 65962.5,
-   "note": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short."
-  }
- },
+ "cash": 258.18098331436613,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -425,6 +413,19 @@
    "why": "target",
    "opened": 1794417720000,
    "reason": "Bear-trend re-short at resistance: 74.5-74.8k = h4 ema20 74.51k + 24h high 74.80k + breakdown level of 10 Nov. Limit fill on a bounce into it; stop above h4 ema50 75.75k, TP 72.3k under 30d low 72.58k (~2.3R)."
+  },
+  {
+   "id": "t103",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.0036991100000000002,
+   "entry": 70028.985,
+   "exit": 65300.0,
+   "pnl": 17.2177,
+   "time": 1794669720000,
+   "why": "target",
+   "opened": 1794577080000,
+   "reason": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short."
   }
  ],
  "fills": [
@@ -437,8 +438,8 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794666888312,
- "next_id": 103,
+ "last_ms": 1794670893099,
+ "next_id": 104,
  "orders": [],
  "order_events": [
   {
@@ -1019,23 +1020,23 @@
   }
  ],
  "funding_rates": {
-  "BTCUSDT": -3.3014125e-06,
-  "ETHUSDT": -1.1679579166667e-05,
-  "SOLUSDT": -9.941579166667e-06,
-  "XRPUSDT": -1.8623829166667e-05,
-  "DOGEUSDT": -1.67405125e-05,
-  "ADAUSDT": -1.7562770833333e-05,
-  "AVAXUSDT": -2.7074020833333e-05,
-  "LINKUSDT": -3.561695e-05,
-  "SUIUSDT": -4.14446125e-05,
-  "PEPEUSDT": 1.9577220833333e-05,
-  "WIFUSDT": 1.3735304166667e-05,
-  "BONKUSDT": -0.000116706720833333,
-  "LTCUSDT": -1.8144479166667e-05,
-  "DOTUSDT": -2.5803495833333e-05,
-  "NEARUSDT": 9.389516666667e-06,
-  "PAXGUSDT": 1.11791375e-05,
-  "EURUSDT": -0.0001332014125
+  "BTCUSDT": -1.3738125e-06,
+  "ETHUSDT": -1.93004375e-05,
+  "SOLUSDT": -7.230566666667e-06,
+  "XRPUSDT": -1.23949125e-05,
+  "DOGEUSDT": -1.608291666667e-06,
+  "ADAUSDT": -5.1726225e-05,
+  "AVAXUSDT": -3.2417716666667e-05,
+  "LINKUSDT": -1.1991908333333e-05,
+  "SUIUSDT": -5.5056025e-05,
+  "PEPEUSDT": -2.5054445833333e-05,
+  "WIFUSDT": -7.9917408333333e-05,
+  "BONKUSDT": -6.48882e-05,
+  "LTCUSDT": -2.7731833333333e-05,
+  "DOTUSDT": -8.875558333333e-06,
+  "NEARUSDT": 6.443108333333e-06,
+  "PAXGUSDT": 1.4553341666667e-05,
+  "EURUSDT": -6.60411875e-05
  },
  "carry": {},
  "carry_closed": [
@@ -1120,8 +1121,8 @@
  ],
  "cash_rate": 0.04014,
  "income": {
-  "funding": 0.6672619234514914,
+  "funding": 0.666927231108624,
   "carry": -0.6600412463190095,
-  "interest": 0.5246569679938137
+  "interest": 0.5259730174815606
  }
 }

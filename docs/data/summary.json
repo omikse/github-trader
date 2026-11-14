@@ -1,34 +1,32 @@
 {
- "updated": "2026-11-14T14:34:48Z",
+ "updated": "2026-11-14T15:41:33Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9852,
- "equity_pln": 1019.4,
- "return_pct": -0.52,
+ "equity_pln": 1028.9,
+ "return_pct": 0.4,
  "max_drawdown_pct": 13.94,
  "control_pln": 1017.94,
  "control_trades": 9,
- "hodl_pln": 799.09,
- "positions": [
+ "hodl_pln": 793.84,
+ "positions": [],
+ "closed_trades": [
   {
+   "id": "t103",
    "symbol": "BTCUSDT",
    "side": "short",
-   "size": 0.0036991100000000002,
+   "qty": 0.0036991100000000002,
    "entry": 70028.985,
-   "mark": 65962.5,
-   "upnl": 15.042375328350003,
-   "stop": 67800.0,
-   "tp": 65300.0,
-   "liq": null,
-   "leverage": null,
+   "exit": 65300.0,
+   "pnl": 17.2177,
+   "time": 1794669720000,
+   "why": "target",
    "opened": 1794577080000,
    "reason": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short.",
-   "upnl_pln": 59.95
-  }
- ],
- "closed_trades": [
+   "pnl_pln": 68.62
+  },
   {
    "id": "t98",
    "symbol": "BTCUSDT",
@@ -474,24 +472,39 @@
    "pnl_pln": -21.51
   }
  ],
- "trade_count": 32,
- "win_rate_pct": 31.2,
- "brain_calls_today": 7,
+ "trade_count": 33,
+ "win_rate_pct": 33.3,
+ "brain_calls_today": 8,
  "last_decision": {
-  "time": "2026-11-14T12:51:48Z",
+  "time": "2026-11-14T15:41:33Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-14T12:52:00Z",
+  "decided_at": "2026-11-14T14:47:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 251.74,
-  "equity_pln": 1003.24,
-  "events": [],
-  "market_view": "BTC 67.17k in a tight weekend range 66.9-67.45k; 4h/d1 trend bearish but deeply oversold (h4 RSI 23). 08-12Z 4h was an inside candle with high 67,451 - no new lower high to trail behind.",
-  "watch_next": "16Z 4h close: if its high is below 67,451, trail stop to ~250-400 above it. 4h close > 68,400 = bounce risk; < 65,500 = consider TP ~64,200. Time limit Sun 12Z: tighten to ~67,500 if still ranging.",
-  "news": "No fresh market-moving news found; weekend thin liquidity after the ETF-outflow driven breakdown.",
-  "actions": []
+  "equity_usd": 258.18,
+  "equity_pln": 1028.9,
+  "events": [
+   {
+    "type": "position_closed",
+    "id": "t103",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "qty": 0.0036991100000000002,
+    "entry": 70028.985,
+    "exit": 65300.0,
+    "pnl": 17.2177,
+    "time": 1794669720000,
+    "why": "target",
+    "opened": 1794577080000,
+    "reason": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short."
+   }
+  ],
+  "market_view": "BTC broke the 66.9-67.45k weekend range down to a new 30d low 65,936 (now 66.28k); trend bearish on 4h/d1 but all timeframes deeply oversold (h1 RSI 26).",
+  "watch_next": "16Z 4h close: lower high at 67,256? Close < 65,500 -> extend TP to ~64,300. Close > 67,500 -> breakdown failed.",
+  "news": "No fresh catalyst found; weekend continuation of the risk-off bleed.",
+  "error": "not executed: decision is 55 min old (limit 45)"
  },
  "brain_mode": "session",
- "cash_usd": 240.81982,
+ "cash_usd": 258.180983,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -610,7 +623,7 @@
  "income_pln": {
   "funding": 2.66,
   "carry": -2.63,
-  "interest": 2.09
+  "interest": 2.1
  },
  "cash_rate_pct": 4.014
 }

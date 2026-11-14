@@ -30,7 +30,7 @@
   "2026-11-11": 12,
   "2026-11-12": 12,
   "2026-11-13": 12,
-  "2026-11-14": 7
+  "2026-11-14": 8
  },
  "closed_trades": [
   {
@@ -444,9 +444,22 @@
    "why": "target",
    "opened": 1794417720000,
    "reason": "Bear-trend re-short at resistance: 74.5-74.8k = h4 ema20 74.51k + 24h high 74.80k + breakdown level of 10 Nov. Limit fill on a bounce into it; stop above h4 ema50 75.75k, TP 72.3k under 30d low 72.58k (~2.3R)."
+  },
+  {
+   "id": "t103",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.0036991100000000002,
+   "entry": 70028.985,
+   "exit": 65300.0,
+   "pnl": 17.2177,
+   "time": 1794669720000,
+   "why": "target",
+   "opened": 1794577080000,
+   "reason": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short."
   }
  ],
- "last_closed_check_ms": 1794666888312,
+ "last_closed_check_ms": 1794670893099,
  "day": "2026-11-14",
  "day_start_equity": 247.44174666386033,
  "paused_day": null,
@@ -455,11 +468,11 @@
  "control": {
   "equity": 255.43070451799173,
   "pos": null,
-  "last_t": 1794661200000,
+  "last_t": 1794664800000,
   "trades": 9,
   "wins": 5
  },
- "last_btc": 65962.5,
+ "last_btc": 65528.9,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -526,6 +539,6 @@
   "o100:cancelled",
   "o101:filled"
  ],
- "last_decision_id": "2026-11-14T12:52:00Z",
+ "last_decision_id": "2026-11-14T14:47:00Z",
  "cash_rate_day": "2026-11-14"
 }
