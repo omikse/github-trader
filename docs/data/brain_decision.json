@@ -1,11 +1,22 @@
 {
-  "id": "2026-11-14T00:46:00Z",
-  "decided_at": "2026-11-14T00:46:00Z",
+  "id": "2026-11-14T02:51:49Z",
+  "decided_at": "2026-11-14T02:51:49Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 68.17k grinding flat after the 20-24Z 4h candle closed with another lower high (69,056) and a 67,795 low; 4h/d1 trend bearish but deeply oversold (h4 RSI 22). Short in profit, trail and let TP 66,800 work.",
-  "news": "No fresh catalyst found; backdrop remains ETF outflows and risk-off, thin weekend liquidity.",
-  "watch_next": "Next completed 4h high (00-04Z) for another trail; 4h close < 67,500 -> consider extending TP to ~66,000; EUR funding level.",
+  "market_view": "BTC made a new 30d low at 66,840 in the 00-04Z candle (missed TP 66,800 by ~40) and bounced to 67.7k; 4h/d1 trend still bearish but h4 RSI 21 = oversold, bounce risk. Short +8.6 USD.",
+  "news": "No fresh catalyst found; weekend thin liquidity, ongoing ETF outflow/risk-off narrative.",
+  "watch_next": "04Z 4h close: if lower high < 68,500, trail stop ~180 above it; TP 66,200 below new 30d low. EUR carry gone.",
   "actions": [
-    {"type": "move_stop", "symbol": "BTCUSDT", "stop": 69230, "take_profit": 66800, "reason": "Trail ~175 above the completed 20-24Z 4h lower high 69,056; locks ~+3 USD while giving room for weekend wicks."}
+    {
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 68700,
+      "take_profit": 66200,
+      "reason": "Trail stop 69,230->68,700 (above in-progress 4h high 68,370 + ~1.5 h1 ATR, below h1 ema20 68.8k) to lock ~+4.9 USD after TP was missed by 40 at the 66,840 low; extend TP below the new 30d low toward 65-66k support."
+    },
+    {
+      "type": "carry_close",
+      "symbol": "EURUSDT",
+      "reason": "EUR funding turned negative (-8% APR) after 97% last session; plan rule: close when negative. Net if closed ~+0.07."
+    }
   ]
 }
