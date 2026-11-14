@@ -1,9 +1,17 @@
 {
-  "id": "2026-11-14T06:51:00Z",
-  "decided_at": "2026-11-14T06:51:00Z",
+  "id": "2026-11-14T08:51:30Z",
+  "decided_at": "2026-11-14T08:51:30Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC basing at 67.2k after a 66,402 30d low; 4h/d1 still bearish with lower highs, but deeply oversold (h4 RSI 24). Short from 70,029 is +10.3 with stop 68,550 locking profit.",
-  "news": "No new catalyst found; weekend thin liquidity, risk-off/ETF outflow backdrop unchanged.",
-  "watch_next": "After 08Z 4h close trail stop ~180 above latest completed 4h high if lower; TP 65,300; re-short only on 68.0-68.8k rejection after this closes.",
-  "actions": []
+  "market_view": "BTC 67.0k grinding sideways under a fresh 4h lower high (67,392) after the 66,402 30d low; trend bearish but h1/h4/d1 RSI deeply oversold, so a weekend relief bounce is the main risk to the short.",
+  "news": "No new market-moving headlines found; backdrop remains ETF outflows and risk-off.",
+  "watch_next": "12Z 4h close: trail stop above the new completed 4h high if lower; TP 65,300 / 4h close < 65.5k for TP extension; 4h close > 68.4k = bounce, stop handles it.",
+  "actions": [
+    {
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 67800,
+      "take_profit": 65300,
+      "reason": "Trail behind the new completed 04-08Z 4h lower high 67,392: stop 67,800 sits ~400 above it and just below the h1 ema20 (68.0k), 1.4 h1 ATR from price to survive weekend chop; locks ~+8.2 USD of the +11 open gain while keeping TP 65,300 (front-runs 65k)."
+    }
+  ]
 }
