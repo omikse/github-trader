@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-14T00:59:13Z",
+ "updated": "2026-11-14T01:07:13Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9852,
- "equity_pln": 985.84,
- "return_pct": -3.8,
+ "equity_pln": 986.74,
+ "return_pct": -3.71,
  "max_drawdown_pct": 13.94,
  "control_pln": 1017.94,
  "control_trades": 9,
- "hodl_pln": 827.29,
+ "hodl_pln": 826.52,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.0036991100000000002,
    "entry": 70028.985,
-   "mark": 68290.1,
-   "upnl": 6.432326892349981,
+   "mark": 68226.7,
+   "upnl": 6.666850466350013,
    "stop": 69230.0,
    "tp": 66800.0,
    "liq": null,
    "leverage": null,
    "opened": 1794577080000,
    "reason": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short.",
-   "upnl_pln": 25.63
+   "upnl_pln": 26.57
   }
  ],
  "closed_trades": [
@@ -501,7 +501,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 240.931799,
+ "cash_usd": 240.935248,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -556,8 +556,8 @@
    "earned": 0.3458,
    "fees": 0.1394,
    "net_if_closed_now": 0.0669,
-   "funding_pct_per_hour": 0.01112,
-   "funding_apr_pct": 97.4,
+   "funding_pct_per_hour": 0.0,
+   "funding_apr_pct": 0.0,
    "opened": 1794415916791,
    "reason": "EUR perp funding has stayed > +75% APR for 4+ sessions and is now +220% APR (0.6%/day): break-even ~1 day at current rate, ~3 days at 80%. Non-meme, low-vol underlying. Close if funding < 30% APR for 2 sessions or negative."
   }
@@ -617,7 +617,7 @@
   }
  ],
  "income_pln": {
-  "funding": 2.6,
+  "funding": 2.62,
   "carry": -2.07,
   "interest": 2.04
  },
