@@ -1,9 +1,17 @@
 {
-  "id": "2026-11-14T12:52:00Z",
-  "decided_at": "2026-11-14T12:52:00Z",
+  "id": "2026-11-14T14:47:00Z",
+  "decided_at": "2026-11-14T14:47:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 67.17k in a tight weekend range 66.9-67.45k; 4h/d1 trend bearish but deeply oversold (h4 RSI 23). 08-12Z 4h was an inside candle with high 67,451 - no new lower high to trail behind.",
-  "news": "No fresh market-moving news found; weekend thin liquidity after the ETF-outflow driven breakdown.",
-  "watch_next": "16Z 4h close: if its high is below 67,451, trail stop to ~250-400 above it. 4h close > 68,400 = bounce risk; < 65,500 = consider TP ~64,200. Time limit Sun 12Z: tighten to ~67,500 if still ranging.",
-  "actions": []
+  "market_view": "BTC broke the 66.9-67.45k weekend range down to a new 30d low 65,936 (now 66.28k); trend bearish on 4h/d1 but all timeframes deeply oversold (h1 RSI 26).",
+  "news": "No fresh catalyst found; weekend continuation of the risk-off bleed.",
+  "watch_next": "16Z 4h close: lower high at 67,256? Close < 65,500 -> extend TP to ~64,300. Close > 67,500 -> breakdown failed.",
+  "actions": [
+    {
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 67500,
+      "take_profit": 65300,
+      "reason": "Trail behind completed 4h high 67,451 / old range top 67.4k after the range broke down; ~2.2 h1 ATR above price, locks ~+9.3 USD. TP 65,300 front-runs 65k support."
+    }
+  ]
 }
