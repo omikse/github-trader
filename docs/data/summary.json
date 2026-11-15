@@ -1,34 +1,32 @@
 {
- "updated": "2026-11-15T08:59:32Z",
+ "updated": "2026-11-15T09:07:32Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9852,
- "equity_pln": 1034.8,
- "return_pct": 0.98,
+ "equity_pln": 1026.2,
+ "return_pct": 0.14,
  "max_drawdown_pct": 13.94,
  "control_pln": 1017.94,
  "control_trades": 9,
- "hodl_pln": 784.49,
- "positions": [
+ "hodl_pln": 797.2,
+ "positions": [],
+ "closed_trades": [
   {
+   "id": "t107",
    "symbol": "BTCUSDT",
    "side": "short",
-   "size": 0.00336256,
+   "qty": 0.00336256,
    "entry": 65230.425,
-   "mark": 64757.2,
-   "upnl": 1.5912474560000196,
-   "stop": 65330.0,
-   "tp": 62350.0,
-   "liq": null,
-   "leverage": null,
+   "exit": 65362.665,
+   "pnl": -0.6862,
+   "time": 1794733260000,
+   "why": "stop",
    "opened": 1794711660000,
    "reason": "Retest short of broken 65.0-65.3k (double bottom + h1 ema20 65,277) in a 4h/d1 downtrend; stop ~200 above the 66,127 4h lower high; TP front-runs the 62k sweep low; ~2.7R. Smaller risk because the 61,970 capitulation wick + negative alt funding can squeeze.",
-   "upnl_pln": 6.34
-  }
- ],
- "closed_trades": [
+   "pnl_pln": -2.73
+  },
   {
    "id": "t103",
    "symbol": "BTCUSDT",
@@ -488,8 +486,8 @@
    "pnl_pln": -21.51
   }
  ],
- "trade_count": 33,
- "win_rate_pct": 33.3,
+ "trade_count": 34,
+ "win_rate_pct": 32.4,
  "brain_calls_today": 5,
  "last_decision": {
   "time": "2026-11-15T08:51:32Z",
@@ -515,7 +513,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 258.069159,
+ "cash_usd": 257.503397,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {

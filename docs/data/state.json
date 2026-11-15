@@ -458,22 +458,50 @@
    "why": "target",
    "opened": 1794577080000,
    "reason": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short."
+  },
+  {
+   "id": "t107",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00336256,
+   "entry": 65230.425,
+   "exit": 65362.665,
+   "pnl": -0.6862,
+   "time": 1794733260000,
+   "why": "stop",
+   "opened": 1794711660000,
+   "reason": "Retest short of broken 65.0-65.3k (double bottom + h1 ema20 65,277) in a 4h/d1 downtrend; stop ~200 above the 66,127 4h lower high; TP front-runs the 62k sweep low; ~2.7R. Smaller risk because the 61,970 capitulation wick + negative alt funding can squeeze."
   }
  ],
- "last_closed_check_ms": 1794733172173,
+ "last_closed_check_ms": 1794733652194,
  "day": "2026-11-15",
  "day_start_equity": 258.1908277650926,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "position_closed",
+   "id": "t107",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00336256,
+   "entry": 65230.425,
+   "exit": 65362.665,
+   "pnl": -0.6862,
+   "time": 1794733260000,
+   "why": "stop",
+   "opened": 1794711660000,
+   "reason": "Retest short of broken 65.0-65.3k (double bottom + h1 ema20 65,277) in a 4h/d1 downtrend; stop ~200 above the 66,127 4h lower high; TP front-runs the 62k sweep low; ~2.7R. Smaller risk because the 61,970 capitulation wick + negative alt funding can squeeze."
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 255.43070451799173,
   "pos": null,
-  "last_t": 1794726000000,
+  "last_t": 1794729600000,
   "trades": 9,
   "wins": 5
  },
- "last_btc": 64757.2,
+ "last_btc": 65806.2,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
