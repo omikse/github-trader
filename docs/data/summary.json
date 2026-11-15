@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T10:51:32Z",
+ "updated": "2026-11-15T10:52:32Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,7 +10,7 @@
  "max_drawdown_pct": 13.94,
  "control_pln": 1017.94,
  "control_trades": 9,
- "hodl_pln": 793.42,
+ "hodl_pln": 793.25,
  "positions": [],
  "closed_trades": [
   {
@@ -488,32 +488,52 @@
  ],
  "trade_count": 34,
  "win_rate_pct": 32.4,
- "brain_calls_today": 5,
+ "brain_calls_today": 6,
  "last_decision": {
-  "time": "2026-11-15T08:51:32Z",
+  "time": "2026-11-15T10:52:32Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-15T08:50:55Z",
+  "decided_at": "2026-11-15T10:51:42Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 259.89,
-  "equity_pln": 1035.71,
-  "events": [],
-  "market_view": "BTC 64.7k bouncing off the 63.7k 4h low but the 04-08Z 4h closed with another lower high 65,127 (sequence 66,127/65,827/65,593/65,127). 4h/d1 downtrend intact; h1 RSI 45, funding near flat (-1.5% APR).",
-  "watch_next": "Whether BTC rejects under 65.0-65.3k again or a 4h closes above 65,330 (stop); progress below 64k / 63.7k by Mon 08:00Z, else scratch.",
-  "news": "No fresh catalyst found; coverage frames November as BTC's worst month in years.",
+  "equity_usd": 257.51,
+  "equity_pln": 1026.21,
+  "events": [
+   {
+    "type": "position_closed",
+    "id": "t107",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "qty": 0.00336256,
+    "entry": 65230.425,
+    "exit": 65362.665,
+    "pnl": -0.6862,
+    "time": 1794733260000,
+    "why": "stop",
+    "opened": 1794711660000,
+    "reason": "Retest short of broken 65.0-65.3k (double bottom + h1 ema20 65,277) in a 4h/d1 downtrend; stop ~200 above the 66,127 4h lower high; TP front-runs the 62k sweep low; ~2.7R. Smaller risk because the 61,970 capitulation wick + negative alt funding can squeeze."
+   }
+  ],
+  "market_view": "BTC 65.5k: relief bounce from the 61,970 capitulation wick stopped my BE short (65,362, -0.69). In-progress 4h high 66,087 still just under the 66,127 4h lower high; h1 RSI 51, price above h1 ema20 65,074 but under h1 ema50 66,610 and h4 ema20 67,826. 4h/d1 trend still down; alt funding deeply negative = squeeze fuel.",
+  "watch_next": "Does BTC reject 66.1-66.9k (new 4h lower high) or 4h-close above 66,127/67,500 (relief leg, no shorts)? Short order 66,900 status.",
+  "news": "No fresh market-moving news found; weekend relief bounce.",
   "actions": [
    {
-    "type": "move_stop",
+    "type": "entry_order",
     "symbol": "BTCUSDT",
-    "stop": 65330,
-    "take_profit": 62350,
-    "reason": "Per plan: 04-08Z 4h closed with lower high 65,127; trail stop ~200 above it to 65,330 (~entry 65,230, near breakeven). TP unchanged front-running 62k/61,970.",
+    "side": "short",
+    "trigger": 66900,
+    "stop": 67950,
+    "take_profit": 64150,
+    "risk_pct": 0.015,
+    "expires_hours": 18,
+    "reason": "Re-anchored retest short (~1.7 h1 ATR above price) into h1 ema50 66,610 / broken 66.8k support, above the 66,127 4h LH sweep zone, in a 4h/d1 downtrend. Stop above the 67,288 24h high, TP front-runs 64k; ~2.6R.",
+    "invalidation": "BTC 4h close above 67,500 = relief rally in play; or fill and no rejection within two 4h candles -> scratch.",
     "result": "done",
-    "detail": "stop 65330.0, target 62350.0"
+    "detail": "short 0.00343771 when price goes above 66900 (risk 1.5%, stop 67950.0, target 64150.0, expires in 18h) ok"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 257.505442,
+ "cash_usd": 257.505462,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -539,7 +559,19 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [],
+ "orders": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "trigger": 66900,
+   "direction": "above",
+   "stop": 67950.0,
+   "tp": 64150.0,
+   "qty": 0.00343771,
+   "expires": 1794804752249,
+   "note": "Re-anchored retest short (~1.7 h1 ATR above price) into h1 ema50 66,610 / broken 66.8k support, above the 66,127 4h LH sweep zone, in a 4h/d1 downtrend. Stop above the 67,288 24h high, TP front-runs 64k; ~2.6R."
+  }
+ ],
  "balance_warning": false,
  "other_value_usd": 0,
  "predictions": [],
