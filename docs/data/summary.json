@@ -1,17 +1,33 @@
 {
- "updated": "2026-11-15T03:00:49Z",
+ "updated": "2026-11-15T03:02:15Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9852,
- "equity_pln": 1028.96,
- "return_pct": 0.41,
+ "equity_pln": 1025.76,
+ "return_pct": 0.1,
  "max_drawdown_pct": 13.94,
  "control_pln": 1017.94,
  "control_trades": 9,
- "hodl_pln": 787.35,
- "positions": [],
+ "hodl_pln": 793.15,
+ "positions": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "size": 0.00336256,
+   "entry": 65230.425,
+   "mark": 65425.1,
+   "upnl": -0.6546063679999854,
+   "stop": 66330.0,
+   "tp": 62350.0,
+   "liq": null,
+   "leverage": null,
+   "opened": 1794711660000,
+   "reason": "Retest short of broken 65.0-65.3k (double bottom + h1 ema20 65,277) in a 4h/d1 downtrend; stop ~200 above the 66,127 4h lower high; TP front-runs the 62k sweep low; ~2.7R. Smaller risk because the 61,970 capitulation wick + negative alt funding can squeeze.",
+   "upnl_pln": -2.61
+  }
+ ],
  "closed_trades": [
   {
    "id": "t103",
@@ -511,7 +527,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 258.194377,
+ "cash_usd": 258.073766,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -537,19 +553,7 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [
-  {
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "trigger": 65250,
-   "direction": "above",
-   "stop": 66330.0,
-   "tp": 62350.0,
-   "qty": 0.00336256,
-   "expires": 1794869509501,
-   "note": "Retest short of broken 65.0-65.3k (double bottom + h1 ema20 65,277) in a 4h/d1 downtrend; stop ~200 above the 66,127 4h lower high; TP front-runs the 62k sweep low; ~2.7R. Smaller risk because the 61,970 capitulation wick + negative alt funding can squeeze."
-  }
- ],
+ "orders": [],
  "balance_warning": false,
  "other_value_usd": 0,
  "predictions": [],
