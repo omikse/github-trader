@@ -1,9 +1,17 @@
 {
-  "id": "2026-11-15T06:53:00Z",
-  "decided_at": "2026-11-15T06:53:00Z",
+  "id": "2026-11-15T08:50:55Z",
+  "decided_at": "2026-11-15T08:50:55Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 64.4k stays capped under h1 ema20 (65.1k) after the 61,970 capitulation wick; 4h/d1 downtrend intact with a new lower high forming at 65,127. Short is +2.8 and on plan.",
-  "news": "No fresh market-moving news found; weekend drift.",
-  "watch_next": "08:00Z 4h close: if high stays ~65,127, trail BTC stop to ~65,330 (breakeven). Time stop Mon 08:00Z if no progress below 64k. 4h close >66,100 = exit.",
-  "actions": []
+  "market_view": "BTC 64.7k bouncing off the 63.7k 4h low but the 04-08Z 4h closed with another lower high 65,127 (sequence 66,127/65,827/65,593/65,127). 4h/d1 downtrend intact; h1 RSI 45, funding near flat (-1.5% APR).",
+  "news": "No fresh catalyst found; coverage frames November as BTC's worst month in years.",
+  "watch_next": "Whether BTC rejects under 65.0-65.3k again or a 4h closes above 65,330 (stop); progress below 64k / 63.7k by Mon 08:00Z, else scratch.",
+  "actions": [
+    {
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 65330,
+      "take_profit": 62350,
+      "reason": "Per plan: 04-08Z 4h closed with lower high 65,127; trail stop ~200 above it to 65,330 (~entry 65,230, near breakeven). TP unchanged front-running 62k/61,970."
+    }
+  ]
 }
