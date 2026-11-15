@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-15T06:44:15Z",
+ "updated": "2026-11-15T06:52:15Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9852,
- "equity_pln": 1038.95,
- "return_pct": 1.39,
+ "equity_pln": 1040.0,
+ "return_pct": 1.49,
  "max_drawdown_pct": 13.94,
  "control_pln": 1017.94,
  "control_trades": 9,
- "hodl_pln": 780.74,
+ "hodl_pln": 779.91,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00336256,
    "entry": 65230.425,
-   "mark": 64447.9,
-   "upnl": 2.631287264000005,
+   "mark": 64378.7,
+   "upnl": 2.86397641600002,
    "stop": 65800.0,
    "tp": 62350.0,
    "liq": null,
    "leverage": null,
    "opened": 1794711660000,
    "reason": "Retest short of broken 65.0-65.3k (double bottom + h1 ema20 65,277) in a 4h/d1 downtrend; stop ~200 above the 66,127 4h lower high; TP front-runs the 62k sweep low; ~2.7R. Smaller risk because the 61,970 capitulation wick + negative alt funding can squeeze.",
-   "upnl_pln": 10.49
+   "upnl_pln": 11.41
   }
  ],
  "closed_trades": [
@@ -490,53 +490,22 @@
  ],
  "trade_count": 33,
  "win_rate_pct": 33.3,
- "brain_calls_today": 3,
+ "brain_calls_today": 4,
  "last_decision": {
-  "time": "2026-11-15T04:52:15Z",
+  "time": "2026-11-15T06:52:15Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-15T04:52:00Z",
+  "decided_at": "2026-11-15T06:53:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 258.62,
-  "equity_pln": 1030.64,
-  "events": [
-   {
-    "type": "order_cancelled",
-    "id": "o105",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "status": "cancelled",
-    "trigger": 64950,
-    "time": 1794711109501,
-    "detail": "cancelled by the brain"
-   },
-   {
-    "type": "order_filled",
-    "id": "o106",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "status": "filled",
-    "trigger": 65250,
-    "time": 1794711660000,
-    "detail": "filled at 65230.4"
-   }
-  ],
-  "market_view": "BTC 64.8k holding the V-bounce from the 61,970 capitulation wick but capped under the h1 ema20 (65.2k); 4h/d1 downtrend intact with lower highs 66,127 / 65,827 / 65,593. Short filled at 65,230 and is +1.5.",
-  "watch_next": "Does the 04-08Z 4h candle close below 65k (short working) or does BTC reclaim 65.6k? Next trail: ~200 above each new completed 4h lower high; TP 62,350.",
-  "news": "Quiet Sunday session; no new catalyst checked this session.",
-  "actions": [
-   {
-    "type": "move_stop",
-    "symbol": "BTCUSDT",
-    "stop": 65800,
-    "take_profit": 62350,
-    "reason": "Trail per template: ~200 above the latest completed 4h lower high 65,593 (00-04Z bounce candle). Cuts risk roughly in half; still ~1.1 h1 ATR above price so normal chop should not clip it.",
-    "result": "done",
-    "detail": "stop 65800.0, target 62350.0"
-   }
-  ]
+  "equity_usd": 260.97,
+  "equity_pln": 1040.0,
+  "events": [],
+  "market_view": "BTC 64.4k stays capped under h1 ema20 (65.1k) after the 61,970 capitulation wick; 4h/d1 downtrend intact with a new lower high forming at 65,127. Short is +2.8 and on plan.",
+  "watch_next": "08:00Z 4h close: if high stays ~65,127, trail BTC stop to ~65,330 (breakeven). Time stop Mon 08:00Z if no progress below 64k. 4h close >66,100 = exit.",
+  "news": "No fresh market-moving news found; weekend drift.",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 258.07134,
+ "cash_usd": 258.071489,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
