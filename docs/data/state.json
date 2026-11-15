@@ -31,7 +31,7 @@
   "2026-11-12": 12,
   "2026-11-13": 12,
   "2026-11-14": 12,
-  "2026-11-15": 9
+  "2026-11-15": 10
  },
  "closed_trades": [
   {
@@ -473,22 +473,11 @@
    "reason": "Retest short of broken 65.0-65.3k (double bottom + h1 ema20 65,277) in a 4h/d1 downtrend; stop ~200 above the 66,127 4h lower high; TP front-runs the 62k sweep low; ~2.7R. Smaller risk because the 61,970 capitulation wick + negative alt funding can squeeze."
   }
  ],
- "last_closed_check_ms": 1794768232365,
+ "last_closed_check_ms": 1794768712453,
  "day": "2026-11-15",
  "day_start_equity": 258.1908277650926,
  "paused_day": null,
- "pending_events": [
-  {
-   "type": "order_cancelled",
-   "id": "o109",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "status": "cancelled",
-   "trigger": 65850,
-   "time": 1794761512466,
-   "detail": "cancelled by the brain"
-  }
- ],
+ "pending_events": [],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 255.43070451799173,
@@ -497,7 +486,7 @@
   "trades": 9,
   "wins": 5
  },
- "last_btc": 64600.6,
+ "last_btc": 64584.8,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -569,6 +558,6 @@
   "o108:cancelled",
   "o109:cancelled"
  ],
- "last_decision_id": "2026-11-15T16:51:34Z",
+ "last_decision_id": "2026-11-15T18:51:30Z",
  "cash_rate_day": "2026-11-15"
 }

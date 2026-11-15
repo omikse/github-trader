@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T18:43:52Z",
+ "updated": "2026-11-15T18:51:52Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,7 +10,7 @@
  "max_drawdown_pct": 13.94,
  "control_pln": 1017.94,
  "control_trades": 9,
- "hodl_pln": 782.59,
+ "hodl_pln": 782.4,
  "positions": [],
  "closed_trades": [
   {
@@ -488,55 +488,33 @@
  ],
  "trade_count": 34,
  "win_rate_pct": 32.4,
- "brain_calls_today": 9,
+ "brain_calls_today": 10,
  "last_decision": {
-  "time": "2026-11-15T16:51:52Z",
+  "time": "2026-11-15T18:51:52Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-15T16:51:34Z",
+  "decided_at": "2026-11-15T18:51:30Z",
   "model": "claude-opus-5-5",
   "equity_usd": 257.51,
-  "equity_pln": 1026.24,
+  "equity_pln": 1026.25,
   "events": [
    {
     "type": "order_cancelled",
-    "id": "o108",
+    "id": "o109",
     "symbol": "BTCUSDT",
     "side": "short",
     "status": "cancelled",
-    "trigger": 66900,
-    "time": 1794754312420,
+    "trigger": 65850,
+    "time": 1794761512466,
     "detail": "cancelled by the brain"
    }
   ],
-  "market_view": "BTC 64.5k, 12-16Z 4h closed 64,708 with a new lower high 65,781 (< 66,087 < 66,127). Bearish 4h/d1 structure intact, h1 below ema20 65,028/ema50 66,269; alt funding deeply negative so no alt shorts.",
-  "watch_next": "Fill/rejection of the 65,450 retest short; 4h close > 66,300 cancels; loss of 63.8k without fill -> re-anchor lower.",
-  "news": "No fresh catalyst found; analysts calling this the worst November in years, weekend drift.",
-  "actions": [
-   {
-    "type": "cancel_order",
-    "symbol": "BTCUSDT",
-    "reason": "Re-anchor: new 4h LH 65,781 printed, 65,850 trigger now above the latest LH and ~1.75 ATR away.",
-    "result": "done",
-    "detail": "cancelled 1 order(s)"
-   },
-   {
-    "type": "entry_order",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "trigger": 65450,
-    "stop": 66250,
-    "take_profit": 62400,
-    "risk_pct": 0.015,
-    "expires_hours": 24,
-    "reason": "Retest short at h1 ema20 zone / under new 4h LH 65,781 in 4h/d1 downtrend (LH sequence 66,127 > 66,087 > 65,781). Stop above 66,087 LH; TP front-runs 62k/61,970 low. ~3.8R.",
-    "invalidation": "BTC 4h close > 66,300 (above LH 66,087) or no rejection within two 4h candles after fill.",
-    "result": "done",
-    "detail": "short 0.00442971 when price goes above 65450 (risk 1.5%, stop 66250.0, target 62400.0, expires in 24h) ok"
-   }
-  ]
+  "market_view": "BTC 64.6k drifting inside the 12-16Z 4h range under h1 ema20 (64,957); 4h/d1 downtrend with lower highs intact (last 65,781). Alts flat with crowded negative funding, so BTC remains the cleanest short vehicle.",
+  "watch_next": "Fill of the 65,450 retest short and rejection within two 4h candles; cancel if a 4h closes > 66,300; re-anchor lower if BTC loses 63.8k without filling.",
+  "news": "",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 257.514731,
+ "cash_usd": 257.514888,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
