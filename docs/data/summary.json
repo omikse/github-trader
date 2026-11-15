@@ -1,17 +1,33 @@
 {
- "updated": "2026-11-15T23:00:11Z",
+ "updated": "2026-11-15T23:08:11Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9852,
- "equity_pln": 1026.27,
- "return_pct": 0.15,
+ "equity_pln": 1030.11,
+ "return_pct": 0.52,
  "max_drawdown_pct": 13.94,
  "control_pln": 1017.94,
  "control_trades": 9,
- "hodl_pln": 791.3,
- "positions": [],
+ "hodl_pln": 789.57,
+ "positions": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "size": 0.00442971,
+   "entry": 65430.365000000005,
+   "mark": 65177.4,
+   "upnl": 1.1205615901500168,
+   "stop": 66250.0,
+   "tp": 62400.0,
+   "liq": null,
+   "leverage": null,
+   "opened": 1794783780000,
+   "reason": "Retest short at h1 ema20 zone / under new 4h LH 65,781 in 4h/d1 downtrend (LH sequence 66,127 > 66,087 > 65,781). Stop above 66,087 LH; TP front-runs 62k/61,970 low. ~3.8R.",
+   "upnl_pln": 4.47
+  }
+ ],
  "closed_trades": [
   {
    "id": "t107",
@@ -503,7 +519,7 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 257.519772,
+ "cash_usd": 257.360511,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -529,19 +545,7 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [
-  {
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "trigger": 65450,
-   "direction": "above",
-   "stop": 66250.0,
-   "tp": 62400.0,
-   "qty": 0.00442971,
-   "expires": 1794847912466,
-   "note": "Retest short at h1 ema20 zone / under new 4h LH 65,781 in 4h/d1 downtrend (LH sequence 66,127 > 66,087 > 65,781). Stop above 66,087 LH; TP front-runs 62k/61,970 low. ~3.8R."
-  }
- ],
+ "orders": [],
  "balance_warning": false,
  "other_value_usd": 0,
  "predictions": [],
