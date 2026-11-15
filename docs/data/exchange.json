@@ -1,5 +1,5 @@
 {
- "cash": 258.1940418236025,
+ "cash": 258.19419959719903,
  "positions": {},
  "closed": [
   {
@@ -438,21 +438,21 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794710629417,
- "next_id": 106,
+ "last_ms": 1794711109501,
+ "next_id": 107,
  "orders": [
   {
-   "id": "o105",
+   "id": "o106",
    "symbol": "BTCUSDT",
    "side": "short",
-   "qty": 0.00440805,
-   "trigger": 64950,
+   "qty": 0.00336256,
+   "trigger": 65250,
    "direction": "above",
-   "stop": 66050.0,
-   "tp": 62150.0,
-   "placed": 1794696709445,
-   "expires": 1794869509445,
-   "note": "Retest short of broken 65k double-bottom support (~1.7 h1 ATR above price, below h1 ema20 66,088). Trend 4h/d1 down, macro risk-off. Stop above 20-24Z 4h high 65,827 + buffer; TP front-runs 62k. ~2.5R."
+   "stop": 66330.0,
+   "tp": 62350.0,
+   "placed": 1794711109501,
+   "expires": 1794869509501,
+   "note": "Retest short of broken 65.0-65.3k (double bottom + h1 ema20 65,277) in a 4h/d1 downtrend; stop ~200 above the 66,127 4h lower high; TP front-runs the 62k sweep low; ~2.7R. Smaller risk because the 61,970 capitulation wick + negative alt funding can squeeze."
   }
  ],
  "order_events": [
@@ -1040,6 +1040,15 @@
    "trigger": 66700,
    "time": 1794696709445,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o105",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 64950,
+   "time": 1794711109501,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -1146,6 +1155,6 @@
  "income": {
   "funding": 0.666927231108624,
   "carry": -0.6600412463190095,
-  "interest": 0.5390315267172329
+  "interest": 0.5391893003137934
  }
 }
