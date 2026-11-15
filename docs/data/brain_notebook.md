@@ -1,8 +1,8 @@
-# Notebook (updated 2026-11-15T18:51Z)
+# Notebook (updated 2026-11-15T20:46Z)
 
 ## Big picture
+- 20:46Z 15 Nov (input 20:43Z): BTC 65,022, drifting up. 16-20Z 4h closed 64,907 with LH 65,167 (< 65,781 < 66,087): LH sequence intact. h1 RSI 48.5, price back above h1 ema20 64,965, under h1 ema50 66,056; h4 RSI 31.5, h4 ema20 67,052. Short order 65,450 now ~0.65 h1 ATR above, between h1 ema20 and ema50 -> kept (stop 66,250 above 66,087 high). Alt funding still negative (BONK -73%, NEAR -62%, WIF -58%).
 - 18:51Z 15 Nov (input 18:42Z): BTC 64,615, quiet Sunday drift. 16-20Z 4h so far H 64,905 L 64,229 (inside 12-16Z range, no new LH yet). h1 RSI 44, h1 ema20 64,957 / ema50 66,144; h4 RSI 28.8, ema20 67,238. Alts flat; meme/NEAR funding very negative (PEPE/BONK -84..-86%, NEAR -78%). LH structure intact. Short order 65,450 sits ~1.2 h1 ATR above, just above h1 ema20 -> kept.
-- 16:51Z 15 Nov (input 16:42Z): BTC 64,523. 12-16Z 4h closed 64,708 with NEW LH 65,781 (< 66,087 < 66,127). 16-20Z in progress H 64,905 L 64,229. h1 RSI 43, below h1 ema20 65,028 / ema50 66,269; h4 RSI 28.5, h4 ema20 67,228. Alts flat, funding deeply negative (LINK/NEAR/PEPE -42..-48%, WIF -62%). LH sequence intact; weekend drift.
 - Trend: bearish 4h/d1 (7d -12%, 30d -20%, d1 RSI 25). Resistance 66.1k, 66.6-66.9k (h1 ema50 / broken 66.8k), 67.3k (24h high), 67.8k (h4 ema20). Support 65k, 63.8k, 62k, 61,970 low, 60k.
 - Mind-changers: BTC 4h close > 66,300 (above LH 66,087) = LH structure broken -> cancel short; 4h close > 67,500 = relief rally in play -> no shorts, consider reclaim long only with alt breadth.
 
@@ -49,6 +49,7 @@
 - None held.
 
 ## Session log
+- 2026-11-15T20:46Z | eq 257.52 | BTC 65.0k, 4h LH 65,167 closed. Kept short order 65,450/66,250/62,400 (expires 16 Nov 16:51Z). No actions.
 - 2026-11-15T18:51Z | eq 257.51 | BTC 64.6k quiet, inside 4h range. Kept short order 65,450/66,250/62,400. No actions. Polymarket: BTC weekly-dip markets no clear edge.
 - 2026-11-15T16:51Z | eq 257.51 | BTC 64.5k, new 4h LH 65,781. Re-anchored short order 65,850->65,450 / stop 66,250 / TP 62,400, 1.5%, 24h.
 - 2026-11-15T14:52Z | eq 257.51 | BTC rolled over to 64.6k, new 4h LH 66,087. Cancelled 66,900 order; new short order 65,850/stop 66,650/TP 62,400, 1.5%, 24h.
@@ -58,4 +59,3 @@
 - 2026-11-15T06:52Z | eq 260.90 | BTC 64.4k, short +2.8. 04-08Z 4h forming LH 65,127 (not closed). Kept stop 65,800/TP 62,350. No actions.
 - 2026-11-15T04:52Z | eq 259.56 | Short order filled 65,230; BTC 64.8k. Trailed stop 66,330->65,800 (above 65,593 4h LH), TP 62,350.
 - 2026-11-15T02:53Z | eq 258.19 | BTC swept 62k (61,970), V to 64.5k. Re-anchored short order to 65,250/stop 66,330/TP 62,350, 1.5%.
-- 2026-11-15T00:52Z | eq 258.19 | BTC 63.8k basing under 64.6k; short order 64,950/66,050/62,150 (~1.5 ATR above, at broken 65k) still well placed. No actions.
