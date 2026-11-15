@@ -31,7 +31,7 @@
   "2026-11-12": 12,
   "2026-11-13": 12,
   "2026-11-14": 12,
-  "2026-11-15": 2
+  "2026-11-15": 3
  },
  "closed_trades": [
   {
@@ -460,32 +460,11 @@
    "reason": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short."
   }
  ],
- "last_closed_check_ms": 1794717975212,
+ "last_closed_check_ms": 1794718335255,
  "day": "2026-11-15",
  "day_start_equity": 258.1908277650926,
  "paused_day": null,
- "pending_events": [
-  {
-   "type": "order_cancelled",
-   "id": "o105",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "status": "cancelled",
-   "trigger": 64950,
-   "time": 1794711109501,
-   "detail": "cancelled by the brain"
-  },
-  {
-   "type": "order_filled",
-   "id": "o106",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "status": "filled",
-   "trigger": 65250,
-   "time": 1794711660000,
-   "detail": "filled at 65230.4"
-  }
- ],
+ "pending_events": [],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 255.43070451799173,
@@ -494,7 +473,7 @@
   "trades": 9,
   "wins": 5
  },
- "last_btc": 64771.7,
+ "last_btc": 65068.5,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -564,6 +543,6 @@
   "o105:cancelled",
   "o106:filled"
  ],
- "last_decision_id": "2026-11-15T02:53:00Z",
+ "last_decision_id": "2026-11-15T04:52:00Z",
  "cash_rate_day": "2026-11-15"
 }
