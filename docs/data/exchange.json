@@ -1,5 +1,5 @@
 {
- "cash": 257.51007001243767,
+ "cash": 257.51016837920645,
  "positions": {},
  "closed": [
   {
@@ -451,21 +451,21 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794754012308,
- "next_id": 109,
+ "last_ms": 1794754312420,
+ "next_id": 110,
  "orders": [
   {
-   "id": "o108",
+   "id": "o109",
    "symbol": "BTCUSDT",
    "side": "short",
-   "qty": 0.00343771,
-   "trigger": 66900,
+   "qty": 0.00442743,
+   "trigger": 65850,
    "direction": "above",
-   "stop": 67950.0,
-   "tp": 64150.0,
-   "placed": 1794739952249,
-   "expires": 1794804752249,
-   "note": "Re-anchored retest short (~1.7 h1 ATR above price) into h1 ema50 66,610 / broken 66.8k support, above the 66,127 4h LH sweep zone, in a 4h/d1 downtrend. Stop above the 67,288 24h high, TP front-runs 64k; ~2.6R."
+   "stop": 66650.0,
+   "tp": 62400.0,
+   "placed": 1794754312420,
+   "expires": 1794840712420,
+   "note": "Re-anchored retest short (~1.5 h1 ATR above 64.6k) at h1 ema20/12-16Z rejection 65.8k, below the fresh 66,087 4h lower high, in a 4h/d1 downtrend (7d -13.5%). Stop above the LH by ~560 (~1 ATR), TP front-runs 62k/61,970 low. ~4.3R."
   }
  ],
  "order_events": [
@@ -1071,6 +1071,15 @@
    "trigger": 65250,
    "time": 1794711660000,
    "detail": "filled at 65230.4"
+  },
+  {
+   "id": "o108",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 66900,
+   "time": 1794754312420,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -1177,6 +1186,6 @@
  "income": {
   "funding": 0.655303514619843,
   "carry": -0.6600412463190095,
-  "interest": 0.5528682718321877
+  "interest": 0.5529666386009582
  }
 }
