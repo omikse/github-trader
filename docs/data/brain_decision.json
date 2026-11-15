@@ -1,9 +1,27 @@
 {
-  "id": "2026-11-15T00:52:30Z",
-  "decided_at": "2026-11-15T00:52:30Z",
+  "id": "2026-11-15T02:53:00Z",
+  "decided_at": "2026-11-15T02:53:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 63.8k after flush to 63,243; deeply oversold (h4 RSI 16) but trend down, h1 ema20 65.7k. Basing in weekend chop; alts with heavily negative funding.",
-  "news": "No fresh catalyst found; macro risk-off backdrop, BTC on track for a very weak November.",
-  "watch_next": "Fill of 64,950 short order and rejection; if BTC bleeds below 62.5k re-anchor lower (~63.2k); cancel on 4h close > 65,900.",
-  "actions": []
+  "market_view": "BTC capitulation wick to 61,970 (swept 62k) then +3% V-bounce to 64.5k; h1 RSI 41, h4 20, trend still down (4h lower highs 65,827/66,127). Crowded alt shorts (negative funding) = squeeze fuel, so the retest short is re-anchored a bit higher and smaller.",
+  "news": "No fresh catalyst found; macro risk-off and heavy long liquidations through the week.",
+  "watch_next": "Does BTC reject 65.0-65.3k (broken level + h1 ema20) or reclaim 66.1k on a 4h close? Fill status of the 65,250 short order.",
+  "actions": [
+    {
+      "type": "cancel_order",
+      "symbol": "BTCUSDT",
+      "reason": "Re-anchor: 64,950 trigger with 66,050 stop sits inside squeeze range after the 61,970 sweep-and-V; replace higher with stop beyond the 66,127 4h high."
+    },
+    {
+      "type": "entry_order",
+      "symbol": "BTCUSDT",
+      "side": "short",
+      "trigger": 65250,
+      "stop": 66330,
+      "take_profit": 62350,
+      "risk_pct": 0.015,
+      "expires_hours": 44,
+      "reason": "Retest short of broken 65.0-65.3k (double bottom + h1 ema20 65,277) in a 4h/d1 downtrend; stop ~200 above the 66,127 4h lower high; TP front-runs the 62k sweep low; ~2.7R. Smaller risk because the 61,970 capitulation wick + negative alt funding can squeeze.",
+      "invalidation": "BTC 4h close > 66,100 (lower-high structure broken) or no rejection within 2 4h candles after fill."
+    }
+  ]
 }

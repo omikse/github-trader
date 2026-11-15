@@ -1,10 +1,10 @@
-# Notebook (updated 2026-11-15T00:52Z)
+# Notebook (updated 2026-11-15T02:53Z)
 
 ## Big picture
-- 00:52Z 15 Nov (input 00:42Z): BTC 63,807, 4h close 64,115 (20-00Z low 63,243), current 4h h 64,572 l 63,553. h1 RSI 27, h4 16, h1 ema20 65,686, ATR 765. BTC funding -5% APR, alts -40..-188% (crowded shorts). Weekend drift, no rebound yet.
-- 22:51Z 14 Nov (input 22:47Z): BTC lost 65k double bottom, flushed to 63,243 (new 30d / ~16-month low), now 63,686. h1 RSI 20, h4 15, d1 20 = deeply oversold, but trend firmly down (7d -16%, 30d -22%). h1 ema20 66,088, ATR 735. Funding BTC +2%, alts -27..-177% APR (crowded shorts). News: macro risk-off (tariffs/Fed/hot CPI), long liquidations.
-- Trend: bearish 4h/d1. Resistance 64.9-65.0k (broken double bottom), 65.8-66.1k (4h highs), 66.7k, 67.5k. Support 63.2k, 62.5k, 62k, 60k.
-- Mind-changers: BTC 4h close > 65,900 = flush failed / reclaim -> no shorts; > 67,500 relief rally in play.
+- 02:53Z 15 Nov (input 02:42Z): BTC flushed to 61,970 (swept 62k, new ~16-month low) and V-bounced +3% in 1h to 64,535. h1 RSI 41 (recovered), h4 20, d1 22. h1 ema20 65,278, ATR 944. Funding BTC -18% APR, alts deeply negative (crowded shorts = squeeze fuel). Alts bounced 3-6% too.
+- Trend: bearish 4h/d1 (7d -14%, 30d -21%). Resistance 65.0-65.3k (broken double bottom + h1 ema20), 65.8-66.1k (4h lower highs 65,827/66,127), 66.7k, 67.5k. Support 63.2k, 62k (swept), 61,970 low, 60k.
+- Capitulation-wick risk: a sweep of 62k + V can start a relief leg; that is why the short is now higher/smaller.
+- Mind-changers: BTC 4h close > 66,100 = lower-high structure broken -> no shorts; > 67,500 relief rally in play.
 
 ## Strategy for this experiment
 - Goal: grow ~1,000 PLN by 2026-11-21. Equity 258.19 USD (1,029 PLN; +0.41%; peak 265.7). Flat. Closed 11W/22L (net -0.4 but recent template trades strongly positive). ~7 days left: fewer, cleaner trades, each >=2R, risk 1.5-2%.
@@ -13,17 +13,18 @@
 - Carry only if funding > 60% APR sustained 3+ sessions on a non-meme; size <= 25%.
 
 ## Active plans
-- BTC RETEST SHORT ORDER (placed 22:51Z 14 Nov, expires ~Mon 16 Nov 22:51Z): trigger 64,950, stop 66,050, TP 62,150 (front-runs 62k), risk 2%. Replaced the stale 66,700 order. If filled: trail stop to ~200 above each completed 4h lower high; if 4h closes < 62,500, extend TP to ~60,300. If filled and no rejection within 2 4h candles -> scratch. Re-anchor each session: if BTC keeps bleeding (< 62.5k without bouncing), move to ~1.5-2 h1 ATR above price / next broken level (63.2k area); if BTC 4h closes > 65,900, cancel.
+- BTC RETEST SHORT ORDER (placed 02:53Z 15 Nov, expires ~Mon 16 Nov 22:53Z): trigger 65,250, stop 66,330, TP 62,350 (front-runs 62k/61,970 low), risk 1.5%. Replaced 64,950/66,050/62,150 (stop too close to the 66,127 high after the V). If filled: trail stop ~200 above each completed 4h lower high; if 4h closes < 62,000, extend TP to ~60,300. No rejection within 2 4h candles -> scratch. Re-anchor each session: if BTC rolls over below 63k without filling, move trigger to ~1.5 h1 ATR above price/next broken level; if 4h closes > 66,100, cancel.
 - No other positions/orders.
 
 ## Watchlist
-- ETH (1,755) short only on retest of a broken level AND only if no BTC short is open/resting (same bet) -> not now.
+- ETH (1,805) short only on retest of a broken level AND only if no BTC short is open/resting (same bet) -> not now.
 - Alts: no fresh shorts (d1 oversold, deeply negative funding = crowded shorts). BONK -177% APR: squeeze risk, avoid.
 - Capitulation-reclaim long: only if BTC 4h closes back > 67,500 with alt breadth (cancel short first); small, stop under the low.
 - PAXG weak (3,797, falling with crypto). Long only after 4h close > 4,010. EUR: none.
 - Polymarket: no edge found.
 
 ## Lessons
+- 15 Nov: capitulation wicks below round numbers (62k swept to 61,970) snap back 3%+ in an hour; keep short triggers/stops beyond the last 4h lower high, not inside the bounce range.
 - 14 Nov: BTC retest short from 70,029 -> TP 65,300 (+17.22, best trade). Template confirmed: re-anchored limit short at broken level + trailing behind 4h lower highs + TP front-running round-number support.
 - 14 Nov: TP 66,800 missed by 40 at the 66,840 sweep low. Set TPs ABOVE round numbers/obvious lows (front-run them by ~0.2-0.3%), not just below.
 - EUR carry: 3 days, +0.35 funding vs 0.14+0.14 fees -> barely positive. EUR funding is erratic; size small or skip.
@@ -48,6 +49,7 @@
 - None held.
 
 ## Session log
+- 2026-11-15T02:53Z | eq 258.19 | BTC swept 62k (61,970), V to 64.5k. Re-anchored short order to 65,250/stop 66,330/TP 62,350, 1.5%.
 - 2026-11-15T00:52Z | eq 258.19 | BTC 63.8k basing under 64.6k; short order 64,950/66,050/62,150 (~1.5 ATR above, at broken 65k) still well placed. No actions.
 - 2026-11-14T22:51Z | eq 258.19 | BTC broke 65k, low 63,243, 63.7k. Cancelled stale 66,700 short order; new retest short order 64,950/stop 66,050/TP 62,150, 2%.
 - 2026-11-14T20:50Z | eq 258.19 | BTC 65.4k holding 65k, alts new lows; 4h lower highs 66,127/65,827. Kept short order 66,700/67,700/64,150. No actions.
@@ -57,4 +59,3 @@
 - 2026-11-14T12:52Z | eq 251.39 | BTC 67.17k, 08-12Z inside candle (h 67,451, no lower high). Short +10.6, stop 67,800/TP 65,300 kept. No actions.
 - 2026-11-14T10:52Z | eq 251.36 | BTC 67.18k tight weekend range; short +10.6, stop 67,800/TP 65,300 kept. No actions.
 - 2026-11-14T08:51Z | eq 251.93 | BTC 67.0k sideways; 04-08Z lower high 67,392. Trailed short stop 68,550->67,800 (locks ~+8.2), TP 65,300.
-- 2026-11-14T06:51Z | eq 251.10 | BTC 67.25k basing; short +10.3, stop 68,550/TP 65,300 kept. No actions.
