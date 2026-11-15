@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-14T22:51Z)
+# Notebook (updated 2026-11-15T00:52Z)
 
 ## Big picture
+- 00:52Z 15 Nov (input 00:42Z): BTC 63,807, 4h close 64,115 (20-00Z low 63,243), current 4h h 64,572 l 63,553. h1 RSI 27, h4 16, h1 ema20 65,686, ATR 765. BTC funding -5% APR, alts -40..-188% (crowded shorts). Weekend drift, no rebound yet.
 - 22:51Z 14 Nov (input 22:47Z): BTC lost 65k double bottom, flushed to 63,243 (new 30d / ~16-month low), now 63,686. h1 RSI 20, h4 15, d1 20 = deeply oversold, but trend firmly down (7d -16%, 30d -22%). h1 ema20 66,088, ATR 735. Funding BTC +2%, alts -27..-177% APR (crowded shorts). News: macro risk-off (tariffs/Fed/hot CPI), long liquidations.
 - Trend: bearish 4h/d1. Resistance 64.9-65.0k (broken double bottom), 65.8-66.1k (4h highs), 66.7k, 67.5k. Support 63.2k, 62.5k, 62k, 60k.
 - Mind-changers: BTC 4h close > 65,900 = flush failed / reclaim -> no shorts; > 67,500 relief rally in play.
@@ -47,6 +48,7 @@
 - None held.
 
 ## Session log
+- 2026-11-15T00:52Z | eq 258.19 | BTC 63.8k basing under 64.6k; short order 64,950/66,050/62,150 (~1.5 ATR above, at broken 65k) still well placed. No actions.
 - 2026-11-14T22:51Z | eq 258.19 | BTC broke 65k, low 63,243, 63.7k. Cancelled stale 66,700 short order; new retest short order 64,950/stop 66,050/TP 62,150, 2%.
 - 2026-11-14T20:50Z | eq 258.19 | BTC 65.4k holding 65k, alts new lows; 4h lower highs 66,127/65,827. Kept short order 66,700/67,700/64,150. No actions.
 - 2026-11-14T18:52Z | eq 258.18 | BTC 65.8k, double bottom ~65.0k, basing. Kept retest short order 66,700/67,700/64,150. No actions.
@@ -56,4 +58,3 @@
 - 2026-11-14T10:52Z | eq 251.36 | BTC 67.18k tight weekend range; short +10.6, stop 67,800/TP 65,300 kept. No actions.
 - 2026-11-14T08:51Z | eq 251.93 | BTC 67.0k sideways; 04-08Z lower high 67,392. Trailed short stop 68,550->67,800 (locks ~+8.2), TP 65,300.
 - 2026-11-14T06:51Z | eq 251.10 | BTC 67.25k basing; short +10.3, stop 68,550/TP 65,300 kept. No actions.
-- 2026-11-14T04:51Z | eq 252.07 | BTC new low 66,402, 4h close 66,683; short +11.3. Trailed stop 68,700->68,550, TP 66,200->65,300.
