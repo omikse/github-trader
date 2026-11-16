@@ -1,9 +1,9 @@
-# Notebook (updated 2026-11-16T12:55Z)
+# Notebook (updated 2026-11-16T14:52Z)
 
 ## Big picture
+- 14:52Z 16 Nov: ENGINE STALLED - input still 12:58Z (last bot commit 13:02Z, ~1h50m old). No fresh data; held everything. If still stale next session, re-check and re-send nothing new unless data fresh.
 - 12:55Z 16 Nov (input 12:48Z): BTC 64,092. 08-12Z 4h CLOSED 64,376, high 64,924 = 7th lower 4h high. 12-16Z 4h open: h 64,389, l 63,840 (new low, under 64.2k support). h1 RSI 41 under ema20 64,665/ema50 65,399; h4 RSI 29, d1 RSI 23. Bias bearish. Short +5.9. Next support 63.7k, 62k/61,970.
 - 10:52Z 16 Nov (input 10:44Z): BTC 64,486. 08-12Z 4h in progress: h 64,924, l 64,066 = new intraday low under 64,229 support (24h low). h1 RSI 45 under ema20 64,760/ema50 65,495; h4 RSI 30, d1 RSI 24. Bias bearish. Short +4.2. Funding BTC +11% APR.
-- 08:52Z 16 Nov (input 08:44Z): BTC 64,530. 04-08Z 4h CLOSED 64,916, high 65,129 = 6th lower 4h high. 08-12Z 4h open: h 64,924, l 64,458. h1 RSI 45 under ema20 64,855/ema50 65,593; h4 RSI 31, d1 RSI 24. Bias bearish. Short +4.0. Alt funding still negative (WIF -49%, PEPE -31%, NEAR -23%); PAXG 3,845.
 - Trend: bearish 4h/d1. Resistance 65.5k (LH), 65.8k, 66.1k, 66.9k (h4 ema20). Support 64.2k, 63.7-63.8k, 62k, 61,970 low (30d low), 60k.
 - Alt funding mostly negative (SUI -30%, LINK -28%, WIF -26%, NEAR -25%, PEPE -36%) = crowded shorts in alts; BTC funding ~0. PAXG 3,870 firm (h1 RSI 66).
 - Mind-changers: BTC 4h close > 65,800 = LH structure broken -> exit short; 4h close > 67,500 = relief rally -> no shorts, consider reclaim long only with alt breadth.
@@ -51,6 +51,7 @@
 - None held.
 
 ## Session log
+- 2026-11-16T14:52Z | eq 263.29 (stale 12:58Z) | ENGINE STALLED ~1h50m. Held BTC short stop 65,125/TP 62,400. No actions.
 - 2026-11-16T12:55Z | eq 263.33 | BTC 64.1k, new low 63,840, short +5.9. 08-12Z 4h LH 64,924 closed -> trailed stop 65,330->65,125, TP 62,400 kept. News: nothing new.
 - 2026-11-16T10:52Z | eq 261.58 | BTC 64.5k, new low 64,066 in open 08-12Z 4h, short +4.2. Held stop 65,330/TP 62,400; trail after 12Z close. No actions. News: nothing new.
 - 2026-11-16T08:52Z | eq 261.38 | BTC 64.5k, short +4.0. 04-08Z 4h LH 65,129 closed -> trailed stop 65,560->65,330 (in profit), TP 62,400 kept. News: nothing new.
@@ -60,4 +61,3 @@
 - 2026-11-16T00:51Z | eq 260.67 | Short order filled 65,430 (23:03Z), rejected; BTC 64.7k, +3.3. 4h LH 65,466 closed -> trailed stop 66,250->65,700, TP 62,400 kept.
 - 2026-11-15T22:52Z | eq 257.52 | BTC 65.2k grinding toward short order 65,450 (stop 66,250 / TP 62,400). Kept. No actions.
 - 2026-11-15T20:46Z | eq 257.52 | BTC 65.0k, 4h LH 65,167 closed. Kept short order 65,450/66,250/62,400 (expires 16 Nov 16:51Z). No actions.
-- 2026-11-15T18:51Z | eq 257.51 | BTC 64.6k quiet, inside 4h range. Kept short order 65,450/66,250/62,400. No actions. Polymarket: BTC weekly-dip markets no clear edge.
