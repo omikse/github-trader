@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-16T00:44:11Z",
+ "updated": "2026-11-16T00:52:11Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9852,
- "equity_pln": 1038.24,
- "return_pct": 1.32,
+ "equity_pln": 1033.84,
+ "return_pct": 0.89,
  "max_drawdown_pct": 13.94,
  "control_pln": 1017.94,
  "control_trades": 9,
- "hodl_pln": 783.99,
+ "hodl_pln": 787.03,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00442971,
    "entry": 65430.365000000005,
-   "mark": 64715.8,
-   "upnl": 3.1653157261500104,
-   "stop": 66250.0,
+   "mark": 64966.5,
+   "upnl": 2.054787429150023,
+   "stop": 65700.0,
    "tp": 62400.0,
    "liq": null,
    "leverage": null,
    "opened": 1794783780000,
    "reason": "Retest short at h1 ema20 zone / under new 4h LH 65,781 in 4h/d1 downtrend (LH sequence 66,127 > 66,087 > 65,781). Stop above 66,087 LH; TP front-runs 62k/61,970 low. ~3.8R.",
-   "upnl_pln": 12.61
+   "upnl_pln": 8.19
   }
  ],
  "closed_trades": [
@@ -504,22 +504,43 @@
  ],
  "trade_count": 34,
  "win_rate_pct": 32.4,
- "brain_calls_today": 0,
+ "brain_calls_today": 1,
  "last_decision": {
-  "time": "2026-11-15T22:52:11Z",
+  "time": "2026-11-16T00:52:11Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-15T22:52:30Z",
+  "decided_at": "2026-11-16T00:51:02Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 257.52,
-  "equity_pln": 1026.27,
-  "events": [],
-  "market_view": "BTC 65.2k grinding up on quiet Sunday, ~270 below the 65,450 retest short order; still under h1 ema50 (65,983) and 4h lower highs 65,781/66,087 in a 4h/d1 downtrend.",
-  "watch_next": "Fill of 65,450 short and rejection within two 4h candles; cancel if 4h closes > 66,300; trail ~200 above new completed 4h LHs.",
-  "news": "No fresh market-moving news found; weekend drift.",
-  "actions": []
+  "equity_usd": 259.41,
+  "equity_pln": 1033.79,
+  "events": [
+   {
+    "type": "order_filled",
+    "id": "o110",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "status": "filled",
+    "trigger": 65450,
+    "time": 1794783780000,
+    "detail": "filled at 65430.4"
+   }
+  ],
+  "market_view": "BTC short filled 65,430 at 23:03Z and rejected: 20-24Z 4h closed 65,315 with new LH 65,466 (< 65,781 < 66,087), price now 64,676, h1 RSI 45 below h1 ema20. 4h/d1 downtrend intact (d1 RSI 24, 7d -14%).",
+  "watch_next": "Trail stop ~200 above each new completed 4h LH; if a 4h closes < 62,500 extend TP toward 60,300; exit if a 4h closes > 65,800.",
+  "news": "No fresh catalyst found; coverage still about the brutal November drawdown and leverage shakeout near 60-62k.",
+  "actions": [
+   {
+    "type": "move_stop",
+    "symbol": "BTCUSDT",
+    "stop": 65700,
+    "take_profit": 62400,
+    "reason": "Trail per plan: new completed 4h LH 65,466 (20-24Z); stop ~230 above it, cuts risk from 66,250 to near-breakeven-plus-small loss (~-0.3%). TP 62,400 front-runs 62k/61,970 low.",
+    "result": "done",
+    "detail": "stop 65700.0, target 62400.0"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 257.363804,
+ "cash_usd": 257.36395,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
