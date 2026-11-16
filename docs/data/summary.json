@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T18:44:00Z",
+ "updated": "2026-11-16T18:51:00Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,7 +10,7 @@
  "max_drawdown_pct": 13.94,
  "control_pln": 1021.9,
  "control_trades": 9,
- "hodl_pln": 789.52,
+ "hodl_pln": 790.71,
  "positions": [],
  "closed_trades": [
   {
@@ -502,37 +502,22 @@
  ],
  "trade_count": 35,
  "win_rate_pct": 34.3,
- "brain_calls_today": 9,
+ "brain_calls_today": 10,
  "last_decision": {
-  "time": "2026-11-16T16:52:00Z",
+  "time": "2026-11-16T18:51:00Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-16T16:50:58Z",
+  "decided_at": "2026-11-16T18:52:00Z",
   "model": "claude-opus-5-5",
   "equity_usd": 258.47,
-  "equity_pln": 1034.05,
+  "equity_pln": 1034.06,
   "events": [],
-  "market_view": "BTC 64,587 flat. Short was stopped at 65,158 (+0.89) by a 65,633 wick in the 12-16Z 4h, which then closed 64,400 (no close above 65,800). 4h/d1 downtrend intact (h4 RSI 32, below h4 ema20 66,119), h1 neutral (RSI 48).",
-  "watch_next": "Whether the re-anchored 65,350 retest short fills and rejects; a 4h close > 65,800 cancels the short idea; 62k/61,970 support.",
-  "news": "No new catalyst found; November drawdown narrative continues.",
-  "actions": [
-   {
-    "type": "entry_order",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "trigger": 65350,
-    "stop": 66050,
-    "take_profit": 62400,
-    "risk_pct": 0.02,
-    "expires_hours": 24,
-    "reason": "Re-anchored retest short at h1 ema50 65,274 / mid of the 65,633 sweep wick, under the 4h downtrend (h4 ema20 66,119). Stop ~420 above the 65,633 sweep high, TP 62,400 front-runs 62k/61,970 (~4.2R).",
-    "invalidation": "BTC 4h close > 65,800 (sweep becomes real reclaim) or acceptance above 65,633.",
-    "result": "done",
-    "detail": "short 0.00669706 when price goes above 65350 (risk 2.0%, stop 66050.0, target 62400.0, expires in 24h) ok"
-   }
-  ]
+  "market_view": "BTC 64.9k in a relief grind inside a 4h/d1 downtrend (h4 RSI 35 under ema20 66.15k); 65.3k (h1 ema50) to 65.6k sweep high is resistance. Resting short at 65,350 stays as the plan.",
+  "watch_next": "Did the 65,350 short fill and reject within 2 4h candles? 4h close >65,800 -> cancel. If BTC <63,800 unfilled, re-anchor lower.",
+  "news": "No new market-moving news; November drawdown >20% narrative continues.",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 258.470498,
+ "cash_usd": 258.470636,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
