@@ -1,9 +1,17 @@
 {
-  "id": "2026-11-16T06:52:30Z",
-  "decided_at": "2026-11-16T06:52:30Z",
+  "id": "2026-11-16T08:52:00Z",
+  "decided_at": "2026-11-16T08:52:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 64.6k grinding lower under h1 ema20/50; 04-08Z 4h in progress with high 65,129, below the 65,364 LH. 4h/d1 downtrend intact, short +3.8.",
-  "news": "No fresh market-moving news beyond the ongoing November drawdown.",
-  "watch_next": "After 08Z 4h close: if its high < 65,364, trail stop to ~65,330 (below entry). 4h close < 64,200 opens 63.7k then 62.4k TP. Exit on 4h close > 65,800.",
-  "actions": []
+  "market_view": "BTC 64.5k keeps printing lower 4h highs (65,129 latest) under falling h1/h4 EMAs; d1 RSI 24 oversold but no reclaim. Short +4.0, trend intact.",
+  "news": "No new market-moving news; November drawdown >20% narrative continues.",
+  "watch_next": "12Z 4h close: trail stop ~200 above its high if < 65,129; extend TP if a 4h closes < 62,500; exit on 4h close > 65,800.",
+  "actions": [
+    {
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 65330,
+      "take_profit": 62400,
+      "reason": "Trail ~200 above completed 04-08Z 4h lower high 65,129; stop now below entry 65,430, locking a small profit."
+    }
+  ]
 }
