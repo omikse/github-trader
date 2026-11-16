@@ -1,6 +1,18 @@
 {
- "cash": 258.4734190990554,
- "positions": {},
+ "cash": 258.25030603593126,
+ "positions": {
+  "BTCUSDT": {
+   "side": "short",
+   "qty": 0.00669706,
+   "entry": 65330.395000000004,
+   "stop": 66050.0,
+   "tp": 62400.0,
+   "opened": 1794865740000,
+   "entry_fee": 0.24063686632628503,
+   "mark": 64850.0,
+   "note": "Re-anchored retest short at h1 ema50 65,274 / mid of the 65,633 sweep wick, under the 4h downtrend (h4 ema20 66,119). Stop ~420 above the 65,633 sweep high, TP 62,400 front-runs 62k/61,970 (~4.2R)."
+  }
+ },
  "closed": [
   {
    "id": "t5",
@@ -464,23 +476,9 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794863520370,
+ "last_ms": 1794873072853,
  "next_id": 113,
- "orders": [
-  {
-   "id": "o112",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "qty": 0.00669706,
-   "trigger": 65350,
-   "direction": "above",
-   "stop": 66050.0,
-   "tp": 62400.0,
-   "placed": 1794847920466,
-   "expires": 1794934320466,
-   "note": "Re-anchored retest short at h1 ema50 65,274 / mid of the 65,633 sweep wick, under the 4h downtrend (h4 ema20 66,119). Stop ~420 above the 65,633 sweep high, TP 62,400 front-runs 62k/61,970 (~4.2R)."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -1111,26 +1109,35 @@
    "trigger": 65450,
    "time": 1794783780000,
    "detail": "filled at 65430.4"
+  },
+  {
+   "id": "o112",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 65350,
+   "time": 1794865740000,
+   "detail": "filled at 65330.4"
   }
  ],
  "funding_rates": {
-  "BTCUSDT": 1.173875e-05,
-  "ETHUSDT": -1.15016125e-05,
-  "SOLUSDT": -2.5085125e-05,
-  "XRPUSDT": -9.145720833333e-06,
-  "DOGEUSDT": -1.7957833333333e-05,
-  "ADAUSDT": -8.901375e-06,
-  "AVAXUSDT": -1.7336195833333e-05,
-  "LINKUSDT": 8.6446625e-06,
-  "SUIUSDT": -2.3373904166667e-05,
-  "PEPEUSDT": -4.423204166667e-06,
-  "WIFUSDT": -5.73853375e-05,
-  "BONKUSDT": -5.5639166666667e-05,
-  "LTCUSDT": -1.29316e-05,
-  "DOTUSDT": -2.5176979166667e-05,
-  "NEARUSDT": -2.9588875e-06,
-  "PAXGUSDT": 2.7964483333333e-05,
-  "EURUSDT": -5.00133e-05
+  "BTCUSDT": 1.68600375e-05,
+  "ETHUSDT": -1.01033e-05,
+  "SOLUSDT": -2.6063291666667e-05,
+  "XRPUSDT": -8.372054166667e-06,
+  "DOGEUSDT": 8.132520833333e-06,
+  "ADAUSDT": 3.471829166667e-06,
+  "AVAXUSDT": -1.2942745833333e-05,
+  "LINKUSDT": 6.362316666667e-06,
+  "SUIUSDT": -3.2487654166667e-05,
+  "PEPEUSDT": -3.7975366666667e-05,
+  "WIFUSDT": -6.75522125e-05,
+  "BONKUSDT": -5.3632158333333e-05,
+  "LTCUSDT": 7.322075e-06,
+  "DOTUSDT": -2.33607375e-05,
+  "NEARUSDT": -1.2650791666667e-05,
+  "PAXGUSDT": 1.4023466666667e-05,
+  "EURUSDT": -6.4738762096774e-05
  },
  "carry": {},
  "carry_closed": [
@@ -1215,8 +1222,8 @@
  ],
  "cash_rate": 0.04014,
  "income": {
-  "funding": 0.6936774627921083,
+  "funding": 0.7084132679482787,
   "carry": -0.6600412463190095,
-  "interest": 0.5875641045824636
+  "interest": 0.5903521026284276
  }
 }

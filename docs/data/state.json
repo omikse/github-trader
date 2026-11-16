@@ -487,20 +487,31 @@
    "reason": "Retest short at h1 ema20 zone / under new 4h LH 65,781 in 4h/d1 downtrend (LH sequence 66,127 > 66,087 > 65,781). Stop above 66,087 LH; TP front-runs 62k/61,970 low. ~3.8R."
   }
  ],
- "last_closed_check_ms": 1794863520370,
+ "last_closed_check_ms": 1794873072853,
  "day": "2026-11-16",
  "day_start_equity": 257.8758091919195,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_filled",
+   "id": "o112",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "filled",
+   "trigger": 65350,
+   "time": 1794865740000,
+   "detail": "filled at 65330.4"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 255.43070451799173,
   "pos": null,
-  "last_t": 1794859200000,
+  "last_t": 1794866400000,
   "trades": 9,
   "wins": 5
  },
- "last_btc": 64964.6,
+ "last_btc": 64850.0,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -571,7 +582,8 @@
   "o106:filled",
   "o108:cancelled",
   "o109:cancelled",
-  "o110:filled"
+  "o110:filled",
+  "o112:filled"
  ],
  "last_decision_id": "2026-11-16T20:52:00Z",
  "cash_rate_day": "2026-11-16"
