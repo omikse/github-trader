@@ -1,18 +1,6 @@
 {
- "cash": 257.40902666570844,
- "positions": {
-  "BTCUSDT": {
-   "side": "short",
-   "qty": 0.00442971,
-   "entry": 65430.365000000005,
-   "stop": 65125.0,
-   "tp": 62400.0,
-   "opened": 1794783780000,
-   "entry_fee": 0.15941064817928252,
-   "mark": 64130.2,
-   "note": "Retest short at h1 ema20 zone / under new 4h LH 65,781 in 4h/d1 downtrend (LH sequence 66,127 > 66,087 > 65,781). Stop above 66,087 LH; TP front-runs 62k/61,970 low. ~3.8R."
-  }
- },
+ "cash": 258.4667274549565,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -451,6 +439,19 @@
    "why": "stop",
    "opened": 1794711660000,
    "reason": "Retest short of broken 65.0-65.3k (double bottom + h1 ema20 65,277) in a 4h/d1 downtrend; stop ~200 above the 66,127 4h lower high; TP front-runs the 62k sweep low; ~2.7R. Smaller risk because the 61,970 capitulation wick + negative alt funding can squeeze."
+  },
+  {
+   "id": "t111",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00442971,
+   "entry": 65430.365000000005,
+   "exit": 65157.5625,
+   "pnl": 0.8903,
+   "time": 1794839580000,
+   "why": "stop",
+   "opened": 1794783780000,
+   "reason": "Retest short at h1 ema20 zone / under new 4h LH 65,781 in 4h/d1 downtrend (LH sequence 66,127 > 66,087 > 65,781). Stop above 66,087 LH; TP front-runs 62k/61,970 low. ~3.8R."
   }
  ],
  "fills": [
@@ -463,8 +464,8 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794834173456,
- "next_id": 111,
+ "last_ms": 1794843180329,
+ "next_id": 112,
  "orders": [],
  "order_events": [
   {
@@ -1099,23 +1100,23 @@
   }
  ],
  "funding_rates": {
-  "BTCUSDT": 1.8417191666667e-05,
-  "ETHUSDT": -8.3410375e-06,
-  "SOLUSDT": -6.991595833333e-06,
-  "XRPUSDT": -1.7121458333333e-05,
-  "DOGEUSDT": -2.3006304166667e-05,
-  "ADAUSDT": -2.004235e-05,
-  "AVAXUSDT": -7.053966666667e-06,
-  "LINKUSDT": -7.7274e-06,
-  "SUIUSDT": -3.6524129166667e-05,
-  "PEPEUSDT": -9.625216666667e-06,
-  "WIFUSDT": -3.9843333333333e-05,
-  "BONKUSDT": -8.0858220833333e-05,
-  "LTCUSDT": 3.096604166667e-06,
-  "DOTUSDT": -1.2305870833333e-05,
-  "NEARUSDT": -3.3082729166667e-05,
-  "PAXGUSDT": 4.2424295833333e-05,
-  "EURUSDT": -0.000115128575
+  "BTCUSDT": 1.7773275e-05,
+  "ETHUSDT": -7.452804166667e-06,
+  "SOLUSDT": 1.1112820833333e-05,
+  "XRPUSDT": -1.0424933333333e-05,
+  "DOGEUSDT": -1.6244104166667e-05,
+  "ADAUSDT": -5.569383333333e-06,
+  "AVAXUSDT": 1.427041666667e-06,
+  "LINKUSDT": -1.8365529166667e-05,
+  "SUIUSDT": -1.5401791666667e-05,
+  "PEPEUSDT": -1.42011125e-05,
+  "WIFUSDT": -4.40305e-05,
+  "BONKUSDT": -5.04205375e-05,
+  "LTCUSDT": 1.3564475e-05,
+  "DOTUSDT": -1.682416666667e-06,
+  "NEARUSDT": -4.347695833333e-06,
+  "PAXGUSDT": 3.69192375e-05,
+  "EURUSDT": -8.083268452381e-05
  },
  "carry": {},
  "carry_closed": [
@@ -1200,8 +1201,8 @@
  ],
  "cash_rate": 0.04014,
  "income": {
-  "funding": 0.6886297148452001,
+  "funding": 0.6936774627921083,
   "carry": -0.6600412463190095,
-  "interest": 0.5779093730573496
+  "interest": 0.5808724604835456
  }
 }
