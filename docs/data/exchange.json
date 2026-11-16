@@ -1,5 +1,5 @@
 {
- "cash": 258.46814868885406,
+ "cash": 258.46828689108935,
  "positions": {},
  "closed": [
   {
@@ -464,9 +464,23 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794847500381,
- "next_id": 112,
- "orders": [],
+ "last_ms": 1794847920466,
+ "next_id": 113,
+ "orders": [
+  {
+   "id": "o112",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00669706,
+   "trigger": 65350,
+   "direction": "above",
+   "stop": 66050.0,
+   "tp": 62400.0,
+   "placed": 1794847920466,
+   "expires": 1794934320466,
+   "note": "Re-anchored retest short at h1 ema50 65,274 / mid of the 65,633 sweep wick, under the 4h downtrend (h4 ema20 66,119). Stop ~420 above the 65,633 sweep high, TP 62,400 front-runs 62k/61,970 (~4.2R)."
+  }
+ ],
  "order_events": [
   {
    "id": "o2",
@@ -1203,6 +1217,6 @@
  "income": {
   "funding": 0.6936774627921083,
   "carry": -0.6600412463190095,
-  "interest": 0.5822936943809232
+  "interest": 0.5824318966161884
  }
 }
