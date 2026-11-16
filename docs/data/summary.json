@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-16T08:43:53Z",
+ "updated": "2026-11-16T08:51:53Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 3.9852,
- "equity_pln": 1041.63,
- "return_pct": 1.65,
+ "equity_pln": 1042.43,
+ "return_pct": 1.73,
  "max_drawdown_pct": 13.94,
  "control_pln": 1017.94,
  "control_trades": 9,
- "hodl_pln": 781.74,
+ "hodl_pln": 781.19,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00442971,
    "entry": 65430.365000000005,
-   "mark": 64528.7,
-   "upnl": 3.994114467150036,
-   "stop": 65560.0,
+   "mark": 64484.8,
+   "upnl": 4.18857873615001,
+   "stop": 65330.0,
    "tp": 62400.0,
    "liq": null,
    "leverage": null,
    "opened": 1794783780000,
    "reason": "Retest short at h1 ema20 zone / under new 4h LH 65,781 in 4h/d1 downtrend (LH sequence 66,127 > 66,087 > 65,781). Stop above 66,087 LH; TP front-runs 62k/61,970 low. ~3.8R.",
-   "upnl_pln": 15.92
+   "upnl_pln": 16.69
   }
  ],
  "closed_trades": [
@@ -504,22 +504,32 @@
  ],
  "trade_count": 34,
  "win_rate_pct": 32.4,
- "brain_calls_today": 4,
+ "brain_calls_today": 5,
  "last_decision": {
-  "time": "2026-11-16T06:52:37Z",
+  "time": "2026-11-16T08:51:53Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-16T06:52:30Z",
+  "decided_at": "2026-11-16T08:52:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 260.93,
-  "equity_pln": 1039.87,
+  "equity_usd": 261.58,
+  "equity_pln": 1042.43,
   "events": [],
-  "market_view": "BTC 64.6k grinding lower under h1 ema20/50; 04-08Z 4h in progress with high 65,129, below the 65,364 LH. 4h/d1 downtrend intact, short +3.8.",
-  "watch_next": "After 08Z 4h close: if its high < 65,364, trail stop to ~65,330 (below entry). 4h close < 64,200 opens 63.7k then 62.4k TP. Exit on 4h close > 65,800.",
-  "news": "No fresh market-moving news beyond the ongoing November drawdown.",
-  "actions": []
+  "market_view": "BTC 64.5k keeps printing lower 4h highs (65,129 latest) under falling h1/h4 EMAs; d1 RSI 24 oversold but no reclaim. Short +4.0, trend intact.",
+  "watch_next": "12Z 4h close: trail stop ~200 above its high if < 65,129; extend TP if a 4h closes < 62,500; exit on 4h close > 65,800.",
+  "news": "No new market-moving news; November drawdown >20% narrative continues.",
+  "actions": [
+   {
+    "type": "move_stop",
+    "symbol": "BTCUSDT",
+    "stop": 65330,
+    "take_profit": 62400,
+    "reason": "Trail ~200 above completed 04-08Z 4h lower high 65,129; stop now below entry 65,430, locking a small profit.",
+    "result": "done",
+    "detail": "stop 65330.0, target 62400.0"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 257.387459,
+ "cash_usd": 257.387605,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
