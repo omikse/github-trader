@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-17T08:45:41Z",
+ "updated": "2026-11-17T08:51:41Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 4.0007,
- "equity_pln": 1058.97,
- "return_pct": 2.94,
+ "equity_pln": 1061.25,
+ "return_pct": 3.16,
  "max_drawdown_pct": 13.94,
  "control_pln": 1021.9,
  "control_trades": 9,
- "hodl_pln": 782.87,
+ "hodl_pln": 781.95,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00669706,
    "entry": 65330.395000000004,
-   "mark": 64372.4,
-   "upnl": 6.415749994700018,
-   "stop": 65550.0,
+   "mark": 64297.2,
+   "upnl": 6.919368906700047,
+   "stop": 65450.0,
    "tp": 62400.0,
    "liq": null,
    "leverage": null,
    "opened": 1794865740000,
    "reason": "Re-anchored retest short at h1 ema50 65,274 / mid of the 65,633 sweep wick, under the 4h downtrend (h4 ema20 66,119). Stop ~420 above the 65,633 sweep high, TP 62,400 front-runs 62k/61,970 (~4.2R).",
-   "upnl_pln": 25.67
+   "upnl_pln": 27.68
   }
  ],
  "closed_trades": [
@@ -518,22 +518,32 @@
  ],
  "trade_count": 35,
  "win_rate_pct": 34.3,
- "brain_calls_today": 4,
+ "brain_calls_today": 5,
  "last_decision": {
-  "time": "2026-11-17T07:33:41Z",
+  "time": "2026-11-17T08:51:41Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-17T06:51:21Z",
+  "decided_at": "2026-11-17T08:47:30Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 263.21,
-  "equity_pln": 1053.03,
+  "equity_usd": 265.21,
+  "equity_pln": 1061.03,
   "events": [],
-  "market_view": "BTC coiling 63.8-65.5k under a bearish 4h/d1 trend; 04-08Z 4h still open (h 65,030), no new completed lower high since 65,118. Short +2.8 USD with stop 65,550 and TP 62,400.",
-  "watch_next": "08Z 4h close: if LH <= 64,900 trail stop to ~65,300 (BE); a 4h close > 65,500 = exit; 4h close < 63,800 = extend TP ~60,300. Time stop 12Z 18 Nov if BTC > 64,000.",
-  "news": "",
-  "actions": []
+  "market_view": "BTC 64,350 in 63.8-65.5k range under bearish 4h/d1; 04-08Z 4h made another lower high 65,030 (65,471->65,118->65,030). Short +6.6 USD.",
+  "watch_next": "08-12Z 4h close: if LH <= 64,850 trail to ~65,280 (BE); 4h close < 63,800 -> extend TP ~60,300; 4h close > 65,500 -> exit.",
+  "news": "Bear-market and hawkish Fed repricing headlines; no new catalyst.",
+  "actions": [
+   {
+    "type": "move_stop",
+    "symbol": "BTCUSDT",
+    "stop": 65450,
+    "take_profit": 62400,
+    "reason": "Trail ~420 above completed 04-08Z 4h lower high 65,030 per notebook rule (400-500 above LH); cuts worst case to ~-0.8 USD.",
+    "result": "done",
+    "detail": "stop 65450.0, target 62400.0"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 258.284762,
+ "cash_usd": 258.284867,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
