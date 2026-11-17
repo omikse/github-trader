@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-17T12:44:41Z",
+ "updated": "2026-11-17T12:52:41Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 4.0022,
- "equity_pln": 1045.59,
- "return_pct": 1.6,
+ "equity_pln": 1044.21,
+ "return_pct": 1.47,
  "max_drawdown_pct": 13.94,
  "control_pln": 1022.28,
  "control_trades": 9,
- "hodl_pln": 789.43,
+ "hodl_pln": 790.05,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00669706,
    "entry": 65330.395000000004,
-   "mark": 64887.8,
-   "upnl": 2.964085270700008,
-   "stop": 65450.0,
+   "mark": 64939.2,
+   "upnl": 2.619856386700047,
+   "stop": 65380.0,
    "tp": 62400.0,
    "liq": null,
    "leverage": null,
    "opened": 1794865740000,
    "reason": "Re-anchored retest short at h1 ema50 65,274 / mid of the 65,633 sweep wick, under the 4h downtrend (h4 ema20 66,119). Stop ~420 above the 65,633 sweep high, TP 62,400 front-runs 62k/61,970 (~4.2R).",
-   "upnl_pln": 11.86
+   "upnl_pln": 10.49
   }
  ],
  "closed_trades": [
@@ -518,22 +518,32 @@
  ],
  "trade_count": 35,
  "win_rate_pct": 34.3,
- "brain_calls_today": 6,
+ "brain_calls_today": 7,
  "last_decision": {
-  "time": "2026-11-17T10:52:41Z",
+  "time": "2026-11-17T12:52:41Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-17T10:52:30Z",
+  "decided_at": "2026-11-17T12:51:43Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 266.22,
-  "equity_pln": 1065.46,
+  "equity_usd": 260.82,
+  "equity_pln": 1043.85,
   "events": [],
-  "market_view": "BTC 64,190 grinding lower inside 63.8-65.5k range under falling 4h lower highs; 4h/d1 trend bearish, d1 RSI 23. Short +7.6 working.",
-  "watch_next": "08-12Z 4h close: if LH ~64,690 trail BTC stop to ~65,150; 4h close < 63,800 -> extend TP ~60,300.",
-  "news": "Bear-market and hawkish Fed repricing narrative continues; nothing new market-moving.",
-  "actions": []
+  "market_view": "BTC 64,947 bounced from 64,011 back to h1 ema50 (~64,975); 08-12Z 4h closed 64,924 with LH 64,931, the 4th falling 4h lower high (65,471->65,118->65,030->64,931). h4 RSI 37 under ema20 65,652, d1 RSI 24: downtrend intact but chopping 64.0-65.5k.",
+  "watch_next": "12-16Z 4h: rejection under 65.1k keeps short; a 4h close > 65,500 = exit. Trail ~450 above each new completed 4h LH. Time stop 12Z 18 Nov if BTC still > 64,000.",
+  "news": "No new catalyst; bear-market / hawkish Fed narrative continues.",
+  "actions": [
+   {
+    "type": "move_stop",
+    "symbol": "BTCUSDT",
+    "stop": 65380,
+    "take_profit": 62400,
+    "reason": "Trail ~450 above completed 08-12Z 4h LH 64,931 (lesson: 400-500 above LH in stretched downtrend); worst case now ~-0.3 USD vs entry 65,330.",
+    "result": "done",
+    "detail": "stop 65380.0, target 62400.0"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 258.288744,
+ "cash_usd": 258.288884,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
