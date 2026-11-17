@@ -1,34 +1,32 @@
 {
- "updated": "2026-11-17T22:45:05Z",
+ "updated": "2026-11-17T23:51:30Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 4.0022,
- "equity_pln": 1049.72,
- "return_pct": 2.0,
+ "equity_pln": 1042.4,
+ "return_pct": 1.29,
  "max_drawdown_pct": 13.94,
  "control_pln": 1022.28,
  "control_trades": 9,
- "hodl_pln": 787.69,
- "positions": [
+ "hodl_pln": 789.12,
+ "positions": [],
+ "closed_trades": [
   {
+   "id": "t113",
    "symbol": "BTCUSDT",
    "side": "short",
-   "size": 0.00669706,
+   "qty": 0.00669706,
    "entry": 65330.395000000004,
-   "mark": 64744.7,
-   "upnl": 3.922434556700047,
-   "stop": 64950.0,
-   "tp": 60300.0,
-   "liq": null,
-   "leverage": null,
+   "exit": 64982.475,
+   "pnl": 1.85,
+   "time": 1794956880000,
+   "why": "stop",
    "opened": 1794865740000,
    "reason": "Re-anchored retest short at h1 ema50 65,274 / mid of the 65,633 sweep wick, under the 4h downtrend (h4 ema20 66,119). Stop ~420 above the 65,633 sweep high, TP 62,400 front-runs 62k/61,970 (~4.2R).",
-   "upnl_pln": 15.7
-  }
- ],
- "closed_trades": [
+   "pnl_pln": 7.4
+  },
   {
    "id": "t111",
    "symbol": "BTCUSDT",
@@ -516,34 +514,39 @@
    "pnl_pln": -21.6
   }
  ],
- "trade_count": 35,
- "win_rate_pct": 34.3,
- "brain_calls_today": 10,
+ "trade_count": 36,
+ "win_rate_pct": 36.1,
+ "brain_calls_today": 11,
  "last_decision": {
-  "time": "2026-11-17T20:52:06Z",
+  "time": "2026-11-17T23:51:30Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-17T20:51:16Z",
+  "decided_at": "2026-11-17T22:51:30Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 268.48,
-  "equity_pln": 1074.5,
-  "events": [],
-  "market_view": "BTC 63,893 grinding under h1 ema20 64,310 after the 16-20Z 4h closed 63,676 (high 64,415, below 63,800). 4h/d1 downtrend intact (h4 RSI 33, d1 RSI 23), range 63.3-65.4k leaning lower.",
-  "watch_next": "20-24Z 4h high for next trail; break of 63,270 toward 62k/61,970; 4h close > 65,400 kills thesis.",
-  "news": "No new catalyst; headlines still about bear market and hawkish Fed repricing.",
-  "actions": [
+  "equity_usd": 260.46,
+  "equity_pln": 1042.4,
+  "events": [
    {
-    "type": "move_stop",
+    "type": "position_closed",
+    "id": "t113",
     "symbol": "BTCUSDT",
-    "stop": 64950,
-    "take_profit": 60300,
-    "reason": "Plan: trail ~535 above completed 16-20Z 4h high 64,415 (locks ~+2.5 USD). 16-20Z closed 63,676 < 63,800, so TP extended per plan to 60,300 (front-runs 60k).",
-    "result": "done",
-    "detail": "stop 64950.0, target 60300.0"
+    "side": "short",
+    "qty": 0.00669706,
+    "entry": 65330.395000000004,
+    "exit": 64982.475,
+    "pnl": 1.85,
+    "time": 1794956880000,
+    "why": "stop",
+    "opened": 1794865740000,
+    "reason": "Re-anchored retest short at h1 ema50 65,274 / mid of the 65,633 sweep wick, under the 4h downtrend (h4 ema20 66,119). Stop ~420 above the 65,633 sweep high, TP 62,400 front-runs 62k/61,970 (~4.2R)."
    }
-  ]
+  ],
+  "market_view": "BTC relief bounce from 63,615 to 64,735, back at h1 ema50 but still under h4 ema20 65,324 with d1 RSI 24; downtrend intact but the short's profit cushion shrank.",
+  "watch_next": "Did the 64,950 stop get hit? 20-24Z 4h close vs 65,400; if stopped, consider re-anchored limit short at h4 ema20 ~65,300-65,500.",
+  "news": "No new catalyst; bear-market / hawkish-Fed repricing narrative continues.",
+  "error": "not executed: decision is 60 min old (limit 45)"
  },
  "brain_mode": "session",
- "cash_usd": 258.36291,
+ "cash_usd": 260.455869,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
