@@ -1,9 +1,17 @@
 {
-  "id": "2026-11-17T06:51:21Z",
-  "decided_at": "2026-11-17T06:51:21Z",
+  "id": "2026-11-17T08:47:30Z",
+  "decided_at": "2026-11-17T08:47:30Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC coiling 63.8-65.5k under a bearish 4h/d1 trend; 04-08Z 4h still open (h 65,030), no new completed lower high since 65,118. Short +2.8 USD with stop 65,550 and TP 62,400.",
-  "news": "",
-  "watch_next": "08Z 4h close: if LH <= 64,900 trail stop to ~65,300 (BE); a 4h close > 65,500 = exit; 4h close < 63,800 = extend TP ~60,300. Time stop 12Z 18 Nov if BTC > 64,000.",
-  "actions": []
+  "market_view": "BTC 64,350 in 63.8-65.5k range under bearish 4h/d1; 04-08Z 4h made another lower high 65,030 (65,471->65,118->65,030). Short +6.6 USD.",
+  "news": "Bear-market and hawkish Fed repricing headlines; no new catalyst.",
+  "watch_next": "08-12Z 4h close: if LH <= 64,850 trail to ~65,280 (BE); 4h close < 63,800 -> extend TP ~60,300; 4h close > 65,500 -> exit.",
+  "actions": [
+    {
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 65450,
+      "take_profit": 62400,
+      "reason": "Trail ~420 above completed 04-08Z 4h lower high 65,030 per notebook rule (400-500 above LH); cuts worst case to ~-0.8 USD."
+    }
+  ]
 }
