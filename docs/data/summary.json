@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-17T10:43:41Z",
+ "updated": "2026-11-17T10:51:41Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
- "fx_usd_pln": 4.0007,
- "equity_pln": 1063.87,
- "return_pct": 3.41,
+ "fx_usd_pln": 4.0022,
+ "equity_pln": 1064.82,
+ "return_pct": 3.47,
  "max_drawdown_pct": 13.94,
- "control_pln": 1021.9,
+ "control_pln": 1022.28,
  "control_trades": 9,
- "hodl_pln": 780.67,
+ "hodl_pln": 780.68,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00669706,
    "entry": 65330.395000000004,
-   "mark": 64189.6,
-   "upnl": 7.639972562700037,
+   "mark": 64168.5,
+   "upnl": 7.7812805287000275,
    "stop": 65450.0,
    "tp": 62400.0,
    "liq": null,
    "leverage": null,
    "opened": 1794865740000,
    "reason": "Re-anchored retest short at h1 ema50 65,274 / mid of the 65,633 sweep wick, under the 4h downtrend (h4 ema20 66,119). Stop ~420 above the 65,633 sweep high, TP 62,400 front-runs 62k/61,970 (~4.2R).",
-   "upnl_pln": 30.57
+   "upnl_pln": 31.14
   }
  ],
  "closed_trades": [
@@ -69,7 +69,7 @@
    "why": "target",
    "opened": 1794577080000,
    "reason": "Retest short of the broken 70k round number after the 13 Nov flush to 68.5k (h1 RSI 10 -> relief bounce likely). Stop 70,950 sits ~500 below the 71,429 4h high and above the 70.6-70.9k breakdown candles; TP 66,800 = ~3.6R toward the 'air pocket' 67k zone. Same template as the 11-12 Nov winning short.",
-   "pnl_pln": 68.88
+   "pnl_pln": 68.91
   },
   {
    "id": "t98",
@@ -83,7 +83,7 @@
    "why": "target",
    "opened": 1794417720000,
    "reason": "Bear-trend re-short at resistance: 74.5-74.8k = h4 ema20 74.51k + 24h high 74.80k + breakdown level of 10 Nov. Limit fill on a bounce into it; stop above h4 ema50 75.75k, TP 72.3k under 30d low 72.58k (~2.3R).",
-   "pnl_pln": 33.22
+   "pnl_pln": 33.24
   },
   {
    "id": "t96",
@@ -97,7 +97,7 @@
    "why": "stop",
    "opened": 1794269280000,
    "reason": "Short retest of broken 74.8-75.5k base (two 4h rejections at 75.47-75.50k) under h4 ema20 75.49k after confirmed 4h-close breakdown; stop above 76.3k 4h structure and h4 ema50, TP 72.6k below 30d low 73.44k (~2.5R). Re-send: prior two decisions were dropped by engine (decision_max_age 45 min during stall).",
-   "pnl_pln": 12.89
+   "pnl_pln": 12.9
   },
   {
    "id": "t92",
@@ -139,7 +139,7 @@
    "why": "stop",
    "opened": 1793768580000,
    "reason": "EUR broke 1.121 resistance (failed twice before) and extended to 1.126; h1 RSI 80 so don't chase - buy a pullback to 1.1228 (half of the breakout leg, above broken 1.121). Above h4 ema20/50 and d1 ema20; d1 ema50 1.127 is next, TP 1.131 ~2R. Funding -47% APR pays longs.",
-   "pnl_pln": -9.38
+   "pnl_pln": -9.39
   },
   {
    "id": "t81",
@@ -153,7 +153,7 @@
    "why": "stop",
    "opened": 1793761260000,
    "reason": "Breakdown of the 30d low 76,155 after the 77.97k bull trap, d1 downtrend (d1 ema20 79.5k), alts breaking 30d lows. Sell-stop 200 below the low so a wick doesn't fill; stop above the 00Z 4h candle body/ 77k pivot; TP 73.8k ~1.9R. Reduced risk 1.5% because the fill is not 4h-close confirmed.",
-   "pnl_pln": -15.03
+   "pnl_pln": -15.04
   },
   {
    "id": "t77",
@@ -223,7 +223,7 @@
    "why": "target",
    "opened": 1793306580000,
    "reason": "Range-edge breakdown: below the 30d low 79,121 (+buffer) the daily downtrend (d1 ema20 81.6k, 30d -2.7%) resumes toward 77k. Stop back above the 79.6-79.9k post-Fed lows.",
-   "pnl_pln": 25.14
+   "pnl_pln": 25.15
   },
   {
    "id": "t66",
@@ -363,7 +363,7 @@
    "why": "stop",
    "opened": 1793007000000,
    "reason": "Weakest large alt (7d -11.7%, h4 RSI 34, just above 30d low 1.0015). Short the bounce back into h1 ema20 ~1.022 / under the 1.0332 4h high; stop above that high + buffer, TP 0.978 below 30d low (~3.6R). Funding -3% so no crowded-short squeeze fuel.",
-   "pnl_pln": -8.63
+   "pnl_pln": -8.64
   },
   {
    "id": "t43",
@@ -433,7 +433,7 @@
    "why": "target",
    "opened": 1792776600000,
    "reason": "Failed-breakout fade: PEPE spiked to 5.108e-6 30d high, 4h candle reversed 5.06 -> 4.83 and funding is +111% APR (longs crowded, shorts get paid ~0.3%/day). Trigger below the 4.79e-6 breakout level confirms the breakout failed; stop 5.0e-6 above the rejection candle's body, TP 4.40e-6 = pre-breakout base (~1.4R + funding).",
-   "pnl_pln": 20.5
+   "pnl_pln": 20.51
   },
   {
    "id": "t22",
@@ -447,7 +447,7 @@
    "why": "stop",
    "opened": 1792744500000,
    "reason": "Breakout of PEPE 30d high 4.79e-6 by the strongest coin in the book (7d +14.6%, d1 RSI 60, h4 RSI 64) = momentum continuation; stop under the 24h-range top/4h structure, TP 5.4e-6 ~2.5R.",
-   "pnl_pln": 3.37
+   "pnl_pln": 3.38
   },
   {
    "id": "t15",
@@ -501,7 +501,7 @@
    "pnl": -5.1595,
    "time": 1792657080000,
    "why": "stop",
-   "pnl_pln": -20.64
+   "pnl_pln": -20.65
   },
   {
    "id": "t5",
@@ -513,7 +513,7 @@
    "pnl": -5.3977,
    "time": 1792639980000,
    "why": "stop",
-   "pnl_pln": -21.59
+   "pnl_pln": -21.6
   }
  ],
  "trade_count": 35,
@@ -543,7 +543,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 258.285127,
+ "cash_usd": 258.285267,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -588,7 +588,7 @@
    "opened": 1792704918998,
    "why": "resolved win",
    "reason": "My P(Fed holds 28 Oct) ~97% vs 0.94 ask: news flow says consensus hold, hike talk moved to December, hike odds fell 22pts in a week. EV ~+3% over 6 days; sized small because payoff is asymmetric against me.",
-   "pnl_pln": 2.94
+   "pnl_pln": 2.95
   }
  ],
  "carry": [],
