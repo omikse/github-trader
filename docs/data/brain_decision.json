@@ -1,9 +1,17 @@
 {
-  "id": "2026-11-17T02:51:30Z",
-  "decided_at": "2026-11-17T02:51:30Z",
+  "id": "2026-11-17T04:52:30Z",
+  "decided_at": "2026-11-17T04:52:30Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 64.5k consolidating under lower highs (65,471 LH, 65,633 sweep); h1/h4 below ema20, trend bearish. Short +5.4 working; 00-04Z 4h still open.",
-  "news": "No new market-moving headlines beyond ongoing crypto bear-market coverage.",
-  "watch_next": "After 04Z 4h close: if its high <= 64,900, trail BTC short stop to ~65,300 (BE). Exit if a 4h closes > 65,600.",
-  "actions": []
+  "market_view": "BTC 64,957 coiling in 63.8-65.5k after capitulation; 00-04Z 4h closed 64,992 with a lower high 65,118 but rising lows. Downtrend intact on 4h/d1, momentum stalling.",
+  "news": "Bitcoin consolidating near recent lows amid hawkish Fed repricing; no new catalyst.",
+  "watch_next": "08Z 4h close: LH <= 64,900 -> stop to BE 65,300; 4h close > 65,500 -> exit; 4h close < 63,800 -> extend TP to ~60,300.",
+  "actions": [
+    {
+      "type": "move_stop",
+      "symbol": "BTCUSDT",
+      "stop": 65550,
+      "take_profit": 62400,
+      "reason": "Trail ~430 above the completed 00-04Z 4h lower high 65,118 (and below the 65,633 sweep high); cuts worst case to ~-1.5 USD while the range coils."
+    }
+  ]
 }
