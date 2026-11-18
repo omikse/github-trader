@@ -1,16 +1,16 @@
 {
- "updated": "2026-11-18T05:30:30Z",
+ "updated": "2026-11-18T06:56:58Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 4.0022,
- "equity_pln": 1042.42,
+ "equity_pln": 1042.43,
  "return_pct": 1.29,
  "max_drawdown_pct": 13.94,
  "control_pln": 1022.28,
  "control_trades": 9,
- "hodl_pln": 786.92,
+ "hodl_pln": 785.81,
  "positions": [],
  "closed_trades": [
   {
@@ -516,22 +516,22 @@
  ],
  "trade_count": 36,
  "win_rate_pct": 36.1,
- "brain_calls_today": 3,
+ "brain_calls_today": 4,
  "last_decision": {
-  "time": "2026-11-18T04:51:30Z",
+  "time": "2026-11-18T06:56:58Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-18T04:45:30Z",
+  "decided_at": "2026-11-18T06:51:34Z",
   "model": "claude-opus-5-5",
   "equity_usd": 260.46,
-  "equity_pln": 1042.42,
+  "equity_pln": 1042.43,
   "events": [],
-  "market_view": "BTC 64,400 coiling inside 63.27-65.4k range under h4 ema20 (65,166); 0-4Z 4h made another lower high (64,928). Bear trend on 4h/d1 intact, h1 neutral.",
-  "watch_next": "Whether BTC retests 65,350 to fill the limit short; cancel if a 4h closes >65,600 before fill; re-anchor lower if it breaks <63,272 first.",
-  "news": "No new catalyst; consolidation near lows on hawkish Fed repricing, worst-November narrative.",
+  "market_view": "BTC 64,714 (stale 05:26Z data) bouncing inside 63.3-65.4k range in a 4h/d1 downtrend; h1 RSI 54, h4 ema20 65,196 overhead. Resting limit short at 65,350 sits right where the bounce should stall.",
+  "watch_next": "Engine resumed? Did BTC tag 65,350 and fill? If filled, trail per plan; if a 4h closes > 65,600 unfilled, cancel the order.",
+  "news": "No new catalyst; consolidation near lows on hawkish Fed repricing, worst-November narrative. Engine appears stalled since 05:31Z.",
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 260.462612,
+ "cash_usd": 260.464332,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -662,7 +662,7 @@
  "income_pln": {
   "funding": 3.19,
   "carry": -2.64,
-  "interest": 2.49
+  "interest": 2.5
  },
  "cash_rate_pct": 4.014
 }
