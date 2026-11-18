@@ -1,14 +1,27 @@
 {
-  "id": "2026-11-18T10:51:20Z",
-  "decided_at": "2026-11-18T10:51:20Z",
+  "id": "2026-11-18T12:52:30Z",
+  "decided_at": "2026-11-18T12:52:30Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 64,232 rolling over again: 4h lower highs 65,184 > 64,928 > 64,874 > 64,805, price back under h1 ema20/ema50 (64,456/64,632), h4 RSI 39, d1 RSI 23. Downtrend intact but stuck mid-range 63.27-65.4k; 65,350 trigger is now too far for the shrinking highs.",
-  "news": "No new catalyst: consolidation near lows on hawkish Fed repricing, worst-November narrative.",
-  "watch_next": "Fill of the 64,750 limit short; 4h close < 63,272 (range break) or > 65,400 (thesis void).",
+  "market_view": "BTC 64,082 drifting lower in the 63.27-65.4k range; 4h highs stepping down (65,184 > 64,928 > 64,874 > 64,805), price under h1 ema20/50 (64,400/64,595), h4 RSI 38, d1 RSI 23. Bounces are getting weaker, so the retest short trigger moves down to h1 ema50.",
+  "news": "No new catalyst; BTC consolidating near lows on hawkish Fed repricing, worst-November narrative.",
+  "watch_next": "Fill of the 64,600 limit short; 4h close < 63,272 (re-anchor to broken-low retest) or > 65,300 (cancel, thesis void).",
   "actions": [
-    {"type": "cancel_order", "symbol": "BTCUSDT", "reason": "65,350 trigger is above the descending 4h highs (64,874/64,805); re-anchoring lower to the actual lower-high zone."},
-    {"type": "entry_order", "symbol": "BTCUSDT", "side": "short", "trigger": 64750, "stop": 65450, "take_profit": 62300, "risk_pct": 0.02, "expires_hours": 24,
-      "reason": "Re-anchored retest short: bounce to h1 ema50 (~64,630) / last 4h LH 64,805-64,874 inside a 4h/d1 downtrend of lower highs. Stop above 65,378 spike high; TP above 62k/61,970 lows. ~3.5R.",
-      "invalidation": "4h close > 65,400 or two 4h closes > 64,900 without rejection."}
+    {
+      "type": "cancel_order",
+      "symbol": "BTCUSDT",
+      "reason": "64,750 trigger not reached; latest bounces stall below 64,600 (8-12Z opened at its 64,805 high and sold off). Re-anchoring lower."
+    },
+    {
+      "type": "entry_order",
+      "symbol": "BTCUSDT",
+      "side": "short",
+      "trigger": 64600,
+      "stop": 65300,
+      "take_profit": 62300,
+      "risk_pct": 0.02,
+      "expires_hours": 24,
+      "reason": "Re-anchored retest short at h1 ema50 (64,595) below the latest 4h lower high 64,805 in a 4h/d1 downtrend. Stop above 65,184 spike high; TP above 63,272/62k lows, 3.3R.",
+      "invalidation": "4h close > 65,300, or two 4h closes > 64,800 without rejection after fill."
+    }
   ]
 }
