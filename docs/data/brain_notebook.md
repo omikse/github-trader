@@ -1,7 +1,7 @@
-# Notebook (updated 2026-11-18T20:53Z)
+# Notebook (updated 2026-11-18T22:52Z)
 
 ## Big picture
-- 20:42Z 18 Nov: BTC 62,439. Relief bounce stalled at 63,482 (16-20Z 4h LH, closed 62,666); 20Z 4h drifting lower. h1 ema20 63,610 / ema50 64,162; h4 ema20 64,481. RSI h1 29, h4 31, d1 21 (stretched). 30d low 61,970 just below. Funding BTC +8% APR, ETH +18%. Alts flat-to-down; NEAR/SOL/XRP still relatively firm.
+- 21:57Z 18 Nov (data 53 min old at session): BTC 62,243, grinding lower; 20Z 4h (in progress) h 62,728 l 62,218. Relief bounce failed at 63,482 (16-20Z 4h LH). h1 ema20 63,488 / ema50 64,091; h4 ema20 64,462. RSI h1 27, h4 30, d1 21 (stretched). 30d low 61,970 just below - break likely flushes to 61k. Funding BTC +8% APR, ETH +18%. Alts flat-to-down; NEAR/SOL/XRP still relatively firm.
 - News: no single catalyst; hawkish Fed repricing / November risk-off.
 - Trend: bearish 4h/d1. Resistance 63.2-63.5k (broken range low + LH), 64.0-64.2k (h1 emas), 64.4k. Support 61,970, 61k, 60k.
 - Mind-changers: 4h close > 63,950 -> LH structure broken, stand aside; 4h close > 65,400 -> range back, consider long only with alt breadth.
@@ -44,6 +44,7 @@
 - None held.
 
 ## Session log
+- 2026-11-18T22:52Z | eq 260.48 | Data 21:57Z (53 min old, last bot commit 22:02Z handover - possible stall). BTC 62,243 grinding to 30d low, h1 RSI 27. No actions; limit short 63,200/63,950/60,300 risk 2% stays (exp 02:52Z 20 Nov).
 - 2026-11-18T20:53Z | eq 260.48 | Engine fresh (20:42Z). BTC 62,439, bounce failed at 63,482 LH. Re-anchored limit short 63,550 -> 63,200 / stop 63,950 / TP 60,300, risk 2%, 30h.
 - 2026-11-18T18:52Z | eq 260.48 | Engine fresh (18:42Z). BTC 63,198 relief bounce toward 63,550 trigger. No actions; limit short 63,550/64,400/60,300 risk 2% stays (exp 22:52Z 19 Nov).
 - 2026-11-18T16:52Z | eq 260.48 | Engine fresh (16:42Z). BTC broke range low, 62,340, h1 RSI 24 - no chase. Cancelled stale 64,750; limit short 63,550 / stop 64,400 / TP 60,300, risk 2%, 30h.
@@ -53,4 +54,3 @@
 - 2026-11-18T08:52Z | eq 260.47 | Engine fresh (08:47Z). BTC 64,698 coiling, 4-8Z 4h LH 64,874. No actions; limit short 65,350/66,000/62,300 stays (exp 20:51Z). News: no new catalyst.
 - 2026-11-18T06:51Z | eq 260.46 (stale) | ENGINE STALLED (data 05:26Z, last commit 05:31Z handover). BTC 64,714 bouncing toward trigger. No actions; limit short 65,350/66,000/62,300 stays (exp 20:51Z).
 - 2026-11-18T04:45Z | eq 260.46 | BTC 64,400 coiling, 0-4Z 4h LH 64,928. Flat; kept limit short 65,350/66,000/62,300 (exp 20:51Z). News: no new catalyst.
-- 2026-11-18T02:52Z | eq 260.46 | BTC 64,307 rolling over below h1 ema50; flat. Kept limit short 65,350/66,000/62,300 (exp 20:51Z). No new news edge.

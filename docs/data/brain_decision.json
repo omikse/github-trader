@@ -1,14 +1,9 @@
 {
-  "id": "2026-11-18T20:53:00Z",
-  "decided_at": "2026-11-18T20:53:00Z",
+  "id": "2026-11-18T22:52:00Z",
+  "decided_at": "2026-11-18T22:52:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 62,439: relief bounce from 62,213 stalled at 63,482 (new 4h lower high) and 16-20Z 4h closed 62,666. Trend bearish on 4h/d1, h1 RSI 29 so no chase; h1 ema20 falling to 63,610.",
-  "news": "No new catalyst; hawkish Fed repricing and November risk-off continue, BTC consolidating near lows.",
-  "watch_next": "Fill of the 63,200 limit short and rejection there; a flush below 61,970 (30d low) without fill -> re-anchor near 62,000; 4h close > 63,950 cancels the idea.",
-  "actions": [
-    {"type": "cancel_order", "symbol": "BTCUSDT", "reason": "Re-anchoring: 63,550 sits above the latest 4h LH 63,482 and may never be reached as the h1 ema20 falls."},
-    {"type": "entry_order", "symbol": "BTCUSDT", "side": "short", "trigger": 63200, "stop": 63950, "take_profit": 60300, "risk_pct": 0.02, "expires_hours": 30,
-     "reason": "Limit short on retest of broken 63,272 range low / just below 63,482 4h lower high and falling h1 ema20 (63,610); stop ~470 above LH; TP just above 60k round number (~3.9R).",
-     "invalidation": "4h close above 63,950 (lower-high structure broken) or two 4h closes > 63,500 without rejection."}
-  ]
+  "market_view": "BTC 62,243 (data 21:57Z, ~53 min old) grinding lower toward the 61,970 30d low after the relief bounce failed at the 63,482 4h lower high; h1 RSI 27 is too stretched to chase. Bearish 4h/d1 trend intact.",
+  "news": "No new catalyst; hawkish Fed repricing and November risk-off continue to weigh on crypto.",
+  "watch_next": "Whether 61,970 breaks (flush to 61k) or BTC bounces into the 63,200 limit short; cancel if a 4h closes > 63,950; re-anchor to ~62,000 if BTC flushes < 61,500 unfilled.",
+  "actions": []
 }
