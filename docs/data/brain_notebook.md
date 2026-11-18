@@ -1,8 +1,8 @@
-# Notebook (updated 2026-11-18T04:45Z)
+# Notebook (updated 2026-11-18T06:51Z)
 
 ## Big picture
+- 05:26Z 18 Nov (last engine data; ENGINE STALLED since 05:31Z handover, seen at 06:51Z): BTC 64,714 bouncing (+0.56% 1h), h1 RSI 54 above ema20 64,419, testing ema50 64,657; h4 RSI 42 under ema20 65,196. 4-8Z 4h in progress. Funding +9.5% APR. Bounce heading toward our 65,350 limit-short zone = fine.
 - 04:41Z 18 Nov: BTC 64,400 flat/coiling. 0-4Z 4h closed 64,382 (h 64,928 = lower high vs 65,184). h1 RSI 49 at ema20 64,392, under ema50 64,657; h4 RSI 39 under ema20 65,166; d1 RSI 23.5. Funding +8% APR. Alts mixed (SOL/NEAR +2.6% 24h, PAXG -2.2%). Range 63.27-65.4k intact.
-- 02:41Z 18 Nov: BTC 64,307, fading from 64,928 (in-progress 0-4Z 4h). 20-24Z 4h closed 64,877 = lower high under h4 ema20 65,240. h1 RSI 48 below ema20/50 (64,397/64,681); h4 RSI 39; d1 RSI 23. Funding ~0. Range 63.27-65.4k intact.
 - News: consolidation near lows on hawkish Fed repricing; worst November in years narrative.
 - Trend: bearish 4h/d1; range 63.3-65.4k. Resistance 65.2-65.4k (h4 ema20 + 4h spike highs), 66k, 67.5k. Support 63.27k, 62k, 61,970 (30d low), 60k.
 - Mind-changers: 4h close > 65,400 -> short thesis weak, stand aside; 4h close > 67,500 -> relief rally (consider long).
@@ -44,6 +44,7 @@
 - None held.
 
 ## Session log
+- 2026-11-18T06:51Z | eq 260.46 (stale) | ENGINE STALLED (data 05:26Z, last commit 05:31Z handover). BTC 64,714 bouncing toward trigger. No actions; limit short 65,350/66,000/62,300 stays (exp 20:51Z).
 - 2026-11-18T04:45Z | eq 260.46 | BTC 64,400 coiling, 0-4Z 4h LH 64,928. Flat; kept limit short 65,350/66,000/62,300 (exp 20:51Z). News: no new catalyst.
 - 2026-11-18T02:52Z | eq 260.46 | BTC 64,307 rolling over below h1 ema50; flat. Kept limit short 65,350/66,000/62,300 (exp 20:51Z). No new news edge.
 - 2026-11-18T00:52Z | eq 260.46 | Short stopped 23:08Z at 64,982 (+1.85). 20-24Z 4h closed 64,877 (<65,400). Placed limit short 65,350 / stop 66,000 / TP 62,300, risk 2%, 20h.
@@ -53,4 +54,3 @@
 - 2026-11-17T16:52Z | eq 260.17 (stale) | ENGINE STALLED since 13:13Z. No actions.
 - 2026-11-17T13:15Z | eq 260.17 | BTC 65,046 bounce to h1 ema50. Held.
 - 2026-11-17T12:51Z | eq 260.86 | Trailed stop 65,450->65,380.
-- 2026-11-17T10:52Z | eq 265.92 | BTC 64,190, short +7.6. Held.
