@@ -502,11 +502,22 @@
    "reason": "Re-anchored retest short at h1 ema50 65,274 / mid of the 65,633 sweep wick, under the 4h downtrend (h4 ema20 66,119). Stop ~420 above the 65,633 sweep high, TP 62,400 front-runs 62k/61,970 (~4.2R)."
   }
  ],
- "last_closed_check_ms": 1794999118956,
+ "last_closed_check_ms": 1794999598747,
  "day": "2026-11-18",
  "day_start_equity": 260.45604803675553,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_cancelled",
+   "id": "o114",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 65350,
+   "time": 1794999118956,
+   "detail": "cancelled by the brain"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 255.43070451799173,
@@ -515,7 +526,7 @@
   "trades": 9,
   "wins": 5
  },
- "last_btc": 64304.7,
+ "last_btc": 64295.6,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -587,7 +598,8 @@
   "o108:cancelled",
   "o109:cancelled",
   "o110:filled",
-  "o112:filled"
+  "o112:filled",
+  "o114:cancelled"
  ],
  "last_decision_id": "2026-11-18T10:51:20Z",
  "cash_rate_day": "2026-11-18"
