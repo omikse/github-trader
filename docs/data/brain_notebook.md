@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-18T00:52Z)
+# Notebook (updated 2026-11-18T02:52Z)
 
 ## Big picture
+- 02:41Z 18 Nov: BTC 64,307, fading from 64,928 (in-progress 0-4Z 4h). 20-24Z 4h closed 64,877 = lower high under h4 ema20 65,240. h1 RSI 48 below ema20/50 (64,397/64,681); h4 RSI 39; d1 RSI 23. Funding ~0. Range 63.27-65.4k intact.
 - 00:46Z 18 Nov: BTC 64,685. 4h candles: 16-20Z h 64,415 l 63,382 c 63,676; 20-24Z h 65,184 l 63,615 c 64,877 (relief bounce, no close > 65,400). Lows rising 63,272 -> 63,382 -> 63,615 = short-term base attempt. h1 RSI 53 at ema50 64,714; h4 RSI 41 under ema20 65,276; d1 RSI 24, 7d -12.5%, 30d -21%. Funding BTC ~0% APR (shorts no longer crowded-paid).
 - News: consolidation near lows on hawkish Fed repricing; worst November in years narrative.
 - Trend: bearish 4h/d1; range 63.3-65.4k. Resistance 65.2-65.4k (h4 ema20 + 4h spike highs), 66k, 67.5k. Support 63.27k, 62k, 61,970 (30d low), 60k.
@@ -43,6 +44,7 @@
 - None held.
 
 ## Session log
+- 2026-11-18T02:52Z | eq 260.46 | BTC 64,307 rolling over below h1 ema50; flat. Kept limit short 65,350/66,000/62,300 (exp 20:51Z). No new news edge.
 - 2026-11-18T00:52Z | eq 260.46 | Short stopped 23:08Z at 64,982 (+1.85). 20-24Z 4h closed 64,877 (<65,400). Placed limit short 65,350 / stop 66,000 / TP 62,300, risk 2%, 20h.
 - 2026-11-17T22:51Z | eq 262.35 | BTC 64,735 relief bounce; held stop 64,950 / TP 60,300.
 - 2026-11-17T20:51Z | eq 267.98 | BTC 63,893, short +9.6. Stop 65,050->64,950, TP 60,300.
@@ -51,4 +53,3 @@
 - 2026-11-17T13:15Z | eq 260.17 | BTC 65,046 bounce to h1 ema50. Held.
 - 2026-11-17T12:51Z | eq 260.86 | Trailed stop 65,450->65,380.
 - 2026-11-17T10:52Z | eq 265.92 | BTC 64,190, short +7.6. Held.
-- 2026-11-17T08:47Z | eq 264.85 | Trailed stop 65,550->65,450.
