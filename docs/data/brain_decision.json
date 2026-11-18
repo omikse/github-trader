@@ -1,15 +1,15 @@
 {
-  "id": "2026-11-18T12:52:30Z",
-  "decided_at": "2026-11-18T12:52:30Z",
+  "id": "2026-11-18T14:52:00Z",
+  "decided_at": "2026-11-18T14:52:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 64,082 drifting lower in the 63.27-65.4k range; 4h highs stepping down (65,184 > 64,928 > 64,874 > 64,805), price under h1 ema20/50 (64,400/64,595), h4 RSI 38, d1 RSI 23. Bounces are getting weaker, so the retest short trigger moves down to h1 ema50.",
-  "news": "No new catalyst; BTC consolidating near lows on hawkish Fed repricing, worst-November narrative.",
-  "watch_next": "Fill of the 64,600 limit short; 4h close < 63,272 (re-anchor to broken-low retest) or > 65,300 (cancel, thesis void).",
+  "market_view": "ENGINE STALLED: input is from 12:31Z and no bot commit since 12:36Z, so my 12:52Z decision was likely never executed (state still shows the old 64,750 limit). Last known BTC 64,082, drifting lower in a sequence of lower 4h highs below h1 ema50 64,595; 4h/d1 bearish, range 63.27-65.4k.",
+  "news": "No new catalyst found; BTC consolidating near November lows on hawkish Fed repricing.",
+  "watch_next": "Whether the engine has resumed (fresh time_utc, the 64,600 limit in resting_orders). If BTC broke < 63,272 unfilled, re-anchor to the 63,800-64,000 retest.",
   "actions": [
     {
       "type": "cancel_order",
       "symbol": "BTCUSDT",
-      "reason": "64,750 trigger not reached; latest bounces stall below 64,600 (8-12Z opened at its 64,805 high and sold off). Re-anchoring lower."
+      "reason": "Replace the stale 64,750/65,450 limit with the 64,600/65,300 re-anchor from the 12:52Z plan (re-sent because the engine stalled)."
     },
     {
       "type": "entry_order",
@@ -19,9 +19,9 @@
       "stop": 65300,
       "take_profit": 62300,
       "risk_pct": 0.02,
-      "expires_hours": 24,
-      "reason": "Re-anchored retest short at h1 ema50 (64,595) below the latest 4h lower high 64,805 in a 4h/d1 downtrend. Stop above 65,184 spike high; TP above 63,272/62k lows, 3.3R.",
-      "invalidation": "4h close > 65,300, or two 4h closes > 64,800 without rejection after fill."
+      "expires_hours": 22,
+      "reason": "Lower-high downtrend (4h highs 65,184>64,928>64,874>64,805); a bounce into h1 ema50 ~64,595 below the latest LH should reject. Stop above the 65,184 4h spike high, TP just above the 62k/61,970 30d low (3.3R).",
+      "invalidation": "A 4h close > 65,300 before fill, or 2 consecutive 4h closes > 64,800 after fill without rejection."
     }
   ]
 }
