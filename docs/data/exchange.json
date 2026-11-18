@@ -1,5 +1,5 @@
 {
- "cash": 260.45698291770714,
+ "cash": 260.457062516782,
  "positions": {},
  "closed": [
   {
@@ -477,9 +477,23 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1794962850483,
- "next_id": 114,
- "orders": [],
+ "last_ms": 1794963090588,
+ "next_id": 115,
+ "orders": [
+  {
+   "id": "o114",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00721602,
+   "trigger": 65350,
+   "direction": "above",
+   "stop": 66000.0,
+   "tp": 62300.0,
+   "placed": 1794963090588,
+   "expires": 1795035090588,
+   "note": "Re-entry retest short per plan: 20-24Z 4h bounce (h 65,184) closed 64,877, below 65,400. Limit at h4 ema20 65,276 / 65,379 spike-high zone in a 4h+d1 downtrend; stop 66,000 above the zone (~650), TP 62,300 front-running 62k/61,970 lows (~4.7R)."
+  }
+ ],
  "order_events": [
   {
    "id": "o2",
@@ -1225,6 +1239,6 @@
  "income": {
   "funding": 0.7978807878486006,
   "carry": -0.6600412463190095,
-  "interest": 0.6168756930162818
+  "interest": 0.6169552920911918
  }
 }
