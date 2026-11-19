@@ -1,7 +1,7 @@
-# Notebook (updated 2026-11-19T04:52Z)
+# Notebook (updated 2026-11-19T06:52Z)
 
 ## Big picture
-- 04:47Z 19 Nov: BTC 63,552 relief bounce (h 63,683) broke the 63,482 4h LH. h1 RSI 52 > ema20 63,219; h1 ema50 63,806; h4 ema20 64,319; d1 RSI 24. Alts bouncing in breadth (ETH 1,801, from 1,737). Funding BTC +4% APR.
+- 06:47Z 19 Nov: BTC 63,472, 4h relief candle h 63,683 (last close 63,135). h1 RSI 51 just above ema20 63,246, under ema50 63,772; h4 ema20 64,311; d1 RSI 24. Alts mildly green (ETH 1,804, NEAR/XRP leading). Funding BTC +1.8% APR. Bounce is slow/grinding, no breakout.
 - Trend: still bearish 4h/d1 (lower daily closes, 30d -23%). Resistance 63.8-64.4k, 64,874 (24h high), 65.4k. Support 62,000/61,970, 61k, 60k.
 - News: hawkish Fed repricing / November risk-off; no fresh catalyst.
 - Mind-changers: 4h close > 64,900 -> no shorts, stand aside; 4h close > 65,400 with alt breadth -> range back, consider longs.
@@ -44,6 +44,7 @@
 - None held.
 
 ## Session log
+- 2026-11-19T06:52Z | eq 257.98 | BTC 63,472 grinding bounce under h1 ema50; no news. No actions; limit short 64,250 kept.
 - 2026-11-19T04:52Z | eq 257.89 | Engine fresh (04:47Z). BTC 63,552 broke 63,482 LH with alt breadth. Closed BTC short (~-2.4, thesis gone). New limit short 64,250 / stop 65,000 / TP 61,300, risk 2%, 24h.
 - 2026-11-19T02:51Z | eq 263.84 | BTC 62,610, bounce rejected under h1 ema20. No actions; hold short.
 - 2026-11-19T00:52Z | eq 261.89 | Limit short FILLED 63,181; BTC swept 62,000 and bounced. No actions.
@@ -53,4 +54,3 @@
 - 2026-11-18T16:52Z | eq 260.48 | BTC broke range low 62,340. Cancelled stale 64,750; limit short 63,550.
 - 2026-11-18T14:52Z | eq 260.47 (stale) | ENGINE STALLED. Re-sent cancel + limit short 64,600.
 - 2026-11-18T12:52Z | eq 260.47 | Re-anchored limit short to 64,600.
-- 2026-11-18T10:51Z | eq 260.47 | Cancelled 65,350 limit; new limit short 64,750.
