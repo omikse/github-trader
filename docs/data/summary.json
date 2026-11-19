@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T08:45:24Z",
+ "updated": "2026-11-19T08:52:24Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,7 +10,7 @@
  "max_drawdown_pct": 13.94,
  "control_pln": 1026.07,
  "control_trades": 9,
- "hodl_pln": 775.92,
+ "hodl_pln": 775.78,
  "positions": [],
  "closed_trades": [
   {
@@ -530,37 +530,22 @@
  ],
  "trade_count": 37,
  "win_rate_pct": 35.1,
- "brain_calls_today": 4,
+ "brain_calls_today": 5,
  "last_decision": {
-  "time": "2026-11-19T06:53:24Z",
+  "time": "2026-11-19T08:52:24Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-19T06:52:19Z",
+  "decided_at": "2026-11-19T08:52:30Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 257.98,
-  "equity_pln": 1036.32,
-  "events": [
-   {
-    "type": "position_closed",
-    "id": "t118",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "qty": 0.00635691,
-    "entry": 63181.04,
-    "exit": 63508.74691,
-    "pnl": -2.5261,
-    "time": 1795063884326,
-    "why": "manual close",
-    "opened": 1795045860000,
-    "reason": "Limit short on retest of broken 63,272 range low / just below 63,482 4h lower high and falling h1 ema20 (63,610); stop ~470 above LH; TP just above 60k round number (~3.9R)."
-   }
-  ],
-  "market_view": "BTC 63,472 grinding a slow relief bounce (4h h 63,683) inside a 4h/d1 downtrend; h1 RSI 51, under h1 ema50 63,772 and h4 ema20 64,311. Alts mildly green, no breakout or funding extreme.",
-  "watch_next": "Fill of the 64,250 limit short near h4 ema20; scratch per plan if 2 4h closes > 64,400; if BTC rolls over below 63,000 unfilled, re-anchor the limit lower to the new lower high.",
-  "news": "No fresh catalyst; hawkish Fed repricing and November risk-off still the backdrop.",
+  "equity_usd": 257.99,
+  "equity_pln": 1036.33,
+  "events": [],
+  "market_view": "BTC 63,568 grinding relief bounce stalled under h1 ema50 (63.8k) and 4h high 63,800; d1 downtrend intact, alts flat. Limit short at 64,250 (h4 ema20) still the right place to sell the bounce.",
+  "watch_next": "Fill of 64,250 short and rejection; 4h close >64,400 twice = scratch idea; if price rolls over below 63,2xx without filling, consider re-anchoring lower to new LH.",
+  "news": "No fresh catalyst; hawkish Fed repricing keeps risk-off backdrop.",
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 257.985212,
+ "cash_usd": 257.98535,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
