@@ -1,18 +1,6 @@
 {
- "cash": 260.2858326278584,
- "positions": {
-  "BTCUSDT": {
-   "side": "short",
-   "qty": 0.00635691,
-   "entry": 63181.04,
-   "stop": 63950.0,
-   "tp": 60300.0,
-   "opened": 1795045860000,
-   "entry_fee": 0.22089990174252006,
-   "mark": 63554.8,
-   "note": "Limit short on retest of broken 63,272 range low / just below 63,482 4h lower high and falling h1 ema20 (63,610); stop ~470 above LH; TP just above 60k round number (~3.9R)."
-  }
- },
+ "cash": 257.9806014651126,
+ "positions": {},
  "closed": [
   {
    "id": "t5",
@@ -477,6 +465,19 @@
    "why": "stop",
    "opened": 1794865740000,
    "reason": "Re-anchored retest short at h1 ema50 65,274 / mid of the 65,633 sweep wick, under the 4h downtrend (h4 ema20 66,119). Stop ~420 above the 65,633 sweep high, TP 62,400 front-runs 62k/61,970 (~4.2R)."
+  },
+  {
+   "id": "t118",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00635691,
+   "entry": 63181.04,
+   "exit": 63508.74691,
+   "pnl": -2.5261,
+   "time": 1795063884326,
+   "why": "manual close",
+   "opened": 1795045860000,
+   "reason": "Limit short on retest of broken 63,272 range low / just below 63,482 4h lower high and falling h1 ema20 (63,610); stop ~470 above LH; TP just above 60k round number (~3.9R)."
   }
  ],
  "fills": [
@@ -489,9 +490,23 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1795063824284,
- "next_id": 118,
- "orders": [],
+ "last_ms": 1795063884326,
+ "next_id": 120,
+ "orders": [
+  {
+   "id": "o119",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00629105,
+   "trigger": 64250,
+   "direction": "above",
+   "stop": 65000.0,
+   "tp": 61300.0,
+   "placed": 1795063884326,
+   "expires": 1795150284326,
+   "note": "Re-anchored retest short at h4 ema20 (64,319) / 63.9-64.4k resistance zone in d1/4h downtrend; stop above 64,874 24h high; TP above 61k round number (~3.9R)."
+  }
+ ],
  "order_events": [
   {
    "id": "o2",
@@ -1273,6 +1288,6 @@
  "income": {
   "funding": 0.8147675806688152,
   "carry": -0.6600412463190095,
-  "interest": 0.6497385120898406
+  "interest": 0.6497563461679294
  }
 }

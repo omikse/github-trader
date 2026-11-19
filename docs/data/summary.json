@@ -1,33 +1,17 @@
 {
- "updated": "2026-11-19T04:50:24Z",
+ "updated": "2026-11-19T04:51:24Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 4.017,
- "equity_pln": 1035.43,
- "return_pct": 0.24,
+ "equity_pln": 1036.31,
+ "return_pct": 0.33,
  "max_drawdown_pct": 13.94,
  "control_pln": 1026.07,
  "control_trades": 9,
- "hodl_pln": 776.07,
- "positions": [
-  {
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "size": 0.00635691,
-   "entry": 63181.04,
-   "mark": 63554.8,
-   "upnl": -2.375958681600013,
-   "stop": 63950.0,
-   "tp": 60300.0,
-   "liq": null,
-   "leverage": null,
-   "opened": 1795045860000,
-   "reason": "Limit short on retest of broken 63,272 range low / just below 63,482 4h lower high and falling h1 ema20 (63,610); stop ~470 above LH; TP just above 60k round number (~3.9R).",
-   "upnl_pln": -9.54
-  }
- ],
+ "hodl_pln": 775.61,
+ "positions": [],
  "closed_trades": [
   {
    "id": "t113",
@@ -532,22 +516,44 @@
  ],
  "trade_count": 36,
  "win_rate_pct": 36.1,
- "brain_calls_today": 2,
+ "brain_calls_today": 3,
  "last_decision": {
-  "time": "2026-11-19T02:51:07Z",
+  "time": "2026-11-19T04:51:24Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-19T02:51:00Z",
+  "decided_at": "2026-11-19T04:51:16Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 264.28,
-  "equity_pln": 1061.6,
+  "equity_usd": 258.15,
+  "equity_pln": 1036.97,
   "events": [],
-  "market_view": "BTC 62,610 in d1/4h downtrend; overnight bounce off 62,000 capped at ~63,225 under h1 ema20, keeping lower-high structure. Short from 63,181 is +1.4% of equity; plan unchanged.",
-  "watch_next": "4h close < 62,200 -> stop to ~63,500; new 4h LH < 63,000 -> stop ~63,450; 2 consecutive 4h closes > 63,500 -> scratch.",
-  "news": "No fresh catalyst; ongoing hawkish Fed repricing / November risk-off.",
-  "actions": []
+  "market_view": "BTC relief bounce to 63,552 (h 63,683) took out the 63,482 4h lower high; h1 RSI 52, price above h1 ema20, alts bouncing in breadth (ETH 1,801 +4% off lows). The retest-short thesis did not reject within 2 4h candles. Bigger trend still bearish (d1 RSI 24, below h4 ema20 64,319).",
+  "watch_next": "Whether BTC rejects 63.8-64.4k (h1 ema50 / h4 ema20) and fills the 64,250 limit short; a 4h close > 64,900 cancels the short idea.",
+  "news": "No new catalyst; backdrop still hawkish Fed repricing and November risk-off with BTC near 30d lows.",
+  "actions": [
+   {
+    "type": "close",
+    "symbol": "BTCUSDT",
+    "reason": "Thesis was rejection under the 63,482 4h LH; price broke above it (h 63,683), h1 RSI 52 with alt breadth. Retest short not rejecting in ~2 4h candles = scratch per rules; take -2.4 instead of -4.9 at stop.",
+    "result": "done",
+    "detail": "closed 0.00635691 at ~63517.6"
+   },
+   {
+    "type": "entry_order",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "trigger": 64250,
+    "stop": 65000,
+    "take_profit": 61300,
+    "risk_pct": 0.02,
+    "expires_hours": 24,
+    "reason": "Re-anchored retest short at h4 ema20 (64,319) / 63.9-64.4k resistance zone in d1/4h downtrend; stop above 64,874 24h high; TP above 61k round number (~3.9R).",
+    "invalidation": "4h close above 64,900 or alts breaking out with breadth; d1 trend reversal.",
+    "result": "done",
+    "detail": "short 0.00629105 when price goes above 64250 (risk 2.0%, stop 65000.0, target 61300.0, expires in 24h) ok"
+   }
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 260.285833,
+ "cash_usd": 257.980601,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -573,7 +579,19 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [],
+ "orders": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "trigger": 64250,
+   "direction": "above",
+   "stop": 65000.0,
+   "tp": 61300.0,
+   "qty": 0.00629105,
+   "expires": 1795150284326,
+   "note": "Re-anchored retest short at h4 ema20 (64,319) / 63.9-64.4k resistance zone in d1/4h downtrend; stop above 64,874 24h high; TP above 61k round number (~3.9R)."
+  }
+ ],
  "balance_warning": false,
  "other_value_usd": 0,
  "predictions": [],
