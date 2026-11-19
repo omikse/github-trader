@@ -501,13 +501,41 @@
    "why": "stop",
    "opened": 1794865740000,
    "reason": "Re-anchored retest short at h1 ema50 65,274 / mid of the 65,633 sweep wick, under the 4h downtrend (h4 ema20 66,119). Stop ~420 above the 65,633 sweep high, TP 62,400 front-runs 62k/61,970 (~4.2R)."
+  },
+  {
+   "id": "t118",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00635691,
+   "entry": 63181.04,
+   "exit": 63508.74691,
+   "pnl": -2.5261,
+   "time": 1795063884326,
+   "why": "manual close",
+   "opened": 1795045860000,
+   "reason": "Limit short on retest of broken 63,272 range low / just below 63,482 4h lower high and falling h1 ema20 (63,610); stop ~470 above LH; TP just above 60k round number (~3.9R)."
   }
  ],
- "last_closed_check_ms": 1795063884326,
+ "last_closed_check_ms": 1795064364238,
  "day": "2026-11-19",
  "day_start_equity": 261.5656283481676,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "position_closed",
+   "id": "t118",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00635691,
+   "entry": 63181.04,
+   "exit": 63508.74691,
+   "pnl": -2.5261,
+   "time": 1795063884326,
+   "why": "manual close",
+   "opened": 1795045860000,
+   "reason": "Limit short on retest of broken 63,272 range low / just below 63,482 4h lower high and falling h1 ema20 (63,610); stop ~470 above LH; TP just above 60k round number (~3.9R)."
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 255.43070451799173,
@@ -516,7 +544,7 @@
   "trades": 9,
   "wins": 5
  },
- "last_btc": 63517.6,
+ "last_btc": 63509.4,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",

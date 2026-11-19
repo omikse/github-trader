@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T04:51:24Z",
+ "updated": "2026-11-19T04:59:24Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,9 +10,23 @@
  "max_drawdown_pct": 13.94,
  "control_pln": 1026.07,
  "control_trades": 9,
- "hodl_pln": 775.61,
+ "hodl_pln": 775.51,
  "positions": [],
  "closed_trades": [
+  {
+   "id": "t118",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00635691,
+   "entry": 63181.04,
+   "exit": 63508.74691,
+   "pnl": -2.5261,
+   "time": 1795063884326,
+   "why": "manual close",
+   "opened": 1795045860000,
+   "reason": "Limit short on retest of broken 63,272 range low / just below 63,482 4h lower high and falling h1 ema20 (63,610); stop ~470 above LH; TP just above 60k round number (~3.9R).",
+   "pnl_pln": -10.15
+  },
   {
    "id": "t113",
    "symbol": "BTCUSDT",
@@ -514,8 +528,8 @@
    "pnl_pln": -21.68
   }
  ],
- "trade_count": 36,
- "win_rate_pct": 36.1,
+ "trade_count": 37,
+ "win_rate_pct": 35.1,
  "brain_calls_today": 3,
  "last_decision": {
   "time": "2026-11-19T04:51:24Z",
@@ -553,7 +567,7 @@
   ]
  },
  "brain_mode": "session",
- "cash_usd": 257.980601,
+ "cash_usd": 257.980759,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
