@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-19T18:51Z)
+# Notebook (updated 2026-11-19T20:51Z)
 
 ## Big picture
+- 20:51Z 19 Nov: ENGINE STALLED (input 19:04Z, last bot commit 19:08Z). Last seen BTC 62,725, h1 ema20 63,239 / ema50 63,595, h4 RSI 36, 4h in progress low 62,170. Web gives no fresher reliable print (~62.7k).
 - 18:44Z 19 Nov: BTC topped 64,014 (4h LH), swept to 62,170, now 62,985 under h1 ema20 63,309 / ema50 63,637 (falling). h4 ema20 64,055, h4 RSI 37, d1 RSI 22, 30d -24%. ETH 1,781, alts flat. Funding ~0 BTC, negative on most alts.
 - Trend: bearish 4h/d1. Resistance 63.7k (h1 ema50), 64,014 (LH), 64.3k, 65.4k. Support 62,700, 62,000/61,970 (30d low), 61k, 60k.
 - News: hawkish Fed repricing (FOMC minutes hike-leaning); nothing new 16:50Z.
@@ -45,6 +46,7 @@
 - None held.
 
 ## Session log
+- 2026-11-19T20:51Z | eq 258.00 | ENGINE STALLED (input 19:04Z, 1h47m old). BTC last 62,725 under h1 ema20. No actions; limit short 63,600 kept (still = h1 ema50). Re-check stall next session.
 - 2026-11-19T18:51Z | eq 258.00 | Data fresh. BTC swept 62,170, bounced to 62,985; no news. Re-anchored limit short 63,700 -> 63,600 (falling h1 ema50), stop 64,350, TP 61,300, risk 2%, 24h.
 - 2026-11-19T16:51Z | eq 257.99 | BTC topped 64,014 and dumped to 62,711 without filling. Cancelled 64,250 limit; new limit short 63,700 / stop 64,450 / TP 61,300, risk 2%, 24h.
 - 2026-11-19T14:52Z | eq 257.99 | Engine fresh (14:49Z). BTC 63,868 stalling under 64,014; h4 ema20 64,247 = limit. No news. No actions; limit short 64,250 kept.
@@ -54,4 +56,3 @@
 - 2026-11-19T06:52Z | eq 257.98 | BTC 63,472 grinding bounce under h1 ema50; no news. No actions; limit short 64,250 kept.
 - 2026-11-19T04:52Z | eq 257.89 | Engine fresh (04:47Z). BTC 63,552 broke 63,482 LH with alt breadth. Closed BTC short (~-2.4, thesis gone). New limit short 64,250 / stop 65,000 / TP 61,300, risk 2%, 24h.
 - 2026-11-19T02:51Z | eq 263.84 | BTC 62,610, bounce rejected under h1 ema20. No actions; hold short.
-- 2026-11-19T00:52Z | eq 261.89 | Limit short FILLED 63,181; BTC swept 62,000 and bounced. No actions.
