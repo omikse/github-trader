@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-19T00:46:07Z",
+ "updated": "2026-11-19T00:51:07Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 4.017,
- "equity_pln": 1046.03,
- "return_pct": 1.27,
+ "equity_pln": 1046.59,
+ "return_pct": 1.32,
  "max_drawdown_pct": 13.94,
  "control_pln": 1026.07,
  "control_trades": 9,
- "hodl_pln": 771.21,
+ "hodl_pln": 770.99,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00635691,
    "entry": 63181.04,
-   "mark": 63156.9,
-   "upnl": 0.1534558073999963,
+   "mark": 63138.6,
+   "upnl": 0.26978726040001483,
    "stop": 63950.0,
    "tp": 60300.0,
    "liq": null,
    "leverage": null,
    "opened": 1795045860000,
    "reason": "Limit short on retest of broken 63,272 range low / just below 63,482 4h lower high and falling h1 ema20 (63,610); stop ~470 above LH; TP just above 60k round number (~3.9R).",
-   "upnl_pln": 0.62
+   "upnl_pln": 1.08
   }
  ],
  "closed_trades": [
@@ -532,33 +532,33 @@
  ],
  "trade_count": 36,
  "win_rate_pct": 36.1,
- "brain_calls_today": 0,
+ "brain_calls_today": 1,
  "last_decision": {
-  "time": "2026-11-18T23:02:08Z",
+  "time": "2026-11-19T00:51:07Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-18T22:52:00Z",
+  "decided_at": "2026-11-19T00:53:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 260.48,
-  "equity_pln": 1046.36,
+  "equity_usd": 260.58,
+  "equity_pln": 1046.76,
   "events": [
    {
-    "type": "order_cancelled",
-    "id": "o116",
+    "type": "order_filled",
+    "id": "o117",
     "symbol": "BTCUSDT",
     "side": "short",
-    "status": "cancelled",
-    "trigger": 63550,
-    "time": 1795035139920,
-    "detail": "cancelled by the brain"
+    "status": "filled",
+    "trigger": 63200,
+    "time": 1795045860000,
+    "detail": "filled at 63181"
    }
   ],
-  "market_view": "BTC 62,243 (data 21:57Z, ~53 min old) grinding lower toward the 61,970 30d low after the relief bounce failed at the 63,482 4h lower high; h1 RSI 27 is too stretched to chase. Bearish 4h/d1 trend intact.",
-  "watch_next": "Whether 61,970 breaks (flush to 61k) or BTC bounces into the 63,200 limit short; cancel if a 4h closes > 63,950; re-anchor to ~62,000 if BTC flushes < 61,500 unfilled.",
-  "news": "No new catalyst; hawkish Fed repricing and November risk-off continue to weigh on crypto.",
+  "market_view": "BTC limit short filled at 63,181 on the retest; price swept 62,000 then bounced to ~62,940. Lower-high structure (63,482 -> 63,209) intact in a d1/4h downtrend; hold the short with original stop.",
+  "watch_next": "4h close < 62,200 -> stop to ~63,500; 2 4h closes > 63,500 -> scratch; break of 61,970 toward 61k/60.3k TP.",
+  "news": "No fresh catalyst; hawkish Fed repricing and November risk-off continue.",
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 260.271292,
+ "cash_usd": 260.271382,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
