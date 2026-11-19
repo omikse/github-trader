@@ -1,9 +1,14 @@
 {
-  "id": "2026-11-19T02:51:00Z",
-  "decided_at": "2026-11-19T02:51:00Z",
+  "id": "2026-11-19T04:51:16Z",
+  "decided_at": "2026-11-19T04:51:16Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 62,610 in d1/4h downtrend; overnight bounce off 62,000 capped at ~63,225 under h1 ema20, keeping lower-high structure. Short from 63,181 is +1.4% of equity; plan unchanged.",
-  "news": "No fresh catalyst; ongoing hawkish Fed repricing / November risk-off.",
-  "watch_next": "4h close < 62,200 -> stop to ~63,500; new 4h LH < 63,000 -> stop ~63,450; 2 consecutive 4h closes > 63,500 -> scratch.",
-  "actions": []
+  "market_view": "BTC relief bounce to 63,552 (h 63,683) took out the 63,482 4h lower high; h1 RSI 52, price above h1 ema20, alts bouncing in breadth (ETH 1,801 +4% off lows). The retest-short thesis did not reject within 2 4h candles. Bigger trend still bearish (d1 RSI 24, below h4 ema20 64,319).",
+  "news": "No new catalyst; backdrop still hawkish Fed repricing and November risk-off with BTC near 30d lows.",
+  "watch_next": "Whether BTC rejects 63.8-64.4k (h1 ema50 / h4 ema20) and fills the 64,250 limit short; a 4h close > 64,900 cancels the short idea.",
+  "actions": [
+    {"type": "close", "symbol": "BTCUSDT", "reason": "Thesis was rejection under the 63,482 4h LH; price broke above it (h 63,683), h1 RSI 52 with alt breadth. Retest short not rejecting in ~2 4h candles = scratch per rules; take -2.4 instead of -4.9 at stop."},
+    {"type": "entry_order", "symbol": "BTCUSDT", "side": "short", "trigger": 64250, "stop": 65000, "take_profit": 61300, "risk_pct": 0.02, "expires_hours": 24,
+      "reason": "Re-anchored retest short at h4 ema20 (64,319) / 63.9-64.4k resistance zone in d1/4h downtrend; stop above 64,874 24h high; TP above 61k round number (~3.9R).",
+      "invalidation": "4h close above 64,900 or alts breaking out with breadth; d1 trend reversal."}
+  ]
 }
