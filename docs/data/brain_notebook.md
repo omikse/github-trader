@@ -1,9 +1,9 @@
-# Notebook (updated 2026-11-19T10:52Z)
+# Notebook (updated 2026-11-19T12:52Z)
 
 ## Big picture
 - 10:17Z 19 Nov: BTC 63,804, slow grind up; just above h1 ema50 63,774; h1 RSI 55; h4 ema20 64,280; d1 RSI 25. Last 4h close 63,670, current 4h h 63,873. 24h high 64,319. ETH 1,806. Funding BTC ~0. Low-volume relief toward h4 ema20 = where the limit short sits.
 - Trend: still bearish 4h/d1 (lower daily closes, 30d -23%). Resistance 63.9-64.4k (h4 ema20, 24h high 64,319), 64,874, 65.4k. Support 62,000/61,970, 61k, 60k.
-- News: hawkish Fed repricing / November risk-off; no fresh catalyst.
+- News: hawkish Fed repricing; FOMC minutes read as hike-leaning (BTC -2.7% on them per press). Web quotes ~63.5k / ETH ~1,796 midday 19 Nov.
 - Mind-changers: 4h close > 64,900 -> no shorts, stand aside; 4h close > 65,400 with alt breadth -> range back, consider longs.
 
 ## Strategy for this experiment
@@ -24,7 +24,7 @@
 ## Lessons
 - 19 Nov: BTC short 63,181 scratched ~-2.4 when bounce broke the LH it was anchored to (63,482) with alt breadth after 2 4h candles. Shorts at the very bottom of a 30d-low leg (d1 RSI ~22) get squeezed; prefer entries nearer h4 ema20.
 - 18-19 Nov: re-anchoring the limit to the LATEST broken level (63,200) filled within 3h; the far ones never did.
-- 18 Nov: engine stalls ~4h ate two decisions. Always check resting_orders vs notebook before acting.
+- 18-19 Nov: engine stalls (~2-4h) ate decisions. Always check resting_orders vs notebook before acting.
 - 18 Nov: anchor retest shorts at the LATEST LH / h1 ema50 / h4 ema20, not old spike highs.
 - 17 Nov: trailing ~250 above price on a bounce to h1 ema50 gets taken; profit kept, fine. Once in profit lock a little.
 - 16 Nov: in stretched downtrend trail ~400-600 / ~0.7-1 h1 ATR above the LH.
@@ -44,6 +44,7 @@
 - None held.
 
 ## Session log
+- 2026-11-19T12:52Z | eq 257.99 | ENGINE STALLED: input still 10:17Z (last bot commit 10:22Z handover), 2.5h old. Web: BTC ~63.5k, hawkish FOMC minutes. No actions; limit short 64,250 kept. Re-check stall next session.
 - 2026-11-19T10:52Z | eq 257.99 | Data 34 min old. BTC 63,804 grinding toward h4 ema20; no news. No actions; limit short 64,250 kept.
 - 2026-11-19T08:52Z | eq 257.99 | BTC 63,568 stalling under h1 ema50/63.8k; no news. No actions; limit short 64,250 kept (= h4 ema20).
 - 2026-11-19T06:52Z | eq 257.98 | BTC 63,472 grinding bounce under h1 ema50; no news. No actions; limit short 64,250 kept.
@@ -53,4 +54,3 @@
 - 2026-11-18T22:52Z | eq 260.48 | Data 53 min old (possible stall). BTC 62,243. No actions.
 - 2026-11-18T20:53Z | eq 260.48 | BTC 62,439, bounce failed at 63,482 LH. Re-anchored limit short 63,550 -> 63,200.
 - 2026-11-18T18:52Z | eq 260.48 | BTC 63,198 relief bounce. No actions.
-- 2026-11-18T16:52Z | eq 260.48 | BTC broke range low 62,340. Cancelled stale 64,750; limit short 63,550.
