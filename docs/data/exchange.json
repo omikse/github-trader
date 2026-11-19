@@ -1,5 +1,5 @@
 {
- "cash": 258.0018387560971,
+ "cash": 258.001897788311,
  "positions": {},
  "closed": [
   {
@@ -490,21 +490,21 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1795128557528,
- "next_id": 122,
+ "last_ms": 1795128737289,
+ "next_id": 123,
  "orders": [
   {
-   "id": "o121",
+   "id": "o122",
    "symbol": "BTCUSDT",
    "side": "short",
-   "qty": 0.0062929200000000005,
-   "trigger": 63600,
+   "qty": 0.00532195,
+   "trigger": 63250,
    "direction": "above",
-   "stop": 64350.0,
-   "tp": 61300.0,
-   "placed": 1795114325966,
-   "expires": 1795200725966,
-   "note": "Limit short at h1 ema50 retest under fresh 4h LH 64,014 in d1/4h downtrend; stop ~340 above LH, TP below 30d low 61,970 (~3R)."
+   "stop": 64150.0,
+   "tp": 61100.0,
+   "placed": 1795128737289,
+   "expires": 1795215137289,
+   "note": "Limit short on relief retest of latest 4h LH 63,357 / h1 ema50 63,390 after new 30d low 61,353 in d1 downtrend (d1 ema20 70.5k). Stop 150 above LH 64,014; TP front-runs 61k. ~2.4R."
   }
  ],
  "order_events": [
@@ -1200,6 +1200,15 @@
    "trigger": 63700,
    "time": 1795114325966,
    "detail": "cancelled by the brain"
+  },
+  {
+   "id": "o121",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 63600,
+   "time": 1795128737289,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -1306,6 +1315,6 @@
  "income": {
   "funding": 0.8147675806688152,
   "carry": -0.6600412463190095,
-  "interest": 0.6709936371519877
+  "interest": 0.6710526693658716
  }
 }
