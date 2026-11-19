@@ -1,19 +1,19 @@
-# Notebook (updated 2026-11-19T16:51Z)
+# Notebook (updated 2026-11-19T18:51Z)
 
 ## Big picture
-- 16:44Z 19 Nov: BTC relief bounce topped at 64,014 (24h high, new 4h LH) just under my 64,250 limit, then dumped to 62,711; now 63,122 under h1 ema20 63,450 / ema50 63,719. h4 ema20 64,068, h4 RSI 38, d1 RSI 22, 30d -24%. ETH 1,780, alts +1-2% 24h but faded with BTC. Funding ~0 on BTC, negative on most alts.
+- 18:44Z 19 Nov: BTC topped 64,014 (4h LH), swept to 62,170, now 62,985 under h1 ema20 63,309 / ema50 63,637 (falling). h4 ema20 64,055, h4 RSI 37, d1 RSI 22, 30d -24%. ETH 1,781, alts flat. Funding ~0 BTC, negative on most alts.
 - Trend: bearish 4h/d1. Resistance 63.7k (h1 ema50), 64,014 (LH), 64.3k, 65.4k. Support 62,700, 62,000/61,970 (30d low), 61k, 60k.
 - News: hawkish Fed repricing (FOMC minutes hike-leaning); nothing new 16:50Z.
 - Mind-changers: 4h close > 64,100 -> shorts off, stand aside; 4h close > 65,400 with alt breadth -> consider longs.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21T21Z. Equity 257.99 USD (1,036 PLN, +0.3%), peak 270.08. ~2.2 days left: 1-2 clean trades, each >=2R, risk ~2% (raise to 3% only once a trade is in profit and pyramiding).
+- Goal: grow ~1,000 PLN by 2026-11-21T21Z. Equity 258.00 USD (1,037 PLN, +0.3%), peak 270.08. ~2.1 days left: 1-2 clean trades, each >=2R, risk ~2% (raise to 3% only once a trade is in profit and pyramiding).
 - Trade WITH the trend: shorts into resistance via limit entry_orders re-anchored each session to the LATEST LH / h1 ema50. No stop-entry break orders, no opening at h1 RSI < 30.
 - Trail behind completed 4h highs, ~450-600 above; pyramid only from breakeven.
 - Carry only if funding > 60% APR sustained 3+ sessions on a non-meme; size <= 25%.
 
 ## Active plans
-- BTC limit SHORT (placed 16:51Z 19 Nov, exp 16:51Z 20 Nov): trigger 63,700, stop 64,450, TP 61,300, risk 2%. Thesis: retest of h1 ema50 under fresh 4h LH 64,014 fails in d1 downtrend. If filled: stop to ~64,100 after 4h close < 63,000; BE after 4h close < 62,300; then trail ~450-600 above completed 4h highs. Scratch if 4h close > 64,100 or no rejection within 2 4h candles. If BTC loses 62,000 without filling, re-anchor to ~63,200 (broken level). Close all before 21Z 21 Nov.
+- BTC limit SHORT (re-placed 18:51Z 19 Nov, exp 18:51Z 20 Nov): trigger 63,600 (h1 ema50), stop 64,350, TP 61,300, risk 2%. Thesis: retest of h1 ema50 under fresh 4h LH 64,014 fails in d1 downtrend. If filled: stop to ~64,100 after 4h close < 63,000; BE after 4h close < 62,300; then trail ~450-600 above completed 4h highs. Scratch if 4h close > 64,100 or no rejection within 2 4h candles. If BTC loses 62,000 without filling, re-anchor to ~63,200 (broken level). Close all before 21Z 21 Nov.
 
 ## Watchlist
 - ETH (1,780) short only on retest of a broken level and only if no BTC short (same bet).
@@ -45,6 +45,7 @@
 - None held.
 
 ## Session log
+- 2026-11-19T18:51Z | eq 258.00 | Data fresh. BTC swept 62,170, bounced to 62,985; no news. Re-anchored limit short 63,700 -> 63,600 (falling h1 ema50), stop 64,350, TP 61,300, risk 2%, 24h.
 - 2026-11-19T16:51Z | eq 257.99 | BTC topped 64,014 and dumped to 62,711 without filling. Cancelled 64,250 limit; new limit short 63,700 / stop 64,450 / TP 61,300, risk 2%, 24h.
 - 2026-11-19T14:52Z | eq 257.99 | Engine fresh (14:49Z). BTC 63,868 stalling under 64,014; h4 ema20 64,247 = limit. No news. No actions; limit short 64,250 kept.
 - 2026-11-19T12:52Z | eq 257.99 | ENGINE STALLED: input still 10:17Z (last bot commit 10:22Z handover), 2.5h old. Web: BTC ~63.5k, hawkish FOMC minutes. No actions; limit short 64,250 kept. Re-check stall next session.
@@ -54,4 +55,3 @@
 - 2026-11-19T04:52Z | eq 257.89 | Engine fresh (04:47Z). BTC 63,552 broke 63,482 LH with alt breadth. Closed BTC short (~-2.4, thesis gone). New limit short 64,250 / stop 65,000 / TP 61,300, risk 2%, 24h.
 - 2026-11-19T02:51Z | eq 263.84 | BTC 62,610, bounce rejected under h1 ema20. No actions; hold short.
 - 2026-11-19T00:52Z | eq 261.89 | Limit short FILLED 63,181; BTC swept 62,000 and bounced. No actions.
-- 2026-11-18T22:52Z | eq 260.48 | Data 53 min old (possible stall). BTC 62,243. No actions.
