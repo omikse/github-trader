@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T18:44:05Z",
+ "updated": "2026-11-19T18:52:05Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,7 +10,7 @@
  "max_drawdown_pct": 13.94,
  "control_pln": 1026.22,
  "control_trades": 9,
- "hodl_pln": 769.22,
+ "hodl_pln": 767.74,
  "positions": [],
  "closed_trades": [
   {
@@ -530,23 +530,34 @@
  ],
  "trade_count": 37,
  "win_rate_pct": 35.1,
- "brain_calls_today": 8,
+ "brain_calls_today": 9,
  "last_decision": {
-  "time": "2026-11-19T16:52:05Z",
+  "time": "2026-11-19T18:52:05Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-19T16:50:53Z",
+  "decided_at": "2026-11-19T18:50:58Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 257.99,
-  "equity_pln": 1036.52,
-  "events": [],
-  "market_view": "BTC relief bounce topped at 64,014 (new 4h LH) just under my 64,250 limit, then dumped to 62,711; now 63,122 below h1 ema20/50 (63,450/63,719). d1 downtrend intact (RSI 22, 30d -24%). Re-anchoring the short to the new lower high zone.",
-  "watch_next": "Fill of 63,700 limit short and rejection under 64,014; scratch if 2 4h closes > 64,100. If BTC loses 62,000 without filling, consider re-anchoring to 63,200.",
-  "news": "No fresh catalyst; hawkish-Fed narrative and BTC ~40% below record continue to weigh.",
+  "equity_usd": 258.0,
+  "equity_pln": 1036.53,
+  "events": [
+   {
+    "type": "order_cancelled",
+    "id": "o119",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "status": "cancelled",
+    "trigger": 64250,
+    "time": 1795107125946,
+    "detail": "cancelled by the brain"
+   }
+  ],
+  "market_view": "BTC 62,985: rejected from 64,014 LH, swept to 62,170 and bounced; still below falling h1 ema50 (63,637) and h4 ema20 (64,055) in a d1 downtrend (RSI 22). Alts flat, funding negative on most.",
+  "watch_next": "Whether the bounce reaches 63,600 and rejects (fill), or BTC loses 62,000/61,970 30d low without filling (re-anchor lower).",
+  "news": "No new catalyst; hawkish Fed repricing still weighing on crypto.",
   "actions": [
    {
     "type": "cancel_order",
     "symbol": "BTCUSDT",
-    "reason": "64,250 anchor is stale: bounce topped at 64,014 and rolled over without filling; re-anchoring lower to the new LH / h1 ema50.",
+    "reason": "Re-anchoring limit short to the falling h1 ema50 (63,637) instead of 63,700.",
     "result": "done",
     "detail": "cancelled 1 order(s)"
    },
@@ -554,20 +565,20 @@
     "type": "entry_order",
     "symbol": "BTCUSDT",
     "side": "short",
-    "trigger": 63700,
-    "stop": 64450,
+    "trigger": 63600,
+    "stop": 64350,
     "take_profit": 61300,
     "risk_pct": 0.02,
     "expires_hours": 24,
-    "reason": "Retest short at h1 ema50 (63,719) under fresh 4h LH 64,014 in a d1 downtrend (RSI 22, lower daily closes). Stop 436 above the LH; TP just above 61k/30d low 61,970 break target, ~3.2R.",
-    "invalidation": "4h close above 64,100 (reclaims LH) or two 4h closes above 63,900 with alt breadth.",
+    "reason": "Limit short at h1 ema50 retest under fresh 4h LH 64,014 in d1/4h downtrend; stop ~340 above LH, TP below 30d low 61,970 (~3R).",
+    "invalidation": "4h close above 64,100 or no rejection within 2 4h candles after fill.",
     "result": "done",
-    "detail": "short 0.00629201 when price goes above 63700 (risk 2.0%, stop 64450.0, target 61300.0, expires in 24h) ok"
+    "detail": "short 0.0062929200000000005 when price goes above 63600 (risk 2.0%, stop 64350.0, target 61300.0, expires in 24h) ok"
    }
   ]
  },
  "brain_mode": "session",
- "cash_usd": 257.997008,
+ "cash_usd": 257.997165,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -597,13 +608,13 @@
   {
    "symbol": "BTCUSDT",
    "side": "short",
-   "trigger": 63700,
+   "trigger": 63600,
    "direction": "above",
-   "stop": 64450.0,
+   "stop": 64350.0,
    "tp": 61300.0,
-   "qty": 0.00629201,
-   "expires": 1795193525946,
-   "note": "Retest short at h1 ema50 (63,719) under fresh 4h LH 64,014 in a d1 downtrend (RSI 22, lower daily closes). Stop 436 above the LH; TP just above 61k/30d low 61,970 break target, ~3.2R."
+   "qty": 0.0062929200000000005,
+   "expires": 1795200725966,
+   "note": "Limit short at h1 ema50 retest under fresh 4h LH 64,014 in d1/4h downtrend; stop ~340 above LH, TP below 30d low 61,970 (~3R)."
   }
  ],
  "balance_warning": false,
