@@ -1,9 +1,14 @@
 {
-  "id": "2026-11-19T14:52:30Z",
-  "decided_at": "2026-11-19T14:52:30Z",
+  "id": "2026-11-19T16:50:53Z",
+  "decided_at": "2026-11-19T16:50:53Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 63,868 slowly grinding up under the 64,014 24h high, h4 ema20 64,247 directly above; d1 trend still down (RSI 25, -23% 30d). Limit short at 64,250 stays parked at that resistance.",
-  "news": "No new catalysts; hawkish Fed repricing still the backdrop.",
-  "watch_next": "Fill/rejection of the 64,250 limit short; 4h close > 64,900 cancels shorts; if price rolls over below 63,500 without filling, re-anchor lower to the new lower high.",
-  "actions": []
+  "market_view": "BTC relief bounce topped at 64,014 (new 4h LH) just under my 64,250 limit, then dumped to 62,711; now 63,122 below h1 ema20/50 (63,450/63,719). d1 downtrend intact (RSI 22, 30d -24%). Re-anchoring the short to the new lower high zone.",
+  "news": "No fresh catalyst; hawkish-Fed narrative and BTC ~40% below record continue to weigh.",
+  "watch_next": "Fill of 63,700 limit short and rejection under 64,014; scratch if 2 4h closes > 64,100. If BTC loses 62,000 without filling, consider re-anchoring to 63,200.",
+  "actions": [
+    {"type": "cancel_order", "symbol": "BTCUSDT", "reason": "64,250 anchor is stale: bounce topped at 64,014 and rolled over without filling; re-anchoring lower to the new LH / h1 ema50."},
+    {"type": "entry_order", "symbol": "BTCUSDT", "side": "short", "trigger": 63700, "stop": 64450, "take_profit": 61300, "risk_pct": 0.02, "expires_hours": 24,
+      "reason": "Retest short at h1 ema50 (63,719) under fresh 4h LH 64,014 in a d1 downtrend (RSI 22, lower daily closes). Stop 436 above the LH; TP just above 61k/30d low 61,970 break target, ~3.2R.",
+      "invalidation": "4h close above 64,100 (reclaims LH) or two 4h closes above 63,900 with alt breadth."}
+  ]
 }

@@ -1,28 +1,28 @@
-# Notebook (updated 2026-11-19T14:52Z)
+# Notebook (updated 2026-11-19T16:51Z)
 
 ## Big picture
-- 14:49Z 19 Nov: BTC 63,868, slow grind up stalling under 64,014 (24h high); h1 ema50 63,787, h1 RSI 55; h4 ema20 64,247 (falling); d1 RSI 25.5. Last 4h close 63,878 (h 64,011). ETH 1,806, alts +1-2% 24h. Funding BTC ~0. Engine fresh again after the earlier stall. Low-volume relief toward h4 ema20 = where the limit short sits.
-- Trend: still bearish 4h/d1 (lower daily closes, 30d -23%). Resistance 63.9-64.4k (h4 ema20, 24h high 64,319), 64,874, 65.4k. Support 62,000/61,970, 61k, 60k.
-- News: hawkish Fed repricing; FOMC minutes read as hike-leaning (BTC -2.7% on them per press). Web quotes ~63.5k / ETH ~1,796 midday 19 Nov.
-- 14:49Z: still no fresh news beyond hawkish-Fed narrative.
-- Mind-changers: 4h close > 64,900 -> no shorts, stand aside; 4h close > 65,400 with alt breadth -> range back, consider longs.
+- 16:44Z 19 Nov: BTC relief bounce topped at 64,014 (24h high, new 4h LH) just under my 64,250 limit, then dumped to 62,711; now 63,122 under h1 ema20 63,450 / ema50 63,719. h4 ema20 64,068, h4 RSI 38, d1 RSI 22, 30d -24%. ETH 1,780, alts +1-2% 24h but faded with BTC. Funding ~0 on BTC, negative on most alts.
+- Trend: bearish 4h/d1. Resistance 63.7k (h1 ema50), 64,014 (LH), 64.3k, 65.4k. Support 62,700, 62,000/61,970 (30d low), 61k, 60k.
+- News: hawkish Fed repricing (FOMC minutes hike-leaning); nothing new 16:50Z.
+- Mind-changers: 4h close > 64,100 -> shorts off, stand aside; 4h close > 65,400 with alt breadth -> consider longs.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21T21Z. Equity 257.89 USD (1,036 PLN, +0.3%) before the scratch, peak 270.08. ~2.7 days left: few clean trades, each >=2R, risk ~2%.
-- Trade WITH the trend: shorts into resistance via limit entry_orders re-anchored each session. No stop-entry break orders, no opening at h1 RSI < 30.
+- Goal: grow ~1,000 PLN by 2026-11-21T21Z. Equity 257.99 USD (1,036 PLN, +0.3%), peak 270.08. ~2.2 days left: 1-2 clean trades, each >=2R, risk ~2% (raise to 3% only once a trade is in profit and pyramiding).
+- Trade WITH the trend: shorts into resistance via limit entry_orders re-anchored each session to the LATEST LH / h1 ema50. No stop-entry break orders, no opening at h1 RSI < 30.
 - Trail behind completed 4h highs, ~450-600 above; pyramid only from breakeven.
 - Carry only if funding > 60% APR sustained 3+ sessions on a non-meme; size <= 25%.
 
 ## Active plans
-- BTC limit SHORT (placed 04:52Z 19 Nov, exp 04:52Z 20 Nov): trigger 64,250, stop 65,000, TP 61,300, risk 2%. Thesis: relief bounce into h4 ema20 / 63.9-64.4k resistance fails in d1 downtrend. If filled: stop to ~64,500 after 4h close < 63,200; BE after 4h close < 62,500; then trail ~450-600 above completed 4h highs. Scratch if 2 consecutive 4h closes > 64,400 or no rejection within 2 4h candles. If price stalls below 63,9xx and rolls over without filling, consider re-anchoring lower to the new LH next session. Close all before 21Z 21 Nov.
+- BTC limit SHORT (placed 16:51Z 19 Nov, exp 16:51Z 20 Nov): trigger 63,700, stop 64,450, TP 61,300, risk 2%. Thesis: retest of h1 ema50 under fresh 4h LH 64,014 fails in d1 downtrend. If filled: stop to ~64,100 after 4h close < 63,000; BE after 4h close < 62,300; then trail ~450-600 above completed 4h highs. Scratch if 4h close > 64,100 or no rejection within 2 4h candles. If BTC loses 62,000 without filling, re-anchor to ~63,200 (broken level). Close all before 21Z 21 Nov.
 
 ## Watchlist
-- ETH (1,801) short only on retest of a broken level and only if no BTC short (same bet).
-- Alts: no fresh shorts (d1 oversold, negative funding on ADA/SUI/NEAR/WIF/LINK). NEAR/SOL/XRP relative strength - long only if BTC reclaims 65,400.
+- ETH (1,780) short only on retest of a broken level and only if no BTC short (same bet).
+- Alts: no fresh shorts (d1 oversold, negative funding on AVAX/DOT/WIF/PEPE/ADA). Long only if BTC reclaims 65,400 with breadth.
 - Capitulation-reclaim long: if BTC spikes < 61k then 4h closes back > 63,300 with alt breadth; small, 1.5%.
-- PAXG (3,718) weak; long only after 4h close > 4,010. EUR: none. Polymarket: no edge found.
+- PAXG (3,680) weak; long only after 4h close > 4,010. EUR: none. Polymarket: no edge found.
 
 ## Lessons
+- 19 Nov: limit 64,250 at h4 ema20 missed by ~240 (top 64,014) after waiting 12h; in a strong downtrend relief legs stall BELOW h4 ema20 -> anchor at h1 ema50 / latest LH instead.
 - 19 Nov: BTC short 63,181 scratched ~-2.4 when bounce broke the LH it was anchored to (63,482) with alt breadth after 2 4h candles. Shorts at the very bottom of a 30d-low leg (d1 RSI ~22) get squeezed; prefer entries nearer h4 ema20.
 - 18-19 Nov: re-anchoring the limit to the LATEST broken level (63,200) filled within 3h; the far ones never did.
 - 18-19 Nov: engine stalls (~2-4h) ate decisions. Always check resting_orders vs notebook before acting.
@@ -45,6 +45,7 @@
 - None held.
 
 ## Session log
+- 2026-11-19T16:51Z | eq 257.99 | BTC topped 64,014 and dumped to 62,711 without filling. Cancelled 64,250 limit; new limit short 63,700 / stop 64,450 / TP 61,300, risk 2%, 24h.
 - 2026-11-19T14:52Z | eq 257.99 | Engine fresh (14:49Z). BTC 63,868 stalling under 64,014; h4 ema20 64,247 = limit. No news. No actions; limit short 64,250 kept.
 - 2026-11-19T12:52Z | eq 257.99 | ENGINE STALLED: input still 10:17Z (last bot commit 10:22Z handover), 2.5h old. Web: BTC ~63.5k, hawkish FOMC minutes. No actions; limit short 64,250 kept. Re-check stall next session.
 - 2026-11-19T10:52Z | eq 257.99 | Data 34 min old. BTC 63,804 grinding toward h4 ema20; no news. No actions; limit short 64,250 kept.
@@ -54,4 +55,3 @@
 - 2026-11-19T02:51Z | eq 263.84 | BTC 62,610, bounce rejected under h1 ema20. No actions; hold short.
 - 2026-11-19T00:52Z | eq 261.89 | Limit short FILLED 63,181; BTC swept 62,000 and bounced. No actions.
 - 2026-11-18T22:52Z | eq 260.48 | Data 53 min old (possible stall). BTC 62,243. No actions.
-- 2026-11-18T20:53Z | eq 260.48 | BTC 62,439, bounce failed at 63,482 LH. Re-anchored limit short 63,550 -> 63,200.
