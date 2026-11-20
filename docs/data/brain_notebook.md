@@ -1,28 +1,29 @@
-# Notebook (updated 2026-11-20T14:52Z)
+# Notebook (updated 2026-11-20T16:51Z)
 
 ## Big picture
-- 14:52Z 20 Nov: data fresh (14:43Z). BTC 61,495 grinding on 30d low 61,176. Last closed 4h 61,745 (H 62,273 LH); in-progress 4h H 62,104. h1 ema20 61,976 / ema50 62,627, h4 ema20 63,121, h1 RSI 41, h4 RSI 31, d1 RSI 20. Funding BTC +12% APR; alts negative (BONK -122, WIF -42, SUI -35). Alts -4..-12% 24h. No news.
-- Trend: bearish 4h/d1. Resistance 61,980-62,300 (h1 ema20/LH 62,273), 62,630 (h1 ema50), 62,550, 63,357 LH, 64,014. Support 61,176 (30d low), 61k, 60k.
-- News: hawkish Fed repricing (FOMC minutes hike-leaning); nothing new 16:50Z.
-- Mind-changers: 4h close > 64,100 -> shorts off, stand aside; 4h close > 65,400 with alt breadth -> consider longs.
+- 16:51Z 20 Nov: data fresh (16:43Z). BTC BROKE the 30d low 61,176: 4h flush 62,104 -> 59,400 close, low 58,702, now 59,372. h1 ema20 61,521 / ema50 62,385, h4 ema20 62,583. h1 RSI 26, h4 RSI 23, d1 RSI 18. Funding BTC +3% APR; alts deeply negative (BONK -110, SUI -87). All alts -5..-12% 24h.
+- Trend: bearish 4h/d1, breakdown leg. Resistance 59,760 (4h high), 60,650-61,176 (broken shelf), 61,520 (h1 ema20), 62,100. Support 58,700, 58k, 57k.
+- News: BTC ~-23% in November, below 60k on ETF outflows + hawkish Fed repricing.
+- Mind-changers: 4h close back > 61,500 (failed breakdown) -> shorts off; 4h close > 63,300 with alt breadth -> consider capitulation-reclaim long.
 
 ## Strategy for this experiment
-- Goal: grow ~1,000 PLN by 2026-11-21T21Z. Equity 258.02 USD (1,048 PLN, +0.3%), peak 270.08. ~30h left: 1-2 clean trades, each >=2R, risk ~2% (raise to 3% only once a trade is in profit and pyramiding).
+- Goal: grow ~1,000 PLN by 2026-11-21T21Z. Equity 258.02 USD (1,048 PLN, +0.3%), peak 270.08. ~28h left: 1-2 clean trades, each >=2R, risk ~2% (raise to 3% only once a trade is in profit and pyramiding).
 - Trade WITH the trend: shorts into resistance via limit entry_orders re-anchored each session to the LATEST LH / h1 ema50. No stop-entry break orders, no opening at h1 RSI < 30.
 - Trail behind completed 4h highs, ~450-600 above; pyramid only from breakeven.
 - Carry only if funding > 60% APR sustained 3+ sessions on a non-meme; size <= 25%.
 
 ## Active plans
-- BTC limit SHORT (placed 14:52Z 20 Nov, exp 14:52Z 21 Nov): trigger 62,050 (h1 ema20 61,976 / 4h high 62,104, under LH 62,273), stop 62,750 (above h1 ema50 62,627), TP 60,250 (front-runs 60k), risk 2%, ~2.6R. Thesis: relief from 30d-low grind stalls at h1 ema20 as all week. If filled: stop to ~62,450 after 4h close < 61,600; BE after 4h close < 61,000; trail ~450-600 above completed 4h highs. Scratch if 4h close > 62,700 or no rejection within 2 4h candles. If BTC breaks < 61,000 unfilled, re-anchor ~61,600. Close all before 21Z 21 Nov.
+- BTC limit SHORT (placed 16:51Z 20 Nov, exp 16:51Z 21 Nov): trigger 60,650 (retest toward broken 30d-low shelf 61,176), stop 61,450, TP 58,250 (front-runs 58k), risk 2%, 3R. Thesis: broken support becomes resistance; relief from 58.7k stalls below 61,176/h1 ema20. If filled: stop to ~60,900 after 4h close < 59,800; BE after 4h close < 59,000; trail ~450-600 above completed 4h highs. Scratch if 1h close > 61,176 or no rejection within 2 4h candles. If new low < 58,000 unfilled, re-anchor ~59,300 (h1 ema20 by then). Close all before 21Z 21 Nov.
 
 ## Watchlist
-- PAXG 3,593 in freefall (h1 RSI 20): no chase. Short only on bounce-retest of ~3,680-3,700 failing (h1 ema20) with RSI reset > 45.
+- PAXG 3,535 in freefall (h1 RSI 31): no chase. Short only on bounce-retest of ~3,680-3,700 failing (h1 ema20) with RSI reset > 45.
 - ETH (1,780) short only on retest of a broken level and only if no BTC short (same bet).
 - Alts: no fresh shorts (d1 oversold, negative funding on AVAX/DOT/WIF/PEPE/ADA). Long only if BTC reclaims 65,400 with breadth.
 - Capitulation-reclaim long: if BTC spikes < 61k then 4h closes back > 63,300 with alt breadth; small, 1.5%.
 - PAXG (3,680) weak; long only after 4h close > 4,010. EUR: none. Polymarket: no edge found.
 
 ## Lessons
+- 20 Nov 14-17Z: 62,050 limit missed; BTC broke the 30d low straight down (-2.3k in one hour) with no relief. Grinding along a low under falling emas resolves by breaking it; next time consider a smaller break-retest plan ready.
 - 20 Nov 09-13Z: engine stalled ~3.5h then resumed; detached HEAD again (fixed via checkout -B main origin/main).
 - 20 Nov 04-08Z: 62,600 limit untouched; price compressed under 62,090. Keep re-anchoring to the falling h1 ema20, not old LHs.
 - 20 Nov 02-04Z: 62,950 limit not reached; bounce from 61,213 stalled at 62,550 (h1 ema20) again. Anchor at latest LH / h1 ema20 while d1 RSI ~20.
@@ -50,6 +51,7 @@
 - None held.
 
 ## Session log
+- 2026-11-20T16:51Z | eq 258.02 | Data fresh (16:43Z). BTC broke 30d low, flush to 58,702, now 59,372. Cancelled 62,050 limit; new limit short 60,650 / stop 61,450 / TP 58,250, risk 2%, 24h.
 - 2026-11-20T14:52Z | eq 258.02 | Data fresh (14:43Z). BTC 61,495 grinding on 30d low. Re-anchored limit short 62,200 -> 62,050 / stop 62,750 / TP 60,250, risk 2%, 24h. No news.
 - 2026-11-20T12:52Z | eq 258.02 | Data fresh (12:43Z). BTC new 30d low 61,176, now 61,548. Re-anchored limit short 62,350 -> 62,200 / stop 62,850 / TP 60,250, risk 2%, 24h. No news.
 - 2026-11-20T10:52Z | eq 258.01 | ENGINE STALLED (input 09:00Z, 1h51m old). BTC 61,767 compressing. Limit short 62,350 / stop 63,050 / TP 60,550 kept (still ~h1 ema20 62,179). No actions. Re-check stall next session.
@@ -59,4 +61,3 @@
 - 2026-11-20T02:52Z | eq 258.01 | BTC new 30d low 61,213, now 61,733. Re-anchored limit short 63,250 -> 62,950 / stop 63,550 / TP 61,100, risk 2%, 24h. No news.
 - 2026-11-20T00:52Z | eq 258.00 | Data fresh (00:40Z). BTC 61,970 basing; limit short 63,250 kept (= h1 ema50 63,276). News: cross-asset risk-off incl. gold. No actions.
 - 2026-11-19T22:52Z | eq 258.00 | Engine fresh (22:45Z). BTC new 30d low 61,353, bounce to 62,181. Re-anchored limit short 63,600 -> 63,250 / stop 64,150 / TP 61,100, risk 2%, 24h.
-- 2026-11-19T20:51Z | eq 258.00 | ENGINE STALLED (input 19:04Z, 1h47m old). BTC last 62,725 under h1 ema20. No actions; limit short 63,600 kept (still = h1 ema50). Re-check stall next session.
