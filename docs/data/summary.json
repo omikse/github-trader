@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T06:51:36Z",
+ "updated": "2026-11-20T06:52:37Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,7 +10,7 @@
  "max_drawdown_pct": 13.94,
  "control_pln": 1026.22,
  "control_trades": 9,
- "hodl_pln": 755.88,
+ "hodl_pln": 756.17,
  "positions": [],
  "closed_trades": [
   {
@@ -530,55 +530,33 @@
  ],
  "trade_count": 37,
  "win_rate_pct": 35.1,
- "brain_calls_today": 3,
+ "brain_calls_today": 4,
  "last_decision": {
-  "time": "2026-11-20T04:51:36Z",
+  "time": "2026-11-20T06:52:37Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-20T04:52:00Z",
+  "decided_at": "2026-11-20T06:53:00Z",
   "model": "claude-opus-5-5",
   "equity_usd": 258.01,
-  "equity_pln": 1036.58,
+  "equity_pln": 1036.59,
   "events": [
    {
     "type": "order_cancelled",
-    "id": "o122",
+    "id": "o123",
     "symbol": "BTCUSDT",
     "side": "short",
     "status": "cancelled",
-    "trigger": 63250,
-    "time": 1795143077356,
+    "trigger": 62950,
+    "time": 1795150296720,
     "detail": "cancelled by the brain"
    }
   ],
-  "market_view": "BTC 61,408 retesting 30d low 61,213 in a clean 4h downtrend (LHs 64,014 -> 63,357 -> 62,550); relief bounces keep stalling at h1 ema20 (~62,400-62,550), below the h1 ema50 where my old limit sat. d1 RSI 20, so no chasing at the low.",
-  "watch_next": "Fill/rejection at 62,600; if BTC breaks < 60,800 unfilled, re-anchor near 61,800. Scratch if 4h close > 63,100.",
-  "news": "No new market-moving news found; hawkish Fed repricing and cross-asset deleveraging remain the backdrop.",
-  "actions": [
-   {
-    "type": "cancel_order",
-    "symbol": "BTCUSDT",
-    "reason": "Re-anchoring: 62,950 sits above where the last two relief bounces stalled (62,550 at h1 ema20).",
-    "result": "done",
-    "detail": "cancelled 1 order(s)"
-   },
-   {
-    "type": "entry_order",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "trigger": 62600,
-    "stop": 63250,
-    "take_profit": 60550,
-    "risk_pct": 0.02,
-    "expires_hours": 24,
-    "reason": "Limit short on relief retest of latest 4h LH 62,550 / h1 ema20 62,404 in 4h downtrend from 30d-low retest; TP front-runs 60.5k, ~3.2R.",
-    "invalidation": "4h close > 63,100 (above h1 ema50) or no rejection within two 4h candles after fill.",
-    "result": "done",
-    "detail": "short 0.00717828 when price goes above 62600 (risk 2.0%, stop 63250.0, target 60550.0, expires in 24h) ok"
-   }
-  ]
+  "market_view": "BTC 61,911 basing 61.2k-62.55k for ~8h in a bearish 4h/d1 trend (d1 RSI 21). Relief bounces keep stalling at h1 ema20 / latest 4h LH 62,550; the resting limit short at 62,600 still sits at that zone.",
+  "watch_next": "Fill of 62,600 limit and rejection; 4h close > 63,100 = scratch idea; break < 60,800 unfilled = re-anchor limit to ~61,800.",
+  "news": "No new market-moving news found; hawkish Fed repricing backdrop unchanged.",
+  "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 258.011342,
+ "cash_usd": 258.011362,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
