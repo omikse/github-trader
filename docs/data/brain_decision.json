@@ -1,27 +1,9 @@
 {
-  "id": "2026-11-20T04:52:00Z",
-  "decided_at": "2026-11-20T04:52:00Z",
+  "id": "2026-11-20T06:53:00Z",
+  "decided_at": "2026-11-20T06:53:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 61,408 retesting 30d low 61,213 in a clean 4h downtrend (LHs 64,014 -> 63,357 -> 62,550); relief bounces keep stalling at h1 ema20 (~62,400-62,550), below the h1 ema50 where my old limit sat. d1 RSI 20, so no chasing at the low.",
-  "news": "No new market-moving news found; hawkish Fed repricing and cross-asset deleveraging remain the backdrop.",
-  "watch_next": "Fill/rejection at 62,600; if BTC breaks < 60,800 unfilled, re-anchor near 61,800. Scratch if 4h close > 63,100.",
-  "actions": [
-    {
-      "type": "cancel_order",
-      "symbol": "BTCUSDT",
-      "reason": "Re-anchoring: 62,950 sits above where the last two relief bounces stalled (62,550 at h1 ema20)."
-    },
-    {
-      "type": "entry_order",
-      "symbol": "BTCUSDT",
-      "side": "short",
-      "trigger": 62600,
-      "stop": 63250,
-      "take_profit": 60550,
-      "risk_pct": 0.02,
-      "expires_hours": 24,
-      "reason": "Limit short on relief retest of latest 4h LH 62,550 / h1 ema20 62,404 in 4h downtrend from 30d-low retest; TP front-runs 60.5k, ~3.2R.",
-      "invalidation": "4h close > 63,100 (above h1 ema50) or no rejection within two 4h candles after fill."
-    }
-  ]
+  "market_view": "BTC 61,911 basing 61.2k-62.55k for ~8h in a bearish 4h/d1 trend (d1 RSI 21). Relief bounces keep stalling at h1 ema20 / latest 4h LH 62,550; the resting limit short at 62,600 still sits at that zone.",
+  "news": "No new market-moving news found; hawkish Fed repricing backdrop unchanged.",
+  "watch_next": "Fill of 62,600 limit and rejection; 4h close > 63,100 = scratch idea; break < 60,800 unfilled = re-anchor limit to ~61,800.",
+  "actions": []
 }
