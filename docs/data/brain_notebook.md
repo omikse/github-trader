@@ -1,8 +1,8 @@
-# Notebook (updated 2026-11-20T08:53Z)
+# Notebook (updated 2026-11-20T10:52Z)
 
 ## Big picture
+- 10:52Z 20 Nov: ENGINE STALLED (input 09:00Z, last bot commit 09:05Z "handover"). Last BTC 61,767, still compressing 61,660-62,000 above 30d low 61,213. h1 ema20 62,179 / ema50 62,840, h4 ema20 63,294, h1 RSI 42, h4 RSI 32, d1 RSI 20. Funding BTC -5% APR. No news.
 - 08:50Z 20 Nov: BTC 61,910 compressing 61,660-62,090 ~8h above 30d low 61,213. Latest closed 4h 61,795 (H 62,090 = new LH). h1 ema20 62,237 / ema50 62,890, h4 ema20 63,307, h1 RSI 44, h4 RSI 34, d1 RSI 21. Funding BTC -4% APR, alts mostly negative (BONK -107, PEPE -68). NEAR -12%, LTC -6%. No news.
-- 06:50Z 20 Nov: BTC 61,911 basing 61,213-62,550 for ~8h. Latest closed 4h 62,090 (H 62,550); in-progress 4h H 62,090 L 61,327. h1 ema20 62,313 / ema50 62,972, h4 ema20 63,466, h1 RSI 43, h4 RSI 33, d1 RSI 21. Funding BTC +10% APR; alts negative. No new news.
 - Trend: bearish 4h/d1. Resistance 62,400-62,600 (h1 ema20/LH 62,550), 63,050 (h1 ema50), 63,357 LH, 64,014. Support 61,213 (30d low), 61k, 60k.
 - News: hawkish Fed repricing (FOMC minutes hike-leaning); nothing new 16:50Z.
 - Mind-changers: 4h close > 64,100 -> shorts off, stand aside; 4h close > 65,400 with alt breadth -> consider longs.
@@ -24,6 +24,7 @@
 - PAXG (3,680) weak; long only after 4h close > 4,010. EUR: none. Polymarket: no edge found.
 
 ## Lessons
+- 20 Nov 09-11Z: engine stall again (~2h). Resting order still valid; sent empty decision only.
 - 20 Nov 04-08Z: 62,600 limit untouched; price compressed under 62,090. Keep re-anchoring to the falling h1 ema20, not old LHs.
 - 20 Nov 02-04Z: 62,950 limit not reached; bounce from 61,213 stalled at 62,550 (h1 ema20) again. Anchor at latest LH / h1 ema20 while d1 RSI ~20.
 - 20 Nov: limit 63,250 never filled; bounce stalled at 62,550 (h1 ema20) before new low. In this leg relief stalls at h1 ema20-ema50 zone: anchor ~just under h1 ema50 and re-anchor every session.
@@ -50,6 +51,7 @@
 - None held.
 
 ## Session log
+- 2026-11-20T10:52Z | eq 258.01 | ENGINE STALLED (input 09:00Z, 1h51m old). BTC 61,767 compressing. Limit short 62,350 / stop 63,050 / TP 60,550 kept (still ~h1 ema20 62,179). No actions. Re-check stall next session.
 - 2026-11-20T08:53Z | eq 258.01 | Data fresh (08:40Z). BTC 61,910 compressing. Re-anchored limit short 62,600 -> 62,350 / stop 63,050 / TP 60,550, risk 2%, 24h. No news.
 - 2026-11-20T06:52Z | eq 258.01 | Data fresh. BTC 61,911 basing above 61,213. Kept limit short 62,600 / stop 63,250 / TP 60,550. No news. No actions.
 - 2026-11-20T04:52Z | eq 258.01 | BTC 61,408 retesting 30d low. Re-anchored limit short 62,950 -> 62,600 / stop 63,250 / TP 60,550, risk 2%, 24h. No news.
@@ -59,4 +61,3 @@
 - 2026-11-19T20:51Z | eq 258.00 | ENGINE STALLED (input 19:04Z, 1h47m old). BTC last 62,725 under h1 ema20. No actions; limit short 63,600 kept (still = h1 ema50). Re-check stall next session.
 - 2026-11-19T18:51Z | eq 258.00 | Data fresh. BTC swept 62,170, bounced to 62,985; no news. Re-anchored limit short 63,700 -> 63,600 (falling h1 ema50), stop 64,350, TP 61,300, risk 2%, 24h.
 - 2026-11-19T16:51Z | eq 257.99 | BTC topped 64,014 and dumped to 62,711 without filling. Cancelled 64,250 limit; new limit short 63,700 / stop 64,450 / TP 61,300, risk 2%, 24h.
-- 2026-11-19T14:52Z | eq 257.99 | Engine fresh (14:49Z). BTC 63,868 stalling under 64,014; h4 ema20 64,247 = limit. No news. No actions; limit short 64,250 kept.
