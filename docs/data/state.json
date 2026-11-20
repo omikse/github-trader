@@ -517,11 +517,22 @@
    "reason": "Limit short on retest of broken 63,272 range low / just below 63,482 4h lower high and falling h1 ema20 (63,610); stop ~470 above LH; TP just above 60k round number (~3.9R)."
   }
  ],
- "last_closed_check_ms": 1795186338846,
+ "last_closed_check_ms": 1795186818709,
  "day": "2026-11-20",
  "day_start_equity": 258.00323754974534,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "order_cancelled",
+   "id": "o126",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "status": "cancelled",
+   "trigger": 62200,
+   "time": 1795186338846,
+   "detail": "cancelled by the brain"
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 255.43070451799173,
@@ -530,7 +541,7 @@
   "trades": 9,
   "wins": 5
  },
- "last_btc": 61360.4,
+ "last_btc": 61785.7,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -613,7 +624,8 @@
   "o122:cancelled",
   "o123:cancelled",
   "o124:cancelled",
-  "o125:cancelled"
+  "o125:cancelled",
+  "o126:cancelled"
  ],
  "last_decision_id": "2026-11-20T14:51:20Z",
  "cash_rate_day": "2026-11-20"
