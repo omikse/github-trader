@@ -1,6 +1,7 @@
-# Notebook (updated 2026-11-20T16:51Z)
+# Notebook (updated 2026-11-20T18:51Z)
 
 ## Big picture
+- 18:51Z 20 Nov: ENGINE STALLED: input still 16:53Z (~2h old), last bot commit 16:58Z "handover". Plan unchanged; no live view of price since BTC 59,369.
 - 16:51Z 20 Nov: data fresh (16:43Z). BTC BROKE the 30d low 61,176: 4h flush 62,104 -> 59,400 close, low 58,702, now 59,372. h1 ema20 61,521 / ema50 62,385, h4 ema20 62,583. h1 RSI 26, h4 RSI 23, d1 RSI 18. Funding BTC +3% APR; alts deeply negative (BONK -110, SUI -87). All alts -5..-12% 24h.
 - Trend: bearish 4h/d1, breakdown leg. Resistance 59,760 (4h high), 60,650-61,176 (broken shelf), 61,520 (h1 ema20), 62,100. Support 58,700, 58k, 57k.
 - News: BTC ~-23% in November, below 60k on ETF outflows + hawkish Fed repricing.
@@ -23,6 +24,7 @@
 - PAXG (3,680) weak; long only after 4h close > 4,010. EUR: none. Polymarket: no edge found.
 
 ## Lessons
+- 20 Nov 17-19Z: engine stalled again after a "handover" commit; check last bot commit time vs now every session.
 - 20 Nov 14-17Z: 62,050 limit missed; BTC broke the 30d low straight down (-2.3k in one hour) with no relief. Grinding along a low under falling emas resolves by breaking it; next time consider a smaller break-retest plan ready.
 - 20 Nov 09-13Z: engine stalled ~3.5h then resumed; detached HEAD again (fixed via checkout -B main origin/main).
 - 20 Nov 04-08Z: 62,600 limit untouched; price compressed under 62,090. Keep re-anchoring to the falling h1 ema20, not old LHs.
@@ -51,6 +53,7 @@
 - None held.
 
 ## Session log
+- 2026-11-20T18:51Z | eq 258.02 | ENGINE STALLED (input 16:53Z, ~2h old). Kept limit short 60,650 / stop 61,450 / TP 58,250. No actions. No useful news.
 - 2026-11-20T16:51Z | eq 258.02 | Data fresh (16:43Z). BTC broke 30d low, flush to 58,702, now 59,372. Cancelled 62,050 limit; new limit short 60,650 / stop 61,450 / TP 58,250, risk 2%, 24h.
 - 2026-11-20T14:52Z | eq 258.02 | Data fresh (14:43Z). BTC 61,495 grinding on 30d low. Re-anchored limit short 62,200 -> 62,050 / stop 62,750 / TP 60,250, risk 2%, 24h. No news.
 - 2026-11-20T12:52Z | eq 258.02 | Data fresh (12:43Z). BTC new 30d low 61,176, now 61,548. Re-anchored limit short 62,350 -> 62,200 / stop 62,850 / TP 60,250, risk 2%, 24h. No news.
@@ -60,4 +63,3 @@
 - 2026-11-20T04:52Z | eq 258.01 | BTC 61,408 retesting 30d low. Re-anchored limit short 62,950 -> 62,600 / stop 63,250 / TP 60,550, risk 2%, 24h. No news.
 - 2026-11-20T02:52Z | eq 258.01 | BTC new 30d low 61,213, now 61,733. Re-anchored limit short 63,250 -> 62,950 / stop 63,550 / TP 61,100, risk 2%, 24h. No news.
 - 2026-11-20T00:52Z | eq 258.00 | Data fresh (00:40Z). BTC 61,970 basing; limit short 63,250 kept (= h1 ema50 63,276). News: cross-asset risk-off incl. gold. No actions.
-- 2026-11-19T22:52Z | eq 258.00 | Engine fresh (22:45Z). BTC new 30d low 61,353, bounce to 62,181. Re-anchored limit short 63,600 -> 63,250 / stop 64,150 / TP 61,100, risk 2%, 24h.
