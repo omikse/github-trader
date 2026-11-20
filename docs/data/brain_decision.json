@@ -1,9 +1,14 @@
 {
-  "id": "2026-11-20T00:52:00Z",
-  "decided_at": "2026-11-20T00:52:00Z",
+  "id": "2026-11-20T02:52:00Z",
+  "decided_at": "2026-11-20T02:52:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC basing at 61.9-62.2k after new 30d low 61,353; trend still bearish 4h/d1 with falling h1 ema50 at 63,276. Cross-asset deleveraging: PAXG -4% in 24h.",
-  "news": "Bitcoin, gold and stocks falling together as debasement/risk trades unwind; hawkish Fed repricing.",
-  "watch_next": "Whether the relief bounce reaches 63,250 (limit short) and rejects; BTC breaks < 61,000 -> re-anchor limit to ~62,300; PAXG bounce-retest short.",
-  "actions": []
+  "market_view": "BTC printed another 30d low 61,213 and sits at 61,733 under falling h1 ema20 62,506 / ema50 63,153; 4h lower highs 64,014 -> 63,357 -> 62,550, d1 RSI 20. Bearish trend but oversold, so short only into the h1 ema50 retest.",
+  "news": "No new market-moving news found; backdrop remains hawkish Fed repricing and cross-asset deleveraging.",
+  "watch_next": "Whether a bounce reaches 62,950 and rejects; if BTC loses 60,800 unfilled, re-anchor to ~61,900.",
+  "actions": [
+    {"type": "cancel_order", "symbol": "BTCUSDT", "reason": "63,250 trigger now above falling h1 ema50 (63,153) and the latest LH is lower (62,550); re-anchor lower so the retest can actually fill."},
+    {"type": "entry_order", "symbol": "BTCUSDT", "side": "short", "trigger": 62950, "stop": 63550, "take_profit": 61100, "risk_pct": 0.02, "expires_hours": 24,
+     "reason": "Limit short on relief retest of falling h1 ema50 (63,153) after new 30d low 61,213 in d1 downtrend (4h LHs 64,014/63,357/62,550). Stop ~190 above LH 63,357; TP front-runs 61k. ~3.1R.",
+     "invalidation": "4h close > 63,400 or no rejection within 2 4h candles after fill."}
+  ]
 }
