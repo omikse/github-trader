@@ -1,7 +1,7 @@
-# Notebook (updated 2026-11-21T00:51Z)
+# Notebook (updated 2026-11-21T02:52Z)
 
 ## Big picture
-- 00:51Z 21 Nov: data fresh (00:44Z). BTC 58,918 basing 58,087-59,362 after 30d low 57,661. h1 ema20 60,013 / ema50 61,395 (falling); h4 ema20 61,839. h1 RSI 33, h4 RSI 25, d1 RSI 18. Funding cooled to +10% APR. ETH 1,622. Last closed 4h: H 59,362 C 58,806 (LH vs 59,758).
+- 02:52Z 21 Nov: data fresh (02:44Z). BTC 58,552 drifting lower inside base 58,087-59,362 after 30d low 57,661. h1 ema20 59,777 / ema50 61,190 (falling); h4 ema20 61,804. h1 RSI 30, h4 RSI 23, d1 RSI 17. Funding +15% APR. ETH 1,616. Last closed 4h: H 59,362 C 58,806; current 4h H 59,100 so far.
 - Trend: bearish 4h/d1, extended breakdown. Resistance 59,400-59,760 (breakdown 4h close / last 4h high), 60,550 (h1 ema20), 61,176 (old shelf). Support 57,661, 57k, 56k.
 - News: BTC ~-23%+ in November, ETF outflows + hawkish Fed. Polymarket "BTC dip to 56k Nov 16-22" ask 0.444 vs my ~40%: no edge.
 - Mind-changers: 1h close > 60,000 with alt breadth -> shorts off; 4h close > 61,500 -> consider capitulation-reclaim long.
@@ -13,7 +13,7 @@
 - Carry only if funding > 60% APR sustained on a non-meme; size <= 25%. None now.
 
 ## Active plans
-- BTC limit SHORT (kept 00:51Z: price basing just under zone, trigger still at breakdown 4h close + under h1 ema20 60,013; placed 20:52Z 20 Nov, exp ~20:52Z 21 Nov): trigger 59,550, stop 60,350, TP 57,250 (front-runs 57k), risk 2%, ~2.9R. Thesis: relief from 57.7k fails at the breakdown zone 59,400-59,760 under falling h1 ema20. If filled: stop to ~59,900 after a 4h close < 58,500; BE after 4h close < 58,000; trail ~450-600 above completed 4h highs. Scratch if 1h close > 60,000 or no rejection within 2 4h candles. If new low < 57,000 unfilled, re-anchor near h1 ema20 / latest LH. CLOSE ALL before 21Z 21 Nov (experiment end).
+- BTC limit SHORT (re-anchored 02:52Z 21 Nov from 59,550; exp ~19:52Z): trigger 59,350 (latest closed 4h high 59,362), stop 60,100 (above h1 ema20 59,777 + buffer), TP 57,250 (front-runs 57k), risk 2%, ~2.8R. Thesis: relief from 57.7k base fails at the latest LH under falling h1 ema20. If filled: stop to ~59,700 after a 4h close < 58,300; BE after 4h close < 57,900; trail ~450-600 above completed 4h highs. Scratch if 1h close > 60,000 or no rejection within 2 4h candles. If new low < 57,000 unfilled, re-anchor to latest LH. CLOSE ALL before 21Z 21 Nov (experiment end); cancel order after ~18Z if not filled with room to TP.
 
 ## Watchlist
 - PAXG 3,512 still falling (h1 RSI low): short only on bounce-retest of h1 ema20 failing with RSI reset > 45.
@@ -49,6 +49,7 @@
 - None held.
 
 ## Session log
+- 2026-11-21T02:52Z | eq 258.03 | Data fresh (02:44Z). BTC 58,552 drifting in base. Re-anchored limit short 59,550 -> 59,350 / stop 60,100 / TP 57,250, risk 2%. No news. Fixed detached HEAD.
 - 2026-11-21T00:51Z | eq 258.03 | Data fresh (00:44Z). BTC 58,918 basing under zone. Kept limit short 59,550 / stop 60,350 / TP 57,250. No actions. No new news. Fixed detached HEAD.
 - 2026-11-20T22:52Z | eq 258.03 | Data fresh (22:44Z). BTC relief to 59,133, approaching zone. Kept limit short 59,550 / stop 60,350 / TP 57,250. No actions. Fixed detached HEAD.
 - 2026-11-20T20:52Z | eq 258.03 | Data fresh (20:49Z). BTC new low 57,661, now 58,470. Cancelled 60,650 limit; new limit short 59,550 / stop 60,350 / TP 57,250, risk 2%, 24h. Fixed detached HEAD.

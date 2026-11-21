@@ -1,9 +1,27 @@
 {
-  "id": "2026-11-21T00:51:30Z",
-  "decided_at": "2026-11-21T00:51:30Z",
+  "id": "2026-11-21T02:52:00Z",
+  "decided_at": "2026-11-21T02:52:00Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC 58,918 basing 58.1-59.4k after the 57,661 30d low; h1/h4 emas falling, d1 RSI 18. Relief still capped below breakdown zone 59,400-59,760 and h1 ema20 ~60,000.",
-  "news": "No new catalyst; November drawdown driven by ETF outflows and hawkish Fed repricing, sentiment extreme fear.",
-  "watch_next": "Did the 59,550 limit short fill and reject? Scratch if 1h close > 60,000. Re-anchor if new low < 57,000 unfilled. Close all before 21Z.",
-  "actions": []
+  "market_view": "BTC 58,552 slipping lower inside the 58,087-59,362 base under falling h1 ema20 (59,777); h4 RSI 23, d1 RSI 17. Bearish trend, oversold; relief legs in this leg have been < 1 h1 ATR, so the 59,550 trigger is re-anchored lower to the latest closed 4h high.",
+  "news": "Nothing new: extreme fear, hawkish Fed repricing, BTC consolidating near lows.",
+  "watch_next": "Fill of 59,350 limit short and rejection; scratch on 1h close > 60,000; if new low < 57,000 unfilled, re-anchor to latest LH. Close everything before 21Z.",
+  "actions": [
+    {
+      "type": "cancel_order",
+      "symbol": "BTCUSDT",
+      "reason": "Re-anchoring 59,550 trigger lower to latest closed 4h high (59,362); relief in this leg stays < 1 h1 ATR."
+    },
+    {
+      "type": "entry_order",
+      "symbol": "BTCUSDT",
+      "side": "short",
+      "trigger": 59350,
+      "stop": 60100,
+      "take_profit": 57250,
+      "risk_pct": 0.02,
+      "expires_hours": 17,
+      "reason": "Limit short at latest closed 4h high 59,362 (lower high under breakdown zone 59.4-59.8k) below falling h1 ema20 59,777; stop above ema20 + buffer, TP front-runs 57k round number. ~2.8R.",
+      "invalidation": "1h close > 60,000 or no rejection within 2 4h candles after fill."
+    }
+  ]
 }
