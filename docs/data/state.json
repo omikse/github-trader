@@ -37,7 +37,7 @@
   "2026-11-18": 11,
   "2026-11-19": 11,
   "2026-11-20": 12,
-  "2026-11-21": 3
+  "2026-11-21": 4
  },
  "closed_trades": [
   {
@@ -516,33 +516,35 @@
    "why": "manual close",
    "opened": 1795045860000,
    "reason": "Limit short on retest of broken 63,272 range low / just below 63,482 4h lower high and falling h1 ema20 (63,610); stop ~470 above LH; TP just above 60k round number (~3.9R)."
+  },
+  {
+   "id": "t132",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00634626,
+   "entry": 57432.765,
+   "exit": 58229.1,
+   "pnl": -5.4575,
+   "time": 1795244820000,
+   "why": "stop",
+   "opened": 1795243620000,
+   "reason": "Retest short of broken 30d low 57,661 (latest breakdown level) under falling h1 ema20 59,139; relief legs in this selloff have been <1 h1 ATR (841). TP front-runs 55k round number. ~3R."
   }
  ],
- "last_closed_check_ms": 1795242806863,
+ "last_closed_check_ms": 1795248607736,
  "day": "2026-11-21",
  "day_start_equity": 258.03160861348164,
  "paused_day": null,
- "pending_events": [
-  {
-   "type": "order_cancelled",
-   "id": "o130",
-   "symbol": "BTCUSDT",
-   "side": "short",
-   "status": "cancelled",
-   "trigger": 59350,
-   "time": 1795236686937,
-   "detail": "cancelled by the brain"
-  }
- ],
+ "pending_events": [],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 255.43070451799173,
   "pos": null,
-  "last_t": 1795237200000,
+  "last_t": 1795244400000,
   "trades": 9,
   "wins": 5
  },
- "last_btc": 56150.7,
+ "last_btc": 57638.3,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -630,8 +632,9 @@
   "o127:cancelled",
   "o128:cancelled",
   "o129:cancelled",
-  "o130:cancelled"
+  "o130:cancelled",
+  "o131:filled"
  ],
- "last_decision_id": "2026-11-21T04:51:02Z",
+ "last_decision_id": "2026-11-21T06:51:35Z",
  "cash_rate_day": "2026-11-21"
 }
