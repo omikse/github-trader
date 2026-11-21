@@ -1,5 +1,5 @@
 {
- "cash": 247.31452910091085,
+ "cash": 247.3146802119269,
  "positions": {},
  "closed": [
   {
@@ -516,23 +516,9 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1795286621028,
+ "last_ms": 1795287101066,
  "next_id": 136,
- "orders": [
-  {
-   "id": "o135",
-   "symbol": "BTCUSDT",
-   "side": "long",
-   "qty": 0.00512296,
-   "trigger": 59550,
-   "direction": "below",
-   "stop": 58650.0,
-   "tp": 60800.0,
-   "placed": 1795279901092,
-   "expires": 1795287101092,
-   "note": "Re-send of dropped plan: pullback long into reclaimed 59,360-59,750 breakout zone after post-capitulation squeeze; stop below h1 ema20, TP front-runs 24h high 60,883 / h4 ema20. 1.4R in a 2h window."
-  }
- ],
+ "orders": [],
  "order_events": [
   {
    "id": "o2",
@@ -1334,6 +1320,15 @@
    "trigger": 58500,
    "time": 1795260780000,
    "detail": "filled at 58482.5"
+  },
+  {
+   "id": "o135",
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "status": "cancelled",
+   "trigger": 59550,
+   "time": 1795287101066,
+   "detail": "cancelled by the brain"
   }
  ],
  "funding_rates": {
@@ -1440,6 +1435,6 @@
  "income": {
   "funding": 0.8234399417224754,
   "carry": -0.6600412463190095,
-  "interest": 0.7223076471082709
+  "interest": 0.7224587581243402
  }
 }
