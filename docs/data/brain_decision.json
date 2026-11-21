@@ -1,9 +1,22 @@
 {
-  "id": "2026-11-21T12:51:30Z",
-  "decided_at": "2026-11-21T12:51:30Z",
+  "id": "2026-11-21T14:51:30Z",
+  "decided_at": "2026-11-21T14:51:30Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC short filled at 58,482 on the planned lower-high retest; relief bounce tagged 59,084 but stays under h1 ema50/h4 ema20 with d1 bearish. Funding flipped positive, so late longs are back in.",
-  "news": "",
-  "watch_next": "Rejection below 59,100-59,400 vs 1h close > 59,400; BE stop after 1h close < 57,600; must close by 18:50Z session.",
-  "actions": []
+  "market_view": "BTC squeezed +3.8% in 4h to 60,324 (high 60,839), reclaiming h1 ema50 with all alts up 2-3.5% and funding positive: post-capitulation reversal. Short stopped. Engine input is 65 min old (stalled since 13:50Z).",
+  "news": "No fresh market-moving news found (Saturday).",
+  "watch_next": "Whether the engine resumed and the 59,600 entry is resting/filled; close everything at the ~18:50Z session.",
+  "actions": [
+    {
+      "type": "entry_order",
+      "symbol": "BTCUSDT",
+      "side": "long",
+      "trigger": 59600,
+      "stop": 58450,
+      "take_profit": 61900,
+      "risk_pct": 0.02,
+      "expires_hours": 5,
+      "reason": "Pullback long into the broken 59,360-59,750 resistance after a +3.8% 4h squeeze that reclaimed h1 ema50 with alt breadth and positive funding; stop below h1 ema20 58,630; TP front-runs 62,104 24h high (~2R).",
+      "invalidation": "1h close below 58,600 = reclaim failed, back into the base."
+    }
+  ]
 }
