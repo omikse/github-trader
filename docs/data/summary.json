@@ -1,16 +1,16 @@
 {
- "updated": "2026-11-21T13:49:07Z",
+ "updated": "2026-11-21T16:11:41Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 4.0613,
- "equity_pln": 1004.4,
+ "equity_pln": 1004.41,
  "return_pct": -3.82,
  "max_drawdown_pct": 13.94,
  "control_pln": 1037.38,
  "control_trades": 9,
- "hodl_pln": 748.97,
+ "hodl_pln": 737.0,
  "positions": [],
  "closed_trades": [
   {
@@ -558,33 +558,37 @@
  ],
  "trade_count": 39,
  "win_rate_pct": 33.3,
- "brain_calls_today": 7,
+ "brain_calls_today": 8,
  "last_decision": {
-  "time": "2026-11-21T12:52:07Z",
+  "time": "2026-11-21T16:11:41Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-21T12:51:30Z",
+  "decided_at": "2026-11-21T14:51:30Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 251.21,
-  "equity_pln": 1020.26,
+  "equity_usd": 247.31,
+  "equity_pln": 1004.41,
   "events": [
    {
-    "type": "order_filled",
-    "id": "o133",
+    "type": "position_closed",
+    "id": "t134",
     "symbol": "BTCUSDT",
     "side": "short",
-    "status": "filled",
-    "trigger": 58500,
-    "time": 1795260780000,
-    "detail": "filled at 58482.5"
+    "qty": 0.00498029,
+    "entry": 58482.450000000004,
+    "exit": 59479.725,
+    "pnl": -5.2898,
+    "time": 1795267380000,
+    "why": "stop",
+    "opened": 1795260780000,
+    "reason": "Lower-high short on retest of the 58,579 squeeze high just under falling h1 ema20 58,599, after the 55,100 capitulation wick; stop above 59,362 4h high; TP 56,350 front-runs the 56,300 4h low (~2.3R)."
    }
   ],
-  "market_view": "BTC short filled at 58,482 on the planned lower-high retest; relief bounce tagged 59,084 but stays under h1 ema50/h4 ema20 with d1 bearish. Funding flipped positive, so late longs are back in.",
-  "watch_next": "Rejection below 59,100-59,400 vs 1h close > 59,400; BE stop after 1h close < 57,600; must close by 18:50Z session.",
-  "news": "",
-  "actions": []
+  "market_view": "BTC squeezed +3.8% in 4h to 60,324 (high 60,839), reclaiming h1 ema50 with all alts up 2-3.5% and funding positive: post-capitulation reversal. Short stopped. Engine input is 65 min old (stalled since 13:50Z).",
+  "watch_next": "Whether the engine resumed and the 59,600 entry is resting/filled; close everything at the ~18:50Z session.",
+  "news": "No fresh market-moving news found (Saturday).",
+  "error": "not executed: decision is 80 min old (limit 45)"
  },
  "brain_mode": "session",
- "cash_usd": 247.308966,
+ "cash_usd": 247.311658,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -703,7 +707,7 @@
  "income_pln": {
   "funding": 3.34,
   "carry": -2.68,
-  "interest": 2.91
+  "interest": 2.92
  },
  "cash_rate_pct": 4.014
 }
