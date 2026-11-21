@@ -1,22 +1,22 @@
 {
-  "id": "2026-11-21T14:51:30Z",
-  "decided_at": "2026-11-21T14:51:30Z",
+  "id": "2026-11-21T16:50:52Z",
+  "decided_at": "2026-11-21T16:50:52Z",
   "model": "claude-opus-5-5",
-  "market_view": "BTC squeezed +3.8% in 4h to 60,324 (high 60,839), reclaiming h1 ema50 with all alts up 2-3.5% and funding positive: post-capitulation reversal. Short stopped. Engine input is 65 min old (stalled since 13:50Z).",
-  "news": "No fresh market-moving news found (Saturday).",
-  "watch_next": "Whether the engine resumed and the 59,600 entry is resting/filled; close everything at the ~18:50Z session.",
+  "market_view": "BTC 59,860 consolidating after +3.8% squeeze: holding above h1 ema20 (58,985), capped by h1 ema50 60,005 / h4 ema20 60,763. h1 RSI 55, funding +9% APR. Prior 59,600 pullback order was dropped by the stalled engine.",
+  "news": "",
+  "watch_next": "Experiment ends 21:00Z: ~18:50Z session closes any position and cancels orders.",
   "actions": [
     {
       "type": "entry_order",
       "symbol": "BTCUSDT",
       "side": "long",
-      "trigger": 59600,
-      "stop": 58450,
-      "take_profit": 61900,
+      "trigger": 59550,
+      "stop": 58650,
+      "take_profit": 60800,
       "risk_pct": 0.02,
-      "expires_hours": 5,
-      "reason": "Pullback long into the broken 59,360-59,750 resistance after a +3.8% 4h squeeze that reclaimed h1 ema50 with alt breadth and positive funding; stop below h1 ema20 58,630; TP front-runs 62,104 24h high (~2R).",
-      "invalidation": "1h close below 58,600 = reclaim failed, back into the base."
+      "expires_hours": 2,
+      "reason": "Re-send of dropped plan: pullback long into reclaimed 59,360-59,750 breakout zone after post-capitulation squeeze; stop below h1 ema20, TP front-runs 24h high 60,883 / h4 ema20. 1.4R in a 2h window.",
+      "invalidation": "BTC 1h close below 58,700 (reclaim failed) or experiment end."
     }
   ]
 }
