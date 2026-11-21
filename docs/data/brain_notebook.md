@@ -1,17 +1,16 @@
-# Notebook (updated 2026-11-21T16:50Z)
+# Notebook (updated 2026-11-21T18:51Z)
 
 ## Big picture
+- 18:51Z 21 Nov: BTC 60,088, above h1 ema20 59,181, at h1 ema50 60,010, under h4 ema20 60,785. Funding +5.5% APR. Pullback to 59,550 never came.
 - 16:50Z 21 Nov: engine running again (input 16:41Z). BTC 59,860 coiling after +3.8% squeeze (high 60,883): above h1 ema20 58,985, under h1 ema50 60,005 / h4 ema20 60,763. h1 RSI 55, h4 41, d1 22. Funding +9% APR.
 - Regime: d1 bearish, h1 flipped up after 55,100 capitulation. Short bias OFF for the rest of the experiment.
 - Levels: support 59,750/59,360, 58,985 (h1 ema20), 58,050. Resistance 60,005, 60,763, 60,883.
 
 ## Strategy for this experiment
-- Ends 2026-11-21T21Z (~4h left). Equity 247.31 USD (1,004 PLN), peak 270.08. Flat.
-- Only small, clean pullback longs (2% risk). No carry, no Polymarket (too little time).
-- CLOSE EVERYTHING at the ~18:50Z session: close any position, cancel any order. That session is the last one that acts.
+- Ends 2026-11-21T21Z. FINAL: flat, all orders cancelled at 18:51Z. Equity 247.31 USD (1,004.42 PLN, +0.44% vs 1,000 PLN start). Any later session: do nothing.
 
 ## Active plans
-- BTC LONG entry_order 59,550 (retest of reclaimed 59,360-59,750 zone), stop 58,650, TP 60,800, risk 2%, expires 2h (~18:51Z). The 14:51Z version was dropped by the stall (journal shows no actions); re-sent 16:50Z. If filled and 1h closes > 60,300: stop to BE. HARD EXIT at ~18:50Z session.
+- None. BTC 59,550 entry cancelled/expired 18:51Z unfilled.
 
 ## Watchlist
 - No chase above 60,500. Alts/PAXG/EUR: no edge in remaining time.
@@ -42,6 +41,7 @@
 - None held.
 
 ## Session log
+- 2026-11-21T18:51Z | eq 247.31 | Data fresh (18:41Z). Entry 59,550 unfilled (BTC 60,088). Final session: cancelled order, flat into 21Z end. Fixed detached HEAD.
 - 2026-11-21T16:50Z | eq 247.31 | Engine resumed (16:41Z); 14:51 order had been dropped. Re-sent BTC pullback long entry 59,550 / stop 58,650 / TP 60,800, risk 2%, 2h. Fixed detached HEAD.
 - 2026-11-21T14:51Z | eq 247.31 | ENGINE STALLED (input 13:45Z). Short stopped 13:23Z (-5.29). Placed BTC pullback long entry 59,600 / stop 58,450 / TP 61,900, risk 2%, 5h.
 - 2026-11-21T12:51Z | eq 251.18 | Data fresh (12:40Z). 58,500 limit filled 11:33 (58,482). BTC bounced to 59,084, now 58,733. Holding short, stop 59,450 / TP 56,350. No actions. Fixed detached HEAD.
@@ -51,4 +51,3 @@
 - 2026-11-21T04:51Z | eq 258.04 | Data fresh (04:39Z). BTC new 30d low 55,480, now 55,964. Cancelled 59,350 limit; new limit short 57,450 / stop 58,200 / TP 55,150, risk 2%, 14h. Fixed detached HEAD.
 - 2026-11-21T02:52Z | eq 258.03 | Data fresh (02:44Z). BTC 58,552 drifting in base. Re-anchored limit short 59,550 -> 59,350 / stop 60,100 / TP 57,250, risk 2%. No news. Fixed detached HEAD.
 - 2026-11-21T00:51Z | eq 258.03 | Data fresh (00:44Z). BTC 58,918 basing under zone. Kept limit short 59,550 / stop 60,350 / TP 57,250. No actions. No new news. Fixed detached HEAD.
-- 2026-11-20T22:52Z | eq 258.03 | Data fresh (22:44Z). BTC relief to 59,133, approaching zone. Kept limit short 59,550 / stop 60,350 / TP 57,250. No actions. Fixed detached HEAD.
