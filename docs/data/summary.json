@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T00:44:05Z",
+ "updated": "2026-11-21T00:51:05Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,7 +10,7 @@
  "max_drawdown_pct": 13.94,
  "control_pln": 1037.38,
  "control_trades": 9,
- "hodl_pln": 727.38,
+ "hodl_pln": 728.42,
  "positions": [],
  "closed_trades": [
   {
@@ -530,33 +530,22 @@
  ],
  "trade_count": 37,
  "win_rate_pct": 35.1,
- "brain_calls_today": 0,
+ "brain_calls_today": 1,
  "last_decision": {
-  "time": "2026-11-20T22:52:05Z",
+  "time": "2026-11-21T00:51:05Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-20T22:52:30Z",
+  "decided_at": "2026-11-21T00:51:30Z",
   "model": "claude-opus-5-5",
   "equity_usd": 258.03,
-  "equity_pln": 1047.94,
-  "events": [
-   {
-    "type": "order_cancelled",
-    "id": "o128",
-    "symbol": "BTCUSDT",
-    "side": "short",
-    "status": "cancelled",
-    "trigger": 60650,
-    "time": 1795207925645,
-    "detail": "cancelled by the brain"
-   }
-  ],
-  "market_view": "BTC relief bounce from 57,661 to 59,133 inside a bearish 4h/d1 trend; h1 ema20 60,277 falling, funding flipped positive (+25.7% APR) as longs chase the bounce. Resting short at 59,550 sits in the breakdown zone 59,400-59,760.",
-  "watch_next": "Fill/rejection of 59,550 short; 1h close > 60,000 = scratch; new low < 57,000 unfilled = re-anchor. Close all before 21Z 21 Nov.",
-  "news": "No new search; context unchanged (November BTC drawdown ~-24%, ETF outflows, hawkish Fed).",
+  "equity_pln": 1047.95,
+  "events": [],
+  "market_view": "BTC 58,918 basing 58.1-59.4k after the 57,661 30d low; h1/h4 emas falling, d1 RSI 18. Relief still capped below breakdown zone 59,400-59,760 and h1 ema20 ~60,000.",
+  "watch_next": "Did the 59,550 limit short fill and reject? Scratch if 1h close > 60,000. Re-anchor if new low < 57,000 unfilled. Close all before 21Z.",
+  "news": "No new catalyst; November drawdown driven by ETF outflows and hawkish Fed repricing, sentiment extreme fear.",
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 258.032476,
+ "cash_usd": 258.032614,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
