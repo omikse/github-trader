@@ -1,19 +1,19 @@
-# Notebook (updated 2026-11-21T10:52Z)
+# Notebook (updated 2026-11-21T12:51Z)
 
 ## Big picture
-- 10:52Z 21 Nov: data fresh (10:40Z). BTC 57,817 coiling 57,277-58,110 after 55,100 wick / 58,579 squeeze high. h1 ema20 58,448 / ema50 60,119; h4 ema20 60,938. h1 RSI 41, h4 28, d1 17. Funding BTC +3%, ETH +15%; alts negative. ETH 1,638.
-- Trend: bearish on h4/d1, but a capitulation low is likely in for the day. Range now 57,277-58,579. Resistance 58,580-58,600, 59,100-59,360, 59,400. Support 57,277, 56,300, 55,100.
-- News: extreme fear, no fresh catalyst (Saturday).
-- Mind-changers: 4h close > 59,400 with alt breadth -> shorts off, reclaim long candidate.
+- 12:51Z 21 Nov: data fresh (12:40Z). BTC 58,733, bounced to 59,084 this 4h; now above h1 ema20 58,448, under h1 ema50 59,990 and h4 ema20 60,753. h1 RSI 49, h4 34, d1 17. Funding BTC +7.9%, ETH +8.3% (flipped positive = longs re-entering), SOL -30%.
+- Trend: bearish on h4/d1; relief bounce from 55,100 capitulation. Resistance 59,100-59,360, 59,750, 60,000 (h1 ema50). Support 58,050, 57,277, 56,300, 55,100.
+- News: none checked (Saturday, quiet).
+- Mind-changers: 4h close > 59,400 with alt breadth -> short off.
 
 ## Strategy for this experiment
-- Ends 2026-11-21T21Z (~10h left). Equity 252.59 USD (1,025.84 PLN), peak 270.08, today -5.44 (57,432 short stopped by the squeeze). One clean trade max, >=2.3R, risk 2%.
+- Ends 2026-11-21T21Z (~10h left). Equity 251.18 USD (1,020 PLN), peak 270.08. Short open (see plan). No new trades, >=2.3R, risk 2%.
 - Lower-high retest shorts within ~1 h1 ATR of price; no chasing, no stop-entry breaks.
 - No carry, no Polymarket edge found.
 - CLOSE EVERYTHING by ~20:30Z 21 Nov.
 
 ## Active plans
-- BTC limit SHORT (placed 08:53Z, exp ~19:53Z): trigger 58,500 (retest of 58,579 squeeze high under h1 ema20), stop 59,450, TP 56,350, risk 2%, ~2.3R. If filled: BE after 1h close < 57,300; trail ~500 above completed 4h highs. Scratch on 1h close > 59,450 or no rejection within 2 4h candles. Cancel after ~18Z if unfilled; close any position by 20:30Z.
+- BTC SHORT filled 11:33Z @ 58,482, stop 59,450, TP 56,350, risk 2% (~-1.25 now at 58,733). Thesis: lower high under h4 ema20 after 55,100 wick. Move stop to BE (58,480) after a 1h close < 57,600; trail ~500 above completed 4h highs. Scratch early on 1h close > 59,400 (stop handles the rest). HARD EXIT: the ~18:50Z session MUST close it (next session ~20:50Z is too late; experiment ends 21:00Z).
 
 ## Watchlist
 - Capitulation-reclaim long: 4h close > 59,400 with alt breadth; 1.5% risk, only if time allows (needs >4h left).
@@ -44,6 +44,7 @@
 - None held.
 
 ## Session log
+- 2026-11-21T12:51Z | eq 251.18 | Data fresh (12:40Z). 58,500 limit filled 11:33 (58,482). BTC bounced to 59,084, now 58,733. Holding short, stop 59,450 / TP 56,350. No actions. Fixed detached HEAD.
 - 2026-11-21T10:52Z | eq 252.59 | Data fresh (10:40Z). BTC 57,817 coiling under h1 ema20. Kept limit short 58,500 / stop 59,450 / TP 56,350. No actions. Fixed detached HEAD.
 - 2026-11-21T08:53Z | eq 252.59 | Data fresh (08:50Z). 57,450 limit had filled 06:47 and stopped 07:07 (-5.46) on V-squeeze from 55,100. New limit short 58,500 / stop 59,450 / TP 56,350, risk 2%, 11h. Fixed detached HEAD.
 - 2026-11-21T06:51Z | eq 258.04 | Data fresh (06:29Z). BTC new low 55,100, now 56,013. Cancelled 57,450 limit; new limit short 56,750 / stop 57,300 / TP 55,150, risk 2%, 13h. Fixed detached HEAD.
@@ -53,4 +54,3 @@
 - 2026-11-20T22:52Z | eq 258.03 | Data fresh (22:44Z). BTC relief to 59,133, approaching zone. Kept limit short 59,550 / stop 60,350 / TP 57,250. No actions. Fixed detached HEAD.
 - 2026-11-20T20:52Z | eq 258.03 | Data fresh (20:49Z). BTC new low 57,661, now 58,470. Cancelled 60,650 limit; new limit short 59,550 / stop 60,350 / TP 57,250, risk 2%, 24h. Fixed detached HEAD.
 - 2026-11-20T18:51Z | eq 258.02 | ENGINE STALLED (input 16:53Z, ~2h old). Kept limit short 60,650 / stop 61,450 / TP 58,250. No actions. No useful news.
-- 2026-11-20T16:51Z | eq 258.02 | Data fresh (16:43Z). BTC broke 30d low, flush to 58,702, now 59,372. Cancelled 62,050 limit; new limit short 60,650 / stop 61,450 / TP 58,250, risk 2%, 24h.
