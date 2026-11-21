@@ -1,5 +1,5 @@
 {
- "cash": 252.58807047416843,
+ "cash": 252.58810908365928,
  "positions": {},
  "closed": [
   {
@@ -503,9 +503,23 @@
    "fee": 0.22848688479338572
   }
  ],
- "last_ms": 1795251007516,
- "next_id": 133,
- "orders": [],
+ "last_ms": 1795251127607,
+ "next_id": 134,
+ "orders": [
+  {
+   "id": "o133",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00498029,
+   "trigger": 58500,
+   "direction": "above",
+   "stop": 59450.0,
+   "tp": 56350.0,
+   "placed": 1795251127607,
+   "expires": 1795290727607,
+   "note": "Lower-high short on retest of the 58,579 squeeze high just under falling h1 ema20 58,599, after the 55,100 capitulation wick; stop above 59,362 4h high; TP 56,350 front-runs the 56,300 4h low (~2.3R)."
+  }
+ ],
  "order_events": [
   {
    "id": "o2",
@@ -1404,6 +1418,6 @@
  "income": {
   "funding": 0.818301544907773,
   "carry": -0.6600412463190095,
-  "interest": 0.7111514951388987
+  "interest": 0.7111901046297326
  }
 }
