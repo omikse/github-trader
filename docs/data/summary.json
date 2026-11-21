@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-21T12:44:07Z",
+ "updated": "2026-11-21T12:52:07Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 4.0613,
- "equity_pln": 1017.51,
- "return_pct": -2.57,
+ "equity_pln": 1020.25,
+ "return_pct": -2.31,
  "max_drawdown_pct": 13.94,
  "control_pln": 1037.38,
  "control_trades": 9,
- "hodl_pln": 726.65,
+ "hodl_pln": 725.04,
  "positions": [
   {
    "symbol": "BTCUSDT",
    "side": "short",
    "size": 0.00498029,
    "entry": 58482.450000000004,
-   "mark": 58858.6,
-   "upnl": -1.873336083499971,
+   "mark": 58728.0,
+   "upnl": -1.2229102094999782,
    "stop": 59450.0,
    "tp": 56350.0,
    "liq": null,
    "leverage": null,
    "opened": 1795260780000,
    "reason": "Lower-high short on retest of the 58,579 squeeze high just under falling h1 ema20 58,599, after the 55,100 capitulation wick; stop above 59,362 4h high; TP 56,350 front-runs the 56,300 4h low (~2.3R).",
-   "upnl_pln": -7.61
+   "upnl_pln": -4.97
   }
  ],
  "closed_trades": [
@@ -560,22 +560,33 @@
  ],
  "trade_count": 38,
  "win_rate_pct": 34.2,
- "brain_calls_today": 6,
+ "brain_calls_today": 7,
  "last_decision": {
-  "time": "2026-11-21T10:52:07Z",
+  "time": "2026-11-21T12:52:07Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-21T10:52:30Z",
+  "decided_at": "2026-11-21T12:51:30Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 252.59,
-  "equity_pln": 1025.85,
-  "events": [],
-  "market_view": "BTC 57,817 coiling 57.3-58.1k after the 55,100 capitulation wick and 58,579 squeeze; h4/d1 still bearish, h1 ema20 58,448 overhead. Resting short at 58,500 retest stays valid.",
-  "watch_next": "Fill of 58,500 limit and rejection; 1h close >59,450 scratches the idea; cancel after ~18Z if unfilled, flat by 20:30Z.",
-  "news": "Saturday, extreme fear, no fresh catalyst.",
+  "equity_usd": 251.21,
+  "equity_pln": 1020.26,
+  "events": [
+   {
+    "type": "order_filled",
+    "id": "o133",
+    "symbol": "BTCUSDT",
+    "side": "short",
+    "status": "filled",
+    "trigger": 58500,
+    "time": 1795260780000,
+    "detail": "filled at 58482.5"
+   }
+  ],
+  "market_view": "BTC short filled at 58,482 on the planned lower-high retest; relief bounce tagged 59,084 but stays under h1 ema50/h4 ema20 with d1 bearish. Funding flipped positive, so late longs are back in.",
+  "watch_next": "Rejection below 59,100-59,400 vs 1h close > 59,400; BE stop after 1h close < 57,600; must close by 18:50Z session.",
+  "news": "",
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 252.434899,
+ "cash_usd": 252.435042,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
