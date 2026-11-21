@@ -529,13 +529,41 @@
    "why": "stop",
    "opened": 1795243620000,
    "reason": "Retest short of broken 30d low 57,661 (latest breakdown level) under falling h1 ema20 59,139; relief legs in this selloff have been <1 h1 ATR (841). TP front-runs 55k round number. ~3R."
+  },
+  {
+   "id": "t134",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00498029,
+   "entry": 58482.450000000004,
+   "exit": 59479.725,
+   "pnl": -5.2898,
+   "time": 1795267380000,
+   "why": "stop",
+   "opened": 1795260780000,
+   "reason": "Lower-high short on retest of the 58,579 squeeze high just under falling h1 ema20 58,599, after the 55,100 capitulation wick; stop above 59,362 4h high; TP 56,350 front-runs the 56,300 4h low (~2.3R)."
   }
  ],
- "last_closed_check_ms": 1795266967552,
+ "last_closed_check_ms": 1795267447551,
  "day": "2026-11-21",
  "day_start_equity": 258.03160861348164,
  "paused_day": null,
- "pending_events": [],
+ "pending_events": [
+  {
+   "type": "position_closed",
+   "id": "t134",
+   "symbol": "BTCUSDT",
+   "side": "short",
+   "qty": 0.00498029,
+   "entry": 58482.450000000004,
+   "exit": 59479.725,
+   "pnl": -5.2898,
+   "time": 1795267380000,
+   "why": "stop",
+   "opened": 1795260780000,
+   "reason": "Lower-high short on retest of the 58,579 squeeze high just under falling h1 ema20 58,599, after the 55,100 capitulation wick; stop above 59,362 4h high; TP 56,350 front-runs the 56,300 4h low (~2.3R)."
+  }
+ ],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
   "equity": 255.43070451799173,
@@ -544,7 +572,7 @@
   "trades": 9,
   "wins": 5
  },
- "last_btc": 59159.6,
+ "last_btc": 59439.7,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",

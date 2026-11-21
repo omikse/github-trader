@@ -1,34 +1,32 @@
 {
- "updated": "2026-11-21T13:16:07Z",
+ "updated": "2026-11-21T13:24:07Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 4.0613,
- "equity_pln": 1011.53,
- "return_pct": -3.14,
+ "equity_pln": 1004.39,
+ "return_pct": -3.82,
  "max_drawdown_pct": 13.94,
  "control_pln": 1037.38,
  "control_trades": 9,
- "hodl_pln": 730.37,
- "positions": [
+ "hodl_pln": 733.82,
+ "positions": [],
+ "closed_trades": [
   {
+   "id": "t134",
    "symbol": "BTCUSDT",
    "side": "short",
-   "size": 0.00498029,
+   "qty": 0.00498029,
    "entry": 58482.450000000004,
-   "mark": 59159.6,
-   "upnl": -3.372403373499971,
-   "stop": 59450.0,
-   "tp": 56350.0,
-   "liq": null,
-   "leverage": null,
+   "exit": 59479.725,
+   "pnl": -5.2898,
+   "time": 1795267380000,
+   "why": "stop",
    "opened": 1795260780000,
    "reason": "Lower-high short on retest of the 58,579 squeeze high just under falling h1 ema20 58,599, after the 55,100 capitulation wick; stop above 59,362 4h high; TP 56,350 front-runs the 56,300 4h low (~2.3R).",
-   "upnl_pln": -13.7
-  }
- ],
- "closed_trades": [
+   "pnl_pln": -21.48
+  },
   {
    "id": "t132",
    "symbol": "BTCUSDT",
@@ -558,8 +556,8 @@
    "pnl_pln": -21.92
   }
  ],
- "trade_count": 38,
- "win_rate_pct": 34.2,
+ "trade_count": 39,
+ "win_rate_pct": 33.3,
  "brain_calls_today": 7,
  "last_decision": {
   "time": "2026-11-21T12:52:07Z",
@@ -586,7 +584,7 @@
   "actions": []
  },
  "brain_mode": "session",
- "cash_usd": 252.437993,
+ "cash_usd": 247.308494,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
