@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T16:43:40Z",
+ "updated": "2026-11-21T16:51:41Z",
  "status": "live",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
@@ -10,7 +10,7 @@
  "max_drawdown_pct": 13.94,
  "control_pln": 1037.38,
  "control_trades": 9,
- "hodl_pln": 739.03,
+ "hodl_pln": 741.04,
  "positions": [],
  "closed_trades": [
   {
@@ -558,37 +558,37 @@
  ],
  "trade_count": 39,
  "win_rate_pct": 33.3,
- "brain_calls_today": 8,
+ "brain_calls_today": 9,
  "last_decision": {
-  "time": "2026-11-21T16:11:41Z",
+  "time": "2026-11-21T16:51:41Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-21T14:51:30Z",
+  "decided_at": "2026-11-21T16:50:52Z",
   "model": "claude-opus-5-5",
   "equity_usd": 247.31,
   "equity_pln": 1004.41,
-  "events": [
+  "events": [],
+  "market_view": "BTC 59,860 consolidating after +3.8% squeeze: holding above h1 ema20 (58,985), capped by h1 ema50 60,005 / h4 ema20 60,763. h1 RSI 55, funding +9% APR. Prior 59,600 pullback order was dropped by the stalled engine.",
+  "watch_next": "Experiment ends 21:00Z: ~18:50Z session closes any position and cancels orders.",
+  "news": "",
+  "actions": [
    {
-    "type": "position_closed",
-    "id": "t134",
+    "type": "entry_order",
     "symbol": "BTCUSDT",
-    "side": "short",
-    "qty": 0.00498029,
-    "entry": 58482.450000000004,
-    "exit": 59479.725,
-    "pnl": -5.2898,
-    "time": 1795267380000,
-    "why": "stop",
-    "opened": 1795260780000,
-    "reason": "Lower-high short on retest of the 58,579 squeeze high just under falling h1 ema20 58,599, after the 55,100 capitulation wick; stop above 59,362 4h high; TP 56,350 front-runs the 56,300 4h low (~2.3R)."
+    "side": "long",
+    "trigger": 59550,
+    "stop": 58650,
+    "take_profit": 60800,
+    "risk_pct": 0.02,
+    "expires_hours": 2,
+    "reason": "Re-send of dropped plan: pullback long into reclaimed 59,360-59,750 breakout zone after post-capitulation squeeze; stop below h1 ema20, TP front-runs 24h high 60,883 / h4 ema20. 1.4R in a 2h window.",
+    "invalidation": "BTC 1h close below 58,700 (reclaim failed) or experiment end.",
+    "result": "done",
+    "detail": "long 0.00512296 when price goes below 59550 (risk 2.0%, stop 58650.0, target 60800.0, expires in 2h) ok"
    }
-  ],
-  "market_view": "BTC squeezed +3.8% in 4h to 60,324 (high 60,839), reclaiming h1 ema50 with all alts up 2-3.5% and funding positive: post-capitulation reversal. Short stopped. Engine input is 65 min old (stalled since 13:50Z).",
-  "watch_next": "Whether the engine resumed and the 59,600 entry is resting/filled; close everything at the ~18:50Z session.",
-  "news": "No fresh market-moving news found (Saturday).",
-  "error": "not executed: decision is 80 min old (limit 45)"
+  ]
  },
  "brain_mode": "session",
- "cash_usd": 247.312263,
+ "cash_usd": 247.312414,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -614,7 +614,19 @@
   "PAXGUSDT": "PAXGUSD",
   "EURUSDT": "EURUSD"
  },
- "orders": [],
+ "orders": [
+  {
+   "symbol": "BTCUSDT",
+   "side": "long",
+   "trigger": 59550,
+   "direction": "below",
+   "stop": 58650.0,
+   "tp": 60800.0,
+   "qty": 0.00512296,
+   "expires": 1795287101092,
+   "note": "Re-send of dropped plan: pullback long into reclaimed 59,360-59,750 breakout zone after post-capitulation squeeze; stop below h1 ema20, TP front-runs 24h high 60,883 / h4 ema20. 1.4R in a 2h window."
+  }
+ ],
  "balance_warning": false,
  "other_value_usd": 0,
  "predictions": [],
