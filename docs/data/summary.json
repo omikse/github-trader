@@ -1,16 +1,16 @@
 {
- "updated": "2026-11-21T21:41:31Z",
+ "updated": "2026-11-22T01:40:08Z",
  "status": "ended",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 4.0613,
- "equity_pln": 1004.43,
+ "equity_pln": 1004.45,
  "return_pct": -3.82,
  "max_drawdown_pct": 13.94,
  "control_pln": 1037.38,
  "control_trades": 9,
- "hodl_pln": 744.0,
+ "hodl_pln": 739.43,
  "positions": [],
  "closed_trades": [
   {
@@ -558,33 +558,22 @@
  ],
  "trade_count": 39,
  "win_rate_pct": 33.3,
- "brain_calls_today": 11,
+ "brain_calls_today": 1,
  "last_decision": {
-  "time": "2026-11-21T20:50:41Z",
+  "time": "2026-11-22T01:40:08Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-21T20:50:30Z",
+  "decided_at": "2026-11-22T00:50:55Z",
   "model": "claude-opus-5-5",
   "equity_usd": 247.32,
-  "equity_pln": 1004.43,
-  "events": [
-   {
-    "type": "order_cancelled",
-    "id": "o135",
-    "symbol": "BTCUSDT",
-    "side": "long",
-    "status": "cancelled",
-    "trigger": 59550,
-    "time": 1795287101066,
-    "detail": "cancelled by the brain"
-   }
-  ],
-  "market_view": "Experiment ends at 21:00Z in ~10 minutes. Account is flat with no resting orders; no trade has an edge in that window after fees.",
-  "watch_next": "Experiment over; nothing further.",
+  "equity_pln": 1004.45,
+  "events": [],
+  "market_view": "Experiment ended 2026-11-21T21:00Z; engine data last updated 21:41Z 21 Nov. Account flat with no orders.",
+  "watch_next": "Nothing: experiment over, no further trading.",
   "news": "",
-  "actions": []
+  "error": "not executed: experiment ended"
  },
  "brain_mode": "session",
- "cash_usd": 247.317888,
+ "cash_usd": 247.322395,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
@@ -703,7 +692,7 @@
  "income_pln": {
   "funding": 3.34,
   "carry": -2.68,
-  "interest": 2.95
+  "interest": 2.97
  },
  "cash_rate_pct": 4.014
 }
