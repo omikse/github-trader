@@ -1,4 +1,4 @@
-# Notebook (updated 2026-11-24T12:52:03Z)
+# Notebook (updated 2026-11-24T14:51:12Z)
 
 ## Big picture
 - 18:51Z 21 Nov: BTC 60,088, above h1 ema20 59,181, at h1 ema50 60,010, under h4 ema20 60,785. Funding +5.5% APR. Pullback to 59,550 never came.
@@ -41,6 +41,7 @@
 - None held.
 
 ## Session log
+- 2026-11-24T14:51:12Z | eq 247.39 | Experiment ended 21Z 21 Nov. Input 10:27Z 24 Nov (stale ~4.5h, engine idle post-end). Flat, no orders, no action. Final 1,004.42 PLN. Fixed detached HEAD.
 - 2026-11-24T12:52:03Z | eq 247.39 | Experiment ended 21Z 21 Nov. Input 10:27Z 24 Nov (stale ~2.5h, engine idle post-end). Flat, no orders, no action. Final 1,004.42 PLN. Fixed detached HEAD.
 - 2026-11-24T10:51:16Z | eq 247.39 | Experiment ended 21Z 21 Nov. Input 10:27Z 24 Nov (fresh, engine alive post-end). Flat, no orders, no action. Final 1,004.42 PLN. Fixed detached HEAD.
 - 2026-11-24T08:51:24Z | eq 247.38 | Experiment ended 21Z 21 Nov. Input 00:41Z 24 Nov (stale ~8h, engine idle post-end). Flat, no orders, no action. Final 1,004.37 PLN. Fixed detached HEAD.
@@ -50,4 +51,3 @@
 - 2026-11-24T00:50:52Z | eq 247.38 | Experiment ended 21Z 21 Nov. Input 00:41Z 24 Nov (engine alive post-end). Flat, no orders, no action. Final 1,004.37 PLN. Fixed detached HEAD.
 - 2026-11-23T22:51:16Z | eq 247.36 | Experiment ended 21Z 21 Nov. Input 12:55Z 23 Nov (engine idle post-end). Flat, no orders, no action. Final 1,004.32 PLN. Fixed detached HEAD.
 - 2026-11-23T20:50:47Z | eq 247.36 | Experiment ended 21Z 21 Nov. Input 12:55Z 23 Nov (engine idle post-end). Flat, no orders, no action. Final 1,004.32 PLN.
-- 2026-11-23T18:50:49Z | eq 247.36 | Experiment ended 21Z 21 Nov. Input 12:55Z 23 Nov (engine idle post-end). Flat, no orders, no action. Final 1,004.32 PLN. Fixed detached HEAD.
