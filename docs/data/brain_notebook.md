@@ -1,4 +1,4 @@
-# Notebook (updated 2026-11-25T20:51:19Z)
+# Notebook (updated 2026-11-25T22:51:26Z)
 
 ## Big picture
 - 18:51Z 21 Nov: BTC 60,088, above h1 ema20 59,181, at h1 ema50 60,010, under h4 ema20 60,785. Funding +5.5% APR. Pullback to 59,550 never came.
@@ -41,6 +41,7 @@
 - None held.
 
 ## Session log
+- 2026-11-25T22:51:26Z | eq 247.42 | Experiment ended 21Z 21 Nov. Input 14:28Z 25 Nov (stale ~8.4h, engine idle post-end). Flat, no orders, no action. Mark 1,013.57 PLN (FX drift). Fixed detached HEAD.
 - 2026-11-25T20:51:19Z | eq 247.42 | Experiment ended 21Z 21 Nov. Input 14:28Z 25 Nov (stale ~6.4h, engine idle post-end). Flat, no orders, no action. Mark 1,013.57 PLN (FX drift). Fixed detached HEAD.
 - 2026-11-25T18:50:42Z | eq 247.42 | Experiment ended 21Z 21 Nov. Input 14:28Z 25 Nov (stale ~4.4h, engine idle post-end). Flat, no orders, no action. Mark 1,013.57 PLN (FX drift). Fixed detached HEAD.
 - 2026-11-25T16:51:18Z | eq 247.42 | Experiment ended 21Z 21 Nov. Input 14:28Z 25 Nov (stale ~2.3h, engine idle post-end). Flat, no orders, no action. Mark 1,013.57 PLN (FX drift). Fixed detached HEAD.
@@ -50,4 +51,3 @@
 - 2026-11-25T08:51:34Z | eq 247.41 | Experiment ended 21Z 21 Nov. Input 04:03Z 25 Nov (stale, engine idle post-end). Flat, no orders, no action. Mark 1,009.89 PLN (FX drift). Fixed detached HEAD.
 - 2026-11-25T06:50:35Z | eq 247.41 | Experiment ended 21Z 21 Nov. Input 04:03Z 25 Nov (stale ~2.8h, engine idle post-end). Flat, no orders, no action. Mark 1,009.89 PLN (FX drift). Fixed detached HEAD.
 - 2026-11-25T04:50:34Z | eq 247.41 | Experiment ended 21Z 21 Nov. Input 04:03Z 25 Nov (~47 min old, engine idle post-end). Flat, no orders, no action. Mark 1,009.89 PLN (FX drift). Fixed detached HEAD.
-- 2026-11-25T02:51:21Z | eq 247.40 | Experiment ended 21Z 21 Nov. Input 20:50Z 24 Nov (stale ~4h, engine idle post-end). Flat, no orders, no action. Mark 1,009.86 PLN (FX drift). Fixed detached HEAD.
