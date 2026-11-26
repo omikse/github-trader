@@ -41,7 +41,8 @@
   "2026-11-22": 4,
   "2026-11-23": 2,
   "2026-11-24": 3,
-  "2026-11-25": 3
+  "2026-11-25": 3,
+  "2026-11-26": 1
  },
  "closed_trades": [
   {
@@ -548,20 +549,25 @@
    "reason": "Lower-high short on retest of the 58,579 squeeze high just under falling h1 ema20 58,599, after the 55,100 capitulation wick; stop above 59,362 4h high; TP 56,350 front-runs the 56,300 4h low (~2.3R)."
   }
  ],
- "last_closed_check_ms": 1795648513860,
+ "last_closed_check_ms": 1795670491764,
  "day": "2026-11-21",
  "day_start_equity": 258.03160861348164,
  "paused_day": null,
  "pending_events": [],
  "last_brain": "2026-10-21T22:31:35Z",
  "control": {
-  "equity": 269.9436820527699,
-  "pos": null,
-  "last_t": 1795644000000,
+  "equity": 269.7381241759834,
+  "pos": {
+   "side": "long",
+   "entry": 60720.445049999995,
+   "qty": 0.006155119479930178,
+   "stop": 59692.500904932596
+  },
+  "last_t": 1795665600000,
   "trades": 11,
   "wins": 7
  },
- "last_btc": 60137.5,
+ "last_btc": 60932.0,
  "seen_order_events": [
   "o2:filled",
   "o1:cancelled",
@@ -654,7 +660,7 @@
   "o133:filled",
   "o135:cancelled"
  ],
- "last_decision_id": "2026-11-25T22:51:26Z",
- "cash_rate_day": "2026-11-25",
+ "last_decision_id": "2026-11-26T04:50:50Z",
+ "cash_rate_day": "2026-11-26",
  "ended": "2026-11-21T21:00:41Z"
 }
