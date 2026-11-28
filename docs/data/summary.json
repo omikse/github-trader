@@ -1,16 +1,16 @@
 {
- "updated": "2026-11-27T18:29:27Z",
+ "updated": "2026-11-28T01:38:24Z",
  "status": "ended",
  "start": "2026-10-21T22:31:35Z",
  "end_at": "2026-11-21T21:00:00Z",
  "start_pln": 1000.0,
  "fx_usd_pln": 4.0754,
- "equity_pln": 1008.57,
- "return_pct": -3.76,
+ "equity_pln": 1008.6,
+ "return_pct": -3.75,
  "max_drawdown_pct": 13.94,
- "control_pln": 1100.65,
+ "control_pln": 1087.11,
  "control_trades": 12,
- "hodl_pln": 740.45,
+ "hodl_pln": 745.03,
  "positions": [],
  "closed_trades": [
   {
@@ -558,27 +558,32 @@
  ],
  "trade_count": 39,
  "win_rate_pct": 33.3,
- "brain_calls_today": 3,
+ "brain_calls_today": 1,
  "last_decision": {
-  "time": "2026-11-27T18:29:27Z",
+  "time": "2026-11-28T01:38:24Z",
   "trigger": "brain session",
-  "decided_at": "2026-11-27T16:50:42Z",
+  "decided_at": "2026-11-28T00:51:00Z",
   "model": "claude-opus-5-5",
-  "equity_usd": 247.48,
-  "equity_pln": 1008.57,
+  "equity_usd": 247.49,
+  "equity_pln": 1008.6,
   "events": [],
-  "market_view": "Experiment ended 2026-11-21T21Z; account flat at 247.47 USD (1,010.53 PLN). Input 08:41Z is ~8h old as engine is idle post-end.",
-  "watch_next": "Nothing; experiment over. Stay flat.",
+  "market_view": "Experiment ended 2026-11-21T21:00Z. Account flat, no orders, predictions or carry. Input 18:29Z 27 Nov (~6.4h old; engine idle after end).",
+  "watch_next": "Nothing: experiment over; keep account flat.",
   "news": "",
   "error": "not executed: experiment ended"
  },
  "brain_mode": "session",
- "cash_usd": 247.477498,
+ "cash_usd": 247.485605,
  "start_usd": 257.14,
  "start_btc": 84590.1,
  "control_live": {
-  "equity": 270.0706236798239,
-  "pos": null
+  "equity": 269.8330680172737,
+  "pos": {
+   "side": "short",
+   "entry": 59712.52880000001,
+   "qty": 0.007233312591759842,
+   "stop": 60647.65999000855
+  }
  },
  "pairs": {
   "BTCUSDT": "XBTUSD",
@@ -692,7 +697,7 @@
  "income_pln": {
   "funding": 3.36,
   "carry": -2.69,
-  "interest": 3.61
+  "interest": 3.64
  },
  "cash_rate_pct": 4.014
 }
